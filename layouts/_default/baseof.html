@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="no-js" language="{{ .Site.LanguageCode }}">
+
+<head>
+
+  <!-- Page Title -->
+  <title>
+    {{- block "title" . -}}
+      {{ if eq .Kind "page" }}{{ .Title }}{{ else if isset .Site.Params "seotitle" }}{{ .Site.Params.seotitle }}{{ else }}{{ .Site.Title }}{{ end }}
+    {{- end -}}
+  </title>
+
+    <!-- Shared Head -->
+  {{ partial "head.html" . }}
+
+  <!-- Polyfill for old browsers -->
+  {{ partial "polyfill.html" . }}
+</head>
+
+<body>
+  {{ partial "header.html" . }}
+  
+  {{ block "main" . }}{{ end }}
+
+  {{ partial "footer.html" . }}
+</body>
+
+</html>
