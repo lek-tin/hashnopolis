@@ -1,6 +1,6 @@
 ---
 title: "Test 2"
-author: "Lek Tin"
+owner: ["Lek Tin"]
 avatar: "/img/lek.jpg"
 tags: ["tagA", "tagB"]
 categories: ["CSS"]

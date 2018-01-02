@@ -1,8 +1,8 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
-author: "Lek Tin"
+owner: "Lek Tin"
 avatar: "/img/lek.jpg"
-tags: ["notag"]
+tags: ['tag-1', 'tag-2']
 categories: ["Uncategorised"]
 date: {{ .Date }}
 draft: true

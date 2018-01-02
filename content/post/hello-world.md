@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-author: "Lek Tin"
+owner: ["Lek Tin"]
 avatar: "/img/lek.jpg"
 tags: ["tagA", "tagB"]
 categories: ["JavaScript"]

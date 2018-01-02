@@ -1,7 +1,7 @@
 {{ define "main" }}
   <main class="container left-container">
       <div class="row">
-          <!-- <div id="menu-target">
+          <div id="menu-target">
               <ul>
 
                       <li><i class="fa fa-home"></i><a href="">Home</a></li>
@@ -17,17 +17,23 @@
                       <li><i class="fa fa-user"></i><a href="author/michelle">Author</a></li>
 
               </ul>
-          </div> -->
+          </div>
 
           <section class="sidebar col-md-5 col-sm-12" style='background-image: url(img/feature-san-fran.jpg);'>
-
-              <!-- <span class="menu-trigger animated fadeInDown">
+                <a href="" class="menu-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" enable-background="new 0 0 16 16" x="0px" y="0px">
+                        <g>
+                            <path d="M10.001 16l-.143-.01c-.547-.078-.926-.585-.849-1.132l2-14c.078-.546.588-.926 1.132-.848.547.078.927.584.849 1.131l-2 14c-.071.5-.499.859-.989.859zM4.001 16l-.143-.01c-.546-.078-.926-.585-.848-1.132l2-14c.078-.547.58-.927 1.132-.848.546.078.926.585.848 1.132l-2 14c-.072.499-.499.858-.989.858zM15 6h-13c-.552 0-1-.448-1-1s.448-1 1-1h13c.553 0 1 .448 1 1s-.447 1-1 1zM14 12h-13c-.552 0-1-.447-1-1s.448-1 1-1h13c.553 0 1 .447 1 1s-.447 1-1 1z"/>
+                        </g>
+                    </svg>
+                </a>
+              <span class="menu-trigger animated fadeInDown">
                   <span class="bar"></span>
                   <span class="bar"></span>
                   <span class="bar"></span>
-                  </span> -->
+                  </span>
               <!-- if the user has javascript disabled they can still use the menu -->
-              <noscript>
+              <!-- <noscript>
                   <div class="no-js-menu">
                       <ul>
 
@@ -45,7 +51,7 @@
 
                       </ul>
                   </div>
-              </noscript>
+              </noscript> -->
               <!-- end no script -->
 
               <div class="site-info">
@@ -107,10 +113,10 @@
               <div class="home-page-categories hide animated fadeIn ">
                   <div class="category row">
                       <section>
-
+                        {{ range $catKey, $catName := .Site.Taxonomies.categories }}<a href='categories/{{ $catName }}'>{{ $catName }}</a>{{ end }}
                           <div class="category-preview col-xs-6 col-sm-4 ">
-                              <h2>Storytime</h2>
-                              <a href='category/storytime'><img src='img/storytime-thumbnail.jpg' alt="category-image"></a>
+                              <h2>CSS</h2>
+                              <a href='categories/css'><img src='img/storytime-thumbnail.jpg' alt="category-image"></a>
                           </div>
 
                           <div class="category-preview col-xs-6 col-sm-4 ">
