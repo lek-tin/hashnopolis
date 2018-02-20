@@ -1,0 +1,81 @@
+#jPanelMenu-menu, .menu-trigger {
+  background-color: rgb(28, 30, 42);
+}
+
+body {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif
+}
+
+pre {
+  padding: 0;
+}
+
+.menu-logo {
+  display: block;
+  width: 80%;
+  max-width: 100px;
+  margin: auto;
+  border: none;
+}
+.menu-logo:hover {
+  border: none;
+}
+.menu-logo svg path {
+  fill: #7679EC;
+}
+
+.navigation {
+  display: block;
+  padding: 0 30px;
+  list-style: none;
+  font-weight: bold;
+}
+
+.navigation a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: none;
+  text-transform: uppercase;
+}
+.navigation a:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  border-bottom: #7679EC 2px solid;
+  transition: all ease 0.2s;
+}
+.navigation a:hover:after {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: auto
+  }
+  .main-content {
+    margin-left: 464px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-content {
+    margin-left: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: auto
+  }
+}
+@media (max-width: 767px) {
+  .site-info {
+    display: none;
+  }
+}

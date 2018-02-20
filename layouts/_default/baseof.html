@@ -18,9 +18,24 @@
 </head>
 
 <body>
-  {{ partial "header.html" . }}
   
-  {{ block "main" . }}{{ end }}
+  <main class="container left-container">
+
+      <div class="row">
+
+        <section class="sidebar" style="background-image: url({{ "img/feature-san-fran.jpg" | relURL }});">
+            {{ partial "sidebar.html" . }}
+        </section>
+    
+        <section class="main-content">
+          {{ block "main" . }}{{ end }}
+        </section>
+        <!-- main content -->
+
+      </div>
+      <!--/row -->
+
+  </main>
 
   {{ partial "footer.html" . }}
 </body>
