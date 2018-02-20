@@ -14,9 +14,9 @@ var s, app = {
         })
     },
     initalizers: function() {
-        this.jpm(), FastClick.attach(document.body), $("body").css({
-            "background-color": "#333337"
-        })
+        // this.jpm(), FastClick.attach(document.body), $("body").css({
+        //     "background-color": "#333337"
+        // })
     },
     homePostsCatSwitch: function() {
         $(".home-page-posts").toggleClass("hide"), $(".home-page-categories").toggleClass("hide"), $(".select-posts").toggleClass("active"), $(".select-categories").toggleClass("active"), $(".home-footer").toggleClass("hide")
@@ -46,5 +46,6 @@ var s, app = {
     }
 };
 $(document).ready(function() {
+    hljs.initHighlightingOnLoad();
     app.init()
 });
