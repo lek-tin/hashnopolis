@@ -1,0 +1,148 @@
+{{ define "main" }}
+  <!-- <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+      <p class="post-meta">@{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read</p>
+    </header>
+    <article class="post-content">{{ .Content }}</article>
+    <footer class="post-footer">
+      {{ if isset .Params "tags" }}
+      <ul class="post-tags">
+        {{ range $tag := .Params.tags }}
+          <li><a href="/tags/{{ $tag | urlize }}"><span class="tag">{{ $tag | title }}</span></a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+      <p class="post-copyright">
+        {{ if .Site.Copyright }}{{ .Site.Copyright }}{{ end }}{{ if gt (div (sub now.Unix .Lastmod.Unix) 86400) 100 }}This post was published <strong>{{ div (sub now.Unix .Lastmod.Unix) 86400 }}</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.{{ end }}
+      </p>
+    </footer>
+    {{ if ne .Params.comments false }}
+      {{ if .Site.Params.changyan }}
+      <div id="cyReward" role="cylabs" data-use="reward"></div>
+      <script src="//changyan.itc.cn/js/lib/jquery.js"></script>
+      <script src="//changyan.sohu.com/js/changyan.labs.https.js?appid={{ .Site.Params.changyanId }}"></script>
+      <div id="SOHUCS" sid="{{ .URL }}" ></div>
+      <script>
+      (function(){
+      var appid = '{{ .Site.Params.changyanId }}';
+      var conf = '{{ .Site.Params.changyanConf }}';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+      {{ else if .Site.DisqusShortname }}{{ template "_internal/disqus.html" . }}
+      {{ else }}{{ end }}
+    {{ end }}
+  </section> -->
+
+  <!-- <div class="single-content"> -->
+  <div>
+      <p class="meta">
+          <!-- @{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }} · {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read -->
+          <a href="/demo/writer/jekyll/v1-4/author/dan">Dan robberts</a> in <a href="/demo/writer/jekyll/v1-4/category/coding">Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 34 minutes
+      </p>
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+  </div><!-- main-content/col -->
+  
+  <footer class="single">
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-2">
+            <img src="/demo/writer/jekyll/v1-4/img/dan.jpg" class="user-icon " alt="user-image">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="category-list">
+                <p>Published <span>Feb 11, 2015</span></p>
+                <p><a href="/demo/writer/jekyll/v1-4/author/dan">Dan robberts</a> in <a href="/demo/writer/jekyll/v1-4/category/coding">Coding</a></p>
+  
+                <div class="other-catergories">
+                    <h3>Also found in</h3>
+  
+                    <ul>
+                        
+                        <li>
+                            <a href="/demo/writer/jekyll/v1-4/category/coding">Coding</a>
+                            ,
+                        </li>
+                        
+                        <li>
+                            <a href="/demo/writer/jekyll/v1-4/category/coding">Js</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+  
+            </div>
+        </div><!-- end col -->
+        <div class="col-xs-12 col-sm-4">
+            <div class="social">
+                <p>Share this article
+                </p><div class="social-links">
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://blog.hashjelly.com"><i class="fa fa-twitter"></i></a>
+  
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://blog.hashjelly.com"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=help@hashjelly.com.com&amp;body=http://blog.hashjelly.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end row -->
+  </div>
+  
+  
+    
+        <div class="row read-another-section">
+    
+        
+        <a href="/demo/writer/jekyll/v1-4/stop-thinking-and-start-doing"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+            <div class="overlay"></div>
+            <img src="/demo/writer/jekyll/v1-4/img/recommend-spain.jpg">
+            <h3 class="read-another">Stop Thinking And Start Doing</h3>
+        </div></a>
+        
+    
+        
+        <a href="/demo/writer/jekyll/v1-4/css-with-superpowers"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+            <div class="overlay"></div>
+            <img src="/demo/writer/jekyll/v1-4/img/recommend-fire.jpg">
+            <h3 class="read-another">CSS with Superpowers</h3>
+        </div></a>
+        
+    
+        
+        <a href="/demo/writer/jekyll/v1-4/ten-reasons-to-travel-the-world"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+            <div class="overlay"></div>
+            <img src="/demo/writer/jekyll/v1-4/img/recommend-wolf.jpg">
+            <h3 class="read-another">10 Reasons to travel the world</h3>
+        </div></a>
+        
+    
+        
+        <a href="/demo/writer/jekyll/v1-4/why-react-js-will-change-the-world"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+            <div class="overlay"></div>
+            <img src="/demo/writer/jekyll/v1-4/img/recommend-spain.jpg">
+            <h3 class="read-another">Why React JS Will Change the World</h3>
+        </div></a>
+        
+    
+        
+        <a href="/demo/writer/jekyll/v1-4/fake-it-until-you-make-it"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+            <div class="overlay"></div>
+            <img src="/demo/writer/jekyll/v1-4/img/recommend-iceland.jpg">
+            <h3 class="read-another">Fake It Until You Make It</h3>
+        </div></a>
+        
+    
+        
+        <a href="/demo/writer/jekyll/v1-4/its-not-always-that-simple"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
+            <div class="overlay"></div>
+            <img src="/demo/writer/jekyll/v1-4/img/recommend-sunset.jpg">
+            <h3 class="read-another">Its Not Always That Simple</h3>
+        </div></a>
+    
+  </div>
+    
+  </footer>
+  {{ partial "footer.html" . }}
+{{ end }}

@@ -1,0 +1,20 @@
+
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+      <p>{{ .Summary | plainify | htmlUnescape }}</p>
+
+      <p class="meta">
+        by <a href="/moods/{{ .Params.mood }}"><strong>{{ if isset .Params "mood" }}{{ .Params.mood }}{{ else }}{{ .Site.Params.mood }}{{ end }}</strong></a>
+        <!-- by <strong>{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}</strong> -->
+        in {{ range .Params.categories }}<a href="categories/{{ . | urlize }}" ><strong>{{ . }}</strong></a>{{ end }}
+        <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ .ReadingTime }} min read
+      </p>
+  </div>
+
+  <!-- <div class=" col-xs-2  no-gutter">
+      <img src="{{ .Params.avatar }}" class="user-icon user-1" alt="user-image">
+  </div> -->
+
+</article>
