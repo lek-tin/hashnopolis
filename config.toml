@@ -1,6 +1,6 @@
 baseURL = "http://blog.hashjelly.com"
 languageCode = "en-us"
-title = "HashJelly | My Coding Journal"
+title = "HashJelly | My Coding Blog"
 publishDir = "docs"
 enableEmoji = true
 
@@ -12,9 +12,9 @@ enableEmoji = true
   GitHubUser = "lek-tin"
 
 [permalinks]
-  # post = "/:year/:month/:title/"
+  post = "/post/:year/:month/:title/"
 
 [taxonomies]
-  tag="tags"
-  category="categories"
-  owner="owners"
+  tag = "tags"
+  category = "categories"
+  author = "authors"

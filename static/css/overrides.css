@@ -13,12 +13,14 @@ pre {
 .menu-logo {
   display: block;
   width: 80%;
+  margin: 0 auto;
   max-width: 100px;
-  margin: auto;
   border: none;
+  transition: transform 0.2s ease-in-out;
 }
 .menu-logo:hover {
   border: none;
+  transform: rotate(180deg);
 }
 .menu-logo svg path {
   fill: #7679EC;
@@ -28,6 +30,7 @@ pre {
   display: block;
   padding: 0 30px;
   list-style: none;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -44,11 +47,21 @@ pre {
   bottom: -3px;
   left: 0;
   width: 0;
-  border-bottom: #7679EC 2px solid;
+  border-bottom: #7679EC 5px solid;
   transition: all ease 0.2s;
 }
 .navigation a:hover:after {
   width: 100%;
+}
+
+.btn-primary {
+  background-color: #7679EC;
+  border: none;
+  border-radius: 2px;
+}
+.btn-primary:hover {
+  border: none;
+  background-color: #6366ea;
 }
 
 @media (min-width: 1200px) {
@@ -75,7 +88,26 @@ pre {
   }
 }
 @media (max-width: 767px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+  }
   .site-info {
     display: none;
   }
+  .navigation {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    padding: 0;
+    margin: 0 -15px;
+  }
+  .navigation li {
+    flex: 1 0 0px;
+    -webkit-flex: 1 0 0px;
+    text-align: center;
+    margin-bottom: -1px;
+  }
 }
+

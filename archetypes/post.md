@@ -1,15 +1,12 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
-owner: "Lek Tin"
+description: "Some description ..."
+authors: ["Lek Tin"]
 avatar: "/img/lek.jpg"
 tags: ['tag-1', 'tag-2']
-categories: ["Uncategorised"]
+categories: ["uncategorised"]
 date: {{ .Date }}
 draft: true
 ---
 
-Cut out summary from your post content here.
-
-<!--more-->
-
-The remaining content of your post.
+The content of your post goes here.
