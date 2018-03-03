@@ -1,12 +1,13 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 description: "Some description ..."
-authors: ["Lek Tin"]
+authors: ["lek-tin"]
 avatar: "/img/lek.jpg"
-tags: ['tag-1', 'tag-2']
+tags: ["untagged"]
 categories: ["uncategorised"]
 date: {{ .Date }}
 draft: true
+archive: false
 ---
 
 The content of your post goes here.

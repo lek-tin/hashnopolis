@@ -9,7 +9,9 @@ body {
 pre {
   padding: 0;
 }
-
+.sidebar {
+  background-image: url(/img/sidebar-bg.jpeg);
+}
 .menu-logo {
   display: block;
   width: 80%;
@@ -64,6 +66,14 @@ pre {
   background-color: #6366ea;
 }
 
+.meta--author {
+  text-transform: capitalize;
+}
+
+.meta a {
+  text-transform: uppercase;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: auto
@@ -91,17 +101,30 @@ pre {
   .sidebar {
     position: relative;
     height: auto;
+    padding: 5px 15px;
+    background-image: none;
+    background-color: lightgray;
+  }
+  .menu-logo {
+    width: 40px;
   }
   .site-info {
     display: none;
   }
   .navigation {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    display: flex;
+    position: fixed;
+    width: 250px;
+    top: 0;
+    left: -250px;
     padding: 0;
     margin: 0 -15px;
+    background-color: mediumaquamarine;
+    height: 100%;
+    z-index: 1;
+    transition: left 0.2s ease-in-out;
+  }
+  .navigation.active {
+    left: 0;
   }
   .navigation li {
     flex: 1 0 0px;
