@@ -6,9 +6,15 @@
       <p>{{ .Summary | plainify | htmlUnescape }}</p>
 
       <p class="meta">
-        by <a href="/moods/{{ .Params.mood }}"><strong>{{ if isset .Params "mood" }}{{ .Params.mood }}{{ else }}{{ .Site.Params.mood }}{{ end }}</strong></a>
-        <!-- by <strong>{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}</strong> -->
-        in {{ range .Params.categories }}<a href="categories/{{ . | urlize }}" ><strong>{{ . }}</strong></a>{{ end }}
+        <!-- by <a href="/moods/{{ .Params.author }}"><strong>{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.mood }}{{ end }}</strong></a> -->
+        by
+        {{ range .Params.authors }}
+          <a href="authors/{{ . | urlize }}" ><strong>{{ replace . "-" " " }}</strong></a>
+        {{ end }}
+        in
+        {{ range .Params.categories }}
+          <a href="categories/{{ . | urlize }}" ><strong>{{ . }}</strong></a>
+        {{ end }}
         <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ .ReadingTime }} min read
       </p>
   </div>
