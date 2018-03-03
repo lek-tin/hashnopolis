@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on HashJelly | My Coding Journal</title>
+    <title>Javascript on HashJelly | My Coding Blog</title>
     <link>http://blog.hashjelly.com/categories/javascript/</link>
-    <description>Recent content in Javascript on HashJelly | My Coding Journal</description>
+    <description>Recent content in Javascript on HashJelly | My Coding Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Oct 2017 17:36:53 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 13 Feb 2018 15:30:03 +0800</lastBuildDate>
     
 	<atom:link href="http://blog.hashjelly.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>When You New a Class in JavaScript?</title>
+      <link>http://blog.hashjelly.com/post/2018/02/when-you-new-a-class-in-javascript/</link>
+      <pubDate>Tue, 13 Feb 2018 15:30:03 +0800</pubDate>
+      
+      <guid>http://blog.hashjelly.com/post/2018/02/when-you-new-a-class-in-javascript/</guid>
+      <description>Here is an example of instantiating a class using the new operator:
+class Person { constructor(name, age) { this.name = name; this.age = age; } } const asian = new Person(&#39;Alice&#39;, 25); console.log(asian);  As you can see from below, asian is not a class, it is instead, an object:
+[object Object] { age: 25, name: &amp;quot;Alice&amp;quot; }  The values of asian are set by the constructor of the Person class.</description>
+    </item>
+    
+    <item>
       <title>Hello World</title>
-      <link>http://blog.hashjelly.com/post/hello-world/</link>
+      <link>http://blog.hashjelly.com/post/2017/10/hello-world/</link>
       <pubDate>Sat, 28 Oct 2017 17:36:53 +0800</pubDate>
       
-      <guid>http://blog.hashjelly.com/post/hello-world/</guid>
+      <guid>http://blog.hashjelly.com/post/2017/10/hello-world/</guid>
       <description>Hot chicken viral palo santo, fingerstache taiyaki kogi ethical letterpress godard VHS XOXO offal prism. Tattooed austin vice letterpress. Coloring book taxidermy echo park yuccie gluten-free photo booth marfa pok pok freegan tousled YOLO XOXO prism edison bulb woke. Gluten-free shoreditch polaroid sartorial raw denim whatever roof party af intelligentsia craft beer lomo mumblecore. Lyft forage cred kogi farm-to-table. Meggings intelligentsia tbh snackwave, kogi ennui gastropub. Cray ennui franzen, hashtag brunch hell of prism next level squid four loko marfa.</description>
     </item>
     

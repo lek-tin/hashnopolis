@@ -1,4 +1,4 @@
-{{ $gohugoio := "gohugoio" }}
+{{ $authorTwitter := "leksometech" }}
 {{ $avatar := "/img/avatar.jpg" }}
 <!-- Site & Page Meta Data -->
 {{ if eq .Type "post" }}
@@ -10,13 +10,13 @@
   <!-- Twitter Card -->
   {{ if isset .Params "cover" }}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@{{ .Site.Params.twitter | default $gohugoio }}" />
+    <!-- <meta name="twitter:site" content="@{{ .Site.Params.twitter | default $authorTwitter }}" /> -->
     <meta name="twitter:title" content="{{ .Title }}" />
     <meta name="twitter:description" content="{{ .Summary | plainify }}" />
     <meta name="twitter:image" content="{{ .Params.cover | absURL }}" />
   {{ else }}
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@{{ .Site.Params.twitter | default $gohugoio }}" />
+    <!-- <meta name="twitter:site" content="@{{ .Site.Params.twitter | default $authorTwitter }}" /> -->
     <meta name="twitter:title" content="{{ .Title }}" />
     <meta name="twitter:description" content="{{ .Summary | plainify }}" />
     <meta name="twitter:image" content="{{ $avatar | absURL }}" />
@@ -30,7 +30,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@{{ .Site.Params.twitter | default $gohugoio }}" />
+  <!-- <meta name="twitter:site" content="@{{ .Site.Params.twitter | default $authorTwitter }}" /> -->
   <meta name="twitter:title" content="{{ if isset .Site.Params "seotitle" }}{{ .Site.Params.seotitle }}{{ else }}{{ .Site.Title }}{{ end }}" />
   <meta name="twitter:description" content="{{ .Site.Params.description }}" />
   <meta name="twitter:image" content="{{ $avatar | absURL }}" />
@@ -91,9 +91,9 @@
 {{ if ne .Kind "home" }}
 <link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
 {{ end }}
-<link rel="stylesheet" href="{{ "/css/highlight.css" | relURL }}" />
-<link rel="stylesheet" href="{{ "/css/highlight-atom-one-dark.min.css" | relURL }}" />
-<link rel="stylesheet" href="{{ "/css/main.css" | relURL }}" />
-<link rel="stylesheet" href="{{ "/css/overrides.css" | relURL }}" />
+<link rel="stylesheet" href="/css/highlight.css" />
+<link rel="stylesheet" href="/css/highlight-atom-one-dark.min.css" />
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/overrides.css" />
 
 
