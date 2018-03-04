@@ -66,7 +66,7 @@ pre {
   background-color: #6366ea;
 }
 
-.meta--author {
+.meta .meta--author {
   text-transform: capitalize;
 }
 
@@ -93,6 +93,9 @@ pre {
   }
 }
 @media (min-width: 768px) {
+  #mobile-menu-switch {
+    display: none;
+  }
   .container {
     width: auto
   }
@@ -131,6 +134,9 @@ pre {
     -webkit-flex: 1 0 0px;
     text-align: center;
     margin-bottom: -1px;
+  }
+  #mobile-menu-switch {
+    display: inherit;
   }
 }
 
