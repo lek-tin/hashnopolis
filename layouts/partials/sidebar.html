@@ -32,7 +32,7 @@
 </noscript> -->
 <!-- end no script -->
 <ul class="navigation active">
-  <li><i class="fa fa-times"></i></li>
+  <li id="mobile-menu-switch"><i class="fa fa-times"></i></li>
   <li><a href="/">Home</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
   <li><a href="/categories">Categories</a></li>
@@ -42,7 +42,7 @@
   <div class="primary-info">
     <h1>{{ .Site.Title }}</h1>
     <footer class="site-footer">
-    <p>© {{ if eq now.Year 2017 }}2017{{ else }}2017-{{ now.Year }}{{ end }} <a href="http://www.hashjelly.com">HashJelly</a></p>
+    <p>© {{ if eq now.Year 2017 }}2017{{ else }}2017-{{ now.Year }}{{ end }} <a href="http://www.hashjelly.com">Hashnopolis</a></p>
     {{ if and (isset .Site.Params "icp") (ne .Site.Params.ICP "") }}
       <p><a href="http://www.miitbeian.gov.cn" title="Check ICP info" target="_blank">{{ .Site.Params.ICP }}</a></p>
     {{ end }}
