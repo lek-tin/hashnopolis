@@ -66,12 +66,17 @@ pre {
   background-color: #6366ea;
 }
 
-.meta .meta--author {
+.meta--author {
   text-transform: capitalize;
 }
 
 .meta a {
   text-transform: uppercase;
+}
+
+.category-preview {
+  max-height: 200px;
+  overflow: hidden;
 }
 
 @media (min-width: 1200px) {

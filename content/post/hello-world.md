@@ -1,11 +1,11 @@
 ---
 title: "Hello World"
 authors: ["lek-tin"]
-avatar: "/img/lek.jpg"
-tags: ["tagA", "tagB"]
-categories: ["JavaScript"]
+tags: ['untagged']
+categories: ["javascript"]
 date: 2017-10-28T17:36:53+08:00
 draft: false
+archive: false
 ---
 
 Hot chicken viral palo santo, fingerstache taiyaki kogi ethical letterpress godard VHS XOXO offal prism. Tattooed austin vice letterpress. Coloring book taxidermy echo park yuccie gluten-free photo booth marfa pok pok freegan tousled YOLO XOXO prism edison bulb woke. Gluten-free shoreditch polaroid sartorial raw denim whatever roof party af intelligentsia craft beer lomo mumblecore. Lyft forage cred kogi farm-to-table. Meggings intelligentsia tbh snackwave, kogi ennui gastropub. Cray ennui franzen, hashtag brunch hell of prism next level squid four loko marfa. Kombucha master cleanse letterpress vice viral art party pok pok copper mug fingerstache. Waistcoat man bun taxidermy selfies kale chips helvetica. Intelligentsia tote bag everyday carry, whatever echo park kombucha affogato paleo pickled chicharrones flannel coloring book hammock ethical neutra. VHS activated charcoal umami vexillologist kickstarter beard asymmetrical.
