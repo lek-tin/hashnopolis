@@ -1,11 +1,11 @@
 ---
 title: "When You New a Class in JavaScript?"
 authors: ["lek-tin"]
-avatar: "/img/lek.jpg"
 tags: ['tag-1', 'tag-2']
 categories: ["javascript", "css"]
 date: 2018-02-13T15:30:03+08:00
 draft: false
+archive: false
 ---
 
 Here is an example of instantiating a class using the `new` operator:
