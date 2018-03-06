@@ -1,6 +1,3 @@
-#jPanelMenu-menu, .menu-trigger {
-  background-color: rgb(28, 30, 42);
-}
 
 body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif
@@ -10,7 +7,7 @@ pre {
   padding: 0;
 }
 .sidebar {
-  background-image: url(/img/sidebar-bg.jpeg);
+  background-image: url(/img/sidebar-bg.jpg);
 }
 .menu-logo {
   display: block;
@@ -66,12 +63,18 @@ pre {
   background-color: #6366ea;
 }
 
-.meta--author {
+.meta .meta--author {
   text-transform: capitalize;
 }
 
+/* .meta--cat {
+  font-size: 1px;
+  background-color: gray;
+  border-radius: 2px;
+} */
+
 .meta a {
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .category-preview {

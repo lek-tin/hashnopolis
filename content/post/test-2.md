@@ -3,7 +3,7 @@ title: "Test 2"
 authors: ["lek-tin"]
 avatar: "/img/lek.jpg"
 tags: ["tagA", "tagB"]
-categories: ["CSS"]
+categories: ["css"]
 date: 2017-10-28T17:36:53+08:00
 draft: false
 archive: false
@@ -15,7 +15,7 @@ React.render(
   document.getElementById('example')
 );
 ```
-
+👏🏼
 Cut out summary `npm install <module> --save-dev` from your post content here.
 
 Cut out summary from your post content here.
