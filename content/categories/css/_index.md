@@ -1,4 +1,4 @@
 ---
 prettyTitle: "CSSSSSSSS"
-thumbnail: "/img/technology-thumbnails/css.png"
+thumbnail: "/img/technology-thumbnails/css.jpg"
 ---
