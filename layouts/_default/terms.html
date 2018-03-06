@@ -25,32 +25,17 @@
   {{ end }}
 </ul> -->
 
-<section>
-
-  <div class="category row">
-    {{ range .Data.Pages }}
-      <section>
-        <div class="category-preview col-xs-6">
-          {{ with .Params.prettyTitle }}
-            <h2>{{ . }}</h2>
-          {{ end }}
-          <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="category-image"></a>
-        </div>
-      </section>
-    {{ end }}
-  </div>
-
-  <ul>
-    {{ range .Data.Pages }}
-      <li>
-        <a href="{{ .Permalink }}">{{ .Params.prettyTitle }}</a>
-        <dl>
-          <dt>Link to the {{ .Params.prettyTitle }} page</dt><dd><a href="{{ .Permalink }}">{{ .Permalink }}</a></dd>
-        </dl>
-      </li>
-    {{ end }}
-  </ul>
-
-</section>
+<div class="row">
+  {{ range .Data.Pages }}
+    <div class="col-xs-6">
+      <!-- <a href="{{ .Permalink }}">
+        {{ with .Params.prettyTitle }}
+          <h2>{{ . }}</h2>
+        {{ end }}
+      </a> -->
+      <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="category-image"></a>
+    </div>
+  {{ end }}
+</div>
 
 {{ end }}

@@ -1,10 +1,4 @@
 {{ define "main" }}
-  <!-- <div class="sub-nav">
-      <a href="#" class="select-posts active">Posts</a>
-      <a href="#" class="select-categories">Categories</a>
-  </div> -->
-
-  <!-- <div class="home-page-posts animated fadeIn "> -->
   <div>
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") (index .Site.Params "paginate" | default 10) }}
     {{ if ne $paginator.TotalPages 0 }}
@@ -28,7 +22,6 @@
         </nav>
       </footer>
     {{ end }}
-
   </div>
   <!-- Home page posts -->
 {{ end }}
