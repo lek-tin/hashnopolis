@@ -40,9 +40,9 @@
 </ul>
 <div class="site-info">
   <div class="primary-info">
-    <h1>{{ .Site.Title }}</h1>
+    <h1>{{ .Site.Params.siteName }} | {{ .Site.Params.subtitle }}</h1>
     <footer class="site-footer">
-    <p>© {{ if eq now.Year 2017 }}2017{{ else }}2017-{{ now.Year }}{{ end }} <a href="http://www.hashjelly.com">Hashnopolis</a></p>
+    <p>© {{ if eq now.Year 2017 }}2017{{ else }}2017-{{ now.Year }}{{ end }} <a href="{{ .Site.Params.parentSite }}">Hashnopolis</a></p>
     {{ if and (isset .Site.Params "icp") (ne .Site.Params.ICP "") }}
       <p><a href="http://www.miitbeian.gov.cn" title="Check ICP info" target="_blank">{{ .Site.Params.ICP }}</a></p>
     {{ end }}

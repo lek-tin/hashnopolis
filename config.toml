@@ -3,13 +3,20 @@ languageCode = "en-us"
 title = "Hashnopolis | My Coding Blog"
 publishDir = "docs"
 enableEmoji = true
+copyright = "Hashnopolis"
+author = "SITE AUTHOR - Lek Tin"
 
 [params]
   themeColor = "#7679EC"
-  owner = "Lek Tin"
-  # Subtitle = "Hugo is Absurdly Fast!"
-  # AuthorName = "Lek Tin"
-  githubUsername = "lek-tin"
+  siteName = "Hashnopolis"
+  subtitle = "My Coding Blog"
+  parentSite = "http://www.hashnopolis.com"
+  baseDescription = "baseDescription"
+  owner = "OWNER - Lek Tin"
+  twitterProfile = ""
+  githubUsername = ""
+  githubProfile = "https://github.com/lek-tin"
+  contributeDest = "https://github.com/lek-tin/hashjelly-blog/tree/contribute/docs"
 
 [permalinks]
   post = "/post/:year/:month/:title/"
