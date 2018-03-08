@@ -10,6 +10,7 @@
     {{ end }}
   </ul> -->
   <h1>{{ .Data.Term }}</h1>
+  <h2>related tags: XXX, XXX, XXX</h2>
   <div>
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") (index .Site.Params "paginate" | default 10) }}
     {{ if ne $paginator.TotalPages 0 }}
