@@ -6,8 +6,6 @@
   <!-- Page Author & Description -->
   <meta name="author" content="{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}" />
   <meta name="description" content="{{ .Summary | plainify }}" />
-  <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
-
   <!-- Twitter Card -->
   {{ if isset .Params "cover" }}
     <meta name="twitter:card" content="summary_large_image" />
@@ -27,7 +25,7 @@
 
   <!-- Site Author & Description -->
   <meta name="author" content="{{ .Site.Params.author }}" />
-  <meta name="description" content="{{ .Site.Params.description }}" />
+  <meta name="description" content="{{ .Site.Params.siteDescription }}" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
@@ -77,6 +75,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="{{ "/img/favicon/favicon-96x96.png" | relURL }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicon/favicon-16x16.png" | relURL }}">
 <link rel="manifest" href="{{ "/img/favicon/manifest.json" | relURL }}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <meta name="msapplication-TileColor" content="{{ .Site.Params.themeColor }}">
 <meta name="msapplication-TileImage" content="{{ "/img/favicon/ms-icon-144x144.png" | relURL }}">
 <meta name="theme-color" content="{{ .Site.Params.themeColor }}">

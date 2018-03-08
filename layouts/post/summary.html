@@ -15,7 +15,7 @@
         {{ range .Params.categories }}
           <a  class="meta--cat" href="categories/{{ . | urlize }}" ><strong>"{{ . }}"</strong></a>
         {{ end }}
-        <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ .ReadingTime }} min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> {{ .ReadingTime }} min read
       </p>
   </div>
 

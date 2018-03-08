@@ -6,7 +6,13 @@
   <!-- Page Title -->
   <title>
     {{- block "title" . -}}
-      {{ if eq .Kind "page" }}{{ .Title }}{{ else if isset .Site.Params "seotitle" }}{{ .Site.Params.seotitle }}{{ else }}{{ .Site.Title }}{{ end }}
+      {{ if eq .Kind "page" }}
+        {{ .Title }} | {{ .Site.Title }}
+      {{ else if isset .Site.Params "seotitle" }}
+        {{ .Site.Params.seotitle }}
+      {{ else }}
+        {{ .Site.Title }} | {{ .Site.Params.subtitle }}
+      {{ end }}
     {{- end -}}
   </title>
 
