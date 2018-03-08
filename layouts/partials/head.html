@@ -6,6 +6,7 @@
   <!-- Page Author & Description -->
   <meta name="author" content="{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}" />
   <meta name="description" content="{{ .Summary | plainify }}" />
+  <meta name="keywords" content="{{ range .Params.tags }}{{ . }} {{end}}" />
   <!-- Twitter Card -->
   {{ if isset .Params "cover" }}
     <meta name="twitter:card" content="summary_large_image" />
@@ -26,6 +27,7 @@
   <!-- Site Author & Description -->
   <meta name="author" content="{{ .Site.Params.author }}" />
   <meta name="description" content="{{ .Site.Params.siteDescription }}" />
+  <meta name="keywords" content="{{ .Site.Params.siteKeywords }}" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
