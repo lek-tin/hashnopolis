@@ -5,6 +5,10 @@
   <body>
     <style>
       @import url(https://fonts.googleapis.com/css?family=opensans:500);
+      html {
+        font-size: 16px;
+      }
+
       body{
         background: #7679EC;
         color:#fff;
@@ -12,19 +16,20 @@
         max-height:700px;
         overflow: hidden;
       }
-      .c{
+      .container {
         text-align: center;
         display: block;
-        position: relative;
-        width:80%;
-        margin:100px auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       .notFound {
-        font-size: 220px;
+        font-size: 10rem;
         position: relative;
         display: inline-block;
         z-index: 2;
-        height: 250px;
+        margin: 0;
         letter-spacing: 15px;
       }
       .first{
@@ -57,7 +62,7 @@
       }
       
 
-      .btn{
+      .btn {
           background-color: #fff;
           position: relative;
           display: inline-block;
@@ -67,14 +72,15 @@
           font-size: 25px;
           margin:0 auto;
           color: #7679EC;
+          border: #7679EC 1px solid;
           text-decoration: none;
           margin-right: 10px
       }
 
       .btn:hover {
-            color: #fff;
+          color: #fff;
           background-color: transparent;
-          border: #fff 1px solid;
+          border-color: #fff;
       }
 
       .right{
@@ -322,12 +328,12 @@
         </svg>
       </li>
     </ul>
-    <div class='c'>
+    <div class='container'>
       <h1 class='notFound'>404</h1>
       <hr>
-      <div class='first'>THE PAGE</div>
+      <div class='first'>THIS PAGE</div>
       <div class='second'>WAS NOT FOUND</div>
-      <a class='btn' href='/'>BACK TO HASHNOPOLIS</a>
+      <a class='btn' href='/'>👈 BACK TO HASHNOPOLIS</a>
     </div>
   </body>
 
