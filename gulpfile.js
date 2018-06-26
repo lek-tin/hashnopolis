@@ -50,4 +50,4 @@ gulp.task('default', [
     'watch',
 ])
 
-sudo npm i --save-dev gulp gulp-watch gulp-sass gulp-autoprefixer gulp-sourcemaps
+// sudo npm i --save-dev gulp gulp-watch gulp-sass gulp-autoprefixer gulp-sourcemaps
