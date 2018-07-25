@@ -49,3 +49,12 @@ $(document).ready(function() {
     hljs.initHighlightingOnLoad();
     app.init()
 });
+$('body').on('click', function() {
+    $(this).addClass('active')
+})
+$('#mobile-menu-open').on('click', function() {
+    $('#mobile-menu').addClass('active')
+})
+$('#mobile-menu-close').on('click', function() {
+    $('#mobile-menu').removeClass('active')
+})
