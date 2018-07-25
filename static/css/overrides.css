@@ -15,9 +15,11 @@ pre {
   margin: 0 auto;
   max-width: 100px;
   border: none;
+}
+.menu-logo svg {
   transition: transform 0.2s ease-in-out;
 }
-.menu-logo:hover {
+.menu-logo:hover svg {
   border: none;
   transform: rotate(180deg);
 }
@@ -95,6 +97,11 @@ pre {
   display: inline-block;
 }
 
+#mobile-menu-open,
+#mobile-menu-close {
+  cursor: pointer;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: auto
@@ -148,7 +155,9 @@ pre {
     left: -250px;
     padding: 0;
     margin: 0 -15px;
-    background-color: mediumaquamarine;
+    background-image: url(/img/sidebar-bg.jpg);
+    background-size: cover;
+    background-position-x: center;
     height: 100%;
     z-index: 1;
     transition: left 0.2s ease-in-out;
