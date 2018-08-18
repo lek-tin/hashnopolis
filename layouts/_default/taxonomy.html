@@ -9,8 +9,7 @@
       </li>
     {{ end }}
   </ul> -->
-  <h2 class="taxonomy-single--title">{{ .Data.Term }}</h2>
-  <p>related tags: XXX, XXX, XXX</p>
+  <h2 class="taxonomy-single--title">{{ .Data.Term }}:</h2>
   <div>
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") (index .Site.Params "paginate" | default 10) }}
     {{ if ne $paginator.TotalPages 0 }}
