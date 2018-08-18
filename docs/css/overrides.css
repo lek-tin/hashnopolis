@@ -14,7 +14,7 @@ pre {
   width: 80%;
   margin: 0 auto;
   max-width: 100px;
-  border: none;
+  border: none !important;
 }
 .menu-logo svg {
   transition: transform 0.2s ease-in-out;
@@ -60,6 +60,7 @@ pre {
 }
 .navigation a:hover {
   border-left-width: 25px;
+  padding-left: 2px;
 }
 
 .btn-primary {
@@ -92,9 +93,10 @@ pre {
 }
 
 .taxonomy-single--title {
-  border: #7679EC 5px solid;
-  padding: 0px 5px;
   display: inline-block;
+  padding: 0px 5px;
+  border-bottom: #7679EC 5px solid;
+  text-transform: uppercase;
 }
 
 #mobile-menu-open,
@@ -124,6 +126,8 @@ pre {
   }
 }
 @media (min-width: 768px) {
+  #mobile-menu-close,
+  #mobile-menu-open,
   #mobile-menu-switch {
     display: none;
   }
