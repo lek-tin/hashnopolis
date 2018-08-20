@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "binary-search", "python", "array", "sorted-array", "logn"]
 categories: ["algorithm"]
 date: 2018-08-15T12:50:21+08:00
-draft: true
+draft: false
 archive: false
 ---
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
