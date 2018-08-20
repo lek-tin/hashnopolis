@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python"]
 categories: ["algorithm"]
 date: 2018-08-20T23:33:38+08:00
-draft: true
+draft: false
 archive: false
 ---
 Given a linked list, remove the n-th node from the end of list and return its head.
