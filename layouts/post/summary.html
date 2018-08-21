@@ -9,11 +9,11 @@
         <!-- by <a href="/moods/{{ .Params.author }}"><strong>{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.mood }}{{ end }}</strong></a> -->
         by
         {{ range .Params.authors }}
-          <a class="meta--author" href="authors/{{ . | urlize }}" ><strong>{{ replace . "-" " " }}</strong></a>
+          <a class="meta--author" href="/authors/{{ . | urlize }}" ><strong>{{ replace . "-" " " }}</strong></a>
         {{ end }}
         in
         {{ range .Params.categories }}
-          <a  class="meta--cat" href="categories/{{ . | urlize }}" ><strong>"{{ . }}"</strong></a>
+          <a  class="meta--cat" href="/categories/{{ . | urlize }}" ><strong>"{{ . }}"</strong></a>
         {{ end }}
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> {{ .ReadingTime }}-min read
       </p>
