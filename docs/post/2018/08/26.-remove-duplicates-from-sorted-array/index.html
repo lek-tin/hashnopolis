@@ -5,7 +5,7 @@
 
   
   <title>
-        Hashnopolis | Blog about coding, data science and awesome technology
+        26. Remove Duplicates From Sorted Array | Hashnopolis
       </title>
 
     
@@ -16,15 +16,22 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="___SITE Description___" />
-  <meta name="keywords" content="___keyword, keyword, keyword___" />
-
+  <meta name="description" content="Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+Example 1:
+Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length." />
+  <meta name="keywords" content="leetcode python array sorted-array two-pointers remove-duplicates " />
   
-  <meta name="twitter:card" content="summary" />
   
-  <meta name="twitter:title" content="Hashnopolis" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="http://blog.hashnopolis.com/img/avatar.jpg" />
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="26. Remove Duplicates From Sorted Array" />
+    <meta name="twitter:description" content="Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+Example 1:
+Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length." />
+    <meta name="twitter:image" content="http://blog.hashnopolis.com/img/avatar.jpg" />
+  
 
 
 
@@ -32,7 +39,7 @@
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://blog.hashnopolis.com/tags/array/" />
+<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/08/26.-remove-duplicates-from-sorted-array/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -157,163 +164,105 @@
     
         <section class="main-content">
           
+  
 
   
-  
-  <h2 class="taxonomy-single--title">array:</h2>
   <div>
-    
-    
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://blog.hashnopolis.com/post/2018/08/56.-merge-intervals/">56. Merge Intervals</a></h2>
-
-      <p>Given a collection of intervals, merge all overlapping intervals.
-Example 1:
-Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
-Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considerred overlapping.  </p>
-
       <p class="meta">
         
-        by
         
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        Tags:
         
-        in
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+          "<a href="/tags/python"><strong>python</strong></a>",
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+          "<a href="/tags/array"><strong>array</strong></a>",
+        
+          "<a href="/tags/sorted-array"><strong>sorted-array</strong></a>",
+        
+          "<a href="/tags/two-pointers"><strong>two-pointers</strong></a>",
+        
+          "<a href="/tags/remove-duplicates"><strong>remove-duplicates</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;}.github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>26. Remove Duplicates From Sorted Array</h1>
+      <p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.</p>
+
+<p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array</strong> in-place with O(1) extra memory.</p>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><code>Given nums = [1,1,2],
+
+Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+
+It doesn't matter what you leave beyond the returned length.
+</code></pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre><code>Given nums = [0,0,1,1,1,2,2,3,3,4],
+
+Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
+
+It doesn't matter what values are set beyond the returned length.
+</code></pre>
+
+<p><strong>Clarification:</strong></p>
+
+<p>Confused why the returned value is an integer but your answer is an array?</p>
+
+<p>Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.</p>
+
+<p>Internally you can think of this:</p>
+
+<pre><code>// nums is passed in by reference. (i.e., without making a copy)
+int len = removeDuplicates(nums);
+
+// any modification to nums in your function would be known by the caller.
+// using the length returned by your function, it prints the first len elements.
+for (int i = 0; i &lt; len; i++) {
+    print(nums[i]);
+}
+</code></pre>
+
+<p><strong>Solution:</strong></p>
+
+<pre><code class="language-python">class Solution:
+  def removeDuplicates(self, nums):
+    &quot;&quot;&quot;
+    :type nums: List[int]
+    :rtype: int
+    &quot;&quot;&quot;
+    pointer = len(nums) - 1
+    while pointer &gt; 0:
+      if nums[pointer] == nums[pointer-1]:
+        nums.pop(pointer)
+      pointer -= 1
+    return len(nums)
+</code></pre>
+
   </div>
+
+  <div id="disqus_thread"></div>
+<script>
+  
 
   
 
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://blog.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/">80. Remove Duplicates From Sorted Array II</a></h2>
+  (function() { 
+  var d = document, s = d.createElement('script');
+  s.src = 'https://hashjelly-blog.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
 
-      <p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://blog.hashnopolis.com/post/2018/08/26.-remove-duplicates-from-sorted-array/">26. Remove Duplicates From Sorted Array</a></h2>
-
-      <p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://blog.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/">4. Median of Two Sorted Arrays</a></h2>
-
-      <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m&#43;n)).
-You may assume nums1 and nums2 cannot be both empty.
-Example 1:
-nums1 = [1, 3] nums2 = [2]  The median is 2.0
-Example 2:
-nums1 = [1, 2] nums2 = [3, 4]  The median is (2 &#43; 3)/2 = 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://blog.hashnopolis.com/post/2018/08/31.-search-in-rotated-sorted-array-ii/">31. Search in Rotated Sorted Array II</a></h2>
-
-      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
-(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
-You are given a target value to search. If found in the array return true, otherwise return false.
-Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-    
-    
-  </div>
-  
 
         </section>
         
