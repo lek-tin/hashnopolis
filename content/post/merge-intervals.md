@@ -2,7 +2,7 @@
 title: "56. Merge Intervals"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "merge", "array"]
+tags: ["leetcode", "python", "merge", "array", "sort"]
 categories: ["algorithm"]
 date: 2018-08-24T02:19:05+08:00
 draft: false
