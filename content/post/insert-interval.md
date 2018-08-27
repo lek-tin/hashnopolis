@@ -41,21 +41,22 @@ class Solution:
             return []
 
         res, i, listLen = [], 0, len(intervals) 
-        #       |__|         |__|   |__|   |__|            |__|         
-        #                      |_____________|
-        #   no overlapping       overlapping           no overlapping
-        // 
+        #       |__|            |__|   |__|   |__|            |__|
+        #                         |_____________|
+        #   1: no overlapping       2: overlapping           3: no overlapping
+
+        # 1: no overlapping
         while i < listLen and intervals[i].end < newInterval.start:
             res.append(intervals[i])
             i += 1
-
+        # 2: overlapping
         while i < listLen and intervals[i].start <= newInterval.end:
             newInterval.start = min(intervals[i].start, newInterval.start)
             newInterval.end = max(intervals[i].end, newInterval.end)
             i += 1
         print(newInterval.start, newInterval.end)
         res.append(newInterval)
-
+        # 3: no overlapping
         while i < listLen:
             res.append(intervals[i])
             i += 1
