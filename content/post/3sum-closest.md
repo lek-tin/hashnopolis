@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python"]
 categories: ["algorithm"]
 date: 2018-08-27T23:30:43+08:00
-draft: true
+draft: false
 archive: false
 ---
 Given an array `nums` of n integers and an integer `target`, find three integers in `nums` such that the sum is closest to `target`. Return the sum of the three integers. You may assume that each input would have exactly one solution.
