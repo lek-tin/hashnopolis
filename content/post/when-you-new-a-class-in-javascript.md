@@ -1,8 +1,8 @@
 ---
 title: "When You New a Class in JavaScript?"
 authors: ["lek-tin"]
-tags: ['tag-1', 'tag-2']
-categories: ["javascript", "css"]
+tags: ["es6-class", "javascript-object", "syntax"]
+categories: ["javascript"]
 date: 2018-02-13T15:30:03+08:00
 draft: false
 archive: false
