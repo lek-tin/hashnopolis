@@ -33,7 +33,8 @@
           <h2>{{ . }}</h2>
         {{ end }}
       </a> -->
-      <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="category-image"></a>
+      <!-- <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="category-image"></a> -->
+      <a href="{{ .Permalink }}">{{ .Params.prettyTitle }}</a>
     </div>
   {{ end }}
 </div>
