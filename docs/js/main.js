@@ -54,7 +54,9 @@ $('body').on('click', function() {
 })
 $('#mobile-menu-open').on('click', function() {
     $('#mobile-menu').addClass('active')
+    $('body').addClass('frozen')
 })
 $('#mobile-menu-close').on('click', function() {
     $('#mobile-menu').removeClass('active')
+    $('body').removeClass('frozen')
 })
