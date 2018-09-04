@@ -267,9 +267,11 @@ class Solution(object):
 
     for digit in digits:
       temp = []
+      # Merge every result because results is overridden
       for result in results:
         for letter in mapping[digit]:
           temp.append(result + [letter])
+      # Override results at the end of results and mapping[digit] iteration
       results = temp
 
     # convert lists of chars to strings
