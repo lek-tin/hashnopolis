@@ -5,7 +5,7 @@
 
   
   <title>
-        23. Merge k Sorted Lists | Hashnopolis
+        67. Add Binary | Hashnopolis
       </title>
 
     
@@ -16,18 +16,22 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example:
-Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  " />
-  <meta name="keywords" content="leetcode python sorted-array merge " />
+  <meta name="description" content="Given two binary strings, return their sum (also a binary string).
+The input strings are both non-empty and contains only characters 1 or 0.
+Example 1:
+Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot;  Example 2:
+Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  " />
+  <meta name="keywords" content="leetcode python " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="23. Merge k Sorted Lists" />
-    <meta name="twitter:description" content="Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example:
-Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  " />
+    <meta name="twitter:title" content="67. Add Binary" />
+    <meta name="twitter:description" content="Given two binary strings, return their sum (also a binary string).
+The input strings are both non-empty and contains only characters 1 or 0.
+Example 1:
+Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot;  Example 2:
+Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  " />
     <meta name="twitter:image" content="http://blog.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -37,7 +41,7 @@ Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/" />
+<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/09/67.-add-binary/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -177,26 +181,25 @@ Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&
         
           "<a href="/tags/python"><strong>python</strong></a>",
         
-          "<a href="/tags/sorted-array"><strong>sorted-array</strong></a>",
-        
-          "<a href="/tags/merge"><strong>merge</strong></a>",
-        
         <i class="small material-icons">access_time</i> 1-min read
       </p>
       
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>23. Merge k Sorted Lists</h1>
-      <p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.</p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/2018/09/67.-add-binary/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>67. Add Binary</h1>
+      <p>Given two binary strings, return their sum (also a binary string).</p>
 
-<p><strong>Example:</strong></p>
+<p>The input strings are both non-empty and contains only characters <code>1</code> or <code>0</code>.</p>
 
-<pre><code>Input:
-[
-  1-&gt;4-&gt;5,
-  1-&gt;3-&gt;4,
-  2-&gt;6
-]
-Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6
+<p><strong>Example 1:</strong></p>
+
+<pre><code class="language-python">Input: a = &quot;11&quot;, b = &quot;1&quot;
+Output: &quot;100&quot;
+</code></pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre><code class="language-python">Input: a = &quot;1010&quot;, b = &quot;1011&quot;
+Output: &quot;10101&quot;
 </code></pre>
 
   </div>
