@@ -5,7 +5,7 @@
 
   
   <title>
-        80. Remove Duplicates From Sorted Array II | Hashnopolis
+        Add Binary | Hashnopolis
       </title>
 
     
@@ -16,20 +16,24 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+  <meta name="description" content="Given two binary strings, return their sum (also a binary string).
+The input strings are both non-empty and contains only characters 1 or 0.
 Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively." />
-  <meta name="keywords" content="leetcode python array sorted-array two-pointers remove-duplicates " />
+Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot;  Example 2:
+Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  Solution:
+class Solution: def addBinary(self, a, b): &amp;quot;&amp;quot;&amp;quot; :type a: str :type b: str :rtype: str &amp;quot;&amp;quot;&amp;quot; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &amp;gt;= 0 or j &amp;gt;= 0: total = carry if i &amp;gt;= 0: total &#43;= int(a[i]) i -= 1 if j &amp;gt;= 0: total &#43;= int(b[j]) j -= 1 result." />
+  <meta name="keywords" content="leetcode python " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="80. Remove Duplicates From Sorted Array II" />
-    <meta name="twitter:description" content="Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+    <meta name="twitter:title" content="Add Binary" />
+    <meta name="twitter:description" content="Given two binary strings, return their sum (also a binary string).
+The input strings are both non-empty and contains only characters 1 or 0.
 Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively." />
+Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot;  Example 2:
+Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  Solution:
+class Solution: def addBinary(self, a, b): &amp;quot;&amp;quot;&amp;quot; :type a: str :type b: str :rtype: str &amp;quot;&amp;quot;&amp;quot; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &amp;gt;= 0 or j &amp;gt;= 0: total = carry if i &amp;gt;= 0: total &#43;= int(a[i]) i -= 1 if j &amp;gt;= 0: total &#43;= int(b[j]) j -= 1 result." />
     <meta name="twitter:image" content="http://blog.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -39,7 +43,7 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/" />
+<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/09/add-binary/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -179,76 +183,51 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
         
           "<a href="/tags/python"><strong>python</strong></a>",
         
-          "<a href="/tags/array"><strong>array</strong></a>",
-        
-          "<a href="/tags/sorted-array"><strong>sorted-array</strong></a>",
-        
-          "<a href="/tags/two-pointers"><strong>two-pointers</strong></a>",
-        
-          "<a href="/tags/remove-duplicates"><strong>remove-duplicates</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 1-min read
       </p>
       
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>80. Remove Duplicates From Sorted Array II</h1>
-      <p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.</p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/2018/09/add-binary/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Add Binary</h1>
+      <p>Given two binary strings, return their sum (also a binary string).</p>
 
-<p>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.</p>
+<p>The input strings are both non-empty and contains only characters <code>1</code> or <code>0</code>.</p>
 
 <p><strong>Example 1:</strong></p>
 
-<pre><code>Given nums = [1,1,1,2,2,3],
-
-Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.
-
-It doesn't matter what you leave beyond the returned length.
+<pre><code class="language-python">Input: a = &quot;11&quot;, b = &quot;1&quot;
+Output: &quot;100&quot;
 </code></pre>
 
 <p><strong>Example 2:</strong></p>
 
-<pre><code>Given nums = [0,0,1,1,1,1,2,3,3],
-
-Your function should return length = 7, with the first seven elements of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.
-It doesn't matter what values are set beyond the returned length.
-</code></pre>
-
-<p><strong>Clarification:</strong></p>
-
-<p>Confused why the returned value is an integer but your answer is an array?</p>
-
-<p>Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.</p>
-
-<p>Internally you can think of this:</p>
-
-<pre><code>// nums is passed in by reference. (i.e., without making a copy)
-int len = removeDuplicates(nums);
-
-// any modification to nums in your function would be known by the caller.
-// using the length returned by your function, it prints the first len elements.
-for (int i = 0; i &lt; len; i++) {
-    print(nums[i]);
-}
+<pre><code class="language-python">Input: a = &quot;1010&quot;, b = &quot;1011&quot;
+Output: &quot;10101&quot;
 </code></pre>
 
 <p><strong>Solution:</strong></p>
 
 <pre><code class="language-python">class Solution:
-    def removeDuplicates(self, nums):
+    def addBinary(self, a, b):
         &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: int
+        :type a: str
+        :type b: str
+        :rtype: str
         &quot;&quot;&quot;
-        if len(nums) &lt;= 2:
-            return len(nums)
-        count = 2
-        for i in range(2, len(nums)):
-            # if not equal, override nums[count] with nums[i]
-            if nums[i] != nums[count - 2]:
-                nums[count] = nums[i]
-                count += 1
-            # if equal, i++
-        return count
+        result = []
+        carry = 0
+        i = len(a)-1
+        j = len(b)-1
+        while carry or i &gt;= 0 or j &gt;= 0:
+            total = carry
+            if i &gt;= 0:
+                total += int(a[i])
+                i -= 1
+            if j &gt;= 0:
+                total += int(b[j])
+                j -= 1
+            result.append(str(total % 2))
+            carry = total // 2
+        return &quot;&quot;.join(result[::-1])
 </code></pre>
 
   </div>

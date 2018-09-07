@@ -5,7 +5,7 @@
 
   
   <title>
-        80. Remove Duplicates From Sorted Array II | Hashnopolis
+        Two Sum | Hashnopolis
       </title>
 
     
@@ -16,20 +16,22 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively." />
-  <meta name="keywords" content="leetcode python array sorted-array two-pointers remove-duplicates " />
+  <meta name="description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example:
+Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution:
+# time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  " />
+  <meta name="keywords" content="leetcode python hashmap sum " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="80. Remove Duplicates From Sorted Array II" />
-    <meta name="twitter:description" content="Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively." />
+    <meta name="twitter:title" content="Two Sum" />
+    <meta name="twitter:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example:
+Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution:
+# time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  " />
     <meta name="twitter:image" content="http://blog.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -39,7 +41,7 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/" />
+<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/08/two-sum/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -179,76 +181,51 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
         
           "<a href="/tags/python"><strong>python</strong></a>",
         
-          "<a href="/tags/array"><strong>array</strong></a>",
+          "<a href="/tags/hashmap"><strong>hashmap</strong></a>",
         
-          "<a href="/tags/sorted-array"><strong>sorted-array</strong></a>",
+          "<a href="/tags/sum"><strong>sum</strong></a>",
         
-          "<a href="/tags/two-pointers"><strong>two-pointers</strong></a>",
-        
-          "<a href="/tags/remove-duplicates"><strong>remove-duplicates</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 1-min read
       </p>
       
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>80. Remove Duplicates From Sorted Array II</h1>
-      <p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.</p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/2018/08/two-sum/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Two Sum</h1>
+      <p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
 
-<p>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.</p>
+<p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the same element twice.</p>
 
-<p><strong>Example 1:</strong></p>
+<p><strong>Example:</strong></p>
 
-<pre><code>Given nums = [1,1,1,2,2,3],
+<pre><code>Given nums = [2, 7, 11, 15], target = 9,
 
-Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.
-
-It doesn't matter what you leave beyond the returned length.
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre><code>Given nums = [0,0,1,1,1,1,2,3,3],
-
-Your function should return length = 7, with the first seven elements of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.
-It doesn't matter what values are set beyond the returned length.
-</code></pre>
-
-<p><strong>Clarification:</strong></p>
-
-<p>Confused why the returned value is an integer but your answer is an array?</p>
-
-<p>Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.</p>
-
-<p>Internally you can think of this:</p>
-
-<pre><code>// nums is passed in by reference. (i.e., without making a copy)
-int len = removeDuplicates(nums);
-
-// any modification to nums in your function would be known by the caller.
-// using the length returned by your function, it prints the first len elements.
-for (int i = 0; i &lt; len; i++) {
-    print(nums[i]);
-}
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
 </code></pre>
 
 <p><strong>Solution:</strong></p>
 
-<pre><code class="language-python">class Solution:
-    def removeDuplicates(self, nums):
+<pre><code class="language-python"># time: o(n)
+# space: o(n)
+class Solution:
+    def twoSum(self, nums, target):
         &quot;&quot;&quot;
         :type nums: List[int]
-        :rtype: int
+        :type target: int
+        :rtype: List[int]
         &quot;&quot;&quot;
-        if len(nums) &lt;= 2:
-            return len(nums)
-        count = 2
-        for i in range(2, len(nums)):
-            # if not equal, override nums[count] with nums[i]
-            if nums[i] != nums[count - 2]:
-                nums[count] = nums[i]
-                count += 1
-            # if equal, i++
-        return count
+        res = [-1, -1]
+        if nums == None or len(nums) &lt; 2:
+            return res
+
+        solutionMap = {}
+        for pos in range(len(nums) - 1):
+            if (target - nums[pos]) in solutionMap:
+                res[0] = solutionMap[target - nums[pos]]
+                res[1] = pos
+                break
+            solutionMap[nums[pos]] = pos
+
+        return res
 </code></pre>
 
   </div>

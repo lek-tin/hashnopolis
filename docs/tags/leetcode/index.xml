@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 06 Sep 2018 23:39:13 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 Sep 2018 23:53:18 +0800</lastBuildDate>
     
 	<atom:link href="http://blog.hashnopolis.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Two Sum ii Input Array Is Sorted</title>
+      <link>http://blog.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</link>
+      <pubDate>Fri, 07 Sep 2018 23:53:18 +0800</pubDate>
+      
+      <guid>http://blog.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</guid>
+      <description>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
+Note: - Your returned answers (both index1 and index2) are not zero-based. - You may assume that each input would have exactly one solution and you may not use the same element twice.</description>
+    </item>
     
     <item>
       <title>Best Time to Buy and Sell Stock Ii</title>
@@ -37,16 +48,17 @@ Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on
     </item>
     
     <item>
-      <title>67. Add Binary</title>
-      <link>http://blog.hashnopolis.com/post/2018/09/67.-add-binary/</link>
+      <title>Add Binary</title>
+      <link>http://blog.hashnopolis.com/post/2018/09/add-binary/</link>
       <pubDate>Wed, 05 Sep 2018 23:48:48 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/09/67.-add-binary/</guid>
+      <guid>http://blog.hashnopolis.com/post/2018/09/add-binary/</guid>
       <description>Given two binary strings, return their sum (also a binary string).
 The input strings are both non-empty and contains only characters 1 or 0.
 Example 1:
 Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot;  Example 2:
-Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  </description>
+Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  Solution:
+class Solution: def addBinary(self, a, b): &amp;quot;&amp;quot;&amp;quot; :type a: str :type b: str :rtype: str &amp;quot;&amp;quot;&amp;quot; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &amp;gt;= 0 or j &amp;gt;= 0: total = carry if i &amp;gt;= 0: total += int(a[i]) i -= 1 if j &amp;gt;= 0: total += int(b[j]) j -= 1 result.</description>
     </item>
     
     <item>
@@ -76,11 +88,11 @@ Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-
     </item>
     
     <item>
-      <title>1. Two Sum</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/1.-two-sum/</link>
+      <title>Two Sum</title>
+      <link>http://blog.hashnopolis.com/post/2018/08/two-sum/</link>
       <pubDate>Wed, 29 Aug 2018 00:44:49 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/1.-two-sum/</guid>
+      <guid>http://blog.hashnopolis.com/post/2018/08/two-sum/</guid>
       <description>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 Example:
