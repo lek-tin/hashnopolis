@@ -60,3 +60,16 @@ $('#mobile-menu-close').on('click', function() {
     $('#mobile-menu').removeClass('active')
     $('body').removeClass('frozen')
 })
+
+
+var elem_sidebar = document.getElementById("sidebar")
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        elem_sidebar.style.top = "0";
+    } else {
+        elem_sidebar.style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+}
