@@ -1,5 +1,5 @@
 ---
-title: "1. Two Sum"
+title: "Two Sum"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "python", "hashmap", "sum"]
