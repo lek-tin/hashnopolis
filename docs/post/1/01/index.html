@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="no-js" language="en-us">
+
+<head>
+
+  
+  <title>
+         | Hashnopolis
+      </title>
+
+    
+  
+
+
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+A partially filled sudoku which is valid.
+The Sudoku board could be partially filled, where empty cells are filled with the character &#39;." />
+  <meta name="keywords" content="" />
+  
+  
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+A partially filled sudoku which is valid.
+The Sudoku board could be partially filled, where empty cells are filled with the character &#39;." />
+    <meta name="twitter:image" content="http://blog.hashnopolis.com/img/avatar.jpg" />
+  
+
+
+
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+
+<link rel="canonical" href="http://blog.hashnopolis.com/post/1/01/" />
+<link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="msapplication-TileColor" content="#7679EC">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#7679EC">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Hashnopolis" />
+<meta name="msapplication-tooltip" content="Hashnopolis" />
+<meta name='msapplication-navbutton-color' content="#7679EC" />
+<meta name="msapplication-TileColor" content="#7679EC" />
+<meta name="msapplication-TileImage" content="/img/favicon/favicon-32x32.png" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="/css/highlight.css" />
+<link rel="stylesheet" href="/css/highlight-atom-one-dark.min.css" />
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/overrides.css" />
+
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+</head>
+
+<body>
+  
+  <main class="container left-container">
+
+      <div class="row">
+
+        <section id="sideber" class="sidebar">
+          <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+<a href="/" class="menu-logo">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
+    <g>
+      <path d="M10.001 16l-.143-.01c-.547-.078-.926-.585-.849-1.132l2-14c.078-.546.588-.926 1.132-.848.547.078.927.584.849 1.131l-2 14c-.071.5-.499.859-.989.859zM4.001 16l-.143-.01c-.546-.078-.926-.585-.848-1.132l2-14c.078-.547.58-.927 1.132-.848.546.078.926.585.848 1.132l-2 14c-.072.499-.499.858-.989.858zM15 6h-13c-.552 0-1-.448-1-1s.448-1 1-1h13c.553 0 1 .448 1 1s-.447 1-1 1zM14 12h-13c-.552 0-1-.447-1-1s.448-1 1-1h13c.553 0 1 .447 1 1s-.447 1-1 1z"/>
+    </g>
+  </svg>
+</a>
+
+
+
+
+<ul id="mobile-menu" class="navigation">
+  <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/categories/javascript">JavaScript</a></li>
+  <li><a href="/categories">Categories</a></li>
+  <li><a href="/tags">tags</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+<div class="site-info">
+  <div class="primary-info">
+    <h1>Hashnopolis | Blog about coding, data science and awesome technology</h1>
+    <footer class="site-footer">
+    <p>© 2017-2018 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    
+    </footer>
+  </div>
+
+  <div class="secondary-info">
+    <p>
+      <button class="btn btn-primary"><i class="fa fa-user-plus" aria-hidden="true"></i>Newsletter</button>
+    </p>
+  </div>
+</div>
+
+
+        </section>
+    
+        <section class="main-content">
+          
+  
+
+  
+  <div>
+      <p class="meta">
+        
+        
+        Tags:
+        
+        <i class="small material-icons">access_time</i> 1-min read
+      </p>
+      
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/1/01/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1></h1>
+      <p>Determine if a <code>9x9</code> Sudoku board is valid. Only the filled cells need to be validated according to the following rules:</p>
+
+<p>Each row must contain the digits <code>1-9</code> without repetition.
+Each column must contain the digits <code>1-9</code> without repetition.
+Each of the 9 <code>3x3</code> sub-boxes of the grid must contain the digits <code>1-9</code> without repetition.</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png" alt="Valid Sudoku" />
+A partially filled sudoku which is valid.</p>
+
+<p>The Sudoku board could be partially filled, where empty cells are filled with the character <code>'.'</code>.</p>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><code>Input:
+[
+  [&quot;5&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],
+  [&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],
+  [&quot;.&quot;,&quot;9&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;],
+  [&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;3&quot;],
+  [&quot;4&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;],
+  [&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;],
+  [&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;8&quot;,&quot;.&quot;],
+  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;.&quot;,&quot;.&quot;,&quot;5&quot;],
+  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;9&quot;]
+]
+Output: true
+</code></pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre><code>Input:
+[
+  [&quot;8&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],
+  [&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],
+  [&quot;.&quot;,&quot;9&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;],
+  [&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;3&quot;],
+  [&quot;4&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;],
+  [&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;],
+  [&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;8&quot;,&quot;.&quot;],
+  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;.&quot;,&quot;.&quot;,&quot;5&quot;],
+  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;9&quot;]
+]
+Output: false
+Explanation: Same as Example 1, except with the 5 in the top left corner being 
+    modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
+</code></pre>
+
+<p><strong>Note:</strong>
+- A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+- Only the filled cells need to be validated according to the</p>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+<script>
+  
+
+  
+
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+        </section>
+        
+
+      </div>
+      
+
+  </main>
+
+  
+
+
+<script src="/js/bundle.js"></script>
+
+
+<script src="/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js"></script>
+<script src="/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="/js/vendor/jquery.jpanelmenu.min.js"></script>
+<script src="/js/vendor/highlight.min.js"></script>
+<script src="/js/vendor/fastclick.min.js"></script>
+<script src="/js/main.js"></script>
+<script id="dsq-count-scr" src="//hashnopolis.disqus.com/count.js" async></script>
+
+</body>
+
+</html>
