@@ -5,7 +5,7 @@
 
   
   <title>
-        Two Sum ii Input Array Is Sorted | Hashnopolis
+        Binary Search Tree Iterator | Hashnopolis
       </title>
 
     
@@ -16,18 +16,22 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
-The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
-Note: - Your returned answers (both index1 and index2) are not zero-based. - You may assume that each input would have exactly one solution and you may not use the same element twice." />
-  <meta name="keywords" content="leetcode python sum sorted-array " />
+  <meta name="description" content="Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
+Calling next() will return the next smallest number in the BST.
+Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
+Solution:
+# Definition for a binary tree node # class TreeNode(object): # def __init__(self, x): # self." />
+  <meta name="keywords" content="leetcode python " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Two Sum ii Input Array Is Sorted" />
-    <meta name="twitter:description" content="Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
-The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
-Note: - Your returned answers (both index1 and index2) are not zero-based. - You may assume that each input would have exactly one solution and you may not use the same element twice." />
+    <meta name="twitter:title" content="Binary Search Tree Iterator" />
+    <meta name="twitter:description" content="Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
+Calling next() will return the next smallest number in the BST.
+Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
+Solution:
+# Definition for a binary tree node # class TreeNode(object): # def __init__(self, x): # self." />
     <meta name="twitter:image" content="http://blog.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -37,7 +41,7 @@ Note: - Your returned answers (both index1 and index2) are not zero-based. - You
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/" />
+<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/09/binary-search-tree-iterator/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -177,28 +181,56 @@ Note: - Your returned answers (both index1 and index2) are not zero-based. - You
         
           "<a href="/tags/python"><strong>python</strong></a>",
         
-          "<a href="/tags/sum"><strong>sum</strong></a>",
-        
-          "<a href="/tags/sorted-array"><strong>sorted-array</strong></a>",
-        
         <i class="small material-icons">access_time</i> 1-min read
       </p>
       
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Two Sum ii Input Array Is Sorted</h1>
-      <p>Given an array of integers that is already sorted in <strong>ascending order</strong>, find two numbers such that they add up to a specific target number.</p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/2018/09/binary-search-tree-iterator/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Binary Search Tree Iterator</h1>
+      <p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.</p>
 
-<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.</p>
+<p>Calling <code>next()</code> will return the next smallest number in the BST.</p>
 
-<p><strong>Note:</strong>
-- Your returned answers (both index1 and index2) are not zero-based.
-- You may assume that each input would have exactly one solution and you may not use the same element twice.
-<strong>Example:</strong></p>
+<p><strong>Note</strong>: <code>next()</code> and <code>hasNext()</code> should run in average <code>O(1)</code> time and uses <code>O(h)</code> memory, where h is the height of the tree.</p>
 
-<pre><code>Input: numbers = [2,7,11,15], target = 9
-Output: [1,2]
-Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
+<p><strong>Solution:</strong></p>
+
+<pre><code class="language-python"># Definition for a  binary tree node
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class BSTIterator(object):
+    def __init__(self, root):
+        &quot;&quot;&quot;
+        :type root: TreeNode
+        &quot;&quot;&quot;
+        self.stack = []
+        self.build(root)
+        print(self.stack)
+
+    def build(self, root):
+        while root:
+            self.stack.append(root)
+            root = root.left
+
+    def hasNext(self):
+        return len(self.stack) &gt; 0
+
+    def next(self):
+        node = self.stack.pop()
+        if node.right:
+            self.build(node.right)
+        return node.val
+
+# Your BSTIterator will be called like this:
+# i, v = BSTIterator(root), []
+# while i.hasNext(): v.append(i.next())
 </code></pre>
+
+<p><strong>Explanation:</strong>
+left &lt; root &lt; right, if there is no right subtree, the next element is the stack top.</p>
 
   </div>
 
