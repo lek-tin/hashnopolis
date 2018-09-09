@@ -7,15 +7,19 @@ body {
 body.frozen {
   overflow: hidden;
 }
+
 p {
   margin-bottom: 1rem;
 }
+
 pre {
   padding: 0;
 }
+
 .sidebar {
   background-image: url(/img/sidebar-bg.jpg);
 }
+
 .menu-logo {
   display: block;
   width: 80%;
@@ -23,13 +27,16 @@ pre {
   max-width: 100px;
   border: none !important;
 }
+
 .menu-logo svg {
   transition: transform 0.2s ease-in-out;
 }
+
 .menu-logo:hover svg {
   border: none;
   transform: rotate(180deg);
 }
+
 .menu-logo svg path {
   fill: #7679EC;
 }
@@ -109,6 +116,10 @@ pre {
 #mobile-menu-open,
 #mobile-menu-close {
   cursor: pointer;
+}
+
+.hljs {
+  white-space: pre;
 }
 
 @media (min-width: 1200px) {
