@@ -5,7 +5,7 @@
 
   
   <title>
-        Hashnopolis | Blog about coding, data science and awesome technology
+        Combination Sum III | Hashnopolis
       </title>
 
     
@@ -16,14 +16,22 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
+Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution:" />
+  <meta name="keywords" content="leetcode python " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Posts" />
-    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="Combination Sum III" />
+    <meta name="twitter:description" content="Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
+Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution:" />
     <meta name="twitter:image" content="http://blog.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -33,7 +41,7 @@
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://blog.hashnopolis.com/post/" />
+<link rel="canonical" href="http://blog.hashnopolis.com/post/2018/09/combination-sum-iii/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -160,62 +168,94 @@
     
         <section class="main-content">
           
+  
 
   
-    <h2>Combination Sum III</h2>
+  <div>
+      <p class="meta">
+        
+        
+        Tags:
+        
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
+        
+          "<a href="/tags/python"><strong>python</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 1-min read
+      </p>
+      
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis-blog/blob/contribute/content/post/http://blog.hashnopolis.com/post/2018/09/combination-sum-iii/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Combination Sum III</h1>
+      <p>Find all possible combinations of <code>k</code> numbers that add up to a number <code>n</code>, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.</p>
+
+<p>Note:</p>
+
+<p>All numbers will be positive integers.
+The solution set must not contain duplicate combinations.
+Example 1:</p>
+
+<pre><code>Input: k = 3, n = 7
+Output: [[1,2,4]]
+</code></pre>
+
+<p>Example 2:</p>
+
+<pre><code>Input: k = 3, n = 9
+Output: [[1,2,6], [1,3,5], [2,3,4]]
+</code></pre>
+
+<p><strong>Solution:</strong></p>
+
+<pre><code class="language-python">class Solution:
+    def combinationSum3(self, k, n):
+        &quot;&quot;&quot;
+        :type k: int
+        :type n: int
+        :rtype: List[List[int]]
+        &quot;&quot;&quot;
+        self.res = []
+        self.backtrack([], 1, k, n)
+        return self.res
+    
+    def backtrack(self, s, index, k, n):
+        if k == 0:
+            if sum(s) == n:
+                self.res.append(list(s))
+            return
+        for i in range(index, 10):
+            s.append(i)
+            if sum(s) &lt;= n:
+                &quot;&quot;&quot; Key step in this algorithm: i+1, k-1&quot;&quot;&quot;
+                self.backtrack(s, i+1, k-1, n)
+            &quot;&quot;&quot;Delete the wrong number&quot;&quot;&quot;
+            s.pop()
+        return
+</code></pre>
+
+<p><strong>Note:</strong>
+Order doesn&rsquo;t matter!
+<code>[1, 2, 3, 5, 6, 7, 8, 9]</code>
+ 👇
+<code>[2, 3, 5, 6, 7, 8, 9]</code>
+ 👇
+<code>[3, 5, 6, 7, 8, 9]</code></p>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+<script>
   
-    <h2>Combination Sum</h2>
+
   
-    <h2>Combinations</h2>
-  
-    <h2>Combine Two Tables</h2>
-  
-    <h2>Contains Duplicate</h2>
-  
-    <h2>Climbing Stairs</h2>
-  
-    <h2>Binary Search Tree Iterator</h2>
-  
-    <h2>Two Sum ii Input Array Is Sorted</h2>
-  
-    <h2>Best Time to Buy and Sell Stock Ii</h2>
-  
-    <h2>Best Time to Buy and Sell Stock</h2>
-  
-    <h2>Add Binary</h2>
-  
-    <h2>17. Letter Combinations of a Phone Number</h2>
-  
-    <h2>18. 4Sum</h2>
-  
-    <h2>Two Sum</h2>
-  
-    <h2>Conditional Render in React</h2>
-  
-    <h2>16. 3sum Closest</h2>
-  
-    <h2>15. 3sum</h2>
-  
-    <h2>23. Merge k Sorted Lists</h2>
-  
-    <h2>57. Insert Interval</h2>
-  
-    <h2>56. Merge Intervals</h2>
-  
-    <h2>80. Remove Duplicates From Sorted Array II</h2>
-  
-    <h2>26. Remove Duplicates From Sorted Array</h2>
-  
-    <h2>4. Median of Two Sorted Arrays</h2>
-  
-    <h2>19. Remove Nth Node From End of List</h2>
-  
-    <h2>31. Search in Rotated Sorted Array II</h2>
-  
-    <h2>When You New a Class in JavaScript?</h2>
-  
-    <h2></h2>
-  
+
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
         </section>

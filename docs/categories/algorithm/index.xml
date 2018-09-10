@@ -7,10 +7,74 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 09 Sep 2018 15:16:10 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Sep 2018 21:42:37 +0800</lastBuildDate>
     
 	<atom:link href="http://blog.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Combination Sum III</title>
+      <link>http://blog.hashnopolis.com/post/2018/09/combination-sum-iii/</link>
+      <pubDate>Mon, 10 Sep 2018 21:42:37 +0800</pubDate>
+      
+      <guid>http://blog.hashnopolis.com/post/2018/09/combination-sum-iii/</guid>
+      <description>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
+Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution:</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum</title>
+      <link>http://blog.hashnopolis.com/post/2018/09/combination-sum/</link>
+      <pubDate>Mon, 10 Sep 2018 21:42:01 +0800</pubDate>
+      
+      <guid>http://blog.hashnopolis.com/post/2018/09/combination-sum/</guid>
+      <description>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
+Note:
+All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations. Example 1:
+Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2:</description>
+    </item>
+    
+    <item>
+      <title>Combinations</title>
+      <link>http://blog.hashnopolis.com/post/2018/09/combinations/</link>
+      <pubDate>Mon, 10 Sep 2018 21:41:18 +0800</pubDate>
+      
+      <guid>http://blog.hashnopolis.com/post/2018/09/combinations/</guid>
+      <description>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+Example:
+Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution:
+class Solution: def combine(self, n, k): &amp;quot;&amp;quot;&amp;quot; :type n: int :type k: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] nums = list(range(1, n+1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans.</description>
+    </item>
+    
+    <item>
+      <title>Combine Two Tables</title>
+      <link>http://blog.hashnopolis.com/post/2018/09/combine-two-tables/</link>
+      <pubDate>Mon, 10 Sep 2018 21:40:30 +0800</pubDate>
+      
+      <guid>http://blog.hashnopolis.com/post/2018/09/combine-two-tables/</guid>
+      <description>Table: Person
++-------------+---------+ | Column Name | Type | +-------------+---------+ | PersonId | int | | FirstName | varchar | | LastName | varchar | +-------------+---------+ PersonId is the primary key column for this table.  Table: Address
++-------------+---------+ | Column Name | Type | +-------------+---------+ | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | +-------------+---------+ AddressId is the primary key column for this table.</description>
+    </item>
+    
+    <item>
+      <title>Contains Duplicate</title>
+      <link>http://blog.hashnopolis.com/post/2018/09/contains-duplicate/</link>
+      <pubDate>Mon, 10 Sep 2018 21:39:18 +0800</pubDate>
+      
+      <guid>http://blog.hashnopolis.com/post/2018/09/contains-duplicate/</guid>
+      <description>Given an array of integers, find if the array contains any duplicates.
+Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+Example 1:
+Input: [1,2,3,1] Output: true  Example 2:
+Input: [1,2,3,4] Output: false  Example 3:
+Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution:
+class Solution: def containsDuplicate(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: bool &amp;quot;&amp;quot;&amp;quot; uniqueNums = set(nums) if (len(uniqueNums) !</description>
+    </item>
     
     <item>
       <title>Climbing Stairs</title>
