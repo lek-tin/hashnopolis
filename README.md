@@ -1,2 +1,2 @@
-# hashjelly-blog
+# hashnopolis
 My Blog

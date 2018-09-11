@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Frontend on Hashnopolis</title>
-    <link>http://blog.hashnopolis.com/tags/frontend/</link>
+    <link>http://www.hashnopolis.com/tags/frontend/</link>
     <description>Recent content in Frontend on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
     <lastBuildDate>Tue, 28 Aug 2018 23:31:12 +0800</lastBuildDate>
     
-	<atom:link href="http://blog.hashnopolis.com/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.hashnopolis.com/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Conditional Render in React</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/conditional-render-in-react/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</link>
       <pubDate>Tue, 28 Aug 2018 23:31:12 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/conditional-render-in-react/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</guid>
       <description>In react, sometimes we need to render a component based on some flag, for example, we need to display a different set of information to the admin users than the normal users. We have a prop called isAdmin
 render () { const { isAdmin } = this.props return ( &amp;lt;div&amp;gt; { isAdmin ? &amp;lt;CustomeComponent {...propSetA} / &amp;gt; : &amp;lt;CustomeComponent {...propSetB} / &amp;gt; } &amp;lt;/div&amp;gt; ) }  Looks good right, but there is one problem.</description>
     </item>
