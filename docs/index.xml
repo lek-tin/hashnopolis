@@ -2,22 +2,86 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hashnopolis</title>
-    <link>http://blog.hashnopolis.com/</link>
+    <link>http://www.hashnopolis.com/</link>
     <description>Recent content on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 09 Sep 2018 15:16:10 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Sep 2018 21:42:37 +0800</lastBuildDate>
     
-	<atom:link href="http://blog.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Combination Sum III</title>
+      <link>http://www.hashnopolis.com/post/2018/09/combination-sum-iii/</link>
+      <pubDate>Mon, 10 Sep 2018 21:42:37 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/combination-sum-iii/</guid>
+      <description>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
+Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution:</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum</title>
+      <link>http://www.hashnopolis.com/post/2018/09/combination-sum/</link>
+      <pubDate>Mon, 10 Sep 2018 21:42:01 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/combination-sum/</guid>
+      <description>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
+Note:
+All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations. Example 1:
+Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2:</description>
+    </item>
+    
+    <item>
+      <title>Combinations</title>
+      <link>http://www.hashnopolis.com/post/2018/09/combinations/</link>
+      <pubDate>Mon, 10 Sep 2018 21:41:18 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/combinations/</guid>
+      <description>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+Example:
+Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution:
+class Solution: def combine(self, n, k): &amp;quot;&amp;quot;&amp;quot; :type n: int :type k: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] nums = list(range(1, n+1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans.</description>
+    </item>
+    
+    <item>
+      <title>Combine Two Tables</title>
+      <link>http://www.hashnopolis.com/post/2018/09/combine-two-tables/</link>
+      <pubDate>Mon, 10 Sep 2018 21:40:30 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/combine-two-tables/</guid>
+      <description>Table: Person
++-------------+---------+ | Column Name | Type | +-------------+---------+ | PersonId | int | | FirstName | varchar | | LastName | varchar | +-------------+---------+ PersonId is the primary key column for this table.  Table: Address
++-------------+---------+ | Column Name | Type | +-------------+---------+ | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | +-------------+---------+ AddressId is the primary key column for this table.</description>
+    </item>
+    
+    <item>
+      <title>Contains Duplicate</title>
+      <link>http://www.hashnopolis.com/post/2018/09/contains-duplicate/</link>
+      <pubDate>Mon, 10 Sep 2018 21:39:18 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/contains-duplicate/</guid>
+      <description>Given an array of integers, find if the array contains any duplicates.
+Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+Example 1:
+Input: [1,2,3,1] Output: true  Example 2:
+Input: [1,2,3,4] Output: false  Example 3:
+Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution:
+class Solution: def containsDuplicate(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: bool &amp;quot;&amp;quot;&amp;quot; uniqueNums = set(nums) if (len(uniqueNums) !</description>
+    </item>
+    
+    <item>
       <title>Climbing Stairs</title>
-      <link>http://blog.hashnopolis.com/post/2018/09/climbing-stairs/</link>
+      <link>http://www.hashnopolis.com/post/2018/09/climbing-stairs/</link>
       <pubDate>Sun, 09 Sep 2018 15:16:10 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/09/climbing-stairs/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/09/climbing-stairs/</guid>
       <description>You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 Note: Given n will be a positive integer.
@@ -27,10 +91,10 @@ Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 ste
     
     <item>
       <title>Binary Search Tree Iterator</title>
-      <link>http://blog.hashnopolis.com/post/2018/09/binary-search-tree-iterator/</link>
+      <link>http://www.hashnopolis.com/post/2018/09/binary-search-tree-iterator/</link>
       <pubDate>Sun, 09 Sep 2018 15:15:09 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/09/binary-search-tree-iterator/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/09/binary-search-tree-iterator/</guid>
       <description>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
 Calling next() will return the next smallest number in the BST.
 Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
@@ -40,10 +104,10 @@ Solution:
     
     <item>
       <title>Two Sum ii Input Array Is Sorted</title>
-      <link>http://blog.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</link>
+      <link>http://www.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</link>
       <pubDate>Fri, 07 Sep 2018 23:53:18 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</guid>
       <description>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
 The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
 Note: - Your returned answers (both index1 and index2) are not zero-based. - You may assume that each input would have exactly one solution and you may not use the same element twice.</description>
@@ -51,10 +115,10 @@ Note: - Your returned answers (both index1 and index2) are not zero-based. - You
     
     <item>
       <title>Best Time to Buy and Sell Stock Ii</title>
-      <link>http://blog.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/</link>
+      <link>http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/</link>
       <pubDate>Thu, 06 Sep 2018 23:39:13 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/</guid>
       <description>Say you have an array for which the ith element is the price of a given stock on day i.
 Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
 Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</description>
@@ -62,10 +126,10 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
     
     <item>
       <title>Best Time to Buy and Sell Stock</title>
-      <link>http://blog.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock/</link>
+      <link>http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock/</link>
       <pubDate>Thu, 06 Sep 2018 23:37:49 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock/</guid>
       <description>Say you have an array for which the ith element is the price of a given stock on day i.
 If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
 Note that you cannot sell a stock before you buy one.
@@ -75,10 +139,10 @@ Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on
     
     <item>
       <title>Add Binary</title>
-      <link>http://blog.hashnopolis.com/post/2018/09/add-binary/</link>
+      <link>http://www.hashnopolis.com/post/2018/09/add-binary/</link>
       <pubDate>Wed, 05 Sep 2018 23:48:48 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/09/add-binary/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/09/add-binary/</guid>
       <description>Given two binary strings, return their sum (also a binary string).
 The input strings are both non-empty and contains only characters 1 or 0.
 Example 1:
@@ -89,10 +153,10 @@ class Solution: def addBinary(self, a, b): &amp;quot;&amp;quot;&amp;quot; :type 
     
     <item>
       <title>17. Letter Combinations of a Phone Number</title>
-      <link>http://blog.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/</link>
+      <link>http://www.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/</link>
       <pubDate>Mon, 03 Sep 2018 00:28:45 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/</guid>
       <description>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 Example:
@@ -102,10 +166,10 @@ Although the above answer is in lexicographical order, your answer could be in a
     
     <item>
       <title>18. 4Sum</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/18.-4sum/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/18.-4sum/</link>
       <pubDate>Fri, 31 Aug 2018 23:30:43 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/18.-4sum/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/18.-4sum/</guid>
       <description>Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
 Note:
 The solution set must not contain duplicate quadruplets.
@@ -115,10 +179,10 @@ Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-
     
     <item>
       <title>Two Sum</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/two-sum/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/two-sum/</link>
       <pubDate>Wed, 29 Aug 2018 00:44:49 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/two-sum/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/two-sum/</guid>
       <description>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 Example:
@@ -128,20 +192,20 @@ Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, 
     
     <item>
       <title>Conditional Render in React</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/conditional-render-in-react/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</link>
       <pubDate>Tue, 28 Aug 2018 23:31:12 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/conditional-render-in-react/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</guid>
       <description>In react, sometimes we need to render a component based on some flag, for example, we need to display a different set of information to the admin users than the normal users. We have a prop called isAdmin
 render () { const { isAdmin } = this.props return ( &amp;lt;div&amp;gt; { isAdmin ? &amp;lt;CustomeComponent {...propSetA} / &amp;gt; : &amp;lt;CustomeComponent {...propSetB} / &amp;gt; } &amp;lt;/div&amp;gt; ) }  Looks good right, but there is one problem.</description>
     </item>
     
     <item>
       <title>16. 3sum Closest</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/16.-3sum-closest/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/16.-3sum-closest/</link>
       <pubDate>Mon, 27 Aug 2018 23:30:43 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/16.-3sum-closest/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/16.-3sum-closest/</guid>
       <description>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
 Example:
 Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).</description>
@@ -149,10 +213,10 @@ Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to th
     
     <item>
       <title>15. 3sum</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/15.-3sum/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/15.-3sum/</link>
       <pubDate>Mon, 27 Aug 2018 23:29:18 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/15.-3sum/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/15.-3sum/</guid>
       <description>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 Note:
 The solution set must not contain duplicate triplets.
@@ -162,10 +226,10 @@ Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, 
     
     <item>
       <title>23. Merge k Sorted Lists</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</link>
       <pubDate>Sun, 26 Aug 2018 17:54:18 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
       <description>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 Example:
 Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  </description>
@@ -173,10 +237,10 @@ Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&
     
     <item>
       <title>57. Insert Interval</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/57.-insert-interval/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/57.-insert-interval/</link>
       <pubDate>Sun, 26 Aug 2018 00:43:48 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/57.-insert-interval/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/57.-insert-interval/</guid>
       <description>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
 You may assume that the intervals were initially sorted according to their start times.
 Example 1:
@@ -187,10 +251,10 @@ Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Outpu
     
     <item>
       <title>56. Merge Intervals</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/56.-merge-intervals/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/</link>
       <pubDate>Fri, 24 Aug 2018 02:19:05 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/56.-merge-intervals/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/</guid>
       <description>Given a collection of intervals, merge all overlapping intervals.
 Example 1:
 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
@@ -200,10 +264,10 @@ Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are 
     
     <item>
       <title>80. Remove Duplicates From Sorted Array II</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/</link>
       <pubDate>Fri, 24 Aug 2018 00:48:48 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/</guid>
       <description>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 Example 1:
@@ -212,10 +276,10 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
     
     <item>
       <title>26. Remove Duplicates From Sorted Array</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/26.-remove-duplicates-from-sorted-array/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/26.-remove-duplicates-from-sorted-array/</link>
       <pubDate>Thu, 23 Aug 2018 23:52:17 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/26.-remove-duplicates-from-sorted-array/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/26.-remove-duplicates-from-sorted-array/</guid>
       <description>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 Example 1:
@@ -224,10 +288,10 @@ Given nums = [1,1,2], Your function should return length = 2, with the first two
     
     <item>
       <title>4. Median of Two Sorted Arrays</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/</link>
       <pubDate>Tue, 21 Aug 2018 20:54:32 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/</guid>
       <description>There are two sorted arrays nums1 and nums2 of size m and n respectively.
 Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 You may assume nums1 and nums2 cannot be both empty.
@@ -239,10 +303,10 @@ nums1 = [1, 2] nums2 = [3, 4]  The median is (2 + 3)/2 = 2.</description>
     
     <item>
       <title>19. Remove Nth Node From End of List</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/19.-remove-nth-node-from-end-of-list/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/19.-remove-nth-node-from-end-of-list/</link>
       <pubDate>Mon, 20 Aug 2018 23:33:38 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/19.-remove-nth-node-from-end-of-list/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/19.-remove-nth-node-from-end-of-list/</guid>
       <description>Given a linked list, remove the n-th node from the end of list and return its head.
 Example:
 Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note:
@@ -253,10 +317,10 @@ Could you do this in one pass?</description>
     
     <item>
       <title>31. Search in Rotated Sorted Array II</title>
-      <link>http://blog.hashnopolis.com/post/2018/08/31.-search-in-rotated-sorted-array-ii/</link>
+      <link>http://www.hashnopolis.com/post/2018/08/31.-search-in-rotated-sorted-array-ii/</link>
       <pubDate>Wed, 15 Aug 2018 12:50:21 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/08/31.-search-in-rotated-sorted-array-ii/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/31.-search-in-rotated-sorted-array-ii/</guid>
       <description>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 (i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
 You are given a target value to search. If found in the array return true, otherwise return false.
@@ -267,10 +331,10 @@ Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a 
     
     <item>
       <title>When You New a Class in JavaScript?</title>
-      <link>http://blog.hashnopolis.com/post/2018/02/when-you-new-a-class-in-javascript/</link>
+      <link>http://www.hashnopolis.com/post/2018/02/when-you-new-a-class-in-javascript/</link>
       <pubDate>Tue, 13 Feb 2018 15:30:03 +0800</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/2018/02/when-you-new-a-class-in-javascript/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/02/when-you-new-a-class-in-javascript/</guid>
       <description>Here is an example of instantiating a class using the new operator:
 class Person { constructor(name, age) { this.name = name; this.age = age; } } const asian = new Person(&#39;Alice&#39;, 25); console.log(asian);  As you can see from below, asian is not a class, it is instead, an object:
 [object Object] { age: 25, name: &amp;quot;Alice&amp;quot; }  The values of asian are set by the constructor of the Person class.</description>
@@ -278,10 +342,10 @@ class Person { constructor(name, age) { this.name = name; this.age = age; } } co
     
     <item>
       <title></title>
-      <link>http://blog.hashnopolis.com/post/1/01/</link>
+      <link>http://www.hashnopolis.com/post/1/01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.hashnopolis.com/post/1/01/</guid>
+      <guid>http://www.hashnopolis.com/post/1/01/</guid>
       <description>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
 Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
 A partially filled sudoku which is valid.
