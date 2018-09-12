@@ -5,7 +5,7 @@
 
   
   <title>
-        Hashnopolis | Blog about coding, data science and awesome technology
+        Employees Earning More Than Their Managers | Hashnopolis
       </title>
 
     
@@ -16,15 +16,18 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="___SITE Description___" />
-  <meta name="keywords" content="___keyword, keyword, keyword___" />
-
+  <meta name="description" content="The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
+&#43;----&#43;-------&#43;--------&#43;-----------&#43; | Id | Name | Salary | ManagerId | &#43;----&#43;-------&#43;--------&#43;-----------&#43; | 1 | Joe | 70000 | 3 | | 2 | Henry | 80000 | 4 | | 3 | Sam | 60000 | NULL | | 4 | Max | 90000 | NULL | &#43;----&#43;-------&#43;--------&#43;-----------&#43;  Given the Employee table, write a SQL query that finds out employees who earn more than their managers." />
+  <meta name="keywords" content="leetcode sql " />
   
-  <meta name="twitter:card" content="summary" />
   
-  <meta name="twitter:title" content="Hashnopolis" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Employees Earning More Than Their Managers" />
+    <meta name="twitter:description" content="The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
+&#43;----&#43;-------&#43;--------&#43;-----------&#43; | Id | Name | Salary | ManagerId | &#43;----&#43;-------&#43;--------&#43;-----------&#43; | 1 | Joe | 70000 | 3 | | 2 | Henry | 80000 | 4 | | 3 | Sam | 60000 | NULL | | 4 | Max | 90000 | NULL | &#43;----&#43;-------&#43;--------&#43;-----------&#43;  Given the Employee table, write a SQL query that finds out employees who earn more than their managers." />
+    <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+  
 
 
 
@@ -32,7 +35,7 @@
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/categories/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -159,46 +162,84 @@
     
         <section class="main-content">
           
-
-
-
-
-
-
-
-<div class="row">
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/css/">CSS</a>
-    </div>
+
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/golang/">Golangggggggg</a>
-    </div>
+  <div>
+      <p class="meta">
+        
+        
+        Tags:
+        
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
+        
+          "<a href="/tags/sql"><strong>sql</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 1-min read
+      </p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/contribute/content/post/http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Employees Earning More Than Their Managers</h1>
+      <p>The <code>Employee</code> table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.</p>
+
+<pre><code>+----+-------+--------+-----------+
+| Id | Name  | Salary | ManagerId |
++----+-------+--------+-----------+
+| 1  | Joe   | 70000  | 3         |
+| 2  | Henry | 80000  | 4         |
+| 3  | Sam   | 60000  | NULL      |
+| 4  | Max   | 90000  | NULL      |
++----+-------+--------+-----------+
+</code></pre>
+
+<p>Given the <code>Employee</code> table, write a SQL query that finds out employees who earn more than their managers. For the above table, Joe is the only employee who earns more than his manager.</p>
+
+<pre><code>+----------+
+| Employee |
++----------+
+| Joe      |
++----------+
+</code></pre>
+
+<p><strong>Solution:</strong>
+<code>WHERE</code>:</p>
+
+<pre><code class="language-sql">SELECT
+    *
+FROM
+    Employee AS a,
+    Employee AS b
+WHERE
+    a.ManagerId = b.Id
+        AND a.Salary &gt; b.Salary
+;
+</code></pre>
+
+<p><code>JOIN</code> - more efficient:</p>
+
+<pre><code class="language-sql">SELECT
+     a.NAME AS Employee
+FROM Employee AS a JOIN Employee AS b
+     ON a.ManagerId = b.Id
+     AND a.Salary &gt; b.Salary
+;
+</code></pre>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+<script>
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/javascript/">JavaScripttttttt</a>
-    </div>
+
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/algorithm/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/database/"></a>
-    </div>
-  
-</div>
+
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
         </section>

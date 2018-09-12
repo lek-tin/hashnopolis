@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sql on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/sql/</link>
+    <description>Recent content in Sql on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Wed, 12 Sep 2018 23:57:13 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Employees Earning More Than Their Managers</title>
+      <link>http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/</link>
+      <pubDate>Wed, 12 Sep 2018 23:57:13 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/</guid>
+      <description>The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
++----+-------+--------+-----------+ | Id | Name | Salary | ManagerId | +----+-------+--------+-----------+ | 1 | Joe | 70000 | 3 | | 2 | Henry | 80000 | 4 | | 3 | Sam | 60000 | NULL | | 4 | Max | 90000 | NULL | +----+-------+--------+-----------+  Given the Employee table, write a SQL query that finds out employees who earn more than their managers.</description>
+    </item>
+    
+    <item>
+      <title>Duplicate Emails</title>
+      <link>http://www.hashnopolis.com/post/2018/09/duplicate-emails/</link>
+      <pubDate>Wed, 12 Sep 2018 23:55:39 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/duplicate-emails/</guid>
+      <description>Write a SQL query to find all duplicate emails in a table named Person.
++----+---------+ | Id | Email | +----+---------+ | 1 | a@b.com | | 2 | c@d.com | | 3 | a@b.com | +----+---------+  For example, your query should return the following for the above table:
++---------+ | Email | +---------+ | a@b.com | +---------+  Note: All emails are in lowercase. Solution:
+# Write your MySQL query statement below SELECT email FROM Person WHERE email IN ( SELECT email FROM Person GROUP BY email HAVING COUNT(*) &amp;gt; 1 ) GROUP BY email  </description>
+    </item>
+    
+  </channel>
+</rss>
