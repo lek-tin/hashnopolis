@@ -7,10 +7,103 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 12 Sep 2018 23:57:13 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Sep 2018 23:03:06 +0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Binary Tree Right Side View</title>
+      <link>http://www.hashnopolis.com/post/2018/09/binary-tree-right-side-view/</link>
+      <pubDate>Thu, 13 Sep 2018 23:03:06 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-right-side-view/</guid>
+      <description>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+Example:
+Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &amp;lt;--- / \ 2 3 &amp;lt;--- \ \ 5 4 &amp;lt;---  Solution:
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Preorder Traversal</title>
+      <link>http://www.hashnopolis.com/post/2018/09/binary-tree-preorder-traversal/</link>
+      <pubDate>Thu, 13 Sep 2018 23:02:11 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-preorder-traversal/</guid>
+      <description>Given a binary tree, return the preorder traversal of its nodes&amp;rsquo; values.
+Example:
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow up: Recursive solution is trivial, could you do it iteratively?
+Solution:
+# Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; if root is None: return [] return [root.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Postorder Traversal</title>
+      <link>http://www.hashnopolis.com/post/2018/09/binary-tree-postorder-traversal/</link>
+      <pubDate>Thu, 13 Sep 2018 23:01:30 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-postorder-traversal/</guid>
+      <description>Given a binary tree, return the postorder traversal of its nodes&amp;rsquo; values.
+Example:
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1]  Follow up:
+Recursive solution is trivial, could you do it iteratively?
+Solution:
+Recursive👇
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def postorderTraversal(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; def traverse(node): if node == None: return [] return traverse(node.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Paths</title>
+      <link>http://www.hashnopolis.com/post/2018/09/binary-tree-paths/</link>
+      <pubDate>Thu, 13 Sep 2018 23:00:42 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-paths/</guid>
+      <description>Given a binary tree, return all root-to-leaf paths.
+Note: A leaf is a node with no children.
+Example:
+Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;]  Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3
+Solution:
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] def traverse(root, path): if root == None: return path += str(root.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Level Order Traversal</title>
+      <link>http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal/</link>
+      <pubDate>Thu, 13 Sep 2018 22:59:49 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal/</guid>
+      <description>Given a binary tree, return the level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level).
+For example:
+Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7  return its level order traversal as:
+[ [3], [9,20], [15,7] ]  Solution:
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Level Order Traversal II</title>
+      <link>http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal-ii/</link>
+      <pubDate>Thu, 13 Sep 2018 22:59:17 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal-ii/</guid>
+      <description>Given a binary tree, return the bottom-up level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level from leaf to root).
+For example: Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7  return its bottom-up level order traversal as:
+[ [15,7], [9,20], [3] ]  Solution:
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Inorder Traversal</title>
+      <link>http://www.hashnopolis.com/post/2018/09/binary-tree-inorder-traversal/</link>
+      <pubDate>Thu, 13 Sep 2018 22:57:42 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-inorder-traversal/</guid>
+      <description>Given a binary tree, return the inorder traversal of its nodes&amp;rsquo; values.
+Example:
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Follow up: the Recursive solution is trivial, could you do it iteratively?
+Solution
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; &amp;quot;&amp;quot;&amp;quot;Check root == None to reduce time on checking&amp;quot;&amp;quot;&amp;quot; if root == None: return [] stack = [] result = [] current = root while (current!</description>
+    </item>
     
     <item>
       <title>Employees Earning More Than Their Managers</title>
