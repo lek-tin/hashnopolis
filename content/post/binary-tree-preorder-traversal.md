@@ -1,0 +1,52 @@
+---
+title: "Binary Tree Preorder Traversal"
+description: "Some description ..."
+authors: ["lek-tin"]
+tags: ["leetcode", "python", "binary-tree"]
+categories: ["algorithm"]
+date: 2018-09-13T23:02:11+08:00
+draft: false
+archive: false
+---
+Given a binary tree, return the preorder traversal of its nodes' values.
+
+Example:
+```
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+
+Output: [1,2,3]
+```
+**Follow up:** Recursive solution is trivial, could you do it iteratively?
+
+**Solution:**
+```python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def preorderTraversal_1(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+        if root is None:
+            return []
+        return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
+    
+    def preorderTraversal_2(self, root):
+    while stack:
+            node = stack.pop()
+            if node:
+                ans.append(node.val)
+                stack.extend([node.right, node.left])
+        return ans
+```
