@@ -7,10 +7,203 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 13 Sep 2018 23:03:06 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Sep 2018 12:56:41 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Power of Two</title>
+      <link>http://www.hashnopolis.com/post/2018/09/power-of-two/</link>
+      <pubDate>Sat, 15 Sep 2018 12:56:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/power-of-two/</guid>
+      <description>Given an integer, write a function to determine if it is a power of two.
+Example 1:
+Input: 1 Output: true Explanation: 2**0 = 1  Example 2:
+Input: 16 Output: true Explanation: 2**4 = 16  Example 3:
+Input: 218 Output: false  Solution:
+class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: bool &amp;quot;&amp;quot;&amp;quot; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False  </description>
+    </item>
+    
+    <item>
+      <title>Plus One</title>
+      <link>http://www.hashnopolis.com/post/2018/09/plus-one/</link>
+      <pubDate>Sat, 15 Sep 2018 12:56:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/plus-one/</guid>
+      <description>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
+You may assume the integer does not contain any leading zero, except the number 0 itself.
+Example 1:
+Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</description>
+    </item>
+    
+    <item>
+      <title>Swap Nodes in Pairs</title>
+      <link>http://www.hashnopolis.com/post/2018/09/swap-nodes-in-pairs/</link>
+      <pubDate>Sat, 15 Sep 2018 12:55:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/swap-nodes-in-pairs/</guid>
+      <description>Given a linked list, swap every two adjacent nodes and return its head.
+Example:
+Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note: - Your algorithm should use only constant extra space. - You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed. Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; # https://www.</description>
+    </item>
+    
+    <item>
+      <title>Unique Paths</title>
+      <link>http://www.hashnopolis.com/post/2018/09/unique-paths/</link>
+      <pubDate>Sat, 15 Sep 2018 12:54:17 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/unique-paths/</guid>
+      <description>A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
+How many possible unique paths are there?
+Above is a 7 x 3 grid. How many possible unique paths are there?</description>
+    </item>
+    
+    <item>
+      <title>Valid Anagram</title>
+      <link>http://www.hashnopolis.com/post/2018/09/valid-anagram/</link>
+      <pubDate>Sat, 15 Sep 2018 12:53:21 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/valid-anagram/</guid>
+      <description>Given two strings s and t , write a function to determine if t is an anagram of s.
+Example 1:
+Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true  Example 2:
+Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false  Note: You may assume the string contains only lowercase alphabets.
+Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such case?</description>
+    </item>
+    
+    <item>
+      <title>Ugly Number</title>
+      <link>http://www.hashnopolis.com/post/2018/09/ugly-number/</link>
+      <pubDate>Sat, 15 Sep 2018 12:52:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/ugly-number/</guid>
+      <description>Write a program to check whether a given number is an ugly number.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
+Example 1:
+Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2:
+Input: 8 Output: true Explanation: 8 = 2 × 2 × 2  Example 3:
+Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7.</description>
+    </item>
+    
+    <item>
+      <title>Subsets</title>
+      <link>http://www.hashnopolis.com/post/2018/09/subsets/</link>
+      <pubDate>Sat, 15 Sep 2018 12:48:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/subsets/</guid>
+      <description>Given a set of distinct integers, nums, return all possible subsets (the power set).
+Note: The solution set must not contain duplicate subsets.
+Example:
+Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]  Solution:
+class Solution: def subsets(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] def dfs(nums, index, path): res.append(path) for i in range(index, len(nums)): dfs(nums, i+1, path+[nums[i]]) dfs(sorted(nums), 0, []) return res  </description>
+    </item>
+    
+    <item>
+      <title>Roman to Integer</title>
+      <link>http://www.hashnopolis.com/post/2018/09/roman-to-integer/</link>
+      <pubDate>Sat, 15 Sep 2018 12:47:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/roman-to-integer/</guid>
+      <description>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.</description>
+    </item>
+    
+    <item>
+      <title>Single Number III</title>
+      <link>http://www.hashnopolis.com/post/2018/09/single-number-iii/</link>
+      <pubDate>Fri, 14 Sep 2018 11:54:43 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/single-number-iii/</guid>
+      <description>Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
+For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5]. Note:
+ The order of the result is not important. So in the above example, [5, 3] is also correct. Your algorithm should run in linear runtime complexity.</description>
+    </item>
+    
+    <item>
+      <title>Single Number II</title>
+      <link>http://www.hashnopolis.com/post/2018/09/single-number-ii/</link>
+      <pubDate>Fri, 14 Sep 2018 11:53:51 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/single-number-ii/</guid>
+      <description>Given a non-empty array of integers, every element appears three times except for one, which appears exactly once. Find that single one.
+Note:
+Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+Example 1:
+Input: [2,2,3,2] Output: 3  Example 2:
+Input: [0,1,0,1,0,1,99] Output: 99  Solution:
+class Solution: def singleNumber(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.csdn.net/karen0310/article/details/78226261 ones, twos = 0, 0 for _, num in enumerate(nums): ones = (ones ^ num) &amp;amp; ~twos twos = (twos ^ num) &amp;amp; ~ones print(bin(num), &amp;quot;ones: &amp;quot;, bin(ones), &amp;quot;twos: &amp;quot;, bin(twos)) return ones  </description>
+    </item>
+    
+    <item>
+      <title>Single Number</title>
+      <link>http://www.hashnopolis.com/post/2018/09/single-number/</link>
+      <pubDate>Fri, 14 Sep 2018 11:53:00 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/single-number/</guid>
+      <description> Given a non-empty array of integers, every element appears twice except for one. Find that single one. Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+Example 1:
+Input: [2,2,1] Output: 1 Example 2:  Input: [4,1,2,1,2] Output: 4  Solution:
+// Java class Solution { public int singleNumber(int[] nums) { int result=0; for(int num : nums) { result=result^num; } return result; } }  </description>
+    </item>
+    
+    <item>
+      <title>Find Peak Element</title>
+      <link>http://www.hashnopolis.com/post/2018/09/find-peak-element/</link>
+      <pubDate>Fri, 14 Sep 2018 11:51:46 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/find-peak-element/</guid>
+      <description>A peak element is an element that is greater than its neighbors.
+Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index.
+The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
+You may imagine that nums[-1] = nums[n] = -∞.
+Example 1:
+Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</description>
+    </item>
+    
+    <item>
+      <title>Find Minimum in Rotated Sorted Array</title>
+      <link>http://www.hashnopolis.com/post/2018/09/find-minimum-in-rotated-sorted-array/</link>
+      <pubDate>Fri, 14 Sep 2018 11:50:46 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/find-minimum-in-rotated-sorted-array/</guid>
+      <description>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+Find the minimum element.
+You may assume no duplicate exists in the array.
+Example 1:
+Input: [3,4,5,1,2] Output: 1  Example 2:
+Input: [4,5,6,7,0,1,2] Output: 0  Solution:
+class Solution: def findMin(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; if len(nums) == 1: return nums[0] if len(nums) == 2: return min(nums[0], nums[1]) if nums[0] &amp;lt; nums[len(nums)-1]: return nums[0] if nums[len(nums)-2] &amp;gt; nums[len(nums)-1]: return nums[len(nums)-1] for i in range(1, len(nums)-1): if nums[i] &amp;lt; nums[i-1] and nums[i] &amp;lt; nums[i+1]: return nums[i] def bsFindMin(self, nums): l, r = 0, len(nums) - 1 while l &amp;lt; r: m = (l + r) // 2 if nums[m] &amp;gt; nums[m - 1] and nums[m] &amp;gt; nums[m + 1]: return nums[m + 1] if nums[m] &amp;lt; nums[m - 1] and nums[m] &amp;lt; nums[m + 1]: return nums[m] if nums[m] &amp;gt;= nums[r]: l = m else: r = m return nums[0]  </description>
+    </item>
+    
+    <item>
+      <title>Delete Node in a Linked List</title>
+      <link>http://www.hashnopolis.com/post/2018/09/delete-node-in-a-linked-list/</link>
+      <pubDate>Fri, 14 Sep 2018 11:49:07 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/delete-node-in-a-linked-list/</guid>
+      <description>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
+Supposed the linked list is 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 and you are given the third node with value 3, the linked list should become 1 -&amp;gt; 2 -&amp;gt; 4 after calling your function.
+Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
+    </item>
+    
+    <item>
+      <title>Convert Sorted Array to Binary Search Tree</title>
+      <link>http://www.hashnopolis.com/post/2018/09/convert-sorted-array-to-binary-search-tree/</link>
+      <pubDate>Fri, 14 Sep 2018 10:23:36 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/convert-sorted-array-to-binary-search-tree/</guid>
+      <description>Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+Example:
+Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5  Solution:</description>
+    </item>
     
     <item>
       <title>Binary Tree Right Side View</title>
@@ -218,7 +411,7 @@ Solution:
     </item>
     
     <item>
-      <title>Two Sum ii Input Array Is Sorted</title>
+      <title>Two Sum II Input Array Is Sorted</title>
       <link>http://www.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</link>
       <pubDate>Fri, 07 Sep 2018 23:53:18 +0800</pubDate>
       
