@@ -1,5 +1,5 @@
 ---
-title: "Two Sum ii Input Array Is Sorted"
+title: "Two Sum II Input Array Is Sorted"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "python", "sum", "sorted-array"]

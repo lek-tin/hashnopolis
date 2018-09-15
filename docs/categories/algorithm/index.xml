@@ -7,10 +7,111 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 14 Sep 2018 11:54:43 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Sep 2018 12:56:41 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Power of Two</title>
+      <link>http://www.hashnopolis.com/post/2018/09/power-of-two/</link>
+      <pubDate>Sat, 15 Sep 2018 12:56:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/power-of-two/</guid>
+      <description>Given an integer, write a function to determine if it is a power of two.
+Example 1:
+Input: 1 Output: true Explanation: 2**0 = 1  Example 2:
+Input: 16 Output: true Explanation: 2**4 = 16  Example 3:
+Input: 218 Output: false  Solution:
+class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: bool &amp;quot;&amp;quot;&amp;quot; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False  </description>
+    </item>
+    
+    <item>
+      <title>Plus One</title>
+      <link>http://www.hashnopolis.com/post/2018/09/plus-one/</link>
+      <pubDate>Sat, 15 Sep 2018 12:56:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/plus-one/</guid>
+      <description>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
+You may assume the integer does not contain any leading zero, except the number 0 itself.
+Example 1:
+Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</description>
+    </item>
+    
+    <item>
+      <title>Swap Nodes in Pairs</title>
+      <link>http://www.hashnopolis.com/post/2018/09/swap-nodes-in-pairs/</link>
+      <pubDate>Sat, 15 Sep 2018 12:55:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/swap-nodes-in-pairs/</guid>
+      <description>Given a linked list, swap every two adjacent nodes and return its head.
+Example:
+Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note: - Your algorithm should use only constant extra space. - You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed. Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; # https://www.</description>
+    </item>
+    
+    <item>
+      <title>Unique Paths</title>
+      <link>http://www.hashnopolis.com/post/2018/09/unique-paths/</link>
+      <pubDate>Sat, 15 Sep 2018 12:54:17 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/unique-paths/</guid>
+      <description>A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
+How many possible unique paths are there?
+Above is a 7 x 3 grid. How many possible unique paths are there?</description>
+    </item>
+    
+    <item>
+      <title>Valid Anagram</title>
+      <link>http://www.hashnopolis.com/post/2018/09/valid-anagram/</link>
+      <pubDate>Sat, 15 Sep 2018 12:53:21 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/valid-anagram/</guid>
+      <description>Given two strings s and t , write a function to determine if t is an anagram of s.
+Example 1:
+Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true  Example 2:
+Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false  Note: You may assume the string contains only lowercase alphabets.
+Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such case?</description>
+    </item>
+    
+    <item>
+      <title>Ugly Number</title>
+      <link>http://www.hashnopolis.com/post/2018/09/ugly-number/</link>
+      <pubDate>Sat, 15 Sep 2018 12:52:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/ugly-number/</guid>
+      <description>Write a program to check whether a given number is an ugly number.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
+Example 1:
+Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2:
+Input: 8 Output: true Explanation: 8 = 2 × 2 × 2  Example 3:
+Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7.</description>
+    </item>
+    
+    <item>
+      <title>Subsets</title>
+      <link>http://www.hashnopolis.com/post/2018/09/subsets/</link>
+      <pubDate>Sat, 15 Sep 2018 12:48:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/subsets/</guid>
+      <description>Given a set of distinct integers, nums, return all possible subsets (the power set).
+Note: The solution set must not contain duplicate subsets.
+Example:
+Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]  Solution:
+class Solution: def subsets(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] def dfs(nums, index, path): res.append(path) for i in range(index, len(nums)): dfs(nums, i+1, path+[nums[i]]) dfs(sorted(nums), 0, []) return res  </description>
+    </item>
+    
+    <item>
+      <title>Roman to Integer</title>
+      <link>http://www.hashnopolis.com/post/2018/09/roman-to-integer/</link>
+      <pubDate>Sat, 15 Sep 2018 12:47:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/roman-to-integer/</guid>
+      <description>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.</description>
+    </item>
     
     <item>
       <title>Single Number III</title>
@@ -288,7 +389,7 @@ Solution:
     </item>
     
     <item>
-      <title>Two Sum ii Input Array Is Sorted</title>
+      <title>Two Sum II Input Array Is Sorted</title>
       <link>http://www.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</link>
       <pubDate>Fri, 07 Sep 2018 23:53:18 +0800</pubDate>
       
