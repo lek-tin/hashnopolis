@@ -1,5 +1,5 @@
 ---
-title: "19. Remove Nth Node From End of List"
+title: "Remove Nth Node From End of List"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "python"]

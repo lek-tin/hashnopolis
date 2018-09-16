@@ -1,5 +1,5 @@
 ---
-title: "31. Search in Rotated Sorted Array II"
+title: "Search in Rotated Sorted Array II"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "binary-search", "python", "array", "sorted-array", "logn"]
