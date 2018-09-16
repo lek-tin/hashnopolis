@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 15 Sep 2018 12:56:08 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 16 Sep 2018 15:04:30 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Top K Frequent Elements</title>
+      <link>http://www.hashnopolis.com/post/2018/09/top-k-frequent-elements/</link>
+      <pubDate>Sun, 16 Sep 2018 15:04:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/top-k-frequent-elements/</guid>
+      <description>Given a non-empty array of integers, return the k most frequent elements.
+For example, Given [1,1,1,2,2,3] and k = 2, return [1,2]. Note: You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm&amp;rsquo;s time complexity must be better than O(n log n), where n is the array&amp;rsquo;s size. Solution:
+class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type k: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; freqMap = dict() for num in nums: if freqMap.</description>
+    </item>
     
     <item>
       <title>Plus One</title>
@@ -92,11 +103,11 @@ nums1 = [1, 2] nums2 = [3, 4]  The median is (2 + 3)/2 = 2.</description>
     </item>
     
     <item>
-      <title>31. Search in Rotated Sorted Array II</title>
-      <link>http://www.hashnopolis.com/post/2018/08/31.-search-in-rotated-sorted-array-ii/</link>
+      <title>Search in Rotated Sorted Array II</title>
+      <link>http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/</link>
       <pubDate>Wed, 15 Aug 2018 12:50:21 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/08/31.-search-in-rotated-sorted-array-ii/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/</guid>
       <description>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 (i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
 You are given a target value to search. If found in the array return true, otherwise return false.
