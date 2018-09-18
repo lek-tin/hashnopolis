@@ -2,10 +2,10 @@
 title: "Remove Element"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "two-pointer"]
 categories: ["algorithm"]
 date: 2018-09-16T15:02:20-07:00
-draft: true
+draft: false
 archive: false
 ---
 Given an array nums and a value val, remove all instances of that value in-place and return the new length.
@@ -47,4 +47,22 @@ int len = removeElement(nums, val);
 for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
+```
+**Solution:**
+```python
+class Solution:
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        pos = 0
+        if nums == None or len(nums) == 0:
+            return pos
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[pos] = nums[i]
+                pos += 1
+        return pos
 ```
