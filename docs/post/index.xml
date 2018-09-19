@@ -7,10 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 16 Sep 2018 15:06:01 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 19 Sep 2018 10:38:38 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Remove Duplicates From Sorted List II</title>
+      <link>http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list-ii/</link>
+      <pubDate>Wed, 19 Sep 2018 10:38:38 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list-ii/</guid>
+      <description>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
+Example 1:
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 Output: 1-&amp;gt;2-&amp;gt;5  Example 2:
+Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 Output: 2-&amp;gt;3  </description>
+    </item>
+    
+    <item>
+      <title>Remove Linked List Elements</title>
+      <link>http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/</link>
+      <pubDate>Tue, 18 Sep 2018 16:07:09 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/</guid>
+      <description>Remove all elements from a linked list of integers that have value val.
+Example:
+Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5  Solution:
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type val: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; pre = ListNode(0) pre.next = head pos = pre while pos.next !</description>
+    </item>
     
     <item>
       <title>Unique Binary Search Trees</title>
@@ -659,11 +683,11 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
     </item>
     
     <item>
-      <title>26. Remove Duplicates From Sorted Array</title>
-      <link>http://www.hashnopolis.com/post/2018/08/26.-remove-duplicates-from-sorted-array/</link>
+      <title>Remove Duplicates From Sorted Array</title>
+      <link>http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/</link>
       <pubDate>Thu, 23 Aug 2018 23:52:17 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/08/26.-remove-duplicates-from-sorted-array/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/</guid>
       <description>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 Example 1:
