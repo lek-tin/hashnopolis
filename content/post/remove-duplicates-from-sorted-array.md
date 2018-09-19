@@ -1,5 +1,5 @@
 ---
-title: "26. Remove Duplicates From Sorted Array"
+title: "Remove Duplicates From Sorted Array"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "python", "array", "sorted-array", "two-pointers", "remove-duplicates"]
