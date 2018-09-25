@@ -5,7 +5,7 @@
 
   
   <title>
-        Hashnopolis | Blog about coding, data science and awesome technology
+        Gray Code | Hashnopolis
       </title>
 
     
@@ -16,15 +16,22 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="___SITE Description___" />
-  <meta name="keywords" content="___keyword, keyword, keyword___" />
-
+  <meta name="description" content="The gray code is a binary numeral system where two successive values differ in only one bit.
+Given a non-negative integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.
+For example, given n = 2, return [0,1,3,2]. Its gray code sequence is:
+00 - 0 01 - 1 11 - 3 10 - 2  Note: For a given n, a gray code sequence is not uniquely defined." />
+  <meta name="keywords" content="leetcode python binary " />
   
-  <meta name="twitter:card" content="summary" />
   
-  <meta name="twitter:title" content="Hashnopolis" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Gray Code" />
+    <meta name="twitter:description" content="The gray code is a binary numeral system where two successive values differ in only one bit.
+Given a non-negative integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.
+For example, given n = 2, return [0,1,3,2]. Its gray code sequence is:
+00 - 0 01 - 1 11 - 3 10 - 2  Note: For a given n, a gray code sequence is not uniquely defined." />
+    <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+  
 
 
 
@@ -32,7 +39,7 @@
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/tags/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/gray-code/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -159,184 +166,79 @@
     
         <section class="main-content">
           
+  
 
+  
+  <div>
+      <p class="meta">
+        
+        
+        Tags:
+        
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
+        
+          "<a href="/tags/python"><strong>python</strong></a>",
+        
+          "<a href="/tags/binary"><strong>binary</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 1-min read
+      </p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/contribute/content/post/http://www.hashnopolis.com/post/2018/09/gray-code/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Gray Code</h1>
+      <p>The gray code is a binary numeral system where two successive values differ in only one bit.</p>
 
+<p>Given a non-negative integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.</p>
 
+<p>For example, given <code>n = 2</code>, return <code>[0,1,3,2]</code>. Its gray code sequence is:</p>
 
+<pre><code>00 - 0
+01 - 1
+11 - 3
+10 - 2
+</code></pre>
 
+<p>Note:
+For a given n, a gray code sequence is not uniquely defined.</p>
 
+<p>For example, <code>[0,2,3,1]</code> is also a valid gray code sequence according to the above definition.</p>
 
-<div class="row">
+<p>For now, the judge is able to judge based on one instance of gray code sequence. Sorry about that.
+<strong>Solution:</strong></p>
+
+<pre><code class="language-python">class Solution:
+    def grayCode(self, n):
+        &quot;&quot;&quot;
+        :type n: int
+        :rtype: List[int]
+        &quot;&quot;&quot;
+        res = []
+        for _, num in enumerate(range(2**n)):
+            res.append(num ^ (num &gt;&gt; 1))
+        return res
+</code></pre>
+
+<p><strong>Notes:</strong></p>
+
+<pre><code>G(i) = i ^ (i/2)
+i / 2 == 1 &gt;&gt; 1
+</code></pre>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+<script>
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/two-pointers/">Two Pointers</a>
-    </div>
+
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/array/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/binary/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/binary-search/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/binary-tree/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/bit-operation/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/bst/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/dfs/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/dynamic-programming/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/es6-class/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/frontend/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/hashmap/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/javascript/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/javascript-object/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/leetcode/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/linked-list/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/logn/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/merge/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/python/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/react/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/reconciliation-key/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/remove-duplicates/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/sort/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/sorted-array/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/sql/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/sum/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/syntax/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/tags/two-pointer/"></a>
-    </div>
-  
-</div>
+
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
         </section>
