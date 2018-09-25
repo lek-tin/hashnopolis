@@ -170,6 +170,36 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/power-of-two/">Power of Two</a></h2>
+
+      <p>Given an integer, write a function to determine if it is a power of two.
+Example 1:
+Input: 1 Output: true Explanation: 2**0 = 1  Example 2:
+Input: 16 Output: true Explanation: 2**4 = 16  Example 3:
+Input: 218 Output: false  Solution:
+class Solution: def isPowerOfTwo(self, n): &#34;&#34;&#34; :type n: int :rtype: bool &#34;&#34;&#34; if n == 0: return False if n &amp; (n - 1) == 0: return True return False  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/09/plus-one/">Plus One</a></h2>
 
       <p>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
@@ -405,34 +435,6 @@ Example 1:
 Input: [2,2,3,2] Output: 3  Example 2:
 Input: [0,1,0,1,0,1,99] Output: 99  Solution:
 class Solution: def singleNumber(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.csdn.net/karen0310/article/details/78226261 ones, twos = 0, 0 for _, num in enumerate(nums): ones = (ones ^ num) &amp; ~twos twos = (twos ^ num) &amp; ~ones print(bin(num), &#34;ones: &#34;, bin(ones), &#34;twos: &#34;, bin(twos)) return ones  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/single-number/">Single Number</a></h2>
-
-      <p> Given a non-empty array of integers, every element appears twice except for one. Find that single one. Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
-Example 1:
-Input: [2,2,1] Output: 1 Example 2:  Input: [4,1,2,1,2] Output: 4  Solution:
-// Java class Solution { public int singleNumber(int[] nums) { int result=0; for(int num : nums) { result=result^num; } return result; } }  </p>
 
       <p class="meta">
         
