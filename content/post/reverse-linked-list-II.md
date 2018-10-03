@@ -2,7 +2,7 @@
 title: "Reverse Linked List II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "linked-list"]
 categories: ["algorithm"]
 date: 2018-09-30T22:19:41-07:00
 draft: false

@@ -5,7 +5,7 @@
 
   
   <title>
-        Hashnopolis | Blog about coding, data science and awesome technology
+        Reverse Linked List | Hashnopolis
       </title>
 
     
@@ -16,15 +16,22 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="___SITE Description___" />
-  <meta name="keywords" content="___keyword, keyword, keyword___" />
-
+  <meta name="description" content="Reverse a singly linked list.
+Example:
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
+A linked list can be reversed either iteratively or recursively. Could you implement both?" />
+  <meta name="keywords" content="leetcode python linked-list " />
   
-  <meta name="twitter:card" content="summary" />
   
-  <meta name="twitter:title" content="Hashnopolis" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Reverse Linked List" />
+    <meta name="twitter:description" content="Reverse a singly linked list.
+Example:
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
+A linked list can be reversed either iteratively or recursively. Could you implement both?" />
+    <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+  
 
 
 
@@ -32,7 +39,7 @@
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/reverse-linked-list/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -159,115 +166,54 @@
     
         <section class="main-content">
           
+  
 
   
-  
-  <h2 class="taxonomy-single--title">lek-tin:</h2>
   <div>
-    
-    
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></h2>
-
-      <p>Given a linked list, remove the n-th node from the end of list and return its head.
-Example:
-Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.  Note:
-Given n will always be valid.
-Follow up:
-Could you do this in one pass?</p>
-
       <p class="meta">
         
-        by
         
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        Tags:
         
-        in
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+          "<a href="/tags/python"><strong>python</strong></a>",
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+          "<a href="/tags/linked-list"><strong>linked-list</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 1-min read
       </p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/contribute/content/post/http://www.hashnopolis.com/post/2018/10/reverse-linked-list/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Reverse Linked List</h1>
+      <p>Reverse a singly linked list.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
+Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL
+</code></pre>
+
+<p><strong>Follow up:</strong></p>
+
+<p>A linked list can be reversed either iteratively or recursively. Could you implement both?</p>
+
   </div>
+
+  <div id="disqus_thread"></div>
+<script>
+  
 
   
 
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/">Search in Rotated Sorted Array II</a></h2>
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
-(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
-You are given a target value to search. If found in the array return true, otherwise return false.
-Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/02/when-you-new-a-class-in-javascript/">When You New a Class in JavaScript?</a></h2>
-
-      <p>Here is an example of instantiating a class using the new operator:
-class Person { constructor(name, age) { this.name = name; this.age = age; } } const asian = new Person(&#39;Alice&#39;, 25); console.log(asian);  As you can see from below, asian is not a class, it is instead, an object:
-[object Object] { age: 25, name: &#34;Alice&#34; }  The values of asian are set by the constructor of the Person class.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/javascript" ><strong>"javascript"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-    
-    
-      <footer class="list-footer">
-        <nav class="pagination">
-        <h3 class="offscreen">Pagination</h3>
-        
-          <a class="pagination-previous" href="/authors/lek-tin/page/6/">← Newer Posts</a>
-        
-        
-        </nav>
-      </footer>
-    
-  </div>
-  
 
         </section>
         
