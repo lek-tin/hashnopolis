@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python"]
 categories: ["algorithm"]
 date: 2018-10-01T23:44:18-07:00
-draft: false
+draft: true
 archive: false
 ---
 Given a string containing only digits, restore it by returning all possible valid IP address combinations.

@@ -164,68 +164,13 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/decode-ways/">Decode Ways</a></h2>
-
-      <p>A message containing letters from A-Z is being encoded to numbers using the following mapping:
-‘A’ -&gt; 1 ‘B’ -&gt; 2 … ‘Z’ -&gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
-Example 1:
-Input: &#34;12&#34; Output: 2 Explanation: It could be decoded as &#34;AB&#34; (1 2) or &#34;L&#34; (12).  Example 2:
-Input: &#34;226&#34; Output: 3 Explanation: It could be decoded as &#34;BZ&#34; (2 26), &#34;VF&#34; (22 6), or &#34;BBF&#34; (2 2 6).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/10/reverse-linked-list/">Reverse Linked List</a></h2>
 
       <p>Reverse a singly linked list.
 Example:
 Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  Follow up:
-A linked list can be reversed either iteratively or recursively. Could you implement both?</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/restore-ip-addresses/">Restore Ip Addresses</a></h2>
-
-      <p>Given a string containing only digits, restore it by returning all possible valid IP address combinations.
-Example:
-Input: &#34;25525511135&#34; Output: [&#34;255.255.11.135&#34;, &#34;255.255.111.35&#34;]  </p>
+A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def reverseList(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr, prev, after = head, None, ListNode(None) while curr != None: after = curr.</p>
 
       <p class="meta">
         
@@ -253,7 +198,8 @@ Input: &#34;25525511135&#34; Output: [&#34;255.255.11.135&#34;, &#34;255.255.111
       <p>Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL  </p>
+Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL  *Solution:**
+class Solution: def reverseBetween(self, head, m, n): &#34;&#34;&#34; :type head: ListNode :type m: int :type n: int :rtype: ListNode &#34;&#34;&#34; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr.</p>
 
       <p class="meta">
         
@@ -436,6 +382,63 @@ Solution:</p>
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/top-k-frequent-elements/">Top K Frequent Elements</a></h2>
+
+      <p>Given a non-empty array of integers, return the k most frequent elements.
+For example, Given [1,1,1,2,2,3] and k = 2, return [1,2]. Note: You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size. Solution:
+class Solution: def topKFrequent(self, nums, k): &#34;&#34;&#34; :type nums: List[int] :type k: int :rtype: List[int] &#34;&#34;&#34; freqMap = dict() for num in nums: if freqMap.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/same-tree/">Same Tree</a></h2>
+
+      <p>Given two binary trees, write a function to check if they are the same or not.
+Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
+Example 1:
+Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true  Example 2:
+Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:
+Input: 1 1 / \ / \ 2 1 1 2 [1,2,1], [1,1,2] Output: false  Solution</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

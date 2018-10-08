@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python"]
 categories: ["algorithm"]
 date: 2018-10-03T23:49:00-07:00
-draft: false
+draft: true
 archive: false
 ---
 A message containing letters from A-Z is being encoded to numbers using the following mapping:

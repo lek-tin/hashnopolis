@@ -2,7 +2,7 @@
 title: "Reverse Linked List"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "linked-list"]
+tags: ["leetcode", "python", "linked-list", "iterative"]
 categories: ["algorithm"]
 date: 2018-10-02T23:51:13-07:00
 draft: false
@@ -18,3 +18,26 @@ Output: 5->4->3->2->1->NULL
 **Follow up:**
 
 A linked list can be reversed either iteratively or recursively. Could you implement both?
+**Solution:**
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def reverseList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        curr, prev, after = head, None, ListNode(None)
+        while curr != None:
+          after = curr.next
+          curr.next = prev
+          prev = curr
+          curr = after
+        head = prev
+        return head
+```

@@ -7,23 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 03 Oct 2018 23:49:00 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 02 Oct 2018 23:51:13 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Decode Ways</title>
-      <link>http://www.hashnopolis.com/post/2018/10/decode-ways/</link>
-      <pubDate>Wed, 03 Oct 2018 23:49:00 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/10/decode-ways/</guid>
-      <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
-&amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
-Example 1:
-Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2:
-Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
-    </item>
     
     <item>
       <title>Reverse Linked List</title>
@@ -34,18 +21,8 @@ Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &am
       <description>Reverse a singly linked list.
 Example:
 Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
-A linked list can be reversed either iteratively or recursively. Could you implement both?</description>
-    </item>
-    
-    <item>
-      <title>Restore Ip Addresses</title>
-      <link>http://www.hashnopolis.com/post/2018/10/restore-ip-addresses/</link>
-      <pubDate>Mon, 01 Oct 2018 23:44:18 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/10/restore-ip-addresses/</guid>
-      <description>Given a string containing only digits, restore it by returning all possible valid IP address combinations.
-Example:
-Input: &amp;quot;25525511135&amp;quot; Output: [&amp;quot;255.255.11.135&amp;quot;, &amp;quot;255.255.111.35&amp;quot;]  </description>
+A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr != None: after = curr.</description>
     </item>
     
     <item>
@@ -57,7 +34,8 @@ Input: &amp;quot;25525511135&amp;quot; Output: [&amp;quot;255.255.11.135&amp;quo
       <description>Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  </description>
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  *Solution:**
+class Solution: def reverseBetween(self, head, m, n): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type m: int :type n: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr.</description>
     </item>
     
     <item>

@@ -19,7 +19,8 @@
   <meta name="description" content="Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  " />
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  *Solution:**
+class Solution: def reverseBetween(self, head, m, n): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type m: int :type n: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr." />
   <meta name="keywords" content="leetcode python linked-list " />
   
   
@@ -29,7 +30,8 @@ Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Outp
     <meta name="twitter:description" content="Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  " />
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  *Solution:**
+class Solution: def reverseBetween(self, head, m, n): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type m: int :type n: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -194,6 +196,31 @@ Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Outp
 <pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4
 
 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL
+</code></pre>
+
+<p>*Solution:**</p>
+
+<pre><code class="language-python">class Solution:
+    def reverseBetween(self, head, m, n):
+        &quot;&quot;&quot;
+        :type head: ListNode
+        :type m: int
+        :type n: int
+        :rtype: ListNode
+        &quot;&quot;&quot;
+        dummy = ListNode(None)
+        dummy.next = head
+        pre = dummy
+        curr = dummy.next
+        for i in range(1, m):
+            curr = curr.next
+            pre = pre.next
+        for i in range(n-m):
+            temp = curr.next
+            curr.next = temp.next
+            temp.next = pre.next
+            pre.next = temp
+        return dummy.next
 </code></pre>
 
   </div>
