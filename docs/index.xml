@@ -7,10 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 25 Sep 2018 08:14:01 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 20 Oct 2018 15:15:16 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Started With Hadoop on MacOS</title>
+      <link>http://www.hashnopolis.com/post/2018/10/getting-started-with-hadoop-on-macos/</link>
+      <pubDate>Sat, 20 Oct 2018 15:15:16 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/getting-started-with-hadoop-on-macos/</guid>
+      <description>Install Java (my version is 11.0.1)
+# Setting PATH for Java export JAVA_HOME=&amp;quot;/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home&amp;quot;  Install hadoop by unzip the tar.gz file and move it the folder where you want hadoop to be installed.
+tar -xvzf hadoop-2.9.0.tar.gz cp hadoop-2.9.0 ../INSTALLATION_PATH/  Add paths to the ~/.bash_profile file
+# Setting PATHs for hadoop export HADOOP_HOME=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export HADOOP_PREFIX=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export PATH=&amp;quot;$PATH:$HADOOP_PREFIX/bin:$HADOOP_PREFIX/sbin&amp;quot; export HADOOP_CONF_DIR=&amp;quot;$HADOOP_PREFIX/etc/hadoop&amp;quot;  Then run source to evaluate it
+source ~/.bash_profile  Test hadoop works</description>
+    </item>
+    
+    <item>
+      <title>Reverse Linked List</title>
+      <link>http://www.hashnopolis.com/post/2018/10/reverse-linked-list/</link>
+      <pubDate>Tue, 02 Oct 2018 23:51:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/reverse-linked-list/</guid>
+      <description>Reverse a singly linked list.
+Example:
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
+A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr != None: after = curr.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Linked List II</title>
+      <link>http://www.hashnopolis.com/post/2018/09/reverse-linked-list-ii/</link>
+      <pubDate>Sun, 30 Sep 2018 22:19:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/reverse-linked-list-ii/</guid>
+      <description>Reverse a linked list from position m to n. Do it in one-pass.
+Note: 1 ≤ m ≤ n ≤ length of list.
+Example:
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  *Solution:**
+class Solution: def reverseBetween(self, head, m, n): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type m: int :type n: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr.</description>
+    </item>
     
     <item>
       <title>Gray Code</title>

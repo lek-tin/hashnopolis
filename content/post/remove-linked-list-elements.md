@@ -2,7 +2,7 @@
 title: "Remove Linked List Elements"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "two-pointers"]
+tags: ["leetcode", "python", "two-pointers", "linked-list"]
 categories: ["algorithm"]
 date: 2018-09-18T16:07:09-07:00
 draft: false
