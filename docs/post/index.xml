@@ -7,10 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 20 Oct 2018 15:15:16 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 21 Oct 2018 23:08:30 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linked List Cycle II</title>
+      <link>http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/</link>
+      <pubDate>Sun, 21 Oct 2018 23:08:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/</guid>
+      <description>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+Note: Do not modify the linked list.
+Follow up: Can you solve it without using extra space? Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def detectCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if head == None: return None slow = head fast = head hasCycle = False while fast.</description>
+    </item>
+    
+    <item>
+      <title>Linked List Cycle</title>
+      <link>http://www.hashnopolis.com/post/2018/10/linked-list-cycle/</link>
+      <pubDate>Sun, 21 Oct 2018 23:07:55 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle/</guid>
+      <description>Given a linked list, determine if it has a cycle in it.
+Follow up: Can you solve it without using extra space?
+Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: if fast and not fast.next: return False fast = fast.</description>
+    </item>
     
     <item>
       <title>Getting Started With Hadoop on MacOS</title>
@@ -18,11 +42,10 @@
       <pubDate>Sat, 20 Oct 2018 15:15:16 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/10/getting-started-with-hadoop-on-macos/</guid>
-      <description>Install Java (my version is 11.0.1)
+      <description>macOS High Sierra 10.13.6 Install Java (my version is 11.0.1)
 # Setting PATH for Java export JAVA_HOME=&amp;quot;/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home&amp;quot;  Install hadoop by unzip the tar.gz file and move it the folder where you want hadoop to be installed.
 tar -xvzf hadoop-2.9.0.tar.gz cp hadoop-2.9.0 ../INSTALLATION_PATH/  Add paths to the ~/.bash_profile file
-# Setting PATHs for hadoop export HADOOP_HOME=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export HADOOP_PREFIX=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export PATH=&amp;quot;$PATH:$HADOOP_PREFIX/bin:$HADOOP_PREFIX/sbin&amp;quot; export HADOOP_CONF_DIR=&amp;quot;$HADOOP_PREFIX/etc/hadoop&amp;quot;  Then run source to evaluate it
-source ~/.bash_profile  Test hadoop works</description>
+# Setting PATHs for hadoop export HADOOP_HOME=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export HADOOP_PREFIX=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export PATH=&amp;quot;$PATH:$HADOOP_PREFIX/bin:$HADOOP_PREFIX/sbin&amp;quot; export HADOOP_CONF_DIR=&amp;quot;$HADOOP_PREFIX/etc/hadoop&amp;quot;  Then run source to evaluate it</description>
     </item>
     
     <item>

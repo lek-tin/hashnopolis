@@ -18,11 +18,10 @@
       <pubDate>Sat, 20 Oct 2018 15:15:16 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/10/getting-started-with-hadoop-on-macos/</guid>
-      <description>Install Java (my version is 11.0.1)
+      <description>macOS High Sierra 10.13.6 Install Java (my version is 11.0.1)
 # Setting PATH for Java export JAVA_HOME=&amp;quot;/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home&amp;quot;  Install hadoop by unzip the tar.gz file and move it the folder where you want hadoop to be installed.
 tar -xvzf hadoop-2.9.0.tar.gz cp hadoop-2.9.0 ../INSTALLATION_PATH/  Add paths to the ~/.bash_profile file
-# Setting PATHs for hadoop export HADOOP_HOME=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export HADOOP_PREFIX=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export PATH=&amp;quot;$PATH:$HADOOP_PREFIX/bin:$HADOOP_PREFIX/sbin&amp;quot; export HADOOP_CONF_DIR=&amp;quot;$HADOOP_PREFIX/etc/hadoop&amp;quot;  Then run source to evaluate it
-source ~/.bash_profile  Test hadoop works</description>
+# Setting PATHs for hadoop export HADOOP_HOME=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export HADOOP_PREFIX=&amp;quot;/INSTALLATION_PATH/hadoop-2.9.0&amp;quot; export PATH=&amp;quot;$PATH:$HADOOP_PREFIX/bin:$HADOOP_PREFIX/sbin&amp;quot; export HADOOP_CONF_DIR=&amp;quot;$HADOOP_PREFIX/etc/hadoop&amp;quot;  Then run source to evaluate it</description>
     </item>
     
   </channel>
