@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 21 Oct 2018 23:08:30 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Oct 2018 12:01:59 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Group Anagrams</title>
+      <link>http://www.hashnopolis.com/post/2018/10/group-anagrams/</link>
+      <pubDate>Mon, 22 Oct 2018 12:01:59 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/group-anagrams/</guid>
+      <description>Given an array of strings, group anagrams together.
+Example:
+Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Note: - All inputs will be in lowercase. - The order of your output does not matter. Solution:
+class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: List[List[str]] &amp;quot;&amp;quot;&amp;quot; primeNums = { &amp;quot;a&amp;quot;: 2, &amp;quot;b&amp;quot;: 3, &amp;quot;c&amp;quot;: 5, &amp;quot;d&amp;quot;: 7, &amp;quot;e&amp;quot;: 11, &amp;quot;f&amp;quot;: 13, &amp;quot;g&amp;quot;: 17, &amp;quot;h&amp;quot;: 19, &amp;quot;i&amp;quot;: 23, &amp;quot;j&amp;quot;: 29, &amp;quot;k&amp;quot;: 31, &amp;quot;m&amp;quot;: 37, &amp;quot;l&amp;quot;: 41, &amp;quot;n&amp;quot;: 43, &amp;quot;o&amp;quot;: 47, &amp;quot;p&amp;quot;: 53, &amp;quot;q&amp;quot;: 59, &amp;quot;r&amp;quot;: 61, &amp;quot;s&amp;quot;: 67, &amp;quot;t&amp;quot;: 71, &amp;quot;u&amp;quot;: 73, &amp;quot;v&amp;quot;: 79, &amp;quot;w&amp;quot;: 83, &amp;quot;x&amp;quot;: 89, &amp;quot;y&amp;quot;: 97, &amp;quot;z&amp;quot;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</description>
+    </item>
     
     <item>
       <title>Linked List Cycle II</title>
