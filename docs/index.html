@@ -164,6 +164,64 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/">Kth Smallest Element in a BST</a></h2>
+
+      <p>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+Note:
+You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1:
+Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2: ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
+**Follow up:** What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
+
+      <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+Example 1:
+Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2:
+Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length. Solution:
+class Solution: def findKthLargest(self, nums, k): if (nums == None or len(nums) == 0): return 0 left, right = 0, len(nums) - 1 def swap(nums, i, j): temp = nums[i] nums[i] = nums[j] nums[j] = temp def partition(nums, left, right): pivot = nums[left] l = left &#43; 1 r = right while l &lt;= r: if nums[l] &lt; pivot and nums[r] &gt; pivot: swap(nums, l, r) l &#43;= 1 r -= 1 if nums[l] &gt;= pivot: l &#43;= 1 if nums[r] &lt;= pivot: r -= 1 swap(nums, left, r) return r while True: pos = partition(nums, left, right) if pos &#43; 1 == k: return nums[pos] elif pos &#43; 1 &gt; k: right = pos - 1 elif pos &#43; 1 &lt; k: left = pos &#43; 1  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/10/group-anagrams/">Group Anagrams</a></h2>
 
       <p>Given an array of strings, group anagrams together.
@@ -236,34 +294,6 @@ Solution:
         in
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/getting-started-with-hadoop-on-macos/">Getting Started With Hadoop on MacOS</a></h2>
-
-      <p>macOS High Sierra 10.13.6 Install Java (my version is 11.0.1)
-# Setting PATH for Java export JAVA_HOME=&#34;/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home&#34;  Install hadoop by unzip the tar.gz file and move it the folder where you want hadoop to be installed.
-tar -xvzf hadoop-2.9.0.tar.gz cp hadoop-2.9.0 ../INSTALLATION_PATH/  Add paths to the ~/.bash_profile file
-# Setting PATHs for hadoop export HADOOP_HOME=&#34;/INSTALLATION_PATH/hadoop-2.9.0&#34; export HADOOP_PREFIX=&#34;/INSTALLATION_PATH/hadoop-2.9.0&#34; export PATH=&#34;$PATH:$HADOOP_PREFIX/bin:$HADOOP_PREFIX/sbin&#34; export HADOOP_CONF_DIR=&#34;$HADOOP_PREFIX/etc/hadoop&#34;  Then run source to evaluate it</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/big-data" ><strong>"big-data"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -397,34 +427,6 @@ Credits: Special thanks to @jianchao.li.fighter for adding this problem and crea
 Example 1:
 Input: 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5 Output: 1-&gt;2-&gt;5  Example 2:
 Input: 1-&gt;1-&gt;1-&gt;2-&gt;3 Output: 2-&gt;3  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/">Remove Linked List Elements</a></h2>
-
-      <p>Remove all elements from a linked list of integers that have value val.
-Example:
-Input: 1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6 Output: 1-&gt;2-&gt;3-&gt;4-&gt;5  Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &#34;&#34;&#34; :type head: ListNode :type val: int :rtype: ListNode &#34;&#34;&#34; pre = ListNode(0) pre.next = head pos = pre while pos.next !</p>
 
       <p class="meta">
         

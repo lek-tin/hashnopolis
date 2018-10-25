@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["hadoop", "apache", "macos", "mapreduce", "distributed-file-system"]
 categories: ["big-data"]
 date: 2018-10-20T15:15:16-07:00
-draft: false
+draft: true
 archive: false
 ---
 macOS High Sierra 10.13.6

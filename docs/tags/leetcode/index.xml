@@ -7,10 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 22 Oct 2018 12:01:59 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 24 Oct 2018 23:39:48 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kth Smallest Element in a BST</title>
+      <link>http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/</link>
+      <pubDate>Wed, 24 Oct 2018 23:39:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/</guid>
+      <description>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+Note:
+You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1:
+Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2: ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
+**Follow up:** What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</description>
+    </item>
+    
+    <item>
+      <title>Kth Largest Element in an Array</title>
+      <link>http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/</link>
+      <pubDate>Wed, 24 Oct 2018 23:38:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/</guid>
+      <description>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+Example 1:
+Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2:
+Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length. Solution:
+class Solution: def findKthLargest(self, nums, k): if (nums == None or len(nums) == 0): return 0 left, right = 0, len(nums) - 1 def swap(nums, i, j): temp = nums[i] nums[i] = nums[j] nums[j] = temp def partition(nums, left, right): pivot = nums[left] l = left + 1 r = right while l &amp;lt;= r: if nums[l] &amp;lt; pivot and nums[r] &amp;gt; pivot: swap(nums, l, r) l += 1 r -= 1 if nums[l] &amp;gt;= pivot: l += 1 if nums[r] &amp;lt;= pivot: r -= 1 swap(nums, left, r) return r while True: pos = partition(nums, left, right) if pos + 1 == k: return nums[pos] elif pos + 1 &amp;gt; k: right = pos - 1 elif pos + 1 &amp;lt; k: left = pos + 1  </description>
+    </item>
     
     <item>
       <title>Group Anagrams</title>

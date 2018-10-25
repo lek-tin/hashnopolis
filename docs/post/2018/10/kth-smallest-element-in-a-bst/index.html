@@ -5,7 +5,7 @@
 
   
   <title>
-        Hashnopolis | Blog about coding, data science and awesome technology
+        Kth Smallest Element in a BST | Hashnopolis
       </title>
 
     
@@ -16,15 +16,24 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="___SITE Description___" />
-  <meta name="keywords" content="___keyword, keyword, keyword___" />
-
+  <meta name="description" content="Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+Note:
+You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1:
+Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2: ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
+**Follow up:** What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?" />
+  <meta name="keywords" content="leetcode python bst binary-tree " />
   
-  <meta name="twitter:card" content="summary" />
   
-  <meta name="twitter:title" content="Hashnopolis" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Kth Smallest Element in a BST" />
+    <meta name="twitter:description" content="Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+Note:
+You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1:
+Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2: ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
+**Follow up:** What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?" />
+    <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+  
 
 
 
@@ -32,7 +41,7 @@
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/categories/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -159,46 +168,125 @@
     
         <section class="main-content">
           
-
-
-
-
-
-
-
-<div class="row">
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/css/">CSS</a>
-    </div>
+
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/golang/">Golangggggggg</a>
-    </div>
+  <div>
+      <p class="meta">
+        
+        
+        Tags:
+        
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
+        
+          "<a href="/tags/python"><strong>python</strong></a>",
+        
+          "<a href="/tags/bst"><strong>bst</strong></a>",
+        
+          "<a href="/tags/binary-tree"><strong>binary-tree</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 2-min read
+      </p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/contribute/content/post/http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Kth Smallest Element in a BST</h1>
+      <p>Given a binary search tree, write a function <code>kthSmallest</code> to find the kth smallest element in it.</p>
+
+<p><strong>Note:</strong></p>
+
+<pre><code>You may assume k is always valid, 1 ≤ k ≤ BST's total elements.
+</code></pre>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><code>Input: root = [3,1,4,null,2], k = 1
+Output: 1
+</code></pre>
+
+<p><strong>Example 2:</strong>
+````
+Input: root = [5,3,6,2,4,null,null,1], k = 3
+Output: 3</p>
+
+<pre><code>**Follow up:**
+What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently? How would you optimize the kthSmallest routine?
+
+**Solution:**
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def __init__(self):
+        self.k, self.res = 0, None
+
+    def kthSmallest(self, root, k):
+        &quot;&quot;&quot;
+        :type root: TreeNode
+        :type k: int
+        :rtype: int
+        &quot;&quot;&quot;
+        if self.k &lt; k and root.left:
+            self.kthSmallest(root.left, k)
+        self.k += 1
+        if self.k == k:
+            self.res = root.val
+        if self.k &lt; k and root.right:
+            self.kthSmallest(root.right, k)
+        return self.res
+    def kthSmallest_2(self, root, k):
+        &quot;&quot;&quot;
+        :type root: TreeNode
+        :type k: int
+        :rtype: int
+        &quot;&quot;&quot;
+        sorted = self.inOrder(root)
+        return sorted[k-1]
+
+    def inOrder(self, root):
+        if root is None:
+            return  []
+        else:
+            return self.inOrder(root.left) + [root.val] + self.inOrder(root.right)
+
+    def kthSmallest_3(self, root, k):
+        &quot;&quot;&quot;
+        :type root: TreeNode
+        :type k: int
+        :rtype: int
+        &quot;&quot;&quot;
+        stack, node = [], root
+        while stack or node:
+            while node:
+                stack.append(node)
+                node = node.left
+            node = stack.pop()
+            if k == 1:
+                return node.val
+            else:
+                k -= 1
+            node = node.right
+</code></pre>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+<script>
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/javascript/">JavaScripttttttt</a>
-    </div>
+
   
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/algorithm/"></a>
-    </div>
-  
-    <div class="col-xs-6">
-      
-      
-      <a href="http://www.hashnopolis.com/categories/database/"></a>
-    </div>
-  
-</div>
+
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
         </section>
