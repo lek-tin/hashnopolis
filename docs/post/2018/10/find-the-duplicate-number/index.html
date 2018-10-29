@@ -5,7 +5,7 @@
 
   
   <title>
-        Roman to Integer | Hashnopolis
+        Find the Duplicate Number | Hashnopolis
       </title>
 
     
@@ -16,16 +16,20 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II." />
-  <meta name="keywords" content="leetcode python hashmap " />
+  <meta name="description" content="Given an array nums containing n &#43; 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
+Example 1:
+Input: [1,3,4,2,2] Output: 2  Example 2:
+Input: [3,1,3,4,2] Output: 3  Note: You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space." />
+  <meta name="keywords" content="leetcode python duplicate " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Roman to Integer" />
-    <meta name="twitter:description" content="Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II." />
+    <meta name="twitter:title" content="Find the Duplicate Number" />
+    <meta name="twitter:description" content="Given an array nums containing n &#43; 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
+Example 1:
+Input: [1,3,4,2,2] Output: 2  Example 2:
+Input: [3,1,3,4,2] Output: 3  Note: You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -35,7 +39,7 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written a
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/roman-to-integer/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/find-the-duplicate-number/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -175,117 +179,57 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written a
         
           "<a href="/tags/python"><strong>python</strong></a>",
         
-          "<a href="/tags/hashmap"><strong>hashmap</strong></a>",
+          "<a href="/tags/duplicate"><strong>duplicate</strong></a>",
         
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 1-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/contribute/content/post/http://www.hashnopolis.com/post/2018/09/roman-to-integer/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Roman to Integer</h1>
-      <p>Roman numerals are represented by seven different symbols: <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/contribute/content/post/http://www.hashnopolis.com/post/2018/10/find-the-duplicate-number/" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Find the Duplicate Number</h1>
+      <p>Given an array nums containing <code>n + 1</code> integers where each integer is between <code>1</code> and <code>n</code> (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.</p>
 
-<pre><code>Symbol       Value
-I             1
-V             5
-X             10
-L             50
-C             100
-D             500
-M             1000
+<p><strong>Example 1:</strong></p>
+
+<pre><code>Input: [1,3,4,2,2]
+Output: 2
 </code></pre>
 
-<p>For example, two is written as <code>II</code> in Roman numeral, just two one&rsquo;s added together. Twelve is written as, <code>XII</code>, which is simply <code>X + II</code>. The number twenty seven is written as <code>XXVII</code>, which is <code>XX + V + II</code>.</p>
+<p><strong>Example 2:</strong></p>
 
-<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>
-
-<p><code>I</code> can be placed before <code>V</code> (5) and <code>X (10)</code> to make <code>4</code> and <code>9</code>.
-<code>X</code> can be placed before <code>L (50)</code> and <code>C (100)</code> to make <code>40</code> and <code>90</code>.
-<code>C</code> can be placed before <code>D (500)</code> and <code>M (1000)</code> to make <code>400</code> and <code>900</code>.
-Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from <code>1</code> to <code>3999</code>.</p>
-
-<p>Example 1:</p>
-
-<pre><code>Input: &quot;III&quot;
+<pre><code>Input: [3,1,3,4,2]
 Output: 3
 </code></pre>
 
-<p>Example 2:</p>
+<p><strong>Note:</strong>
+You <strong>must not</strong> modify the array (assume the array is read only).
+You <strong>must</strong> use only constant, <code>O(1)</code> extra space.
+Your runtime complexity should be less than <code>O(n2)</code>.
+There is only one duplicate number in the array, but it could be repeated more than once.</p>
 
-<pre><code>Input: &quot;IV&quot;
-Output: 4
-</code></pre>
-
-<p>Example 3:</p>
-
-<pre><code>Input: &quot;IX&quot;
-Output: 9
-</code></pre>
-
-<p>Example 4:</p>
-
-<pre><code>Input: &quot;LVIII&quot;
-Output: 58
-Explanation: C = 100, L = 50, XXX = 30 and III = 3.
-</code></pre>
-
-<p>Example 5:</p>
-
-<pre><code>Input: &quot;MCMXCIV&quot;
-Output: 1994
-Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
-</code></pre>
-
-<p><strong>Solution</strong></p>
+<p>*<em>Solution:</em></p>
 
 <pre><code class="language-python">class Solution:
-    def romanToInt(self, s):
+    def findDuplicate(self, nums):
         &quot;&quot;&quot;
-        :type s: str
+        :type nums: List[int]
         :rtype: int
         &quot;&quot;&quot;
-        pairs = {
-            &quot;I&quot;: 1,
-            &quot;V&quot;: 5,
-            &quot;X&quot;: 10,
-            &quot;L&quot;: 50,
-            &quot;C&quot;: 100,
-            &quot;D&quot;: 500,
-            &quot;M&quot;: 1000,
-            &quot;IV&quot;: 4,
-            &quot;IX&quot;: 9,
-            &quot;XL&quot;: 40,
-            &quot;XC&quot;: 90,
-            &quot;CD&quot;: 400,
-            &quot;CM&quot;: 900
-        }
-        # a = &quot;X&quot;
-        # b = &quot;L&quot;
-        # if a+b in pairs:
-        #     print(pairs[a+b])
-        # combos = [&quot;IV&quot;, &quot;IX&quot;, &quot;XL&quot;, &quot;XC&quot;, &quot;CD&quot;, &quot;CM&quot;]
-        chars = list(s)
-        result = 0
-        def calculate(list):
-            if (len(list) == 0):
-                return
-            right = list.pop()
-            left = &quot;&quot;
-            if (len(list) &gt; 0):
-                left = list.pop()
-            # print(left, right)
-            if left+right in pairs:
-                # print(pairs[left+right])
-                result += pairs[left+right]
-            else:
-                list.append(left)
-                # print(pairs[right])
-                result += pairs[right]
-            # print(result)
-            calculate(list)
-        # for i, char in enumerate(chars):
-        #     print(i, char)
-        calculate(chars)
-        return result
+        newNums = list(nums)
+        newNums.sort()
+        print(nums)
+        for i in range(1, len(newNums)):
+            if newNums[i] == newNums[i-1]:
+                return newNums[i]
 </code></pre>
+
+<p><strong>Complexity Analysis:</strong></p>
+
+<p>Time complexity : <code>O(nlgn)</code></p>
+
+<p>The <code>sort</code> invocation costs <code>O(nlgn)</code> time in Python and Java, so it dominates the subsequent linear scan.</p>
+
+<p>Space complexity : <code>O(1)</code> (or <code>O(n)</code>)</p>
+
+<p>Here, we sort <code>nums</code> in place, so the memory footprint is constant. If we cannot modify the input array, then we must allocate linear space for a copy of <code>nums</code> and sort that instead.</p>
 
   </div>
 

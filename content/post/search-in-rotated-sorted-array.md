@@ -39,7 +39,7 @@ class Solution(object):
         """
         if nums == None or len(nums) == 0:
             return -1
-        
+
         start, end = 0, len(nums) - 1
         while (start + 1) < end:
             mid = start + (end - start) // 2

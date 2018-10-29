@@ -85,7 +85,7 @@ class Solution:
         #     print(pairs[a+b])
         # combos = ["IV", "IX", "XL", "XC", "CD", "CM"]
         chars = list(s)
-        accu = 0
+        result = 0
         def calculate(list):
             if (len(list) == 0):
                 return
@@ -96,12 +96,12 @@ class Solution:
             # print(left, right)
             if left+right in pairs:
                 # print(pairs[left+right])
-                accu += pairs[left+right]
+                result += pairs[left+right]
             else:
                 list.append(left)
                 # print(pairs[right])
-                accu += pairs[right]
-            # print(accu)
+                result += pairs[right]
+            # print(result)
             calculate(list)
         # for i, char in enumerate(chars):
         #     print(i, char)
