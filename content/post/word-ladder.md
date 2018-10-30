@@ -42,5 +42,14 @@ Output: 0
 ```python
 q.push(start)
 step = 0
-
+while q is not empty:
+  ++step
+  size = q.size
+  while size-- > 0:
+    node = q.pop()
+    new_nodes = expand(node)
+    if goal in new_nodes:
+      return step+1
+    q.append(new_nodes)
+return NOT_FOUND
 ```
