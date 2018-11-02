@@ -143,10 +143,20 @@ pre {
     margin-left: 400px;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-logo {
+    display: inline-block;
+    margin: 0 30px 15px;
+  }
+}
+
 @media (min-width: 768px) {
   #mobile-menu-close,
   #mobile-menu-open,
   #mobile-menu-switch {
+    display: none;
+  }
+  .menu-logo__text {
     display: none;
   }
   .container {
@@ -164,8 +174,22 @@ pre {
     background-image: none;
     background-color: #1e1e2a;
   }
+  .sidebar .site-info {
+    display: none;
+  }
   .menu-logo {
-    width: 40px;
+    /* width: 40px; */
+    max-width: 100%;
+    text-align: center;
+  }
+  .menu-logo svg {
+    display: none;
+  }
+  .menu-logo__text {
+    display: block;
+    color: #7679EC;
+    margin: 0;
+    font-size: 3.5rem;
   }
   .site-info {
     display: none;
