@@ -2,10 +2,10 @@
 title: "Word Break"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-10-10T23:57:15-07:00
-draft: true
+draft: false
 archive: false
 ---
 Given a **non-empty** string s and a dictionary wordDict containing a list of **non-empty** words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
@@ -30,4 +30,29 @@ Note that you are allowed to reuse a dictionary word.
 ```
 Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: false
+```
+**Solution:**
+```python
+class Solution:
+    def wordBreak(self, s, wordDict):
+        """
+        :type s: str
+        :type wordDict: List[str]
+        :rtype: bool
+        """
+        if not wordDict:
+            return False
+
+        flags = [False] * (len(s)+1)
+        flags[0] = True
+        for i in range(1, len(flags)):
+            for j in range(i):
+                substring = s[j:i]
+                # print(substring)
+                if flags[j] and substring in wordDict:
+                    flags[i] = True
+                    break
+            # print("-------")
+
+        return flags[len(s)]
 ```

@@ -7,10 +7,60 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 27 Oct 2018 10:34:19 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 01 Nov 2018 22:39:07 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Valid Palindrome</title>
+      <link>http://www.hashnopolis.com/post/2018/11/valid-palindrome/</link>
+      <pubDate>Thu, 01 Nov 2018 22:39:07 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/valid-palindrome/</guid>
+      <description>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+Note: For the purpose of this problem, we define empty string as valid palindrome.
+Example 1:
+Input: &amp;quot;A man, a plan, a canal: Panama&amp;quot; Output: true  Example 2:
+Input: &amp;quot;race a car&amp;quot; Output: false  Solution:
+class Solution: def isPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: bool &amp;quot;&amp;quot;&amp;quot; if not s: return True head = 0 tail = len(s) - 1 while head &amp;lt;= tail: cHead, cTail = s[head], s[tail] if not cHead.</description>
+    </item>
+    
+    <item>
+      <title>Lowest Common Ancestor of a Binary Search Tree</title>
+      <link>http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-search-tree/</link>
+      <pubDate>Thu, 01 Nov 2018 13:23:27 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-search-tree/</guid>
+      <description>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]</description>
+    </item>
+    
+    <item>
+      <title>Lowest Common Ancestor of a Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-tree/</link>
+      <pubDate>Thu, 01 Nov 2018 13:18:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-tree/</guid>
+      <description>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+According to the : “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]
+ _______3______ / \ ___5__ ___1__  / \ / 6 _2 0 8 / 7 4 Example 1:</description>
+    </item>
+    
+    <item>
+      <title>Summary Ranges</title>
+      <link>http://www.hashnopolis.com/post/2018/10/summary-ranges/</link>
+      <pubDate>Wed, 31 Oct 2018 23:53:52 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/summary-ranges/</guid>
+      <description>Given a sorted integer array without duplicates, return the summary of its ranges.
+Example 1:
+Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.  Example 2:
+Input: [0,2,3,4,6,8,9] Output: [&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.  Solution:
+class Solution: def summaryRanges(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i+1] == nums[i] + 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1].</description>
+    </item>
     
     <item>
       <title>Find the Duplicate Number</title>
@@ -22,6 +72,18 @@
 Example 1:
 Input: [1,3,4,2,2] Output: 2  Example 2:
 Input: [3,1,3,4,2] Output: 3  Note: You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space.</description>
+    </item>
+    
+    <item>
+      <title>H-Index</title>
+      <link>http://www.hashnopolis.com/post/2018/10/h-index/</link>
+      <pubDate>Sat, 27 Oct 2018 01:07:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/h-index/</guid>
+      <description>Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&amp;rsquo;s h-index.
+According to the definition of h-index on Wikipedia: &amp;ldquo;A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.&amp;rdquo;
+Example:
+Input: citations = [3,0,6,1,5] Output: 3  Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.</description>
     </item>
     
     <item>
@@ -212,6 +274,17 @@ Follow up: Can you solve it without using extra space? Solution:
 Follow up: Can you solve it without using extra space?
 Solution:
 # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: if fast and not fast.next: return False fast = fast.</description>
+    </item>
+    
+    <item>
+      <title>Word Break</title>
+      <link>http://www.hashnopolis.com/post/2018/10/word-break/</link>
+      <pubDate>Wed, 10 Oct 2018 23:57:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/word-break/</guid>
+      <description>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+Note: - The same word in the dictionary may be reused multiple times in the segmentation. - You may assume the dictionary does not contain duplicate words. Example 1:
+Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;.</description>
     </item>
     
     <item>
