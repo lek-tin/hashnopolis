@@ -7,10 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 26 Oct 2018 23:04:31 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 01 Nov 2018 23:18:11 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/matrix/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Maximal Square</title>
+      <link>http://www.hashnopolis.com/post/2018/11/maximal-square/</link>
+      <pubDate>Thu, 01 Nov 2018 23:18:11 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/maximal-square/</guid>
+      <description>Given a 2D binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest square containing only 1&amp;rsquo;s and return its area.
+Example: Input:
+1 0 1 0 0
+1 0 1 1 1
+1 1 1 1 1
+1 0 0 1 0
+Output: 4 Solution:
+class Solution: def maximalSquare(self, matrix): &amp;quot;&amp;quot;&amp;quot; :type matrix: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;quot;1&amp;quot;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;quot;1&amp;quot;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;quot;0&amp;quot;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2  </description>
+    </item>
     
     <item>
       <title>Minimum Path Sum</title>
