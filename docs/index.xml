@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 01 Nov 2018 23:18:11 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 02 Nov 2018 20:30:23 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Valid Parentheses</title>
+      <link>http://www.hashnopolis.com/post/2018/11/valid-parentheses/</link>
+      <pubDate>Fri, 02 Nov 2018 20:30:23 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/valid-parentheses/</guid>
+      <description>Given a string containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.
+An input string is valid if:
+Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
+Example 1:
+Input: &amp;quot;()&amp;quot; Output: true  Example 2:
+Input: &amp;quot;()[]{}&amp;quot; Output: true  Example 3:</description>
+    </item>
     
     <item>
       <title>Maximal Square</title>
@@ -301,6 +315,19 @@ Solution:
       <description>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
 Note: - The same word in the dictionary may be reused multiple times in the segmentation. - You may assume the dictionary does not contain duplicate words. Example 1:
 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Decode Ways</title>
+      <link>http://www.hashnopolis.com/post/2018/10/decode-ways/</link>
+      <pubDate>Wed, 03 Oct 2018 23:49:00 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/decode-ways/</guid>
+      <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
+&amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
+Example 1:
+Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2:
+Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
     </item>
     
     <item>

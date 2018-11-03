@@ -59,21 +59,21 @@ class Solution(object):
           "y": 97,
           "z": 101
         }
-        
+
         def encode(string):
             res = 1
             for s in list(string):
                 res *= primeNums[s]
             return res
-        
+
         anagrams = {}
-        
+
         for string in strs:
             code = encode(string)
             if anagrams.get(code, None) is None:
                 anagrams[code] = [string]
             else:
                 anagrams.get(code).append(string)
-        
+
         return list(anagrams.values())
 ```
