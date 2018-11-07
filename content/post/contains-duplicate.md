@@ -2,7 +2,7 @@
 title: "Contains Duplicate"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "duplicate"]
 categories: ["algorithm"]
 date: 2018-09-10T21:39:18+08:00
 draft: false
@@ -36,8 +36,9 @@ class Solution:
         :type nums: List[int]
         :rtype: bool
         """
-        uniqueNums = set(nums)
-        if (len(uniqueNums) != len(nums)):
-            return True
+        sortedNums = sorted(nums)
+        for i in range(1, len(nums)):
+            if sortedNums[i] == sortedNums[i-1]:
+                return True
         return False
 ```

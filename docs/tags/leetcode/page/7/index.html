@@ -171,6 +171,93 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></h2>
+
+      <p>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).
+For example:
+Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7  return its level order traversal as:
+[ [3], [9,20], [15,7] ]  Solution:
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal-ii/">Binary Tree Level Order Traversal II</a></h2>
+
+      <p>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).
+For example: Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7  return its bottom-up level order traversal as:
+[ [15,7], [9,20], [3] ]  Solution:
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></h2>
+
+      <p>Given a binary tree, return the inorder traversal of its nodes’ values.
+Example:
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Follow up: the Recursive solution is trivial, could you do it iteratively?
+Solution
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; &#34;&#34;&#34;Check root == None to reduce time on checking&#34;&#34;&#34; if root == None: return [] stack = [] result = [] current = root while (current!</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/">Employees Earning More Than Their Managers</a></h2>
 
       <p>The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
@@ -346,92 +433,7 @@ Example 1:
 Input: [1,2,3,1] Output: true  Example 2:
 Input: [1,2,3,4] Output: false  Example 3:
 Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution:
-class Solution: def containsDuplicate(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: bool &#34;&#34;&#34; uniqueNums = set(nums) if (len(uniqueNums) !</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/climbing-stairs/">Climbing Stairs</a></h2>
-
-      <p>You are climbing a stair case. It takes n steps to reach to the top.
-Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note: Given n will be a positive integer.
-Example 1:
-Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-search-tree-iterator/">Binary Search Tree Iterator</a></h2>
-
-      <p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
-Calling next() will return the next smallest number in the BST.
-Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
-Solution:
-# Definition for a binary tree node # class TreeNode(object): # def __init__(self, x): # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/">Two Sum II Input Array Is Sorted</a></h2>
-
-      <p>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
-The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
-Note: - Your returned answers (both index1 and index2) are not zero-based. - You may assume that each input would have exactly one solution and you may not use the same element twice.</p>
+class Solution: def containsDuplicate(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: bool &#34;&#34;&#34; sortedNums = sorted(nums) for i in range(1, len(nums)): if sortedNums[i] == sortedNums[i-1]: return True return False  </p>
 
       <p class="meta">
         

@@ -24,13 +24,12 @@ call isBadVersion(4) -> true
 
 Then 4 is the first bad version.
 ```
-**Solution:**  
+**Solution:**
 ```python
 # The isBadVersion API is already defined for you.
 # @param version, an integer
 # @return a bool
 # def isBadVersion(version):
-
 class Solution(object):
     def firstBadVersion(self, n):
         """
@@ -44,6 +43,7 @@ class Solution(object):
             mid = start + (end - start)//2
             if isBadVersion(mid):
                 end = mid
+            # If a version is ok, all the preceding versions should be ok too 😉
             else:
                 start = mid
         return end
