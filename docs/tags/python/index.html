@@ -251,6 +251,32 @@ Note: You must do this in-place without making a copy of the array. Minimize the
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/count-and-say/">Count and Say</a></h2>
+
+      <p>The count-and-say sequence is the sequence of integers with the first five terms as following:
+ 1 11 21 1211 111221 1 is read off as &#34;one 1&#34; or 11. 11 is read off as &#34;two 1s&#34; or 21. 21 is read off as &#34;one 2, then one 1&#34; or 1211.  Given an integer n where 1 ≤ n ≤ 30, generate the nth term of the count-and-say sequence.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/valid-parentheses/">Valid Parentheses</a></h2>
 
       <p>Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid.
@@ -405,34 +431,6 @@ Example 1:
 Input: [0,1,2,4,5,7] Output: [&#34;0-&gt;2&#34;,&#34;4-&gt;5&#34;,&#34;7&#34;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.  Example 2:
 Input: [0,2,3,4,6,8,9] Output: [&#34;0&#34;,&#34;2-&gt;4&#34;,&#34;6&#34;,&#34;8-&gt;9&#34;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.  Solution:
 class Solution: def summaryRanges(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: List[str] &#34;&#34;&#34; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i&#43;1] == nums[i] &#43; 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1].</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/find-the-duplicate-number/">Find the Duplicate Number</a></h2>
-
-      <p>Given an array nums containing n &#43; 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
-Example 1:
-Input: [1,3,4,2,2] Output: 2  Example 2:
-Input: [3,1,3,4,2] Output: 3  Note: You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space.</p>
 
       <p class="meta">
         

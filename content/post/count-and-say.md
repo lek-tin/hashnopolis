@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python"]
 categories: ["algorithm"]
 date: 2018-11-03T16:07:54-07:00
-draft: true
+draft: false
 archive: false
 ---
 The count-and-say sequence is the sequence of integers with the first five terms as following:
@@ -32,4 +32,32 @@ Output: "1"
 ```
 Input: 4
 Output: "1211"
+```
+**Solution:**
+```python
+class Solution:
+    def countAndSay(self, n):
+        """
+        :type n: int
+        :rtype: str
+        """
+        i = 1
+        res = "1"
+        while i < n:
+            c = res[0]
+            temp = ""
+            count = 0
+            for j in range(len(res) + 1):
+                if j != len(res) and res[j] == c:
+                    count += 1
+                else:
+                    # Iteration finished or encountered different number than "c"
+                    temp += str(count)
+                    temp += c
+                    if j != len(res):
+                        c = res[j]
+                        count = 1
+            res = temp
+            i += 1
+        return res
 ```
