@@ -32,7 +32,7 @@
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/tags/two-pointers/" />
+<link rel="canonical" href="http://www.hashnopolis.com/tags/python/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -163,7 +163,7 @@
 
   
   
-  <h2 class="taxonomy-single--title">two-pointers:</h2>
+  <h2 class="taxonomy-single--title">python:</h2>
   <div>
     
     
@@ -171,96 +171,14 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/move-zeroes/">Move Zeroes</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></h2>
 
-      <p>Given an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements.
-For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
-Note: You must do this in-place without making a copy of the array. Minimize the total number of operations. Credits: Special thanks to @jianchao.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
-
-      <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1:
-Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2:
-Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length. Solution:
-class Solution: def findKthLargest(self, nums, k): if (nums == None or len(nums) == 0): return 0 left, right = 0, len(nums) - 1 def swap(nums, i, j): temp = nums[i] nums[i] = nums[j] nums[j] = temp def partition(nums, left, right): pivot = nums[left] l = left &#43; 1 r = right while l &lt;= r: if nums[l] &lt; pivot and nums[r] &gt; pivot: swap(nums, l, r) l &#43;= 1 r -= 1 if nums[l] &gt;= pivot: l &#43;= 1 if nums[r] &lt;= pivot: r -= 1 swap(nums, left, r) return r while True: pos = partition(nums, left, right) if pos &#43; 1 == k: return nums[pos] elif pos &#43; 1 &gt; k: right = pos - 1 elif pos &#43; 1 &lt; k: left = pos &#43; 1  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list-ii/">Remove Duplicates From Sorted List II</a></h2>
-
-      <p>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
-Example 1:
-Input: 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5 Output: 1-&gt;2-&gt;5  Example 2:
-Input: 1-&gt;1-&gt;1-&gt;2-&gt;3 Output: 2-&gt;3  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/">Remove Linked List Elements</a></h2>
-
-      <p>Remove all elements from a linked list of integers that have value val.
+      <p>Given a linked list, remove the n-th node from the end of list and return its head.
 Example:
-Input: 1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6 Output: 1-&gt;2-&gt;3-&gt;4-&gt;5  Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &#34;&#34;&#34; :type head: ListNode :type val: int :rtype: ListNode &#34;&#34;&#34; pre = ListNode(0) pre.next = head pos = pre while pos.next !</p>
+Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.  Note:
+Given n will always be valid.
+Follow up:
+Could you do this in one pass?</p>
 
       <p class="meta">
         
@@ -283,69 +201,14 @@ Input: 1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6 Output: 1-&gt;2-&gt;3-&gt;
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/15.-3sum/">15. 3sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/">Search in Rotated Sorted Array II</a></h2>
 
-      <p>Given an array nums of n integers, are there elements a, b, c in nums such that a &#43; b &#43; c = 0? Find all unique triplets in the array which gives the sum of zero.
-Note:
-The solution set must not contain duplicate triplets.
-Example:
-Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/">80. Remove Duplicates From Sorted Array II</a></h2>
-
-      <p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
+You are given a target value to search. If found in the array return true, otherwise return false.
 Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/">Remove Duplicates From Sorted Array</a></h2>
-
-      <p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</p>
+Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
+Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
 
       <p class="meta">
         
@@ -366,6 +229,16 @@ Given nums = [1,1,2], Your function should return length = 2, with the first two
 </article>
       
     
+    
+      <footer class="list-footer">
+        <nav class="pagination">
+        <h3 class="offscreen">Pagination</h3>
+        
+          <a class="pagination-previous" href="/tags/python/page/9/">← Newer Posts</a>
+        
+        
+        </nav>
+      </footer>
     
   </div>
   

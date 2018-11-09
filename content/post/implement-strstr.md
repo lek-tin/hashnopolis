@@ -8,7 +8,7 @@ date: 2018-11-03T01:46:24-07:00
 draft: false
 archive: false
 ---
-Implement ![strstr()](http://www.cplusplus.com/reference/cstring/strstr/).
+Implement [strstr()](http://www.cplusplus.com/reference/cstring/strstr/).
 
 Return the index of the first occurrence of needle in haystack, or `-1` if needle is not part of haystack.
 

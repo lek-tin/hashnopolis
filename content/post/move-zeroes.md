@@ -2,7 +2,7 @@
 title: "Move Zeroes"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-11-03T16:25:23-07:00
 draft: false
@@ -34,4 +34,25 @@ public:
         }
     }
 };
+```
+```python
+class Solution:
+    def moveZeroes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        if not nums or nums == [0] or nums == [0, 0]:
+            return
+        # Use left to store the latest zero occurred
+        left = 0
+        curr = 0
+        while curr < len(nums):
+            if nums[curr] != 0:
+                temp = nums[curr]
+                nums[curr] = nums[left]
+                nums[left] = temp
+                left += 1
+            curr += 1
+        print(nums)
 ```
