@@ -7,10 +7,50 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 08 Nov 2018 22:02:51 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Nov 2018 23:07:10 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Implement Trie Prefix Tree</title>
+      <link>http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/</link>
+      <pubDate>Thu, 08 Nov 2018 23:07:10 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/</guid>
+      <description>Implement a trie with insert, search, and startsWith methods.
+Example:
+Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true  Note: You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings. Solution:
+# o(n) class TrieNode(): def __init__(self): self.children = {} self.isWholeWord = False class Trie: def __init__(self): &amp;quot;&amp;quot;&amp;quot; Initialize your data structure here.</description>
+    </item>
+    
+    <item>
+      <title>Excel Sheet Column Title</title>
+      <link>http://www.hashnopolis.com/post/2018/11/excel-sheet-column-title/</link>
+      <pubDate>Thu, 08 Nov 2018 22:42:24 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/excel-sheet-column-title/</guid>
+      <description>Given a positive integer, return its corresponding column title as appear in an Excel sheet.
+For example:
+ 1 -&amp;gt; A 2 -&amp;gt; B 3 -&amp;gt; C ... 26 -&amp;gt; Z 27 -&amp;gt; AA 28 -&amp;gt; AB ...  Example 1:
+Input: 1 Output: &amp;quot;A&amp;quot;  Example 2:
+Input: 28 Output: &amp;quot;AB&amp;quot;  Example 3:
+Input: 701 Output: &amp;quot;ZY&amp;quot;  Solution:
+class Solution: def convertToTitle(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: str &amp;quot;&amp;quot;&amp;quot; digit = 1 res = &amp;quot;&amp;quot; while n &amp;gt; 0: # Because we start from A.</description>
+    </item>
+    
+    <item>
+      <title>Increasing Triplet Subsequence</title>
+      <link>http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/</link>
+      <pubDate>Thu, 08 Nov 2018 22:10:52 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/</guid>
+      <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
+Formally the function should:
+Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false. Note: Your algorithm should run in O(n) time complexity and O(1) space complexity.
+Example 1:
+Input: [1,2,3,4,5] Output: true  Example 2:</description>
+    </item>
     
     <item>
       <title>Simplify Path</title>
