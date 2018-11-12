@@ -23,7 +23,7 @@ Output: 4
 **Note:**
 You may assume `k` is always valid, `1 ≤ k ≤ array's length`.
 **Solution:**
-```ptyhon
+```python
 class Solution:
     def findKthLargest(self, nums, k):
         if (nums == None or len(nums) == 0):

@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 03 Oct 2018 23:49:00 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 11 Nov 2018 12:40:25 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PowX N</title>
+      <link>http://www.hashnopolis.com/post/2018/11/powx-n/</link>
+      <pubDate>Sun, 11 Nov 2018 12:40:25 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/powx-n/</guid>
+      <description>Example 1:
+Input: 2.00000, 10 Output: 1024.00000  Example 2:
+Input: 2.10000, 3 Output: 9.26100  Example 3:
+Input: 2.00000, -2 Output: 0.25000  Explanation: 2-2 = 1&amp;frasl;22 = 1&amp;frasl;4 = 0.25 Note: - -100.0 &amp;lt; x &amp;lt; 100.0 - n is a 32-bit signed integer, within the range [−231, 231 − 1] Solution:
+# Time: o(logN) # Space: o(n) class Solution: def myPow(self, x, n): &amp;quot;&amp;quot;&amp;quot; :type x: float :type n: int :rtype: float &amp;quot;&amp;quot;&amp;quot; if n &amp;gt; 0: return self.</description>
+    </item>
     
     <item>
       <title>Decode Ways</title>

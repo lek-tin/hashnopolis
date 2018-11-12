@@ -7,10 +7,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 08 Nov 2018 23:07:10 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 Nov 2018 15:33:09 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LRU Cache</title>
+      <link>http://www.hashnopolis.com/post/2018/11/lru-cache/</link>
+      <pubDate>Sun, 11 Nov 2018 15:33:09 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/lru-cache/</guid>
+      <description>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
+get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</description>
+    </item>
+    
+    <item>
+      <title>Interger to English Words</title>
+      <link>http://www.hashnopolis.com/post/2018/11/interger-to-english-words/</link>
+      <pubDate>Sun, 11 Nov 2018 13:27:05 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/interger-to-english-words/</guid>
+      <description>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
+Example 1:
+Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Example 2:
+Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot;  Example 3:
+Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot;  Example 4:
+Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot;  Solution:</description>
+    </item>
+    
+    <item>
+      <title>PowX N</title>
+      <link>http://www.hashnopolis.com/post/2018/11/powx-n/</link>
+      <pubDate>Sun, 11 Nov 2018 12:40:25 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/powx-n/</guid>
+      <description>Example 1:
+Input: 2.00000, 10 Output: 1024.00000  Example 2:
+Input: 2.10000, 3 Output: 9.26100  Example 3:
+Input: 2.00000, -2 Output: 0.25000  Explanation: 2-2 = 1&amp;frasl;22 = 1&amp;frasl;4 = 0.25 Note: - -100.0 &amp;lt; x &amp;lt; 100.0 - n is a 32-bit signed integer, within the range [−231, 231 − 1] Solution:
+# Time: o(logN) # Space: o(n) class Solution: def myPow(self, x, n): &amp;quot;&amp;quot;&amp;quot; :type x: float :type n: int :rtype: float &amp;quot;&amp;quot;&amp;quot; if n &amp;gt; 0: return self.</description>
+    </item>
+    
+    <item>
+      <title>Validate Binary Search Tree</title>
+      <link>http://www.hashnopolis.com/post/2018/11/validate-binary-search-tree/</link>
+      <pubDate>Sat, 10 Nov 2018 22:50:21 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/validate-binary-search-tree/</guid>
+      <description>Given a binary tree, determine if it is a valid binary search tree (BST).
+Assume a BST is defined as follows: - The left subtree of a node contains only nodes with keys less than the node&amp;rsquo;s key. - The right subtree of a node contains only nodes with keys greater than the node&amp;rsquo;s key. - Both the left and right subtrees must also be binary search trees. Example 1:</description>
+    </item>
+    
+    <item>
+      <title>Arrays in CPP</title>
+      <link>http://www.hashnopolis.com/post/2018/11/arrays-in-cpp/</link>
+      <pubDate>Sat, 10 Nov 2018 13:50:30 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/arrays-in-cpp/</guid>
+      <description>To get the number of elements in an array in C++:
+sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. Divide it with the size of one element in the array will give you the number of elements in the array: sizeof(awesomeArray)/sizeof(awesomeArray[0])</description>
+    </item>
+    
+    <item>
+      <title>Count Primes</title>
+      <link>http://www.hashnopolis.com/post/2018/11/count-primes/</link>
+      <pubDate>Fri, 09 Nov 2018 18:52:59 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/count-primes/</guid>
+      <description>Count the number of prime numbers less than a non-negative number, n.
+Example:
+Input: 10 Output: 4  Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution:
+class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)+1): if marked[i] != 1: prime = i + 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count += 1 return count  </description>
+    </item>
     
     <item>
       <title>Implement Trie Prefix Tree</title>

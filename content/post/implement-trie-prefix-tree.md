@@ -67,6 +67,7 @@ class Trie:
                 r = r.children[w]
             else:
                 return False
+        # has to match the last leaf
         return r.isWholeWord
 
     def startsWith(self, prefix):
@@ -81,6 +82,7 @@ class Trie:
                 r = r.children[w]
             else:
                 return False
+        # Doesn't need to match the last leaf
         return True
 
 # Your Trie object will be instantiated and called as such:
