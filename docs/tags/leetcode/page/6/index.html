@@ -119,6 +119,7 @@
         <section id="sideber" class="sidebar">
           <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
+  <h1  class="menu-logo__text"># Hashnopolis</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
     <g>
       <path d="M10.001 16l-.143-.01c-.547-.078-.926-.585-.849-1.132l2-14c.078-.546.588-.926 1.132-.848.547.078.927.584.849 1.131l-2 14c-.071.5-.499.859-.989.859zM4.001 16l-.143-.01c-.546-.078-.926-.585-.848-1.132l2-14c.078-.547.58-.927 1.132-.848.546.078.926.585.848 1.132l-2 14c-.072.499-.499.858-.989.858zM15 6h-13c-.552 0-1-.448-1-1s.448-1 1-1h13c.553 0 1 .448 1 1s-.447 1-1 1zM14 12h-13c-.552 0-1-.447-1-1s.448-1 1-1h13c.553 0 1 .447 1 1s-.447 1-1 1z"/>
@@ -170,11 +171,13 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/16.-3sum-closest/">16. 3sum Closest</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/add-digits/">Add Digits</a></h2>
 
-      <p>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
-Example:
-Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to the target is 2. (-1 &#43; 2 &#43; 1 = 2).</p>
+      <p>Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+For example:
+Given num = 38, the process is like: 3 &#43; 8 = 11, 1 &#43; 1 = 2. Since 2 has only one digit, return it.
+Follow up: Could you do it without any loop/recursion in O(1) runtime?
+Credits: Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.</p>
 
       <p class="meta">
         
@@ -197,13 +200,97 @@ Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to th
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/15.-3sum/">15. 3sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list-ii/">Remove Duplicates From Sorted List II</a></h2>
 
-      <p>Given an array nums of n integers, are there elements a, b, c in nums such that a &#43; b &#43; c = 0? Find all unique triplets in the array which gives the sum of zero.
-Note:
-The solution set must not contain duplicate triplets.
+      <p>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
+Example 1:
+Input: 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5 Output: 1-&gt;2-&gt;5  Example 2:
+Input: 1-&gt;1-&gt;1-&gt;2-&gt;3 Output: 2-&gt;3  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/">Remove Linked List Elements</a></h2>
+
+      <p>Remove all elements from a linked list of integers that have value val.
 Example:
-Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution:</p>
+Input: 1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6 Output: 1-&gt;2-&gt;3-&gt;4-&gt;5  Solution:
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &#34;&#34;&#34; :type head: ListNode :type val: int :rtype: ListNode &#34;&#34;&#34; pre = ListNode(0) pre.next = head pos = pre while pos.next !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/unique-binary-search-trees/">Unique Binary Search Trees</a></h2>
+
+      <p>Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?
+Example:
+Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  Exaplanation:
+n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0);  Solution:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/symmetric-tree/">Symmetric Tree</a></h2>
+
+      <p>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
+ 1 / \ 2 2 / \ / \ 3 4 4 3  But the following [1,2,2,null,3,null,3] is not:
+ 1 / \ 2 2 \ \ 3 3  Note: Bonus points if you could solve it both recursively and iteratively.
+Solution:</p>
 
       <p class="meta">
         
@@ -226,11 +313,11 @@ Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/">23. Merge k Sorted Lists</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/top-k-frequent-elements/">Top K Frequent Elements</a></h2>
 
-      <p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example:
-Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6  </p>
+      <p>Given a non-empty array of integers, return the k most frequent elements.
+For example, Given [1,1,1,2,2,3] and k = 2, return [1,2]. Note: You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size. Solution:
+class Solution: def topKFrequent(self, nums, k): &#34;&#34;&#34; :type nums: List[int] :type k: int :rtype: List[int] &#34;&#34;&#34; freqMap = dict() for num in nums: if freqMap.</p>
 
       <p class="meta">
         
@@ -253,14 +340,14 @@ Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-&gt;3-&gt
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/57.-insert-interval/">57. Insert Interval</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/same-tree/">Same Tree</a></h2>
 
-      <p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
-You may assume that the intervals were initially sorted according to their start times.
+      <p>Given two binary trees, write a function to check if they are the same or not.
+Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
 Example 1:
-Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2:
-Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</p>
+Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true  Example 2:
+Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:
+Input: 1 1 / \ / \ 2 1 1 2 [1,2,1], [1,1,2] Output: false  Solution</p>
 
       <p class="meta">
         
@@ -283,41 +370,13 @@ Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Outpu
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/">56. Merge Intervals</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-element/">Remove Element</a></h2>
 
-      <p>Given a collection of intervals, merge all overlapping intervals.
-Example 1:
-Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
-Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considerred overlapping.  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: List[Interval] &#34;&#34;&#34; intervals.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/">80. Remove Duplicates From Sorted Array II</a></h2>
-
-      <p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
+      <p>Given an array nums and a value val, remove all instances of that value in-place and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+The order of elements can be changed. It doesn’t matter what you leave beyond the new length.
 Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</p>
+Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with the first two elements of nums being 2.</p>
 
       <p class="meta">
         
@@ -340,73 +399,13 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/">Remove Duplicates From Sorted Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list/">Remove Duplicates From Sorted List</a></h2>
 
-      <p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+      <p>Given a sorted linked list, delete all duplicates such that each element appear only once.
 Example 1:
-Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/">4. Median of Two Sorted Arrays</a></h2>
-
-      <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m&#43;n)).
-You may assume nums1 and nums2 cannot be both empty.
-Example 1:
-nums1 = [1, 3] nums2 = [2]  The median is 2.0
-Example 2:
-nums1 = [1, 2] nums2 = [3, 4]  The median is (2 &#43; 3)/2 = 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></h2>
-
-      <p>Given a linked list, remove the n-th node from the end of list and return its head.
-Example:
-Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.  Note:
-Given n will always be valid.
-Follow up:
-Could you do this in one pass?</p>
+Input: 1-&gt;1-&gt;2 Output: 1-&gt;2  Example 2:
+Input: 1-&gt;1-&gt;2-&gt;3-&gt;3 Output: 1-&gt;2-&gt;3  Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr = head while curr != None and curr.</p>
 
       <p class="meta">
         
@@ -429,14 +428,14 @@ Could you do this in one pass?</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/">Search in Rotated Sorted Array II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/power-of-two/">Power of Two</a></h2>
 
-      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
-(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
-You are given a target value to search. If found in the array return true, otherwise return false.
+      <p>Given an integer, write a function to determine if it is a power of two.
 Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
+Input: 1 Output: true Explanation: 2**0 = 1  Example 2:
+Input: 16 Output: true Explanation: 2**4 = 16  Example 3:
+Input: 218 Output: false  Solution:
+class Solution: def isPowerOfTwo(self, n): &#34;&#34;&#34; :type n: int :rtype: bool &#34;&#34;&#34; if n == 0: return False if n &amp; (n - 1) == 0: return True return False  </p>
 
       <p class="meta">
         
@@ -448,7 +447,7 @@ Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a 
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -464,6 +463,8 @@ Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a 
         
           <a class="pagination-previous" href="/tags/leetcode/page/5/">← Newer Posts</a>
         
+        
+          <a class="pagination-next" href="/tags/leetcode/page/7/">Older Posts →</a>
         
         </nav>
       </footer>

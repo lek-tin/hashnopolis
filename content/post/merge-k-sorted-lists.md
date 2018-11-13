@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python", "sorted-array", "merge"]
 categories: ["algorithm"]
 date: 2018-08-26T17:54:18+08:00
-draft: false
+draft: true
 archive: false
 ---
 Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.

@@ -5,9 +5,10 @@ authors: ["lek-tin"]
 tags: ["hadoop", "apache", "macos", "mapreduce", "distributed-file-system"]
 categories: ["big-data"]
 date: 2018-10-20T15:15:16-07:00
-draft: false
+draft: true
 archive: false
 ---
+macOS High Sierra 10.13.6
 Install Java (my version is 11.0.1)
 ```
 # Setting PATH for Java
@@ -32,5 +33,9 @@ source ~/.bash_profile
 ```
 Test `hadoop` works
 ```
-$ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.9.0.jar wordcount $HADOOP_HOME/README.txt $HADOOP_HOME/README.count.txt
+hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.9.0.jar wordcount $HADOOP_HOME/README.txt $HADOOP_HOME/README.count.txt
 ```
+
+
+
+remote login checked 

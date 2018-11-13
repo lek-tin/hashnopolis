@@ -7,10 +7,75 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 14 Sep 2018 11:50:46 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 31 Oct 2018 23:53:52 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/sorted-array/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Summary Ranges</title>
+      <link>http://www.hashnopolis.com/post/2018/10/summary-ranges/</link>
+      <pubDate>Wed, 31 Oct 2018 23:53:52 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/summary-ranges/</guid>
+      <description>Given a sorted integer array without duplicates, return the summary of its ranges.
+Example 1:
+Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.  Example 2:
+Input: [0,2,3,4,6,8,9] Output: [&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.  Solution:
+class Solution: def summaryRanges(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i+1] == nums[i] + 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1].</description>
+    </item>
+    
+    <item>
+      <title>Find First and Last Position of Element in Sorted Array</title>
+      <link>http://www.hashnopolis.com/post/2018/10/find-first-and-last-position-of-element-in-sorted-array/</link>
+      <pubDate>Fri, 26 Oct 2018 23:10:23 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/find-first-and-last-position-of-element-in-sorted-array/</guid>
+      <description>Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
+Your algorithm&amp;rsquo;s runtime complexity must be in the order of O(log n).
+If the target is not found in the array, return [-1, -1].
+Example 1:
+Input: nums = [5,7,7,8,8,10], target = 8 Output: [3,4]  Example 2:
+Input: nums = [5,7,7,8,8,10], target = 6 Output: [-1,-1]  Solution:</description>
+    </item>
+    
+    <item>
+      <title>Search in Rotated Sorted Array</title>
+      <link>http://www.hashnopolis.com/post/2018/10/search-in-rotated-sorted-array/</link>
+      <pubDate>Fri, 26 Oct 2018 23:08:49 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/search-in-rotated-sorted-array/</guid>
+      <description>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+You are given a target value to search. If found in the array return its index, otherwise return -1.
+You may assume no duplicate exists in the array.
+Your algorithm&amp;rsquo;s runtime complexity must be in the order of O(log n).
+Example 1:
+Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2:</description>
+    </item>
+    
+    <item>
+      <title>Merge Two Sorted Lists</title>
+      <link>http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/</link>
+      <pubDate>Thu, 25 Oct 2018 23:43:25 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/</guid>
+      <description>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+Example:
+Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4  Solution:
+class Solution: def mergeTwoLists(self, l1, l2): &amp;quot;&amp;quot;&amp;quot; :type l1: ListNode :type l2: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if l1 == None: return l2 if l2 == None: return l1 root = ListNode(0) temp = root while l1 and l2: if l1.</description>
+    </item>
+    
+    <item>
+      <title>Merge Sorted Array</title>
+      <link>http://www.hashnopolis.com/post/2018/10/merge-sorted-array/</link>
+      <pubDate>Mon, 08 Oct 2018 13:03:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/merge-sorted-array/</guid>
+      <description>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+Note: The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. Example:
+Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3</description>
+    </item>
     
     <item>
       <title>Find Minimum in Rotated Sorted Array</title>
@@ -49,17 +114,6 @@ Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null
       <description>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
 The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
 Note: - Your returned answers (both index1 and index2) are not zero-based. - You may assume that each input would have exactly one solution and you may not use the same element twice.</description>
-    </item>
-    
-    <item>
-      <title>23. Merge k Sorted Lists</title>
-      <link>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</link>
-      <pubDate>Sun, 26 Aug 2018 17:54:18 +0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
-      <description>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example:
-Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  </description>
     </item>
     
     <item>

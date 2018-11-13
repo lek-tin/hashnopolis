@@ -7,10 +7,63 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 15 Sep 2018 12:54:17 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 01 Nov 2018 23:18:11 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Maximal Square</title>
+      <link>http://www.hashnopolis.com/post/2018/11/maximal-square/</link>
+      <pubDate>Thu, 01 Nov 2018 23:18:11 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/maximal-square/</guid>
+      <description>Given a 2D binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest square containing only 1&amp;rsquo;s and return its area.
+Example: Input:
+1 0 1 0 0
+1 0 1 1 1
+1 1 1 1 1
+1 0 0 1 0
+Output: 4 Solution:
+class Solution: def maximalSquare(self, matrix): &amp;quot;&amp;quot;&amp;quot; :type matrix: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;quot;1&amp;quot;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;quot;1&amp;quot;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;quot;0&amp;quot;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2  </description>
+    </item>
+    
+    <item>
+      <title>Minimum Path Sum</title>
+      <link>http://www.hashnopolis.com/post/2018/10/minimum-path-sum/</link>
+      <pubDate>Fri, 26 Oct 2018 23:04:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/minimum-path-sum/</guid>
+      <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Note: You can only move either down or right at any point in time.
+Example:
+Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation: Because the path 1→3→1→1→1 minimizes the sum. Solution:
+class Solution: def minPathSum(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[int]] :rtype: int &amp;quot;&amp;quot;&amp;quot; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
+    </item>
+    
+    <item>
+      <title>Word Break</title>
+      <link>http://www.hashnopolis.com/post/2018/10/word-break/</link>
+      <pubDate>Wed, 10 Oct 2018 23:57:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/word-break/</guid>
+      <description>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+Note: - The same word in the dictionary may be reused multiple times in the segmentation. - You may assume the dictionary does not contain duplicate words. Example 1:
+Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Decode Ways</title>
+      <link>http://www.hashnopolis.com/post/2018/10/decode-ways/</link>
+      <pubDate>Wed, 03 Oct 2018 23:49:00 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/decode-ways/</guid>
+      <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
+&amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
+Example 1:
+Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2:
+Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
+    </item>
     
     <item>
       <title>Unique Paths</title>

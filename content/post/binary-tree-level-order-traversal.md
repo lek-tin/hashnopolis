@@ -50,7 +50,7 @@ class Solution:
                 res[level].append(root.val)
                 sort(root.left, level+1)
                 sort(root.right, level+1)
-        
+
         sort(root, 0)
         return res
 ```

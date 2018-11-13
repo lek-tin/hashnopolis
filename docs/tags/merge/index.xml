@@ -7,20 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 26 Aug 2018 17:54:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 25 Oct 2018 23:43:25 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/merge/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>23. Merge k Sorted Lists</title>
-      <link>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</link>
-      <pubDate>Sun, 26 Aug 2018 17:54:18 +0800</pubDate>
+      <title>Merge Two Sorted Lists</title>
+      <link>http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/</link>
+      <pubDate>Thu, 25 Oct 2018 23:43:25 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
-      <description>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+      <guid>http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/</guid>
+      <description>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
 Example:
-Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  </description>
+Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4  Solution:
+class Solution: def mergeTwoLists(self, l1, l2): &amp;quot;&amp;quot;&amp;quot; :type l1: ListNode :type l2: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if l1 == None: return l2 if l2 == None: return l1 root = ListNode(0) temp = root while l1 and l2: if l1.</description>
+    </item>
+    
+    <item>
+      <title>Merge Two Binary Trees</title>
+      <link>http://www.hashnopolis.com/post/2018/10/merge-two-binary-trees/</link>
+      <pubDate>Thu, 25 Oct 2018 23:42:27 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/merge-two-binary-trees/</guid>
+      <description>Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.
+You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.</description>
     </item>
     
     <item>
