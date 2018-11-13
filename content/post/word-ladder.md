@@ -2,10 +2,10 @@
 title: "Word Ladder"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "bfs", "bidirectional-bfs", "bidirectional-search"]
 categories: ["algorithm"]
 date: 2018-10-27T01:05:07-07:00
-draft: true
+draft: false
 archive: false
 ---
 Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
@@ -40,16 +40,52 @@ Output: 0
 **Explanation:** The endWord "cog" is not in wordList, therefore no possible transformation.
 **Solution:**
 ```python
-q.push(start)
-step = 0
-while q is not empty:
-  ++step
-  size = q.size
-  while size-- > 0:
-    node = q.pop()
-    new_nodes = expand(node)
-    if goal in new_nodes:
-      return step+1
-    q.append(new_nodes)
-return NOT_FOUND
+# time: o(26^(L/2)), L is the length of the word
+class Solution:
+    def ladderLength(self, beginWord, endWord, wordList):
+        """
+        :type beginWord: str
+        :type endWord: str
+        :type wordList: List[str]
+        :rtype: int
+        """
+        wordDict = set(wordList)
+        startQ = set()
+        endQ = set()
+        visited = set()
+
+        if endWord not in wordDict:
+            return 0
+
+        startQ.add(beginWord)
+        endQ.add(endWord)
+        length = 2
+        while len(startQ) != 0:
+            neighbours = set()
+            for node in startQ:
+                for i in range(0,len(node)):
+                    char_arr = list(node)
+                    exclude = ord(node[i]);
+                    for j in range(ord('a'),ord('z')+1):
+                        if j == exclude:
+                            continue
+
+                        char_arr[i] = chr(j)
+                        transformedWord = ''.join(char_arr)
+
+                        if transformedWord in endQ:
+                            return length
+
+                        if transformedWord in wordDict and transformedWord not in visited:
+                            visited.add(transformedWord)
+                            neighbours.add(transformedWord)
+
+            if len(endQ) < len(neighbours):
+                startQ = endQ
+                endQ = neighbours
+            else:
+                startQ = neighbours
+            length += 1
+
+        return 0
 ```
