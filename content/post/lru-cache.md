@@ -108,10 +108,10 @@ class LRUCache(object):
             self.queue.update(node)
             return
         else:
-          # new key
-          node = Node(key, value)
-          self.map[key] = node
-          self.queue.appendToTail(node)
+            # new key
+            node = Node(key, value)
+            self.map[key] = node
+            self.queue.appendToTail(node)
 
         if self.capacity == 0:
             # cache is full, remove oldest
