@@ -28,14 +28,15 @@ For `k = 3`, you should return: `3->2->1->4->5`
 #         self.next = None
 
 #   k = 3,                       next
-#  dummy -->[ 1 ----> 2 -------> 3 ]  -------> 4 ------> 5 --> Null
+#  dummy -->[1 ----> 2 -------> 3]  -------> 4 ---------> 5 --> Null
 #   prev      tail    curr   nextNode         last
 #
-#  dummy -->[ 2 ----> 1 -------> 3 ]  -------> 4 ------> 5 --> Null
+#  dummy -->[2 ----> 1 -------> 3]  -------> 4 ---------> 5 --> Null
 #                              curr
 #
-#  dummy -->[ 3 ----> 2 -------> 1 ]  -------> 4 ------> 5 --> Null
+#  dummy -->[3 ----> 2 -------> 1]  -------> 4 ---------> 5 --> Null
 #                              tail        curr/last
+#                                          new prev
 
 class Solution(object):
     def reverseKGroup(self, head, k):
@@ -49,8 +50,10 @@ class Solution(object):
         dummy = ListNode(0)
         dummy.next = head
         prev = dummy
+        print(dummy.next.val)
         while prev is not None:
             prev = self.reverse(prev, k)
+        print(dummy.next.val)
         return dummy.next
 
     def reverse(self, prev, k):

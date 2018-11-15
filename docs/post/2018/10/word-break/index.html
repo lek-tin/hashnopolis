@@ -222,13 +222,13 @@ Output: false
         if not wordDict:
             return False
 
-        flags = [False] * (len(s)+1)
-        flags[0] = True
+        flags = [True] + [False] * (len(s))
         for i in range(1, len(flags)):
             for j in range(i):
                 substring = s[j:i]
                 # print(substring)
                 if flags[j] and substring in wordDict:
+                    # i will be the end index of every break word
                     flags[i] = True
                     break
             # print(&quot;-------&quot;)

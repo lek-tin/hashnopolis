@@ -235,8 +235,9 @@ Thousand Eight Hundred Ninety One&quot;
         words = &quot;&quot;
 
         while num &gt; 0:
-            if num % 1000 != 0:
-                words = self.helper(num % 1000) + self.thousands[i] + &quot; &quot; + words
+            n = num % 1000
+            if n != 0:
+                words = self.helper(n) + self.thousands[i] + &quot; &quot; + words
             num //= 1000
             i += 1
 
@@ -248,7 +249,7 @@ Thousand Eight Hundred Ninety One&quot;
         elif num &lt; 20:
             return self.lessThan20[int(num)] + &quot; &quot;
         elif num &lt; 100:
-            # Any number under 100 can be decomposed to tens + single digits
+            # Any number under 100 can be decomposed to tens + a single digit
             return self.tens[num // 10] + &quot; &quot; + self.helper(num % 10)
         else:
             return self.lessThan20[num // 100] + &quot; Hundred &quot; + self.helper(num % 100)

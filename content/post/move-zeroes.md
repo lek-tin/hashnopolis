@@ -47,6 +47,8 @@ class Solution:
         # Use left to store the latest zero occurred
         left = 0
         curr = 0
+        # Move from left to right
+        # left: last appeared non-zero number
         while curr < len(nums):
             if nums[curr] != 0:
                 temp = nums[curr]

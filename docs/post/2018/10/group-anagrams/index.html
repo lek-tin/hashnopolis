@@ -197,9 +197,9 @@ class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;
 <pre><code>Input: [&quot;eat&quot;, &quot;tea&quot;, &quot;tan&quot;, &quot;ate&quot;, &quot;nat&quot;, &quot;bat&quot;],
 Output:
 [
-  [&quot;ate&quot;,&quot;eat&quot;,&quot;tea&quot;],
-  [&quot;nat&quot;,&quot;tan&quot;],
-  [&quot;bat&quot;]
+    [&quot;ate&quot;,&quot;eat&quot;,&quot;tea&quot;],
+    [&quot;nat&quot;,&quot;tan&quot;],
+    [&quot;bat&quot;]
 ]
 </code></pre>
 
@@ -215,32 +215,32 @@ Output:
         :rtype: List[List[str]]
         &quot;&quot;&quot;
         primeNums = {
-          &quot;a&quot;: 2,
-          &quot;b&quot;: 3,
-          &quot;c&quot;: 5,
-          &quot;d&quot;: 7,
-          &quot;e&quot;: 11,
-          &quot;f&quot;: 13,
-          &quot;g&quot;: 17,
-          &quot;h&quot;: 19,
-          &quot;i&quot;: 23,
-          &quot;j&quot;: 29,
-          &quot;k&quot;: 31,
-          &quot;m&quot;: 37,
-          &quot;l&quot;: 41,
-          &quot;n&quot;: 43,
-          &quot;o&quot;: 47,
-          &quot;p&quot;: 53,
-          &quot;q&quot;: 59,
-          &quot;r&quot;: 61,
-          &quot;s&quot;: 67,
-          &quot;t&quot;: 71,
-          &quot;u&quot;: 73,
-          &quot;v&quot;: 79,
-          &quot;w&quot;: 83,
-          &quot;x&quot;: 89,
-          &quot;y&quot;: 97,
-          &quot;z&quot;: 101
+            &quot;a&quot;: 2,
+            &quot;b&quot;: 3,
+            &quot;c&quot;: 5,
+            &quot;d&quot;: 7,
+            &quot;e&quot;: 11,
+            &quot;f&quot;: 13,
+            &quot;g&quot;: 17,
+            &quot;h&quot;: 19,
+            &quot;i&quot;: 23,
+            &quot;j&quot;: 29,
+            &quot;k&quot;: 31,
+            &quot;m&quot;: 37,
+            &quot;l&quot;: 41,
+            &quot;n&quot;: 43,
+            &quot;o&quot;: 47,
+            &quot;p&quot;: 53,
+            &quot;q&quot;: 59,
+            &quot;r&quot;: 61,
+            &quot;s&quot;: 67,
+            &quot;t&quot;: 71,
+            &quot;u&quot;: 73,
+            &quot;v&quot;: 79,
+            &quot;w&quot;: 83,
+            &quot;x&quot;: 89,
+            &quot;y&quot;: 97,
+            &quot;z&quot;: 101
         }
 
         def encode(string):
@@ -257,7 +257,7 @@ Output:
                 anagrams[code] = [string]
             else:
                 anagrams.get(code).append(string)
-
+        print(anagrams)
         return list(anagrams.values())
 </code></pre>
 

@@ -25,6 +25,10 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
+#     null    1  ----  2  ----  3  ----  4  ----  5
+#     prev   curr     after
+#            prev     curr    after
+# https://www.youtube.com/watch?v=D7y_hoT_YZI
 class Solution:
     def reverseList(self, head):
         """
@@ -37,6 +41,5 @@ class Solution:
           curr.next = prev
           prev = curr
           curr = after
-        head = prev
-        return head
+        return prev
 ```

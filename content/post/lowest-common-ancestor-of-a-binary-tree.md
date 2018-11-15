@@ -55,8 +55,10 @@ class Solution(object):
         :rtype: TreeNode
         """
         # Edge/Condition
+        # cannot reach p/q in the end
         if not root:
             return None
+        # reaches p or q; If p and q are on the same side, the one that is above the other returns
         if root == p or root == q:
             return root
 

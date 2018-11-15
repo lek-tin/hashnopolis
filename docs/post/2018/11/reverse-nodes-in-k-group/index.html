@@ -206,14 +206,15 @@ For <code>k = 3</code>, you should return: <code>3-&gt;2-&gt;1-&gt;4-&gt;5</code
 #         self.next = None
 
 #   k = 3,                       next
-#  dummy --&gt;[ 1 ----&gt; 2 -------&gt; 3 ]  -------&gt; 4 ------&gt; 5 --&gt; Null
+#  dummy --&gt;[1 ----&gt; 2 -------&gt; 3]  -------&gt; 4 ---------&gt; 5 --&gt; Null
 #   prev      tail    curr   nextNode         last
 #
-#  dummy --&gt;[ 2 ----&gt; 1 -------&gt; 3 ]  -------&gt; 4 ------&gt; 5 --&gt; Null
+#  dummy --&gt;[2 ----&gt; 1 -------&gt; 3]  -------&gt; 4 ---------&gt; 5 --&gt; Null
 #                              curr
 #
-#  dummy --&gt;[ 3 ----&gt; 2 -------&gt; 1 ]  -------&gt; 4 ------&gt; 5 --&gt; Null
+#  dummy --&gt;[3 ----&gt; 2 -------&gt; 1]  -------&gt; 4 ---------&gt; 5 --&gt; Null
 #                              tail        curr/last
+#                                          new prev
 
 class Solution(object):
     def reverseKGroup(self, head, k):
@@ -227,8 +228,10 @@ class Solution(object):
         dummy = ListNode(0)
         dummy.next = head
         prev = dummy
+        print(dummy.next.val)
         while prev is not None:
             prev = self.reverse(prev, k)
+        print(dummy.next.val)
         return dummy.next
 
     def reverse(self, prev, k):

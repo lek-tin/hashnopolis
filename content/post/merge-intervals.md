@@ -20,7 +20,7 @@ Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
 ```
 Input: [[1,4],[4,5]]
 Output: [[1,5]]
-Explanation: Intervals [1,4] and [4,5] are considerred overlapping.
+Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 ```
 **Solution:**
 ```python

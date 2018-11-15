@@ -357,6 +357,16 @@ class Solution: def summaryRanges(self, nums): &amp;quot;&amp;quot;&amp;quot; :t
     </item>
     
     <item>
+      <title>Search a 2D Matrix</title>
+      <link>http://www.hashnopolis.com/post/2018/10/search-a-2d-matrix/</link>
+      <pubDate>Tue, 30 Oct 2018 23:56:03 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/search-a-2d-matrix/</guid>
+      <description>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: - Integers in each row are sorted from left to right. - The first integer of each row is greater than the last integer of the previous row. Example 1:
+Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 Output: true  Example 2:</description>
+    </item>
+    
+    <item>
       <title>Find the Duplicate Number</title>
       <link>http://www.hashnopolis.com/post/2018/10/find-the-duplicate-number/</link>
       <pubDate>Sat, 27 Oct 2018 10:34:19 -0700</pubDate>
@@ -649,7 +659,7 @@ Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &am
 Example:
 Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
 A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr != None: after = curr.</description>
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None # null 1 ---- 2 ---- 3 ---- 4 ---- 5 # prev curr after # prev curr after # https://www.youtube.com/watch?v=D7y_hoT_YZI class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr !</description>
     </item>
     
     <item>
@@ -1323,7 +1333,7 @@ Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Outpu
       <description>Given a collection of intervals, merge all overlapping intervals.
 Example 1:
 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
-Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considerred overlapping.  Solution:
+Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution:
 # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: List[Interval] &amp;quot;&amp;quot;&amp;quot; intervals.</description>
     </item>
     

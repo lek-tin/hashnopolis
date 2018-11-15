@@ -16,7 +16,7 @@ Calling `next()` will return the next smallest number in the BST.
 
 **Solution:**
 ```python
-# Definition for a  binary tree node
+# Definition for a binary tree node
 # class TreeNode(object):
 #     def __init__(self, x):
 #         self.val = x

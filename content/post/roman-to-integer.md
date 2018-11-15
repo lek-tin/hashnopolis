@@ -85,26 +85,24 @@ class Solution:
         #     print(pairs[a+b])
         # combos = ["IV", "IX", "XL", "XC", "CD", "CM"]
         chars = list(s)
-        result = 0
-        def calculate(list):
-            if (len(list) == 0):
-                return
-            right = list.pop()
+        def calculate(chars, result):
+            if (len(chars) == 0):
+                return result
+            right = chars.pop()
             left = ""
-            if (len(list) > 0):
-                left = list.pop()
+            if (len(chars) > 0):
+                left = chars.pop()
             # print(left, right)
             if left+right in pairs:
                 # print(pairs[left+right])
                 result += pairs[left+right]
             else:
-                list.append(left)
+                chars.append(left)
                 # print(pairs[right])
                 result += pairs[right]
             # print(result)
-            calculate(list)
+            return calculate(chars, result)
         # for i, char in enumerate(chars):
         #     print(i, char)
-        calculate(chars)
-        return result
+        return calculate(chars, 0)
 ```

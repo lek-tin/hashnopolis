@@ -44,7 +44,8 @@ class Solution:
                 nums1[k] = nums2[j]
                 j -= 1
             k -= 1
-        # For example, if nums1 = [7, 8, 9], nums2=[1, 2], when nums1 a=has been iterated completely(i<0), j needs to keep iterating till it reach 0 index.
+        # nums1 holds the result
+        # For example, if nums1 = [7, 8, 9], nums2=[1, 2], when nums1 has been iterated completely(i<0), j needs to keep iterating till it reaches 0 index.
         while j >= 0:
             nums1[k] = nums2[j]
             k -= 1

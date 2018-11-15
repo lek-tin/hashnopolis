@@ -53,15 +53,19 @@ class DLL:
         self.head.next = self.tail
         self.tail.prev = self.head
 
-    # tail is always a placeholder
     def appendToTail(self, node):
+        # tail is always a placeholder
+        # head - 1 - 2 - 3 - 4 - 5 - 6 ------ tail
+        #                             ↖ node ↗
         node.prev = self.tail.prev
         self.tail.prev.next = node
         node.next = self.tail
         self.tail.prev = node
 
-    # head is  always a placeholder
     def removeAtHead(self):
+        # head is  always a placeholder
+        # head - 1 - 2 - 3 - 4 - 5 - 6 - tail
+        #      node
         node = self.head.next
         node.next.prev = self.head
         self.head.next = self.head.next.next
@@ -70,9 +74,11 @@ class DLL:
         return key
 
     def update(self, node):
-        node.prev.next = node.next      # take out from existing position
+        # take out from current position
+        node.prev.next = node.next
         node.next.prev = node.prev
-        self.appendToTail(node)               # put back at tail
+        # put back at tail
+        self.appendToTail(node)
 
 class LRUCache(object):
 
@@ -94,14 +100,13 @@ class LRUCache(object):
         self.queue.update(node)
         return node.value
 
-
     def put(self, key, value):
         """
         :type key: int
         :type value: int
         :rtype: nothing
         """
-        # Key exists, so we update value and move node to tail
+        # Key exists, so we update value and append node to tail
         if key in self.map:
             node = self.map[key]
             node.value = value
@@ -114,7 +119,7 @@ class LRUCache(object):
             self.queue.appendToTail(node)
 
         if self.capacity == 0:
-            # cache is full, remove oldest
+            # cache is full, remove the oldest
             removed_key = self.queue.removeAtHead()
             del self.map[removed_key]
         else:

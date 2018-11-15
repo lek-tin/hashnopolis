@@ -41,6 +41,7 @@ class Solution:
     # low starts from 0, high starts from listLen - 1, so i needs to iterate between 1~(listLen-2)
     for i in range(listLen - 2):
       # i > 0 to prevent reading nums[0 - 1] when i == 0
+      # skip duplicating starting points
       if i > 0 and nums[i] == nums[i-1]:
         continue
 
@@ -51,7 +52,7 @@ class Solution:
       while low < high:
         if nums[low] + nums[high] == third:
           res.append([nums[i], nums[low], nums[high]])
-          while low < high and nums[low] == nums [low + 1]:
+          while low < high and nums[low] == nums[low + 1]:
             low += 1
           while low < high and nums[high] == nums[high - 1]:
             high -= 1
@@ -61,7 +62,6 @@ class Solution:
           low += 1
         else:
           high -= 1
-      i += 1
 
     return res
 ```

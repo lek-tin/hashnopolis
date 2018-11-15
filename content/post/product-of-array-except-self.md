@@ -18,20 +18,21 @@ For example, given `[1,2,3,4]`, return `[24,12,8,6]`.
 Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)
 
 **Solution**
-```c++
-class Solution {
-public:
-  vector<int> productExceptSelf(vector<int>& nums) {
-    int vectSize = nums.size();
-    vector<int> result(vectSize, 1);
-    for (int i = 1; i < vectSize; ++i) {
-      result[i] = result[i - 1] * nums[i - 1];
-    };
-    for (int i = vectSize - 1, right=1; i>=0; --i) { // to exclude the last element in the vector
-      result[i] *= right;
-      right *= nums[i];
-    };
-    return result;
-  }
-};
+```python
+class Solution(object):
+    def productExceptSelf(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        products = [1]  # product of all to left of nums[0] is set to 1
+        for i in range(1, len(nums)):
+            products.append(nums[i-1] * products[-1])
+        print(products)
+        right_product = 1
+        for i in range(len(nums)-1, -1, -1):
+            products[i] *= right_product
+            right_product *= nums[i]
+
+        return products
 ```

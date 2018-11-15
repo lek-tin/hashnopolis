@@ -264,28 +264,26 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
         #     print(pairs[a+b])
         # combos = [&quot;IV&quot;, &quot;IX&quot;, &quot;XL&quot;, &quot;XC&quot;, &quot;CD&quot;, &quot;CM&quot;]
         chars = list(s)
-        result = 0
-        def calculate(list):
-            if (len(list) == 0):
-                return
-            right = list.pop()
+        def calculate(chars, result):
+            if (len(chars) == 0):
+                return result
+            right = chars.pop()
             left = &quot;&quot;
-            if (len(list) &gt; 0):
-                left = list.pop()
+            if (len(chars) &gt; 0):
+                left = chars.pop()
             # print(left, right)
             if left+right in pairs:
                 # print(pairs[left+right])
                 result += pairs[left+right]
             else:
-                list.append(left)
+                chars.append(left)
                 # print(pairs[right])
                 result += pairs[right]
             # print(result)
-            calculate(list)
+            return calculate(chars, result)
         # for i, char in enumerate(chars):
         #     print(i, char)
-        calculate(chars)
-        return result
+        return calculate(chars, 0)
 </code></pre>
 
   </div>
