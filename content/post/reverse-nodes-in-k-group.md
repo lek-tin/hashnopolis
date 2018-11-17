@@ -29,7 +29,7 @@ For `k = 3`, you should return: `3->2->1->4->5`
 
 #   k = 3,                       next
 #  dummy -->[1 ----> 2 -------> 3]  -------> 4 ---------> 5 --> Null
-#   prev      tail    curr   nextNode         last
+#   prev   tail    curr   nextNode         last
 #
 #  dummy -->[2 ----> 1 -------> 3]  -------> 4 ---------> 5 --> Null
 #                              curr

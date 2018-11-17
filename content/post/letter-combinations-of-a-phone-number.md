@@ -70,11 +70,14 @@ class Solution(object):
         :type digits: str
         :rtype: List[str]
         """
-        if not digits or '0' in digits or '1' in digits:
+        if not digits:
             return []
 
         results = [[]]
-        mapping = {'2' : ['a', 'b', 'c'],
+        mapping = {
+            '0' : [' '],
+            '1' : [' '],
+            '2' : ['a', 'b', 'c'],
             '3' : ['d', 'e', 'f'],
             '4' : ['g', 'h', 'i'],
             '5' : ['j', 'k', 'l'],
@@ -86,10 +89,11 @@ class Solution(object):
 
         for digit in digits:
             temp = []
-            # Merge every result because results is overridden
             for result in results:
-            for letter in mapping[digit]:
-                temp.append(result + [letter])
+                for letter in mapping[digit]:
+                    # print(result + [letter])
+                    temp.append(result + [letter])
+            print(temp)
             # Override results at the end of results and mapping[digit] iteration
             results = temp
 
