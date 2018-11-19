@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 18 Nov 2018 14:19:34 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 18 Nov 2018 14:39:12 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CPP Data Types</title>
+      <link>http://www.hashnopolis.com/post/2018/11/cpp-data-types/</link>
+      <pubDate>Sun, 18 Nov 2018 14:39:12 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/cpp-data-types/</guid>
+      <description>Type Typical Bit Width Typical Range     char 1byte -127 to 127 or 0 to 255   unsigned char 1byte 0 to 255   signed char 1byte -127 to 127   int 4bytes -2147483648 to 2147483647   unsigned int 4bytes 0 to 4294967295   signed int 4bytes -2147483648 to 2147483647   short int 2bytes -32768 to 32767   unsigned short int Range 0 to 65,535   signed short int Range -32768 to 32767   long int 4bytes -2,147,483,648 to 2,147,483,647   signed long int 4bytes same as long int   unsigned long int 4bytes 0 to 4,294,967,295   float 4bytes +/- 3.</description>
+    </item>
     
     <item>
       <title>Find the Celebrity</title>
@@ -30,7 +39,7 @@ Now you want to find out who the celebrity is or verify that there is not one. T
       <guid>http://www.hashnopolis.com/post/2018/11/binary-numbers/</guid>
       <description>For a 8-bit number, there are two ways to represent number:
 unsigned values 0 to 255
-signed values range from -128 to 127</description>
+signed values range from -128 (-2^8) to 127 (2^8 - 1)</description>
     </item>
     
     <item>

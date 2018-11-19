@@ -10,4 +10,4 @@ archive: false
 ---
 For a 8-bit number, there are two ways to represent number:  
 `unsigned` values `0` to `255`  
-`signed` values range from `-128` to `127`  
+`signed` values range from `-128 (-2^8)` to `127 (2^8 - 1)`  

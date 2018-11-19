@@ -26,3 +26,12 @@ archive: false
 | double             | 8bytes            | +/- 1.7e +/- 308 (~15 digits)   |
 | long double        | 8bytes            | +/- 1.7e +/- 308 (~15 digits)   |
 | wchar_t            | 2 or 4 bytes      | 1 wide character                |
+
+`printf` format for different data types:  
+`%d`: `int`  
+`%u`: `unsigned int`  
+`%ld`: `long int`  
+`%lu`: `unsigned long int`  
+`%lld`: `long long int`  
+`%llu`: `unsigned long long int`  
+
