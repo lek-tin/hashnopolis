@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 18 Nov 2018 14:39:12 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 23:44:01 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Super Useful Bash Commands</title>
+      <link>http://www.hashnopolis.com/post/2018/11/super-useful-bash-commands/</link>
+      <pubDate>Mon, 19 Nov 2018 23:44:01 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/super-useful-bash-commands/</guid>
+      <description> lscpu: show CPU architecture-related information   </description>
+    </item>
     
     <item>
       <title>CPP Data Types</title>
@@ -18,7 +27,8 @@
       <pubDate>Sun, 18 Nov 2018 14:39:12 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/cpp-data-types/</guid>
-      <description>Type Typical Bit Width Typical Range     char 1byte -127 to 127 or 0 to 255   unsigned char 1byte 0 to 255   signed char 1byte -127 to 127   int 4bytes -2147483648 to 2147483647   unsigned int 4bytes 0 to 4294967295   signed int 4bytes -2147483648 to 2147483647   short int 2bytes -32768 to 32767   unsigned short int Range 0 to 65,535   signed short int Range -32768 to 32767   long int 4bytes -2,147,483,648 to 2,147,483,647   signed long int 4bytes same as long int   unsigned long int 4bytes 0 to 4,294,967,295   float 4bytes +/- 3.</description>
+      <description>https://stackoverflow.com/questions/2550345/whats-the-difference-between-unsigned-long-long-int-in-c-c
+   Type Typical Bit Width Typical Range     char 1byte -127 to 127 or 0 to 255   unsigned char 1byte 0 to 255   signed char 1byte -127 to 127   int 4bytes -2147483648 to 2147483647   unsigned int 4bytes 0 to 4294967295   signed int 4bytes -2147483648 to 2147483647   short int 2bytes -32768 to 32767   unsigned short int Range 0 to 65,535   signed short int Range -32768 to 32767   long int 4bytes -2,147,483,648 to 2,147,483,647   signed long int 4bytes same as long int   unsigned long int 4bytes 0 to 4,294,967,295   float 4bytes +/- 3.</description>
     </item>
     
     <item>
@@ -39,7 +49,8 @@ Now you want to find out who the celebrity is or verify that there is not one. T
       <guid>http://www.hashnopolis.com/post/2018/11/binary-numbers/</guid>
       <description>For a 8-bit number, there are two ways to represent number:
 unsigned values 0 to 255
-signed values range from -128 (-2^8) to 127 (2^8 - 1)</description>
+signed values range from -128 (-2^8) to 127 (2^8 - 1)
+If a number is assigned with value that is too big for it to hold, overflowing would happen, 2^32 = 4,294,967,296 is the largest unsigned 32 bit value. He&amp;rsquo;s however using signed values, their maximum is 2^31-1 = 2,147,483,647, when you exceed that with for example 10,000,000,000, then it will go to the smallest possible value (-2^31) and count on from there.</description>
     </item>
     
     <item>

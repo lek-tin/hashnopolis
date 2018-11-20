@@ -8,6 +8,9 @@ date: 2018-11-18T14:39:12-08:00
 draft: false
 archive: false
 ---
+
+https://stackoverflow.com/questions/2550345/whats-the-difference-between-unsigned-long-long-int-in-c-c
+
 | Type               | Typical Bit Width | Typical Range                   |
 |--------------------|-------------------|---------------------------------|
 | char               | 1byte             | -127 to 127 or 0 to 255         |
