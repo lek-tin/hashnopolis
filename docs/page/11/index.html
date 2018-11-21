@@ -165,6 +165,37 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/contains-duplicate/">Contains Duplicate</a></h2>
+
+      <p>Given an array of integers, find if the array contains any duplicates.
+Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+Example 1:
+Input: [1,2,3,1] Output: true  Example 2:
+Input: [1,2,3,4] Output: false  Example 3:
+Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution:
+class Solution: def containsDuplicate(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: bool &#34;&#34;&#34; sortedNums = sorted(nums) for i in range(1, len(nums)): if sortedNums[i] == sortedNums[i-1]: return True return False  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/09/climbing-stairs/">Climbing Stairs</a></h2>
 
       <p>You are climbing a stair case. It takes n steps to reach to the top.
@@ -411,32 +442,6 @@ Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43;
         in
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/">Conditional Render in React</a></h2>
-
-      <p>In react, sometimes we need to render a component based on some flag, for example, we need to display a different set of information to the admin users than the normal users. We have a prop called isAdmin
-render () { const { isAdmin } = this.props return ( &lt;div&gt; { isAdmin ? &lt;CustomeComponent {...propSetA} / &gt; : &lt;CustomeComponent {...propSetB} / &gt; } &lt;/div&gt; ) }  Looks good right, but there is one problem.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/javascript" ><strong>"javascript"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
