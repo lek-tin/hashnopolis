@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 20 Nov 2018 12:12:47 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Nov 2018 21:40:20 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Useful Vim Commands</title>
+      <link>http://www.hashnopolis.com/post/2018/11/useful-vim-commands/</link>
+      <pubDate>Tue, 20 Nov 2018 21:40:20 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/useful-vim-commands/</guid>
+      <description> :LINE_NUMBER: go to a line dd: delete a whole line :%d: delete all lines x: delete a char i: insert :set paste then paste: paste without auto indentation 0 move to beginning of the current line $ move to end of line H move to the top of the current window (high) M move to the middle of the current window (middle) L move to the bottom line of the current window (low) 1G move to the first line of the file 20G move to the 20th line of the file G move to the last line of the file  </description>
+    </item>
     
     <item>
       <title>Install Java on Linux</title>
@@ -29,7 +38,10 @@ mv downloads-folder/jdk-&amp;lt;version&amp;gt;-linux-xxx.tar.gz /usr/java tar -
       <pubDate>Mon, 19 Nov 2018 23:44:01 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/super-useful-bash-commands/</guid>
-      <description> lscpu: show CPU architecture-related information   </description>
+      <description>List all services
+sudo service --status-all  Create a nested directory if it doesn&amp;rsquo;t exist already.
+mkdir -p /nested/directory  To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)
+ls -al  To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)</description>
     </item>
     
     <item>
