@@ -38,3 +38,9 @@ source ~/.bashrc  // Long version
 . ~/.bashrc       // Short version
 ```
 Alternatively, we can also open a new terminal window on which the changes we made will be applied.
+
+## Uninstallation
+### Java 11
+```
+sudo apt-get purge openjdk-\* icedtea-\* icedtea6-\*
+```
