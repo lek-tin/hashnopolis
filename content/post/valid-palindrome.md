@@ -48,9 +48,4 @@ class Solution:
                 head += 1
                 tail -= 1
         return True
-
-    def isLetter(self, char):
-        if (ord(char) >= 65 and ord(char) <= 90) or (ord(char) >= 97 and ord(char) <= 122):
-            return True
-        return False
 ```

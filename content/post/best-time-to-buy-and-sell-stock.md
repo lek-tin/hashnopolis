@@ -35,18 +35,14 @@ class Solution:
         :type prices: List[int]
         :rtype: int
         """
-        listLength = len(prices)
-        profit, minPrice, maxPrice = 0, 0, 0
-        def makeProfit(pirceList, profit, minPrice, maxPrice):
-            for i in range(listLength):
-                if i == 0:
+        profit, minPrice = 0, 0
+        for i in range(len(prices)):
+            if i == 0:
+                minPrice = prices[i]
+            else:
+                if (prices[i] < minPrice):
                     minPrice = prices[i]
-                else:
-                    if (prices[i] < minPrice):
-                        minPrice = prices[i]
-                    if (prices[i] - minPrice > profit):
-                        profit = prices[i] - minPrice
-            return profit
-
-        return makeProfit(prices, profit, minPrice, maxPrice)
+                if (prices[i] - minPrice > profit):
+                    profit = prices[i] - minPrice
+        return profit
 ```

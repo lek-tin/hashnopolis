@@ -20,3 +20,43 @@ Input:
 ]
 Output: 1->1->2->3->4->4->5->6
 ```
+**Solution:**
+```python
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+# time: o(nlogK), where k is the number of linked lists
+# space: o(n)
+class Solution(object):
+    def mergeKLists(self, lists):
+        """
+        :type lists: List[ListNode]
+        :rtype: ListNode
+        """
+        if list is None or len(lists) == 0:
+            return []
+        return self.sort(lists, 0, len(lists)-1)
+
+    def sort(self, lists, low, high):
+        if low >= high:
+            return lists[low]
+
+        mid = (high - low) // 2 + low
+        l1 = self.sort(lists, low, mid)
+        l2 = self.sort(lists, mid+1, high)
+        return self.merge(l1, l2)
+
+    def merge(self, l1, l2):
+        if l1 is None:
+            return l2
+        if l2 is None:
+            return l1
+        if l1.val < l2.val:
+            l1.next = self.merge(l1.next, l2)
+            return l1
+        else:
+            l2.next = self.merge(l1, l2.next)
+            return l2
+```

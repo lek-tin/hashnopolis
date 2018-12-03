@@ -171,73 +171,14 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/">Remove Duplicates From Sorted Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/add-binary/">Add Binary</a></h2>
 
-      <p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+      <p>Given two binary strings, return their sum (also a binary string).
+The input strings are both non-empty and contains only characters 1 or 0.
 Example 1:
-Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/">4. Median of Two Sorted Arrays</a></h2>
-
-      <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m&#43;n)).
-You may assume nums1 and nums2 cannot be both empty.
-Example 1:
-nums1 = [1, 3] nums2 = [2]  The median is 2.0
-Example 2:
-nums1 = [1, 2] nums2 = [3, 4]  The median is (2 &#43; 3)/2 = 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></h2>
-
-      <p>Given a linked list, remove the n-th node from the end of list and return its head.
-Example:
-Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.  Note:
-Given n will always be valid.
-Follow up:
-Could you do this in one pass?</p>
+Input: a = &#34;11&#34;, b = &#34;1&#34; Output: &#34;100&#34;  Example 2:
+Input: a = &#34;1010&#34;, b = &#34;1011&#34; Output: &#34;10101&#34;  Solution:
+class Solution: def addBinary(self, a, b): &#34;&#34;&#34; :type a: str :type b: str :rtype: str &#34;&#34;&#34; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &gt;= 0 or j &gt;= 0: total = carry if i &gt;= 0: total &#43;= int(a[i]) i -= 1 if j &gt;= 0: total &#43;= int(b[j]) j -= 1 result.</p>
 
       <p class="meta">
         
@@ -260,14 +201,242 @@ Could you do this in one pass?</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/">Search in Rotated Sorted Array II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/">17. Letter Combinations of a Phone Number</a></h2>
 
-      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
-(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
-You are given a target value to search. If found in the array return true, otherwise return false.
+      <p>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
+A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+Example:
+Input: &#34;23&#34; Output: [&#34;ad&#34;, &#34;ae&#34;, &#34;af&#34;, &#34;bd&#34;, &#34;be&#34;, &#34;bf&#34;, &#34;cd&#34;, &#34;ce&#34;, &#34;cf&#34;].  Note:
+Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/18.-4sum/">18. 4Sum</a></h2>
+
+      <p>Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a &#43; b &#43; c &#43; d = target? Find all unique quadruplets in the array which gives the sum of target.
+Note:
+The solution set must not contain duplicate quadruplets.
+Example:
+Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ]  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/two-sum/">Two Sum</a></h2>
+
+      <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example:
+Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution:
+# time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/16.-3sum-closest/">16. 3sum Closest</a></h2>
+
+      <p>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
+Example:
+Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to the target is 2. (-1 &#43; 2 &#43; 1 = 2).</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/15.-3sum/">15. 3sum</a></h2>
+
+      <p>Given an array nums of n integers, are there elements a, b, c in nums such that a &#43; b &#43; c = 0? Find all unique triplets in the array which gives the sum of zero.
+Note:
+The solution set must not contain duplicate triplets.
+Example:
+Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/57.-insert-interval/">57. Insert Interval</a></h2>
+
+      <p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
+You may assume that the intervals were initially sorted according to their start times.
 Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
+Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2:
+Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution:
+# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/">56. Merge Intervals</a></h2>
+
+      <p>Given a collection of intervals, merge all overlapping intervals.
+Example 1:
+Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
+Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution:
+# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: List[Interval] &#34;&#34;&#34; intervals.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/">80. Remove Duplicates From Sorted Array II</a></h2>
+
+      <p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+Example 1:
+Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/">Remove Duplicates From Sorted Array</a></h2>
+
+      <p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+Example 1:
+Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</p>
 
       <p class="meta">
         
@@ -295,6 +464,8 @@ Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a 
         
           <a class="pagination-previous" href="/tags/python/page/10/">← Newer Posts</a>
         
+        
+          <a class="pagination-next" href="/tags/python/page/12/">Older Posts →</a>
         
         </nav>
       </footer>

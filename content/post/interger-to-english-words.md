@@ -51,8 +51,9 @@ class Solution:
         words = ""
 
         while num > 0:
-            if num % 1000 != 0:
-                words = self.helper(num % 1000) + self.thousands[i] + " " + words
+            n = num % 1000
+            if n != 0:
+                words = self.helper(n) + self.thousands[i] + " " + words
             num //= 1000
             i += 1
 
@@ -64,7 +65,7 @@ class Solution:
         elif num < 20:
             return self.lessThan20[int(num)] + " "
         elif num < 100:
-            # Any number under 100 can be decomposed to tens + single digits
+            # Any number under 100 can be decomposed to tens + a single digit
             return self.tens[num // 10] + " " + self.helper(num % 10)
         else:
             return self.lessThan20[num // 100] + " Hundred " + self.helper(num % 100)

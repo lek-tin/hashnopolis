@@ -35,7 +35,7 @@ class Solution:
         :rtype: List[str]
         """
         self.res = []
-        if not digits or '0' in digits or '1' in digits:
+        if not digits or digits == "0" or digits == "1":
             return self.res
 
         self.mapping = {
@@ -48,9 +48,7 @@ class Solution:
             '8' : ['t', 'u', 'v'],
             '9' : ['w', 'x', 'y' , 'z']
         }
-
         self.dfs(digits, 0, [])
-
         return self.res
 
     def dfs(self, digits, index, temp):
@@ -65,37 +63,40 @@ class Solution:
 iterative approach:
 ```python
 # Time - O(n * 4^n)
-# Space - O(n * 4^n), max 4 possible chars per
-# digit so O(4^n) strings each of length n
+# Space - O(n * 4^n), max 4 possible chars per digit so O(4^n) strings each of length n
 class Solution(object):
-  def letterCombinations(self, digits):
-    """
-    :type digits: str
-    :rtype: List[str]
-    """
-    if not digits or '0' in digits or '1' in digits:
-        return []
+    def letterCombinations(self, digits):
+        """
+        :type digits: str
+        :rtype: List[str]
+        """
+        if not digits:
+            return []
 
-    results = [[]]
-    mapping = {'2' : ['a', 'b', 'c'],
-      '3' : ['d', 'e', 'f'],
-      '4' : ['g', 'h', 'i'],
-      '5' : ['j', 'k', 'l'],
-      '6' : ['m', 'n', 'o'],
-      '7' : ['p', 'q', 'r', 's'],
-      '8' : ['t', 'u', 'v'],
-      '9' : ['w', 'x', 'y' , 'z']
-    }
+        results = [[]]
+        mapping = {
+            '0' : [' '],
+            '1' : [' '],
+            '2' : ['a', 'b', 'c'],
+            '3' : ['d', 'e', 'f'],
+            '4' : ['g', 'h', 'i'],
+            '5' : ['j', 'k', 'l'],
+            '6' : ['m', 'n', 'o'],
+            '7' : ['p', 'q', 'r', 's'],
+            '8' : ['t', 'u', 'v'],
+            '9' : ['w', 'x', 'y' , 'z']
+        }
 
-    for digit in digits:
-      temp = []
-      # Merge every result because results is overridden
-      for result in results:
-        for letter in mapping[digit]:
-          temp.append(result + [letter])
-      # Override results at the end of results and mapping[digit] iteration
-      results = temp
+        for digit in digits:
+            temp = []
+            for result in results:
+                for letter in mapping[digit]:
+                    # print(result + [letter])
+                    temp.append(result + [letter])
+            print(temp)
+            # Override results at the end of results and mapping[digit] iteration
+            results = temp
 
-    # convert lists of chars to strings
-    return ["".join(result) for result in results]
+        # convert lists of chars to strings
+        return ["".join(result) for result in results]
 ```

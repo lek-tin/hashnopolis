@@ -195,21 +195,22 @@ Could you solve it with constant space complexity? (Note: The output array does 
 
 <p><strong>Solution</strong></p>
 
-<pre><code class="language-c++">class Solution {
-public:
-  vector&lt;int&gt; productExceptSelf(vector&lt;int&gt;&amp; nums) {
-    int vectSize = nums.size();
-    vector&lt;int&gt; result(vectSize, 1);
-    for (int i = 1; i &lt; vectSize; ++i) {
-      result[i] = result[i - 1] * nums[i - 1];
-    };
-    for (int i = vectSize - 1, right=1; i&gt;=0; --i) { // to exclude the last element in the vector
-      result[i] *= right;
-      right *= nums[i];
-    };
-    return result;
-  }
-};
+<pre><code class="language-python">class Solution(object):
+    def productExceptSelf(self, nums):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: List[int]
+        &quot;&quot;&quot;
+        products = [1]  # product of all to left of nums[0] is set to 1
+        for i in range(1, len(nums)):
+            products.append(nums[i-1] * products[-1])
+        print(products)
+        right_product = 1
+        for i in range(len(nums)-1, -1, -1):
+            products[i] *= right_product
+            right_product *= nums[i]
+
+        return products
 </code></pre>
 
   </div>

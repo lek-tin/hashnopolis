@@ -7,10 +7,100 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 11 Nov 2018 17:11:19 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 23:52:19 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Read N Characters Given Read4</title>
+      <link>http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/</link>
+      <pubDate>Mon, 19 Nov 2018 23:52:19 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/</guid>
+      <description>The API: int read4(char *buf) reads 4 characters at a time from a file.
+The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
+By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
+Example 1:
+Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Find the Celebrity</title>
+      <link>http://www.hashnopolis.com/post/2018/11/find-the-celebrity/</link>
+      <pubDate>Sun, 18 Nov 2018 14:19:34 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/find-the-celebrity/</guid>
+      <description>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
+Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: &amp;ldquo;Hi, A.</description>
+    </item>
+    
+    <item>
+      <title>Longest Consecutive Sequence</title>
+      <link>http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/</link>
+      <pubDate>Wed, 14 Nov 2018 12:01:01 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/</guid>
+      <description>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+Your algorithm should run in O(n) complexity.
+Example:
+Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution:
+# Time: o(n) class Solution(object): def longestConsecutive(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</description>
+    </item>
+    
+    <item>
+      <title>Arrays in Python</title>
+      <link>http://www.hashnopolis.com/post/2018/11/arrays-in-python/</link>
+      <pubDate>Tue, 13 Nov 2018 22:05:44 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/arrays-in-python/</guid>
+      <description>Reverse an array: reversedArray = arr[::-1]</description>
+    </item>
+    
+    <item>
+      <title>Flatten Nested List Iterator</title>
+      <link>http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/</link>
+      <pubDate>Tue, 13 Nov 2018 20:03:07 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/</guid>
+      <description>Given a nested list of integers, implement an iterator to flatten it.
+Each element is either an integer, or a list &amp;ndash; whose elements may also be integers or other lists.
+Example 1:
+Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2:
+Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Nodes in K Group</title>
+      <link>http://www.hashnopolis.com/post/2018/11/reverse-nodes-in-k-group/</link>
+      <pubDate>Tue, 13 Nov 2018 18:04:36 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/reverse-nodes-in-k-group/</guid>
+      <description>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
+Example: Given this linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
+For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5</description>
+    </item>
+    
+    <item>
+      <title>Serialize and Deserialize Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/</link>
+      <pubDate>Tue, 13 Nov 2018 17:31:13 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/</guid>
+      <description>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</description>
+    </item>
+    
+    <item>
+      <title>Encode and Decode Tinyurl</title>
+      <link>http://www.hashnopolis.com/post/2018/11/encode-and-decode-tinyurl/</link>
+      <pubDate>Sun, 11 Nov 2018 18:48:12 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/encode-and-decode-tinyurl/</guid>
+      <description>Note: This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
+Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</description>
+    </item>
     
     <item>
       <title>Meeting Rooms II</title>
@@ -296,6 +386,16 @@ Example 1:
 Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.  Example 2:
 Input: [0,2,3,4,6,8,9] Output: [&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.  Solution:
 class Solution: def summaryRanges(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i+1] == nums[i] + 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1].</description>
+    </item>
+    
+    <item>
+      <title>Search a 2D Matrix</title>
+      <link>http://www.hashnopolis.com/post/2018/10/search-a-2d-matrix/</link>
+      <pubDate>Tue, 30 Oct 2018 23:56:03 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/search-a-2d-matrix/</guid>
+      <description>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: - Integers in each row are sorted from left to right. - The first integer of each row is greater than the last integer of the previous row. Example 1:
+Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 Output: true  Example 2:</description>
     </item>
     
     <item>
@@ -591,7 +691,7 @@ Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &am
 Example:
 Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
 A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr != None: after = curr.</description>
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None # null 1 ---- 2 ---- 3 ---- 4 ---- 5 # prev curr after # prev curr after # https://www.youtube.com/watch?v=D7y_hoT_YZI class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr !</description>
     </item>
     
     <item>
@@ -1243,7 +1343,7 @@ Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Outpu
       <description>Given a collection of intervals, merge all overlapping intervals.
 Example 1:
 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
-Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considerred overlapping.  Solution:
+Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution:
 # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: List[Interval] &amp;quot;&amp;quot;&amp;quot; intervals.</description>
     </item>
     

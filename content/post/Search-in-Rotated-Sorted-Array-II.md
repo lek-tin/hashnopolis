@@ -40,7 +40,7 @@ class Solution(object):
         # Space: O(1)
         if nums == None or len(nums) == 0:
             return False
-        
+
         start, end = 0, len(nums) - 1
         while (start + 1) < end:
             mid = start + (end - start) // 2
@@ -59,7 +59,7 @@ class Solution(object):
                 else:
                     if nums[mid] <= target and target <= nums[end]:
                         start = mid
-                    else: 
+                    else:
                         end = mid
         if nums[start] == target or nums[end] == target:
             return True

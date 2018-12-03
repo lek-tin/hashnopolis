@@ -45,12 +45,12 @@ class Solution(object):
         starts.sort()
         ends.sort()
 
-        result = 0
+        total = 0
         end = 0
         for i in range(length):
             if starts[i] < ends[end]:
-                result += 1
+                total += 1
             else:
                 end += 1
-        return result
+        return total
 ```
