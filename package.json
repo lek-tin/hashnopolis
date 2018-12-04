@@ -10,8 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "hugo server --disableFastRender",
     "report": "hugo list drafts",
-    "deploy": "hugo && git add . && git commit -m \"dev: publish\"&& git push origin",
-    "xxx": "DEPLOY_DATE=\"$(date)\"; echo $DEPLOY_DATE"
+    "deploy": "hugo && git add . && git commit -m \"dev: publish\"&& git push origin"
   },
   "repository": {
     "type": "git",
