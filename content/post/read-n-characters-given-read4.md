@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python", "api"]
 categories: ["algorithm"]
 date: 2018-11-19T23:52:19-08:00
-draft: false
+draft: true
 archive: false
 ---
 The API: `int read4(char *buf)` reads 4 characters at a time from a file.
