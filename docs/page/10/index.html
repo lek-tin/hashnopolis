@@ -315,8 +315,7 @@ Solution
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/">Employees Earning More Than Their Managers</a></h2>
 
-      <p>The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
-&#43;----&#43;-------&#43;--------&#43;-----------&#43; | Id | Name | Salary | ManagerId | &#43;----&#43;-------&#43;--------&#43;-----------&#43; | 1 | Joe | 70000 | 3 | | 2 | Henry | 80000 | 4 | | 3 | Sam | 60000 | NULL | | 4 | Max | 90000 | NULL | &#43;----&#43;-------&#43;--------&#43;-----------&#43;  Given the Employee table, write a SQL query that finds out employees who earn more than their managers.</p>
+      <p># SQL Schema: Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int) Truncate table Employee insert into Employee (Id, Name, Salary, ManagerId) values (&#39;1&#39;, &#39;Joe&#39;, &#39;70000&#39;, &#39;3&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;2&#39;, &#39;Henry&#39;, &#39;80000&#39;, &#39;4&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;3&#39;, &#39;Sam&#39;, &#39;60000&#39;, &#39;None&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;4&#39;, &#39;Max&#39;, &#39;90000&#39;, &#39;None&#39;)  The Employee table holds all employees including their managers.</p>
 
       <p class="meta">
         
@@ -328,7 +327,7 @@ Solution
         
           <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
