@@ -2,7 +2,7 @@
 title: "Course Schedule"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "dfs", "graph"]
 categories: ["algorithm"]
 date: 2018-12-09T23:29:18+08:00
 draft: true
@@ -16,18 +16,15 @@ Given the total number of courses and a list of prerequisite pairs, is it possib
 
 **Example 1:**
 ```
-Input: 2, [[1,0]] 
+Input: 2, [[1,0]]
 Output: true
-Explanation: There are a total of 2 courses to take. 
-             To take course 1 you should have finished course 0. So it is possible.
+Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
 ```
 **Example 2:**
 ```
 Input: 2, [[1,0],[0,1]]
 Output: false
-Explanation: There are a total of 2 courses to take. 
-             To take course 1 you should have finished course 0, and to take course 0 you should
-             also have finished course 1. So it is impossible.
+Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
 ```
 **Note:**
 1. The input prerequisites is a graph represented by **a list of edges**, not adjacency matrices. Read more about how a graph is represented.
