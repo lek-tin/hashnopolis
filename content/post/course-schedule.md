@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "dfs", "graph", "topological-sort"]
 categories: ["algorithm"]
 date: 2018-12-09T23:29:18+08:00
-draft: true
+draft: false
 archive: false
 ---
 There are a total of n courses you have to take, labeled from `0` to `n-1`.
@@ -31,39 +31,78 @@ Explanation: There are a total of 2 courses to take. To take course 1 you should
 2. You may assume that there are no duplicate edges in the input prerequisites.
 **Solution:**
 ```python
-# time: O(V + E)
+# time: O(Vertices + Edges)
 # space: O(n)
 class Solution:
+    # @param {integer} numCourses
+    # @param {integer[][]} prerequisites
+    # @return {boolean}
     def canFinish(self, numCourses, prerequisites):
-        """
-        :type numCourses: int
-        :type prerequisites: List[List[int]]
-        :rtype: bool
-        """
-        self.graph = [[]] * numCourses
+        degrees = [0] * numCourses
+        children = [[] for x in range(numCourses)]
+        for pair in prerequisites:
+            after = pair[0]
+            before = pair[1]
+            # count how many time each course is regarded as a dependency
+            degrees[after] += 1
+            # append new child to the children list based on dependency as a key
+            children[before].append(after)
+        print(children)
+        courses = set(range(numCourses))
 
-        for p in prerequisites:
-            before = p[1]
-            after = p[0]
-            self.graph[before].append(after)
+        canTake = True
+        while canTake and len(courses):
+            canTake = False
+            stack = []
+            for course in courses:
+                # course is a dependency itself
+                if degrees[course] == 0:
+                    # check all dependencies of "course"
+                    # This is different from the traditional DFS algo, because here we are finding all
+                    for child in children[course]:
+                        # decrease the count for dependecies for child by 1
+                        degrees[child] -= 1
+                    stack.append(course)
+                    canTake = True
+                # if none of the courses is a dependency, the if branch above is never executed. Therefore, canTake will remain False.
+            for course in stack:
+                courses.remove(course)
+        # if courses is an empty list, it means the student can take all of the courses.
+        return len(courses) == 0
+```
+```cpp
+class Solution {
+public:
+    bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {
+        graph = vector<vector<int>>(numCourses);
 
-        v = [0] * numCourses
+        for (const auto& p: prerequisites)
+            graph[p.second].push_back(p.first);
 
-        for i in range(numCourses):
-            if(self.dfs(i, v)): return False
+        vector<int> v(numCourses, 0);
 
-        return True
+        for (int i = 0; i < numCourses; ++i)
+            if(dfs(i, v)) return false;
 
-    def dfs(self, cur, v):
-        if(v[cur] == 1): return True
-        if(v[cur] == 2): return False
+        return true;
 
-        v[cur] = 1
+    }
 
-        for t in self.graph[cur]:
-            if(self.dfs(t, v)): return True
+private:
+    vector<vector<int>> graph;
+    bool dfs(int cur, vector<int>& v) {
+        if(v[cur] == 1) return true;
+        if(v[cur] == 2) return false;
 
-        v[cur] = 2
+        v[cur] = 1;
 
-        return False
+        for (const int t: graph[cur])
+            if(dfs(t, v)) return true;
+
+        v[cur] = 2;
+
+        return false;
+    }
+
+};
 ```
