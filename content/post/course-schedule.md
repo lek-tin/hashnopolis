@@ -2,7 +2,7 @@
 title: "Course Schedule"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dfs", "graph"]
+tags: ["leetcode", "dfs", "graph", "topological-sort"]
 categories: ["algorithm"]
 date: 2018-12-09T23:29:18+08:00
 draft: true
@@ -29,3 +29,41 @@ Explanation: There are a total of 2 courses to take. To take course 1 you should
 **Note:**
 1. The input prerequisites is a graph represented by **a list of edges**, not adjacency matrices. Read more about how a graph is represented.
 2. You may assume that there are no duplicate edges in the input prerequisites.
+**Solution:**
+```python
+# time: O(V + E)
+# space: O(n)
+class Solution:
+    def canFinish(self, numCourses, prerequisites):
+        """
+        :type numCourses: int
+        :type prerequisites: List[List[int]]
+        :rtype: bool
+        """
+        self.graph = [[]] * numCourses
+
+        for p in prerequisites:
+            before = p[1]
+            after = p[0]
+            self.graph[before].append(after)
+
+        v = [0] * numCourses
+
+        for i in range(numCourses):
+            if(self.dfs(i, v)): return False
+
+        return True
+
+    def dfs(self, cur, v):
+        if(v[cur] == 1): return True
+        if(v[cur] == 2): return False
+
+        v[cur] = 1
+
+        for t in self.graph[cur]:
+            if(self.dfs(t, v)): return True
+
+        v[cur] = 2
+
+        return False
+```
