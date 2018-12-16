@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python", "api"]
 categories: ["algorithm"]
 date: 2018-11-19T23:52:19-08:00
-draft: true
+draft: false
 archive: false
 ---
 The API: `int read4(char *buf)` reads 4 characters at a time from a file.
@@ -36,7 +36,6 @@ The read function will only be called once for each test case.
 # Read up to 4 chars into buf4 and copy to buf (which is modified in-place).
 # Time - O(n)
 # Space - O(n)
-
 class Solution(object):
     def read(self, buf, n):
         """
@@ -44,14 +43,15 @@ class Solution(object):
         :type n: Maximum number of characters to read (int)
         :rtype: The numbaer of characters read (int)
         """
-        total_chars, last_chars = 0, 4
+        total, count = 0, 4
 
-        while last_chars == 4 and total_chars < n:
+        while count == 4 and total < n:
 
             buf4 = [""] * 4 # temporary buffer
-            last_chars = min(read4(buf4), n - total_chars)
-            buf[total_chars:total_chars+last_chars] = buf4
-            total_chars += last_chars
+            # If count is not 4, while will break from next iteration
+            count = min(read4(buf4), n - total)
+            buf[total:total+count] = buf4
+            total += count
 
-        return total_chars
+        return total
 ```
