@@ -7,10 +7,61 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 18 Nov 2018 14:19:34 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Dec 2018 09:42:45 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Find All Anagrams in a String</title>
+      <link>http://www.hashnopolis.com/post/2018/12/find-all-anagrams-in-a-string/</link>
+      <pubDate>Sat, 15 Dec 2018 09:42:45 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/find-all-anagrams-in-a-string/</guid>
+      <description>Given a string s and a non-empty string p, find all the start indices of p&amp;rsquo;s anagrams in s.
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+The order of output does not matter.
+Example 1:
+Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Output: [0, 6] Explanation: The substring with start index = 0 is &amp;quot;cba&amp;quot;, which is an anagram of &amp;quot;abc&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Course Schedule</title>
+      <link>http://www.hashnopolis.com/post/2018/12/course-schedule/</link>
+      <pubDate>Sun, 09 Dec 2018 23:29:18 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/course-schedule/</guid>
+      <description>There are a total of n courses you have to take, labeled from 0 to n-1.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+Example 1:
+Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 courses to take.</description>
+    </item>
+    
+    <item>
+      <title>Alien Dictionary</title>
+      <link>http://www.hashnopolis.com/post/2018/12/alien-dictionary/</link>
+      <pubDate>Sat, 08 Dec 2018 23:57:13 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/alien-dictionary/</guid>
+      <description>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
+Example 1:
+Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot;  Example 2:
+Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot;  Example 3:</description>
+    </item>
+    
+    <item>
+      <title>Read N Characters Given Read4</title>
+      <link>http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/</link>
+      <pubDate>Mon, 19 Nov 2018 23:52:19 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/</guid>
+      <description>The API: int read4(char *buf) reads 4 characters at a time from a file.
+The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
+By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
+Example 1:
+Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;.</description>
+    </item>
     
     <item>
       <title>Find the Celebrity</title>
@@ -609,6 +660,18 @@ Solution:
 The word can be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
 Example:
 board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;], [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;] ] Given word = &amp;quot;ABCCED&amp;quot;, return true. Given word = &amp;quot;SEE&amp;quot;, return true. Given word = &amp;quot;ABCB&amp;quot;, return false.</description>
+    </item>
+    
+    <item>
+      <title>Intersection of Two Linked Lists</title>
+      <link>http://www.hashnopolis.com/post/2018/10/intersection-of-two-linked-lists/</link>
+      <pubDate>Sun, 14 Oct 2018 23:56:47 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/intersection-of-two-linked-lists/</guid>
+      <description>Write a program to find the node at which the intersection of two singly linked lists begins.
+For example, the following two linked lists:
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
+Notes: If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</description>
     </item>
     
     <item>
