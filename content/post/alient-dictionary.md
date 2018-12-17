@@ -3,8 +3,8 @@ title: "Alien Dictionary"
 description: "Some description ..."
 authors: ["lek-tin"]
 
-tags: ["leetcode"]
-categories: ["database"]
+tags: ["leetcode", "java", "topological-sort"]
+categories: ["algorithm"]
 date: 2018-12-08T23:57:13+08:00
 draft: false
 archive: false
