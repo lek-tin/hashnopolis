@@ -119,7 +119,7 @@
         <section id="sideber" class="sidebar">
           <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
-  <h1  class="menu-logo__text"># Hashnopolis</h1>
+  <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
     <g>
       <path d="M10.001 16l-.143-.01c-.547-.078-.926-.585-.849-1.132l2-14c.078-.546.588-.926 1.132-.848.547.078.927.584.849 1.131l-2 14c-.071.5-.499.859-.989.859zM4.001 16l-.143-.01c-.546-.078-.926-.585-.848-1.132l2-14c.078-.547.58-.927 1.132-.848.546.078.926.585.848 1.132l-2 14c-.072.499-.499.858-.989.858zM15 6h-13c-.552 0-1-.448-1-1s.448-1 1-1h13c.553 0 1 .448 1 1s-.447 1-1 1zM14 12h-13c-.552 0-1-.447-1-1s.448-1 1-1h13c.553 0 1 .447 1 1s-.447 1-1 1z"/>
@@ -167,6 +167,235 @@
   <div>
     
     
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/combine-two-tables/">Combine Two Tables</a></h2>
+
+      <p>Table: Person
+&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | PersonId | int | | FirstName | varchar | | LastName | varchar | &#43;-------------&#43;---------&#43; PersonId is the primary key column for this table.  Table: Address
+&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | &#43;-------------&#43;---------&#43; AddressId is the primary key column for this table.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/contains-duplicate/">Contains Duplicate</a></h2>
+
+      <p>Given an array of integers, find if the array contains any duplicates.
+Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+Example 1:
+Input: [1,2,3,1] Output: true  Example 2:
+Input: [1,2,3,4] Output: false  Example 3:
+Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution:
+class Solution: def containsDuplicate(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: bool &#34;&#34;&#34; sortedNums = sorted(nums) for i in range(1, len(nums)): if sortedNums[i] == sortedNums[i-1]: return True return False  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/climbing-stairs/">Climbing Stairs</a></h2>
+
+      <p>You are climbing a stair case. It takes n steps to reach to the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+Note: Given n will be a positive integer.
+Example 1:
+Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-search-tree-iterator/">Binary Search Tree Iterator</a></h2>
+
+      <p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
+Calling next() will return the next smallest number in the BST.
+Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
+Solution:
+# Definition for a binary tree node # class TreeNode(object): # def __init__(self, x): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/">Two Sum II Input Array Is Sorted</a></h2>
+
+      <p>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
+Note: - Your returned answers (both index1 and index2) are not zero-based. - You may assume that each input would have exactly one solution and you may not use the same element twice.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/">Best Time to Buy and Sell Stock Ii</a></h2>
+
+      <p>Say you have an array for which the ith element is the price of a given stock on day i.
+Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
+Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock/">Best Time to Buy and Sell Stock</a></h2>
+
+      <p>Say you have an array for which the ith element is the price of a given stock on day i.
+If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+Note that you cannot sell a stock before you buy one.
+Example 1:
+Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/add-binary/">Add Binary</a></h2>
+
+      <p>Given two binary strings, return their sum (also a binary string).
+The input strings are both non-empty and contains only characters 1 or 0.
+Example 1:
+Input: a = &#34;11&#34;, b = &#34;1&#34; Output: &#34;100&#34;  Example 2:
+Input: a = &#34;1010&#34;, b = &#34;1011&#34; Output: &#34;10101&#34;  Solution:
+class Solution: def addBinary(self, a, b): &#34;&#34;&#34; :type a: str :type b: str :rtype: str &#34;&#34;&#34; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &gt;= 0 or j &gt;= 0: total = carry if i &gt;= 0: total &#43;= int(a[i]) i -= 1 if j &gt;= 0: total &#43;= int(b[j]) j -= 1 result.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
       
         
 <article class="post">
@@ -226,237 +455,6 @@ Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-
 
 </article>
       
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/two-sum/">Two Sum</a></h2>
-
-      <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example:
-Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution:
-# time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/16.-3sum-closest/">16. 3sum Closest</a></h2>
-
-      <p>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
-Example:
-Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to the target is 2. (-1 &#43; 2 &#43; 1 = 2).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/15.-3sum/">15. 3sum</a></h2>
-
-      <p>Given an array nums of n integers, are there elements a, b, c in nums such that a &#43; b &#43; c = 0? Find all unique triplets in the array which gives the sum of zero.
-Note:
-The solution set must not contain duplicate triplets.
-Example:
-Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/57.-insert-interval/">57. Insert Interval</a></h2>
-
-      <p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
-You may assume that the intervals were initially sorted according to their start times.
-Example 1:
-Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2:
-Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/">56. Merge Intervals</a></h2>
-
-      <p>Given a collection of intervals, merge all overlapping intervals.
-Example 1:
-Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
-Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: List[Interval] &#34;&#34;&#34; intervals.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/">80. Remove Duplicates From Sorted Array II</a></h2>
-
-      <p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/">Remove Duplicates From Sorted Array</a></h2>
-
-      <p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/">4. Median of Two Sorted Arrays</a></h2>
-
-      <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m&#43;n)).
-You may assume nums1 and nums2 cannot be both empty.
-Example 1:
-nums1 = [1, 3] nums2 = [2]  The median is 2.0
-Example 2:
-nums1 = [1, 2] nums2 = [3, 4]  The median is (2 &#43; 3)/2 = 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
     
     
       <footer class="list-footer">
@@ -494,6 +492,8 @@ nums1 = [1, 2] nums2 = [3, 4]  The median is (2 &#43; 3)/2 = 2.</p>
 <script src="/js/vendor/highlight.min.js"></script>
 <script src="/js/vendor/fastclick.min.js"></script>
 <script src="/js/main.js"></script>
+
+
 <script id="dsq-count-scr" src="//hashnopolis.disqus.com/count.js" async></script>
 
 </body>

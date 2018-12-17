@@ -44,9 +44,8 @@ class Solution:
         """
         if not nums or nums == [0] or nums == [0, 0]:
             return
-        # Use left to store the latest zero occurred
-        left = 0
-        curr = 0
+        left = 0 # Use left to store the latest zero occurred
+        curr = 0 # pointer
         # Move from left to right
         # left: last appeared non-zero number
         while curr < len(nums):
@@ -54,7 +53,7 @@ class Solution:
                 temp = nums[curr]
                 nums[curr] = nums[left]
                 nums[left] = temp
-                left += 1
-            curr += 1
+                left += 1 # move
+            curr += 1 # move
         print(nums)
 ```

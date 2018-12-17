@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python", "array"]
 categories: ["algorithm"]
 date: 2018-11-28T23:56:14-08:00
-draft: true
+draft: false
 archive: false
 ---
 Given two arrays, write a function to compute their intersection.
@@ -23,3 +23,28 @@ Output: [9,4]
 **Note:**
 - Each element in the result must be unique.
 - The result can be in any order.
+**Solution:**
+```python
+class Solution:
+    def intersection(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        res = set([])
+
+        dict1 = {}
+
+        for n in nums1:
+            if dict1.get(n) == None:
+                dict1[n] = True
+
+        print(dict1)
+
+        for n in nums2:
+            if dict1.get(n):
+                res.add(n)
+
+        return list(res)
+```

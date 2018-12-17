@@ -7,10 +7,73 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 19 Nov 2018 23:52:19 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Dec 2018 09:42:45 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Find All Anagrams in a String</title>
+      <link>http://www.hashnopolis.com/post/2018/12/find-all-anagrams-in-a-string/</link>
+      <pubDate>Sat, 15 Dec 2018 09:42:45 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/find-all-anagrams-in-a-string/</guid>
+      <description>Given a string s and a non-empty string p, find all the start indices of p&amp;rsquo;s anagrams in s.
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+The order of output does not matter.
+Example 1:
+Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Output: [0, 6] Explanation: The substring with start index = 0 is &amp;quot;cba&amp;quot;, which is an anagram of &amp;quot;abc&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Course Schedule</title>
+      <link>http://www.hashnopolis.com/post/2018/12/course-schedule/</link>
+      <pubDate>Sun, 09 Dec 2018 23:29:18 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/course-schedule/</guid>
+      <description>There are a total of n courses you have to take, labeled from 0 to n-1.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+Example 1:
+Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 courses to take.</description>
+    </item>
+    
+    <item>
+      <title>Alien Dictionary</title>
+      <link>http://www.hashnopolis.com/post/2018/12/alien-dictionary/</link>
+      <pubDate>Sat, 08 Dec 2018 23:57:13 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/alien-dictionary/</guid>
+      <description>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
+Example 1:
+Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot;  Example 2:
+Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot;  Example 3:</description>
+    </item>
+    
+    <item>
+      <title>Random Pick Index</title>
+      <link>http://www.hashnopolis.com/post/2018/12/random-pick-index/</link>
+      <pubDate>Sat, 01 Dec 2018 22:27:00 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/random-pick-index/</guid>
+      <description>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.
+Note: The array size can be very large. Solution that uses too much extra space will not pass the judge.
+Example:
+int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</description>
+    </item>
+    
+    <item>
+      <title>Intersection of Two Arrays</title>
+      <link>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</link>
+      <pubDate>Wed, 28 Nov 2018 23:56:14 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</guid>
+      <description>Given two arrays, write a function to compute their intersection.
+Example 1:
+Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2:
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note: - Each element in the result must be unique. - The result can be in any order. Solution:
+class Solution: def intersection(self, nums1, nums2): &amp;quot;&amp;quot;&amp;quot; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = set([]) dict1 = {} for n in nums1: if dict1.</description>
+    </item>
     
     <item>
       <title>Read N Characters Given Read4</title>
@@ -613,6 +676,16 @@ Solution:
     </item>
     
     <item>
+      <title>Compare Version Numbers</title>
+      <link>http://www.hashnopolis.com/post/2018/10/compare-version-numbers/</link>
+      <pubDate>Tue, 16 Oct 2018 23:26:46 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/compare-version-numbers/</guid>
+      <description>Compare two version numbers version1 and version2. If version1 &amp;gt; version2 return 1; if version1 &amp;lt; version2 return -1;otherwise return 0.
+You may assume that the version strings are non-empty and contain only digits and the . character. The . character does not represent a decimal point and is used to separate number sequences. For instance, 2.5 is not &amp;ldquo;two and a half&amp;rdquo; or &amp;ldquo;half way to version three&amp;rdquo;, it is the fifth second-level revision of the second first-level revision.</description>
+    </item>
+    
+    <item>
       <title>Word Search</title>
       <link>http://www.hashnopolis.com/post/2018/10/word-search/</link>
       <pubDate>Mon, 15 Oct 2018 23:48:28 -0700</pubDate>
@@ -622,6 +695,28 @@ Solution:
 The word can be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
 Example:
 board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;], [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;] ] Given word = &amp;quot;ABCCED&amp;quot;, return true. Given word = &amp;quot;SEE&amp;quot;, return true. Given word = &amp;quot;ABCB&amp;quot;, return false.</description>
+    </item>
+    
+    <item>
+      <title>Intersection of Two Linked Lists</title>
+      <link>http://www.hashnopolis.com/post/2018/10/intersection-of-two-linked-lists/</link>
+      <pubDate>Sun, 14 Oct 2018 23:56:47 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/intersection-of-two-linked-lists/</guid>
+      <description>Write a program to find the node at which the intersection of two singly linked lists begins.
+For example, the following two linked lists:
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
+Notes: If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</description>
+    </item>
+    
+    <item>
+      <title>Min Stack</title>
+      <link>http://www.hashnopolis.com/post/2018/10/min-stack/</link>
+      <pubDate>Sun, 14 Oct 2018 23:55:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/min-stack/</guid>
+      <description>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) &amp;ndash; Push element x onto stack. - pop() &amp;ndash; Removes the element on top of the stack. - top() &amp;ndash; Get the top element. - getMin() &amp;ndash; Retrieve the minimum element in the stack. Example:
+MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; Returns -3. minStack.pop(); minStack.top(); --&amp;gt; Returns 0. minStack.</description>
     </item>
     
     <item>
@@ -1115,8 +1210,7 @@ Solution
       <pubDate>Wed, 12 Sep 2018 23:57:13 +0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/</guid>
-      <description>The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
-+----+-------+--------+-----------+ | Id | Name | Salary | ManagerId | +----+-------+--------+-----------+ | 1 | Joe | 70000 | 3 | | 2 | Henry | 80000 | 4 | | 3 | Sam | 60000 | NULL | | 4 | Max | 90000 | NULL | +----+-------+--------+-----------+  Given the Employee table, write a SQL query that finds out employees who earn more than their managers.</description>
+      <description># SQL Schema: Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int) Truncate table Employee insert into Employee (Id, Name, Salary, ManagerId) values (&#39;1&#39;, &#39;Joe&#39;, &#39;70000&#39;, &#39;3&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;2&#39;, &#39;Henry&#39;, &#39;80000&#39;, &#39;4&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;3&#39;, &#39;Sam&#39;, &#39;60000&#39;, &#39;None&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;4&#39;, &#39;Max&#39;, &#39;90000&#39;, &#39;None&#39;)  The Employee table holds all employees including their managers.</description>
     </item>
     
     <item>

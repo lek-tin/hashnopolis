@@ -128,7 +128,7 @@ Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Expl
         <section id="sideber" class="sidebar">
           <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
-  <h1  class="menu-logo__text"># Hashnopolis</h1>
+  <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
     <g>
       <path d="M10.001 16l-.143-.01c-.547-.078-.926-.585-.849-1.132l2-14c.078-.546.588-.926 1.132-.848.547.078.927.584.849 1.131l-2 14c-.071.5-.499.859-.989.859zM4.001 16l-.143-.01c-.546-.078-.926-.585-.848-1.132l2-14c.078-.547.58-.927 1.132-.848.546.078.926.585.848 1.132l-2 14c-.072.499-.499.858-.989.858zM15 6h-13c-.552 0-1-.448-1-1s.448-1 1-1h13c.553 0 1 .448 1 1s-.447 1-1 1zM14 12h-13c-.552 0-1-.447-1-1s.448-1 1-1h13c.553 0 1 .447 1 1s-.447 1-1 1z"/>
@@ -218,7 +218,6 @@ The read function will only be called once for each test case.
 # Read up to 4 chars into buf4 and copy to buf (which is modified in-place).
 # Time - O(n)
 # Space - O(n)
-
 class Solution(object):
     def read(self, buf, n):
         &quot;&quot;&quot;
@@ -226,16 +225,17 @@ class Solution(object):
         :type n: Maximum number of characters to read (int)
         :rtype: The numbaer of characters read (int)
         &quot;&quot;&quot;
-        total_chars, last_chars = 0, 4
+        total, count = 0, 4
 
-        while last_chars == 4 and total_chars &lt; n:
+        while count == 4 and total &lt; n:
 
             buf4 = [&quot;&quot;] * 4 # temporary buffer
-            last_chars = min(read4(buf4), n - total_chars)
-            buf[total_chars:total_chars+last_chars] = buf4
-            total_chars += last_chars
+            # If count is not 4, while will break from next iteration
+            count = min(read4(buf4), n - total)
+            buf[total:total+count] = buf4
+            total += count
 
-        return total_chars
+        return total
 </code></pre>
 
   </div>
@@ -276,6 +276,8 @@ class Solution(object):
 <script src="/js/vendor/highlight.min.js"></script>
 <script src="/js/vendor/fastclick.min.js"></script>
 <script src="/js/main.js"></script>
+
+
 <script id="dsq-count-scr" src="//hashnopolis.disqus.com/count.js" async></script>
 
 </body>

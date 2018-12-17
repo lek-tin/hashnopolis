@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 13 Nov 2018 22:05:44 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Nov 2018 23:56:14 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Intersection of Two Arrays</title>
+      <link>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</link>
+      <pubDate>Wed, 28 Nov 2018 23:56:14 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</guid>
+      <description>Given two arrays, write a function to compute their intersection.
+Example 1:
+Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2:
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note: - Each element in the result must be unique. - The result can be in any order. Solution:
+class Solution: def intersection(self, nums1, nums2): &amp;quot;&amp;quot;&amp;quot; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = set([]) dict1 = {} for n in nums1: if dict1.</description>
+    </item>
     
     <item>
       <title>Arrays in Python</title>
