@@ -2,7 +2,7 @@
 title: "Group Anagrams"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "anagrams", "hashmap", "dictionary"]
+tags: ["leetcode", "python", "anagrams", "dictionary"]
 categories: ["algorithm"]
 date: 2018-10-22T12:01:59-07:00
 draft: false

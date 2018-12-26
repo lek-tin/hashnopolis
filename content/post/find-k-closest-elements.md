@@ -24,8 +24,6 @@ Output: [1,2,3,4]
 - The value k is positive and will always be smaller than the length of the sorted array.
 - Length of the given array is positive and will not exceed 104
 - Absolute value of elements in the array and x will not exceed 104
-**UPDATE (2017/9/19):**
-The arr parameter had been changed to an array of integers (instead of a list of integers). Please reload the code definition to get the latest changes.
 **Solution:**
 ```python
 class Solution:
@@ -41,7 +39,7 @@ class Solution:
 
         while low < high:
             mid = (low + high) // 2
-            if x - arr[mid] > arr[mid + k] - x:
+            if x > (arr[mid] + arr[mid + k]) / 2:
                 low = mid + 1
             else:
                 high = mid

@@ -2,7 +2,7 @@
 title: "Top K Frequent Elements"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "array"]
+tags: ["leetcode", "python", "array", "dictionary"]
 categories: ["algorithm"]
 date: 2018-09-16T15:04:30-07:00
 draft: false
@@ -12,7 +12,7 @@ Given a non-empty array of integers, return the `k` most frequent elements.
 
 For example,
 Given `[1,1,1,2,2,3]` and `k = 2`, return `[1,2]`.
-**Note**: 
+**Note**:
 You may assume k is always valid, `1 ≤ k ≤ number` of unique elements.
 Your algorithm's time complexity **must be better** than `O(n log n)`, where `n` is the array's size.
 **Solution:**
@@ -32,11 +32,12 @@ class Solution:
                 freqMap[num] = freqMap.get(num) + 1
         bucket = []
         topKCounts = sorted(list(freqMap.values()), reverse=True)[:k]
-            
+
+        print(topKCounts)
         for key, value in freqMap.items():
             if value in topKCounts:
                 bucket.append(key)
         return bucket
 ```
-**Going further:**    
+**Going further:**
 `topKCounts = quickSelected(...)` can improve the time complexity from `O(NlogN)` to `O(N)`

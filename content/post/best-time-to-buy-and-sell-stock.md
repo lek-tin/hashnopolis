@@ -36,13 +36,15 @@ class Solution:
         :rtype: int
         """
         profit, minPrice = 0, 0
+
         for i in range(len(prices)):
             if i == 0:
                 minPrice = prices[i]
             else:
                 if (prices[i] < minPrice):
                     minPrice = prices[i]
-                if (prices[i] - minPrice > profit):
+                elif (prices[i] - minPrice > profit):
                     profit = prices[i] - minPrice
+
         return profit
 ```

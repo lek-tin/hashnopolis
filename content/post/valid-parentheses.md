@@ -50,7 +50,11 @@ class Solution:
         :rtype: bool
         """
         stack = []
-        dict = {"]":"[", "}":"{", ")":"("}
+        dict = {
+            "]": "[",
+            "}": "{",
+            ")": "("
+        }
         for char in s:
             if char in dict.values():
                 stack.append(char)

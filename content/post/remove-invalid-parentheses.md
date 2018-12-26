@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python", "dfs", "search"]
 categories: ["algorithm"]
 date: 2018-11-13T16:20:10-08:00
-draft: true
+draft: false
 archive: false
 ---
 Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
@@ -29,7 +29,7 @@ Output: [""]
 ```
 ***Solution:**
 ```python
-# Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS
+# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS
 class Solution(object):
     def removeInvalidParentheses(self, s):
         """
@@ -40,7 +40,7 @@ class Solution(object):
         self.left_to_right(s, res, 0, 0)
         return res
 
-
+    # Remove extra ")"s
     def left_to_right(self, s, res, i_start, j_search_start):
         """
         scan from left to right, remove surplus ')'
@@ -48,18 +48,17 @@ class Solution(object):
         # DFS
         count = 0
         for i in range(i_start, len(s)):
-            if s[i] == '(':  # '(
+            if s[i] == '(':  # '('
                 count += 1
-            if s[i] == ')':  # ')
+            if s[i] == ')':  # ')'
                 count -= 1
             # Do nothing if it's neither ')' or '('
 
             if count < 0:
                 # search for ')'
-                # j_search_start~i
-                for j in range(j_search_start, i + 1):
-                    # remove the first ')' among consecutive ones
-                    if s[j] == ')' and ((j == j_search_start) or s[j - 1] != s[j]):
+                for j in range(j_search_start, i + 1):  # j_search_start ~ i
+                    if s[j] == ')' \
+                            and ((j == j_search_start) or s[j - 1] != s[j]):  # remove the first ')' among consecutive ones
                         print('i: %d, j: %d'%(i,j))
                         # remove s[j] and continue searching
                         char_removed = s[:j] + s[j+1:]
@@ -70,7 +69,7 @@ class Solution(object):
         # scan for '(' right to left
         self.right_to_left(s, res, len(s)-1, len(s)-1)
 
-
+    # Remove extra "("s
     def right_to_left(self, s, res, i_start, j_search_start):
         """
         scan from right to left, remove surplus '('
@@ -79,18 +78,17 @@ class Solution(object):
         # DFS
         count = 0
         for i in range(i_start, -1, -1):  # i_start~0
-            if s[i] == ')':  # '(
+            if s[i] == ')':  # ')
                 count += 1
-            if s[i] == '(':  # ')
+            if s[i] == '(':  # '(
                 count -= 1
             # Do nothing if it's neither ')' or '('
-
             if count < 0:
-                # search for ')'
-                # j_search_start~i (right to left)
-                for j in range(j_search_start, i-1, -1):
-                    # remove the first ')' among consecutive ones (when scanning from right to left)
-                    if s[j] == '(' and ((j == j_search_start) or s[j+1] != s[j]):
+                # search for '('
+                for j in range(j_search_start, i-1, -1):  # i ~ j_search_start
+                    if s[j] == '(' \
+                            and ((j == j_search_start) or s[j+1] != s[j]):
+                        # remove the first ')' among consecutive ones (when scanning from right to left)
                         # remove s[j] and continue searching
                         char_removed = s[:j] + s[j+1:]
                         self.right_to_left(char_removed, res, i-1,j-1)
