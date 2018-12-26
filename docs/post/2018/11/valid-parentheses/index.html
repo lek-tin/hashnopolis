@@ -235,7 +235,11 @@ Output: true
         :rtype: bool
         &quot;&quot;&quot;
         stack = []
-        dict = {&quot;]&quot;:&quot;[&quot;, &quot;}&quot;:&quot;{&quot;, &quot;)&quot;:&quot;(&quot;}
+        dict = {
+            &quot;]&quot;: &quot;[&quot;,
+            &quot;}&quot;: &quot;{&quot;,
+            &quot;)&quot;: &quot;(&quot;
+        }
         for char in s:
             if char in dict.values():
                 stack.append(char)

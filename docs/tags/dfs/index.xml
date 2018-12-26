@@ -26,6 +26,44 @@ Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 courses to ta
     </item>
     
     <item>
+      <title>Remove Invalid Parentheses</title>
+      <link>http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/</link>
+      <pubDate>Tue, 13 Nov 2018 16:20:10 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/</guid>
+      <description>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+Note: The input string may contain letters other than the parentheses ( and ).
+*Example 1:
+Input: &amp;quot;()())()&amp;quot; Output: [&amp;quot;()()()&amp;quot;, &amp;quot;(())()&amp;quot;]  *Example 2:
+Input: &amp;quot;(a)())()&amp;quot; Output: [&amp;quot;(a)()()&amp;quot;, &amp;quot;(a())()&amp;quot;]  *Example 3:
+Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *Solution:
+# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] self.</description>
+    </item>
+    
+    <item>
+      <title>Lowest Common Ancestor of a Binary Search Tree</title>
+      <link>http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-search-tree/</link>
+      <pubDate>Thu, 01 Nov 2018 13:23:27 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-search-tree/</guid>
+      <description>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]</description>
+    </item>
+    
+    <item>
+      <title>Lowest Common Ancestor of a Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-tree/</link>
+      <pubDate>Thu, 01 Nov 2018 13:18:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-tree/</guid>
+      <description>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+According to the : “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]
+ _______3______ / \ ___5__ ___1__  / \ / 6 _2 0 8 / 7 4 Example 1:</description>
+    </item>
+    
+    <item>
       <title>Word Search</title>
       <link>http://www.hashnopolis.com/post/2018/10/word-search/</link>
       <pubDate>Mon, 15 Oct 2018 23:48:28 -0700</pubDate>
