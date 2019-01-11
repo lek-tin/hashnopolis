@@ -80,3 +80,43 @@ Output:
   [7]
 ]
 ```
+**Solution:**
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def verticalOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
+        solution = []
+        if not root:
+            return solution
+
+        colMap = {}
+
+        queue = [(root, 0)]
+        while queue:
+            curr, col = queue.pop(0)
+
+            if col in colMap:
+                colMap[col].append(curr.val)
+            else:
+                colMap[col] = [curr.val]
+
+            if curr.left:
+                queue.append((curr.left, col - 1))
+            if curr.right:
+                queue.append((curr.right, col + 1))
+
+        for col in sorted(colMap):
+            solution.append(colMap[col])
+
+        return solution
+```
