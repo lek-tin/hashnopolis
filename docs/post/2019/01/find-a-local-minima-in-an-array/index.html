@@ -5,7 +5,7 @@
 
   
   <title>
-        Binary Tree Vertical Order Traversal | Hashnopolis
+        Find a Local Minima in an Array | Hashnopolis
       </title>
 
     
@@ -16,22 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given a binary tree, return the vertical order traversal of its nodes&amp;rsquo; values. (ie, from top to bottom, column by column).
-If two nodes are in the same row and column, the order should be from left to right.
-Examples 1:
-Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
-Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:" />
-  <meta name="keywords" content="leetcode python binary-tree " />
+  <meta name="description" content="Given an array arr[0 .. n-1] of distinct integers, the task is to find a local minima in it. We say that an element arr[x] is a local minimum if it is less than or equal to both its neighbors.
+For corner elements, we need to consider only one neighbor for comparison. There can be more than one local minima in an array, we need to find any one of them." />
+  <meta name="keywords" content="leetcode python binary-search " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Binary Tree Vertical Order Traversal" />
-    <meta name="twitter:description" content="Given a binary tree, return the vertical order traversal of its nodes&amp;rsquo; values. (ie, from top to bottom, column by column).
-If two nodes are in the same row and column, the order should be from left to right.
-Examples 1:
-Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
-Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:" />
+    <meta name="twitter:title" content="Find a Local Minima in an Array" />
+    <meta name="twitter:description" content="Given an array arr[0 .. n-1] of distinct integers, the task is to find a local minima in it. We say that an element arr[x] is a local minimum if it is less than or equal to both its neighbors.
+For corner elements, we need to consider only one neighbor for comparison. There can be more than one local minima in an array, we need to find any one of them." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -41,7 +35,7 @@ Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/find-a-local-minima-in-an-array/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -182,131 +176,65 @@ Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0
         
           "<a href="/tags/python"><strong>python</strong></a>",
         
-          "<a href="/tags/binary-tree"><strong>binary-tree</strong></a>",
+          "<a href="/tags/binary-search"><strong>binary-search</strong></a>",
         
         <i class="small material-icons">access_time</i> 2-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/binary-tree-vertical-order-traversal.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Binary Tree Vertical Order Traversal</h1>
-      <p>Given a binary tree, return the vertical order traversal of its nodes&rsquo; values. (ie, from top to bottom, column by column).</p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/find-a-local-minima-in-an-array.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Find a Local Minima in an Array</h1>
+      <p>Given an array <code>arr[0 .. n-1]</code> of distinct integers, the task is to find a local minima in it. We say that an element <code>arr[x]</code> is a local minimum if it is less than or equal to both its neighbors.</p>
 
-<p>If two nodes are in the same row and column, the order should be from <strong>left to right.</strong></p>
+<p>For corner elements, we need to consider only one neighbor for comparison.
+There can be more than one local minima in an array, we need to find any one of them.
+<strong>Examples:</strong></p>
 
-<p><strong>Examples 1:</strong></p>
+<pre><code>Input: arr[] = {9, 6, 3, 14, 5, 7, 4};
+Output: Index of local minima is 2
+The output prints index of 3 because it is smaller than both of its neighbors.
+Note that indexes of elements 5 and 4 are also valid outputs.
 
-<pre><code>Input: [3,9,20,null,null,15,7]
+Input: arr[] = {23, 8, 15, 2, 3};
+Output: Index of local minima is 1
 
-   3
-  /\
- /  \
- 9  20
-    /\
-   /  \
-  15   7 
-
-Output:
-
-[
-  [9],
-  [3,15],
-  [20],
-  [7]
-]
-</code></pre>
-
-<p><strong>Examples 2:</strong></p>
-
-<pre><code>Input: [3,9,8,4,0,1,7]
-
-     3
-    /\
-   /  \
-   9   8
-  /\  /\
- /  \/  \
- 4  01   7 
-
-Output:
-
-[
-  [4],
-  [9],
-  [3,0,1],
-  [8],
-  [7]
-]
-</code></pre>
-
-<p><strong>Examples 3:</strong></p>
-
-<pre><code>Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0's right child is 2 and 1's left child is 5)
-
-     3
-    /\
-   /  \
-   9   8
-  /\  /\
- /  \/  \
- 4  01   7
-    /\
-   /  \
-   5   2
-
-Output:
-
-[
-  [4],
-  [9,5],
-  [3,0,1],
-  [8,2],
-  [7]
-]
+Input: arr[] = {1, 2, 3};
+Output: Index of local minima is 0
 </code></pre>
 
 <p><strong>Solution:</strong></p>
 
-<pre><code class="language-python"># https://www.youtube.com/watch?v=PQKkr036wRc
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<pre><code class="language-python"># A binary search based function that
+# returns index of a local minima.
+# Time Complexity : O(Log n)
+def localMinUtil(arr, low, high, n):
 
-#        root: 0
-#       /       \
-#    left: -1  right: 1
+    # Find index of middle element
+    mid = low + (high - low) // 2
 
-class Solution(object):
-    def verticalOrder(self, root):
-        &quot;&quot;&quot;
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        &quot;&quot;&quot;
-        solution = []
-        if not root:
-            return solution
+    # Compare middle element with its
+    # neighbours (if neighbours exist)
+    if(mid == 0 or arr[mid - 1] &gt; arr[mid] and
+        mid == n - 1 or arr[mid] &lt; arr[mid + 1]):
+        return mid
 
-        colMap = {}
+    # If middle element is not minima and its left
+    # neighbour is smaller than it, then left half
+    # must have a local minima.
+    elif(mid &gt; 0 and arr[mid - 1] &lt; arr[mid]):
+        return localMinUtil(arr, low, mid - 1, n)
 
-        queue = [(root, 0)]
-        while queue:
-            curr, col = queue.pop(0)
+    # If middle element is not minima and its right
+    # neighbour is smaller than it, then right half
+    # must have a local minima.
+    return localMinUtil(arr, mid + 1, high, n)
 
-            if col in colMap:
-                colMap[col].append(curr.val)
-            else:
-                colMap[col] = [curr.val]
+# A wrapper over recursive function localMinUtil()
+def localMin(arr, n):
+    return localMinUtil(arr, 0, n - 1, n)
 
-            if curr.left:
-                queue.append((curr.left, col - 1))
-            if curr.right:
-                queue.append((curr.right, col + 1))
-
-        for col in sorted(colMap):
-            solution.append(colMap[col])
-
-        return solution
+# Driver code
+arr = [4, 3, 1, 14, 16, 40]
+n = len(arr) 
+print(&quot;Index of a local minima is &quot;, localMin(arr, n))
 </code></pre>
 
   </div>
