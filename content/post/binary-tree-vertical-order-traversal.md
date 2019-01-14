@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python", "binary-tree"]
 categories: ["algorithm"]
 date: 2018-12-30T22:43:56-08:00
-draft: true
+draft: false
 archive: false
 ---
 Given a binary tree, return the vertical order traversal of its nodes' values. (ie, from top to bottom, column by column).
@@ -88,6 +88,10 @@ Output:
 #         self.val = x
 #         self.left = None
 #         self.right = None
+
+#        root: 0
+#       /       \
+#    left: -1  right: 1
 
 class Solution(object):
     def verticalOrder(self, root):
