@@ -59,6 +59,6 @@ def localMin(arr, n):
 
 # Driver code
 arr = [4, 3, 1, 14, 16, 40]
-n = len(arr) 
+n = len(arr)
 print("Index of a local minima is ", localMin(arr, n))
 ```
