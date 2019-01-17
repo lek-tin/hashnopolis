@@ -45,6 +45,7 @@ class Solution(object):
         cur = head
         while cur != None:
             if cur.random != None:
+                # now points to the "newly" created node, node'
                 cur.next.random = cur.random.next
             cur = cur.next.next
 

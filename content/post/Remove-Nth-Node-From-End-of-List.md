@@ -2,10 +2,10 @@
 title: "Remove Nth Node From End of List"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "linked-list"]
 categories: ["algorithm"]
 date: 2018-08-20T23:33:38+08:00
-draft: false
+draft: true
 archive: false
 ---
 Given a linked list, remove the n-th node from the end of list and return its head.
