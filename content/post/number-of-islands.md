@@ -54,7 +54,7 @@ class Solution:
         return count
 
     def markNeighbours(self, grid, rows, cols, x, y):
-        # When exceeds beyong boundaries or current point was visited, return
+        # When exceeds beyond boundaries or current point was visited, return
         if x < 0 or x >= rows or y < 0 or y >= cols or grid[x][y] == "0" or grid[x][y] == "2":
             return
         # Mark this point as visited
@@ -63,5 +63,5 @@ class Solution:
         for dir in directions:
             adjacentX = x + dir[0]
             adjacentY = y + dir[1]
-            self.markNeighbours( grid, rows, cols, adjacentX, adjacentY)
+            self.markNeighbours(grid, rows, cols, adjacentX, adjacentY)
 ```

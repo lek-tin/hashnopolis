@@ -9,8 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "hugo server --disableFastRender",
-    "report": "hugo list drafts",
-    "deploy": "hugo && git add . && git commit -m \"dev: deploy\"&& git push origin"
+    "audit": "hugo list drafts",
+    "build": "hugo && git add . && git commit -m \"dev: build\"&& git push origin"
   },
   "repository": {
     "type": "git",

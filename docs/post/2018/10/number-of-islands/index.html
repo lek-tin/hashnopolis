@@ -152,7 +152,7 @@ class Solution: def numIslands(self, grid): &amp;quot;&amp;quot;&amp;quot; :type
   <div class="primary-info">
     <h1>Hashnopolis | Blog about coding, data science and awesome technology</h1>
     <footer class="site-footer">
-    <p>© 2017-2018 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    <p>© 2017-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
     
     </footer>
   </div>
@@ -236,7 +236,7 @@ Output: 3
         return count
 
     def markNeighbours(self, grid, rows, cols, x, y):
-        # When exceeds beyong boundaries or current point was visited, return
+        # When exceeds beyond boundaries or current point was visited, return
         if x &lt; 0 or x &gt;= rows or y &lt; 0 or y &gt;= cols or grid[x][y] == &quot;0&quot; or grid[x][y] == &quot;2&quot;:
             return
         # Mark this point as visited
@@ -245,7 +245,7 @@ Output: 3
         for dir in directions:
             adjacentX = x + dir[0]
             adjacentY = y + dir[1]
-            self.markNeighbours( grid, rows, cols, adjacentX, adjacentY)
+            self.markNeighbours(grid, rows, cols, adjacentX, adjacentY)
 </code></pre>
 
   </div>

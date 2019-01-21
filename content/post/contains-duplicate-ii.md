@@ -27,5 +27,22 @@ Output: false
 ```
 **Solution:**
 ```python
+# time: o(n)
+# space: o(n)
+class Solution:
+    def containsNearbyDuplicate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+        map = {}
 
+        for i, n in enumerate(nums):
+            if map.get(n) != None and i - map[n] <= k:
+                return True
+            else:
+                map[n] = i
+
+        return False
 ```

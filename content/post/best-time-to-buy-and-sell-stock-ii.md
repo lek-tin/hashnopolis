@@ -8,7 +8,7 @@ date: 2018-09-06T23:39:13+08:00
 draft: false
 archive: false
 ---
-Say you have an array for which the ith element is the price of a given stock on day i.
+Say you have an array for which the `i`th element is the price of a given stock on day i.
 
 Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
 
@@ -40,14 +40,13 @@ class Solution:
         :type prices: List[int]
         :rtype: int
         """
-        def makeProfit(pirceList, price = None, profit = 0):
-            if (len(pirceList) == 0):
+        def makeProfit(priceList, price = None, profit = 0):
+            if (len(priceList) == 0):
                 return profit
-            prevVal = pirceList.pop()
+            prevVal = priceList.pop()
             if (price and price > prevVal):
-                if (price > prevVal):
-                    profit += price - prevVal
-            return makeProfit(pirceList, prevVal, profit)
+                profit += price - prevVal
+            return makeProfit(priceList, prevVal, profit)
 
         return makeProfit(prices)
 ```

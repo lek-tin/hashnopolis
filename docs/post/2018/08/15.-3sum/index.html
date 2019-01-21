@@ -152,7 +152,7 @@ Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, 
   <div class="primary-info">
     <h1>Hashnopolis | Blog about coding, data science and awesome technology</h1>
     <footer class="site-footer">
-    <p>© 2017-2018 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    <p>© 2017-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
     
     </footer>
   </div>
@@ -222,7 +222,7 @@ class Solution:
     res  = []
     listLen = len(nums)
     # low starts from 0, high starts from listLen - 1, so i needs to iterate between 1~(listLen-2)
-    for i in range(listLen - 2):
+    for i in range(listLen - 1):
       # i &gt; 0 to prevent reading nums[0 - 1] when i == 0
       # skip duplicating starting points
       if i &gt; 0 and nums[i] == nums[i-1]:

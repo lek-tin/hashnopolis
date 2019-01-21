@@ -2,7 +2,7 @@
 title: "Lowest Common Ancestor of a Binary Search Tree"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "bst", "dfs", "divide-and-conquer"]
 categories: ["algorithm"]
 date: 2018-11-01T13:23:27-07:00
 draft: false
@@ -60,11 +60,11 @@ class Solution(object):
             return None
         if root == p or root == q:
             return root
-        
+
         # Divide
         left = self.lowestCommonAncestor(root.left, p, q)
         right = self.lowestCommonAncestor(root.right, p, q)
-        
+
         # Conquer
         if left and right:
             return root

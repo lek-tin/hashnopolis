@@ -2,7 +2,7 @@
 title: "23. Merge k Sorted Lists"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "sorted-array", "merge"]
+tags: ["leetcode", "python", "sorted-array", "merge", ]
 categories: ["algorithm"]
 date: 2018-08-26T17:54:18+08:00
 draft: true
@@ -29,6 +29,10 @@ Output: 1->1->2->3->4->4->5->6
 #         self.next = None
 # time: o(nlogK), where k is the number of linked lists
 # space: o(n)
+# l1: xxxxx
+# l2: xxxxx  ------> merge(l1, l2) = n  ---↓
+# l3: xxxxx                                ↓
+# l4: xxxxx  ------> merge(l3, l4) = m  --->-->  merge(n, m)
 class Solution(object):
     def mergeKLists(self, lists):
         """

@@ -29,6 +29,8 @@ Output:
 ```
 **Solution:**
 ```python
+# Time: o(2^n)
+# Space: o(n)
 class Solution:
     def subsets(self, nums):
         """
@@ -42,4 +44,31 @@ class Solution:
                 dfs(nums, i+1, path+[nums[i]])
         dfs(sorted(nums), 0, [])
         return res
+# or
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        # Edge case
+        if nums == None or len(nums) == 0:
+            return []
+
+        # Sort the given numbers
+        nums.sort()
+        res = []
+
+        # Backtrack
+        self.backtrack(res, [], nums, 0)
+        return res
+
+    def backtrack(self, res, given_arr, nums, index):
+        res.append(list(given_arr))
+        for i in range(index, len(nums)):
+            # Choose to add nums[i] to the dfs function
+            given_arr.append(nums[i])
+            self.backtrack(res, given_arr, nums, i+1)
+            # Choose NOT to add nums[i] to the dfs function
+            given_arr.pop()
 ```

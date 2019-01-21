@@ -152,7 +152,7 @@ Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on
   <div class="primary-info">
     <h1>Hashnopolis | Blog about coding, data science and awesome technology</h1>
     <footer class="site-footer">
-    <p>© 2017-2018 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    <p>© 2017-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
     
     </footer>
   </div>
@@ -216,14 +216,16 @@ Output: 0
         :rtype: int
         &quot;&quot;&quot;
         profit, minPrice = 0, 0
+
         for i in range(len(prices)):
             if i == 0:
                 minPrice = prices[i]
             else:
                 if (prices[i] &lt; minPrice):
                     minPrice = prices[i]
-                if (prices[i] - minPrice &gt; profit):
+                elif (prices[i] - minPrice &gt; profit):
                     profit = prices[i] - minPrice
+
         return profit
 </code></pre>
 

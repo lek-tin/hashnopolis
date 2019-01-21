@@ -7,10 +7,92 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 15 Dec 2018 09:42:45 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 18:44:45 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reverse Integer</title>
+      <link>http://www.hashnopolis.com/post/2019/01/reverse-integer/</link>
+      <pubDate>Wed, 16 Jan 2019 18:44:45 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/reverse-integer/</guid>
+      <description>Given a 32-bit signed integer, reverse digits of an integer.
+Example 1:
+Input: 123 Output: 321  Example 2:
+Input: -123 Output: -321  Example 3:
+Input: 120 Output: 21  Note: Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</description>
+    </item>
+    
+    <item>
+      <title>One Edit Distance</title>
+      <link>http://www.hashnopolis.com/post/2019/01/one-edit-distance/</link>
+      <pubDate>Wed, 16 Jan 2019 15:52:52 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/one-edit-distance/</guid>
+      <description>Given two strings s and t, determine if they are both one edit distance apart.
+Note: There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t Example 1:
+Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</description>
+    </item>
+    
+    <item>
+      <title>Find a Local Minima in an Array</title>
+      <link>http://www.hashnopolis.com/post/2019/01/find-a-local-minima-in-an-array/</link>
+      <pubDate>Mon, 14 Jan 2019 11:32:08 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/find-a-local-minima-in-an-array/</guid>
+      <description>Given an array arr[0 .. n-1] of distinct integers, the task is to find a local minima in it. We say that an element arr[x] is a local minimum if it is less than or equal to both its neighbors.
+For corner elements, we need to consider only one neighbor for comparison. There can be more than one local minima in an array, we need to find any one of them.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Vertical Order Traversal</title>
+      <link>http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/</link>
+      <pubDate>Sun, 30 Dec 2018 22:43:56 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/</guid>
+      <description>Given a binary tree, return the vertical order traversal of its nodes&amp;rsquo; values. (ie, from top to bottom, column by column).
+If two nodes are in the same row and column, the order should be from left to right.
+Examples 1:
+Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
+Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:</description>
+    </item>
+    
+    <item>
+      <title>Find K Closest Elements</title>
+      <link>http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/</link>
+      <pubDate>Wed, 19 Dec 2018 16:00:58 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/</guid>
+      <description>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
+Example 1:
+Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2:
+Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive and will always be smaller than the length of the sorted array.</description>
+    </item>
+    
+    <item>
+      <title>Longest Increasing Subsequence</title>
+      <link>http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/</link>
+      <pubDate>Wed, 19 Dec 2018 10:47:57 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/</guid>
+      <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
+Example:
+Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note: - There may be more than one LIS combination, it is only necessary for you to return the length. - Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</description>
+    </item>
+    
+    <item>
+      <title>Longest Continuous Increasing Subsequence</title>
+      <link>http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/</link>
+      <pubDate>Wed, 19 Dec 2018 10:40:26 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/</guid>
+      <description>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
+Example 1:
+Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2:
+Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</description>
+    </item>
     
     <item>
       <title>Find All Anagrams in a String</title>
@@ -207,6 +289,21 @@ For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5</descrip
       <guid>http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/</guid>
       <description>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
 Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</description>
+    </item>
+    
+    <item>
+      <title>Remove Invalid Parentheses</title>
+      <link>http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/</link>
+      <pubDate>Tue, 13 Nov 2018 16:20:10 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/</guid>
+      <description>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+Note: The input string may contain letters other than the parentheses ( and ).
+*Example 1:
+Input: &amp;quot;()())()&amp;quot; Output: [&amp;quot;()()()&amp;quot;, &amp;quot;(())()&amp;quot;]  *Example 2:
+Input: &amp;quot;(a)())()&amp;quot; Output: [&amp;quot;(a)()()&amp;quot;, &amp;quot;(a())()&amp;quot;]  *Example 3:
+Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *Solution:
+# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] self.</description>
     </item>
     
     <item>
@@ -817,6 +914,32 @@ class Solution: def numIslands(self, grid): &amp;quot;&amp;quot;&amp;quot; :type
     </item>
     
     <item>
+      <title>Binary Tree Maximum Path Sum</title>
+      <link>http://www.hashnopolis.com/post/2018/10/binary-tree-maximum-path-sum/</link>
+      <pubDate>Tue, 09 Oct 2018 23:50:03 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/binary-tree-maximum-path-sum/</guid>
+      <description>Given a non-empty binary tree, find the maximum path sum.
+For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
+Example 1:
+Input: [1,2,3] 1 / \ 2 3 Output: 6  Example 2:
+Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42  Solution:</description>
+    </item>
+    
+    <item>
+      <title>Subsets Ii</title>
+      <link>http://www.hashnopolis.com/post/2018/10/subsets-ii/</link>
+      <pubDate>Mon, 08 Oct 2018 13:04:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/subsets-ii/</guid>
+      <description>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
+Note: The solution set must not contain duplicate subsets.
+Example:
+Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution:
+# Time: o(2^n) # Space: o(n) class Solution(object): def subsetsWithDup(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; # Edge case if nums == None or len(nums) == 0: return [] # Sort the given numbers nums.</description>
+    </item>
+    
+    <item>
       <title>Merge Sorted Array</title>
       <link>http://www.hashnopolis.com/post/2018/10/merge-sorted-array/</link>
       <pubDate>Mon, 08 Oct 2018 13:03:08 -0700</pubDate>
@@ -1079,7 +1202,7 @@ Input: 14 Output: false Explanation: 14 is not ugly since it includes another pr
 Note: The solution set must not contain duplicate subsets.
 Example:
 Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]  Solution:
-class Solution: def subsets(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] def dfs(nums, index, path): res.append(path) for i in range(index, len(nums)): dfs(nums, i+1, path+[nums[i]]) dfs(sorted(nums), 0, []) return res  </description>
+# Time: o(2^n) # Space: o(n) class Solution: def subsets(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] def dfs(nums, index, path): res.append(path) for i in range(index, len(nums)): dfs(nums, i+1, path+[nums[i]]) dfs(sorted(nums), 0, []) return res # or class Solution(object): def subsets(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; # Edge case if nums == None or len(nums) == 0: return [] # Sort the given numbers nums.</description>
     </item>
     
     <item>
@@ -1574,20 +1697,6 @@ Example 1:
 nums1 = [1, 3] nums2 = [2]  The median is 2.0
 Example 2:
 nums1 = [1, 2] nums2 = [3, 4]  The median is (2 + 3)/2 = 2.</description>
-    </item>
-    
-    <item>
-      <title>Remove Nth Node From End of List</title>
-      <link>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</link>
-      <pubDate>Mon, 20 Aug 2018 23:33:38 +0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</guid>
-      <description>Given a linked list, remove the n-th node from the end of list and return its head.
-Example:
-Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note:
-Given n will always be valid.
-Follow up:
-Could you do this in one pass?</description>
     </item>
     
     <item>

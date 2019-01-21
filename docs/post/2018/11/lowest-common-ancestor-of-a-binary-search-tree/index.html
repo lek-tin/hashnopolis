@@ -19,7 +19,7 @@
   <meta name="description" content="Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
 According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
 Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]" />
-  <meta name="keywords" content="leetcode python " />
+  <meta name="keywords" content="leetcode python bst dfs divide-and-conquer " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -148,7 +148,7 @@ Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]" />
   <div class="primary-info">
     <h1>Hashnopolis | Blog about coding, data science and awesome technology</h1>
     <footer class="site-footer">
-    <p>© 2017-2018 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    <p>© 2017-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
     
     </footer>
   </div>
@@ -177,6 +177,12 @@ Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]" />
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
           "<a href="/tags/python"><strong>python</strong></a>",
+        
+          "<a href="/tags/bst"><strong>bst</strong></a>",
+        
+          "<a href="/tags/dfs"><strong>dfs</strong></a>",
+        
+          "<a href="/tags/divide-and-conquer"><strong>divide-and-conquer</strong></a>",
         
         <i class="small material-icons">access_time</i> 2-min read
       </p>
@@ -237,11 +243,11 @@ class Solution(object):
             return None
         if root == p or root == q:
             return root
-        
+
         # Divide
         left = self.lowestCommonAncestor(root.left, p, q)
         right = self.lowestCommonAncestor(root.right, p, q)
-        
+
         # Conquer
         if left and right:
             return root

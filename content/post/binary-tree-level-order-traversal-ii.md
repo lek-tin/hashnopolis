@@ -50,7 +50,7 @@ class Solution:
                 res[len(res) - 1 - level].append(root.val)
                 traverse(root.left, level+1)
                 traverse(root.right, level+1)
-                
+
         traverse(root, 0)
         return res
 ```

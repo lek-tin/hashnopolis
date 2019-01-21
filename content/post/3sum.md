@@ -39,7 +39,7 @@ class Solution:
     res  = []
     listLen = len(nums)
     # low starts from 0, high starts from listLen - 1, so i needs to iterate between 1~(listLen-2)
-    for i in range(listLen - 2):
+    for i in range(listLen - 1):
       # i > 0 to prevent reading nums[0 - 1] when i == 0
       # skip duplicating starting points
       if i > 0 and nums[i] == nums[i-1]:
