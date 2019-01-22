@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 16 Jan 2019 18:44:45 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Jan 2019 23:38:03 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Add Two Numbers</title>
+      <link>http://www.hashnopolis.com/post/2019/01/add-two-numbers/</link>
+      <pubDate>Mon, 21 Jan 2019 23:38:03 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/add-two-numbers/</guid>
+      <description>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+Example:
+Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
+    </item>
     
     <item>
       <title>Reverse Integer</title>
@@ -44,6 +56,18 @@ Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Expl
       <guid>http://www.hashnopolis.com/post/2019/01/find-a-local-minima-in-an-array/</guid>
       <description>Given an array arr[0 .. n-1] of distinct integers, the task is to find a local minima in it. We say that an element arr[x] is a local minimum if it is less than or equal to both its neighbors.
 For corner elements, we need to consider only one neighbor for comparison. There can be more than one local minima in an array, we need to find any one of them.</description>
+    </item>
+    
+    <item>
+      <title>Copy List With Random Pointer</title>
+      <link>http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/</link>
+      <pubDate>Mon, 07 Jan 2019 23:34:11 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/</guid>
+      <description>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution:
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: RandomListNode :rtype: RandomListNode &amp;quot;&amp;quot;&amp;quot; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</description>
     </item>
     
     <item>
@@ -840,9 +864,8 @@ Follow up: Can you solve it without using extra space? Solution:
       
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle/</guid>
       <description>Given a linked list, determine if it has a cycle in it.
-Follow up: Can you solve it without using extra space?
-Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: if fast and not fast.next: return False fast = fast.</description>
+Follow up: Can you solve it without using extra space? Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
     </item>
     
     <item>
@@ -1697,6 +1720,22 @@ Example 1:
 nums1 = [1, 3] nums2 = [2]  The median is 2.0
 Example 2:
 nums1 = [1, 2] nums2 = [3, 4]  The median is (2 + 3)/2 = 2.</description>
+    </item>
+    
+    <item>
+      <title>Remove Nth Node From End of List</title>
+      <link>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</link>
+      <pubDate>Mon, 20 Aug 2018 23:33:38 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</guid>
+      <description>Given a linked list, remove the n-th node from the end of list and return its head.
+Example:
+Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note:
+Given n will always be valid.
+Follow up:
+Could you do this in one pass?
+Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
     </item>
     
     <item>

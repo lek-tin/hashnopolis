@@ -48,6 +48,29 @@ class Solution: def findKthLargest(self, nums, k): if (nums == None or len(nums)
     </item>
     
     <item>
+      <title>Linked List Cycle II</title>
+      <link>http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/</link>
+      <pubDate>Sun, 21 Oct 2018 23:08:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/</guid>
+      <description>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+Note: Do not modify the linked list.
+Follow up: Can you solve it without using extra space? Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def detectCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if head == None: return None slow = head fast = head hasCycle = False while fast.</description>
+    </item>
+    
+    <item>
+      <title>Linked List Cycle</title>
+      <link>http://www.hashnopolis.com/post/2018/10/linked-list-cycle/</link>
+      <pubDate>Sun, 21 Oct 2018 23:07:55 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle/</guid>
+      <description>Given a linked list, determine if it has a cycle in it.
+Follow up: Can you solve it without using extra space? Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
+    </item>
+    
+    <item>
       <title>Remove Duplicates From Sorted List II</title>
       <link>http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list-ii/</link>
       <pubDate>Wed, 19 Sep 2018 10:38:38 -0700</pubDate>
@@ -106,6 +129,22 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 Example 1:
 Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</description>
+    </item>
+    
+    <item>
+      <title>Remove Nth Node From End of List</title>
+      <link>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</link>
+      <pubDate>Mon, 20 Aug 2018 23:33:38 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</guid>
+      <description>Given a linked list, remove the n-th node from the end of list and return its head.
+Example:
+Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note:
+Given n will always be valid.
+Follow up:
+Could you do this in one pass?
+Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
     </item>
     
   </channel>
