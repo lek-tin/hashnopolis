@@ -171,6 +171,99 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/implement-strstr/">Implement Strstr</a></h2>
+
+      <p>Implement strstr().
+Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Example 1:
+Input: haystack = &#34;hello&#34;, needle = &#34;ll&#34; Output: 2  Example 2:
+Input: haystack = &#34;aaaaa&#34;, needle = &#34;bba&#34; Output: -1  Clarification:
+What should we return when needle is an empty string? This is a great question to ask during an interview.
+For the purpose of this problem, we will return 0 when needle is an empty string.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/valid-parentheses/">Valid Parentheses</a></h2>
+
+      <p>Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid.
+An input string is valid if:
+Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
+Example 1:
+Input: &#34;()&#34; Output: true  Example 2:
+Input: &#34;()[]{}&#34; Output: true  Example 3:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/maximal-square/">Maximal Square</a></h2>
+
+      <p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest square containing only 1’s and return its area.
+Example: Input:
+1 0 1 0 0
+1 0 1 1 1
+1 1 1 1 1
+1 0 0 1 0
+Output: 4 Solution:
+class Solution: def maximalSquare(self, matrix): &#34;&#34;&#34; :type matrix: List[List[str]] :rtype: int &#34;&#34;&#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &#34;1&#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &#34;1&#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &#34;0&#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin &#43; 1 if matrix[i][j] &gt; area: area = matrix[i][j] return area**2  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/valid-palindrome/">Valid Palindrome</a></h2>
 
       <p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
@@ -357,85 +450,6 @@ Input: citations = [3,0,6,1,5] Output: 3  Explanation: [3,0,6,1,5] means the res
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/word-ladder/">Word Ladder</a></h2>
-
-      <p>Given two words (beginWord and endWord), and a dictionary’s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 1. Only one letter can be changed at a time. 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word. Note: - Return 0 if there is no such transformation sequence. - All words have the same length. - All words contain only lowercase alphabetic characters.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/invert-binary-tree/">Invert Binary Tree</a></h2>
-
-      <p>Invert a binary tree.
- 4 / \ 2 7 / \ / \ 1 3 6 9  to
- 4 / \ 7 2 / \ / \ 9 6 3 1  Thoughts What if a node is NULL? A NULL has no children, so how to iterate deeper into the tree?
-// Attempt // class Solution { // public: void swapNodes(*leftNode, *rightNode) { *temp = *leftNode; *leftNode = *rightNode; *rightNode = temp; return; } TreeNode* invertTree(TreeNode* root) { if (root == NULL) return invertTree(root-&gt;left, ) } };  Solution:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/integer-to-roman/">Integer to Roman</a></h2>
-
-      <p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written as II in Roman numeral, just two one’s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 
