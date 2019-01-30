@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.53" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/categories/database/" />
@@ -200,8 +200,7 @@
 
       <p>Write a SQL query to find all duplicate emails in a table named Person.
 &#43;----&#43;---------&#43; | Id | Email | &#43;----&#43;---------&#43; | 1 | a@b.com | | 2 | c@d.com | | 3 | a@b.com | &#43;----&#43;---------&#43;  For example, your query should return the following for the above table:
-&#43;---------&#43; | Email | &#43;---------&#43; | a@b.com | &#43;---------&#43;  Note: All emails are in lowercase. Solution:
-# Write your MySQL query statement below SELECT email FROM Person WHERE email IN ( SELECT email FROM Person GROUP BY email HAVING COUNT(*) &gt; 1 ) GROUP BY email  </p>
+&#43;---------&#43; | Email | &#43;---------&#43; | a@b.com | &#43;---------&#43;  **Solution:** ```sql # Write your MySQL query statement below SELECT email FROM Person WHERE email IN ( SELECT email FROM Person GROUP BY email HAVING COUNT(*) &gt; 1 ) GROUP BY email  </p>
 
       <p class="meta">
         

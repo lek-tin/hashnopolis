@@ -5,7 +5,7 @@
 
   
   <title>
-        String to Integer Atoi | Hashnopolis
+        Count Number of Substrings With K Distinct Characters | Hashnopolis
       </title>
 
     
@@ -16,18 +16,20 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Implement atoi which converts a string to an integer.
-The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
-The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function." />
-  <meta name="keywords" content="leetcode python atoi string integer " />
+  <meta name="description" content="Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1:
+Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters.  Example 2:
+Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str." />
+  <meta name="keywords" content="leetcode python substring " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="String to Integer Atoi" />
-    <meta name="twitter:description" content="Implement atoi which converts a string to an integer.
-The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
-The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function." />
+    <meta name="twitter:title" content="Count Number of Substrings With K Distinct Characters" />
+    <meta name="twitter:description" content="Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1:
+Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters.  Example 2:
+Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -37,7 +39,7 @@ The string can contain additional characters after those that form the integral 
 <meta name="generator" content="Hugo 0.53" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/string-to-integer-atoi/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/count-number-of-substrings-with-k-distinct-characters/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -178,111 +180,73 @@ The string can contain additional characters after those that form the integral 
         
           "<a href="/tags/python"><strong>python</strong></a>",
         
-          "<a href="/tags/atoi"><strong>atoi</strong></a>",
+          "<a href="/tags/substring"><strong>substring</strong></a>",
         
-          "<a href="/tags/string"><strong>string</strong></a>",
-        
-          "<a href="/tags/integer"><strong>integer</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 1-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/string-to-integer-atoi.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>String to Integer Atoi</h1>
-      <p>Implement <code>atoi</code> which converts a string to an integer.</p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/count-number-of-substrings-with-k-distinct-characters.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Count Number of Substrings With K Distinct Characters</h1>
+      <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.</p>
 
-<p>The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.</p>
+<p><strong>Example 1:</strong></p>
 
-<p>The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.</p>
-
-<p>If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.</p>
-
-<p>If no valid conversion could be performed, a zero value is returned.</p>
-
-<p>Note:</p>
-
-<p>Only the space character &lsquo; &rsquo; is considered as whitespace character.
-Assume we are dealing with an environment which could only store integers within the <code>32-bit</code> signed integer range: <code>[−231,  231 − 1]</code>. If the numerical value is out of the range of representable values, <code>INT_MAX (231 − 1)</code> or <code>INT_MIN (−231)</code> is returned.
-<strong>Example 1:</strong></p>
-
-<pre><code>Input: &quot;42&quot;
-Output: 42
+<pre><code>Input: s = &quot;eceba&quot;, k = 2
+Output: 5
+Explanation: &quot;ec&quot;, &quot;ce&quot;, &quot;eb&quot;, &quot;ba&quot; and &quot;ece&quot; k distinct characters.
 </code></pre>
 
 <p><strong>Example 2:</strong></p>
 
-<pre><code>Input: &quot;   -42&quot;
-Output: -42
-Explanation: The first non-whitespace character is '-', which is the minus sign.
-Then take as many numerical digits as possible, which gets 42.
+<pre><code>Input: s = &quot;aa&quot;, k = 1
+Output: 2
+Explanation: &quot;a&quot; and &quot;aa&quot; have k distinct characters.
 </code></pre>
 
-<p><strong>Example 3:</strong></p>
+<pre><code class="language-java">import java.util.Arrays; 
+  
+public class CountKSubStr 
+{ 
+    // Function to count number of substrings 
+    // with exactly k unique characters 
+    int countkDist(String str, int k) { 
+        // Initialize result 
+        int res = 0; 
+  
+        int n = str.length(); 
+  
+        // To store count of characters from 'a' to 'z' 
+        int count[] = new int[26]; 
+  
+        // Consider all substrings beginning with 
+        // str[i] 
+        for (int i = 0; i &lt; n; i++) { 
+            int distinctChars = 0; 
+  
+            // Initializing count array with 0 
+            Arrays.fill(count, 0); 
+  
+            // Consider all substrings between str[i..j] 
+            for (int j=i; j&lt;n; j++) { 
+            	char c = str.charAt(j);
 
-<pre><code>Input: &quot;4193 with words&quot;
-Output: 4193
-Explanation: Conversion stops at digit '3' as the next character is not a numerical digit.
-</code></pre>
-
-<p><strong>Example 4:</strong></p>
-
-<pre><code>Input: &quot;words and 987&quot;
-Output: 0
-Explanation: The first non-whitespace character is 'w', which is not a numerical  digit or a +/- sign. Therefore no valid conversion could be performed.
-</code></pre>
-
-<p><strong>Example 5:</strong></p>
-
-<pre><code>Input: &quot;-91283472332&quot;
-Output: -2147483648
-Explanation: The number &quot;-91283472332&quot; is out of the range of a 32-bit signed integer. Thefore INT_MIN (−231) is returned.
-</code></pre>
-
-<p><strong>Solution:</strong></p>
-
-<pre><code class="language-python">class Solution:
-    def myAtoi(self, str):
-        &quot;&quot;&quot;
-        :type str: str
-        :rtype: int
-        &quot;&quot;&quot;
-        str = str.strip()
-        if str == &quot;&quot;:
-            return 0
-
-        INT_MIN = -2147483648
-        INT_MAX = 2147483647
-        cur = 0
-        isNegative = False
-
-        while cur&lt;len(str) and str[cur]==' ':
-            cur += 1
-
-        if len(str) == 0:
-            return 0
-        if str[cur] == '-':
-            isNegative = True
-            cur += 1
-        elif str[cur] == '+':
-            isNegative = False
-            cur += 1
-
-        solution = 0
-        for i in range(cur, len(str)):
-            if not str[i].isdigit():
-                break
-            else:
-                solution *= 10
-                solution += int(str[i])
-
-        if isNegative:
-            solution = -1 * solution
-
-        if solution &lt; INT_MIN:
-            return INT_MIN
-        elif solution &gt; INT_MAX:
-            return INT_MAX
-
-        return solution
+                // If this is a new character for this 
+                // substring, increment distinctChars. 
+                if (count[c - 'a'] == 0) 
+                    distinctChars++; 
+  
+                // Increment count of current character 
+                count[c - 'a']++; 
+  
+                // If distinct character count becomes k, 
+                // then increment result. 
+                if (distinctChars == k) 
+                    res++; 
+            } 
+        } 
+  
+        return res; 
+    } 
+} 
 </code></pre>
 
   </div>
