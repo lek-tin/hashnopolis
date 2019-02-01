@@ -342,6 +342,35 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 E
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/nvidia-cuda-architecture/">Nvidia Cuda Architecture</a></h2>
+
+      <p>Some fundamental concepts/components in the CUDA architecture: 1. thread:
+2. core:
+3. warp: a set of threads (commonly 32) that get executed simultaneously. 4. streaming multiprocessor: 5. texture: 6. control divergency:
+7. CPU DMA:
+8. Grid: a collection of parallel thread blocks.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/computer-architecture" ><strong>"computer-architecture"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/01/reverse-integer/">Reverse Integer</a></h2>
 
       <p>Given a 32-bit signed integer, reverse digits of an integer.
@@ -414,34 +443,6 @@ For corner elements, we need to consider only one neighbor for comparison. There
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/">Copy List With Random Pointer</a></h2>
-
-      <p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
-Return a deep copy of the list.
-Solution:
-# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &#34;&#34;&#34; :type head: RandomListNode :rtype: RandomListNode &#34;&#34;&#34; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
