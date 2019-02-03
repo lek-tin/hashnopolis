@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 25 Jan 2019 00:12:07 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jan 2019 00:56:00 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Count Number of Substrings With K Distinct Characters</title>
+      <link>http://www.hashnopolis.com/post/2019/01/count-number-of-substrings-with-k-distinct-characters/</link>
+      <pubDate>Wed, 30 Jan 2019 00:56:00 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/count-number-of-substrings-with-k-distinct-characters/</guid>
+      <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1:
+Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters.  Example 2:
+Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str.</description>
+    </item>
     
     <item>
       <title>Binary Tree Zigzag Level Order Traversal</title>

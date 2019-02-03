@@ -171,6 +171,34 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/">Copy List With Random Pointer</a></h2>
+
+      <p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution:
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &#34;&#34;&#34; :type head: RandomListNode :rtype: RandomListNode &#34;&#34;&#34; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/">Binary Tree Vertical Order Traversal</a></h2>
 
       <p>Given a binary tree, return the vertical order traversal of its nodes’ values. (ie, from top to bottom, column by column).
@@ -414,35 +442,6 @@ Now you want to find out who the celebrity is or verify that there is not one. T
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
-
-      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
-Your algorithm should run in O(n) complexity.
-Example:
-Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution:
-# Time: o(n) class Solution(object): def longestConsecutive(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
