@@ -2,7 +2,7 @@
 title: "Linked List Cycle"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "linked-list"]
+tags: ["leetcode", "python", "linked-list", "slow-fast-pointers", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-10-21T23:07:55-07:00
 draft: false
@@ -11,7 +11,7 @@ archive: false
 Given a linked list, determine if it has a cycle in it.
 
 **Follow up:**
-Can you solve it without using extra space?   
+Can you solve it without using extra space?
 **Solution:**
 ```python
 # Definition for singly-linked list.
@@ -29,6 +29,7 @@ class Solution(object):
         slow = head
         fast = head
         while fast:
+            # fast reaches the end, no cycle was detected
             if fast and not fast.next:
                 return False
             fast = fast.next.next
