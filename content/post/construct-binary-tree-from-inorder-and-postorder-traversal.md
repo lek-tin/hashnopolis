@@ -1,22 +1,22 @@
 ---
-title: "Construct Binary Tree From Preorder and Inorder Traversal"
+title: "Construct Binary Tree From Inorder and Postorder Traversal"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree"]
+tags: ["leetcode", "python", "bianry-tree"]
 categories: ["algorithm"]
-date: 2019-01-28T23:20:01-08:00
+date: 2019-02-04T23:50:51-08:00
 draft: true
 archive: false
 ---
-Given preorder and inorder traversal of a tree, construct the binary tree.
+Given inorder and postorder traversal of a tree, construct the binary tree.
 
 ### Note:
 You may assume that duplicates do not exist in the tree.
 
-For example, given:
+For example, given
 ```
-preorder = [3,9,20,15,7]
 inorder = [9,3,15,20,7]
+postorder = [9,15,7,20,3]
 ```
 Return the following binary tree:
 ```
