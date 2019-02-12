@@ -17,10 +17,10 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Some fundamental concepts/components in the CUDA architecture: 1. thread:
-2. core:
+2. core/kernel:
 3. warp: a set of threads (commonly 32) that get executed simultaneously. 4. streaming multiprocessor: 5. texture: 6. control divergency:
 7. CPU DMA:
-8. Grid: a collection of parallel thread blocks." />
+8. Grid: a collection of parallel thread blocks. 9. __syncthreads: 10. Shared memory: 11. warp occupancy:" />
   <meta name="keywords" content="gpu parallel-programming nvidia " />
   
   
@@ -28,10 +28,10 @@
     
     <meta name="twitter:title" content="Nvidia Cuda Architecture" />
     <meta name="twitter:description" content="Some fundamental concepts/components in the CUDA architecture: 1. thread:
-2. core:
+2. core/kernel:
 3. warp: a set of threads (commonly 32) that get executed simultaneously. 4. streaming multiprocessor: 5. texture: 6. control divergency:
 7. CPU DMA:
-8. Grid: a collection of parallel thread blocks." />
+8. Grid: a collection of parallel thread blocks. 9. __syncthreads: 10. Shared memory: 11. warp occupancy:" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -190,13 +190,16 @@
       <h1>Nvidia Cuda Architecture</h1>
       <p>Some fundamental concepts/components in the CUDA architecture:
 1. thread:<br />
-2. core:<br />
+2. core/kernel:<br />
 3. warp: a set of threads (commonly 32) that get executed simultaneously.
 4. streaming multiprocessor:
 5. texture:
 6. control divergency:<br />
 7. CPU DMA:<br />
-8. Grid: a collection of parallel thread blocks.</p>
+8. Grid: a collection of parallel thread blocks.
+9. __syncthreads:
+10. Shared memory:
+11. warp occupancy:</p>
 
   </div>
 
