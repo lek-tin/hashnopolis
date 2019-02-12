@@ -2,10 +2,10 @@
 title: "Trapping Rain Water"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "divide-and-conquer"]
 categories: ["algorithm"]
 date: 2019-01-26T23:39:49-08:00
-draft: true
+draft: false
 archive: false
 ---
 Given n non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it is able to trap after raining.
