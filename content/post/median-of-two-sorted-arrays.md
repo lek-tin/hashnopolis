@@ -42,14 +42,14 @@ class Solution:
         """
         if len(nums1) > len(nums2):
             return self.findMedianSortedArrays(nums2, nums1)
-        
+
         len1, len2 = len(nums1), len(nums2)
         start, end = 0, len1
-        
+
         while start <= end:
             pos1 = (start + end) // 2
             pos2 = (len(nums1) + len(nums2) + 1) // 2 - pos1
-            
+
             maxLeft1 = -math.inf if pos1 == 0 else nums1[pos1-1]
             minRight1 = math.inf if pos1 == len1 else nums1[pos1]
             print(maxLeft1, minRight1)
