@@ -171,6 +171,35 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
+
+      <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+Example 1:
+Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2:
+Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length. Solution:
+class Solution: def findKthLargest(self, nums, k): if (nums == None or len(nums) == 0): return 0 left, right = 0, len(nums) - 1 def swap(nums, i, j): temp = nums[i] nums[i] = nums[j] nums[j] = temp def partition(nums, left, right): pivot = nums[left] l = left &#43; 1 r = right while l &lt;= r: if nums[l] &lt; pivot and nums[r] &gt; pivot: swap(nums, l, r) l &#43;= 1 r -= 1 if nums[l] &gt;= pivot: l &#43;= 1 if nums[r] &lt;= pivot: r -= 1 swap(nums, left, r) return r while True: pos = partition(nums, left, right) if pos &#43; 1 == k: return nums[pos] elif pos &#43; 1 &gt; k: right = pos - 1 elif pos &#43; 1 &lt; k: left = pos &#43; 1  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/10/group-anagrams/">Group Anagrams</a></h2>
 
       <p>Given an array of strings, group anagrams together.
@@ -396,35 +425,6 @@ Example 1:
 Input: 11110 11010 11000 00000 Output: 1  Example 2:
 Input: 11000 11000 00100 00011 Output: 3  Solution:
 class Solution: def numIslands(self, grid): &#34;&#34;&#34; :type grid: List[List[str]] :rtype: int &#34;&#34;&#34; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &#34;1&#34;: count &#43;= 1 self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/binary-tree-maximum-path-sum/">Binary Tree Maximum Path Sum</a></h2>
-
-      <p>Given a non-empty binary tree, find the maximum path sum.
-For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
-Example 1:
-Input: [1,2,3] 1 / \ 2 3 Output: 6  Example 2:
-Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42  Solution:</p>
 
       <p class="meta">
         
