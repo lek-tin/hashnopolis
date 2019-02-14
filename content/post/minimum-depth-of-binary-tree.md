@@ -2,7 +2,7 @@
 title: "Minimum Depth of Binary Tree"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree", "depth-first-search"]
+tags: ["leetcode", "java", "binary-tree", "depth-first-search"]
 categories: ["algorithm"]
 date: 2019-02-12T16:58:46-08:00
 draft: false

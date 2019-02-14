@@ -2,7 +2,7 @@
 title: "Trapping Rain Water"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "divide-and-conquer", "two-pointers"]
+tags: ["leetcode", "java", "divide-and-conquer", "two-pointers"]
 categories: ["algorithm"]
 date: 2019-01-26T23:39:49-08:00
 draft: false

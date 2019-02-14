@@ -2,7 +2,7 @@
 title: "Container With Most Water"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "two-pointers"]
+tags: ["leetcode", "java", "two-pointers"]
 categories: ["algorithm"]
 date: 2019-01-26T23:38:02-08:00
 draft: false
