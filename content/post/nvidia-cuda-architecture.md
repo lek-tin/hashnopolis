@@ -14,7 +14,7 @@ archive: false
 4. Block: a collection of parallel threads.  
 5. Grid: a collection of parallel thread blocks.  
 6. warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as "warps" in sequence.
-7. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs.
+7. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs. Streaming Multiprocessor has a Shared Memory. (Hence "private", like a private programmer-controlled L1 cache). Each thread block can allocate shared memory where the allocations are private to that thread block. If there are multiple thread blocks in the same Streaming Multiprocessor, each thread blocks' shared memory allocation is in the same physical shared memory, but the contents are private to each thread block. (The content of `block 0`'s shared memory is not visible to `block 1`'s, etc.)
 8. texture:  
 9. control divergency:  
 10. CPU DMA:  
@@ -23,7 +23,11 @@ archive: false
 13. Local memory: "Local memory" in CUDA is actually global memory (and should really be called "thread-local global memory") with interleaved addressing (which makes iterating over an array in parallel a bit faster than having each thread's data blocked together).  
 
 ### APIs:
-1. `__syncthreads`: synchronize all threads in the block.  
+1. `__syncthreads`: wait for all threads in the block to finish an instruction.  
 2. `cudaThreadSynchronize()`: used when measuring performance to ensure that all device operations have completed before stopping the timer.
 
 ### Events:  
+
+### Performance:
+1. Warp divergence: mainly caused by the SIMT execution model where 32 threads in a warp must execute the same instruction (all share the same Program Counter). Due to this, if threads diverge and operate on different instructions, the execution becomes serialized.
+2. Maximum number of threads per SM: the aim is to fit in as many threads in a SM as possible. For a SM has 1536 threads, a tile size of 16 we can fit up to 6 thread blocks in an SM (using all 1536 hardware thread contexts), while a tile size of 32 can only fit 1 thread block in an SM (using 1024 out of 1536 possible hardware thread contexts).
