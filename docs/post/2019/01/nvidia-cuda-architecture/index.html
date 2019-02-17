@@ -218,6 +218,12 @@
 <ol>
 <li><code>__syncthreads</code>: wait for all threads in the block to finish an instruction.<br /></li>
 <li><code>cudaThreadSynchronize()</code>: used when measuring performance to ensure that all device operations have completed before stopping the timer.</li>
+<li><code>cudaGetDeviceCount(int *count)</code>:<br /></li>
+<li><code>cudaSetDevice(int device)</code>:<br /></li>
+<li><code>cudaGetDevice(int *device)</code>:<br /></li>
+<li><code>cudaGetDeviceProperties(cudaDeviceProp *prop, int device)</code>:<br /></li>
+<li><code>cudaSetDevice(i)</code>: to select current device<br /></li>
+<li><code>cudaMemcpy(...)</code>: for peer-to-peer copies<br /></li>
 </ol>
 
 <h3 id="events">Events:</h3>

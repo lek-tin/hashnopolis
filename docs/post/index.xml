@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 12 Feb 2019 16:58:46 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Feb 2019 17:28:18 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Longest Common Subsequence</title>
+      <link>http://www.hashnopolis.com/post/2019/02/longest-common-subsequence/</link>
+      <pubDate>Fri, 15 Feb 2019 17:28:18 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/02/longest-common-subsequence/</guid>
+      <description>The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). It differs from the longest common substring problem: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
+Optimal Substructure: Let the input sequences be X[0..m-1] and Y[0..n-1] of lengths m and n respectively. And let L(X[0..m-1], Y[0..n-1]) be the length of LCS of the two sequences X and Y.</description>
+    </item>
     
     <item>
       <title>Minimum Depth of Binary Tree</title>
@@ -251,8 +261,7 @@ Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive
       
       <guid>http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/</guid>
       <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example:
-Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note: - There may be more than one LIS combination, it is only necessary for you to return the length. - Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</description>
+Example:** Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note:**  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</description>
     </item>
     
     <item>
