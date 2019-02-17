@@ -25,6 +25,12 @@ archive: false
 ### APIs:
 1. `__syncthreads`: wait for all threads in the block to finish an instruction.  
 2. `cudaThreadSynchronize()`: used when measuring performance to ensure that all device operations have completed before stopping the timer.
+3. `cudaGetDeviceCount(int *count)`:  
+4. `cudaSetDevice(int device)`:  
+5. `cudaGetDevice(int *device)`:  
+6. `cudaGetDeviceProperties(cudaDeviceProp *prop, int device)`:  
+7. `cudaSetDevice(i)`: to select current device  
+8. `cudaMemcpy(...)`: for peer-to-peer copies  
 
 ### Events:  
 
