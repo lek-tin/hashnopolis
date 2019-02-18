@@ -125,3 +125,59 @@ class Solution(object):
 
         return solution
 ```
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    private int max = 0;
+    private int min = 0;
+
+    public List<List<Integer>> verticalOrder(TreeNode root) {
+
+        List<List<Integer>> res = new ArrayList<>();
+
+        if (root == null) return res;
+        // Initialise the res array
+        helper(root, 0);
+        for (int i = min; i<= max; i++) {
+            res.add(new ArrayList<>());
+        }
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<Integer> index = new LinkedList<>();
+
+        index.offer(-min);
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode curr = queue.poll();
+            int col = index.poll();
+            res.get(col).add(curr.val);
+            if (curr.left != null) {
+                queue.offer(curr.left);
+                index.offer(col - 1);
+            }
+            if (curr.right != null) {
+                queue.offer(curr.right);
+                index.offer(col + 1);
+            }
+        }
+
+        return res;
+    }
+
+    public void helper(TreeNode node, int col) {
+        if (node == null) return;
+        min = Math.min(min, col);
+        max = Math.max(max, col);
+        helper(node.left, col - 1);
+        helper(node.right, col + 1);
+    }
+}
+```

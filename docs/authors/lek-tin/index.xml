@@ -7,10 +7,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 30 Jan 2019 00:56:00 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 Feb 2019 23:25:31 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spiral Matrix</title>
+      <link>http://www.hashnopolis.com/post/2019/02/spiral-matrix/</link>
+      <pubDate>Sun, 17 Feb 2019 23:25:31 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/02/spiral-matrix/</guid>
+      <description>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
+Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5]  Example 2: Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7]  Solution: class Solution { public List&amp;lt;Integer&amp;gt; spiralOrder(int[][] matrix) { if (matrix == null || matrix.</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Number</title>
+      <link>http://www.hashnopolis.com/post/2019/02/palindrome-number/</link>
+      <pubDate>Sun, 17 Feb 2019 22:07:48 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/02/palindrome-number/</guid>
+      <description>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+Example 1: Input: 121 Output: true  Example 2: Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.  Example 3: Input: 10 Output: false Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</description>
+    </item>
+    
+    <item>
+      <title>Longest Common Subsequence</title>
+      <link>http://www.hashnopolis.com/post/2019/02/longest-common-subsequence/</link>
+      <pubDate>Fri, 15 Feb 2019 17:28:18 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/02/longest-common-subsequence/</guid>
+      <description>The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). It differs from the longest common substring problem: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
+Optimal Substructure: Let the input sequences be X[0..m-1] and Y[0..n-1] of lengths m and n respectively. And let L(X[0..m-1], Y[0..n-1]) be the length of LCS of the two sequences X and Y.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Depth of Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/</link>
+      <pubDate>Tue, 12 Feb 2019 16:58:46 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/</guid>
+      <description>Given a binary tree, find its minimum depth.
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+Note: A leaf is a node with no children.
+Example: Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 3.  Solution: /** * Definition for a binary tree node.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Depth of Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/</link>
+      <pubDate>Tue, 12 Feb 2019 16:58:46 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/</guid>
+      <description>Given a binary tree, find its minimum depth.
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+Note: A leaf is a node with no children.
+Example: Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 2.  Solution: /** * Definition for a binary tree node.</description>
+    </item>
+    
+    <item>
+      <title>Construct Binary Tree From Inorder and Postorder Traversal</title>
+      <link>http://www.hashnopolis.com/post/2019/02/construct-binary-tree-from-inorder-and-postorder-traversal/</link>
+      <pubDate>Mon, 04 Feb 2019 23:50:51 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/02/construct-binary-tree-from-inorder-and-postorder-traversal/</guid>
+      <description>Given inorder and postorder traversal of a tree, construct the binary tree.
+Note: You may assume that duplicates do not exist in the tree.
+For example, given
+inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7  Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</description>
+    </item>
     
     <item>
       <title>Count Number of Substrings With K Distinct Characters</title>
@@ -22,6 +91,40 @@
 Example 1:
 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters.  Example 2:
 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str.</description>
+    </item>
+    
+    <item>
+      <title>Construct Binary Tree From Preorder and Inorder Traversal</title>
+      <link>http://www.hashnopolis.com/post/2019/01/construct-binary-tree-from-preorder-and-inorder-traversal/</link>
+      <pubDate>Mon, 28 Jan 2019 23:20:01 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/construct-binary-tree-from-preorder-and-inorder-traversal/</guid>
+      <description>Given preorder and inorder traversal of a tree, construct the binary tree.
+Note: You may assume that duplicates do not exist in the tree.
+For example, given:
+preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7  Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</description>
+    </item>
+    
+    <item>
+      <title>Trapping Rain Water</title>
+      <link>http://www.hashnopolis.com/post/2019/01/trapping-rain-water/</link>
+      <pubDate>Sat, 26 Jan 2019 23:39:49 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/trapping-rain-water/</guid>
+      <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
+Example: Input: [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6  Solution: class Solution { public int trap(int[] height) { int n = height.</description>
+    </item>
+    
+    <item>
+      <title>Container With Most Water</title>
+      <link>http://www.hashnopolis.com/post/2019/01/container-with-most-water/</link>
+      <pubDate>Sat, 26 Jan 2019 23:38:02 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/container-with-most-water/</guid>
+      <description>Given n non-negative integers a1, a2, &amp;hellip;, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+Note: You may not slant the container and n is at least 2. The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7].</description>
     </item>
     
     <item>
@@ -106,11 +209,11 @@ Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp
       <pubDate>Fri, 18 Jan 2019 22:38:09 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2019/01/nvidia-cuda-architecture/</guid>
-      <description>Some fundamental concepts/components in the CUDA architecture: 1. thread:
-2. core:
-3. warp: a set of threads (commonly 32) that get executed simultaneously. 4. streaming multiprocessor: 5. texture: 6. control divergency:
-7. CPU DMA:
-8. Grid: a collection of parallel thread blocks.</description>
+      <description>Fundamental concepts/components in the CUDA architecture:  thread:
+ core/kernel:
+ Block: a collection of parallel threads.
+ Grid: a collection of parallel thread blocks.
+ warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as &amp;ldquo;warps&amp;rdquo; in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs.</description>
     </item>
     
     <item>
@@ -191,8 +294,7 @@ Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive
       
       <guid>http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/</guid>
       <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example:
-Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note: - There may be more than one LIS combination, it is only necessary for you to return the length. - Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</description>
+Example:** Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note:**  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</description>
     </item>
     
     <item>
@@ -1805,10 +1907,8 @@ Given nums = [1,1,2], Your function should return length = 2, with the first two
       <description>There are two sorted arrays nums1 and nums2 of size m and n respectively.
 Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 You may assume nums1 and nums2 cannot be both empty.
-Example 1:
-nums1 = [1, 3] nums2 = [2]  The median is 2.0
-Example 2:
-nums1 = [1, 2] nums2 = [3, 4]  The median is (2 + 3)/2 = 2.</description>
+Example 1: nums1 = [1, 3] nums2 = [2]  The median is 2.0
+Example 2: nums1 = [1, 2] nums2 = [3, 4]  The median is (2 + 3)/2 = 2.</description>
     </item>
     
     <item>

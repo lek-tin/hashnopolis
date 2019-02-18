@@ -142,7 +142,12 @@ Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
+  <li><a href="/categories/big-data">Big Data</a></li>
+  <li><a href="/categories/hpc">HPC</a></li>
+  <li><a href="/categories/java">Java</a></li>
+  <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
+  <li><a href="/categories/algorithm">Algorithm</a></li>
   <li><a href="/categories">Categories</a></li>
   <li><a href="/tags">tags</a></li>
   <li><a href="/about">About</a></li>
@@ -157,10 +162,10 @@ Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0
     </footer>
   </div>
 
-  <div class="secondary-info">
-    <p>
-      <button class="btn btn-primary"><i class="fa fa-user-plus" aria-hidden="true"></i>Newsletter</button>
-    </p>
+  
+  <div class="social-info">
+      <a href="https://linkedin.com/in/lektin/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/lek-tin"><i class="fa fa-github" aria-hidden="true"></i></a>
   </div>
 </div>
 
@@ -307,6 +312,62 @@ class Solution(object):
             solution.append(colMap[col])
 
         return solution
+</code></pre>
+
+<pre><code class="language-java">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    private int max = 0;
+    private int min = 0;
+
+    public List&lt;List&lt;Integer&gt;&gt; verticalOrder(TreeNode root) {
+
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+
+        if (root == null) return res;
+        // Initialise the res array
+        helper(root, 0);
+        for (int i = min; i&lt;= max; i++) {
+            res.add(new ArrayList&lt;&gt;());
+        }
+
+        Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;();
+        Queue&lt;Integer&gt; index = new LinkedList&lt;&gt;();
+
+        index.offer(-min);
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode curr = queue.poll();
+            int col = index.poll();
+            res.get(col).add(curr.val);
+            if (curr.left != null) {
+                queue.offer(curr.left);
+                index.offer(col - 1);
+            }
+            if (curr.right != null) {
+                queue.offer(curr.right);
+                index.offer(col + 1);
+            }
+        }
+
+        return res;
+    }
+
+    public void helper(TreeNode node, int col) {
+        if (node == null) return;
+        min = Math.min(min, col);
+        max = Math.max(max, col);
+        helper(node.left, col - 1);
+        helper(node.right, col + 1);
+    }
+}
 </code></pre>
 
   </div>
