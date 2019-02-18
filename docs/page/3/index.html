@@ -136,6 +136,7 @@
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
+  <li><a href="/categories/algorithm">Algorithm</a></li>
   <li><a href="/categories">Categories</a></li>
   <li><a href="/tags">tags</a></li>
   <li><a href="/about">About</a></li>
@@ -150,10 +151,10 @@
     </footer>
   </div>
 
-  <div class="secondary-info">
-    <p>
-      <button class="btn btn-primary"><i class="fa fa-user-plus" aria-hidden="true"></i>Newsletter</button>
-    </p>
+  
+  <div class="social-info">
+      <a href="https://linkedin.com/in/lektin/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/lek-tin"><i class="fa fa-github" aria-hidden="true"></i></a>
   </div>
 </div>
 
@@ -165,6 +166,91 @@
   <div>
     
     
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/">Copy List With Random Pointer</a></h2>
+
+      <p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution:
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &#34;&#34;&#34; :type head: RandomListNode :rtype: RandomListNode &#34;&#34;&#34; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/">Binary Tree Vertical Order Traversal</a></h2>
+
+      <p>Given a binary tree, return the vertical order traversal of its nodes’ values. (ie, from top to bottom, column by column).
+If two nodes are in the same row and column, the order should be from left to right.
+Examples 1:
+Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
+Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/">Find K Closest Elements</a></h2>
+
+      <p>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
+Example 1:
+Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2:
+Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive and will always be smaller than the length of the sorted array.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
       
         
 <article class="post">
@@ -356,87 +442,6 @@ class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/useful-vim-commands/">Useful Vim Commands</a></h2>
-
-      <p> :LINE_NUMBER: go to a line dd: delete a whole line :%d: delete all lines x: delete a char i: insert :set paste then paste: paste without auto indentation 0 move to beginning of the current line $ move to end of line H move to the top of the current window (high) M move to the middle of the current window (middle) L move to the bottom line of the current window (low) 1G move to the first line of the file 20G move to the 20th line of the file G move to the last line of the file  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/tools" ><strong>"tools"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/install-java-on-linux/">Install Java on Linux</a></h2>
-
-      <p>Install manually Step 1: Download the source package from the oracle repository. If your computer is 64-bit, download the x64 version; if it is 32-bit, download the x86 version.
-Step 2: Extract from the compressed file and move the package folder to /usr/java. rememeber to run these commands as sudo is not the root user.
-mv downloads-folder/jdk-&lt;version&gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk-&lt;version&gt;-linux-xxx.tar.gz rm jdk-&lt;version&gt;-linux-xxx.tar.gz  Step 3: Add the java path to the ~/.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/linux" ><strong>"linux"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/">Read N Characters Given Read4</a></h2>
-
-      <p>The API: int read4(char *buf) reads 4 characters at a time from a file.
-The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
-Example 1:
-Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: The actual number of characters read is 3, which is &#34;abc&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

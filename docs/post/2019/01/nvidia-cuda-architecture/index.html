@@ -147,6 +147,7 @@
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
+  <li><a href="/categories/algorithm">Algorithm</a></li>
   <li><a href="/categories">Categories</a></li>
   <li><a href="/tags">tags</a></li>
   <li><a href="/about">About</a></li>
@@ -161,10 +162,10 @@
     </footer>
   </div>
 
-  <div class="secondary-info">
-    <p>
-      <button class="btn btn-primary"><i class="fa fa-user-plus" aria-hidden="true"></i>Newsletter</button>
-    </p>
+  
+  <div class="social-info">
+      <a href="https://linkedin.com/in/lektin/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/lek-tin"><i class="fa fa-github" aria-hidden="true"></i></a>
   </div>
 </div>
 
@@ -234,6 +235,8 @@
 <li>Warp divergence: mainly caused by the SIMT execution model where 32 threads in a warp must execute the same instruction (all share the same Program Counter). Due to this, if threads diverge and operate on different instructions, the execution becomes serialized.</li>
 <li>Maximum number of threads per SM: the aim is to fit in as many threads in a SM as possible. For a SM has 1536 threads, a tile size of 16 we can fit up to 6 thread blocks in an SM (using all 1536 hardware thread contexts), while a tile size of 32 can only fit 1 thread block in an SM (using 1024 out of 1536 possible hardware thread contexts).</li>
 </ol>
+
+<p><em>As of Nvidia Fermi series GeForce GPUs</em></p>
 
   </div>
 

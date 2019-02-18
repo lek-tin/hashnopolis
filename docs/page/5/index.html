@@ -136,6 +136,7 @@
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
+  <li><a href="/categories/algorithm">Algorithm</a></li>
   <li><a href="/categories">Categories</a></li>
   <li><a href="/tags">tags</a></li>
   <li><a href="/about">About</a></li>
@@ -150,10 +151,10 @@
     </footer>
   </div>
 
-  <div class="secondary-info">
-    <p>
-      <button class="btn btn-primary"><i class="fa fa-user-plus" aria-hidden="true"></i>Newsletter</button>
-    </p>
+  
+  <div class="social-info">
+      <a href="https://linkedin.com/in/lektin/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/lek-tin"><i class="fa fa-github" aria-hidden="true"></i></a>
   </div>
 </div>
 
@@ -165,6 +166,91 @@
   <div>
     
     
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/reverse-nodes-in-k-group/">Reverse Nodes in K Group</a></h2>
+
+      <p>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
+Example: Given this linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5
+For k = 2, you should return: 2-&gt;1-&gt;4-&gt;3-&gt;5</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/">Serialize and Deserialize Binary Tree</a></h2>
+
+      <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/">Remove Invalid Parentheses</a></h2>
+
+      <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+Note: The input string may contain letters other than the parentheses ( and ).
+*Example 1:
+Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;]  *Example 2:
+Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;]  *Example 3:
+Input: &#34;)(&#34; Output: [&#34;&#34;]  *Solution:
+# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &#34;&#34;&#34; :type s: str :rtype: List[str] &#34;&#34;&#34; res = [] self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
       
         
 <article class="post">
@@ -349,93 +435,6 @@ sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. D
         in
         
           <a  class="meta--cat" href="/categories/programming-language" ><strong>"programming-language"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/count-primes/">Count Primes</a></h2>
-
-      <p>Count the number of prime numbers less than a non-negative number, n.
-Example:
-Input: 10 Output: 4  Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution:
-class Solution: def countPrimes(self, n): &#34;&#34;&#34; :type n: int :rtype: int &#34;&#34;&#34; if n &lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &lt; len(marked)-1: count &#43;= 1 return count  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/">Implement Trie Prefix Tree</a></h2>
-
-      <p>Implement a trie with insert, search, and startsWith methods.
-Example:
-Trie trie = new Trie(); trie.insert(&#34;apple&#34;); trie.search(&#34;apple&#34;); // returns true trie.search(&#34;app&#34;); // returns false trie.startsWith(&#34;app&#34;); // returns true trie.insert(&#34;app&#34;); trie.search(&#34;app&#34;); // returns true  Note: You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings. Solution:
-# o(n) class TrieNode(): def __init__(self): self.children = {} self.isWholeWord = False class Trie: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/excel-sheet-column-title/">Excel Sheet Column Title</a></h2>
-
-      <p>Given a positive integer, return its corresponding column title as appear in an Excel sheet.
-For example:
- 1 -&gt; A 2 -&gt; B 3 -&gt; C ... 26 -&gt; Z 27 -&gt; AA 28 -&gt; AB ...  Example 1:
-Input: 1 Output: &#34;A&#34;  Example 2:
-Input: 28 Output: &#34;AB&#34;  Example 3:
-Input: 701 Output: &#34;ZY&#34;  Solution:
-class Solution: def convertToTitle(self, n): &#34;&#34;&#34; :type n: int :rtype: str &#34;&#34;&#34; digit = 1 res = &#34;&#34; while n &gt; 0: # Because we start from A.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
