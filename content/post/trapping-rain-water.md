@@ -26,26 +26,26 @@ class Solution {
         int n = height.length;
         int res = 0;
         int left = 0;
-        int right = n-1;
-        int leftVol = 0;
-        int rightVol = 0;
-        
+        int right = n - 1;
+        int leftHeight = 0;
+        int rightHeight = 0;
+
         while(left <= right){
             if(height[left] <= height[right]){
-                if(height[left] >= leftVol) {
-                    leftVol = height[left];
+                if(height[left] >= leftHeight) {
+                    leftHeight = height[left];
                 }
                 else {
-                    res += leftVol - height[left];
+                    res += leftHeight - height[left];
                 }
                 left++;
             }
             else{
-                if(height[right] >= rightVol) {
-                    rightVol=  height[right];
+                if(height[right] >= rightHeight) {
+                    rightHeight = height[right];
                 }
                 else {
-                    res += rightVol - height[right];
+                    res += rightHeight - height[right];
                 }
                 right--;
             }

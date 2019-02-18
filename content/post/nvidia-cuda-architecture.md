@@ -37,3 +37,6 @@ archive: false
 ### Performance:
 1. Warp divergence: mainly caused by the SIMT execution model where 32 threads in a warp must execute the same instruction (all share the same Program Counter). Due to this, if threads diverge and operate on different instructions, the execution becomes serialized.
 2. Maximum number of threads per SM: the aim is to fit in as many threads in a SM as possible. For a SM has 1536 threads, a tile size of 16 we can fit up to 6 thread blocks in an SM (using all 1536 hardware thread contexts), while a tile size of 32 can only fit 1 thread block in an SM (using 1024 out of 1536 possible hardware thread contexts).
+
+
+_As of Nvidia Fermi series GeForce GPUs_

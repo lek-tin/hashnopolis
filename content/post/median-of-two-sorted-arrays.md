@@ -81,6 +81,7 @@ class Solution {
         int start = 0;
         int end = len1;
 
+        // Iterative
         while (start <= end) {
             int pos1 = (start + end) / 2;
             int pos2 = (len1 + len2 + 1) / 2 - pos1;
@@ -109,5 +110,5 @@ class Solution {
     }
 }
 ```
-**Credit:**  
+### Credit:
 <a href="https://www.youtube.com/watch?v=LPFhl65R7ww" target="_blank">Tusher Roy</a>
