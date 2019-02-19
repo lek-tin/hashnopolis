@@ -53,5 +53,32 @@ Output:
 ### Solution:
 ```java
 // Time: O(NlogN)
-
+//https://leetcode.com/problems/factor-combinations/discuss/68040/My-Recursive-DFS-Java-Solution
+class Solution {
+    public List<List<Integer>> getFactors(int n) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        
+        helper(res, new ArrayList<Integer>(), n, 2);
+        
+        return res;
+    }
+    
+    public void helper(List<List<Integer>> res, List<Integer> items, int n, int start) {
+        // Cannot be further factorized, add items to the final result.
+        if (n <= 1) {
+            if (items.size() > 1) {
+                res.add(new ArrayList<Integer>(items));
+                return;
+            }
+        }
+        
+        for (int i = start; i <= n; i++) {
+            if (n % i == 0) {
+                items.add(i);
+                helper(res, items, n / i, i);
+                items.remove(items.size() - 1);
+            }
+        }
+    }
+}
 ```
