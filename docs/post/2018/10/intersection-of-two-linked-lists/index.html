@@ -153,9 +153,9 @@ Notes: If the two linked lists have no intersection at all, return null. The lin
 </ul>
 <div class="site-info">
   <div class="primary-info">
-    <h1>Hashnopolis | Blog about coding, data science and awesome technology</h1>
+    <h1>Computer Science, Data Science and Awesome Technology</h1>
     <footer class="site-footer">
-    <p>© 2017-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    <p>© 2016-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
     
     </footer>
   </div>
@@ -247,6 +247,44 @@ class Solution(object):
             b = b.next if b != None else headA
 
         return a
+</code></pre>
+
+<pre><code class="language-java">/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) {
+            return null;
+        }
+        ListNode a = headA;
+        ListNode b = headB;
+
+        while (a != b) {
+            if (a != null) {
+                a = a.next;
+            } else {
+                a = headB;
+            }
+
+            if (b != null) {
+                b = b.next;
+            } else {
+                b = headA;
+            }
+        }
+
+        return a;
+    }
+}
 </code></pre>
 
   </div>
