@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 15 Feb 2019 17:28:18 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 Feb 2019 10:15:51 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Best Meeting Point</title>
+      <link>http://www.hashnopolis.com/post/2019/02/best-meeting-point/</link>
+      <pubDate>Thu, 21 Feb 2019 10:15:51 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/02/best-meeting-point/</guid>
+      <description>A group of two or more people wants to meet and minimize the total travel distance. You are given a 2D grid of values 0 or 1, where each 1 marks the home of someone in the group. The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|.
+Example: Input: 1 - 0 - 0 - 0 - 1 | | | | | 0 - 0 - 0 - 0 - 0 | | | | | 0 - 0 - 1 - 0 - 0 Output: 6  ###Explanation: Given three people living at (0,0), (0,4), and (2,2): The point (0,2) is an ideal meeting point, as the total travel distance of 2+2+2=6 is minimal.</description>
+    </item>
     
     <item>
       <title>Longest Common Subsequence</title>
@@ -90,6 +100,16 @@ Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp
       <description>Install manually Step 1: Download the source package from the oracle repository. If your computer is 64-bit, download the x64 version; if it is 32-bit, download the x86 version.
 Step 2: Extract from the compressed file and move the package folder to /usr/java. rememeber to run these commands as sudo is not the root user.
 mv downloads-folder/jdk-&amp;lt;version&amp;gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk-&amp;lt;version&amp;gt;-linux-xxx.tar.gz rm jdk-&amp;lt;version&amp;gt;-linux-xxx.tar.gz  Step 3: Add the java path to the ~/.</description>
+    </item>
+    
+    <item>
+      <title>House Robber</title>
+      <link>http://www.hashnopolis.com/post/2018/10/house-robber/</link>
+      <pubDate>Thu, 25 Oct 2018 23:45:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/house-robber/</guid>
+      <description>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</description>
     </item>
     
   </channel>
