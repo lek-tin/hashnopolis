@@ -176,6 +176,35 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-preorder-traversal/">Binary Tree Preorder Traversal</a></h2>
+
+      <p>Given a binary tree, return the preorder traversal of its nodes’ values.
+Example:
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow up: Recursive solution is trivial, could you do it iteratively?
+Solution:
+# Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; if root is None: return [] return [root.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-postorder-traversal/">Binary Tree Postorder Traversal</a></h2>
 
       <p>Given a binary tree, return the postorder traversal of its nodes’ values.
@@ -413,34 +442,6 @@ The same repeated number may be chosen from candidates unlimited number of times
 Note:
 All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations. Example 1:
 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/combinations/">Combinations</a></h2>
-
-      <p>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example:
-Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution:
-class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
 
       <p class="meta">
         
