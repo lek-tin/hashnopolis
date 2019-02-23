@@ -2,10 +2,10 @@
 title: "House Robber III"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "java"]
+tags: ["leetcode", "java", "binary-tree", "memoization"]
 categories: ["algorithm"]
 date: 2019-02-21T20:56:55-08:00
-draft: true
+draft: false
 archive: false
 ---
 The thief has found himself a new place for his thievery again. There is only one entrance to this area, called the "root." Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that "all houses in this place forms a binary tree". It will automatically contact the police if **two directly-linked** houses were broken into on the same night.
@@ -40,3 +40,52 @@ Explanation: Maximum amount of money the thief can rob = 4 + 5 = 9.
 ```
 ### Solution:
 ```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+     public int rob(TreeNode root) {
+          if (root == null) {
+               return 0;
+          }
+
+          HashMap<TreeNode, Integer> memo = new HashMap<TreeNode, Integer>();
+
+          return helper(root, memo);
+     }
+
+     public int helper(TreeNode node, HashMap<TreeNode, Integer> memo) {
+     if (node == null) {
+          return 0;
+     }
+
+     if (memo.containsKey(node)) {
+          return memo.get(node);
+     }
+
+     int res = 0;
+     int left_with     = helper(node.left, memo);
+     int right_with    = helper(node.right, memo);
+     int maxWithoutRoot = left_with + right_with;
+     int maxWithRoot = 0;
+
+     if (node.left != null) {
+          maxWithRoot += helper(node.left.left, memo) + helper(node.left.right, memo);
+     }
+
+     if (node.right != null) {
+          maxWithRoot += helper(node.right.left, memo) + helper(node.right.right, memo);
+     }
+
+     res = Math.max(maxWithRoot + node.val, maxWithoutRoot);
+
+     return res;
+     }
+}
+```
