@@ -21,6 +21,7 @@ Explanation: The longest increasing subsequence is [2,3,7,101], therefore the le
 - Your algorithm should run in `O(n2)` complexity.
 Follow up: Could you improve it to `O(n log n)` time complexity?
 ### Solution:**
+Bottom-up solution:
 ```python
 # Time: O(n^2)
 # Iterative
@@ -48,7 +49,6 @@ class Solution:
 ```java
 class Solution {
     public int lengthOfLIS(int[] nums) {
-
         if (nums == null || nums.length == 0) {
             return 0;
         }
@@ -64,6 +64,41 @@ class Solution {
                     counts[i] = Math.max(counts[i], counts[j] + 1);
                 }
             }
+        }
+
+        for (int count: counts) {
+            if (count > longest) {
+                longest = count;
+            }
+        }
+
+        return longest;
+    }
+}
+```
+```java
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
+        int[] counts = new int[nums.length];
+        int longest = 0;
+        Arrays.fill(counts, 0);
+        counts[0] = 1;
+
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = 0; j < i; j++) {
+                // find longest increasing subsequence that ends with nums[j]
+			    // where nums[j] is less than the current element nums[i]
+                // After the ith iteration, counts[i] is the biggest
+                if (nums[j] < nums[i] && counts[j] > counts[i]) {
+				    counts[i] = counts[j];
+                }
+            }
+            // include nums[i] in counts
+		    counts[i]++;
         }
 
         for (int count: counts) {

@@ -48,3 +48,50 @@ class Solution:
 
         return list(res)
 ```
+```java
+class Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+
+        if (nums1.length < nums2.length) {
+            return intersection(nums2, nums1);
+        }
+
+        List<Integer> intersection = new ArrayList<>();
+        HashMap<Integer, Integer> map1 = new HashMap<>();
+        HashMap<Integer, Integer> map2 = new HashMap<>();
+
+        for (int num: nums1) {
+            if (map1.get(num) == null) {
+                map1.put(num, 1);
+            } else {
+                map1.put(num, map1.get(num)+1);
+            }
+        }
+
+        for (int num: nums2) {
+            if (map2.get(num) == null) {
+                map2.put(num, 1);
+            } else {
+                map2.put(num, map2.get(num)+1);
+            }
+        }
+
+        for (Map.Entry<Integer, Integer> entry: map1.entrySet()) {
+            int numOfElements1 = entry.getValue();
+            int numOfElements2 = map2.get(entry.getKey()) == null ? 0 : map2.get(entry.getKey());
+
+            if (Math.min(numOfElements1, numOfElements2) > 0) {
+                intersection.add(entry.getKey());
+            }
+
+        }
+
+        int[] res = new int[intersection.size()];
+        for (int i = 0; i < intersection.size(); i++) {
+            res[i] = intersection.get(i);
+        }
+
+        return res;
+    }
+}
+```

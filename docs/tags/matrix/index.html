@@ -5,7 +5,7 @@
 
   
   <title>
-        Hashnopolis | Blog about coding, data science and awesome technology
+        Hashnopolis | Computer Science, Data Science and Awesome Technology
       </title>
 
     
@@ -146,9 +146,9 @@
 </ul>
 <div class="site-info">
   <div class="primary-info">
-    <h1>Hashnopolis | Blog about coding, data science and awesome technology</h1>
+    <h1>Computer Science, Data Science and Awesome Technology</h1>
     <footer class="site-footer">
-    <p>© 2017-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    <p>© 2016-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
     
     </footer>
   </div>
@@ -211,7 +211,7 @@ Example: Input:
 1 1 1 1 1
 1 0 0 1 0
 Output: 4 Solution:
-class Solution: def maximalSquare(self, matrix): &#34;&#34;&#34; :type matrix: List[List[str]] :rtype: int &#34;&#34;&#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &#34;1&#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &#34;1&#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &#34;0&#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin &#43; 1 if matrix[i][j] &gt; area: area = matrix[i][j] return area**2  </p>
+class Solution: def maximalSquare(self, matrix): &#34;&#34;&#34; :type matrix: List[List[str]] :rtype: int &#34;&#34;&#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &#34;1&#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &#34;1&#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &#34;0&#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin &#43; 1 if matrix[i][j] &gt; area: area = matrix[i][j] return area**2  class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</p>
 
       <p class="meta">
         
@@ -223,7 +223,7 @@ class Solution: def maximalSquare(self, matrix): &#34;&#34;&#34; :type matrix: L
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
 Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police." />
-  <meta name="keywords" content="leetcode python " />
+  <meta name="keywords" content="leetcode python java dynamic-programming " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -149,9 +149,9 @@ Given a list of non-negative integers representing the amount of money of each h
 </ul>
 <div class="site-info">
   <div class="primary-info">
-    <h1>Hashnopolis | Blog about coding, data science and awesome technology</h1>
+    <h1>Computer Science, Data Science and Awesome Technology</h1>
     <footer class="site-footer">
-    <p>© 2017-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    <p>© 2016-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
     
     </footer>
   </div>
@@ -180,6 +180,10 @@ Given a list of non-negative integers representing the amount of money of each h
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
           "<a href="/tags/python"><strong>python</strong></a>",
+        
+          "<a href="/tags/java"><strong>java</strong></a>",
+        
+          "<a href="/tags/dynamic-programming"><strong>dynamic-programming</strong></a>",
         
         <i class="small material-icons">access_time</i> 2-min read
       </p>
@@ -226,6 +230,30 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
             res = max(temp + num, prev)
 
         return res
+</code></pre>
+
+<pre><code class="language-java">class Solution {
+    public int rob(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        // h[0] = nums[0]
+        // h[1] = max(nums[0], nums[1])
+        // h[i] = max(h[i-2] + nums[i], h[i-1])
+        int[] h = new int[nums.length];
+        for (int i = 0; i&lt; nums.length; i++) {
+            if (i == 0) {
+                h[0] = nums[0];
+            } else if (i == 1) {
+                h[1] = Math.max(nums[0], nums[1]);
+            } else {
+                h[i] = Math.max(h[i-2] + nums[i], h[i-1]);
+            }
+        }
+
+        return h[h.length - 1];
+    }
+}
 </code></pre>
 
   </div>

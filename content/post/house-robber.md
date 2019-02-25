@@ -2,7 +2,7 @@
 title: "House Robber"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "java", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-10-25T23:45:32-07:00
 draft: false
@@ -47,4 +47,28 @@ class Solution(object):
             res = max(temp + num, prev)
 
         return res
+```
+```java
+class Solution {
+    public int rob(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        // h[0] = nums[0]
+        // h[1] = max(nums[0], nums[1])
+        // h[i] = max(h[i-2] + nums[i], h[i-1])
+        int[] h = new int[nums.length];
+        for (int i = 0; i< nums.length; i++) {
+            if (i == 0) {
+                h[0] = nums[0];
+            } else if (i == 1) {
+                h[1] = Math.max(nums[0], nums[1]);
+            } else {
+                h[i] = Math.max(h[i-2] + nums[i], h[i-1]);
+            }
+        }
+
+        return h[h.length - 1];
+    }
+}
 ```
