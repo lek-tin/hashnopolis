@@ -210,6 +210,8 @@ Follow up: Could you improve it to <code>O(n log n)</code> time complexity?</p>
 
 <h3 id="solution">Solution:**</h3>
 
+<p>Bottom-up solution:</p>
+
 <pre><code class="language-python"># Time: O(n^2)
 # Iterative
 class Solution:
@@ -236,7 +238,6 @@ def lengthOfLIS(self, nums):
 
 <pre><code class="language-java">class Solution {
 public int lengthOfLIS(int[] nums) {
-
     if (nums == null || nums.length == 0) {
         return 0;
     }
@@ -252,6 +253,41 @@ public int lengthOfLIS(int[] nums) {
                 counts[i] = Math.max(counts[i], counts[j] + 1);
             }
         }
+    }
+
+    for (int count: counts) {
+        if (count &gt; longest) {
+            longest = count;
+        }
+    }
+
+    return longest;
+}
+}
+</code></pre>
+
+<pre><code class="language-java">class Solution {
+public int lengthOfLIS(int[] nums) {
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
+
+    int[] counts = new int[nums.length];
+    int longest = 0;
+    Arrays.fill(counts, 0);
+    counts[0] = 1;
+
+    for (int i = 1; i &lt; nums.length; i++) {
+        for (int j = 0; j &lt; i; j++) {
+            // find longest increasing subsequence that ends with nums[j]
+			    // where nums[j] is less than the current element nums[i]
+            // After the ith iteration, counts[i] is the biggest
+            if (nums[j] &lt; nums[i] &amp;&amp; counts[j] &gt; counts[i]) {
+				    counts[i] = counts[j];
+            }
+        }
+        // include nums[i] in counts
+		    counts[i]++;
     }
 
     for (int count: counts) {
