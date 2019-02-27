@@ -2,7 +2,7 @@
 title: "Maximal Rectangle"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dynamic-programming"]
+tags: ["leetcode", "java", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-02-25T00:41:33-08:00
 draft: false

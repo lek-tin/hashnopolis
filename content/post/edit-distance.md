@@ -2,10 +2,10 @@
 title: "Edit Distance"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-01-17T23:56:53-08:00
-draft: true
+draft: false
 archive: false
 ---
 Given two words _word1_ and _word2_, find the minimum number of operations required to convert _word1_ to _word2_.
@@ -38,30 +38,33 @@ exection -> execution (insert 'u')
 ```java
 class Solution {
     public int minDistance(String word1, String word2) {
-        // if (word2.length() == 0 || word1.length() == 0) {
-        //     return 0;
-        // }
-        int[][] dp = new int[word2.length()+1][word1.length()+1];
+        if (word1 == null || word2 == null) return -1;
+        if (word1.length() == 0) return word2.length();
+        if (word2.length() == 0) return word1.length();
 
-        for (int i = 0; i < word1.length(); i++) {
+        char[] c1 = word1.toCharArray();
+        char[] c2 = word2.toCharArray();
+        int[][] dp = new int[c2.length+1][c1.length+1];
+
+        for (int i = 1; i <= c1.length; i++) {
             dp[0][i] = i;
         }
 
-        for (int i = 1; i < word2.length(); i++) {
+        for (int i = 1; i <= c2.length; i++) {
             dp[i][0] = i;
         }
 
-        for (int i = 1; i <= word2.length(); i++) {
-            for (int j = 1; j <= word1.length(); j++) {
-                if (word1.charAt(j) == word2.charAt(i)) {
-                    dp[i][j] = dp[i-1][j-1];
+        for (int i = 0; i < c2.length; i++) {
+            for (int j = 0; j < c1.length; j++) {
+                if (c1[j] == c2[i]) {
+                    dp[i+1][j+1] = dp[i][j];
                 } else {
-                    dp[i][j] = 1 + Math.min(Math.min(dp[i-1][j], dp[i][j-1]), dp[i-1][j-1]);
+                    dp[i+1][j+1] = 1 + Math.min(Math.min(dp[i][j+1], dp[i+1][j]), dp[i][j]);
                 }
             }
         }
 
-        return dp[word2.length()][word1.length()];
+        return dp[c2.length][c1.length];
     }
 }
 ```
