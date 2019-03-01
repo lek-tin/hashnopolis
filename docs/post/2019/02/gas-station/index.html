@@ -5,7 +5,7 @@
 
   
   <title>
-        Minimum Depth of Binary Tree | Hashnopolis
+        Gas Station | Hashnopolis
       </title>
 
     
@@ -16,22 +16,18 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Note: A leaf is a node with no children.
-Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 2.  Solution: /** * Definition for a binary tree node." />
-  <meta name="keywords" content="leetcode java binary-tree depth-first-search " />
+  <meta name="description" content="There are N gas stations along a circular route, where the amount of gas at station i is gas[i].
+You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i&#43;1). You begin the journey with an empty tank at one of the gas stations.
+Return the starting gas station&amp;rsquo;s index if you can travel around the circuit once in the clockwise direction, otherwise return -1." />
+  <meta name="keywords" content="leetcode greedy-algorithm " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Minimum Depth of Binary Tree" />
-    <meta name="twitter:description" content="Given a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Note: A leaf is a node with no children.
-Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 2.  Solution: /** * Definition for a binary tree node." />
+    <meta name="twitter:title" content="Gas Station" />
+    <meta name="twitter:description" content="There are N gas stations along a circular route, where the amount of gas at station i is gas[i].
+You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i&#43;1). You begin the journey with an empty tank at one of the gas stations.
+Return the starting gas station&amp;rsquo;s index if you can travel around the circuit once in the clockwise direction, otherwise return -1." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -41,7 +37,7 @@ Example: Given binary tree [3,9,20,null,null,15,7],
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/02/gas-station/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -185,57 +181,66 @@ Example: Given binary tree [3,9,20,null,null,15,7],
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/java"><strong>java</strong></a>",
+          "<a href="/tags/greedy-algorithm"><strong>greedy-algorithm</strong></a>",
         
-          "<a href="/tags/binary-tree"><strong>binary-tree</strong></a>",
-        
-          "<a href="/tags/depth-first-search"><strong>depth-first-search</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/minimum-depth-of-binary-tree.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Minimum Depth of Binary Tree</h1>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/gas-station.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 52px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Gas Station</h1>
       
 
-<p>Given a binary tree, find its minimum depth.</p>
+<p>There are <code>N</code> gas stations along a circular route, where the amount of gas at station <code>i</code> is <code>gas[i]</code>.</p>
 
-<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
+<p>You have a car with an unlimited gas tank and it costs <code>cost[i]</code> of gas to travel from station <code>i</code> to its next station <code>(i+1)</code>. You begin the journey with an empty tank at one of the gas stations.</p>
 
-<p>Note: A leaf is a node with no children.</p>
+<p>Return the starting gas station&rsquo;s index if you can travel around the circuit once in the clockwise direction, otherwise return <code>-1</code>.</p>
 
-<h3 id="example">Example:</h3>
+<h3 id="note">Note:</h3>
 
-<p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
+<ol>
+<li>If there exists a solution, it is guaranteed to be unique.</li>
+<li>Both input arrays are non-empty and have the same length.</li>
+<li>Each element in the input arrays is a non-negative integer.</li>
+</ol>
 
-<pre><code>    3
-   / \
-  9  20
-    /  \
-   15   7
-return its minimum depth = 2.
+<h3 id="example-1">Example 1:</h3>
+
+<pre><code>Input: 
+gas  = [1,2,3,4,5]
+cost = [3,4,5,1,2]
+
+Output: 3
+
+Explanation:
+Start at station 3 (index 3) and fill up with 4 unit of gas. Your tank = 0 + 4 = 4
+Travel to station 4. Your tank = 4 - 1 + 5 = 8
+Travel to station 0. Your tank = 8 - 2 + 1 = 7
+Travel to station 1. Your tank = 7 - 3 + 2 = 6
+Travel to station 2. Your tank = 6 - 4 + 3 = 5
+Travel to station 3. The cost is 5. Your gas is just enough to travel back to station 3.
+Therefore, return 3 as the starting index.
+</code></pre>
+
+<h3 id="example-2">Example 2:</h3>
+
+<pre><code>Input: 
+gas  = [2,3,4]
+cost = [3,4,3]
+
+Output: -1
+
+Explanation:
+You can't start at station 0 or 1, as there is not enough gas to travel to the next station.
+Let's start at station 2 and fill up with 4 unit of gas. Your tank = 0 + 4 = 4
+Travel to station 0. Your tank = 4 - 3 + 2 = 3
+Travel to station 1. Your tank = 3 - 3 + 3 = 3
+You cannot travel back to station 2, as it requires 4 unit of gas but you only have 3.
+Therefore, you can't travel around the circuit once no matter where you start.
 </code></pre>
 
 <h3 id="solution">Solution:</h3>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-
-    public int minDepth(TreeNode root) {
-        if (root == null) return 0;
-        int left = minDepth(root.left);
-        int right = minDepth(root.right);
-        return (left == 0 || right == 0) ? left + right + 1 : Math.min(left, right) + 1;
-    }
-
-}
+<pre><code class="language-java">
 </code></pre>
 
   </div>
