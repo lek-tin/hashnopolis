@@ -240,7 +240,22 @@ Therefore, you can't travel around the circuit once no matter where you start.
 
 <h3 id="solution">Solution:</h3>
 
-<pre><code class="language-java">
+<pre><code class="language-java">class Solution {
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        int short = 0, start = 0, tank = 0;
+
+        for (int i = 0; i &lt; gas.length; i++) {
+            tank += gas[i] - cost[i];
+            if (tank &lt; 0) {
+                short += tank;
+                start = i + 1;
+                tank = 0;
+            }
+        }
+
+        return tank + short &gt;= 0 ? start : -1;
+    }
+}
 </code></pre>
 
   </div>
