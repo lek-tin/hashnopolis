@@ -55,5 +55,20 @@ Therefore, you can't travel around the circuit once no matter where you start.
 
 ### Solution:
 ```java
+class Solution {
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        int short = 0, start = 0, tank = 0;
 
+        for (int i = 0; i < gas.length; i++) {
+            tank += gas[i] - cost[i];
+            if (tank < 0) {
+                short += tank;
+                start = i + 1;
+                tank = 0;
+            }
+        }
+
+        return tank + short >= 0 ? start : -1;
+    }
+}
 ```
