@@ -7,10 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 28 Feb 2019 23:51:02 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 Mar 2019 12:30:04 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Meeting Room</title>
+      <link>http://www.hashnopolis.com/post/2019/03/meeting-room/</link>
+      <pubDate>Sat, 02 Mar 2019 12:30:04 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/meeting-room/</guid>
+      <description>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &amp;lt; ei), determine if a person could attend all meetings.
+Example 1: Input: [[0,30],[5,10],[15,20]] Output: false  Example 2: Input: [[7,10],[2,4]] Output: true  Solution /** * Definition for an interval. * public class Interval { * int start; * int end; * Interval() { start = 0; end = 0; } * Interval(int s, int e) { start = s; end = e; } * } */ class Solution { public boolean canAttendMeetings(Interval[] intervals) { Arrays.</description>
+    </item>
+    
+    <item>
+      <title>Unique Paths II</title>
+      <link>http://www.hashnopolis.com/post/2019/03/unique-paths-ii/</link>
+      <pubDate>Sat, 02 Mar 2019 12:24:17 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/unique-paths-ii/</guid>
+      <description>A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
+Now consider if some obstacles are added to the grids. How many unique paths would there be?</description>
+    </item>
     
     <item>
       <title>Gas Station</title>
@@ -42,7 +63,7 @@ Example: Input: {&amp;quot;$id&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;neighbo
       <description>Given n non-negative integers representing the histogram&amp;rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
 Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
 The largest rectangle is shown in the shaded area, which has area = 10 unit.
-Example: Input: [2,1,5,6,2,3] Output: 10  Solution: class Solution { public int largestRectangleArea(int[] heights) { if (heights == null || heights.</description>
+Example: Input: [2,1,5,6,2,3] Output: 10  Solution: Push height into the stack in ascending order.</description>
     </item>
     
     <item>
