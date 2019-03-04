@@ -22,6 +22,7 @@ Input: [2,1,5,6,2,3]
 Output: 10
 ```
 ### Solution:
+Push height into the stack in ascending order. When we encounter a height that is shorter than te top of the stack, we start to calculate area by popping heights out of the stack.
 ```java
 class Solution {
     public int largestRectangleArea(int[] heights) {
