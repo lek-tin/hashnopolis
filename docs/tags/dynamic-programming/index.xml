@@ -7,10 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 21 Feb 2019 19:39:05 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 Mar 2019 12:24:17 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Unique Paths II</title>
+      <link>http://www.hashnopolis.com/post/2019/03/unique-paths-ii/</link>
+      <pubDate>Sat, 02 Mar 2019 12:24:17 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/unique-paths-ii/</guid>
+      <description>A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
+Now consider if some obstacles are added to the grids. How many unique paths would there be?</description>
+    </item>
+    
+    <item>
+      <title>Maximal Rectangle</title>
+      <link>http://www.hashnopolis.com/post/2019/02/maximal-rectangle/</link>
+      <pubDate>Mon, 25 Feb 2019 00:41:33 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/02/maximal-rectangle/</guid>
+      <description>Given a 2D binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest rectangle containing only 1&amp;rsquo;s and return its area.
+Example: Input: [ [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;0&amp;quot;], [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;], [&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;], [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;] ] Output: 6  Hint Height:
+1 0 1 0 0 2 0 2 1 1 3 1 3 2 2 4 0 0 3 0  Left:
+0 0 2 0 0 0 0 2 2 2 0 0 2 2 2 0 0 0 3 0  Right:</description>
+    </item>
     
     <item>
       <title>House Robber II</title>
@@ -55,6 +78,17 @@ Example 1:
 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2:
 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution: Dynamic Programming
 # https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start + max_len] return solution  Dynamic Programming</description>
+    </item>
+    
+    <item>
+      <title>Edit Distance</title>
+      <link>http://www.hashnopolis.com/post/2019/01/edit-distance/</link>
+      <pubDate>Thu, 17 Jan 2019 23:56:53 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/edit-distance/</guid>
+      <description>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
+Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot; Output: 3 Explanation: horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&amp;gt; rose (remove &#39;r&#39;) rose -&amp;gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot; Output: 5 Explanation: intention -&amp;gt; inention (remove &#39;t&#39;) inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&amp;gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</description>
     </item>
     
     <item>

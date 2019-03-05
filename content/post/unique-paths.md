@@ -2,7 +2,7 @@
 title: "Unique Paths"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dynamic-programming"]
+tags: ["leetcode", "python", "java", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-09-15T12:54:17-07:00
 draft: false
@@ -36,6 +36,8 @@ Output: 28
 ```
 **Solution:**
 ```python
+# Time: O(n*m)
+# Space: O(n*m)
 class Solution:
     def uniquePaths(self, m, n):
         """
@@ -52,4 +54,27 @@ class Solution:
                     grid[row][col] = grid[row][col-1] + grid[row-1][col]
         print(grid[n-1][m-1])
         return(grid[n-1][m-1])
+```
+```java
+// Time: O(m*n)
+// Space: O(n)
+class Solution {
+    public int uniquePaths(int m, int n) {
+        if (m == 0 || n == 0) {
+            return 0;
+        }
+
+        int rows = m;
+        int cols = n;
+        int[] res = new int[cols];
+        res[0] = 1;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 1; j < cols; j++) {
+                res[j] += res[j-1];
+            }
+        }
+        return res[cols-1];
+    }
+}
 ```

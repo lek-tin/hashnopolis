@@ -98,6 +98,16 @@ pre {
   border-radius: 2px;
 } */
 
+.list-footer .pagination a {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+
+.list-footer .pagination a:hover {
+  color: #7679EC;
+  border-color: #7679EC;
+}
+
 .meta a {
   text-transform: none;
 }
@@ -159,9 +169,15 @@ pre {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .github-corner svg {
+    top: 450px !important;
+  }
   .menu-logo {
     display: inline-block;
     margin: 0 30px 15px;
+  }
+  .sidebar .site-info {
+    display: none;
   }
 }
 
@@ -178,7 +194,7 @@ pre {
     width: auto
   }
   .main-content {
-    padding: 10px 50px;
+    padding: 30px 50px;
   }
 }
 @media (max-width: 767px) {
