@@ -120,7 +120,7 @@ Example: Input: {&amp;quot;$id&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;neighbo
       <div class="row">
 
         <section id="sideber" class="sidebar">
-          <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
   <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
@@ -254,6 +254,53 @@ class Solution {
         }
 
         return dup;
+    }
+}
+</code></pre>
+
+<p>Breadth first search</p>
+
+<pre><code class="language-java">/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public List&lt;Node&gt; neighbors;
+
+    public Node() {}
+
+    public Node(int _val,List&lt;Node&gt; _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+};
+*/
+class Solution {
+    public Node cloneGraph(Node node) {
+        if (node == null) return null;
+
+        Queue&lt;Node&gt; visited = new LinkedList&lt;Node&gt;();
+        HashMap&lt;Node, Node&gt; map = new HashMap&lt;Node, Node&gt;();
+
+        visited.add(node);
+        Node dup = new Node(node.val, new LinkedList&lt;Node&gt;());
+        map.put(node, dup);
+
+        while (!visited.isEmpty()) {
+            Node candidate = visited.poll();
+            for (Node neighbor: candidate.neighbors) {
+                Node copy = map.get(neighbor);
+                if (copy == null) {
+                    // If copy doesn't exist, we create a new node with the value of the current neighbor and assign it to copy.
+                    visited.add(neighbor);
+                    copy = new Node(neighbor.val, new LinkedList&lt;Node&gt;());
+                    map.put(neighbor, copy);
+                }
+                // map.get(candidate): the duplicate
+                map.get(candidate).neighbors.add(copy);
+            }
+        }
+
+        return map.get(node);
     }
 }
 </code></pre>
