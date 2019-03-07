@@ -70,3 +70,49 @@ class Solution {
     }
 }
 ```
+Breadth first search
+```java
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public List<Node> neighbors;
+
+    public Node() {}
+
+    public Node(int _val,List<Node> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+};
+*/
+class Solution {
+    public Node cloneGraph(Node node) {
+        if (node == null) return null;
+
+        Queue<Node> visited = new LinkedList<Node>();
+        HashMap<Node, Node> map = new HashMap<Node, Node>();
+
+        visited.add(node);
+        Node dup = new Node(node.val, new LinkedList<Node>());
+        map.put(node, dup);
+
+        while (!visited.isEmpty()) {
+            Node candidate = visited.poll();
+            for (Node neighbor: candidate.neighbors) {
+                Node copy = map.get(neighbor);
+                if (copy == null) {
+                    // If copy doesn't exist, we create a new node with the value of the current neighbor and assign it to copy.
+                    visited.add(neighbor);
+                    copy = new Node(neighbor.val, new LinkedList<Node>());
+                    map.put(neighbor, copy);
+                }
+                // map.get(candidate): the duplicate
+                map.get(candidate).neighbors.add(copy);
+            }
+        }
+
+        return map.get(node);
+    }
+}
+```
