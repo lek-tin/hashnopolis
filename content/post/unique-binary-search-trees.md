@@ -2,7 +2,7 @@
 title: "Unique Binary Search Trees"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "bst"]
+tags: ["leetcode", "python", "bst", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-09-16T15:06:01-07:00
 draft: false
