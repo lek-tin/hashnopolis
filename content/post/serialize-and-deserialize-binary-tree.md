@@ -74,3 +74,61 @@ class Codec:
 # codec = Codec()
 # codec.deserialize(codec.serialize(root))
 ```
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Codec {
+
+    private Queue search(TreeNode node, Queue<String> nodes) {
+        if (node != null) {
+            nodes.add(Integer.toString(node.val));
+            search(node.left, nodes);
+            search(node.right, nodes);
+        } else {
+            nodes.add("#");
+        }
+        return nodes;
+    }
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        String res = "";
+        Queue<String> nodes = new LinkedList<>();
+
+        search(root, nodes);
+
+        while (!nodes.isEmpty()) {
+            res += "" + nodes.poll();
+        }
+        return res;
+    }
+
+    private TreeNode build(Queue<String> nodes) {
+        String val = nodes.poll();
+        if (val.equals("#")) {
+            return null;
+        }
+        TreeNode node = new TreeNode(Integer.parseInt(val));
+        // Build executing left
+        node.left = build(nodes);
+        node.right = build(nodes);
+        return node;
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        Queue<String> nodes = new LinkedList<>(Arrays.asList(data.split("")));
+        return build(nodes);
+    }
+}
+
+// Your Codec object will be instantiated and called as such:
+// Codec codec = new Codec();
+// codec.deserialize(codec.serialize(root));
+```
