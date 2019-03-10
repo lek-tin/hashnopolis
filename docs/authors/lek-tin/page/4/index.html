@@ -133,8 +133,8 @@
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
-  <li><a href="/categories/big-data">Big Data</a></li>
-  <li><a href="/categories/hpc">HPC</a></li>
+  
+  
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
@@ -172,6 +172,94 @@
   <div>
     
     
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-common-prefix/">Longest Common Prefix</a></h2>
+
+      <p>Write a function to find the longest common prefix string amongst an array of strings.
+If there is no common prefix, return an empty string “”.
+Example 1:
+Input: [&#34;flower&#34;,&#34;flow&#34;,&#34;flight&#34;] Output: &#34;fl&#34;  Example 2:
+Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explanation: There is no common prefix among the input strings.  Note: All given inputs are in lowercase letters a-z. Note:
+# Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: str &#34;&#34;&#34; if not strs or len(strs) == 0: return &#34;&#34; res = strs[0] for s in strs: # string.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/">Longest Palindromic Substring</a></h2>
+
+      <p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+Example 1:
+Input: &#34;babad&#34; Output: &#34;bab&#34; Note: &#34;aba&#34; is also a valid answer.  Example 2:
+Input: &#34;cbbd&#34; Output: &#34;bb&#34;  Solution: Dynamic Programming
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &#34;&#34;&#34; :type s: str :rtype: str &#34;&#34;&#34; str_len = len(s) if str_len == 0: return &#34;&#34; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start &#43; max_len] return solution  Dynamic Programming</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-substring-without-repeating-characters/">Longest Substring Without Repeating Characters</a></h2>
+
+      <p>Given a string, find the length of the longest substring without repeating characters.
+*Example 1:
+Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3.  *Example 2:
+Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1.  *Example 3:
+Input: &#34;pwwkew&#34; Output: 3 Explanation: The answer is &#34;wke&#34;, with the length of 3. Note that the answer must be a substring, &#34;pwke&#34; is a subsequence and not a substring.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
       
         
 <article class="post">
@@ -360,89 +448,6 @@ Solution:
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/">Binary Tree Vertical Order Traversal</a></h2>
-
-      <p>Given a binary tree, return the vertical order traversal of its nodes’ values. (ie, from top to bottom, column by column).
-If two nodes are in the same row and column, the order should be from left to right.
-Examples 1:
-Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
-Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/">Find K Closest Elements</a></h2>
-
-      <p>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1:
-Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2:
-Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive and will always be smaller than the length of the sorted array.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
-
-      <p>Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example:** Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note:**  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

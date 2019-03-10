@@ -133,8 +133,8 @@
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
-  <li><a href="/categories/big-data">Big Data</a></li>
-  <li><a href="/categories/hpc">HPC</a></li>
+  
+  
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
@@ -172,6 +172,88 @@
   <div>
     
     
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/">Merge Two Sorted Lists</a></h2>
+
+      <p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+Example:
+Input: 1-&gt;2-&gt;4, 1-&gt;3-&gt;4 Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4  Solution:
+class Solution: def mergeTwoLists(self, l1, l2): &#34;&#34;&#34; :type l1: ListNode :type l2: ListNode :rtype: ListNode &#34;&#34;&#34; if l1 == None: return l2 if l2 == None: return l1 root = ListNode(0) temp = root while l1 and l2: if l1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/merge-two-binary-trees/">Merge Two Binary Trees</a></h2>
+
+      <p>Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.
+You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/multiply-strings/">Multiply Strings</a></h2>
+
+      <p>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
+Example 1:
+Input: num1 = &#34;2&#34;, num2 = &#34;3&#34; Output: &#34;6&#34;  Example 2:
+Input: num1 = &#34;123&#34;, num2 = &#34;456&#34; Output: &#34;56088&#34;  Note: - The length of both num1 and num2 is &lt; 110. - Both num1 and num2 contain only digits 0-9. - Both num1 and num2 do not contain any leading zero, except the number 0 itself.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
       
         
 <article class="post">
@@ -361,87 +443,6 @@ board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/intersection-of-two-linked-lists/">Intersection of Two Linked Lists</a></h2>
-
-      <p>Write a program to find the node at which the intersection of two singly linked lists begins.
-For example, the following two linked lists:
-A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
-Notes: If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/min-stack/">Min Stack</a></h2>
-
-      <p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) – Push element x onto stack. - pop() – Removes the element on top of the stack. - top() – Get the top element. - getMin() – Retrieve the minimum element in the stack. Example:
-MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&gt; Returns -3. minStack.pop(); minStack.top(); --&gt; Returns 0. minStack.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/word-break/">Word Break</a></h2>
-
-      <p>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
-Note: - The same word in the dictionary may be reused multiple times in the segmentation. - You may assume the dictionary does not contain duplicate words. Example 1:
-Input: s = &#34;leetcode&#34;, wordDict = [&#34;leet&#34;, &#34;code&#34;] Output: true Explanation: Return true because &#34;leetcode&#34; can be segmented as &#34;leet code&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
