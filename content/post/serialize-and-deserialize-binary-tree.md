@@ -92,21 +92,26 @@ public class Codec {
             search(node.left, nodes);
             search(node.right, nodes);
         } else {
+            // If null node, stop search further. Add "#" to nodes.
             nodes.add("#");
         }
         return nodes;
     }
+
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        String res = "";
+        StringBuilder res = new StringBuilder();
         Queue<String> nodes = new LinkedList<>();
 
         search(root, nodes);
 
         while (!nodes.isEmpty()) {
-            res += "" + nodes.poll();
+            res.append(nodes.poll());
+            res.append(",");
         }
-        return res;
+        // Delete the trailing ","
+        res.deleteCharAt(res.length()-1);
+        return res.toString();
     }
 
     private TreeNode build(Queue<String> nodes) {
@@ -115,7 +120,7 @@ public class Codec {
             return null;
         }
         TreeNode node = new TreeNode(Integer.parseInt(val));
-        // Build executing left
+        // Build left node then right node
         node.left = build(nodes);
         node.right = build(nodes);
         return node;
@@ -123,8 +128,88 @@ public class Codec {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        Queue<String> nodes = new LinkedList<>(Arrays.asList(data.split("")));
+        Queue<String> nodes = new LinkedList<>(Arrays.asList(data.split(",")));
         return build(nodes);
+    }
+}
+
+// Your Codec object will be instantiated and called as such:
+// Codec codec = new Codec();
+// codec.deserialize(codec.serialize(root));
+```
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Codec {
+
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        StringBuilder res = new StringBuilder();
+
+        LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
+
+        queue.add(root);
+        while(!queue.isEmpty()){
+            TreeNode t = queue.poll();
+            if(t!=null){
+                res.append(Integer.toString(t.val) + ",");
+                queue.add(t.left);
+                queue.add(t.right);
+            }else{
+                res.append("#,");
+            }
+        }
+        // Delete the last ","
+        res.deleteCharAt(res.length()-1);
+
+        return res.toString();
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        if(data==null || data.length()==0 || data.substring(0, 1).equals("#")) return null;
+
+        String[] strs = data.split(",");
+        TreeNode root = new TreeNode(Integer.parseInt(strs[0]));
+
+        LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.add(root);
+
+        // Skip root in strs
+        int i=1;
+        // i++: we move level by level. At each level, left to right
+        while(!queue.isEmpty()){
+            TreeNode node = queue.poll();
+
+            if(node == null) continue;
+
+            if(!strs[i].equals("#")){
+                node.left = new TreeNode(Integer.parseInt(strs[i]));
+                queue.offer(node.left);
+            } else {
+                node.left = null;
+                queue.offer(null);
+            }
+            i++;
+
+            if(!strs[i].equals("#")){
+                node.right = new TreeNode(Integer.parseInt(strs[i]));
+                queue.offer(node.right);
+            } else {
+                node.right = null;
+                queue.offer(null);
+            }
+            i++;
+        }
+
+        return root;
     }
 }
 
