@@ -5,7 +5,7 @@
 
   
   <title>
-        Kth Largest Element in an Array | Hashnopolis
+        Boundary of Binary Tree | Hashnopolis
       </title>
 
     
@@ -16,18 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
-Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)" />
-  <meta name="keywords" content="leetcode python array two-pointers " />
+  <meta name="description" content="Given a binary tree, return the values of its boundary in anti-clockwise direction starting from root. Boundary includes left boundary, leaves, and right boundary in order without duplicate nodes.
+Left boundary is defined as the path from root to the left-most node. Right boundary is defined as the path from root to the right-most node. If the root doesn&amp;rsquo;t have left subtree or right subtree, then the root itself is left boundary or right boundary." />
+  <meta name="keywords" content="leetcode binary-tree " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Kth Largest Element in an Array" />
-    <meta name="twitter:description" content="Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
-Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)" />
+    <meta name="twitter:title" content="Boundary of Binary Tree" />
+    <meta name="twitter:description" content="Given a binary tree, return the values of its boundary in anti-clockwise direction starting from root. Boundary includes left boundary, leaves, and right boundary in order without duplicate nodes.
+Left boundary is defined as the path from root to the left-most node. Right boundary is defined as the path from root to the right-most node. If the root doesn&amp;rsquo;t have left subtree or right subtree, then the root itself is left boundary or right boundary." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -37,7 +35,7 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/boundary-of-binary-tree/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -181,77 +179,63 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/python"><strong>python</strong></a>",
+          "<a href="/tags/binary-tree"><strong>binary-tree</strong></a>",
         
-          "<a href="/tags/array"><strong>array</strong></a>",
-        
-          "<a href="/tags/two-pointers"><strong>two-pointers</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/kth-largest-Element-in-an-array.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Kth Largest Element in an Array</h1>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/boundary-of-binary-tree.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Boundary of Binary Tree</h1>
       
 
-<p>Find the <code>kth</code> largest element in an unsorted array. Note that it is the <code>kth</code> largest element in the sorted order, not the <code>kth</code> distinct element.</p>
+<p>Given a binary tree, return the values of its boundary in <strong>anti-clockwise</strong> direction starting from root. Boundary includes <strong>left boundary</strong>, leaves, and right boundary in order without duplicate nodes.</p>
 
-<h3 id="example-1">Example 1:</h3>
+<p><strong>Left boundary</strong> is defined as the path from root to the <strong>left-most</strong> node. Right boundary is defined as the path from root to the <strong>right-most</strong> node. If the root doesn&rsquo;t have left subtree or right subtree, then the root itself is <strong>left boundary</strong> or right boundary. Note this definition only applies to the input binary tree, and not applies to any subtrees.</p>
 
-<pre><code>Input: [3,2,1,5,6,4] and k = 2
-Output: 5
+<p>The <strong>left-most</strong> node is defined as a leaf node you could reach when you always firstly travel to the left subtree if exists. If not, travel to the right subtree. Repeat until you reach a leaf node.</p>
+
+<p>The <strong>right-most</strong> node is also defined by the same way with left and right exchanged.</p>
+
+<h3 id="example-1">Example 1</h3>
+
+<pre><code>Input:
+  1
+   \
+    2
+   / \
+  3   4
+
+Ouput:
+[1, 3, 4, 2]
+Explanation:
+The root doesn't have left subtree, so the root itself is left boundary.
+The leaves are node 3 and 4.
+The right boundary are node 1,2,4. Note the anti-clockwise direction means you should output reversed right boundary.
+So order them in anti-clockwise without duplicates and we have [1,3,4,2].
 </code></pre>
 
-<h3 id="example-2">Example 2:</h3>
+<h3 id="example-2">Example 2</h3>
 
-<pre><code>Input: [3,2,3,1,2,4,5,5,6] and k = 4
-Output: 4
+<pre><code>Input:
+    ____1_____
+   /          \
+  2            3
+ / \          / 
+4   5        6   
+   / \      / \
+  7   8    9  10  
+       
+Ouput:
+[1,2,4,7,8,9,10,6,3]
+Explanation:
+The left boundary are node 1,2,4. (4 is the left-most node according to definition)
+The leaves are node 4,7,8,9,10.
+The right boundary are node 1,3,6,10. (10 is the right-most node).
+So order them in anti-clockwise without duplicate nodes we have [1,2,4,7,8,9,10,6,3].
 </code></pre>
-
-<h3 id="note">Note:</h3>
-
-<p>You may assume <code>k</code> is always valid, <code>1 ≤ k ≤ array's length</code>.</p>
 
 <h3 id="solution">Solution:</h3>
 
-<p>Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n+kLogk)</p>
-
-<pre><code class="language-python">class Solution:
-    def findKthLargest(self, nums, k):
-        if (nums == None or len(nums) == 0):
-            return 0
-
-        left, right = 0, len(nums) - 1
-
-        def swap(nums, i, j):
-            temp = nums[i]
-            nums[i] = nums[j]
-            nums[j] = temp
-
-        def partition(nums, left, right):
-            pivot = nums[left]
-            l = left + 1
-            r = right
-            while l &lt;= r:
-                if nums[l] &lt; pivot and nums[r] &gt; pivot:
-                    swap(nums, l, r)
-                    l += 1
-                    r -= 1
-                if nums[l] &gt;= pivot:
-                    l += 1
-                if nums[r] &lt;= pivot:
-                    r -= 1
-            swap(nums, left, r)
-            return r
-
-        while True:
-            pos = partition(nums, left, right)
-            if pos + 1 == k:
-                return nums[pos]
-            elif pos + 1 &gt; k:
-                right = pos - 1
-            elif pos + 1 &lt; k:
-                left = pos + 1
-</code></pre>
+<pre><code class="language-java"></code></pre>
 
   </div>
 

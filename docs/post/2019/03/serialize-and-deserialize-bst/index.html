@@ -5,7 +5,7 @@
 
   
   <title>
-        Kth Largest Element in an Array | Hashnopolis
+        Serialize and Deserialize Bst | Hashnopolis
       </title>
 
     
@@ -16,18 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
-Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)" />
-  <meta name="keywords" content="leetcode python array two-pointers " />
+  <meta name="description" content="Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+Design an algorithm to serialize and deserialize a binary search tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary search tree can be serialized to a string and this string can be deserialized to the original tree structure." />
+  <meta name="keywords" content="leetcode bst " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Kth Largest Element in an Array" />
-    <meta name="twitter:description" content="Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
-Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)" />
+    <meta name="twitter:title" content="Serialize and Deserialize Bst" />
+    <meta name="twitter:description" content="Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+Design an algorithm to serialize and deserialize a binary search tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary search tree can be serialized to a string and this string can be deserialized to the original tree structure." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -37,7 +35,7 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/serialize-and-deserialize-bst/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -181,76 +179,97 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/python"><strong>python</strong></a>",
+          "<a href="/tags/bst"><strong>bst</strong></a>",
         
-          "<a href="/tags/array"><strong>array</strong></a>",
-        
-          "<a href="/tags/two-pointers"><strong>two-pointers</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/kth-largest-Element-in-an-array.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Kth Largest Element in an Array</h1>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/serialize-and-deserialize-bst.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Serialize and Deserialize Bst</h1>
       
 
-<p>Find the <code>kth</code> largest element in an unsorted array. Note that it is the <code>kth</code> largest element in the sorted order, not the <code>kth</code> distinct element.</p>
+<p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.</p>
 
-<h3 id="example-1">Example 1:</h3>
+<p>Design an algorithm to serialize and deserialize a <code>binary search tree</code>. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a <code>binary search tree</code> can be serialized to a string and this string can be deserialized to the original tree structure.</p>
 
-<pre><code>Input: [3,2,1,5,6,4] and k = 2
-Output: 5
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
-<pre><code>Input: [3,2,3,1,2,4,5,5,6] and k = 4
-Output: 4
-</code></pre>
+<p>The encoded string should be as compact as possible.</p>
 
 <h3 id="note">Note:</h3>
 
-<p>You may assume <code>k</code> is always valid, <code>1 ≤ k ≤ array's length</code>.</p>
+<p>Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.</p>
 
 <h3 id="solution">Solution:</h3>
 
-<p>Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n+kLogk)</p>
+<pre><code class="language-java">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Codec {
 
-<pre><code class="language-python">class Solution:
-    def findKthLargest(self, nums, k):
-        if (nums == None or len(nums) == 0):
-            return 0
+    private void preOrder(TreeNode node, StringBuilder res) {
+        if (node == null) return;
 
-        left, right = 0, len(nums) - 1
+        res.append(node.val + &quot;,&quot;);
 
-        def swap(nums, i, j):
-            temp = nums[i]
-            nums[i] = nums[j]
-            nums[j] = temp
+        preOrder(node.left, res);
+        preOrder(node.right, res);
+    }
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        if (root == null) return &quot;&quot;;
 
-        def partition(nums, left, right):
-            pivot = nums[left]
-            l = left + 1
-            r = right
-            while l &lt;= r:
-                if nums[l] &lt; pivot and nums[r] &gt; pivot:
-                    swap(nums, l, r)
-                    l += 1
-                    r -= 1
-                if nums[l] &gt;= pivot:
-                    l += 1
-                if nums[r] &lt;= pivot:
-                    r -= 1
-            swap(nums, left, r)
-            return r
+        StringBuilder res = new StringBuilder();
+        preOrder(root, res);
+        String resStr = res.toString();
+        // Delete the trailing &quot;,&quot;
+        if (resStr.charAt(resStr.length() - 1) == ',') {
+            resStr.substring(0,res.length()-1);
+        }
 
-        while True:
-            pos = partition(nums, left, right)
-            if pos + 1 == k:
-                return nums[pos]
-            elif pos + 1 &gt; k:
-                right = pos - 1
-            elif pos + 1 &lt; k:
-                left = pos + 1
+        return res.toString();
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        if (data == null || data.trim().equals(&quot;&quot;)) return null;
+
+        String[] parts = data.split(&quot;,&quot;);
+        Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();
+        for (String part: parts) {
+            queue.offer(Integer.parseInt(part));
+        }
+
+        return build(queue);
+    }
+    // example:
+    //     10
+    //  8     15
+    // 4 9   11  20
+    private TreeNode build(Queue&lt;Integer&gt; q) {
+        if (q.isEmpty()) return null;
+        // 10
+        TreeNode root = new TreeNode(q.poll());
+        Queue&lt;Integer&gt; leftQ = new LinkedList&lt;&gt;();
+
+        while(!q.isEmpty() &amp;&amp; q.peek() &lt; root.val) {
+            leftQ.offer(q.poll());
+        }
+        // 8, 4, 9
+        root.left = build(leftQ);
+        // 15, 11, 20
+        root.right = build(q);
+
+        return root;
+    }
+}
+
+// Your Codec object will be instantiated and called as such:
+// Codec codec = new Codec();
+// codec.deserialize(codec.serialize(root));
 </code></pre>
 
   </div>

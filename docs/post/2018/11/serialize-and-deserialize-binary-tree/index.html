@@ -183,7 +183,7 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
         
           "<a href="/tags/binary-tree"><strong>binary-tree</strong></a>",
         
-        <i class="small material-icons">access_time</i> 3-min read
+        <i class="small material-icons">access_time</i> 4-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/serialize-and-deserialize-binary-tree.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Serialize and Deserialize Binary Tree</h1>
@@ -272,21 +272,26 @@ public class Codec {
             search(node.left, nodes);
             search(node.right, nodes);
         } else {
+            // If null node, stop search further. Add &quot;#&quot; to nodes.
             nodes.add(&quot;#&quot;);
         }
         return nodes;
     }
+
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        String res = &quot;&quot;;
+        StringBuilder res = new StringBuilder();
         Queue&lt;String&gt; nodes = new LinkedList&lt;&gt;();
 
         search(root, nodes);
 
         while (!nodes.isEmpty()) {
-            res += &quot;&quot; + nodes.poll();
+            res.append(nodes.poll());
+            res.append(&quot;,&quot;);
         }
-        return res;
+        // Delete the trailing &quot;,&quot;
+        res.deleteCharAt(res.length()-1);
+        return res.toString();
     }
 
     private TreeNode build(Queue&lt;String&gt; nodes) {
@@ -295,7 +300,7 @@ public class Codec {
             return null;
         }
         TreeNode node = new TreeNode(Integer.parseInt(val));
-        // Build executing left
+        // Build left node then right node
         node.left = build(nodes);
         node.right = build(nodes);
         return node;
@@ -303,8 +308,88 @@ public class Codec {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        Queue&lt;String&gt; nodes = new LinkedList&lt;&gt;(Arrays.asList(data.split(&quot;&quot;)));
+        Queue&lt;String&gt; nodes = new LinkedList&lt;&gt;(Arrays.asList(data.split(&quot;,&quot;)));
         return build(nodes);
+    }
+}
+
+// Your Codec object will be instantiated and called as such:
+// Codec codec = new Codec();
+// codec.deserialize(codec.serialize(root));
+</code></pre>
+
+<pre><code class="language-java">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Codec {
+
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        StringBuilder res = new StringBuilder();
+
+        LinkedList&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();
+
+        queue.add(root);
+        while(!queue.isEmpty()){
+            TreeNode t = queue.poll();
+            if(t!=null){
+                res.append(Integer.toString(t.val) + &quot;,&quot;);
+                queue.add(t.left);
+                queue.add(t.right);
+            }else{
+                res.append(&quot;#,&quot;);
+            }
+        }
+        // Delete the last &quot;,&quot;
+        res.deleteCharAt(res.length()-1);
+
+        return res.toString();
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        if(data==null || data.length()==0 || data.substring(0, 1).equals(&quot;#&quot;)) return null;
+
+        String[] strs = data.split(&quot;,&quot;);
+        TreeNode root = new TreeNode(Integer.parseInt(strs[0]));
+
+        LinkedList&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();
+        queue.add(root);
+
+        // Skip root in strs
+        int i=1;
+        // i++: we move level by level. At each level, left to right
+        while(!queue.isEmpty()){
+            TreeNode node = queue.poll();
+
+            if(node == null) continue;
+
+            if(!strs[i].equals(&quot;#&quot;)){
+                node.left = new TreeNode(Integer.parseInt(strs[i]));
+                queue.offer(node.left);
+            } else {
+                node.left = null;
+                queue.offer(null);
+            }
+            i++;
+
+            if(!strs[i].equals(&quot;#&quot;)){
+                node.right = new TreeNode(Integer.parseInt(strs[i]));
+                queue.offer(node.right);
+            } else {
+                node.right = null;
+                queue.offer(null);
+            }
+            i++;
+        }
+
+        return root;
     }
 }
 
