@@ -5,7 +5,7 @@
 
   
   <title>
-        Minimum Depth of Binary Tree | Hashnopolis
+        Design Tic Tac Toe | Hashnopolis
       </title>
 
     
@@ -16,22 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Note: A leaf is a node with no children.
-Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 3.  Solution: /** * Definition for a binary tree node." />
-  <meta name="keywords" content="leetcode java binary-tree depth-first-search " />
+  <meta name="description" content="Design a Tic-tac-toe game that is played between two players on a n x n grid.
+You may assume the following rules: 1. A move is guaranteed to be valid and is placed on an empty block. 2. Once a winning condition is reached, no more moves is allowed. 3. A player who succeeds in placing n of their marks in a horizontal, vertical, or diagonal row wins the game." />
+  <meta name="keywords" content="leetcode design " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Minimum Depth of Binary Tree" />
-    <meta name="twitter:description" content="Given a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Note: A leaf is a node with no children.
-Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 3.  Solution: /** * Definition for a binary tree node." />
+    <meta name="twitter:title" content="Design Tic Tac Toe" />
+    <meta name="twitter:description" content="Design a Tic-tac-toe game that is played between two players on a n x n grid.
+You may assume the following rules: 1. A move is guaranteed to be valid and is placed on an empty block. 2. Once a winning condition is reached, no more moves is allowed. 3. A player who succeeds in placing n of their marks in a horizontal, vertical, or diagonal row wins the game." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -41,7 +35,7 @@ Example: Given binary tree [3,9,20,null,null,15,7],
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/design-tic-tac-toe/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -185,56 +179,122 @@ Example: Given binary tree [3,9,20,null,null,15,7],
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/java"><strong>java</strong></a>",
+          "<a href="/tags/design"><strong>design</strong></a>",
         
-          "<a href="/tags/binary-tree"><strong>binary-tree</strong></a>",
-        
-          "<a href="/tags/depth-first-search"><strong>depth-first-search</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 3-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/maximum-depth-of-binary-tree.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Minimum Depth of Binary Tree</h1>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/design-tic-tac-toe.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Design Tic Tac Toe</h1>
       
 
-<p>Given a binary tree, find its minimum depth.</p>
+<p>Design a Tic-tac-toe game that is played between two players on a <code>n x n</code> grid.</p>
 
-<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
-
-<p>Note: A leaf is a node with no children.</p>
+<p>You may assume the following rules:
+1. A move is guaranteed to be valid and is placed on an empty block.
+2. Once a winning condition is reached, no more moves is allowed.
+3. A player who succeeds in placing n of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
 
 <h3 id="example">Example:</h3>
 
-<p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
+<pre><code>Given n = 3, assume that player 1 is &quot;X&quot; and player 2 is &quot;O&quot; in the board.
 
-<pre><code>    3
-   / \
-  9  20
-    /  \
-   15   7
-return its minimum depth = 3.
+TicTacToe toe = new TicTacToe(3);
+
+toe.move(0, 0, 1); -&gt; Returns 0 (no one wins)
+|X| | |
+| | | |    // Player 1 makes a move at (0, 0).
+| | | |
+
+toe.move(0, 2, 2); -&gt; Returns 0 (no one wins)
+|X| |O|
+| | | |    // Player 2 makes a move at (0, 2).
+| | | |
+
+toe.move(2, 2, 1); -&gt; Returns 0 (no one wins)
+|X| |O|
+| | | |    // Player 1 makes a move at (2, 2).
+| | |X|
+
+toe.move(1, 1, 2); -&gt; Returns 0 (no one wins)
+|X| |O|
+| |O| |    // Player 2 makes a move at (1, 1).
+| | |X|
+
+toe.move(2, 0, 1); -&gt; Returns 0 (no one wins)
+|X| |O|
+| |O| |    // Player 1 makes a move at (2, 0).
+|X| |X|
+
+toe.move(1, 0, 2); -&gt; Returns 0 (no one wins)
+|X| |O|
+|O|O| |    // Player 2 makes a move at (1, 0).
+|X| |X|
+
+toe.move(2, 1, 1); -&gt; Returns 1 (player 1 wins)
+|X| |O|
+|O|O| |    // Player 1 makes a move at (2, 1).
+|X|X|X|
 </code></pre>
 
-<h3 id="solution">Solution:</h3>
+<h3 id="follow-up">Follow up:</h3>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public int maxDepth(TreeNode root) {
-        if (root == null) return 0;
-        int left = maxDepth(root.left);
-        int right = maxDepth(root.right);
+<p>Could you do better than <code>O(n2)</code> per <code>move()</code> operation?</p>
 
-        return (left == 0 || right == 0) ? left + right + 1 : Math.max(left, right) + 1;
+<h3 id="solution">Solution</h3>
+
+<pre><code class="language-java">class TicTacToe {
+    private int[] rows;
+    private int[] cols;
+    private int diagonal_1; // top left to bottom right: ↘
+    private int diagonal_2; // bottom left to top right: ↗
+
+    /** Initialize your data structure here. */
+    public TicTacToe(int n) {
+        // sum of cells in each row
+        rows = new int[n];
+        // sum of cells in each col
+        cols = new int[n];
+    }
+
+    /**
+        Player {player} makes a move at ({row}, {col}).
+        @param row The row of the board.
+        @param col The column of the board.
+        @param player The player, can be either 1 or 2.
+        @return The current winning condition, can be either:
+        0: No one wins.
+        1: Player 1 wins.
+        2: Player 2 wins.
+    **/
+    public int move(int row, int col, int player) {
+        // Palyer 1: 1
+        // Player 2: -1
+        int toAdd = player == 1 ? 1 : -1;
+        int size = rows.length;
+
+        rows[row] += toAdd;
+        cols[col] += toAdd;
+        // top left to bottom right: ↘
+        if (row == col) diagonal_1 += toAdd;
+        // bottom left to top right: ↗
+        if (col == (cols.length - row - 1)) diagonal_2 += toAdd;
+
+        if (Math.abs(rows[row]) == size  ||
+            Math.abs(cols[col]) == size  ||
+            Math.abs(diagonal_1) == size ||
+            Math.abs(diagonal_2) == size) {
+            return player;
+        }
+
+        return 0;
     }
 }
+
+/**
+ * Your TicTacToe object will be instantiated and called as such:
+ * TicTacToe obj = new TicTacToe(n);
+ * int param_1 = obj.move(row,col,player);
+ */
 </code></pre>
 
   </div>
