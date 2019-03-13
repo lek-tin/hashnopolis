@@ -7,10 +7,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 01:36:25 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2019 15:43:28 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Peeking Iterator</title>
+      <link>http://www.hashnopolis.com/post/2019/03/peeking-iterator/</link>
+      <pubDate>Tue, 12 Mar 2019 15:43:28 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/peeking-iterator/</guid>
+      <description>Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation &amp;ndash; it essentially peek() at the element that will be returned by the next call to next().
+Example: Assume that the iterator is initialized to the beginning of the list: [1,2,3]. Call next() gets you 1, the first element in the list. Now you call peek() and it returns 2, the next element.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Frequency Stack</title>
+      <link>http://www.hashnopolis.com/post/2019/03/maximum-frequency-stack/</link>
+      <pubDate>Tue, 12 Mar 2019 03:52:37 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/maximum-frequency-stack/</guid>
+      <description>Implement FreqStack, a class which simulates the operation of a stack-like data structure.
+FreqStack has two functions:
+1. push(int x), which pushes an integer x onto the stack.
+2. pop(), which removes and returns the most frequent element in the stack.
+3. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.
+Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six .</description>
+    </item>
+    
+    <item>
+      <title>Snakes and Ladders</title>
+      <link>http://www.hashnopolis.com/post/2019/03/snakes-and-ladders/</link>
+      <pubDate>Tue, 12 Mar 2019 01:16:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/snakes-and-ladders/</guid>
+      <description>On an N x N board, the numbers from 1 to N*N are written boustrophedonically starting from the bottom left of the board, and alternating direction each row. For example, for a 6 x 6 board, the numbers are written as follows: You start on square 1 of the board (which is always in the last row and first column). Each move, starting from square x, consists of the following:</description>
+    </item>
+    
+    <item>
+      <title>Find Median From Data Stream</title>
+      <link>http://www.hashnopolis.com/post/2019/03/find-median-from-data-stream/</link>
+      <pubDate>Mon, 11 Mar 2019 13:34:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/find-median-from-data-stream/</guid>
+      <description>Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.
+For example,
+[2,3,4], the median is 3
+[2,3], the median is (2 + 3) / 2 = 2.5
+Design a data structure that supports the following two operations:
+1. void addNum(int num) - Add a integer number from the data stream to the data structure.</description>
+    </item>
     
     <item>
       <title>Design Tic Tac Toe</title>
@@ -1416,8 +1463,9 @@ Solution:</description>
       
       <guid>http://www.hashnopolis.com/post/2018/09/top-k-frequent-elements/</guid>
       <description>Given a non-empty array of integers, return the k most frequent elements.
-For example, Given [1,1,1,2,2,3] and k = 2, return [1,2]. Note: You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm&amp;rsquo;s time complexity must be better than O(n log n), where n is the array&amp;rsquo;s size. Solution:
-class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type k: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; freqMap = dict() for num in nums: if freqMap.</description>
+For example, Given [1,1,1,2,2,3] and k = 2, return [1,2].
+Note You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm&amp;rsquo;s time complexity must be better than O(n log n), where n is the array&amp;rsquo;s size.
+Solution class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type k: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; freqMap = dict() for num in nums: if freqMap.</description>
     </item>
     
     <item>
