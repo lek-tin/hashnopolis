@@ -2,7 +2,7 @@
 title: "Boundary of Binary Tree"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "binary-tree"]
+tags: ["leetcode", "binary-tree", "dfs"]
 categories: ["algorithm"]
 date: 2019-03-10T23:31:42-07:00
 draft: false
@@ -55,7 +55,6 @@ So order them in anti-clockwise without duplicate nodes we have [1,2,4,7,8,9,10,
 
 ### Solution:
 ```java
-
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -67,61 +66,52 @@ So order them in anti-clockwise without duplicate nodes we have [1,2,4,7,8,9,10,
  */
 public class Solution {
     public List < Integer > boundaryOfBinaryTree(TreeNode root) {
-        List < Integer > left_boundary = new LinkedList < > (), right_boundary = new LinkedList < > (), leaves = new LinkedList < > ();
-        preorder(root, left_boundary, right_boundary, leaves, 0);
-        left_boundary.addAll(leaves);
-        left_boundary.addAll(right_boundary);
-        return left_boundary;
+        List<Integer> result = new ArrayList<>();
+        if(root == null) return result;
+
+        result.add(root.val);
+        leftBoundary(root.left, result);
+        leafBoundary(root.left, result);
+        leafBoundary(root.right, result);
+        rightBoundary(root.right, result);
+
+        return result;
     }
 
-    public boolean isLeaf(TreeNode cur) {
-        return (cur.left == null && cur.right == null);
+    private void leftBoundary(TreeNode node, List<Integer> result) {
+        if(node == null) return;
+        // top -> down
+        // Add current node fisrt
+        if(node.left!=null || node.right!=null)
+            result.add(node.val);
+        // still on outer left boundary
+        if(node.left != null)
+            leftBoundary(node.left, result);
+        // Finally try inner node
+        else
+            leftBoundary(node.right, result);
     }
 
-    public boolean isRightBoundary(int flag) {
-        return (flag == 2);
+    private void rightBoundary(TreeNode node, List<Integer> result){
+        if(node == null) return;
+        // bottom -> up
+        // Still on outer right boundary
+        if(node.right != null)
+            rightBoundary(node.right, result);
+        else
+            rightBoundary(node.left, result);
+        if(node.left != null || node.right != null) result.add(node.val);
     }
 
-    public boolean isLeftBoundary(int flag) {
-        return (flag == 1);
+    private void leafBoundary(TreeNode node, List<Integer> result){
+        if(node == null) return;
+        // add current leave
+        if(node.left == null && node.right == null) result.add(node.val);
+        // keep searching leaves
+        leafBoundary(node.left, result);
+        leafBoundary(node.right, result);
     }
 
-    public boolean isRoot(int flag) {
-        return (flag == 0);
-    }
-
-    public int leftChildFlag(TreeNode cur, int flag) {
-        if (isLeftBoundary(flag) || isRoot(flag))
-            return 1;
-        else if (isRightBoundary(flag) && cur.right == null)
-            return 2;
-        else return 3;
-    }
-
-    public int rightChildFlag(TreeNode cur, int flag) {
-        if (isRightBoundary(flag) || isRoot(flag))
-            return 2;
-        else if (isLeftBoundary(flag) && cur.left == null)
-            return 1;
-        else return 3;
-    }
-
-    // 0: root
-    // 1: left boundary node
-    // 2: right boundary node
-    // 3: middle node
-    public void preorder(TreeNode cur, List < Integer > left_boundary, List < Integer > right_boundary, List < Integer > leaves, int flag) {
-        if (cur == null)
-            return;
-        if (isRightBoundary(flag))
-            right_boundary.add(0, cur.val);
-        else if (isLeftBoundary(flag) || isRoot(flag))
-            left_boundary.add(cur.val);
-        else if (isLeaf(cur))
-            leaves.add(cur.val);
-        preorder(cur.left, left_boundary, right_boundary, leaves, leftChildFlag(cur, flag));
-        preorder(cur.right, left_boundary, right_boundary, leaves, rightChildFlag(cur, flag));
-    }
 }
 ```
 **hint:** <https://leetcode.com/problems/boundary-of-binary-tree/solution/>

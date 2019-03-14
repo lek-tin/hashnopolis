@@ -30,7 +30,7 @@ archive: false
 5. `cudaGetDevice(int *device)`:  
 6. `cudaGetDeviceProperties(cudaDeviceProp *prop, int device)`:  
 7. `cudaSetDevice(i)`: to select current device  
-8. `cudaMemcpy(...)`: for peer-to-peer copies  
+8. `cudaMemcpy(...)`: for peer-to-peer copies. cpu cache is not used.
 
 ### Events:  
 
