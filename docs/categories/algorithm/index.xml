@@ -1997,6 +1997,18 @@ Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, 
     </item>
     
     <item>
+      <title>23. Merge k Sorted Lists</title>
+      <link>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</link>
+      <pubDate>Sun, 26 Aug 2018 17:54:18 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
+      <description>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+Example:
+Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&amp;gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&amp;gt; merge(l3, l4) = m ---&amp;gt;--&amp;gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &amp;quot;&amp;quot;&amp;quot; :type lists: List[ListNode] :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if list is None or len(lists) == 0: return [] return self.</description>
+    </item>
+    
+    <item>
       <title>57. Insert Interval</title>
       <link>http://www.hashnopolis.com/post/2018/08/57.-insert-interval/</link>
       <pubDate>Sun, 26 Aug 2018 00:43:48 +0800</pubDate>

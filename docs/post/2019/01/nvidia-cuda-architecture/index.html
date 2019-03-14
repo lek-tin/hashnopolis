@@ -224,7 +224,7 @@
 <li><code>cudaGetDevice(int *device)</code>:<br /></li>
 <li><code>cudaGetDeviceProperties(cudaDeviceProp *prop, int device)</code>:<br /></li>
 <li><code>cudaSetDevice(i)</code>: to select current device<br /></li>
-<li><code>cudaMemcpy(...)</code>: for peer-to-peer copies<br /></li>
+<li><code>cudaMemcpy(...)</code>: for peer-to-peer copies. cpu cache is not used.</li>
 </ol>
 
 <h3 id="events">Events:</h3>
