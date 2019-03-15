@@ -117,7 +117,7 @@
       <div class="row">
 
         <section id="sideber" class="sidebar">
-          <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
   <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
@@ -133,8 +133,8 @@
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
-  <li><a href="/categories/big-data">Big Data</a></li>
-  <li><a href="/categories/hpc">HPC</a></li>
+  
+  
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
@@ -176,97 +176,40 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/">Intersection of Two Arrays</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/edit-distance/">Edit Distance</a></h2>
 
-      <p>Given two arrays, write a function to compute their intersection.
+      <p>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
+Example 1: Input: word1 = &#34;horse&#34;, word2 = &#34;ros&#34; Output: 3 Explanation: horse -&gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&gt; rose (remove &#39;r&#39;) rose -&gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &#34;intention&#34;, word2 = &#34;execution&#34; Output: 5 Explanation: intention -&gt; inention (remove &#39;t&#39;) inention -&gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/reverse-integer/">Reverse Integer</a></h2>
+
+      <p>Given a 32-bit signed integer, reverse digits of an integer.
 Example 1:
-Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2:
-Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note: - Each element in the result must be unique. - The result can be in any order. Solution:
-class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &#34;&#34;&#34; res = set([]) dict1 = {} for n in nums1: if dict1.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/">Read N Characters Given Read4</a></h2>
-
-      <p>The API: int read4(char *buf) reads 4 characters at a time from a file.
-The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
-Example 1:
-Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: The actual number of characters read is 3, which is &#34;abc&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/find-the-celebrity/">Find the Celebrity</a></h2>
-
-      <p>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
-Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: “Hi, A.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
-
-      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
-Your algorithm should run in O(n) complexity.
-Example:
-Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution:
-# Time: o(n) class Solution(object): def longestConsecutive(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</p>
+Input: 123 Output: 321  Example 2:
+Input: -123 Output: -321  Example 3:
+Input: 120 Output: 21  Note: Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
 
       <p class="meta">
         
@@ -289,13 +232,11 @@ Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive ele
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/">Flatten Nested List Iterator</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/one-edit-distance/">One Edit Distance</a></h2>
 
-      <p>Given a nested list of integers, implement an iterator to flatten it.
-Each element is either an integer, or a list – whose elements may also be integers or other lists.
-Example 1:
-Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2:
-Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
+      <p>Given two strings s and t, determine if they are both one edit distance apart.
+Note: There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t Example 1:
+Input: s = &#34;ab&#34;, t = &#34;acb&#34; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</p>
 
       <p class="meta">
         
@@ -318,12 +259,10 @@ Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/reverse-nodes-in-k-group/">Reverse Nodes in K Group</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/find-a-local-minima-in-an-array/">Find a Local Minima in an Array</a></h2>
 
-      <p>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
-k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
-Example: Given this linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5
-For k = 2, you should return: 2-&gt;1-&gt;4-&gt;3-&gt;5</p>
+      <p>Given an array arr[0 .. n-1] of distinct integers, the task is to find a local minima in it. We say that an element arr[x] is a local minimum if it is less than or equal to both its neighbors.
+For corner elements, we need to consider only one neighbor for comparison. There can be more than one local minima in an array, we need to find any one of them.</p>
 
       <p class="meta">
         
@@ -346,96 +285,12 @@ For k = 2, you should return: 2-&gt;1-&gt;4-&gt;3-&gt;5</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/">Serialize and Deserialize Binary Tree</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/">Copy List With Random Pointer</a></h2>
 
-      <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
-Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/">Remove Invalid Parentheses</a></h2>
-
-      <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
-Note: The input string may contain letters other than the parentheses ( and ).
-*Example 1:
-Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;]  *Example 2:
-Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;]  *Example 3:
-Input: &#34;)(&#34; Output: [&#34;&#34;]  *Solution:
-# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &#34;&#34;&#34; :type s: str :rtype: List[str] &#34;&#34;&#34; res = [] self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/encode-and-decode-tinyurl/">Encode and Decode Tinyurl</a></h2>
-
-      <p>Note: This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
-Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/meeting-rooms-ii/">Meeting Rooms II</a></h2>
-
-      <p>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required.
-Example 1:
-Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2:
-Input: [[7,10],[2,4]] Output: 1  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: int &#34;&#34;&#34; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</p>
+      <p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution:
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &#34;&#34;&#34; :type head: RandomListNode :rtype: RandomListNode &#34;&#34;&#34; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</p>
 
       <p class="meta">
         
@@ -448,6 +303,146 @@ Input: [[7,10],[2,4]] Output: 1  Solution:
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/">Binary Tree Vertical Order Traversal</a></h2>
+
+      <p>Given a binary tree, return the vertical order traversal of its nodes’ values. (ie, from top to bottom, column by column).
+If two nodes are in the same row and column, the order should be from left to right.
+Examples 1:
+Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
+Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/">Find K Closest Elements</a></h2>
+
+      <p>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
+Example 1:
+Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2:
+Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive and will always be smaller than the length of the sorted array.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
+
+      <p>Given an unsorted array of integers, find the length of longest increasing subsequence.
+Example:** Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note:**  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/">Longest Continuous Increasing Subsequence</a></h2>
+
+      <p>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
+Example 1:
+Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2:
+Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/find-all-anagrams-in-a-string/">Find All Anagrams in a String</a></h2>
+
+      <p>Given a string s and a non-empty string p, find all the start indices of p’s anagrams in s.
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+The order of output does not matter.
+Example 1:
+Input: s: &#34;cbaebabacd&#34; p: &#34;abc&#34; Output: [0, 6] Explanation: The substring with start index = 0 is &#34;cba&#34;, which is an anagram of &#34;abc&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

@@ -117,7 +117,7 @@
       <div class="row">
 
         <section id="sideber" class="sidebar">
-          <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
   <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
@@ -133,8 +133,8 @@
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
-  <li><a href="/categories/big-data">Big Data</a></li>
-  <li><a href="/categories/hpc">HPC</a></li>
+  
+  
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
@@ -286,10 +286,8 @@ Note: You must do this in-place without making a copy of the array. Minimize the
       <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
 
       <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1:
-Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2:
-Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length. Solution:
-class Solution: def findKthLargest(self, nums, k): if (nums == None or len(nums) == 0): return 0 left, right = 0, len(nums) - 1 def swap(nums, i, j): temp = nums[i] nums[i] = nums[j] nums[j] = temp def partition(nums, left, right): pivot = nums[left] l = left &#43; 1 r = right while l &lt;= r: if nums[l] &lt; pivot and nums[r] &gt; pivot: swap(nums, l, r) l &#43;= 1 r -= 1 if nums[l] &gt;= pivot: l &#43;= 1 if nums[r] &lt;= pivot: r -= 1 swap(nums, left, r) return r while True: pos = partition(nums, left, right) if pos &#43; 1 == k: return nums[pos] elif pos &#43; 1 &gt; k: right = pos - 1 elif pos &#43; 1 &lt; k: left = pos &#43; 1  </p>
+Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)</p>
 
       <p class="meta">
         

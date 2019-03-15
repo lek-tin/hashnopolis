@@ -117,7 +117,7 @@
       <div class="row">
 
         <section id="sideber" class="sidebar">
-          <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
   <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
@@ -133,8 +133,8 @@
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
-  <li><a href="/categories/big-data">Big Data</a></li>
-  <li><a href="/categories/hpc">HPC</a></li>
+  
+  
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
@@ -176,40 +176,13 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/merge-sorted-array/">Merge Sorted Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/">Kth Smallest Element in a BST</a></h2>
 
-      <p>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note: The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m &#43; n) to hold additional elements from nums2. Example:
-Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/decode-ways/">Decode Ways</a></h2>
-
-      <p>A message containing letters from A-Z is being encoded to numbers using the following mapping:
-‘A’ -&gt; 1 ‘B’ -&gt; 2 … ‘Z’ -&gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
-Example 1:
-Input: &#34;12&#34; Output: 2 Explanation: It could be decoded as &#34;AB&#34; (1 2) or &#34;L&#34; (12).  Example 2:
-Input: &#34;226&#34; Output: 3 Explanation: It could be decoded as &#34;BZ&#34; (2 26), &#34;VF&#34; (22 6), or &#34;BBF&#34; (2 2 6).</p>
+      <p>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+Note:
+You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1:
+Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2: ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
+**Follow up:** What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</p>
 
       <p class="meta">
         
@@ -232,13 +205,39 @@ Input: &#34;226&#34; Output: 3 Explanation: It could be decoded as &#34;BZ&#34; 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/reverse-linked-list/">Reverse Linked List</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
 
-      <p>Reverse a singly linked list.
+      <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/group-anagrams/">Group Anagrams</a></h2>
+
+      <p>Given an array of strings, group anagrams together.
 Example:
-Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  Follow up:
-A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None # null 1 ---- 2 ---- 3 ---- 4 ---- 5 # prev curr after # prev curr after # https://www.youtube.com/watch?v=D7y_hoT_YZI class Solution: def reverseList(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr, prev, after = head, None, ListNode(None) while curr !</p>
+Input: [&#34;eat&#34;, &#34;tea&#34;, &#34;tan&#34;, &#34;ate&#34;, &#34;nat&#34;, &#34;bat&#34;], Output: [ [&#34;ate&#34;,&#34;eat&#34;,&#34;tea&#34;], [&#34;nat&#34;,&#34;tan&#34;], [&#34;bat&#34;] ]  Note: - All inputs will be in lowercase. - The order of your output does not matter. Solution:
+class Solution(object): def groupAnagrams(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: List[List[str]] &#34;&#34;&#34; primeNums = { &#34;a&#34;: 2, &#34;b&#34;: 3, &#34;c&#34;: 5, &#34;d&#34;: 7, &#34;e&#34;: 11, &#34;f&#34;: 13, &#34;g&#34;: 17, &#34;h&#34;: 19, &#34;i&#34;: 23, &#34;j&#34;: 29, &#34;k&#34;: 31, &#34;m&#34;: 37, &#34;l&#34;: 41, &#34;n&#34;: 43, &#34;o&#34;: 47, &#34;p&#34;: 53, &#34;q&#34;: 59, &#34;r&#34;: 61, &#34;s&#34;: 67, &#34;t&#34;: 71, &#34;u&#34;: 73, &#34;v&#34;: 79, &#34;w&#34;: 83, &#34;x&#34;: 89, &#34;y&#34;: 97, &#34;z&#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</p>
 
       <p class="meta">
         
@@ -261,183 +260,93 @@ A linked list can be reversed either iteratively or recursively. Could you imple
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/reverse-linked-list-ii/">Reverse Linked List II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/">Linked List Cycle II</a></h2>
 
-      <p>Reverse a linked list from position m to n. Do it in one-pass.
-Note: 1 ≤ m ≤ n ≤ length of list.
+      <p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+Note: Do not modify the linked list.
+Follow up: Can you solve it without using extra space? Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def detectCycle(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; if head == None: return None slow = head fast = head hasCycle = False while fast.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle/">Linked List Cycle</a></h2>
+
+      <p>Given a linked list, determine if it has a cycle in it.
+Follow up: Can you solve it without using extra space? Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: bool &#34;&#34;&#34; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/compare-version-numbers/">Compare Version Numbers</a></h2>
+
+      <p>Compare two version numbers version1 and version2. If version1 &gt; version2 return 1; if version1 &lt; version2 return -1;otherwise return 0.
+You may assume that the version strings are non-empty and contain only digits and the . character. The . character does not represent a decimal point and is used to separate number sequences. For instance, 2.5 is not “two and a half” or “half way to version three”, it is the fifth second-level revision of the second first-level revision.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/word-search/">Word Search</a></h2>
+
+      <p>Given a 2D board and a word, find if the word exists in the grid.
+The word can be constructed from letters of sequentially adjacent cell, where “adjacent” cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
 Example:
-Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL  *Solution:**
-class Solution: def reverseBetween(self, head, m, n): &#34;&#34;&#34; :type head: ListNode :type m: int :type n: int :rtype: ListNode &#34;&#34;&#34; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/gray-code/">Gray Code</a></h2>
-
-      <p>The gray code is a binary numeral system where two successive values differ in only one bit.
-Given a non-negative integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.
-For example, given n = 2, return [0,1,3,2]. Its gray code sequence is:
-00 - 0 01 - 1 11 - 3 10 - 2  Note: For a given n, a gray code sequence is not uniquely defined.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/add-digits/">Add Digits</a></h2>
-
-      <p>Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
-For example:
-Given num = 38, the process is like: 3 &#43; 8 = 11, 1 &#43; 1 = 2. Since 2 has only one digit, return it.
-Follow up: Could you do it without any loop/recursion in O(1) runtime?
-Credits: Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list-ii/">Remove Duplicates From Sorted List II</a></h2>
-
-      <p>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
-Example 1:
-Input: 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5 Output: 1-&gt;2-&gt;5  Example 2:
-Input: 1-&gt;1-&gt;1-&gt;2-&gt;3 Output: 2-&gt;3  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/">Remove Linked List Elements</a></h2>
-
-      <p>Remove all elements from a linked list of integers that have value val.
-Example:
-Input: 1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6 Output: 1-&gt;2-&gt;3-&gt;4-&gt;5  Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &#34;&#34;&#34; :type head: ListNode :type val: int :rtype: ListNode &#34;&#34;&#34; pre = ListNode(0) pre.next = head pos = pre while pos.next !</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/unique-binary-search-trees/">Unique Binary Search Trees</a></h2>
-
-      <p>Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?
-Example:
-Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  Exaplanation:
-n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0);  Solution:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/symmetric-tree/">Symmetric Tree</a></h2>
-
-      <p>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
-For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
- 1 / \ 2 2 / \ / \ 3 4 4 3  But the following [1,2,2,null,3,null,3] is not:
- 1 / \ 2 2 \ \ 3 3  Note: Bonus points if you could solve it both recursively and iteratively.
-Solution:</p>
+board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;], [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;] ] Given word = &#34;ABCCED&#34;, return true. Given word = &#34;SEE&#34;, return true. Given word = &#34;ABCB&#34;, return false.</p>
 
       <p class="meta">
         
@@ -450,6 +359,87 @@ Solution:</p>
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/intersection-of-two-linked-lists/">Intersection of Two Linked Lists</a></h2>
+
+      <p>Write a program to find the node at which the intersection of two singly linked lists begins.
+For example, the following two linked lists:
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
+Notes: If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/min-stack/">Min Stack</a></h2>
+
+      <p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) – Push element x onto stack. - pop() – Removes the element on top of the stack. - top() – Get the top element. - getMin() – Retrieve the minimum element in the stack. Example:
+MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&gt; Returns -3. minStack.pop(); minStack.top(); --&gt; Returns 0. minStack.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/word-break/">Word Break</a></h2>
+
+      <p>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+Note: - The same word in the dictionary may be reused multiple times in the segmentation. - You may assume the dictionary does not contain duplicate words. Example 1:
+Input: s = &#34;leetcode&#34;, wordDict = [&#34;leet&#34;, &#34;code&#34;] Output: true Explanation: Return true because &#34;leetcode&#34; can be segmented as &#34;leet code&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

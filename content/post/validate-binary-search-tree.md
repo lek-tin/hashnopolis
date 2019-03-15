@@ -40,8 +40,8 @@ Output: false
 #         self.val = x
 #         self.left = None
 #         self.right = None
-# Time: o(n)
-# Space: o(n)
+# Time - O(n)
+# Space - O(n)
 class Solution:
     def isValidBST(self, root):
         """

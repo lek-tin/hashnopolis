@@ -2,10 +2,10 @@
 title: "23. Merge k Sorted Lists"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "sorted-array", "merge", ]
+tags: ["leetcode", "min-heap", "merge"]
 categories: ["algorithm"]
 date: 2018-08-26T17:54:18+08:00
-draft: true
+draft: false
 archive: false
 ---
 Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
@@ -63,4 +63,51 @@ class Solution(object):
         else:
             l2.next = self.merge(l1, l2.next)
             return l2
+```
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
+
+        PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>(lists.length, new Comparator<ListNode>(){
+            @Override
+            public int compare(ListNode o1, ListNode o2){
+                // Ascending
+                if (o1.val < o2.val)
+                    return -1;
+                // No change
+                else if (o1.val == o2.val)
+                    return 0;
+                // Descending
+                else
+                    return 1;
+            }
+        });
+
+        ListNode dummy = new ListNode(0);
+        ListNode tail = dummy;
+
+        for (ListNode node:lists)
+            if (node != null)
+                queue.add(node);
+
+        while (!queue.isEmpty()){
+            tail.next = queue.poll();
+            tail = tail.next;
+            // add the next node to the min heap
+            if (tail.next != null)
+                queue.add(tail.next);
+        }
+
+        return dummy.next;
+    }
+}
 ```

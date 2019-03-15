@@ -117,7 +117,7 @@
       <div class="row">
 
         <section id="sideber" class="sidebar">
-          <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
   <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
@@ -133,8 +133,8 @@
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
-  <li><a href="/categories/big-data">Big Data</a></li>
-  <li><a href="/categories/hpc">HPC</a></li>
+  
+  
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
@@ -176,12 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/12/random-pick-index/">Random Pick Index</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/add-two-numbers/">Add Two Numbers</a></h2>
 
-      <p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.
-Note: The array size can be very large. Solution that uses too much extra space will not pass the judge.
+      <p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 Example:
-int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</p>
+Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 Explanation: 342 &#43; 465 = 807.</p>
 
       <p class="meta">
         
@@ -204,13 +204,96 @@ int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // p
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/">Intersection of Two Arrays</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/nvidia-cuda-architecture/">Nvidia Cuda Architecture</a></h2>
 
-      <p>Given two arrays, write a function to compute their intersection.
+      <p>Fundamental concepts/components in the CUDA architecture:  thread:
+ core/kernel:
+ Block: a collection of parallel threads.
+ Grid: a collection of parallel thread blocks.
+ warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as “warps” in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/computer-architecture" ><strong>"computer-architecture"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/edit-distance/">Edit Distance</a></h2>
+
+      <p>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
+Example 1: Input: word1 = &#34;horse&#34;, word2 = &#34;ros&#34; Output: 3 Explanation: horse -&gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&gt; rose (remove &#39;r&#39;) rose -&gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &#34;intention&#34;, word2 = &#34;execution&#34; Output: 5 Explanation: intention -&gt; inention (remove &#39;t&#39;) inention -&gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/reverse-integer/">Reverse Integer</a></h2>
+
+      <p>Given a 32-bit signed integer, reverse digits of an integer.
 Example 1:
-Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2:
-Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note: - Each element in the result must be unique. - The result can be in any order. Solution:
-class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &#34;&#34;&#34; res = set([]) dict1 = {} for n in nums1: if dict1.</p>
+Input: 123 Output: 321  Example 2:
+Input: -123 Output: -321  Example 3:
+Input: 120 Output: 21  Note: Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/one-edit-distance/">One Edit Distance</a></h2>
+
+      <p>Given two strings s and t, determine if they are both one edit distance apart.
+Note: There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t Example 1:
+Input: s = &#34;ab&#34;, t = &#34;acb&#34; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</p>
 
       <p class="meta">
         
@@ -233,9 +316,10 @@ class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/useful-vim-commands/">Useful Vim Commands</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/find-a-local-minima-in-an-array/">Find a Local Minima in an Array</a></h2>
 
-      <p> :LINE_NUMBER: go to a line dd: delete a whole line :%d: delete all lines x: delete a char i: insert :set paste then paste: paste without auto indentation 0 move to beginning of the current line $ move to end of line H move to the top of the current window (high) M move to the middle of the current window (middle) L move to the bottom line of the current window (low) 1G move to the first line of the file 20G move to the 20th line of the file G move to the last line of the file  </p>
+      <p>Given an array arr[0 .. n-1] of distinct integers, the task is to find a local minima in it. We say that an element arr[x] is a local minimum if it is less than or equal to both its neighbors.
+For corner elements, we need to consider only one neighbor for comparison. There can be more than one local minima in an array, we need to find any one of them.</p>
 
       <p class="meta">
         
@@ -245,7 +329,35 @@ class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums
         
         in
         
-          <a  class="meta--cat" href="/categories/tools" ><strong>"tools"</strong></a>
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/">Copy List With Random Pointer</a></h2>
+
+      <p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution:
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &#34;&#34;&#34; :type head: RandomListNode :rtype: RandomListNode &#34;&#34;&#34; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -258,11 +370,13 @@ class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/install-java-on-linux/">Install Java on Linux</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/">Binary Tree Vertical Order Traversal</a></h2>
 
-      <p>Install manually Step 1: Download the source package from the oracle repository. If your computer is 64-bit, download the x64 version; if it is 32-bit, download the x86 version.
-Step 2: Extract from the compressed file and move the package folder to /usr/java. rememeber to run these commands as sudo is not the root user.
-mv downloads-folder/jdk-&lt;version&gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk-&lt;version&gt;-linux-xxx.tar.gz rm jdk-&lt;version&gt;-linux-xxx.tar.gz  Step 3: Add the java path to the ~/.</p>
+      <p>Given a binary tree, return the vertical order traversal of its nodes’ values. (ie, from top to bottom, column by column).
+If two nodes are in the same row and column, the order should be from left to right.
+Examples 1:
+Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
+Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:</p>
 
       <p class="meta">
         
@@ -272,9 +386,9 @@ mv downloads-folder/jdk-&lt;version&gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk
         
         in
         
-          <a  class="meta--cat" href="/categories/linux" ><strong>"linux"</strong></a>
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
@@ -285,13 +399,38 @@ mv downloads-folder/jdk-&lt;version&gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/">Read N Characters Given Read4</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/">Find K Closest Elements</a></h2>
 
-      <p>The API: int read4(char *buf) reads 4 characters at a time from a file.
-The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
+      <p>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
 Example 1:
-Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: The actual number of characters read is 3, which is &#34;abc&#34;.</p>
+Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2:
+Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive and will always be smaller than the length of the sorted array.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
+
+      <p>Given an unsorted array of integers, find the length of longest increasing subsequence.
+Example:** Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note:**  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</p>
 
       <p class="meta">
         
@@ -304,143 +443,6 @@ Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: The actual 
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/super-useful-bash-commands/">Super Useful Bash Commands</a></h2>
-
-      <p>List all services
-sudo service --status-all  Create a nested directory if it doesn’t exist already.
-mkdir -p /nested/directory  To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)
-ls -al  To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/linux" ><strong>"linux"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/cpp-data-types/">CPP Data Types</a></h2>
-
-      <p>https://stackoverflow.com/questions/2550345/whats-the-difference-between-unsigned-long-long-int-in-c-c
-   Type Typical Bit Width Typical Range     char 1byte -127 to 127 or 0 to 255   unsigned char 1byte 0 to 255   signed char 1byte -127 to 127   int 4bytes -2147483648 to 2147483647   unsigned int 4bytes 0 to 4294967295   signed int 4bytes -2147483648 to 2147483647   short int 2bytes -32768 to 32767   unsigned short int Range 0 to 65,535   signed short int Range -32768 to 32767   long int 4bytes -2,147,483,648 to 2,147,483,647   signed long int 4bytes same as long int   unsigned long int 4bytes 0 to 4,294,967,295   float 4bytes &#43;/- 3.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/data-types" ><strong>"data-types"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/find-the-celebrity/">Find the Celebrity</a></h2>
-
-      <p>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
-Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: “Hi, A.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/binary-numbers/">Binary Numbers</a></h2>
-
-      <p>For a 8-bit number, there are two ways to represent number:
-unsigned values 0 to 255
-signed values range from -128 (-2^8 = 10000000) to 127 (2^8 - 1)
-signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00000000 signed 127 = 01111111 signed 127 &#43; (-127) = 10000001 &#43; 01111111 = 0  If a number is assigned with value that is too big for it to hold, overflowing would happen, 2^32 = 4,294,967,296 is the largest unsigned 32 bit value.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/computing" ><strong>"computing"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
-
-      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
-Your algorithm should run in O(n) complexity.
-Example:
-Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution:
-# Time: o(n) class Solution(object): def longestConsecutive(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

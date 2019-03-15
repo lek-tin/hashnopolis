@@ -17,17 +17,19 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a non-empty array of integers, return the k most frequent elements.
-For example, Given [1,1,1,2,2,3] and k = 2, return [1,2]. Note: You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm&amp;rsquo;s time complexity must be better than O(n log n), where n is the array&amp;rsquo;s size. Solution:
-class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type k: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; freqMap = dict() for num in nums: if freqMap." />
-  <meta name="keywords" content="leetcode python array dictionary " />
+For example, Given [1,1,1,2,2,3] and k = 2, return [1,2].
+Note You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm&amp;rsquo;s time complexity must be better than O(n log n), where n is the array&amp;rsquo;s size.
+Solution class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type k: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; freqMap = dict() for num in nums: if freqMap." />
+  <meta name="keywords" content="leetcode hashmap " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Top K Frequent Elements" />
     <meta name="twitter:description" content="Given a non-empty array of integers, return the k most frequent elements.
-For example, Given [1,1,1,2,2,3] and k = 2, return [1,2]. Note: You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm&amp;rsquo;s time complexity must be better than O(n log n), where n is the array&amp;rsquo;s size. Solution:
-class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type k: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; freqMap = dict() for num in nums: if freqMap." />
+For example, Given [1,1,1,2,2,3] and k = 2, return [1,2].
+Note You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm&amp;rsquo;s time complexity must be better than O(n log n), where n is the array&amp;rsquo;s size.
+Solution class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type k: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; freqMap = dict() for num in nums: if freqMap." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -122,7 +124,7 @@ class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; 
       <div class="row">
 
         <section id="sideber" class="sidebar">
-          <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
   <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
@@ -138,8 +140,8 @@ class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; 
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
-  <li><a href="/categories/big-data">Big Data</a></li>
-  <li><a href="/categories/hpc">HPC</a></li>
+  
+  
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
@@ -181,24 +183,25 @@ class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; 
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/python"><strong>python</strong></a>",
+          "<a href="/tags/hashmap"><strong>hashmap</strong></a>",
         
-          "<a href="/tags/array"><strong>array</strong></a>",
-        
-          "<a href="/tags/dictionary"><strong>dictionary</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/top-k-frequent-elements.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Top K Frequent Elements</h1>
-      <p>Given a non-empty array of integers, return the <code>k</code> most frequent elements.</p>
+      
+
+<p>Given a non-empty array of integers, return the <code>k</code> most frequent elements.</p>
 
 <p>For example,
-Given <code>[1,1,1,2,2,3]</code> and <code>k = 2</code>, return <code>[1,2]</code>.
-<strong>Note</strong>:
-You may assume k is always valid, <code>1 ≤ k ≤ number</code> of unique elements.
-Your algorithm&rsquo;s time complexity <strong>must be better</strong> than <code>O(n log n)</code>, where <code>n</code> is the array&rsquo;s size.
-<strong>Solution:</strong></p>
+Given <code>[1,1,1,2,2,3]</code> and <code>k = 2</code>, return <code>[1,2]</code>.</p>
+
+<h3 id="note">Note</h3>
+
+<p>You may assume k is always valid, <code>1 ≤ k ≤ number</code> of unique elements.
+Your algorithm&rsquo;s time complexity <strong>must be better</strong> than <code>O(n log n)</code>, where <code>n</code> is the array&rsquo;s size.</p>
+
+<h3 id="solution">Solution</h3>
 
 <pre><code class="language-python">class Solution:
     def topKFrequent(self, nums, k):
@@ -223,8 +226,38 @@ Your algorithm&rsquo;s time complexity <strong>must be better</strong> than <cod
         return bucket
 </code></pre>
 
-<p><strong>Going further:</strong>
-<code>topKCounts = quickSelected(...)</code> can improve the time complexity from <code>O(NlogN)</code> to <code>O(N)</code></p>
+<pre><code class="language-java">class Solution {
+    public List&lt;Integer&gt; topKFrequent(int[] nums, int k) {
+        HashMap&lt;Integer, Integer&gt; freqMap = new HashMap&lt;&gt;();
+        ArrayList res = new ArrayList&lt;&gt;();
+
+        for (int num : nums) {
+            int f = freqMap.getOrDefault(num, 0) + 1;
+            freqMap.put(num, f);
+        }
+        // Frequency is at least one, so we use [1: nums.length] to store count for each num
+        List&lt;Integer&gt;[] buckets = new ArrayList[nums.length + 1];
+
+        for (int key: freqMap.keySet()) {
+            int freq = freqMap.get(key);
+            if (buckets[freq] == null) {
+                buckets[freq] = new ArrayList&lt;&gt;();
+            }
+            buckets[freq].add(key);
+        }
+
+        for (int i = buckets.length - 1; i &gt;= 0 &amp;&amp; res.size() &lt; k; i--) {
+            if (buckets[i] != null)
+                res.addAll(buckets[i]);
+        }
+        return res;
+    }
+}
+</code></pre>
+
+<h3 id="going-further">Going further</h3>
+
+<p><code>topKCounts = quickSelected(...)</code> can improve the time complexity from <code>O(NlogN)</code> to <code>O(N)</code></p>
 
   </div>
 

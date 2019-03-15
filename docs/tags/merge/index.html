@@ -117,7 +117,7 @@
       <div class="row">
 
         <section id="sideber" class="sidebar">
-          <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
   <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
@@ -133,8 +133,8 @@
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
-  <li><a href="/categories/big-data">Big Data</a></li>
-  <li><a href="/categories/hpc">HPC</a></li>
+  
+  
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
@@ -220,6 +220,34 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/">23. Merge k Sorted Lists</a></h2>
+
+      <p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+Example:
+Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6  Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&gt; merge(l3, l4) = m ---&gt;--&gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &#34;&#34;&#34; :type lists: List[ListNode] :rtype: ListNode &#34;&#34;&#34; if list is None or len(lists) == 0: return [] return self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

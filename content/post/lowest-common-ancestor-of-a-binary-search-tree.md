@@ -73,3 +73,28 @@ class Solution(object):
         if not right:
             return left
 ```
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        // base condition
+        if (root == null) return null;
+
+        if (root.val < Math.min(p.val, q.val)) {
+            return lowestCommonAncestor(root.right, p, q);
+        } else if (root.val > Math.max(p.val, q.val)) {
+            return lowestCommonAncestor(root.left, p, q);
+        } else {
+            return root;
+        }
+    }
+}
+```

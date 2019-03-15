@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Min Heap on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/min-heap/</link>
+    <description>Recent content in Min Heap on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Mon, 11 Mar 2019 13:34:41 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/min-heap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Find Median From Data Stream</title>
+      <link>http://www.hashnopolis.com/post/2019/03/find-median-from-data-stream/</link>
+      <pubDate>Mon, 11 Mar 2019 13:34:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/find-median-from-data-stream/</guid>
+      <description>Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.
+For example,
+[2,3,4], the median is 3
+[2,3], the median is (2 + 3) / 2 = 2.5
+Design a data structure that supports the following two operations:
+1. void addNum(int num) - Add a integer number from the data stream to the data structure.</description>
+    </item>
+    
+    <item>
+      <title>23. Merge k Sorted Lists</title>
+      <link>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</link>
+      <pubDate>Sun, 26 Aug 2018 17:54:18 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
+      <description>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+Example:
+Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution:
+# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&amp;gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&amp;gt; merge(l3, l4) = m ---&amp;gt;--&amp;gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &amp;quot;&amp;quot;&amp;quot; :type lists: List[ListNode] :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if list is None or len(lists) == 0: return [] return self.</description>
+    </item>
+    
+  </channel>
+</rss>

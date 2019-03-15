@@ -117,7 +117,7 @@
       <div class="row">
 
         <section id="sideber" class="sidebar">
-          <span id="mobile-menu-open" style="position: absolute; top: 1.5rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
 <a href="/" class="menu-logo">
   <h1  class="menu-logo__text"># Hashnopolis #</h1>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
@@ -133,8 +133,8 @@
 <ul id="mobile-menu" class="navigation">
   <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
   <li><a href="/">Home</a></li>
-  <li><a href="/categories/big-data">Big Data</a></li>
-  <li><a href="/categories/hpc">HPC</a></li>
+  
+  
   <li><a href="/categories/java">Java</a></li>
   <li><a href="/categories/python">Python</a></li>
   <li><a href="/categories/javascript">JavaScript</a></li>
@@ -287,37 +287,8 @@ sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. D
       <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
 
       <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1:
-Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2:
-Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length. Solution:
-class Solution: def findKthLargest(self, nums, k): if (nums == None or len(nums) == 0): return 0 left, right = 0, len(nums) - 1 def swap(nums, i, j): temp = nums[i] nums[i] = nums[j] nums[j] = temp def partition(nums, left, right): pivot = nums[left] l = left &#43; 1 r = right while l &lt;= r: if nums[l] &lt; pivot and nums[r] &gt; pivot: swap(nums, l, r) l &#43;= 1 r -= 1 if nums[l] &gt;= pivot: l &#43;= 1 if nums[r] &lt;= pivot: r -= 1 swap(nums, left, r) return r while True: pos = partition(nums, left, right) if pos &#43; 1 == k: return nums[pos] elif pos &#43; 1 &gt; k: right = pos - 1 elif pos &#43; 1 &lt; k: left = pos &#43; 1  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/top-k-frequent-elements/">Top K Frequent Elements</a></h2>
-
-      <p>Given a non-empty array of integers, return the k most frequent elements.
-For example, Given [1,1,1,2,2,3] and k = 2, return [1,2]. Note: You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size. Solution:
-class Solution: def topKFrequent(self, nums, k): &#34;&#34;&#34; :type nums: List[int] :type k: int :rtype: List[int] &#34;&#34;&#34; freqMap = dict() for num in nums: if freqMap.</p>
+Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)</p>
 
       <p class="meta">
         
@@ -434,6 +405,34 @@ Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are 
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 Example 1:
 Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/">Remove Duplicates From Sorted Array</a></h2>
+
+      <p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+Example 1:
+Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</p>
 
       <p class="meta">
         
