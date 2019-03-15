@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 12 Mar 2019 03:52:37 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 01:03:53 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Longest Substring With at Most K Distinct Characters</title>
+      <link>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/</link>
+      <pubDate>Thu, 14 Mar 2019 01:03:53 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/</guid>
+      <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3.  Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s.</description>
+    </item>
     
     <item>
       <title>Maximum Frequency Stack</title>

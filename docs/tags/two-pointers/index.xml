@@ -74,8 +74,8 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/</guid>
       <description>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
 Note: Do not modify the linked list.
-Follow up: Can you solve it without using extra space? Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def detectCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if head == None: return None slow = head fast = head hasCycle = False while fast.</description>
+Follow up: Can you solve it without using extra space?
+Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</description>
     </item>
     
     <item>

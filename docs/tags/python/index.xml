@@ -197,18 +197,6 @@ Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0
     </item>
     
     <item>
-      <title>Find K Closest Elements</title>
-      <link>http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/</link>
-      <pubDate>Wed, 19 Dec 2018 16:00:58 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/</guid>
-      <description>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1:
-Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2:
-Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive and will always be smaller than the length of the sorted array.</description>
-    </item>
-    
-    <item>
       <title>Longest Increasing Subsequence</title>
       <link>http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/</link>
       <pubDate>Wed, 19 Dec 2018 10:47:57 -0800</pubDate>
@@ -588,9 +576,7 @@ For the purpose of this problem, we will return 0 when needle is an empty string
       <description>Given a string containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.
 An input string is valid if:
 Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
-Example 1:
-Input: &amp;quot;()&amp;quot; Output: true  Example 2:
-Input: &amp;quot;()[]{}&amp;quot; Output: true  Example 3:</description>
+Example 1: Input: &amp;quot;()&amp;quot; Output: true  Example 2: Input: &amp;quot;()[]{}&amp;quot; Output: true  Example 3: Input: &amp;quot;(]&amp;quot; Output: false  Example 4: Input: &amp;quot;([)]&amp;quot; Output: false  Example 5: Input: &amp;quot;{[]}&amp;quot; Output: true  Solution: class Solution { public boolean isValid(String s) { HashMap&amp;lt;Character, Character&amp;gt; charMap = new HashMap&amp;lt;&amp;gt;(); charMap.</description>
     </item>
     
     <item>
@@ -874,8 +860,8 @@ class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/</guid>
       <description>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
 Note: Do not modify the linked list.
-Follow up: Can you solve it without using extra space? Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def detectCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if head == None: return None slow = head fast = head hasCycle = False while fast.</description>
+Follow up: Can you solve it without using extra space?
+Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</description>
     </item>
     
     <item>
