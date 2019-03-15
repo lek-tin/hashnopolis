@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "deque", "monotonic-queue", "double-ended-queue"]
 categories: ["algorithm"]
 date: 2019-03-08T23:26:00-08:00
-draft: true
+draft: false
 archive: false
 ---
 Given an array nums, there is a sliding window of size `k` which is moving from the very left of the array to the very right. You can only see the `k` numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
@@ -65,7 +65,7 @@ class Solution {
 ### Explanation:
 ```
 Window position                  Deque         Max
-                             <tail...head>
+                             <head...tail>
 ---------------              -------------    -----
 [1]  3  -1 -3  5  3  6  7     [1]               -
 [1  3]  -1 -3  5  3  6  7     [3]               -
