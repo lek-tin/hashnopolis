@@ -35,17 +35,23 @@ class Solution {
             char c = s.charAt(i);
             countMap.put(c, countMap.getOrDefault(c, 0) + 1);
             // make sure map size is valid, no need to check left pointer less than s.length()
-            // countMap.size() needs to be <= k
+            // distinct count needs to be <= k
+            /*
+              k = 3, left = 0
+              {1, 1, 1, 3, 4, 5}
+            */
             while (countMap.size() > k) {
+              // Removes the leftmost character
                 char leftChar = s.charAt(left);
                 countMap.put(leftChar, countMap.get(leftChar) - 1);
-
+                // If leftChar is no longer one of the distinct numbers, remove it.
                 if (countMap.get(leftChar) == 0) {
                     countMap.remove(leftChar);
                 }
+                // Leftbound moves right by 1 step.
                 left++;
             }
-
+            // Compare previous max = {1, 1, 1, 3, 4}.length and {3, 4, 5}.length
             max = Math.max(max, i - left + 1);
         }
         return max;
