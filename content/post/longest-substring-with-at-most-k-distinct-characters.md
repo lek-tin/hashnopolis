@@ -37,11 +37,11 @@ class Solution {
             // make sure map size is valid, no need to check left pointer less than s.length()
             // distinct count needs to be <= k
             /*
-              k = 3, left = 0
-              {1, 1, 1, 3, 4, 5}
+            *  k = 3, left = 0
+            *  {1, 1, 1, 3, 4, 5}
             */
             while (countMap.size() > k) {
-              // Removes the leftmost character
+                // Removes the leftmost character
                 char leftChar = s.charAt(left);
                 countMap.put(leftChar, countMap.get(leftChar) - 1);
                 // If leftChar is no longer one of the distinct numbers, remove it.

@@ -2,23 +2,67 @@
 title: "Minimum Window Substring"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "sliding-window"]
+tags: ["leetcode", "two-pointers", "sliding-window"]
 categories: ["algorithm"]
-date: 2018-11-13T23:05:09-08:00
-draft: true
+date: 2019-03-16T16:05:09-08:00
+draft: false
 archive: false
 ---
-Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity `O(n)`.
+Given a string `S` and a string `T`, find the minimum window in `S` which will contain all the characters in `T` in complexity `O(n)`.
 
-**Example:**
+### Example:
 ```
 Input: S = "ADOBECODEBANC", T = "ABC"
 Output: "BANC"
 ```
-**Note:**
+### Note:
 - If there is no such window in S that covers all characters in T, return the empty string "".
 - If there is such window, you are guaranteed that there will always be only one unique minimum window in S.
-**Solution:**
+### Solution:
+```java
+class Solution {
+    public String minWindow(String s, String t) {
+        if (s == null || t == null || s.length() == 0 || t.length() == 0) {
+            return "";
+        }
+
+        int[] counter = new int[128];
+        for (char c: t.toCharArray()){
+            counter[c]++;
+        }
+        int mixLen = Integer.MAX_VALUE;
+        int left = 0, right = 0;
+        int missing = t.length();
+        String res = "";
+
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            if (counter[c] > 0)
+                missing--;
+            // For characters that are not in T, over time the counts will be negative.
+            counter[c]--;
+            // Move the right pointer.
+            right++;
+            // Found a valid range
+            while (missing == 0) {
+                if (right - left < mixLen) {
+                    mixLen = right - left;
+                    res = s.substring(left, right);
+                }
+                // Shrink the [left, right] window by using another two pointers: i and j.
+                // Remember, the un-targeted characters should have a negative count.
+                counter[s.charAt(left)]++;
+                if (counter[s.charAt(left)] > 0)
+                    // this would break the inner while loop;
+                    missing++;
+                left++;
+            }
+        }
+
+        return res;
+    }
+}
+```
 ```python
 #Based on https://leetcode.com/problems/minimum-window-substring/discuss/26804/12-lines-Python
 class Solution(object):
@@ -47,3 +91,5 @@ class Solution(object):
                 i += 1                           #update i to start+1 for next window
         return s[start:end]
 ```
+
+**Hint**: <https://www.youtube.com/watch?v=qzYhjk-nDGU>

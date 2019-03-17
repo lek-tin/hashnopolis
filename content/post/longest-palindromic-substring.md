@@ -87,7 +87,10 @@ class Solution(object):
             return ""
 
         for i in range(len(s)):
+            # There are two types of palindromes
+            ## "abcbc"
             self.helper(s, i, i)
+            ## "axddxa"
             self.helper(s, i, i+1)
 
         return self.longest
@@ -99,4 +102,37 @@ class Solution(object):
         curr = s[left + 1: right]
         if len(curr) > len(self.longest):
             self.longest = curr
+```
+```java
+class Solution {
+    private String res = "";
+
+    public String longestPalindrome(String s) {
+        if (s == null || s.length() == 0) return "";
+        int n = s.length();
+
+        for (int i = 0; i < n; i++) {
+            helper(s, i, i, n);
+            helper(s, i, i+1, n);
+        }
+
+        return res;
+    }
+
+    private void helper(String s, int left, int right, int n) {
+        String oldS = s;
+        while (left >= 0 && right < n && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
+        }
+        StringBuilder newS = new StringBuilder();
+        for (int i = left+1; i < right; i++) {
+            newS.append(s.charAt(i));
+        };
+
+        if (newS.toString().length() > res.length()) {
+            res = newS.toString();
+        }
+    };
+}
 ```

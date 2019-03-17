@@ -2,7 +2,7 @@
 title: "Valid Parentheses"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "stack"]
 categories: ["algorithm"]
 date: 2018-11-02T20:30:23-07:00
 draft: false
