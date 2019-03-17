@@ -7,10 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 14 Mar 2019 16:00:58 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Mar 2019 18:25:42 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Closest Two Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/03/closest-two-sum/</link>
+      <pubDate>Sat, 16 Mar 2019 18:25:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/closest-two-sum/</guid>
+      <description>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
+Return the difference between the sum of the two integers and the target.
+Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 + 1) = 1).  Challenge: Do it in O(nlogn) time complexity.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Window Substring</title>
+      <link>http://www.hashnopolis.com/post/2019/03/minimum-window-substring/</link>
+      <pubDate>Sat, 16 Mar 2019 16:05:09 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/minimum-window-substring/</guid>
+      <description>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot;  Note:  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;rdquo;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
+    </item>
+    
+    <item>
+      <title>Longest Substring With at Most Two Distinct Characters</title>
+      <link>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/</link>
+      <pubDate>Sat, 16 Mar 2019 13:30:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/</guid>
+      <description>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
+Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3.  Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Path Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/03/maximum-path-sum/</link>
+      <pubDate>Sat, 16 Mar 2019 01:17:11 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/maximum-path-sum/</guid>
+      <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Note: You can only move either down or right at any point in time.
+Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum.  Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</description>
+    </item>
     
     <item>
       <title>Find K Closest Elements</title>
@@ -1275,9 +1317,7 @@ A happy number is a number defined by the following process: Starting with any p
       
       <guid>http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/</guid>
       <description>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4  Solution:
-class Solution: def mergeTwoLists(self, l1, l2): &amp;quot;&amp;quot;&amp;quot; :type l1: ListNode :type l2: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if l1 == None: return l2 if l2 == None: return l1 root = ListNode(0) temp = root while l1 and l2: if l1.</description>
+Example: Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) return l2; if (l2 == null) return l1; ListNode dummy = new ListNode(0); ListNode temp = dummy; while (l1 !</description>
     </item>
     
     <item>

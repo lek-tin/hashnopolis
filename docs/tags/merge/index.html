@@ -179,9 +179,7 @@
       <h2><a href="http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/">Merge Two Sorted Lists</a></h2>
 
       <p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-Example:
-Input: 1-&gt;2-&gt;4, 1-&gt;3-&gt;4 Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4  Solution:
-class Solution: def mergeTwoLists(self, l1, l2): &#34;&#34;&#34; :type l1: ListNode :type l2: ListNode :rtype: ListNode &#34;&#34;&#34; if l1 == None: return l2 if l2 == None: return l1 root = ListNode(0) temp = root while l1 and l2: if l1.</p>
+Example: Input: 1-&gt;2-&gt;4, 1-&gt;3-&gt;4 Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) return l2; if (l2 == null) return l1; ListNode dummy = new ListNode(0); ListNode temp = dummy; while (l1 !</p>
 
       <p class="meta">
         
@@ -193,7 +191,7 @@ class Solution: def mergeTwoLists(self, l1, l2): &#34;&#34;&#34; :type l1: ListN
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
