@@ -11,7 +11,8 @@ archive: false
 Algorithms for Single-Source Shortest Paths (no negative cycles allowed).
 ### Djikstra
 Time Complexity: `O(|V| + |E|)log(|V|)`
-May not always yield the correct answer if there is no negative value edges.
+May not always yield the correct answer if there are negative value edges.
 ### Bellman-Ford
 Time Complexity: `O(|V| · |E|)`
 ### Floyd–Warshall
+Time Complexity: `O(|V|^3)`
