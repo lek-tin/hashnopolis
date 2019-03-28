@@ -89,19 +89,6 @@ Input: [&amp;quot;dog&amp;quot;,&amp;quot;racecar&amp;quot;,&amp;quot;car&amp;qu
     </item>
     
     <item>
-      <title>Longest Palindromic Substring</title>
-      <link>http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/</link>
-      <pubDate>Tue, 22 Jan 2019 22:29:56 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/</guid>
-      <description>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-Example 1:
-Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2:
-Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution: Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start + max_len] return solution  Dynamic Programming</description>
-    </item>
-    
-    <item>
       <title>Longest Substring Without Repeating Characters</title>
       <link>http://www.hashnopolis.com/post/2019/01/longest-substring-without-repeating-characters/</link>
       <pubDate>Tue, 22 Jan 2019 22:24:06 -0800</pubDate>
@@ -194,18 +181,6 @@ If two nodes are in the same row and column, the order should be from left to ri
 Examples 1:
 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:</description>
-    </item>
-    
-    <item>
-      <title>Find K Closest Elements</title>
-      <link>http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/</link>
-      <pubDate>Wed, 19 Dec 2018 16:00:58 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/</guid>
-      <description>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1:
-Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2:
-Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive and will always be smaller than the length of the sorted array.</description>
     </item>
     
     <item>
@@ -384,16 +359,6 @@ Example 1:
 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2:
 Input: [[7,10],[2,4]] Output: 1  Solution:
 # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: int &amp;quot;&amp;quot;&amp;quot; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</description>
-    </item>
-    
-    <item>
-      <title>LRU Cache</title>
-      <link>http://www.hashnopolis.com/post/2018/11/lru-cache/</link>
-      <pubDate>Sun, 11 Nov 2018 15:33:09 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/11/lru-cache/</guid>
-      <description>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
-get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</description>
     </item>
     
     <item>
@@ -577,20 +542,6 @@ Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Out
 Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1  Clarification:
 What should we return when needle is an empty string? This is a great question to ask during an interview.
 For the purpose of this problem, we will return 0 when needle is an empty string.</description>
-    </item>
-    
-    <item>
-      <title>Valid Parentheses</title>
-      <link>http://www.hashnopolis.com/post/2018/11/valid-parentheses/</link>
-      <pubDate>Fri, 02 Nov 2018 20:30:23 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/11/valid-parentheses/</guid>
-      <description>Given a string containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.
-An input string is valid if:
-Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
-Example 1:
-Input: &amp;quot;()&amp;quot; Output: true  Example 2:
-Input: &amp;quot;()[]{}&amp;quot; Output: true  Example 3:</description>
     </item>
     
     <item>
@@ -797,18 +748,6 @@ A happy number is a number defined by the following process: Starting with any p
     </item>
     
     <item>
-      <title>Merge Two Sorted Lists</title>
-      <link>http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/</link>
-      <pubDate>Thu, 25 Oct 2018 23:43:25 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/</guid>
-      <description>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4  Solution:
-class Solution: def mergeTwoLists(self, l1, l2): &amp;quot;&amp;quot;&amp;quot; :type l1: ListNode :type l2: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if l1 == None: return l2 if l2 == None: return l1 root = ListNode(0) temp = root while l1 and l2: if l1.</description>
-    </item>
-    
-    <item>
       <title>Merge Two Binary Trees</title>
       <link>http://www.hashnopolis.com/post/2018/10/merge-two-binary-trees/</link>
       <pubDate>Thu, 25 Oct 2018 23:42:27 -0700</pubDate>
@@ -874,8 +813,8 @@ class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/</guid>
       <description>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
 Note: Do not modify the linked list.
-Follow up: Can you solve it without using extra space? Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def detectCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if head == None: return None slow = head fast = head hasCycle = False while fast.</description>
+Follow up: Can you solve it without using extra space?
+Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</description>
     </item>
     
     <item>
@@ -1005,32 +944,6 @@ Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3</description>
 Example 1:
 Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2:
 Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
-    </item>
-    
-    <item>
-      <title>Reverse Linked List</title>
-      <link>http://www.hashnopolis.com/post/2018/10/reverse-linked-list/</link>
-      <pubDate>Tue, 02 Oct 2018 23:51:13 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/10/reverse-linked-list/</guid>
-      <description>Reverse a singly linked list.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
-A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None # null 1 ---- 2 ---- 3 ---- 4 ---- 5 # prev curr after # prev curr after # https://www.youtube.com/watch?v=D7y_hoT_YZI class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr !</description>
-    </item>
-    
-    <item>
-      <title>Reverse Linked List II</title>
-      <link>http://www.hashnopolis.com/post/2018/09/reverse-linked-list-ii/</link>
-      <pubDate>Sun, 30 Sep 2018 22:19:41 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/09/reverse-linked-list-ii/</guid>
-      <description>Reverse a linked list from position m to n. Do it in one-pass.
-Note: 1 ≤ m ≤ n ≤ length of list.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  *Solution:**
-class Solution: def reverseBetween(self, head, m, n): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type m: int :type n: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr.</description>
     </item>
     
     <item>

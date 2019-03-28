@@ -7,10 +7,122 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 12 Mar 2019 15:43:28 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2019 19:20:32 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Subtree With Maximum Average</title>
+      <link>http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/</link>
+      <pubDate>Wed, 27 Mar 2019 19:20:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/</guid>
+      <description>Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It&amp;rsquo;s guaranteed that there is only one subtree with maximum average.
+Example Given a binary tree:
+ 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11.  Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this.</description>
+    </item>
+    
+    <item>
+      <title>Validate Subtree</title>
+      <link>http://www.hashnopolis.com/post/2019/03/validate-subtree/</link>
+      <pubDate>Wed, 27 Mar 2019 19:12:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/validate-subtree/</guid>
+      <description>Given two trees, T1 and T2, write an function to test whether T2 is a subtree of T1.
+Solution public class Subtree { public boolean isSubTree(TreeNode T1, TreeNode T2) { if (T2 == null) return true; if (T1 == null) return false; return (isSameTree(T1,T2) || isSubTree(T1.left, T2) || isSubTree(T1.right, T2)); } public boolean isSameTree(TreeNode T1, TreeNode T2) { if (T1 == null &amp;amp;&amp;amp; T2 == null) return true; if (T1 == null || T2 == null) return false; if (T1.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Path Sum in Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2019/03/minimum-path-sum-in-binary-tree/</link>
+      <pubDate>Wed, 27 Mar 2019 02:05:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/minimum-path-sum-in-binary-tree/</guid>
+      <description>Given a Binary Tree, find the minimum sum path from a leaf to root. For example, in the following tree, there are three leaf to root paths 8-&amp;gt;-2-&amp;gt;10, -4-&amp;gt;-2-&amp;gt;10 and 7-&amp;gt;10. The sums of these three paths are 16, 4 and 17 respectively. The minimum of them is 17 and the path for minimum is -4-&amp;gt;-2-&amp;gt;10.
+ 10 / \ -2 7 / \ 8 -4  Solution public class PathSum { public int Solution(TreeNode root) { if (root == null) return 0; if (root.</description>
+    </item>
+    
+    <item>
+      <title>LRU Cache Miss Count</title>
+      <link>http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/</link>
+      <pubDate>Tue, 26 Mar 2019 22:51:52 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/</guid>
+      <description> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&amp;lt;Integer&amp;gt; cache = new LinkedList&amp;lt;&amp;gt;(); int count = 0; for (int i = 0; i &amp;lt; array.length; i++) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count++; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </description>
+    </item>
+    
+    <item>
+      <title>Insert Into a Cyclic Sorted List</title>
+      <link>http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/</link>
+      <pubDate>Tue, 26 Mar 2019 20:15:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/</guid>
+      <description>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
+If there are multiple suitable places for insertion, you may choose any place to insert the new value.</description>
+    </item>
+    
+    <item>
+      <title>Closest Two Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/03/closest-two-sum/</link>
+      <pubDate>Sat, 16 Mar 2019 18:25:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/closest-two-sum/</guid>
+      <description>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
+Return the difference between the sum of the two integers and the target.
+Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 + 1) = 1).  Challenge: Do it in O(nlogn) time complexity.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Window Substring</title>
+      <link>http://www.hashnopolis.com/post/2019/03/minimum-window-substring/</link>
+      <pubDate>Sat, 16 Mar 2019 16:05:09 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/minimum-window-substring/</guid>
+      <description>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot;  Note:  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;rdquo;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
+    </item>
+    
+    <item>
+      <title>Longest Substring With at Most Two Distinct Characters</title>
+      <link>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/</link>
+      <pubDate>Sat, 16 Mar 2019 13:30:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/</guid>
+      <description>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
+Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3.  Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Path Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/03/maximum-path-sum/</link>
+      <pubDate>Sat, 16 Mar 2019 01:17:11 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/maximum-path-sum/</guid>
+      <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Note: You can only move either down or right at any point in time.
+Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum.  Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</description>
+    </item>
+    
+    <item>
+      <title>Find K Closest Elements</title>
+      <link>http://www.hashnopolis.com/post/2019/03/find-k-closest-elements/</link>
+      <pubDate>Thu, 14 Mar 2019 16:00:58 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/find-k-closest-elements/</guid>
+      <description>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
+Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2: Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note:  The value k is positive and will always be smaller than the length of the sorted array.</description>
+    </item>
+    
+    <item>
+      <title>Longest Substring With at Most K Distinct Characters</title>
+      <link>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/</link>
+      <pubDate>Thu, 14 Mar 2019 01:03:53 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/</guid>
+      <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3.  Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s.</description>
+    </item>
     
     <item>
       <title>Peeking Iterator</title>
@@ -120,6 +232,16 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 +
     </item>
     
     <item>
+      <title>Sliding Window Maximum</title>
+      <link>http://www.hashnopolis.com/post/2019/03/sliding-window-maximum/</link>
+      <pubDate>Fri, 08 Mar 2019 23:26:00 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/sliding-window-maximum/</guid>
+      <description>Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
+Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7  Note: You may assume k is always valid, 1 ≤ k ≤ input array&amp;rsquo;s size for non-empty array.</description>
+    </item>
+    
+    <item>
       <title>Most Common Word</title>
       <link>http://www.hashnopolis.com/post/2019/03/most-common-word/</link>
       <pubDate>Thu, 07 Mar 2019 23:04:58 -0800</pubDate>
@@ -148,6 +270,18 @@ Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 O
       <description>Given n nodes labeled from 0 to n-1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
 ###Example 1:
 Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true  Example 2: Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false  ###Note: you can assume that no duplicate edges will appear in edges.</description>
+    </item>
+    
+    <item>
+      <title>K Closest Points to Origin</title>
+      <link>http://www.hashnopolis.com/post/2019/03/k-closest-points-to-origin/</link>
+      <pubDate>Sun, 03 Mar 2019 23:24:48 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/k-closest-points-to-origin/</guid>
+      <description>We have a list of points on the plane. Find the K closest points to the origin (0, 0).
+(Here, the distance between two points on a plane is the Euclidean distance.)
+You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in.)
+Example 1: Input: points = [[1,3],[-2,2]], K = 1 Output: [[-2,2]] Explanation: The distance between (1, 3) and the origin is sqrt(10).</description>
     </item>
     
     <item>
@@ -431,7 +565,7 @@ Input: [&amp;quot;dog&amp;quot;,&amp;quot;racecar&amp;quot;,&amp;quot;car&amp;qu
 Example 1:
 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2:
 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution: Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start + max_len] return solution  Dynamic Programming</description>
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start + max_len] return solution  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</description>
     </item>
     
     <item>
@@ -527,18 +661,6 @@ If two nodes are in the same row and column, the order should be from left to ri
 Examples 1:
 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:</description>
-    </item>
-    
-    <item>
-      <title>Find K Closest Elements</title>
-      <link>http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/</link>
-      <pubDate>Wed, 19 Dec 2018 16:00:58 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/12/find-k-closest-elements/</guid>
-      <description>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1:
-Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2:
-Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note: - The value k is positive and will always be smaller than the length of the sorted array.</description>
     </item>
     
     <item>
@@ -937,9 +1059,7 @@ For the purpose of this problem, we will return 0 when needle is an empty string
       <description>Given a string containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.
 An input string is valid if:
 Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
-Example 1:
-Input: &amp;quot;()&amp;quot; Output: true  Example 2:
-Input: &amp;quot;()[]{}&amp;quot; Output: true  Example 3:</description>
+Example 1: Input: &amp;quot;()&amp;quot; Output: true  Example 2: Input: &amp;quot;()[]{}&amp;quot; Output: true  Example 3: Input: &amp;quot;(]&amp;quot; Output: false  Example 4: Input: &amp;quot;([)]&amp;quot; Output: false  Example 5: Input: &amp;quot;{[]}&amp;quot; Output: true  Solution: class Solution { public boolean isValid(String s) { HashMap&amp;lt;Character, Character&amp;gt; charMap = new HashMap&amp;lt;&amp;gt;(); charMap.</description>
     </item>
     
     <item>
@@ -1152,9 +1272,7 @@ A happy number is a number defined by the following process: Starting with any p
       
       <guid>http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/</guid>
       <description>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4  Solution:
-class Solution: def mergeTwoLists(self, l1, l2): &amp;quot;&amp;quot;&amp;quot; :type l1: ListNode :type l2: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if l1 == None: return l2 if l2 == None: return l1 root = ListNode(0) temp = root while l1 and l2: if l1.</description>
+Example: Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) return l2; if (l2 == null) return l1; ListNode dummy = new ListNode(0); ListNode temp = dummy; while (l1 !</description>
     </item>
     
     <item>
@@ -1223,8 +1341,8 @@ class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/</guid>
       <description>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
 Note: Do not modify the linked list.
-Follow up: Can you solve it without using extra space? Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def detectCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if head == None: return None slow = head fast = head hasCycle = False while fast.</description>
+Follow up: Can you solve it without using extra space?
+Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</description>
     </item>
     
     <item>
@@ -1363,10 +1481,8 @@ Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &am
       
       <guid>http://www.hashnopolis.com/post/2018/10/reverse-linked-list/</guid>
       <description>Reverse a singly linked list.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
-A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None # null 1 ---- 2 ---- 3 ---- 4 ---- 5 # prev curr after # prev curr after # https://www.youtube.com/watch?v=D7y_hoT_YZI class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr !</description>
+Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL // prev cur after while (cur !</description>
     </item>
     
     <item>
@@ -1378,8 +1494,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
       <description>Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  *Solution:**
-class Solution: def reverseBetween(self, head, m, n): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type m: int :type n: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr.</description>
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy.</description>
     </item>
     
     <item>
@@ -2003,9 +2118,7 @@ Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, 
       
       <guid>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
       <description>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example:
-Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&amp;gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&amp;gt; merge(l3, l4) = m ---&amp;gt;--&amp;gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &amp;quot;&amp;quot;&amp;quot; :type lists: List[ListNode] :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if list is None or len(lists) == 0: return [] return self.</description>
+Example: Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution: # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&amp;gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&amp;gt; merge(l3, l4) = m ---&amp;gt;--&amp;gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &amp;quot;&amp;quot;&amp;quot; :type lists: List[ListNode] :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if list is None or len(lists) == 0: return [] return self.</description>
     </item>
     
     <item>

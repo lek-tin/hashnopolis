@@ -7,10 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 26 Jan 2019 23:39:49 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Mar 2019 18:25:42 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Closest Two Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/03/closest-two-sum/</link>
+      <pubDate>Sat, 16 Mar 2019 18:25:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/closest-two-sum/</guid>
+      <description>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
+Return the difference between the sum of the two integers and the target.
+Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 + 1) = 1).  Challenge: Do it in O(nlogn) time complexity.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Window Substring</title>
+      <link>http://www.hashnopolis.com/post/2019/03/minimum-window-substring/</link>
+      <pubDate>Sat, 16 Mar 2019 16:05:09 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/minimum-window-substring/</guid>
+      <description>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot;  Note:  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;rdquo;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
+    </item>
+    
+    <item>
+      <title>Longest Substring With at Most Two Distinct Characters</title>
+      <link>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/</link>
+      <pubDate>Sat, 16 Mar 2019 13:30:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/</guid>
+      <description>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
+Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3.  Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
+    </item>
     
     <item>
       <title>Trapping Rain Water</title>
@@ -74,8 +105,8 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/</guid>
       <description>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
 Note: Do not modify the linked list.
-Follow up: Can you solve it without using extra space? Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def detectCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if head == None: return None slow = head fast = head hasCycle = False while fast.</description>
+Follow up: Can you solve it without using extra space?
+Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</description>
     </item>
     
     <item>

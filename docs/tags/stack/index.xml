@@ -39,6 +39,18 @@ Example: Input: [2,1,5,6,2,3] Output: 10  Solution: Push height into the stack i
     </item>
     
     <item>
+      <title>Valid Parentheses</title>
+      <link>http://www.hashnopolis.com/post/2018/11/valid-parentheses/</link>
+      <pubDate>Fri, 02 Nov 2018 20:30:23 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/valid-parentheses/</guid>
+      <description>Given a string containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.
+An input string is valid if:
+Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
+Example 1: Input: &amp;quot;()&amp;quot; Output: true  Example 2: Input: &amp;quot;()[]{}&amp;quot; Output: true  Example 3: Input: &amp;quot;(]&amp;quot; Output: false  Example 4: Input: &amp;quot;([)]&amp;quot; Output: false  Example 5: Input: &amp;quot;{[]}&amp;quot; Output: true  Solution: class Solution { public boolean isValid(String s) { HashMap&amp;lt;Character, Character&amp;gt; charMap = new HashMap&amp;lt;&amp;gt;(); charMap.</description>
+    </item>
+    
+    <item>
       <title>Min Stack</title>
       <link>http://www.hashnopolis.com/post/2018/10/min-stack/</link>
       <pubDate>Sun, 14 Oct 2018 23:55:15 -0700</pubDate>

@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode"]
 categories: ["algorithm"]
 date: 2019-03-03T23:24:48-08:00
-draft: true
+draft: false
 archive: false
 ---
 We have a list of **points** on the plane. Find the `K` closest points to the origin `(0, 0)`.
@@ -64,7 +64,7 @@ class Solution {
     private int helper(int[][] points, int l, int r) {
         int[] pivot = points[l];
         while (l < r) {
-            while (l < r &&compare(points[r], pivot) >= 0) r--;
+            while (l < r && compare(points[r], pivot) >= 0) r--;
             points[l] = points[r];
 
             while (l < r && compare(points[l], pivot) <= 0) l++;
