@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
 get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item." />
-  <meta name="keywords" content="leetcode python cache dll linked-list hashmap " />
+  <meta name="keywords" content="leetcode lru-cache dll linked-list hashmap " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -179,9 +179,7 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/python"><strong>python</strong></a>",
-        
-          "<a href="/tags/cache"><strong>cache</strong></a>",
+          "<a href="/tags/lru-cache"><strong>lru-cache</strong></a>",
         
           "<a href="/tags/dll"><strong>dll</strong></a>",
         
@@ -193,7 +191,9 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/lru-cache.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>LRU Cache</h1>
-      <p>Design and implement a data structure for <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU">Least Recently Used (LRU)</a> cache. It should support the following operations: <code>get</code> and <code>put</code>.</p>
+      
+
+<p>Design and implement a data structure for <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU">Least Recently Used (LRU)</a> cache. It should support the following operations: <code>get</code> and <code>put</code>.</p>
 
 <p><code>get(key)</code> - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return <code>-1</code>.
 <code>put(key, value)</code> - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</p>
@@ -201,7 +201,7 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
 <p>Follow up:
 Could you do both operations in <code>O(1)</code> time complexity?</p>
 
-<p><strong>Example:</strong></p>
+<h3 id="example">Example:</h3>
 
 <pre><code>LRUCache cache = new LRUCache( 2 /* capacity */ );
 
@@ -216,7 +216,34 @@ cache.get(3);       // returns 3
 cache.get(4);       // returns 4
 </code></pre>
 
-<p><strong>Solution:</strong></p>
+<h3 id="solution">Solution:</h3>
+
+<pre><code class="language-java">import java.util.LinkedHashMap;
+import java.util.Map;
+public class LRUCache {
+    private Map&lt;Integer, Integer&gt; map;
+    private int capacity;
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        map = new LinkedHashMap&lt;Integer, Integer&gt;(capacity + 1);
+    }
+    
+    public int get(int key) {
+        Integer val = map.get(key);
+        if (val == null) return -1;
+        map.remove(key);
+        map.put(key, val);
+        return val;
+    }
+    
+    public void set(int key, int value) {
+        map.remove(key);
+        map.put(key, value);
+        if (map.size() &gt; capacity)
+            map.remove(map.entrySet().iterator().next().getKey());
+    }
+}
+</code></pre>
 
 <pre><code class="language-python"># Dictionary stores keys with values of nodes.  Nodes form
 # double linked list containing key, value pairs. DLL is in

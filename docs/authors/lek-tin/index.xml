@@ -7,10 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 16 Mar 2019 18:25:42 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 27 Mar 2019 19:20:32 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Subtree With Maximum Average</title>
+      <link>http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/</link>
+      <pubDate>Wed, 27 Mar 2019 19:20:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/</guid>
+      <description>Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It&amp;rsquo;s guaranteed that there is only one subtree with maximum average.
+Example Given a binary tree:
+ 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11.  Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this.</description>
+    </item>
+    
+    <item>
+      <title>Validate Subtree</title>
+      <link>http://www.hashnopolis.com/post/2019/03/validate-subtree/</link>
+      <pubDate>Wed, 27 Mar 2019 19:12:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/validate-subtree/</guid>
+      <description>Given two trees, T1 and T2, write an function to test whether T2 is a subtree of T1.
+Solution public class Subtree { public boolean isSubTree(TreeNode T1, TreeNode T2) { if (T2 == null) return true; if (T1 == null) return false; return (isSameTree(T1,T2) || isSubTree(T1.left, T2) || isSubTree(T1.right, T2)); } public boolean isSameTree(TreeNode T1, TreeNode T2) { if (T1 == null &amp;amp;&amp;amp; T2 == null) return true; if (T1 == null || T2 == null) return false; if (T1.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Path Sum in Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2019/03/minimum-path-sum-in-binary-tree/</link>
+      <pubDate>Wed, 27 Mar 2019 02:05:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/minimum-path-sum-in-binary-tree/</guid>
+      <description>Given a Binary Tree, find the minimum sum path from a leaf to root. For example, in the following tree, there are three leaf to root paths 8-&amp;gt;-2-&amp;gt;10, -4-&amp;gt;-2-&amp;gt;10 and 7-&amp;gt;10. The sums of these three paths are 16, 4 and 17 respectively. The minimum of them is 17 and the path for minimum is -4-&amp;gt;-2-&amp;gt;10.
+ 10 / \ -2 7 / \ 8 -4  Solution public class PathSum { public int Solution(TreeNode root) { if (root == null) return 0; if (root.</description>
+    </item>
+    
+    <item>
+      <title>Lists in Java</title>
+      <link>http://www.hashnopolis.com/post/2019/03/lists-in-java/</link>
+      <pubDate>Wed, 27 Mar 2019 00:04:16 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/lists-in-java/</guid>
+      <description> List interface: The List interface specifies two remove methods:
+List&amp;lt;Integer&amp;gt; list = new List&amp;lt;&amp;gt;(); // Remove the element at index 4 remove(int index): list.remove(4); // Remove the first occurrence of the object 4 remove(Object o): list.remove(new Integer(4));  Linked List:    Pros Cons     Can insert or remove anywhere in the list without shifting elements Not sortable   Insert: O(1) Elements are not stored in contiguous memory addresses   Remove: O(1) Find: O(n), as must traverse to find an element    </description>
+    </item>
+    
+    <item>
+      <title>LRU Cache Miss Count</title>
+      <link>http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/</link>
+      <pubDate>Tue, 26 Mar 2019 22:51:52 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/</guid>
+      <description> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&amp;lt;Integer&amp;gt; cache = new LinkedList&amp;lt;&amp;gt;(); int count = 0; for (int i = 0; i &amp;lt; array.length; i++) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count++; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </description>
+    </item>
+    
+    <item>
+      <title>Insert Into a Cyclic Sorted List</title>
+      <link>http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/</link>
+      <pubDate>Tue, 26 Mar 2019 20:15:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/</guid>
+      <description>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
+If there are multiple suitable places for insertion, you may choose any place to insert the new value.</description>
+    </item>
     
     <item>
       <title>Closest Two Sum</title>
@@ -524,7 +584,7 @@ Input: [&amp;quot;dog&amp;quot;,&amp;quot;racecar&amp;quot;,&amp;quot;car&amp;qu
 Example 1:
 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2:
 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution: Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start + max_len] return solution  Dynamic Programming</description>
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start + max_len] return solution  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</description>
     </item>
     
     <item>
@@ -1526,10 +1586,8 @@ Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &am
       
       <guid>http://www.hashnopolis.com/post/2018/10/reverse-linked-list/</guid>
       <description>Reverse a singly linked list.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
-A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None # null 1 ---- 2 ---- 3 ---- 4 ---- 5 # prev curr after # prev curr after # https://www.youtube.com/watch?v=D7y_hoT_YZI class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr !</description>
+Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL // prev cur after while (cur !</description>
     </item>
     
     <item>
@@ -1541,8 +1599,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
       <description>Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  *Solution:**
-class Solution: def reverseBetween(self, head, m, n): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type m: int :type n: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr.</description>
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy.</description>
     </item>
     
     <item>
@@ -2197,9 +2254,7 @@ Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, 
       
       <guid>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
       <description>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example:
-Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&amp;gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&amp;gt; merge(l3, l4) = m ---&amp;gt;--&amp;gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &amp;quot;&amp;quot;&amp;quot; :type lists: List[ListNode] :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if list is None or len(lists) == 0: return [] return self.</description>
+Example: Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution: # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&amp;gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&amp;gt; merge(l3, l4) = m ---&amp;gt;--&amp;gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &amp;quot;&amp;quot;&amp;quot; :type lists: List[ListNode] :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if list is None or len(lists) == 0: return [] return self.</description>
     </item>
     
     <item>

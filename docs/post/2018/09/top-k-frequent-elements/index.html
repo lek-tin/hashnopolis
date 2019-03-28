@@ -248,6 +248,7 @@ Your algorithm&rsquo;s time complexity <strong>must be better</strong> than <cod
 
         for (int i = buckets.length - 1; i &gt;= 0 &amp;&amp; res.size() &lt; k; i--) {
             if (buckets[i] != null)
+                // No two elements have the same frequency.
                 res.addAll(buckets[i]);
         }
         return res;

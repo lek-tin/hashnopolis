@@ -39,9 +39,7 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
       
       <guid>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
       <description>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example:
-Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&amp;gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&amp;gt; merge(l3, l4) = m ---&amp;gt;--&amp;gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &amp;quot;&amp;quot;&amp;quot; :type lists: List[ListNode] :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if list is None or len(lists) == 0: return [] return self.</description>
+Example: Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution: # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&amp;gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&amp;gt; merge(l3, l4) = m ---&amp;gt;--&amp;gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &amp;quot;&amp;quot;&amp;quot; :type lists: List[ListNode] :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if list is None or len(lists) == 0: return [] return self.</description>
     </item>
     
     <item>

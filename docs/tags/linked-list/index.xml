@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 21 Jan 2019 23:38:03 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 26 Mar 2019 20:15:43 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Insert Into a Cyclic Sorted List</title>
+      <link>http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/</link>
+      <pubDate>Tue, 26 Mar 2019 20:15:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/</guid>
+      <description>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
+If there are multiple suitable places for insertion, you may choose any place to insert the new value.</description>
+    </item>
     
     <item>
       <title>Add Two Numbers</title>
@@ -98,10 +108,8 @@ Follow up: Can you solve it without using extra space? Solution:
       
       <guid>http://www.hashnopolis.com/post/2018/10/reverse-linked-list/</guid>
       <description>Reverse a singly linked list.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up:
-A linked list can be reversed either iteratively or recursively. Could you implement both? Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None # null 1 ---- 2 ---- 3 ---- 4 ---- 5 # prev curr after # prev curr after # https://www.youtube.com/watch?v=D7y_hoT_YZI class Solution: def reverseList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr, prev, after = head, None, ListNode(None) while curr !</description>
+Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL // prev cur after while (cur !</description>
     </item>
     
     <item>
@@ -113,8 +121,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
       <description>Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  *Solution:**
-class Solution: def reverseBetween(self, head, m, n): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type m: int :type n: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; dummy = ListNode(None) dummy.next = head pre = dummy curr = dummy.next for i in range(1, m): curr = curr.</description>
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy.</description>
     </item>
     
     <item>
