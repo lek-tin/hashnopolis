@@ -2,7 +2,7 @@
 title: "Longest Palindromic Substring"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dynamic-programming"]
+tags: ["leetcode", "palindrome", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-01-22T22:29:56-08:00
 draft: false
@@ -70,7 +70,6 @@ class Solution(object):
 
         return solution
 ```
-Dynamic Programming
 ```python
 # time: O(n^2)
 # space: O(1)

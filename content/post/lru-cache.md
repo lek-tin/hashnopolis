@@ -2,7 +2,7 @@
 title: "LRU Cache"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "cache", "dll", "linked-list", "hashmap"]
+tags: ["leetcode", "lru-cache", "dll", "linked-list", "hashmap"]
 categories: ["algorithm"]
 date: 2018-11-11T15:33:09-08:00
 draft: false
@@ -16,7 +16,7 @@ Design and implement a data structure for [Least Recently Used (LRU)](https://en
 Follow up:
 Could you do both operations in `O(1)` time complexity?
 
-**Example:**
+### Example:
 ```
 LRUCache cache = new LRUCache( 2 /* capacity */ );
 
@@ -30,7 +30,34 @@ cache.get(1);       // returns -1 (not found)
 cache.get(3);       // returns 3
 cache.get(4);       // returns 4
 ```
-**Solution:**
+### Solution:
+```java
+import java.util.LinkedHashMap;
+import java.util.Map;
+public class LRUCache {
+    private Map<Integer, Integer> map;
+    private int capacity;
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        map = new LinkedHashMap<Integer, Integer>(capacity + 1);
+    }
+    
+    public int get(int key) {
+        Integer val = map.get(key);
+        if (val == null) return -1;
+        map.remove(key);
+        map.put(key, val);
+        return val;
+    }
+    
+    public void set(int key, int value) {
+        map.remove(key);
+        map.put(key, value);
+        if (map.size() > capacity)
+            map.remove(map.entrySet().iterator().next().getKey());
+    }
+}
+```
 ```python
 # Dictionary stores keys with values of nodes.  Nodes form
 # double linked list containing key, value pairs. DLL is in

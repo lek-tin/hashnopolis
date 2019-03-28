@@ -10,7 +10,7 @@ archive: false
 ---
 Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 
-**Example:**
+### Example:
 ```
 Input:
 [
@@ -20,7 +20,7 @@ Input:
 ]
 Output: 1->1->2->3->4->4->5->6
 ```
-**Solution:**
+### Solution:
 ```python
 # Definition for singly-linked list.
 # class ListNode(object):
@@ -89,13 +89,15 @@ class Solution {
                 // Descending
                 else
                     return 1;
+                // A more concise way to write it is as below,
+                // return o1.val - o2.val;
             }
         });
 
         ListNode dummy = new ListNode(0);
         ListNode tail = dummy;
 
-        for (ListNode node:lists)
+        for (ListNode node: lists)
             if (node != null)
                 queue.add(node);
 

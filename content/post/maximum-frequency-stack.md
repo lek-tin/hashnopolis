@@ -74,7 +74,6 @@ class FreqStack {
         freq.put(i, maxFreq-1);
 
         if (map.get(maxFreq).size() == 0) maxFreq--;
-        System.out.println(maxFreq);
         return i;
     }
 }

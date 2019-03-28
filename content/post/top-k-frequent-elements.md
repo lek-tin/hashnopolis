@@ -62,6 +62,7 @@ class Solution {
 
         for (int i = buckets.length - 1; i >= 0 && res.size() < k; i--) {
             if (buckets[i] != null)
+                // No two elements have the same frequency.
                 res.addAll(buckets[i]);
         }
         return res;
