@@ -40,13 +40,14 @@ class Solution {
 
         Deque<Integer> deque = new LinkedList<>();
         int[] res = new int[nums.length - k + 1];
-
+        //  <--  [Deque]  <--
+        //   head         tail
         for (int i = 0; i < nums.length; i++) {
-            // Distance greater than k, remove head
+            // Distance greater than k, remove at head
             if (!deque.isEmpty() && deque.peekFirst() == i - k) {
                 deque.poll();
             }
-            // remove any number less than the new candidate: num[i]
+            // remove at tail if the number is less than the new candidate: num[i]
             while (!deque.isEmpty() && nums[deque.peekLast()] < nums[i]) {
                 deque.removeLast();
             }
@@ -64,7 +65,7 @@ class Solution {
 ```
 ### Explanation:
 ```
-Window position                  Deque         Max
+Window position               <- Deque <-        Max
                              <head...tail>
 ---------------              -------------    -----
 [1]  3  -1 -3  5  3  6  7     [1]               -
