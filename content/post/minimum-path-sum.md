@@ -2,7 +2,7 @@
 title: "Minimum Path Sum"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "matrix", "dynamic-programming"]
+tags: ["leetcode", "matrix", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-10-26T23:04:31-07:00
 draft: false

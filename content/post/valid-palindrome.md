@@ -2,7 +2,7 @@
 title: "Valid Palindrome"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "palindrome"]
+tags: ["leetcode", "palindrome"]
 categories: ["algorithm"]
 date: 2018-11-01T22:39:07-07:00
 draft: false

@@ -2,7 +2,7 @@
 title: "Binary Tree Level Order Traversal II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree"]
+tags: ["leetcode", "binary-tree"]
 categories: ["algorithm"]
 date: 2018-09-13T22:59:17+08:00
 draft: false

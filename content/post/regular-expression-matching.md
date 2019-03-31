@@ -2,7 +2,7 @@
 title: "Regular Expression Matching"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dynamic-programming"]
+tags: ["leetcode", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-10-12T23:41:01-07:00
 draft: true

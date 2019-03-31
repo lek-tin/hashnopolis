@@ -2,7 +2,7 @@
 title: "Two Sum"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "hashmap", "sum"]
+tags: ["leetcode", "hashmap", "sum"]
 categories: ["algorithm"]
 date: 2018-08-29T00:44:49+08:00
 draft: false

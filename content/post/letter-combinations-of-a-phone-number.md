@@ -2,7 +2,7 @@
 title: "17. Letter Combinations of a Phone Number"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dfs"]
+tags: ["leetcode", "dfs"]
 categories: ["algorithm"]
 date: 2018-09-03T00:28:45+08:00
 draft: false

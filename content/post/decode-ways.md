@@ -2,7 +2,7 @@
 title: "Decode Ways"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "recursion", "dynamic-programming", "memoization"]
+tags: ["leetcode", "recursion", "dynamic-programming", "memoization"]
 categories: ["algorithm"]
 date: 2018-10-03T23:49:00-07:00
 draft: false

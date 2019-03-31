@@ -2,7 +2,7 @@
 title: "Binary Tree Maximum Path Sum"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree", "dfs"]
+tags: ["leetcode", "binary-tree", "dfs"]
 categories: ["algorithm"]
 date: 2018-10-09T23:50:03-07:00
 draft: false

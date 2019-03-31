@@ -2,7 +2,7 @@
 title: "Binary Tree Postorder Traversal"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree"]
+tags: ["leetcode", "binary-tree"]
 categories: ["algorithm"]
 date: 2018-09-13T23:01:30+08:00
 draft: false

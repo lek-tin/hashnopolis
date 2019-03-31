@@ -2,7 +2,7 @@
 title: "PowX N"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "recursion"]
+tags: ["leetcode", "recursion"]
 categories: ["algorithm"]
 date: 2018-11-11T12:40:25-08:00
 draft: false

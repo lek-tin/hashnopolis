@@ -2,7 +2,7 @@
 title: "Plus One"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "array"]
+tags: ["leetcode", "array"]
 categories: ["algorithm"]
 date: 2018-09-15T12:56:08-07:00
 draft: false

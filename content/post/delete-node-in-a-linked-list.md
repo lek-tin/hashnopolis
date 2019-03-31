@@ -2,7 +2,7 @@
 title: "Delete Node in a Linked List"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "linked-list"]
+tags: ["leetcode", "linked-list"]
 categories: ["algorithm"]
 date: 2018-09-14T11:49:07+08:00
 draft: false

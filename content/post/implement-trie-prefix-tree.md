@@ -2,7 +2,7 @@
 title: "Implement Trie Prefix Tree"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "trie"]
+tags: ["leetcode", "trie"]
 categories: ["algorithm"]
 date: 2018-11-08T23:07:10-08:00
 draft: false

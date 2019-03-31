@@ -2,7 +2,7 @@
 title: "Word Break"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dynamic-programming"]
+tags: ["leetcode", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-10-10T23:57:15-07:00
 draft: false

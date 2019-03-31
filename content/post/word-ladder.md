@@ -2,7 +2,7 @@
 title: "Word Ladder"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "bfs", "bidirectional-bfs", "bidirectional-search"]
+tags: ["leetcode", "bfs", "bidirectional-bfs", "bidirectional-search"]
 categories: ["algorithm"]
 date: 2018-10-27T01:05:07-07:00
 draft: false

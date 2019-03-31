@@ -2,7 +2,7 @@
 title: "Count Number of Substrings With K Distinct Characters"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "substring"]
+tags: ["leetcode", "substring"]
 categories: ["algorithm"]
 date: 2019-01-30T00:56:00-08:00
 draft: false

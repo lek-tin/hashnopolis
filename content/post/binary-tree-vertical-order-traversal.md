@@ -2,7 +2,7 @@
 title: "Binary Tree Vertical Order Traversal"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree"]
+tags: ["leetcode", "binary-tree"]
 categories: ["algorithm"]
 date: 2018-12-30T22:43:56-08:00
 draft: false

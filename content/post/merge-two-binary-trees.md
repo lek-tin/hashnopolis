@@ -2,7 +2,7 @@
 title: "Merge Two Binary Trees"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree", "merge"]
+tags: ["leetcode", "binary-tree", "merge"]
 categories: ["algorithm"]
 date: 2018-10-25T23:42:27-07:00
 draft: false

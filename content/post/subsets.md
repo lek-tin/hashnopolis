@@ -2,7 +2,7 @@
 title: "Subsets"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dfs"]
+tags: ["leetcode", "dfs"]
 categories: ["algorithm"]
 date: 2018-09-15T12:48:42-07:00
 draft: false

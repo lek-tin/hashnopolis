@@ -2,7 +2,7 @@
 title: "Kth Smallest Element in a BST"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "bst", "binary-tree"]
+tags: ["leetcode", "bst", "binary-tree"]
 categories: ["algorithm"]
 date: 2018-10-24T23:39:48-07:00
 draft: false

@@ -2,7 +2,7 @@
 title: "Sqrtx"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-search"]
+tags: ["leetcode", "binary-search"]
 categories: ["algorithm"]
 date: 2018-11-08T21:59:03-08:00
 draft: false

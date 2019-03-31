@@ -2,7 +2,7 @@
 title: "18. 4Sum"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "sum"]
+tags: ["leetcode", "sum"]
 categories: ["algorithm"]
 date: 2018-08-31T23:30:43+08:00
 draft: false

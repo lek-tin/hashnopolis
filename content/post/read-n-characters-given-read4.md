@@ -2,7 +2,7 @@
 title: "Read N Characters Given Read4"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "api"]
+tags: ["leetcode", "api"]
 categories: ["algorithm"]
 date: 2018-11-19T23:52:19-08:00
 draft: false

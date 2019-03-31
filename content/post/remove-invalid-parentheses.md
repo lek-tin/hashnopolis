@@ -2,7 +2,7 @@
 title: "Remove Invalid Parentheses"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dfs", "search"]
+tags: ["leetcode", "dfs", "search"]
 categories: ["algorithm"]
 date: 2018-11-13T16:20:10-08:00
 draft: false

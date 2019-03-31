@@ -2,7 +2,7 @@
 title: "Maximal Square"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "matrix", "dynamic-programming"]
+tags: ["leetcode", "matrix", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-11-01T23:18:11-07:00
 draft: false

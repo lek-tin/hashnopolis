@@ -2,7 +2,7 @@
 title: "Longest Continuous Increasing Subsequence"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "array"]
+tags: ["leetcode", "array"]
 categories: ["algorithm"]
 date: 2018-12-19T10:40:26-08:00
 draft: false

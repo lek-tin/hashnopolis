@@ -2,7 +2,7 @@
 title: "Gray Code"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary"]
+tags: ["leetcode", "binary"]
 categories: ["algorithm"]
 date: 2018-09-25T08:14:01-07:00
 draft: false

@@ -2,7 +2,7 @@
 title: "Move Zeroes"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "two-pointers"]
+tags: ["leetcode", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-11-03T16:25:23-07:00
 draft: false

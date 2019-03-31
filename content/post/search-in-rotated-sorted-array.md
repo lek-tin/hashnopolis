@@ -2,7 +2,7 @@
 title: "Search in Rotated Sorted Array"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "search", "sorted-array"]
+tags: ["leetcode", "search", "sorted-array"]
 categories: ["algorithm"]
 date: 2018-10-26T23:08:49-07:00
 draft: false

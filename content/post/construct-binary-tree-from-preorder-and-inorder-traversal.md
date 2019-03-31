@@ -2,7 +2,7 @@
 title: "Construct Binary Tree From Preorder and Inorder Traversal"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree"]
+tags: ["leetcode", "binary-tree"]
 categories: ["algorithm"]
 date: 2019-01-28T23:20:01-08:00
 draft: false

@@ -2,7 +2,7 @@
 title: "Add and Search Word Data Structure Design"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "trie"]
+tags: ["leetcode", "trie"]
 categories: ["algorithm"]
 date: 2018-11-08T22:37:27-08:00
 draft: true

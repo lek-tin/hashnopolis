@@ -2,7 +2,7 @@
 title: "Summary Ranges"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "sorted-array"]
+tags: ["leetcode", "sorted-array"]
 categories: ["algorithm"]
 date: 2018-10-31T23:53:52-07:00
 draft: false

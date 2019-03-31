@@ -2,7 +2,7 @@
 title: "Single Number II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "bit-operation"]
+tags: ["leetcode", "bit-operation"]
 categories: ["algorithm"]
 date: 2018-09-14T11:53:51+08:00
 draft: false

@@ -2,7 +2,7 @@
 title: "Longest Substring Without Repeating Characters"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "string", "substring", "hashmap"]
+tags: ["leetcode", "string", "substring", "hashmap"]
 categories: ["algorithm"]
 date: 2019-01-22T22:24:06-08:00
 draft: false

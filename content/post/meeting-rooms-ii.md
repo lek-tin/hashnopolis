@@ -2,7 +2,7 @@
 title: "Meeting Rooms II"
 description: "Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "two-posinter", "greedy-algorithm"]
+tags: ["leetcode", "two-posinter", "greedy-algorithm"]
 categories: ["algorithm"]
 date: 2018-11-11T17:11:19-08:00
 draft: false

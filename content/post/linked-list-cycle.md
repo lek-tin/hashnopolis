@@ -2,7 +2,7 @@
 title: "Linked List Cycle"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "linked-list", "slow-fast-pointers", "two-pointers"]
+tags: ["leetcode", "linked-list", "slow-fast-pointers", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-10-21T23:07:55-07:00
 draft: false

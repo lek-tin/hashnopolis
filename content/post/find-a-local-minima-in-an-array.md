@@ -2,7 +2,7 @@
 title: "Find a Local Minima in an Array"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-search"]
+tags: ["leetcode", "binary-search"]
 categories: ["algorithm"]
 date: 2019-01-14T11:32:08-08:00
 draft: false

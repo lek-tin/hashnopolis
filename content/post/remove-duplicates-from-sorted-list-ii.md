@@ -2,7 +2,7 @@
 title: "Remove Duplicates From Sorted List II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "two-pointers"]
+tags: ["leetcode", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-09-19T10:38:38-07:00
 draft: false

@@ -2,7 +2,7 @@
 title: "Min Stack"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "stack"]
+tags: ["leetcode", "stack"]
 categories: ["algorithm"]
 date: 2018-10-14T23:55:15-07:00
 draft: false

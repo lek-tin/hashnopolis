@@ -2,7 +2,7 @@
 title: "Find All Anagrams in a String"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "hashtable", "sliding-window"]
+tags: ["leetcode", "hashtable", "sliding-window"]
 categories: ["algorithm"]
 date: 2018-12-15T09:42:45-08:00
 draft: false

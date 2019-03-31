@@ -2,7 +2,7 @@
 title: "Add Two Numbers"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "linked-list"]
+tags: ["leetcode", "linked-list"]
 categories: ["algorithm"]
 date: 2019-01-21T23:38:03-08:00
 draft: false

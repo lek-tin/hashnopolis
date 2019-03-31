@@ -2,7 +2,7 @@
 title: "Encode and Decode Tinyurl"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "encoding", "decoding", "hashmap"]
+tags: ["leetcode", "encoding", "decoding", "hashmap"]
 categories: ["algorithm"]
 date: 2018-11-11T18:48:12-08:00
 draft: false

@@ -2,7 +2,7 @@
 title: "Reverse Nodes in K Group"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "linked-list"]
+tags: ["leetcode", "linked-list"]
 categories: ["algorithm"]
 date: 2018-11-13T18:04:36-08:00
 draft: false

@@ -2,7 +2,7 @@
 title: "Lowest Common Ancestor of a Binary Search Tree"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "bst", "dfs", "divide-and-conquer"]
+tags: ["leetcode", "bst", "dfs", "divide-and-conquer"]
 categories: ["algorithm"]
 date: 2018-11-01T13:23:27-07:00
 draft: false

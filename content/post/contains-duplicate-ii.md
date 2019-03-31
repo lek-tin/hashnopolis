@@ -2,7 +2,7 @@
 title: "Contains Duplicate II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "duplicate"]
+tags: ["leetcode", "duplicate"]
 categories: ["algorithm"]
 date: 2018-11-05T00:27:12-08:00
 draft: true
