@@ -5,7 +5,7 @@
 
   
   <title>
-        16. 3sum Closest | Hashnopolis
+        Max Stack | Hashnopolis
       </title>
 
     
@@ -16,18 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
-Example:
-Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to the target is 2. (-1 &#43; 2 &#43; 1 = 2)." />
-  <meta name="keywords" content="leetcode sum " />
+  <meta name="description" content="Design a max stack that supports push, pop, top, peekMax and popMax.
+1. push(x) &amp;ndash; Push element x onto stack. 2. pop() &amp;ndash; Remove the element on top of the stack and return it. 3. top() &amp;ndash; Get the element on the top. 4. peekMax() &amp;ndash; Retrieve the maximum element in the stack. 5. popMax() &amp;ndash; Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one." />
+  <meta name="keywords" content="leetcode stack " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="16. 3sum Closest" />
-    <meta name="twitter:description" content="Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
-Example:
-Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to the target is 2. (-1 &#43; 2 &#43; 1 = 2)." />
+    <meta name="twitter:title" content="Max Stack" />
+    <meta name="twitter:description" content="Design a max stack that supports push, pop, top, peekMax and popMax.
+1. push(x) &amp;ndash; Push element x onto stack. 2. pop() &amp;ndash; Remove the element on top of the stack and return it. 3. top() &amp;ndash; Get the element on the top. 4. peekMax() &amp;ndash; Retrieve the maximum element in the stack. 5. popMax() &amp;ndash; Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -37,7 +35,7 @@ Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to th
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2018/08/16.-3sum-closest/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/max-stack/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -181,58 +179,94 @@ Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to th
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/sum"><strong>sum</strong></a>",
+          "<a href="/tags/stack"><strong>stack</strong></a>",
         
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/3sum-closest.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>16. 3sum Closest</h1>
-      <p>Given an array <code>nums</code> of n integers and an integer <code>target</code>, find three integers in <code>nums</code> such that the sum is closest to <code>target</code>. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/max-stack.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Max Stack</h1>
+      
 
-<p>Example:</p>
+<p>Design a max stack that supports push, pop, top, peekMax and popMax.<br />
+1. <code>push(x</code>) &ndash; Push element x onto stack.
+2. <code>pop()</code> &ndash; Remove the element on top of the stack and return it.
+3. <code>top()</code> &ndash; Get the element on the top.
+4. <code>peekMax()</code> &ndash; Retrieve the maximum element in the stack.
+5. <code>popMax()</code> &ndash; Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.</p>
 
-<pre><code>Given array nums = [-1, 2, 1, -4], and target = 1.
+<h3 id="example-1">Example 1:</h3>
 
-The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+<pre><code>MaxStack stack = new MaxStack();
+stack.push(5); 
+stack.push(1);
+stack.push(5);
+stack.top(); -&gt; 5
+stack.popMax(); -&gt; 5
+stack.top(); -&gt; 1
+stack.peekMax(); -&gt; 5
+stack.pop(); -&gt; 1
+stack.top(); -&gt; 5
 </code></pre>
 
-<p><strong>Solution:</strong></p>
+<h3 id="note">Note:</h3>
 
-<pre><code class="language-python"># Time: o(n^2)
-# Space: o(1)
-class Solution:
-  def threeSumClosest(self, nums, target):
-    &quot;&quot;&quot;
-    :type nums: List[int]
-    :type target: int
-    :rtype: int
-    &quot;&quot;&quot;
-    if nums is None or len(nums) &lt; 3:
-      return None
+<ol>
+<li><code>-1e7 &lt;= x &lt;= 1e7</code></li>
+<li>Number of operations won&rsquo;t exceed <code>10000</code>.</li>
+<li>The last four operations won&rsquo;t be called when stack is empty.</li>
+</ol>
 
-    nums.sort()
-    closest = nums[0] + nums[1] + nums[-1]
+<h3 id="solution">Solution:</h3>
 
-    for i in range(len(nums)-2):
-      low = i+1
-      high = len(nums)-1
+<pre><code class="language-java">class MaxStack {
 
-      while low &lt; high:
-        tempSum = nums[i] + nums[low] + nums[high]
-        # Perfect =&gt; exit
-        if tempSum == target:
-          return target
+    Stack&lt;Integer&gt; stack;
+    Stack&lt;Integer&gt; maxStack;
+    /** initialize your data structure here. */
+    public MaxStack() {
+        stack = new Stack&lt;&gt;();
+        maxStack = new Stack&lt;&gt;();
+    }
+    
+    public void push(int x) {
+        int max = maxStack.isEmpty() ? x : maxStack.peek();
+        // Assign a max to every newcomer
+        maxStack.push(max &gt; x ? max : x);
+        stack.push(x);
+    }
+    
+    public int pop() {
+        System.out.println(maxStack.pop());
+        return stack.pop();
+    }
+    
+    public int top() {
+        return stack.peek();
+    }
+    
+    public int peekMax() {
+        return maxStack.peek();
+    }
+    
+    public int popMax() {
+        int val = peekMax();
+        Stack&lt;Integer&gt; buffer = new Stack();
+        while (top() != val) { buffer.push(pop()); }
+        pop();
+        while (!buffer.isEmpty()) { push(buffer.pop()); }
+        return val;
+    }
+}
 
-        if abs(tempSum - target) &lt; abs(closest - target):
-          closest = tempSum
-
-        # Continue the iteration
-        if tempSum - target &gt; 0:
-          high -= 1
-        else:
-          low += 1
-
-    return closest
+/**
+ * Your MaxStack object will be instantiated and called as such:
+ * MaxStack obj = new MaxStack();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.top();
+ * int param_4 = obj.peekMax();
+ * int param_5 = obj.popMax();
+ */
 </code></pre>
 
   </div>

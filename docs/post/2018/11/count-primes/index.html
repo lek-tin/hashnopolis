@@ -20,7 +20,7 @@
 Example:
 Input: 10 Output: 4  Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution:
 class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count &#43;= 1 return count  " />
-  <meta name="keywords" content="leetcode python sieve-of-eratosthenes prime-number " />
+  <meta name="keywords" content="leetcode sieve-of-eratosthenes prime-number " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -182,8 +182,6 @@ class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n
         Tags:
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
-        
-          "<a href="/tags/python"><strong>python</strong></a>",
         
           "<a href="/tags/sieve-of-eratosthenes"><strong>sieve-of-eratosthenes</strong></a>",
         
