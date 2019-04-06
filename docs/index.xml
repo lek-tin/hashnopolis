@@ -7,18 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 02 Apr 2019 23:59:01 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 09:37:24 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Search a 2d Matrix Ii</title>
-      <link>http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/</link>
-      <pubDate>Tue, 02 Apr 2019 23:59:01 -0700</pubDate>
+      <title>Playing with Node.js Event Loop</title>
+      <link>http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/</link>
+      <pubDate>Thu, 04 Apr 2019 09:37:24 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/</guid>
-      <description>The content of your post goes here.</description>
+      <guid>http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/</guid>
+      <description>setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
+process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
+function cb(msg){ console.log(msg); } setImmediate(cb, &#39;setImmediate&#39;); process.nextTick(cb, &#39;process.nextTick: 1&#39;); process.nextTick(cb, &#39;process.nextTick: 2&#39;); process.nextTick(cb, &#39;process.nextTick: 3&#39;); console.log(&#39;Processed in the first iteration&#39;); process.nextTick(cb, &#39;process.nextTick: 4&#39;); process.nextTick(cb, &#39;process.nextTick: 5&#39;);  Output:
+Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process.</description>
     </item>
     
     <item>
