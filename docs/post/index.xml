@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 04 Apr 2019 09:37:24 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 06 Apr 2019 22:45:41 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Coin Change 2</title>
+      <link>http://www.hashnopolis.com/post/2019/04/coin-change-2/</link>
+      <pubDate>Sat, 06 Apr 2019 22:45:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/04/coin-change-2/</guid>
+      <description>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2+2+1 5=2+1+1+1 5=1+1+1+1+1  Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2.</description>
+    </item>
     
     <item>
       <title>Playing with Node.js Event Loop</title>
@@ -22,6 +32,17 @@
 process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
 function cb(msg){ console.log(msg); } setImmediate(cb, &#39;setImmediate&#39;); process.nextTick(cb, &#39;process.nextTick: 1&#39;); process.nextTick(cb, &#39;process.nextTick: 2&#39;); process.nextTick(cb, &#39;process.nextTick: 3&#39;); console.log(&#39;Processed in the first iteration&#39;); process.nextTick(cb, &#39;process.nextTick: 4&#39;); process.nextTick(cb, &#39;process.nextTick: 5&#39;);  Output:
 Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process.</description>
+    </item>
+    
+    <item>
+      <title>Search a 2d Matrix Ii</title>
+      <link>http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/</link>
+      <pubDate>Tue, 02 Apr 2019 23:59:01 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/</guid>
+      <description>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+- Integers in each row are sorted in ascending from left to right. - Integers in each column are sorted in ascending from top to bottom.
+Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ]  Given target = 5, return true.</description>
     </item>
     
     <item>
