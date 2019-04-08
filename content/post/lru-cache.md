@@ -41,7 +41,7 @@ public class LRUCache {
         this.capacity = capacity;
         map = new LinkedHashMap<Integer, Integer>(capacity + 1);
     }
-    
+
     public int get(int key) {
         Integer val = map.get(key);
         if (val == null) return -1;

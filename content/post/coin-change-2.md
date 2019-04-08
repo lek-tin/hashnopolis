@@ -2,10 +2,10 @@
 title: "Coin Change 2"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-04-06T22:45:41-07:00
-draft: true
+draft: false
 archive: false
 ---
 You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.   
@@ -38,3 +38,27 @@ You can assume that
 2. `1 <= coin <= 5000`
 3. the number of coins is less than `500`
 4. the answer is guaranteed to fit into signed `32-bit` integer
+
+### Solution
+```java
+class Solution {
+    public int change(int amount, int[] coins) {
+        int[] combos = new int[amount + 1];
+        combos[0] = 1;
+
+        for (int i = 0; i < coins.length; i++) {
+            int coin = coins[i];
+            for (int j = 1; j <= amount; j++) {
+                if (j >= coin) {
+                    //NEW combo = combo WITH coin + combo WITHOUT coin
+                    combos[j] += combos[j - coin];
+                    // System.out.println(Arrays.toString(combos));
+                }
+            }
+        }
+
+        return combos[amount];
+    }
+}
+```
+**hint**: <https://youtu.be/jaNZ83Q3QGc>

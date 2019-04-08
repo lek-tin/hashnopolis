@@ -38,15 +38,13 @@ class Solution {
         if (coins == null || coins.length == 0 || amount < 0) return -1;
 
         int[] mem = new int[amount+1];
-        int[] marked = new int[amount+1];
         int infLimit = Integer.MAX_VALUE - 1;
         for (int i = 0; i <= amount; i++) {
             if (i == 0) mem[0] = 0;
             else
                 mem[i] = infLimit;
-            marked[i] = -1;
         }
-
+        // coins then amount or amount then coin both work.
         for (int i = 0; i < coins.length; i++) {
             int coin = coins[i];
             for (int j = 1; j <= amount; j++) {
@@ -54,7 +52,6 @@ class Solution {
                     int without = mem[j - coin];
                     if (without + 1 < mem[j]) {
                         mem[j] = without + 1;
-                        marked[j] = i;
                     }
                 }
             }
