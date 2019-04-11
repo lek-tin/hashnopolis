@@ -303,6 +303,34 @@
 <code>%lld</code>: <code>long long int</code><br />
 <code>%llu</code>: <code>unsigned long long int</code></p>
 
+<p><code>32-bit</code> number range:</p>
+
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+
+using namespace std;
+   int main()
+   {
+    int min = 1 &lt;&lt; 31;
+    int max = (1 &lt;&lt; 31) - 1;
+    int minus_1 = -1;
+    int zero = 0;
+    cout&lt;&lt; std::bitset&lt;32&gt;(min);
+    cout&lt;&lt; &quot;\n&quot;;
+    cout&lt;&lt; std::bitset&lt;32&gt;(max);
+    cout&lt;&lt; &quot;\n&quot;;
+    cout&lt;&lt; std::bitset&lt;32&gt;(minus_1);
+    cout&lt;&lt; &quot;\n&quot;;
+    cout&lt;&lt; std::bitset&lt;32&gt;(zero);
+    // Ouput
+    // 10000000000000000000000000000000
+    // 01111111111111111111111111111111
+    // 11111111111111111111111111111111
+    // 00000000000000000000000000000000
+    return 0;
+    }
+</code></pre>
+
   </div>
 
   <div id="disqus_thread"></div>
