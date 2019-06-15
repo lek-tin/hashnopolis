@@ -170,6 +170,35 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/subsets/">Subsets</a></h2>
+
+      <p>Given a set of distinct integers, nums, return all possible subsets (the power set).
+Note: The solution set must not contain duplicate subsets.
+Example:
+Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]  Solution:
+# Time: o(2^n) # Space: o(n) class Solution: def subsets(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: List[List[int]] &#34;&#34;&#34; res = [] def dfs(nums, index, path): res.append(path) for i in range(index, len(nums)): dfs(nums, i&#43;1, path&#43;[nums[i]]) dfs(sorted(nums), 0, []) return res # or class Solution(object): def subsets(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: List[List[int]] &#34;&#34;&#34; # Edge case if nums == None or len(nums) == 0: return [] # Sort the given numbers nums.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/09/roman-to-integer/">Roman to Integer</a></h2>
 
       <p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
@@ -406,35 +435,6 @@ Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null
 Example:
 Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &lt;--- / \ 2 3 &lt;--- \ \ 5 4 &lt;---  Solution:
 # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-preorder-traversal/">Binary Tree Preorder Traversal</a></h2>
-
-      <p>Given a binary tree, return the preorder traversal of its nodes’ values.
-Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow up: Recursive solution is trivial, could you do it iteratively?
-Solution:
-# Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; if root is None: return [] return [root.</p>
 
       <p class="meta">
         

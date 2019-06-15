@@ -170,6 +170,34 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/">Linked List Cycle II</a></h2>
+
+      <p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+Note: Do not modify the linked list.
+Follow up: Can you solve it without using extra space?
+Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle/">Linked List Cycle</a></h2>
 
       <p>Given a linked list, determine if it has a cycle in it.
@@ -397,33 +425,6 @@ Note: The solution set must not contain duplicate subsets.
 Example:
 Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution:
 # Time: o(2^n) # Space: o(n) class Solution(object): def subsetsWithDup(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: List[List[int]] &#34;&#34;&#34; # Edge case if nums == None or len(nums) == 0: return [] # Sort the given numbers nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/merge-sorted-array/">Merge Sorted Array</a></h2>
-
-      <p>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note: The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m &#43; n) to hold additional elements from nums2. Example:
-Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3</p>
 
       <p class="meta">
         

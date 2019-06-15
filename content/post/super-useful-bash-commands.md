@@ -142,3 +142,7 @@ apt-get install <package-name>
 ```bash
 apt list --installed
 ```
+21. List kernel attributes
+```bash
+sysctl -a
+```
