@@ -2,7 +2,7 @@
 title: "Find First and Last Position of Element in Sorted Array"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "sorted-array", "search"]
+tags: ["leetcode", "sorted-array", "search"]
 categories: ["algorithm"]
 date: 2018-10-26T23:10:23-07:00
 draft: false

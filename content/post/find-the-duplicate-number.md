@@ -2,7 +2,7 @@
 title: "Find the Duplicate Number"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "duplicate"]
+tags: ["leetcode", "duplicate"]
 categories: ["algorithm"]
 date: 2018-10-27T10:34:19-07:00
 draft: false

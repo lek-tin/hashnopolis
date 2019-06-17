@@ -2,7 +2,7 @@
 title: "Kth Largest Element in an Array"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "array", "two-pointers"]
+tags: ["leetcode", "array", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-10-24T23:38:20-07:00
 draft: false

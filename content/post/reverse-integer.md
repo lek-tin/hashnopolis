@@ -2,7 +2,7 @@
 title: "Reverse Integer"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "interger", "modulo"]
+tags: ["leetcode", "interger", "modulo"]
 categories: ["algorithm"]
 date: 2019-01-16T18:44:45-08:00
 draft: false

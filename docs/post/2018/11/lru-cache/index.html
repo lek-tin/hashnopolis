@@ -221,28 +221,37 @@ cache.get(4);       // returns 4
 <pre><code class="language-java">import java.util.LinkedHashMap;
 import java.util.Map;
 public class LRUCache {
-    private Map&lt;Integer, Integer&gt; map;
+    private Map&lt;Integer, Integer&gt; cache;
     private int capacity;
+
     public LRUCache(int capacity) {
         this.capacity = capacity;
-        map = new LinkedHashMap&lt;Integer, Integer&gt;(capacity + 1);
+        cache = new LinkedHashMap&lt;Integer, Integer&gt;(capacity);
     }
-    
+
     public int get(int key) {
-        Integer val = map.get(key);
+        Integer val = cache.get(key);
         if (val == null) return -1;
-        map.remove(key);
-        map.put(key, val);
+        cache.remove(key);
+        cache.put(key, val);
         return val;
     }
-    
-    public void set(int key, int value) {
-        map.remove(key);
-        map.put(key, value);
-        if (map.size() &gt; capacity)
-            map.remove(map.entrySet().iterator().next().getKey());
+
+    public void put(int key, int val) {
+        cache.remove(key);
+        cache.put(key, val);
+        if (cache.size() &gt; capacity) {
+            cache.remove(cache.entrySet().iterator().next().getKey());
+        }
     }
 }
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache obj = new LRUCache(capacity);
+ * int param_1 = obj.get(key);
+ * obj.put(key,value);
+ */
 </code></pre>
 
 <pre><code class="language-python"># Dictionary stores keys with values of nodes.  Nodes form

@@ -21,7 +21,7 @@ Note: You may assume that duplicates do not exist in the tree.
 For example, given
 inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary tree:
  3 / \ 9 20 / \ 15 7  Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder." />
-  <meta name="keywords" content="leetcode python bianry-tree " />
+  <meta name="keywords" content="leetcode bianry-tree " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -184,8 +184,6 @@ inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary t
         Tags:
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
-        
-          "<a href="/tags/python"><strong>python</strong></a>",
         
           "<a href="/tags/bianry-tree"><strong>bianry-tree</strong></a>",
         

@@ -2,7 +2,7 @@
 title: "4. Median of Two Sorted Arrays"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "array", "sorted-array", "binary-search"]
+tags: ["leetcode", "array", "sorted-array", "binary-search"]
 categories: ["algorithm"]
 date: 2018-08-21T20:54:32+08:00
 draft: false

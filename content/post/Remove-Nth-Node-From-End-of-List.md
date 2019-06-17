@@ -2,7 +2,7 @@
 title: "Remove Nth Node From End of List"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "linked-list", "slow-fast-pointers", "two-pointers"]
+tags: ["leetcode", "linked-list", "slow-fast-pointers", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-08-20T23:33:38+08:00
 draft: false

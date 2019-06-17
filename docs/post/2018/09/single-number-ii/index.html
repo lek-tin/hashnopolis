@@ -23,7 +23,7 @@ Example 1:
 Input: [2,2,3,2] Output: 3  Example 2:
 Input: [0,1,0,1,0,1,99] Output: 99  Solution:
 class Solution: def singleNumber(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.csdn.net/karen0310/article/details/78226261 ones, twos = 0, 0 for _, num in enumerate(nums): ones = (ones ^ num) &amp;amp; ~twos twos = (twos ^ num) &amp;amp; ~ones print(bin(num), &amp;quot;ones: &amp;quot;, bin(ones), &amp;quot;twos: &amp;quot;, bin(twos)) return ones  " />
-  <meta name="keywords" content="leetcode python bit-operation " />
+  <meta name="keywords" content="leetcode bit-operation " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -188,8 +188,6 @@ class Solution: def singleNumber(self, nums): &amp;quot;&amp;quot;&amp;quot; :ty
         Tags:
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
-        
-          "<a href="/tags/python"><strong>python</strong></a>",
         
           "<a href="/tags/bit-operation"><strong>bit-operation</strong></a>",
         

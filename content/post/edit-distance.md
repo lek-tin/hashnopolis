@@ -2,7 +2,7 @@
 title: "Edit Distance"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dynamic-programming"]
+tags: ["leetcode", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-01-17T23:56:53-08:00
 draft: false

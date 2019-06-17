@@ -2,7 +2,7 @@
 title: "Add Binary"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "stack"]
+tags: ["leetcode", "stack"]
 categories: ["algorithm"]
 date: 2018-09-05T23:48:48+08:00
 draft: false

@@ -24,7 +24,7 @@ Example 1:
 Input: [3,4,5,1,2] Output: 1  Example 2:
 Input: [4,5,6,7,0,1,2] Output: 0  Solution:
 class Solution: def findMin(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; if len(nums) == 1: return nums[0] if len(nums) == 2: return min(nums[0], nums[1]) if nums[0] &amp;lt; nums[len(nums)-1]: return nums[0] if nums[len(nums)-2] &amp;gt; nums[len(nums)-1]: return nums[len(nums)-1] for i in range(1, len(nums)-1): if nums[i] &amp;lt; nums[i-1] and nums[i] &amp;lt; nums[i&#43;1]: return nums[i] def bsFindMin(self, nums): l, r = 0, len(nums) - 1 while l &amp;lt; r: m = (l &#43; r) // 2 if nums[m] &amp;gt; nums[m - 1] and nums[m] &amp;gt; nums[m &#43; 1]: return nums[m &#43; 1] if nums[m] &amp;lt; nums[m - 1] and nums[m] &amp;lt; nums[m &#43; 1]: return nums[m] if nums[m] &amp;gt;= nums[r]: l = m else: r = m return nums[0]  " />
-  <meta name="keywords" content="leetcode python sorted-array " />
+  <meta name="keywords" content="leetcode sorted-array " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -190,8 +190,6 @@ class Solution: def findMin(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nu
         Tags:
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
-        
-          "<a href="/tags/python"><strong>python</strong></a>",
         
           "<a href="/tags/sorted-array"><strong>sorted-array</strong></a>",
         

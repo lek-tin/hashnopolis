@@ -2,7 +2,7 @@
 title: "Excel Sheet Column Title"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "modulus"]
+tags: ["leetcode", "modulus"]
 categories: ["algorithm"]
 date: 2018-11-08T22:42:24-08:00
 draft: false

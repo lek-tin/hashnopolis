@@ -2,7 +2,7 @@
 title: "String to Integer Atoi"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "atoi", "string", "integer"]
+tags: ["leetcode", "atoi", "string", "integer"]
 categories: ["algorithm"]
 date: 2019-01-24T23:03:11-08:00
 draft: false

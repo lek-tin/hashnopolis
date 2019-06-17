@@ -176,148 +176,6 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/construct-binary-tree-from-inorder-and-postorder-traversal/">Construct Binary Tree From Inorder and Postorder Traversal</a></h2>
-
-      <p>Given inorder and postorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
-For example, given
-inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/count-number-of-substrings-with-k-distinct-characters/">Count Number of Substrings With K Distinct Characters</a></h2>
-
-      <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1:
-Input: s = &#34;eceba&#34;, k = 2 Output: 5 Explanation: &#34;ec&#34;, &#34;ce&#34;, &#34;eb&#34;, &#34;ba&#34; and &#34;ece&#34; k distinct characters.  Example 2:
-Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: &#34;a&#34; and &#34;aa&#34; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/construct-binary-tree-from-preorder-and-inorder-traversal/">Construct Binary Tree From Preorder and Inorder Traversal</a></h2>
-
-      <p>Given preorder and inorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
-For example, given:
-preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/binary-tree-zigzag-level-order-traversal/">Binary Tree Zigzag Level Order Traversal</a></h2>
-
-      <p>Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).
-For example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7  return its zigzag level order traversal as:
-[ [3], [20,9], [15,7] ]  Solution::
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/string-to-integer-atoi/">String to Integer Atoi</a></h2>
-
-      <p>Implement atoi which converts a string to an integer.
-The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
-The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-common-prefix/">Longest Common Prefix</a></h2>
 
       <p>Write a function to find the longest common prefix string amongst an array of strings.
@@ -348,41 +206,12 @@ Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explan
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-substring-without-repeating-characters/">Longest Substring Without Repeating Characters</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/random-pick-index/">Random Pick Index</a></h2>
 
-      <p>Given a string, find the length of the longest substring without repeating characters.
-*Example 1:
-Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3.  *Example 2:
-Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1.  *Example 3:
-Input: &#34;pwwkew&#34; Output: 3 Explanation: The answer is &#34;wke&#34;, with the length of 3. Note that the answer must be a substring, &#34;pwke&#34; is a subsequence and not a substring.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/add-two-numbers/">Add Two Numbers</a></h2>
-
-      <p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+      <p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.
+Note: The array size can be very large. Solution that uses too much extra space will not pass the judge.
 Example:
-Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 Explanation: 342 &#43; 465 = 807.</p>
+int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</p>
 
       <p class="meta">
         
@@ -405,11 +234,10 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 E
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/edit-distance/">Edit Distance</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/find-the-celebrity/">Find the Celebrity</a></h2>
 
-      <p>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
-You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
-Example 1: Input: word1 = &#34;horse&#34;, word2 = &#34;ros&#34; Output: 3 Explanation: horse -&gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&gt; rose (remove &#39;r&#39;) rose -&gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &#34;intention&#34;, word2 = &#34;execution&#34; Output: 5 Explanation: intention -&gt; inention (remove &#39;t&#39;) inention -&gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</p>
+      <p>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
+Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: “Hi, A.</p>
 
       <p class="meta">
         
@@ -432,13 +260,177 @@ Example 1: Input: word1 = &#34;horse&#34;, word2 = &#34;ros&#34; Output: 3 Expla
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/reverse-integer/">Reverse Integer</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
 
-      <p>Given a 32-bit signed integer, reverse digits of an integer.
+      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+Your algorithm should run in O(n) complexity.
+Example:
+Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution:
+# Time: o(n) class Solution(object): def longestConsecutive(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/arrays-in-python/">Arrays in Python</a></h2>
+
+      <p>Reverse an array: reversedArray = arr[::-1]</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/programming-language" ><strong>"programming-language"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/interger-to-english-words/">Interger to English Words</a></h2>
+
+      <p>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
 Example 1:
-Input: 123 Output: 321  Example 2:
-Input: -123 Output: -321  Example 3:
-Input: 120 Output: 21  Note: Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
+Input: 123 Output: &#34;One Hundred Twenty Three&#34;  Example 2:
+Input: 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34;  Example 3:
+Input: 1234567 Output: &#34;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&#34;  Example 4:
+Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&#34;  Solution:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/">Increasing Triplet Subsequence</a></h2>
+
+      <p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
+Formally the function should:
+Return true if there exists i, j, k such that arr[i] &lt; arr[j] &lt; arr[k] given 0 ≤ i &lt; j &lt; k ≤ n-1 else return false. Note: Your algorithm should run in O(n) time complexity and O(1) space complexity.
+Example 1:
+Input: [1,2,3,4,5] Output: true  Example 2:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/simplify-path/">Simplify Path</a></h2>
+
+      <p>Given an absolute path for a file (Unix-style), simplify it.
+For example, path = &#34;/home/&#34;, =&gt; &#34;/home&#34; path = &#34;/a/./b/../../c/&#34;, =&gt; &#34;/c&#34; path = &#34;/a/../../b/../c//.//&#34;, =&gt; &#34;/c&#34; path = &#34;/a//b////c/d//././/..&#34;, =&gt; &#34;/a/b/c&#34;
+In a UNIX-style file system, a period (‘.’) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (“..”) moves up a directory, so it cancels out whatever the last directory was.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/sort-colors/">Sort Colors</a></h2>
+
+      <p>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
+Note: You are not suppose to use the library’s sort function for this problem. Example:
+Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow up: 1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/missing-words/">Missing Words</a></h2>
+
+      <p>Julia and Samantha are playing with strings. Julia has a string S, and Samantha has a string T which is a subsequence of string S. They are trying to find out what words are missing in T. Help Julia and Samantha to solve the problem. List all the missing words in T, such that inserting them at the appropriate positions in T, in the same order, results in the string S.</p>
 
       <p class="meta">
         

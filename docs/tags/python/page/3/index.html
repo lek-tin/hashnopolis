@@ -176,39 +176,13 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/find-the-celebrity/">Find the Celebrity</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/subsets-ii/">Subsets Ii</a></h2>
 
-      <p>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
-Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: “Hi, A.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
-
-      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
-Your algorithm should run in O(n) complexity.
+      <p>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
+Note: The solution set must not contain duplicate subsets.
 Example:
-Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution:
-# Time: o(n) class Solution(object): def longestConsecutive(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</p>
+Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution:
+# Time: o(2^n) # Space: o(n) class Solution(object): def subsetsWithDup(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: List[List[int]] &#34;&#34;&#34; # Edge case if nums == None or len(nums) == 0: return [] # Sort the given numbers nums.</p>
 
       <p class="meta">
         
@@ -231,178 +205,13 @@ Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive ele
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/arrays-in-python/">Arrays in Python</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/add-digits/">Add Digits</a></h2>
 
-      <p>Reverse an array: reversedArray = arr[::-1]</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/programming-language" ><strong>"programming-language"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/">Flatten Nested List Iterator</a></h2>
-
-      <p>Given a nested list of integers, implement an iterator to flatten it.
-Each element is either an integer, or a list – whose elements may also be integers or other lists.
-Example 1:
-Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2:
-Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/reverse-nodes-in-k-group/">Reverse Nodes in K Group</a></h2>
-
-      <p>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
-k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
-Example: Given this linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5
-For k = 2, you should return: 2-&gt;1-&gt;4-&gt;3-&gt;5</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/">Serialize and Deserialize Binary Tree</a></h2>
-
-      <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
-Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/">Remove Invalid Parentheses</a></h2>
-
-      <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
-Note: The input string may contain letters other than the parentheses ( and ).
-*Example 1:
-Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;]  *Example 2:
-Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;]  *Example 3:
-Input: &#34;)(&#34; Output: [&#34;&#34;]  *Solution:
-# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &#34;&#34;&#34; :type s: str :rtype: List[str] &#34;&#34;&#34; res = [] self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/encode-and-decode-tinyurl/">Encode and Decode Tinyurl</a></h2>
-
-      <p>Note: This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
-Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/meeting-rooms-ii/">Meeting Rooms II</a></h2>
-
-      <p>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required.
-Example 1:
-Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2:
-Input: [[7,10],[2,4]] Output: 1  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: int &#34;&#34;&#34; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</p>
+      <p>Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+For example:
+Given num = 38, the process is like: 3 &#43; 8 = 11, 1 &#43; 1 = 2. Since 2 has only one digit, return it.
+Follow up: Could you do it without any loop/recursion in O(1) runtime?
+Credits: Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.</p>
 
       <p class="meta">
         
@@ -425,14 +234,183 @@ Input: [[7,10],[2,4]] Output: 1  Solution:
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/interger-to-english-words/">Interger to English Words</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/ugly-number/">Ugly Number</a></h2>
 
-      <p>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
+      <p>Write a program to check whether a given number is an ugly number.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
 Example 1:
-Input: 123 Output: &#34;One Hundred Twenty Three&#34;  Example 2:
-Input: 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34;  Example 3:
-Input: 1234567 Output: &#34;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&#34;  Example 4:
-Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&#34;  Solution:</p>
+Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2:
+Input: 8 Output: true Explanation: 8 = 2 × 2 × 2  Example 3:
+Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/combination-sum-iii/">Combination Sum III</a></h2>
+
+      <p>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
+Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/combination-sum/">Combination Sum</a></h2>
+
+      <p>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
+Note:
+All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations. Example 1:
+Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/combinations/">Combinations</a></h2>
+
+      <p>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+Example:
+Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution:
+class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/combine-two-tables/">Combine Two Tables</a></h2>
+
+      <p>Table: Person
+&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | PersonId | int | | FirstName | varchar | | LastName | varchar | &#43;-------------&#43;---------&#43; PersonId is the primary key column for this table.  Table: Address
+&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | &#43;-------------&#43;---------&#43; AddressId is the primary key column for this table.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/climbing-stairs/">Climbing Stairs</a></h2>
+
+      <p>You are climbing a stair case. It takes n steps to reach to the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+Note: Given n will be a positive integer.
+Example 1:
+Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/">Best Time to Buy and Sell Stock Ii</a></h2>
+
+      <p>Say you have an array for which the ith element is the price of a given stock on day i.
+Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
+Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
 
       <p class="meta">
         
@@ -445,6 +423,35 @@ Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five 
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock/">Best Time to Buy and Sell Stock</a></h2>
+
+      <p>Say you have an array for which the ith element is the price of a given stock on day i.
+If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+Note that you cannot sell a stock before you buy one.
+Example 1:
+Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

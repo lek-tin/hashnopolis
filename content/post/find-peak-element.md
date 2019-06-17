@@ -2,7 +2,7 @@
 title: "Find Peak Element"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "array"]
+tags: ["leetcode", "array"]
 categories: ["algorithm"]
 date: 2018-09-14T11:51:46+08:00
 draft: false

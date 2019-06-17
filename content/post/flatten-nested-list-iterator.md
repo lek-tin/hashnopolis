@@ -2,7 +2,7 @@
 title: "Flatten Nested List Iterator"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "iterator"]
+tags: ["leetcode", "iterator"]
 categories: ["algorithm"]
 date: 2018-11-13T20:03:07-08:00
 draft: false

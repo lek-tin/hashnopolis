@@ -38,3 +38,30 @@ https://stackoverflow.com/questions/2550345/whats-the-difference-between-unsigne
 `%lld`: `long long int`  
 `%llu`: `unsigned long long int`  
 
+`32-bit` number range:
+```c++
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+   int main()
+   {
+    int min = 1 << 31;
+    int max = (1 << 31) - 1;
+    int minus_1 = -1;
+    int zero = 0;
+    cout<< std::bitset<32>(min);
+    cout<< "\n";
+    cout<< std::bitset<32>(max);
+    cout<< "\n";
+    cout<< std::bitset<32>(minus_1);
+    cout<< "\n";
+    cout<< std::bitset<32>(zero);
+    // Ouput
+    // 10000000000000000000000000000000
+    // 01111111111111111111111111111111
+    // 11111111111111111111111111111111
+    // 00000000000000000000000000000000
+    return 0;
+    }
+```

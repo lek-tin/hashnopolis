@@ -2,7 +2,7 @@
 title: "Valid Anagram"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "hashmap"]
+tags: ["leetcode", "hashmap"]
 categories: ["algorithm"]
 date: 2018-09-15T12:53:21-07:00
 draft: false

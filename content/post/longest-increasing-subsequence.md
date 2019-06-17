@@ -2,7 +2,7 @@
 title: "Longest Increasing Subsequence"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "recursion", "memoization"]
+tags: ["leetcode", "recursion", "memoization"]
 categories: ["algorithm"]
 date: 2018-12-19T10:47:57-08:00
 draft: false

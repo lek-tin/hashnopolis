@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="no-js" language="en-us">
+
+<head>
+
+  
+  <title>
+        Machine Learning Questions | Hashnopolis
+      </title>
+
+    
+  
+
+
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="What is an Eigenvalue and Eigenvector? Eigenvectors are used for understanding linear transformations. In data analysis, we usually calculate the eigenvectors for a correlation or covariance matrix. Eigenvectors are the directions along which a particular linear transformation acts by flipping, compressing or stretching. Eigenvalue can be referred to as the strength of the transformation in the direction of eigenvector or the factor by which the compression occurs.
+What is Gradient Descent?" />
+  <meta name="keywords" content="machine-learning data-science " />
+  
+  
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Machine Learning Questions" />
+    <meta name="twitter:description" content="What is an Eigenvalue and Eigenvector? Eigenvectors are used for understanding linear transformations. In data analysis, we usually calculate the eigenvectors for a correlation or covariance matrix. Eigenvectors are the directions along which a particular linear transformation acts by flipping, compressing or stretching. Eigenvalue can be referred to as the strength of the transformation in the direction of eigenvector or the factor by which the compression occurs.
+What is Gradient Descent?" />
+    <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+  
+
+
+
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/06/machine-learning-questions/" />
+<link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="msapplication-TileColor" content="#7679EC">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#7679EC">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Hashnopolis" />
+<meta name="msapplication-tooltip" content="Hashnopolis" />
+<meta name='msapplication-navbutton-color' content="#7679EC" />
+<meta name="msapplication-TileColor" content="#7679EC" />
+<meta name="msapplication-TileImage" content="/img/favicon/favicon-32x32.png" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="/css/highlight.css" />
+<link rel="stylesheet" href="/css/highlight-atom-one-dark.min.css" />
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/overrides.css" />
+
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+</head>
+
+<body>
+  
+  <main class="container left-container">
+
+      <div class="row">
+
+        <section id="sideber" class="sidebar">
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+<a href="/" class="menu-logo">
+  <h1  class="menu-logo__text"># Hashnopolis #</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
+    <g>
+      <path d="M10.001 16l-.143-.01c-.547-.078-.926-.585-.849-1.132l2-14c.078-.546.588-.926 1.132-.848.547.078.927.584.849 1.131l-2 14c-.071.5-.499.859-.989.859zM4.001 16l-.143-.01c-.546-.078-.926-.585-.848-1.132l2-14c.078-.547.58-.927 1.132-.848.546.078.926.585.848 1.132l-2 14c-.072.499-.499.858-.989.858zM15 6h-13c-.552 0-1-.448-1-1s.448-1 1-1h13c.553 0 1 .448 1 1s-.447 1-1 1zM14 12h-13c-.552 0-1-.447-1-1s.448-1 1-1h13c.553 0 1 .447 1 1s-.447 1-1 1z"/>
+    </g>
+  </svg>
+</a>
+
+
+
+
+<ul id="mobile-menu" class="navigation">
+  <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
+  <li><a href="/">Home</a></li>
+  
+  
+  <li><a href="/categories/java">Java</a></li>
+  <li><a href="/categories/python">Python</a></li>
+  <li><a href="/categories/javascript">JavaScript</a></li>
+  <li><a href="/categories/algorithm">Algorithm</a></li>
+  <li><a href="/categories">Categories</a></li>
+  <li><a href="/tags">tags</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+<div class="site-info">
+  <div class="primary-info">
+    <h1>Computer Science, Data Science and Awesome Technology</h1>
+    <footer class="site-footer">
+    <p>© 2016-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    
+    </footer>
+  </div>
+
+  
+  <div class="social-info">
+      <a href="https://linkedin.com/in/lektin/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/lek-tin"><i class="fa fa-github" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+        </section>
+    
+        <section class="main-content">
+          
+  
+
+  
+  <div>
+      <p class="meta">
+        
+        
+        Tags:
+        
+          "<a href="/tags/machine-learning"><strong>machine-learning</strong></a>",
+        
+          "<a href="/tags/data-science"><strong>data-science</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 7-min read
+      </p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/machine-learning-questions.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Machine Learning Questions</h1>
+      
+
+<h3 id="what-is-an-eigenvalue-and-eigenvector">What is an Eigenvalue and Eigenvector?</h3>
+
+<p>Eigenvectors are used for understanding linear transformations. In data analysis, we usually calculate the eigenvectors for a correlation or covariance matrix. Eigenvectors are the directions along which a particular linear transformation acts by flipping, compressing or stretching. Eigenvalue can be referred to as the strength of the transformation in the direction of eigenvector or the factor by which the compression occurs.</p>
+
+<h3 id="what-is-gradient-descent">What is Gradient Descent?</h3>
+
+<p>A method to find the local minimum of a function. From a point along the direction of gradient to iterational search by a certain step length, until gradient equals zero.</p>
+
+<h3 id="what-is-the-curse-of-dimensionality">What is the curse of dimensionality?</h3>
+
+<p>It refers to various phenomena that arise when analyzing and organizing data in high-dimensional  spaces (often with hundreds or thousands of dimensions) that do not occur in low-dimensional settings.</p>
+
+<h3 id="how-can-you-overcome-overfitting">How can you overcome Overfitting?</h3>
+
+<p>Regularization: add a regularizer or a penalty term. Cross Validation: Simple cross validation; S-folder cross validation; Leave-one-out cross validation.</p>
+
+<h3 id="how-will-you-define-the-number-of-clusters-in-a-clustering-algorithm">How will you define the number of clusters in a clustering algorithm?</h3>
+
+<p>Though the Clustering Algorithm is not specified, this question will mostly be asked in reference to
+K-Means clustering where “K” defines the number of clusters. The objective of clustering is to group similar entities in a way that the entities within a group are similar to each other but the groups are different from each other.</p>
+
+<p>For example, the following image shows three different groups.
+<img src="https://s3.amazonaws.com/files.dezyre.com/images/blog/100+Data+Science+Interview+Questions+and+Answers+(General)/Data+Science+Interview+Questions+K-Means+Clustering.jpg" alt="" /></p>
+
+<p>K-Mean Clustering Machine Learning Algorithm<br />
+Within Sum of squares is generally used to explain the homogeneity within a cluster. If you plot WSS for a range of number of clusters, you will get the plot shown below. The Graph is generally known as Elbow Curve.<br />
+<img src="https://s3.amazonaws.com/files.dezyre.com/images/blog/100+Data+Science+Interview+Questions+and+Answers+(General)/Data+Science+Interview+Questions+K-Means.png" alt="" /></p>
+
+<p>Red circled point in above graph i.e. Number of Cluster =6 is the point after which you don’t see any decrement in WSS. This point is known as bending point and taken as K in K – Means. This is the widely used approach but few data scientists also use Hierarchical clustering first to create dendograms and identify the distinct groups from there.</p>
+
+<h3 id="why-l1-regularizations-causes-parameter-sparsity-whereas-l2-regularization-does-not">Why L1 regularizations causes parameter sparsity whereas L2 regularization does not?</h3>
+
+<p>Regularizations in statistics or in the field of machine learning is used to include some extra  information in order to solve a problem in a better way. L1 &amp; L2 regularizations are generally used
+to add constraints to optimization problems.</p>
+
+<p><img src="https://s3.amazonaws.com/files.dezyre.com/images/blog/100+Data+Science+Interview+Questions+and+Answers+(General)/L1+L2+Regularizations.png" alt="" /></p>
+
+<p>In the example shown above H0 is a hypothesis. If you observe, in L1 there is a high likelihood to
+hit the corners as solutions while in L2, it doesn’t. So in L1 variables are penalized more as compared to L2 which results into sparsity.
+In other words, errors are squared in L2, so model sees higher error and tries to minimize that squared error.</p>
+
+<h3 id="explain-the-difference-between-l1-and-l2-regularization">Explain the difference between L1 and L2 regularization.</h3>
+
+<p>L2 regularization tends to spread error among all the terms, while L1 is more binary/sparse, with
+many variables either being assigned a 1 or 0 in weighting. L1 corresponds to setting a Laplacean
+prior on the terms, while L2 corresponds to a Gaussian prior.</p>
+
+<p><img src="https://lh6.googleusercontent.com/vXUSHKE11Qpolek11IPPP6Fs-iU1-LeWtf5EXVdrfOl97ytug_cME-vLF1t4BNvoAppxfRhx4dNzHoKkdl8dfGVix4jc2hhvrtDG_wyuByxpVfeFZQdMH-INzG6RSi_9jkJLERto" alt="" /></p>
+
+<h3 id="can-you-cite-some-examples-where-a-false-positive-is-important-than-a-false-negative">Can you cite some examples where a false positive is important than a false negative?</h3>
+
+<p>Before we start, let us understand what are false positives and what are false negatives.
+False Positives are the cases where you wrongly classified a non-event as an event a.k.a Type I error.<br />
+And, False Negatives are the cases where you wrongly classify events as non-events, a.k.a Type II error.
+<img src="https://s3.amazonaws.com/files.dezyre.com/images/blog/100+Data+Science+Interview+Questions+and+Answers+(General)/False+Positive+False+Negative.png" alt="" /></p>
+
+<h3 id="can-you-explain-the-difference-between-a-test-set-and-a-validation-set">Can you explain the difference between a Test Set and a Validation Set?</h3>
+
+<p>Validation set can be considered as a part of the training set as it is used for parameter selection
+and to avoid Overfitting of the model being built. On the other hand, test set is used for testing
+or evaluating the performance of a trained machine leaning model.<br />
+In simple terms ,the differences can be summarized as -<br />
+- Training Set is to fit the parameters i.e. weights.
+- Test Set is to assess the performance of the model i.e. evaluating the predictive power and generalization.
+- Validation set is to tune the parameters.</p>
+
+<h3 id="explain-how-a-roc-curve-works">Explain how a ROC curve works.</h3>
+
+<p>The ROC curve is a graphical representation of the contrast between true positive rates and the
+false positive rate at various thresholds. It’s often used as a proxy for the trade-off between
+the sensitivity of the model (true positives) vs the fall-out or the probability it will trigger
+a false alarm (false positives).
+<img src="https://lh3.googleusercontent.com/zUWYO4VwGpoyu9oygT12F3hgZ30GxVY7sg_ZF46INrNbDutd9mVz9GnYIYGw2r1ZcbPLQXF4HV-uNXvQcVrP7Sg2BDDqRkaY3RAApumdXgH2mQZ8OCSgqqsVl7UDVjqwVFq224Z_" alt="" /></p>
+
+<h3 id="what-s-the-difference-between-a-generative-and-discriminative-model">What’s the difference between a generative and discriminative model?</h3>
+
+<p>A generative model will learn categories of data while a discriminative model will simply learn the
+distinction between different categories of data. Discriminative models will generally outperform
+generative models on classification tasks.</p>
+
+<h4 id="what-cross-validation-technique-would-you-use-on-a-time-series-dataset">What cross-validation technique would you use on a time series dataset?</h4>
+
+<p>Instead of using standard k-folds cross-validation, you have to pay attention to the fact that a
+time series is not randomly distributed data — it is inherently ordered by chronological order. If a pattern emerges in later time periods for example, your model may still pick up on it even if that effect doesn’t hold in earlier years!<br />
+You’ll want to do something like forward chaining where you’ll be able to model on past data then
+look at forward-facing data.<br />
+fold 1 : training [1], test [2]<br />
+fold 2 : training [1 2], test [3]<br />
+fold 3 : training [1 2 3], test [4]<br />
+fold 4 : training [1 2 3 4], test [5]<br />
+fold 5 : training [1 2 3 4 5], test [6]</p>
+
+<h3 id="how-is-a-decision-tree-pruned">How is a decision tree pruned?</h3>
+
+<p>Pruning is what happens in decision trees when branches that have weak predictive power are removed
+in order to reduce the complexity of the model and increase the predictive accuracy of a decision
+tree model. Pruning can happen bottom-up and top-down, with approaches such as reduced error pruning and cost complexity pruning.<br />
+Reduced error pruning is perhaps the simplest version: replace each node. If it doesn’t decrease  predictive accuracy, keep it pruned. While simple, this heuristic actually comes pretty close to an approach that would optimize for maximum accuracy.</p>
+
+<h3 id="name-an-example-where-ensemble-techniques-might-be-useful">Name an example where ensemble techniques might be useful.</h3>
+
+<p>Ensemble techniques use a combination of learning algorithms to optimize better predictive performance.  They typically reduce overfitting in models and make the model more robust (unlikely to be influenced by small changes in the training data).<br />
+You could list some examples of ensemble methods, from bagging to boosting to a “bucket of models” method and demonstrate how they could increase predictive power.</p>
+
+<h3 id="how-do-you-ensure-you-re-not-overfitting-with-a-model">How do you ensure you’re not overfitting with a model?</h3>
+
+<p>This is a simple restatement of a fundamental problem in machine learning: the possibility of
+overfitting training data and carrying the noise of that data through to the test set, thereby
+providing inaccurate generalizations.<br />
+There are three main methods to avoid overfitting:<br />
+1. Keep the model simpler: reduce variance by taking into account fewer variables and parameters,
+thereby removing some of the noise in the training data.
+2. Use cross-validation techniques such as k-folds cross-validation.
+3. Use regularization techniques such as LASSO that penalize certain model parameters if they’re
+likely to cause overfitting.</p>
+
+<h3 id="what-s-the-kernel-trick-and-how-is-it-useful">What’s the “kernel trick” and how is it useful?</h3>
+
+<p>The Kernel trick involves kernel functions that can enable in higher-dimension spaces without explicitly calculating the coordinates of points within that dimension: instead, kernel functions compute the inner products between the images of all pairs of data in a feature space. This allows them the very useful attribute of calculating the coordinates of higher dimensions while being computationally cheaper than the explicit calculation of said coordinates. Many algorithms can be expressed in terms of inner products.<br />
+Using the kernel trick enables us effectively run  algorithms in a high-dimensional space with lower-dimensional data.</p>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+<script>
+  
+
+  
+
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+        </section>
+        
+
+      </div>
+      
+
+  </main>
+
+  
+
+
+<script src="/js/bundle.js"></script>
+
+
+<script src="/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js"></script>
+<script src="/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="/js/vendor/jquery.jpanelmenu.min.js"></script>
+<script src="/js/vendor/highlight.min.js"></script>
+<script src="/js/vendor/fastclick.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script id="dsq-count-scr" src="//hashnopolis.disqus.com/count.js" async></script>
+
+</body>
+
+</html>

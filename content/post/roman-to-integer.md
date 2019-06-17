@@ -2,7 +2,7 @@
 title: "Roman to Integer"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "hashmap"]
+tags: ["leetcode", "hashmap"]
 categories: ["algorithm"]
 date: 2018-09-15T12:47:14-07:00
 draft: false

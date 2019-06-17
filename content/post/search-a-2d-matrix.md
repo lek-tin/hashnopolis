@@ -2,7 +2,7 @@
 title: "Search a 2D Matrix"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "matrix", "search", "binary-search"]
+tags: ["leetcode", "matrix", "binary-search"]
 categories: ["algorithm"]
 date: 2018-10-30T23:56:03-07:00
 draft: false

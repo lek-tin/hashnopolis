@@ -2,7 +2,7 @@
 title: "Validate Binary Search Tree"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "bfs", "bst"]
+tags: ["leetcode", "bfs", "bst"]
 categories: ["algorithm"]
 date: 2018-11-10T22:50:21-08:00
 draft: false

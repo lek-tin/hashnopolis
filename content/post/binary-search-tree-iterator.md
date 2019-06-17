@@ -2,7 +2,7 @@
 title: "Binary Search Tree Iterator"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree"]
+tags: ["leetcode", "binary-tree"]
 categories: ["algorithm"]
 date: 2018-09-09T15:15:09+08:00
 draft: false

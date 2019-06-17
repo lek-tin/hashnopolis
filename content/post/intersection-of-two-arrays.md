@@ -2,7 +2,7 @@
 title: "Intersection of Two Arrays"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "array"]
+tags: ["leetcode", "array"]
 categories: ["algorithm"]
 date: 2018-11-28T23:56:14-08:00
 draft: false

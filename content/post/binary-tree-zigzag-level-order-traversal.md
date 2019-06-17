@@ -2,7 +2,7 @@
 title: "Binary Tree Zigzag Level Order Traversal"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree"]
+tags: ["leetcode", "binary-tree"]
 categories: ["algorithm"]
 date: 2019-01-25T00:12:07-08:00
 draft: false

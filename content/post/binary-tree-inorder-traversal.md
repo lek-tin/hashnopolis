@@ -2,7 +2,7 @@
 title: "Binary Tree Inorder Traversal"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree"]
+tags: ["leetcode", "binary-tree"]
 categories: ["algorithm"]
 date: 2018-09-13T22:57:42+08:00
 draft: false

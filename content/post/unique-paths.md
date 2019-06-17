@@ -2,7 +2,7 @@
 title: "Unique Paths"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "java", "dynamic-programming"]
+tags: ["leetcode", "java", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-09-15T12:54:17-07:00
 draft: false

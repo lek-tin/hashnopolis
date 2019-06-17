@@ -2,7 +2,7 @@
 title: "Count Primes"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "sieve-of-eratosthenes", "prime-number"]
+tags: ["leetcode", "sieve-of-eratosthenes", "prime-number"]
 categories: ["algorithm"]
 date: 2018-11-09T18:52:59-08:00
 draft: false

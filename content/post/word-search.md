@@ -2,7 +2,7 @@
 title: "Word Search"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "search", "dfs"]
+tags: ["leetcode", "search", "dfs"]
 categories: ["algorithm"]
 date: 2018-10-15T23:48:28-07:00
 draft: false

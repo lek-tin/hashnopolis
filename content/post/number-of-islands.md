@@ -2,7 +2,7 @@
 title: "Number of Islands"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dfs"]
+tags: ["leetcode", "dfs"]
 categories: ["algorithm"]
 date: 2018-10-09T23:52:32-07:00
 draft: false

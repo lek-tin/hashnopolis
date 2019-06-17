@@ -2,7 +2,7 @@
 title: "Power of Two"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "bit-operation"]
+tags: ["leetcode", "bit-operation"]
 categories: ["algorithm"]
 date: 2018-09-15T12:56:41-07:00
 draft: false

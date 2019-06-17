@@ -2,7 +2,7 @@
 title: "One Edit Distance"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "string", "two-pointers"]
+tags: ["leetcode", "string", "two-pointers"]
 categories: ["algorithm"]
 date: 2019-01-16T15:52:52-08:00
 draft: false

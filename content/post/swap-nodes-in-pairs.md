@@ -2,7 +2,7 @@
 title: "Swap Nodes in Pairs"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "binary-tree"]
+tags: ["leetcode", "binary-tree"]
 categories: ["algorithm"]
 date: 2018-09-15T12:55:20-07:00
 draft: false
