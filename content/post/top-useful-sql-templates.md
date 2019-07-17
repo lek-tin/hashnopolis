@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["sql"]
 categories: ["database"]
 date: 2019-07-15T15:38:32-07:00
-draft: true
+draft: false
 archive: false
 ---
 In this post, we introduce the most useful SQL template statements.
@@ -16,4 +16,7 @@ SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN
   (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) > 1)
 ```
 This is significantly more efficient than using `EXISTS`
+
+### Select DISTINCT on multiple columns
+We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) **AND** age(>18).
 
