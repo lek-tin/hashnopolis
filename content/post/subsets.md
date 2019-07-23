@@ -2,7 +2,7 @@
 title: "Subsets"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dfs"]
+tags: ["leetcode", "dfs", "backtracking"]
 categories: ["algorithm"]
 date: 2018-09-15T12:48:42-07:00
 draft: false
@@ -71,4 +71,38 @@ class Solution(object):
             self.backtrack(res, given_arr, nums, i+1)
             # Choose NOT to add nums[i] to the dfs function
             given_arr.pop()
+```
+```
+<!-- steps as a tree -->
+--- 0 ---
+  []
+  --- 1 ---
+    [1]
+    --- 2 ---
+      [1, 2]
+      --- 3 ---
+        [1, 2, 3]
+      --- 3 ---
+      deleting last element for loop level 2
+    --- 2 ---
+    deleting last element for loop level 1
+    --- 3 ---
+      [1, 3]
+    --- 3 ---
+    deleting last element for loop level 1
+  --- 1 ---
+  deleting last element for loop level 0
+  --- 2 ---
+    [2]
+    --- 3 ---
+    [2, 3]
+    --- 3 ---
+    deleting last element for loop level 2
+  --- 2 ---
+  deleting last element for loop level 0
+  --- 3 ---
+    [3]
+  --- 3 ---
+  deleting last element for loop level 0
+--- 0 ---
 ```

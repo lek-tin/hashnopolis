@@ -2,7 +2,7 @@
 title: "Subsets Ii"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "dfs", "backtracking"]
 categories: ["algorithm"]
 date: 2018-10-08T13:04:14-07:00
 draft: false
@@ -53,6 +53,7 @@ class Solution(object):
         for i in range(index, len(nums)):
             print("i: ", i)
             print("-------------------")
+            # Only use the last one of duplicates, for example, 4,4,4,_4_,5
             if i > index and nums[i] == nums[i - 1]: continue
             # Choose to add nums[i] to the dfs function
             given_arr.append(nums[i])
