@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 15 Jul 2019 15:38:32 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2019 23:08:05 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Generate Parentheses</title>
+      <link>http://www.hashnopolis.com/post/2019/07/generate-parentheses/</link>
+      <pubDate>Mon, 22 Jul 2019 23:08:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/07/generate-parentheses/</guid>
+      <description>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+For example, given n = 3, a solution set is:
+[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ]  Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</description>
+    </item>
     
     <item>
       <title>Top Useful Sql Templates</title>
