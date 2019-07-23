@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 12 Sep 2018 23:57:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2019 15:38:32 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Top Useful Sql Templates</title>
+      <link>http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/</link>
+      <pubDate>Mon, 15 Jul 2019 15:38:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/</guid>
+      <description>In this post, we introduce the most useful SQL template statements.
+Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1)  This is significantly more efficient than using EXISTS
+Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18).</description>
+    </item>
     
     <item>
       <title>Employees Earning More Than Their Managers</title>

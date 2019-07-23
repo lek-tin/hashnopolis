@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 08 Jun 2019 23:35:57 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2019 23:08:05 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Generate Parentheses</title>
+      <link>http://www.hashnopolis.com/post/2019/07/generate-parentheses/</link>
+      <pubDate>Mon, 22 Jul 2019 23:08:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/07/generate-parentheses/</guid>
+      <description>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+For example, given n = 3, a solution set is:
+[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ]  Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</description>
+    </item>
+    
+    <item>
+      <title>Top Useful Sql Templates</title>
+      <link>http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/</link>
+      <pubDate>Mon, 15 Jul 2019 15:38:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/</guid>
+      <description>In this post, we introduce the most useful SQL template statements.
+Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1)  This is significantly more efficient than using EXISTS
+Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18).</description>
+    </item>
     
     <item>
       <title>Machine Learning Questions</title>
@@ -929,7 +951,8 @@ Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive ele
       <pubDate>Tue, 13 Nov 2018 22:05:44 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/arrays-in-python/</guid>
-      <description>Reverse an array: reversedArray = arr[::-1]</description>
+      <description>Reverse an array reversedArray = arr[::-1]
+Clone a list newArr = oldArr[:]</description>
     </item>
     
     <item>

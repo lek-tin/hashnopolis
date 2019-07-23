@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 10 Mar 2019 23:31:42 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2019 23:08:05 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Generate Parentheses</title>
+      <link>http://www.hashnopolis.com/post/2019/07/generate-parentheses/</link>
+      <pubDate>Mon, 22 Jul 2019 23:08:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/07/generate-parentheses/</guid>
+      <description>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+For example, given n = 3, a solution set is:
+[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ]  Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</description>
+    </item>
     
     <item>
       <title>Boundary of Binary Tree</title>
@@ -139,6 +150,19 @@ For this problem, a path is defined as any sequence of nodes from some starting 
 Example 1:
 Input: [1,2,3] 1 / \ 2 3 Output: 6  Example 2:
 Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42  Solution:</description>
+    </item>
+    
+    <item>
+      <title>Subsets Ii</title>
+      <link>http://www.hashnopolis.com/post/2018/10/subsets-ii/</link>
+      <pubDate>Mon, 08 Oct 2018 13:04:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/subsets-ii/</guid>
+      <description>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
+Note: The solution set must not contain duplicate subsets.
+Example:
+Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution:
+# Time: o(2^n) # Space: o(n) class Solution(object): def subsetsWithDup(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; # Edge case if nums == None or len(nums) == 0: return [] # Sort the given numbers nums.</description>
     </item>
     
     <item>
