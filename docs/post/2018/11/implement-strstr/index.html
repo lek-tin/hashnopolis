@@ -23,7 +23,7 @@ Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Out
 Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1  Clarification:
 What should we return when needle is an empty string? This is a great question to ask during an interview.
 For the purpose of this problem, we will return 0 when needle is an empty string." />
-  <meta name="keywords" content="leetcode python " />
+  <meta name="keywords" content="leetcode python rabin-karp pattern-matching " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -191,7 +191,11 @@ For the purpose of this problem, we will return 0 when needle is an empty string
         
           "<a href="/tags/python"><strong>python</strong></a>",
         
-        <i class="small material-icons">access_time</i> 1-min read
+          "<a href="/tags/rabin-karp"><strong>rabin-karp</strong></a>",
+        
+          "<a href="/tags/pattern-matching"><strong>pattern-matching</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/implement-strstr.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Implement Strstr</h1>
@@ -232,6 +236,59 @@ Output: -1
         for i in range(len(haystack)):
             if haystack[i: i+len(needle)] == needle:
                 return  i
+
+        return -1
+</code></pre>
+
+<p>Rabin-Karp algorithm</p>
+
+<pre><code class="language-python">class Solution:
+    def strStr(self, haystack: str, needle: str) -&gt; int:
+        if not needle:
+            return 0
+        
+        if not haystack or len(haystack) &lt; len(needle):
+            return -1
+
+        M = len(needle)
+        N = len(haystack)
+        base = 512   # the number of characters in the input alphabet
+        q = 997  # a big prime number
+        p = 0    # hash value for needle
+        t = 0    # hash value for haystack
+        h = 1    # d^(M-1)
+
+        # The value of h would be &quot;pow(d, M-1)%q&quot;
+        for i in range(1, M):
+            h = (h*base)
+
+        # Calculate the hash value of needle and first window
+        # of text
+        for i in range(M):
+            p = (base*p + ord(needle[i]))%q
+            t = (base*t + ord(haystack[i]))%q
+
+        # Slide the needle over text one by one
+        for i in range(N-M+1):
+            # Check the hash values of current window of text and
+            # needle if the hash values match then only check
+            # for characters on by one
+            if p == t:
+                # Check for characters one by one, if any character doesn't match, break the current ith iter
+                if haystack[i:i+M] != needle:
+                    break
+                else:
+                    # if p == t and needle[0...M-1] = haystack[i, i+1, ...i+M-1] 
+                    return i
+
+            # Calculate hash value for next window of text: Remove
+            # leading digit, add trailing digit
+            if i &lt; N-M:
+                t = ( (t - ord(haystack[i])*h) * base + ord(haystack[i+M]) ) % q
+
+                # We might get negative values of t, converting it to positive
+                if t &lt; 0:
+                    t = t+q
 
         return -1
 </code></pre>
