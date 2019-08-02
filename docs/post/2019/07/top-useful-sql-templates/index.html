@@ -18,7 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="In this post, we introduce the most useful SQL template statements.
 Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1)  This is significantly more efficient than using EXISTS
-Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18)." />
+Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18).
+Select duplicate rows based on column SELECT TOP 1 C1." />
   <meta name="keywords" content="sql " />
   
   
@@ -27,7 +28,8 @@ Select DISTINCT on multiple columns We can select distinct on multiple columns(d
     <meta name="twitter:title" content="Top Useful Sql Templates" />
     <meta name="twitter:description" content="In this post, we introduce the most useful SQL template statements.
 Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1)  This is significantly more efficient than using EXISTS
-Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18)." />
+Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18).
+Select duplicate rows based on column SELECT TOP 1 C1." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -200,6 +202,18 @@ Select DISTINCT on multiple columns We can select distinct on multiple columns(d
 <h3 id="select-distinct-on-multiple-columns">Select DISTINCT on multiple columns</h3>
 
 <p>We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) <strong>AND</strong> age(&gt;18).</p>
+
+<h3 id="select-duplicate-rows-based-on-column">Select duplicate rows based on column</h3>
+
+<pre><code class="language-sql">SELECT TOP 1 C1.ID, C1.Code, C1.OwnerName, C2.NumberDuplicates
+FROM
+Customers C1
+INNER JOIN
+  (
+  SELECT Code, COUNT(*) as NumberDuplicates  FROM Customers GROUP BY code HAVING COUNT(*) &gt; 1
+  ) C2
+ON C1.Code = C2.Code
+</code></pre>
 
   </div>
 
