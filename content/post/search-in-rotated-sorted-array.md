@@ -2,7 +2,7 @@
 title: "Search in Rotated Sorted Array"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "search", "sorted-array"]
+tags: ["leetcode", "binary-search", "sorted-array"]
 categories: ["algorithm"]
 date: 2018-10-26T23:08:49-07:00
 draft: false
@@ -30,8 +30,8 @@ Output: -1
 ```
 **Solution:**
 ```python
-class Solution(object):
-    def search(self, nums, target):
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
         """
         :type nums: List[int]
         :type target: int
@@ -55,9 +55,11 @@ class Solution(object):
                     start = mid
                 else:
                     end = mid
+
         if nums[start] == target:
             return start
         if nums[end] == target:
             return end
+
         return -1
 ```

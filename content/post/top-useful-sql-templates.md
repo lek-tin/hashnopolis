@@ -20,3 +20,14 @@ This is significantly more efficient than using `EXISTS`
 ### Select DISTINCT on multiple columns
 We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) **AND** age(>18).
 
+### Select duplicate rows based on column
+```sql
+SELECT TOP 1 C1.ID, C1.Code, C1.OwnerName, C2.NumberDuplicates
+FROM
+Customers C1
+INNER JOIN
+  (
+  SELECT Code, COUNT(*) as NumberDuplicates  FROM Customers GROUP BY code HAVING COUNT(*) > 1
+  ) C2
+ON C1.Code = C2.Code
+```

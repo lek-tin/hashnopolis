@@ -2,7 +2,7 @@
 title: "First Bad Version"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "binary-search"]
 categories: ["algorithm"]
 date: 2018-10-26T23:07:46-07:00
 draft: false
@@ -38,7 +38,7 @@ class Solution(object):
         """
         start, end = 1, n
         if isBadVersion(1):
-            return start;
+            return start
         while (start + 1) < end:
             mid = start + (end - start)//2
             if isBadVersion(mid):
