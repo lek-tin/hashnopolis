@@ -9,7 +9,11 @@ draft: false
 archive: false
 ---
 ### Reverse an array
-`reversedArray = arr[::-1]`
+```python
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+reversedArray = arr[::-1]
+arr[3:5] = arr[3:5][::-1]
+```
 
 ### Clone a list
 `newArr = oldArr[:]`
