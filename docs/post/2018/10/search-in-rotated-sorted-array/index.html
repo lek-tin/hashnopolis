@@ -23,7 +23,7 @@ You may assume no duplicate exists in the array.
 Your algorithm&amp;rsquo;s runtime complexity must be in the order of O(log n).
 Example 1:
 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2:" />
-  <meta name="keywords" content="leetcode search sorted-array " />
+  <meta name="keywords" content="leetcode binary-search sorted-array " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -189,7 +189,7 @@ Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2:" />
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/search"><strong>search</strong></a>",
+          "<a href="/tags/binary-search"><strong>binary-search</strong></a>",
         
           "<a href="/tags/sorted-array"><strong>sorted-array</strong></a>",
         
@@ -221,8 +221,8 @@ Output: -1
 
 <p><strong>Solution:</strong></p>
 
-<pre><code class="language-python">class Solution(object):
-    def search(self, nums, target):
+<pre><code class="language-python">class Solution:
+    def search(self, nums: List[int], target: int) -&gt; int:
         &quot;&quot;&quot;
         :type nums: List[int]
         :type target: int
@@ -246,10 +246,12 @@ Output: -1
                     start = mid
                 else:
                     end = mid
+
         if nums[start] == target:
             return start
         if nums[end] == target:
             return end
+
         return -1
 </code></pre>
 

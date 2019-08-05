@@ -20,7 +20,8 @@
       <guid>http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/</guid>
       <description>In this post, we introduce the most useful SQL template statements.
 Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1)  This is significantly more efficient than using EXISTS
-Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18).</description>
+Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18).
+Select duplicate rows based on column SELECT TOP 1 C1.</description>
     </item>
     
     <item>
