@@ -10,9 +10,9 @@ archive: false
 ---
 Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
 
-**Note:** The solution set must not contain duplicate subsets.
+### Note The solution set must not contain duplicate subsets.
 
-Example:
+### Example:
 ```
 Input: [1,2,2]
 Output:
@@ -25,12 +25,12 @@ Output:
   []
 ]
 ```
-**Solution:**
+### Solution
 ```python
 # Time: o(2^n)
 # Space: o(n)
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         results = []
         subset = []
         # Edge case 1
@@ -52,6 +52,9 @@ class Solution:
         results.append(subset[:])
         # Entering the next recursion level
         for i in range(startIndex, len(nums)):
+            # Skip duplicate
+            if (i>=0 and i != startIndex and nums[i] == nums[i-1]):
+                continue
             # add a new number to the current subset
             # [1] -> [1,2]
             subset.append(nums[i])

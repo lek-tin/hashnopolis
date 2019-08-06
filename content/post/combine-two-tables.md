@@ -36,7 +36,7 @@ Write a SQL query for a report that provides the following information for each 
 ```
 FirstName, LastName, City, State
 ```
-**Solution:**
+### Solution
 ```python
 # Write your MySQL query statement below
 SELECT FirstName, LastName, City, State

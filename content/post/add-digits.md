@@ -22,7 +22,7 @@ Special thanks to @jianchao.li.fighter for adding this problem and creating all 
 
 
 
-**Explanation**
+### Explanation
 | Number| Result |
 | ------------- |:-------------:|
 | 0  | 0 |
@@ -36,7 +36,7 @@ Special thanks to @jianchao.li.fighter for adding this problem and creating all 
 | 8, 17, 26, 35 ...  | 8 |
 | 9, 18, 27, 36 ...  | 9 |
 
-**Solution**
+### Solution
 ```c++
 class Solution {
 public:

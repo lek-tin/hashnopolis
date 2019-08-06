@@ -14,7 +14,7 @@ However, there is a non-negative cooling interval n that means between two **sam
 
 You need to return the **least** number of intervals the CPU will take to finish all the given tasks.
 
-**Solution:**
+### Solution
 ```python
 
 ```

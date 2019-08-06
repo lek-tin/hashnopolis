@@ -10,13 +10,13 @@ archive: false
 ---
 Given a string, find the length of the longest substring T that contains at most k distinct characters.
 
-**Example 1:**
+### Example 1
 ```
 Input: s = "eceba", k = 2
 Output: 5
 Explanation: "ec", "ce", "eb", "ba" and "ece" k distinct characters.
 ```
-**Example 2:**
+### Example 2
 ```
 Input: s = "aa", k = 1
 Output: 2

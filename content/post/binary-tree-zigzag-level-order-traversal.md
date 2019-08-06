@@ -10,7 +10,7 @@ archive: false
 ---
 Given a binary tree, return the _zigzag level order traversal_ of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
 
-**For example:**
+### Example
 Given binary tree `[3,9,20,null,null,15,7]`,
 ```
     3
@@ -27,7 +27,7 @@ return its zigzag level order traversal as:
   [15,7]
 ]
 ```
-**Solution:**:
+### Solution:
 ```python
 # Definition for a binary tree node.
 # class TreeNode:

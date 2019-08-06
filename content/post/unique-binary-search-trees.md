@@ -10,7 +10,7 @@ archive: false
 ---
 Given n, how many structurally unique `BST`'s (binary search trees) that store values 1 ... n?
 
-**Example:**
+### Example
 ```
 Input: 3
 Output: 5
@@ -23,14 +23,14 @@ Given n = 3, there are a total of 5 unique BST's:
     /     /       \                 \
    2     1         2                 3
 ```
-**Exaplanation:**
+### Exaplanation
 ```
 n = 3
 root: 1     left: 0 right: 2    f(0)*f(2);
 root: 2     left: 1 right: 1    f(1)*f(1);
 root: 3     left: 2 right: 0    f(2)*f(0);
 ```
-**Solution:**
+### Solution
 ```python
 class Solution:
     def numTrees(self, n):

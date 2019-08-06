@@ -10,7 +10,7 @@ archive: false
 ---
 Given a binary tree, return the postorder traversal of its nodes' values.
 
-**Example:**
+### Example
 ```
 Input: [1,null,2,3]
    1
@@ -21,9 +21,9 @@ Input: [1,null,2,3]
 
 Output: [3,2,1]
 ```
-**Follow up:**  
+### Follow-up  
 Recursive solution is trivial, could you do it iteratively?   
-**Solution:**   
+### Solution   
 Recursive👇
 ```python
 # Definition for a binary tree node.

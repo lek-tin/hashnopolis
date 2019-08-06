@@ -61,4 +61,5 @@ class Solution {
     }
 }
 ```
-**hint**: <https://youtu.be/jaNZ83Q3QGc>
+### Hint
+<https://youtu.be/jaNZ83Q3QGc>

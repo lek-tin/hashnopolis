@@ -17,7 +17,7 @@ Given array nums = [-1, 2, 1, -4], and target = 4.
 
 The minimum difference is 1. (4 - (2 + 1) = 1).
 ```
-**Challenge**: Do it in O(nlogn) time complexity.
+### Challenge: Do it in O(nlogn) time complexity.
 
 ### Solution
 ```java

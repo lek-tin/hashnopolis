@@ -10,7 +10,7 @@ archive: false
 ---
 Implement a trie with `insert`, `search`, and `startsWith` methods.
 
-**Example:**
+### Example
 ```
 Trie trie = new Trie();
 
@@ -21,10 +21,10 @@ trie.startsWith("app"); // returns true
 trie.insert("app");
 trie.search("app");     // returns true
 ```
-**Note:**
+### Note
 You may assume that all inputs are consist of lowercase letters a-z.
 All inputs are guaranteed to be non-empty strings.
-**Solution:**
+### Solution
 ```python
 # o(n)
 class TrieNode():

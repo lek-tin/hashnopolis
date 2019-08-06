@@ -21,14 +21,14 @@ B:    b1 → b2 → b3
 begin to intersect at node c1.
 
 
-**Notes:**
+### Note
 If the two linked lists have no intersection at all, return null.
 The linked lists must retain their original structure after the function returns.
 You may assume there are no cycles anywhere in the entire linked structure.
 Your code should preferably run in `O(n)` time and use only `O(1)` memory.
 Credits:
 Special thanks to @stellari for adding this problem and creating all test cases.
-**Solution:**
+### Solution
 ```python
 # Definition for singly-linked list.
 # class ListNode(object):

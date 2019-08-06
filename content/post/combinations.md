@@ -10,7 +10,7 @@ archive: false
 ---
 Given two integers `n` and `k`, return all possible combinations of k numbers out of `1 ... n`.
 
-**Example:**
+### Example
 ```
 Input: n = 4, k = 2
 Output:
@@ -23,7 +23,7 @@ Output:
   [1,4],
 ]
 ```
-**Solution:**
+### Solution
 ```python
 class Solution:
     def combine(self, n, k):

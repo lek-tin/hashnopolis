@@ -12,7 +12,7 @@ Given a binary tree, return the vertical order traversal of its nodes' values. (
 
 If two nodes are in the same row and column, the order should be from **left to right.**
 
-**Examples 1:**
+### Example 1
 ```
 Input: [3,9,20,null,null,15,7]
 
@@ -33,7 +33,7 @@ Output:
   [7]
 ]
 ```
-**Examples 2:**
+### Example 2
 ```
 Input: [3,9,8,4,0,1,7]
 
@@ -55,7 +55,7 @@ Output:
   [7]
 ]
 ```
-**Examples 3:**
+### Example 3
 ```
 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0's right child is 2 and 1's left child is 5)
 
@@ -80,7 +80,7 @@ Output:
   [7]
 ]
 ```
-**Solution:**
+### Solution
 ```python
 # https://www.youtube.com/watch?v=PQKkr036wRc
 # Definition for a binary tree node.

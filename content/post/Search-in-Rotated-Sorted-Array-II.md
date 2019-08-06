@@ -24,11 +24,11 @@ Example 2:
 Input: nums = [2,5,6,0,0,1,2], target = 3
 Output: false
 ```
-**Follow up:**
+### Follow-up
 - This is a follow up problem to [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/), where nums may contain duplicates.
 - Would this affect the run-time complexity? How and why?
 
-**Solution:**
+### Solution
 ```python
 class Solution(object):
     def search(self, nums, target):

@@ -42,7 +42,7 @@ Input:     1         1
 
 Output: false
 ```
-**Solution**
+### Solution
 ```python
 # Definition for a binary tree node.
 # class TreeNode:

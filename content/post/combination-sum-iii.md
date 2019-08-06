@@ -24,7 +24,7 @@ Example 2:
 Input: k = 3, n = 9
 Output: [[1,2,6], [1,3,5], [2,3,4]]
 ```
-**Solution:**
+### Solution
 ```python
 class Solution:
     def combinationSum3(self, k, n):
@@ -51,7 +51,7 @@ class Solution:
             s.pop()
         return
 ```
-**Note:**
+### Note
 Order doesn't matter!
 `[1, 2, 3, 5, 6, 7, 8, 9]`
  👇

@@ -91,5 +91,5 @@ class Solution(object):
                 i += 1                           #update i to start+1 for next window
         return s[start:end]
 ```
-
-**Hint**: <https://www.youtube.com/watch?v=qzYhjk-nDGU>
+### Hint
+<https://www.youtube.com/watch?v=qzYhjk-nDGU>

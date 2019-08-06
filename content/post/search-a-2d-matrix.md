@@ -11,7 +11,7 @@ archive: false
 Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
 - Integers in each row are sorted from left to right.
 - The first integer of each row is greater than the last integer of the previous row.
-**Example 1:**
+### Example 1
 ```
 Input:
 matrix = [
@@ -22,7 +22,7 @@ matrix = [
 target = 3
 Output: true
 ```
-**Example 2:**
+### Example 2
 ```
 Input:
 matrix = [
@@ -33,7 +33,7 @@ matrix = [
 target = 13
 Output: false
 ```
-**Solution:**
+### Solution
 ```python
 # Treat the 2-d matrix as a 1-d list of length rows * cols.
 # Binary search indices from 0 to rows * cols - 1.

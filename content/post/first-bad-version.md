@@ -14,7 +14,7 @@ Suppose you have `n` versions `[1, 2, ..., n]` and you want to find out the firs
 
 You are given an `API bool isBadVersion(version)` which will return whether `version` is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
 
-**Example:**
+### Example
 ```
 Given n = 5, and version = 4 is the first bad version.
 
@@ -24,7 +24,7 @@ call isBadVersion(4) -> true
 
 Then 4 is the first bad version.
 ```
-**Solution:**
+### Solution
 ```python
 # The isBadVersion API is already defined for you.
 # @param version, an integer
