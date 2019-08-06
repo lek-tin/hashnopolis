@@ -19,9 +19,7 @@
       
       <guid>http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/</guid>
       <description>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
-Example 1:
-Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2:
-Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</description>
+Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2 Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</description>
     </item>
     
     <item>
@@ -31,10 +29,8 @@ Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subs
       
       <guid>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</guid>
       <description>Given two arrays, write a function to compute their intersection.
-Example 1:
-Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2:
-Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note: - Each element in the result must be unique. - The result can be in any order. Solution:
-class Solution: def intersection(self, nums1, nums2): &amp;quot;&amp;quot;&amp;quot; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = set([]) dict1 = {} for n in nums1: if dict1.</description>
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
+Solution class Solution: def intersection(self, nums1, nums2): &amp;quot;&amp;quot;&amp;quot; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = set([]) dict1 = {} for n in nums1: if dict1.</description>
     </item>
     
     <item>
@@ -76,8 +72,7 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
       <description>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
 The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
 You may assume the integer does not contain any leading zero, except the number 0 itself.
-Example 1:
-Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</description>
+Example 1 Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</description>
     </item>
     
     <item>
@@ -90,8 +85,7 @@ Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123
 Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index.
 The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
 You may imagine that nums[-1] = nums[n] = -∞.
-Example 1:
-Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</description>
+Example 1 Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</description>
     </item>
     
     <item>
@@ -101,10 +95,7 @@ Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your func
       
       <guid>http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/</guid>
       <description>Given a collection of intervals, merge all overlapping intervals.
-Example 1:
-Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
-Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: List[Interval] &amp;quot;&amp;quot;&amp;quot; intervals.</description>
+Example 1 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2 Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: List[Interval] &amp;quot;&amp;quot;&amp;quot; intervals.</description>
     </item>
     
     <item>
@@ -115,8 +106,7 @@ Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are 
       <guid>http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/</guid>
       <description>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</description>
+Example 1 Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</description>
     </item>
     
     <item>
@@ -127,8 +117,7 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
       <guid>http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/</guid>
       <description>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</description>
+Example 1 Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</description>
     </item>
     
     <item>
@@ -155,7 +144,7 @@ Example 2: nums1 = [1, 2] nums2 = [3, 4]  The median is (2 + 3)/2 = 2.</descript
 You are given a target value to search. If found in the array return true, otherwise return false.
 Example 1:
 Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</description>
+Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</description>
     </item>
     
   </channel>

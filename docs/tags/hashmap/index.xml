@@ -74,9 +74,9 @@ Follow up:  What if the given array is already sorted? How would you optimize yo
       
       <guid>http://www.hashnopolis.com/post/2019/01/longest-substring-without-repeating-characters/</guid>
       <description>Given a string, find the length of the longest substring without repeating characters.
-*Example 1:
-Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  *Example 2:
-Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  *Example 3:
+*### Example 1
+Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  *### Example 2
+Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  *### Example 3
 Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3. Note that the answer must be a substring, &amp;quot;pwke&amp;quot; is a subsequence and not a substring.</description>
     </item>
     
@@ -86,7 +86,7 @@ Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot
       <pubDate>Sun, 11 Nov 2018 18:48:12 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/encode-and-decode-tinyurl/</guid>
-      <description>Note: This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
+      <description>Note This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
 Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</description>
     </item>
     
@@ -122,7 +122,7 @@ Solution class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&a
 Example 1:
 Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true  Example 2:
 Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false  Note: You may assume the string contains only lowercase alphabets.
-Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such case?</description>
+Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?</description>
     </item>
     
     <item>
@@ -141,11 +141,9 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written a
       <pubDate>Wed, 29 Aug 2018 00:44:49 +0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/08/two-sum/</guid>
-      <description>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+      <description> Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example:
-Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution:
-# time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </description>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </description>
     </item>
     
   </channel>

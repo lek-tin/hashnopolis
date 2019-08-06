@@ -179,9 +179,7 @@
       <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/">Longest Continuous Increasing Subsequence</a></h2>
 
       <p>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
-Example 1:
-Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2:
-Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</p>
+Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2 Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</p>
 
       <p class="meta">
         
@@ -207,10 +205,8 @@ Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subs
       <h2><a href="http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/">Intersection of Two Arrays</a></h2>
 
       <p>Given two arrays, write a function to compute their intersection.
-Example 1:
-Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2:
-Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note: - Each element in the result must be unique. - The result can be in any order. Solution:
-class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &#34;&#34;&#34; res = set([]) dict1 = {} for n in nums1: if dict1.</p>
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
+Solution class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &#34;&#34;&#34; res = set([]) dict1 = {} for n in nums1: if dict1.</p>
 
       <p class="meta">
         
@@ -316,8 +312,7 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
       <p>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
 The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
 You may assume the integer does not contain any leading zero, except the number 0 itself.
-Example 1:
-Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</p>
+Example 1 Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</p>
 
       <p class="meta">
         
@@ -346,8 +341,7 @@ Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123
 Given an input array nums, where nums[i] ≠ nums[i&#43;1], find a peak element and return its index.
 The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
 You may imagine that nums[-1] = nums[n] = -∞.
-Example 1:
-Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</p>
+Example 1 Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</p>
 
       <p class="meta">
         
@@ -373,10 +367,7 @@ Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your func
       <h2><a href="http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/">56. Merge Intervals</a></h2>
 
       <p>Given a collection of intervals, merge all overlapping intervals.
-Example 1:
-Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
-Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: List[Interval] &#34;&#34;&#34; intervals.</p>
+Example 1 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2 Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: List[Interval] &#34;&#34;&#34; intervals.</p>
 
       <p class="meta">
         
@@ -403,8 +394,7 @@ Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are 
 
       <p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</p>
+Example 1 Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</p>
 
       <p class="meta">
         
@@ -431,8 +421,7 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
 
       <p>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</p>
+Example 1 Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</p>
 
       <p class="meta">
         

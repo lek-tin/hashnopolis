@@ -200,9 +200,8 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
       <h2><a href="http://www.hashnopolis.com/post/2018/10/group-anagrams/">Group Anagrams</a></h2>
 
       <p>Given an array of strings, group anagrams together.
-Example:
-Input: [&#34;eat&#34;, &#34;tea&#34;, &#34;tan&#34;, &#34;ate&#34;, &#34;nat&#34;, &#34;bat&#34;], Output: [ [&#34;ate&#34;,&#34;eat&#34;,&#34;tea&#34;], [&#34;nat&#34;,&#34;tan&#34;], [&#34;bat&#34;] ]  Note: - All inputs will be in lowercase. - The order of your output does not matter. Solution:
-class Solution(object): def groupAnagrams(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: List[List[str]] &#34;&#34;&#34; primeNums = { &#34;a&#34;: 2, &#34;b&#34;: 3, &#34;c&#34;: 5, &#34;d&#34;: 7, &#34;e&#34;: 11, &#34;f&#34;: 13, &#34;g&#34;: 17, &#34;h&#34;: 19, &#34;i&#34;: 23, &#34;j&#34;: 29, &#34;k&#34;: 31, &#34;m&#34;: 37, &#34;l&#34;: 41, &#34;n&#34;: 43, &#34;o&#34;: 47, &#34;p&#34;: 53, &#34;q&#34;: 59, &#34;r&#34;: 61, &#34;s&#34;: 67, &#34;t&#34;: 71, &#34;u&#34;: 73, &#34;v&#34;: 79, &#34;w&#34;: 83, &#34;x&#34;: 89, &#34;y&#34;: 97, &#34;z&#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</p>
+Example Input: [&#34;eat&#34;, &#34;tea&#34;, &#34;tan&#34;, &#34;ate&#34;, &#34;nat&#34;, &#34;bat&#34;], Output: [ [&#34;ate&#34;,&#34;eat&#34;,&#34;tea&#34;], [&#34;nat&#34;,&#34;tan&#34;], [&#34;bat&#34;] ]  Note  All inputs will be in lowercase. The order of your output does not matter.
+Solution class Solution(object): def groupAnagrams(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: List[List[str]] &#34;&#34;&#34; primeNums = { &#34;a&#34;: 2, &#34;b&#34;: 3, &#34;c&#34;: 5, &#34;d&#34;: 7, &#34;e&#34;: 11, &#34;f&#34;: 13, &#34;g&#34;: 17, &#34;h&#34;: 19, &#34;i&#34;: 23, &#34;j&#34;: 29, &#34;k&#34;: 31, &#34;m&#34;: 37, &#34;l&#34;: 41, &#34;n&#34;: 43, &#34;o&#34;: 47, &#34;p&#34;: 53, &#34;q&#34;: 59, &#34;r&#34;: 61, &#34;s&#34;: 67, &#34;t&#34;: 71, &#34;u&#34;: 73, &#34;v&#34;: 79, &#34;w&#34;: 83, &#34;x&#34;: 89, &#34;y&#34;: 97, &#34;z&#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</p>
 
       <p class="meta">
         
@@ -256,8 +255,8 @@ Solution: /** * Definition for singly-linked list. * class ListNode { * int val;
       <h2><a href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle/">Linked List Cycle</a></h2>
 
       <p>Given a linked list, determine if it has a cycle in it.
-Follow up: Can you solve it without using extra space? Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: bool &#34;&#34;&#34; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</p>
+Follow-up Can you solve it without using extra space?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: bool &#34;&#34;&#34; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</p>
 
       <p class="meta">
         
@@ -310,8 +309,7 @@ You may assume that the version strings are non-empty and contain only digits an
 
       <p>Given a 2D board and a word, find if the word exists in the grid.
 The word can be constructed from letters of sequentially adjacent cell, where “adjacent” cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
-Example:
-board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;], [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;] ] Given word = &#34;ABCCED&#34;, return true. Given word = &#34;SEE&#34;, return true. Given word = &#34;ABCB&#34;, return false.</p>
+Example board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;], [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;] ] Given word = &#34;ABCCED&#34;, return true. Given word = &#34;SEE&#34;, return true. Given word = &#34;ABCB&#34;, return false.</p>
 
       <p class="meta">
         
@@ -339,7 +337,7 @@ board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F
       <p>Write a program to find the node at which the intersection of two singly linked lists begins.
 For example, the following two linked lists:
 A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
-Notes: If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</p>
+Note If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</p>
 
       <p class="meta">
         
@@ -364,8 +362,8 @@ Notes: If the two linked lists have no intersection at all, return null. The lin
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/10/min-stack/">Min Stack</a></h2>
 
-      <p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) – Push element x onto stack. - pop() – Removes the element on top of the stack. - top() – Get the top element. - getMin() – Retrieve the minimum element in the stack. Example:
-MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&gt; Returns -3. minStack.pop(); minStack.top(); --&gt; Returns 0. minStack.</p>
+      <p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) – Push element x onto stack. - pop() – Removes the element on top of the stack. - top() – Get the top element. - getMin() – Retrieve the minimum element in the stack.
+Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&gt; Returns -3. minStack.pop(); minStack.top(); --&gt; Returns 0.</p>
 
       <p class="meta">
         
@@ -391,8 +389,8 @@ MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStac
       <h2><a href="http://www.hashnopolis.com/post/2018/10/word-break/">Word Break</a></h2>
 
       <p>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
-Note: - The same word in the dictionary may be reused multiple times in the segmentation. - You may assume the dictionary does not contain duplicate words. Example 1:
-Input: s = &#34;leetcode&#34;, wordDict = [&#34;leet&#34;, &#34;code&#34;] Output: true Explanation: Return true because &#34;leetcode&#34; can be segmented as &#34;leet code&#34;.</p>
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.
+Example 1 Input: s = &#34;leetcode&#34;, wordDict = [&#34;leet&#34;, &#34;code&#34;] Output: true Explanation: Return true because &#34;leetcode&#34; can be segmented as &#34;leet code&#34;.</p>
 
       <p class="meta">
         
@@ -418,10 +416,7 @@ Input: s = &#34;leetcode&#34;, wordDict = [&#34;leet&#34;, &#34;code&#34;] Outpu
       <h2><a href="http://www.hashnopolis.com/post/2018/10/number-of-islands/">Number of Islands</a></h2>
 
       <p>Given a 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
-Example 1:
-Input: 11110 11010 11000 00000 Output: 1  Example 2:
-Input: 11000 11000 00100 00011 Output: 3  Solution:
-class Solution: def numIslands(self, grid): &#34;&#34;&#34; :type grid: List[List[str]] :rtype: int &#34;&#34;&#34; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &#34;1&#34;: count &#43;= 1 self.</p>
+Example 1 Input: 11110 11010 11000 00000 Output: 1  Example 2 Input: 11000 11000 00100 00011 Output: 3  Solution class Solution: def numIslands(self, grid): &#34;&#34;&#34; :type grid: List[List[str]] :rtype: int &#34;&#34;&#34; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &#34;1&#34;: count &#43;= 1 self.</p>
 
       <p class="meta">
         

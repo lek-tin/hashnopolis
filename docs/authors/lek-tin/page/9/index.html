@@ -260,9 +260,7 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
 
       <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
-Example:
-Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution:
-# Time: o(n) class Solution(object): def longestConsecutive(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</p>
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution(object): def longestConsecutive(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</p>
 
       <p class="meta">
         
@@ -314,9 +312,7 @@ Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive ele
 
       <p>Given a nested list of integers, implement an iterator to flatten it.
 Each element is either an integer, or a list – whose elements may also be integers or other lists.
-Example 1:
-Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2:
-Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
+Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
 
       <p class="meta">
         
@@ -343,7 +339,7 @@ Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until
 
       <p>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
 k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
-Example: Given this linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5
+Example Given this linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5
 For k = 2, you should return: 2-&gt;1-&gt;4-&gt;3-&gt;5</p>
 
       <p class="meta">
@@ -396,11 +392,10 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
       <h2><a href="http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/">Remove Invalid Parentheses</a></h2>
 
       <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
-Note: The input string may contain letters other than the parentheses ( and ).
-*Example 1:
-Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;]  *Example 2:
-Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;]  *Example 3:
-Input: &#34;)(&#34; Output: [&#34;&#34;]  *Solution:
+Note The input string may contain letters other than the parentheses ( and ). *### Example 1
+Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;]  *### Example 2
+Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;]  *### Example 3
+Input: &#34;)(&#34; Output: [&#34;&#34;]  *### Solution
 # Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &#34;&#34;&#34; :type s: str :rtype: List[str] &#34;&#34;&#34; res = [] self.</p>
 
       <p class="meta">
@@ -426,7 +421,7 @@ Input: &#34;)(&#34; Output: [&#34;&#34;]  *Solution:
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/encode-and-decode-tinyurl/">Encode and Decode Tinyurl</a></h2>
 
-      <p>Note: This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
+      <p>Note This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
 Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</p>
 
       <p class="meta">

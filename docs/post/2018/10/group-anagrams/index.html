@@ -17,9 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array of strings, group anagrams together.
-Example:
-Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Note: - All inputs will be in lowercase. - The order of your output does not matter. Solution:
-class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: List[List[str]] &amp;quot;&amp;quot;&amp;quot; primeNums = { &amp;quot;a&amp;quot;: 2, &amp;quot;b&amp;quot;: 3, &amp;quot;c&amp;quot;: 5, &amp;quot;d&amp;quot;: 7, &amp;quot;e&amp;quot;: 11, &amp;quot;f&amp;quot;: 13, &amp;quot;g&amp;quot;: 17, &amp;quot;h&amp;quot;: 19, &amp;quot;i&amp;quot;: 23, &amp;quot;j&amp;quot;: 29, &amp;quot;k&amp;quot;: 31, &amp;quot;m&amp;quot;: 37, &amp;quot;l&amp;quot;: 41, &amp;quot;n&amp;quot;: 43, &amp;quot;o&amp;quot;: 47, &amp;quot;p&amp;quot;: 53, &amp;quot;q&amp;quot;: 59, &amp;quot;r&amp;quot;: 61, &amp;quot;s&amp;quot;: 67, &amp;quot;t&amp;quot;: 71, &amp;quot;u&amp;quot;: 73, &amp;quot;v&amp;quot;: 79, &amp;quot;w&amp;quot;: 83, &amp;quot;x&amp;quot;: 89, &amp;quot;y&amp;quot;: 97, &amp;quot;z&amp;quot;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
+Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Note  All inputs will be in lowercase. The order of your output does not matter.
+Solution class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: List[List[str]] &amp;quot;&amp;quot;&amp;quot; primeNums = { &amp;quot;a&amp;quot;: 2, &amp;quot;b&amp;quot;: 3, &amp;quot;c&amp;quot;: 5, &amp;quot;d&amp;quot;: 7, &amp;quot;e&amp;quot;: 11, &amp;quot;f&amp;quot;: 13, &amp;quot;g&amp;quot;: 17, &amp;quot;h&amp;quot;: 19, &amp;quot;i&amp;quot;: 23, &amp;quot;j&amp;quot;: 29, &amp;quot;k&amp;quot;: 31, &amp;quot;m&amp;quot;: 37, &amp;quot;l&amp;quot;: 41, &amp;quot;n&amp;quot;: 43, &amp;quot;o&amp;quot;: 47, &amp;quot;p&amp;quot;: 53, &amp;quot;q&amp;quot;: 59, &amp;quot;r&amp;quot;: 61, &amp;quot;s&amp;quot;: 67, &amp;quot;t&amp;quot;: 71, &amp;quot;u&amp;quot;: 73, &amp;quot;v&amp;quot;: 79, &amp;quot;w&amp;quot;: 83, &amp;quot;x&amp;quot;: 89, &amp;quot;y&amp;quot;: 97, &amp;quot;z&amp;quot;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
   <meta name="keywords" content="leetcode anagrams dictionary " />
   
   
@@ -27,9 +26,8 @@ class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;
     
     <meta name="twitter:title" content="Group Anagrams" />
     <meta name="twitter:description" content="Given an array of strings, group anagrams together.
-Example:
-Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Note: - All inputs will be in lowercase. - The order of your output does not matter. Solution:
-class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: List[List[str]] &amp;quot;&amp;quot;&amp;quot; primeNums = { &amp;quot;a&amp;quot;: 2, &amp;quot;b&amp;quot;: 3, &amp;quot;c&amp;quot;: 5, &amp;quot;d&amp;quot;: 7, &amp;quot;e&amp;quot;: 11, &amp;quot;f&amp;quot;: 13, &amp;quot;g&amp;quot;: 17, &amp;quot;h&amp;quot;: 19, &amp;quot;i&amp;quot;: 23, &amp;quot;j&amp;quot;: 29, &amp;quot;k&amp;quot;: 31, &amp;quot;m&amp;quot;: 37, &amp;quot;l&amp;quot;: 41, &amp;quot;n&amp;quot;: 43, &amp;quot;o&amp;quot;: 47, &amp;quot;p&amp;quot;: 53, &amp;quot;q&amp;quot;: 59, &amp;quot;r&amp;quot;: 61, &amp;quot;s&amp;quot;: 67, &amp;quot;t&amp;quot;: 71, &amp;quot;u&amp;quot;: 73, &amp;quot;v&amp;quot;: 79, &amp;quot;w&amp;quot;: 83, &amp;quot;x&amp;quot;: 89, &amp;quot;y&amp;quot;: 97, &amp;quot;z&amp;quot;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
+Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Note  All inputs will be in lowercase. The order of your output does not matter.
+Solution class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: List[List[str]] &amp;quot;&amp;quot;&amp;quot; primeNums = { &amp;quot;a&amp;quot;: 2, &amp;quot;b&amp;quot;: 3, &amp;quot;c&amp;quot;: 5, &amp;quot;d&amp;quot;: 7, &amp;quot;e&amp;quot;: 11, &amp;quot;f&amp;quot;: 13, &amp;quot;g&amp;quot;: 17, &amp;quot;h&amp;quot;: 19, &amp;quot;i&amp;quot;: 23, &amp;quot;j&amp;quot;: 29, &amp;quot;k&amp;quot;: 31, &amp;quot;m&amp;quot;: 37, &amp;quot;l&amp;quot;: 41, &amp;quot;n&amp;quot;: 43, &amp;quot;o&amp;quot;: 47, &amp;quot;p&amp;quot;: 53, &amp;quot;q&amp;quot;: 59, &amp;quot;r&amp;quot;: 61, &amp;quot;s&amp;quot;: 67, &amp;quot;t&amp;quot;: 71, &amp;quot;u&amp;quot;: 73, &amp;quot;v&amp;quot;: 79, &amp;quot;w&amp;quot;: 83, &amp;quot;x&amp;quot;: 89, &amp;quot;y&amp;quot;: 97, &amp;quot;z&amp;quot;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -191,9 +189,11 @@ class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/group-anagrams.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Group Anagrams</h1>
-      <p>Given an array of strings, group anagrams together.</p>
+      
 
-<p><strong>Example:</strong></p>
+<p>Given an array of strings, group anagrams together.</p>
+
+<h3 id="example">Example</h3>
 
 <pre><code>Input: [&quot;eat&quot;, &quot;tea&quot;, &quot;tan&quot;, &quot;ate&quot;, &quot;nat&quot;, &quot;bat&quot;],
 Output:
@@ -204,63 +204,68 @@ Output:
 ]
 </code></pre>
 
-<p><strong>Note:</strong>
-- All inputs will be in lowercase.
-- The order of your output does not matter.
-<strong>Solution:</strong></p>
+<h3 id="note">Note</h3>
+
+<ul>
+<li>All inputs will be in lowercase.</li>
+
+<li><p>The order of your output does not matter.</p>
+
+<h3 id="solution">Solution</h3>
 
 <pre><code class="language-python">class Solution(object):
-    def groupAnagrams(self, strs):
-        &quot;&quot;&quot;
-        :type strs: List[str]
-        :rtype: List[List[str]]
-        &quot;&quot;&quot;
-        primeNums = {
-            &quot;a&quot;: 2,
-            &quot;b&quot;: 3,
-            &quot;c&quot;: 5,
-            &quot;d&quot;: 7,
-            &quot;e&quot;: 11,
-            &quot;f&quot;: 13,
-            &quot;g&quot;: 17,
-            &quot;h&quot;: 19,
-            &quot;i&quot;: 23,
-            &quot;j&quot;: 29,
-            &quot;k&quot;: 31,
-            &quot;m&quot;: 37,
-            &quot;l&quot;: 41,
-            &quot;n&quot;: 43,
-            &quot;o&quot;: 47,
-            &quot;p&quot;: 53,
-            &quot;q&quot;: 59,
-            &quot;r&quot;: 61,
-            &quot;s&quot;: 67,
-            &quot;t&quot;: 71,
-            &quot;u&quot;: 73,
-            &quot;v&quot;: 79,
-            &quot;w&quot;: 83,
-            &quot;x&quot;: 89,
-            &quot;y&quot;: 97,
-            &quot;z&quot;: 101
-        }
+def groupAnagrams(self, strs):
+    &quot;&quot;&quot;
+    :type strs: List[str]
+    :rtype: List[List[str]]
+    &quot;&quot;&quot;
+    primeNums = {
+        &quot;a&quot;: 2,
+        &quot;b&quot;: 3,
+        &quot;c&quot;: 5,
+        &quot;d&quot;: 7,
+        &quot;e&quot;: 11,
+        &quot;f&quot;: 13,
+        &quot;g&quot;: 17,
+        &quot;h&quot;: 19,
+        &quot;i&quot;: 23,
+        &quot;j&quot;: 29,
+        &quot;k&quot;: 31,
+        &quot;m&quot;: 37,
+        &quot;l&quot;: 41,
+        &quot;n&quot;: 43,
+        &quot;o&quot;: 47,
+        &quot;p&quot;: 53,
+        &quot;q&quot;: 59,
+        &quot;r&quot;: 61,
+        &quot;s&quot;: 67,
+        &quot;t&quot;: 71,
+        &quot;u&quot;: 73,
+        &quot;v&quot;: 79,
+        &quot;w&quot;: 83,
+        &quot;x&quot;: 89,
+        &quot;y&quot;: 97,
+        &quot;z&quot;: 101
+    }
 
-        def encode(string):
-            res = 1
-            for s in list(string):
-                res *= primeNums[s]
-            return res
+    def encode(string):
+        res = 1
+        for s in list(string):
+            res *= primeNums[s]
+        return res
 
-        anagrams = {}
+    anagrams = {}
 
-        for string in strs:
-            code = encode(string)
-            if anagrams.get(code, None) is None:
-                anagrams[code] = [string]
-            else:
-                anagrams.get(code).append(string)
-        print(anagrams)
-        return list(anagrams.values())
-</code></pre>
+    for string in strs:
+        code = encode(string)
+        if anagrams.get(code, None) is None:
+            anagrams[code] = [string]
+        else:
+            anagrams.get(code).append(string)
+    print(anagrams)
+    return list(anagrams.values())
+</code></pre></li>
+</ul>
 
   </div>
 

@@ -16,14 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 1. Only one letter can be changed at a time. 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word. Note: - Return 0 if there is no such transformation sequence. - All words have the same length. - All words contain only lowercase alphabetic characters." />
+  <meta name="description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 1. Only one letter can be changed at a time. 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
+Note  Return 0 if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
   <meta name="keywords" content="leetcode bfs bidirectional-bfs bidirectional-search " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Word Ladder" />
-    <meta name="twitter:description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 1. Only one letter can be changed at a time. 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word. Note: - Return 0 if there is no such transformation sequence. - All words have the same length. - All words contain only lowercase alphabetic characters." />
+    <meta name="twitter:description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 1. Only one letter can be changed at a time. 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
+Note  Return 0 if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -187,41 +189,49 @@
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/word-ladder.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Word Ladder</h1>
-      <p>Given two words (beginWord and endWord), and a dictionary&rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
+      
+
+<p>Given two words (beginWord and endWord), and a dictionary&rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
 1. Only one letter can be changed at a time.
-2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
-<strong>Note:</strong>
-- Return 0 if there is no such transformation sequence.
-- All words have the same length.
-- All words contain only lowercase alphabetic characters.
-- You may assume no duplicates in the word list.
-- You may assume beginWord and endWord are non-empty and are not the same.
-<strong>Example 1:</strong></p>
+2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.</p>
 
-<pre><code>Input:
-beginWord = &quot;hit&quot;,
-endWord = &quot;cog&quot;,
-wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;,&quot;cog&quot;]
+<h3 id="note">Note</h3>
 
-Output: 5
-</code></pre>
+<ul>
+<li>Return 0 if there is no such transformation sequence.</li>
+<li>All words have the same length.</li>
+<li>All words contain only lowercase alphabetic characters.</li>
+<li>You may assume no duplicates in the word list.</li>
 
-<p><strong>Explanation:</strong> As one shortest transformation is &ldquo;hit&rdquo; -&gt; &ldquo;hot&rdquo; -&gt; &ldquo;dot&rdquo; -&gt; &ldquo;dog&rdquo; -&gt; &ldquo;cog&rdquo;,
+<li><p>You may assume beginWord and endWord are non-empty and are not the same.</p>
+
+<h3 id="example-1">Example 1</h3>
+
+<p>```
+Input:
+beginWord = &ldquo;hit&rdquo;,
+endWord = &ldquo;cog&rdquo;,
+wordList = [&ldquo;hot&rdquo;,&ldquo;dot&rdquo;,&ldquo;dog&rdquo;,&ldquo;lot&rdquo;,&ldquo;log&rdquo;,&ldquo;cog&rdquo;]</p></li>
+</ul>
+
+<p>Output: 5</p>
+
+<pre><code>### Explanation As one shortest transformation is &quot;hit&quot; -&gt; &quot;hot&quot; -&gt; &quot;dot&quot; -&gt; &quot;dog&quot; -&gt; &quot;cog&quot;,
 return its length 5.
-<strong>Example 2:</strong></p>
-
-<pre><code>Input:
-beginWord = &quot;hit&quot;
-endWord = &quot;cog&quot;
-wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;]
-
-Output: 0
+### Example 2
 </code></pre>
 
-<p><strong>Explanation:</strong> The endWord &ldquo;cog&rdquo; is not in wordList, therefore no possible transformation.
-<strong>Solution:</strong></p>
+<p>Input:
+beginWord = &ldquo;hit&rdquo;
+endWord = &ldquo;cog&rdquo;
+wordList = [&ldquo;hot&rdquo;,&ldquo;dot&rdquo;,&ldquo;dog&rdquo;,&ldquo;lot&rdquo;,&ldquo;log&rdquo;]</p>
 
-<pre><code class="language-python"># time: o(26^(L/2)), L is the length of the word
+<p>Output: 0</p>
+
+<pre><code>### Explanation The endWord &quot;cog&quot; is not in wordList, therefore no possible transformation.
+### Solution
+```python
+# time: o(26^(L/2)), L is the length of the word
 class Solution:
     def ladderLength(self, beginWord, endWord, wordList):
         &quot;&quot;&quot;

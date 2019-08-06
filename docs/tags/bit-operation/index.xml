@@ -18,12 +18,8 @@
       <pubDate>Sat, 15 Sep 2018 12:56:41 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/09/power-of-two/</guid>
-      <description>Given an integer, write a function to determine if it is a power of two.
-Example 1:
-Input: 1 Output: true Explanation: 2**0 = 1  Example 2:
-Input: 16 Output: true Explanation: 2**4 = 16  Example 3:
-Input: 218 Output: false  Solution:
-class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: bool &amp;quot;&amp;quot;&amp;quot; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False  </description>
+      <description> Given an integer, write a function to determine if it is a power of two.
+Example 1 Input: 1 Output: true Explanation: 2**0 = 1  Example 2 Input: 16 Output: true Explanation: 2**4 = 16  Example 3 Input: 218 Output: false  Solution class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: bool &amp;quot;&amp;quot;&amp;quot; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False  </description>
     </item>
     
     <item>
@@ -33,8 +29,8 @@ class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type 
       
       <guid>http://www.hashnopolis.com/post/2018/09/single-number-iii/</guid>
       <description>Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
-For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5]. Note:
- The order of the result is not important. So in the above example, [5, 3] is also correct. Your algorithm should run in linear runtime complexity.</description>
+For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].
+Note:  The order of the result is not important. So in the above example, [5, 3] is also correct. Your algorithm should run in linear runtime complexity.</description>
     </item>
     
     <item>
@@ -44,12 +40,8 @@ For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5]. Note:
       
       <guid>http://www.hashnopolis.com/post/2018/09/single-number-ii/</guid>
       <description>Given a non-empty array of integers, every element appears three times except for one, which appears exactly once. Find that single one.
-Note:
-Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
-Example 1:
-Input: [2,2,3,2] Output: 3  Example 2:
-Input: [0,1,0,1,0,1,99] Output: 99  Solution:
-class Solution: def singleNumber(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.csdn.net/karen0310/article/details/78226261 ones, twos = 0, 0 for _, num in enumerate(nums): ones = (ones ^ num) &amp;amp; ~twos twos = (twos ^ num) &amp;amp; ~ones print(bin(num), &amp;quot;ones: &amp;quot;, bin(ones), &amp;quot;twos: &amp;quot;, bin(twos)) return ones  </description>
+Note Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+Example 1 Input: [2,2,3,2] Output: 3  Example 2 Input: [0,1,0,1,0,1,99] Output: 99  Solution class Solution: def singleNumber(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.</description>
     </item>
     
     <item>

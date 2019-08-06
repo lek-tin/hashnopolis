@@ -40,10 +40,7 @@ Return the starting gas station&amp;rsquo;s index if you can travel around the c
       
       <guid>http://www.hashnopolis.com/post/2018/11/meeting-rooms-ii/</guid>
       <description>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &amp;lt; ei), find the minimum number of conference rooms required.
-Example 1:
-Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2:
-Input: [[7,10],[2,4]] Output: 1  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: int &amp;quot;&amp;quot;&amp;quot; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</description>
+Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2 Input: [[7,10],[2,4]] Output: 1  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: int &amp;quot;&amp;quot;&amp;quot; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</description>
     </item>
     
   </channel>

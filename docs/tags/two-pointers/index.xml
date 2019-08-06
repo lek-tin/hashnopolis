@@ -20,7 +20,7 @@
       <guid>http://www.hashnopolis.com/post/2019/03/closest-two-sum/</guid>
       <description>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
 Return the difference between the sum of the two integers and the target.
-Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 + 1) = 1).  Challenge: Do it in O(nlogn) time complexity.</description>
+Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 + 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;amp;&amp;amp; nums.</description>
     </item>
     
     <item>
@@ -71,8 +71,8 @@ Note: You may not slant the container and n is at least 2. The above vertical li
       
       <guid>http://www.hashnopolis.com/post/2019/01/one-edit-distance/</guid>
       <description>Given two strings s and t, determine if they are both one edit distance apart.
-Note: There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t Example 1:
-Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</description>
+Note There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t
+Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</description>
     </item>
     
     <item>
@@ -83,7 +83,8 @@ Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Expl
       <guid>http://www.hashnopolis.com/post/2018/11/move-zeroes/</guid>
       <description>Given an array nums, write a function to move all 0&amp;rsquo;s to the end of it while maintaining the relative order of the non-zero elements.
 For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
-Note: You must do this in-place without making a copy of the array. Minimize the total number of operations. Credits: Special thanks to @jianchao.</description>
+Note: You must do this in-place without making a copy of the array. Minimize the total number of operations.
+Credit Special thanks to @jianchao.</description>
     </item>
     
     <item>
@@ -116,8 +117,8 @@ Solution: /** * Definition for singly-linked list. * class ListNode { * int val;
       
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle/</guid>
       <description>Given a linked list, determine if it has a cycle in it.
-Follow up: Can you solve it without using extra space? Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
+Follow-up Can you solve it without using extra space?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
     </item>
     
     <item>
@@ -126,10 +127,8 @@ Follow up: Can you solve it without using extra space? Solution:
       <pubDate>Wed, 19 Sep 2018 10:38:38 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list-ii/</guid>
-      <description>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
-Example 1:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 Output: 1-&amp;gt;2-&amp;gt;5  Example 2:
-Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 Output: 2-&amp;gt;3  </description>
+      <description> Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
+Example 1 Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 Output: 1-&amp;gt;2-&amp;gt;5  Example 2 Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 Output: 2-&amp;gt;3  </description>
     </item>
     
     <item>
@@ -139,9 +138,7 @@ Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 Output: 2-&amp;gt;3  </descript
       
       <guid>http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/</guid>
       <description>Remove all elements from a linked list of integers that have value val.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5  Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type val: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; pre = ListNode(0) pre.next = head pos = pre while pos.next !</description>
+Example Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5  Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type val: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; pre = ListNode(0) pre.next = head pos = pre while pos.</description>
     </item>
     
     <item>
@@ -153,8 +150,7 @@ Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Ou
       <description>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 Note:
 The solution set must not contain duplicate triplets.
-Example:
-Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution:</description>
+Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution # time: o(n^2) # space: o(1) class Solution: def threeSum(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; nums.</description>
     </item>
     
     <item>
@@ -165,8 +161,7 @@ Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, 
       <guid>http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/</guid>
       <description>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</description>
+Example 1 Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</description>
     </item>
     
     <item>
@@ -177,8 +172,7 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
       <guid>http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/</guid>
       <description>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</description>
+Example 1 Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</description>
     </item>
     
     <item>
@@ -188,13 +182,9 @@ Given nums = [1,1,2], Your function should return length = 2, with the first two
       
       <guid>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</guid>
       <description>Given a linked list, remove the n-th node from the end of list and return its head.
-Example:
-Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note:
-Given n will always be valid.
-Follow up:
-Could you do this in one pass?
-Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
+Example Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note Given n will always be valid.
+Follow-up Could you do this in one pass?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
     </item>
     
   </channel>

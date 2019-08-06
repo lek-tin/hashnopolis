@@ -156,7 +156,7 @@ If there are multiple suitable places for insertion, you may choose any place to
       <guid>http://www.hashnopolis.com/post/2019/03/closest-two-sum/</guid>
       <description>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
 Return the difference between the sum of the two integers and the target.
-Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 + 1) = 1).  Challenge: Do it in O(nlogn) time complexity.</description>
+Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 + 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;amp;&amp;amp; nums.</description>
     </item>
     
     <item>
@@ -250,8 +250,7 @@ Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;q
       
       <guid>http://www.hashnopolis.com/post/2019/03/find-median-from-data-stream/</guid>
       <description>Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.
-For example,
-[2,3,4], the median is 3
+Example [2,3,4], the median is 3
 [2,3], the median is (2 + 3) / 2 = 2.5
 Design a data structure that supports the following two operations:
 1. void addNum(int num) - Add a integer number from the data stream to the data structure.</description>
@@ -573,9 +572,7 @@ inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary t
       
       <guid>http://www.hashnopolis.com/post/2019/01/count-number-of-substrings-with-k-distinct-characters/</guid>
       <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1:
-Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters.  Example 2:
-Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str.</description>
+Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters.  Example 2 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str.</description>
     </item>
     
     <item>
@@ -619,10 +616,9 @@ Note: You may not slant the container and n is at least 2. The above vertical li
       
       <guid>http://www.hashnopolis.com/post/2019/01/binary-tree-zigzag-level-order-traversal/</guid>
       <description>Given a binary tree, return the zigzag level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, then right to left for the next level and alternate between).
-For example: Given binary tree [3,9,20,null,null,15,7],
+Example Given binary tree [3,9,20,null,null,15,7],
  3 / \ 9 20 / \ 15 7  return its zigzag level order traversal as:
-[ [3], [20,9], [15,7] ]  Solution::
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
+[ [3], [20,9], [15,7] ]  Solution: # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
     </item>
     
     <item>
@@ -644,10 +640,8 @@ The string can contain additional characters after those that form the integral 
       <guid>http://www.hashnopolis.com/post/2019/01/longest-common-prefix/</guid>
       <description>Write a function to find the longest common prefix string amongst an array of strings.
 If there is no common prefix, return an empty string &amp;ldquo;&amp;rdquo;.
-Example 1:
-Input: [&amp;quot;flower&amp;quot;,&amp;quot;flow&amp;quot;,&amp;quot;flight&amp;quot;] Output: &amp;quot;fl&amp;quot;  Example 2:
-Input: [&amp;quot;dog&amp;quot;,&amp;quot;racecar&amp;quot;,&amp;quot;car&amp;quot;] Output: &amp;quot;&amp;quot; Explanation: There is no common prefix among the input strings.  Note: All given inputs are in lowercase letters a-z. Note:
-# Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: str &amp;quot;&amp;quot;&amp;quot; if not strs or len(strs) == 0: return &amp;quot;&amp;quot; res = strs[0] for s in strs: # string.</description>
+Example 1 Input: [&amp;quot;flower&amp;quot;,&amp;quot;flow&amp;quot;,&amp;quot;flight&amp;quot;] Output: &amp;quot;fl&amp;quot;  Example 2 Input: [&amp;quot;dog&amp;quot;,&amp;quot;racecar&amp;quot;,&amp;quot;car&amp;quot;] Output: &amp;quot;&amp;quot; Explanation: There is no common prefix among the input strings.  Note All given inputs are in lowercase letters a-z.
+Note # Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: str &amp;quot;&amp;quot;&amp;quot; if not strs or len(strs) == 0: return &amp;quot;&amp;quot; res = strs[0] for s in strs: # string.</description>
     </item>
     
     <item>
@@ -657,9 +651,7 @@ Input: [&amp;quot;dog&amp;quot;,&amp;quot;racecar&amp;quot;,&amp;quot;car&amp;qu
       
       <guid>http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/</guid>
       <description>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-Example 1:
-Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2:
-Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution: Dynamic Programming
+Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution Dynamic Programming
 # https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start + max_len] return solution  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</description>
     </item>
     
@@ -670,9 +662,9 @@ Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution: Dynami
       
       <guid>http://www.hashnopolis.com/post/2019/01/longest-substring-without-repeating-characters/</guid>
       <description>Given a string, find the length of the longest substring without repeating characters.
-*Example 1:
-Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  *Example 2:
-Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  *Example 3:
+*### Example 1
+Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  *### Example 2
+Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  *### Example 3
 Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3. Note that the answer must be a substring, &amp;quot;pwke&amp;quot; is a subsequence and not a substring.</description>
     </item>
     
@@ -684,8 +676,7 @@ Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot
       <guid>http://www.hashnopolis.com/post/2019/01/add-two-numbers/</guid>
       <description>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-Example:
-Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
+Example Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
     </item>
     
     <item>
@@ -719,10 +710,7 @@ Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;q
       
       <guid>http://www.hashnopolis.com/post/2019/01/reverse-integer/</guid>
       <description>Given a 32-bit signed integer, reverse digits of an integer.
-Example 1:
-Input: 123 Output: 321  Example 2:
-Input: -123 Output: -321  Example 3:
-Input: 120 Output: 21  Note: Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</description>
+Example 1 Input: 123 Output: 321  Example 2 Input: -123 Output: -321  Example 3 Input: 120 Output: 21  Note Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</description>
     </item>
     
     <item>
@@ -732,8 +720,8 @@ Input: 120 Output: 21  Note: Assume we are dealing with an environment which cou
       
       <guid>http://www.hashnopolis.com/post/2019/01/one-edit-distance/</guid>
       <description>Given two strings s and t, determine if they are both one edit distance apart.
-Note: There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t Example 1:
-Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</description>
+Note There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t
+Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</description>
     </item>
     
     <item>
@@ -754,8 +742,7 @@ For corner elements, we need to consider only one neighbor for comparison. There
       <guid>http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/</guid>
       <description>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
 Return a deep copy of the list.
-Solution:
-# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: RandomListNode :rtype: RandomListNode &amp;quot;&amp;quot;&amp;quot; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</description>
+Solution # Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: RandomListNode :rtype: RandomListNode &amp;quot;&amp;quot;&amp;quot; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</description>
     </item>
     
     <item>
@@ -766,9 +753,7 @@ Solution:
       <guid>http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/</guid>
       <description>Given a binary tree, return the vertical order traversal of its nodes&amp;rsquo; values. (ie, from top to bottom, column by column).
 If two nodes are in the same row and column, the order should be from left to right.
-Examples 1:
-Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Examples 2:
-Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Examples 3:</description>
+Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ]  Solution # https://www.</description>
     </item>
     
     <item>
@@ -778,7 +763,7 @@ Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0
       
       <guid>http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/</guid>
       <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example:** Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note:**  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</description>
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</description>
     </item>
     
     <item>
@@ -788,9 +773,7 @@ Example:** Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest incre
       
       <guid>http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/</guid>
       <description>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
-Example 1:
-Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2:
-Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</description>
+Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2 Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</description>
     </item>
     
     <item>
@@ -802,8 +785,7 @@ Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subs
       <description>Given a string s and a non-empty string p, find all the start indices of p&amp;rsquo;s anagrams in s.
 Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
 The order of output does not matter.
-Example 1:
-Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Output: [0, 6] Explanation: The substring with start index = 0 is &amp;quot;cba&amp;quot;, which is an anagram of &amp;quot;abc&amp;quot;.</description>
+Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Output: [0, 6] Explanation: The substring with start index = 0 is &amp;quot;cba&amp;quot;, which is an anagram of &amp;quot;abc&amp;quot;.</description>
     </item>
     
     <item>
@@ -815,8 +797,7 @@ Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Output: [0, 
       <description>There are a total of n courses you have to take, labeled from 0 to n-1.
 Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
 Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
-Example 1:
-Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 courses to take.</description>
+Example 1 Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 courses to take.</description>
     </item>
     
     <item>
@@ -826,9 +807,7 @@ Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 courses to ta
       
       <guid>http://www.hashnopolis.com/post/2018/12/alien-dictionary/</guid>
       <description>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1:
-Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot;  Example 2:
-Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot;  Example 3:</description>
+Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot;  Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot;  Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot;  Explanation The order is invalid, so return &amp;ldquo;&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -838,9 +817,8 @@ Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp
       
       <guid>http://www.hashnopolis.com/post/2018/12/random-pick-index/</guid>
       <description>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.
-Note: The array size can be very large. Solution that uses too much extra space will not pass the judge.
-Example:
-int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</description>
+Note The array size can be very large. Solution that uses too much extra space will not pass the judge.
+Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</description>
     </item>
     
     <item>
@@ -850,10 +828,8 @@ int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // p
       
       <guid>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</guid>
       <description>Given two arrays, write a function to compute their intersection.
-Example 1:
-Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2:
-Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note: - Each element in the result must be unique. - The result can be in any order. Solution:
-class Solution: def intersection(self, nums1, nums2): &amp;quot;&amp;quot;&amp;quot; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = set([]) dict1 = {} for n in nums1: if dict1.</description>
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
+Solution class Solution: def intersection(self, nums1, nums2): &amp;quot;&amp;quot;&amp;quot; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = set([]) dict1 = {} for n in nums1: if dict1.</description>
     </item>
     
     <item>
@@ -885,8 +861,7 @@ mv downloads-folder/jdk-&amp;lt;version&amp;gt;-linux-xxx.tar.gz /usr/java tar -
       <description>The API: int read4(char *buf) reads 4 characters at a time from a file.
 The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
 By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
-Example 1:
-Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;.</description>
+Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;.</description>
     </item>
     
     <item>
@@ -941,9 +916,7 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
       <guid>http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/</guid>
       <description>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
-Example:
-Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution:
-# Time: o(n) class Solution(object): def longestConsecutive(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</description>
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution(object): def longestConsecutive(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</description>
     </item>
     
     <item>
@@ -963,9 +936,7 @@ Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive ele
       <guid>http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/</guid>
       <description>Given a nested list of integers, implement an iterator to flatten it.
 Each element is either an integer, or a list &amp;ndash; whose elements may also be integers or other lists.
-Example 1:
-Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2:
-Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</description>
+Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</description>
     </item>
     
     <item>
@@ -976,7 +947,7 @@ Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until
       <guid>http://www.hashnopolis.com/post/2018/11/reverse-nodes-in-k-group/</guid>
       <description>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
 k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
-Example: Given this linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
+Example Given this linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
 For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5</description>
     </item>
     
@@ -997,11 +968,10 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
       
       <guid>http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/</guid>
       <description>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
-Note: The input string may contain letters other than the parentheses ( and ).
-*Example 1:
-Input: &amp;quot;()())()&amp;quot; Output: [&amp;quot;()()()&amp;quot;, &amp;quot;(())()&amp;quot;]  *Example 2:
-Input: &amp;quot;(a)())()&amp;quot; Output: [&amp;quot;(a)()()&amp;quot;, &amp;quot;(a())()&amp;quot;]  *Example 3:
-Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *Solution:
+Note The input string may contain letters other than the parentheses ( and ). *### Example 1
+Input: &amp;quot;()())()&amp;quot; Output: [&amp;quot;()()()&amp;quot;, &amp;quot;(())()&amp;quot;]  *### Example 2
+Input: &amp;quot;(a)())()&amp;quot; Output: [&amp;quot;(a)()()&amp;quot;, &amp;quot;(a())()&amp;quot;]  *### Example 3
+Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *### Solution
 # Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] self.</description>
     </item>
     
@@ -1011,7 +981,7 @@ Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *Solution:
       <pubDate>Sun, 11 Nov 2018 18:48:12 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/encode-and-decode-tinyurl/</guid>
-      <description>Note: This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
+      <description>Note This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
 Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</description>
     </item>
     
@@ -1022,10 +992,7 @@ Design the encode and decode methods for the TinyURL service. There is no restri
       
       <guid>http://www.hashnopolis.com/post/2018/11/meeting-rooms-ii/</guid>
       <description>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &amp;lt; ei), find the minimum number of conference rooms required.
-Example 1:
-Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2:
-Input: [[7,10],[2,4]] Output: 1  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: int &amp;quot;&amp;quot;&amp;quot; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</description>
+Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2 Input: [[7,10],[2,4]] Output: 1  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: int &amp;quot;&amp;quot;&amp;quot; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</description>
     </item>
     
     <item>
@@ -1045,11 +1012,7 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
       
       <guid>http://www.hashnopolis.com/post/2018/11/interger-to-english-words/</guid>
       <description>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
-Example 1:
-Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Example 2:
-Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot;  Example 3:
-Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot;  Example 4:
-Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot;  Solution:</description>
+Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Example 2 Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot;  Example 3 Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot;  Example 4 Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot;  Solution class Solution: def __init__(self): self.</description>
     </item>
     
     <item>
@@ -1058,11 +1021,9 @@ Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million 
       <pubDate>Sun, 11 Nov 2018 12:40:25 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/powx-n/</guid>
-      <description>Example 1:
-Input: 2.00000, 10 Output: 1024.00000  Example 2:
-Input: 2.10000, 3 Output: 9.26100  Example 3:
-Input: 2.00000, -2 Output: 0.25000  Explanation: 2-2 = 1&amp;frasl;22 = 1&amp;frasl;4 = 0.25 Note: - -100.0 &amp;lt; x &amp;lt; 100.0 - n is a 32-bit signed integer, within the range [−231, 231 − 1] Solution:
-# Time: o(logN) # Space: o(n) class Solution: def myPow(self, x, n): &amp;quot;&amp;quot;&amp;quot; :type x: float :type n: int :rtype: float &amp;quot;&amp;quot;&amp;quot; if n &amp;gt; 0: return self.</description>
+      <description>Example 1 Input: 2.00000, 10 Output: 1024.00000  Example 2 Input: 2.10000, 3 Output: 9.26100  Example 3 Input: 2.00000, -2 Output: 0.25000  Explanation 2-2 = 1&amp;frasl;22 = 1&amp;frasl;4 = 0.25 Note  -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]
+Solution ```python
+Time: o(logN) Space: o(n) class Solution: def myPow(self, x, n): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type x: float :type n: int :rtype: float &amp;ldquo;&amp;rdquo;&amp;rdquo; if n &amp;gt; 0: return self.</description>
     </item>
     
     <item>
@@ -1072,7 +1033,8 @@ Input: 2.00000, -2 Output: 0.25000  Explanation: 2-2 = 1&amp;frasl;22 = 1&amp;fr
       
       <guid>http://www.hashnopolis.com/post/2018/11/validate-binary-search-tree/</guid>
       <description>Given a binary tree, determine if it is a valid binary search tree (BST).
-Assume a BST is defined as follows: - The left subtree of a node contains only nodes with keys less than the node&amp;rsquo;s key. - The right subtree of a node contains only nodes with keys greater than the node&amp;rsquo;s key. - Both the left and right subtrees must also be binary search trees. Example 1:</description>
+Assume a BST is defined as follows: - The left subtree of a node contains only nodes with keys less than the node&amp;rsquo;s key. - The right subtree of a node contains only nodes with keys greater than the node&amp;rsquo;s key. - Both the left and right subtrees must also be binary search trees.
+Example 1 Input: 2 / \ 1 3 Output: true  Example 2  5 / \ 1 4 / \ 3 6 Output: false  Explanation The input is: [5,1,4,null,null,3,6].</description>
     </item>
     
     <item>
@@ -1091,10 +1053,8 @@ sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. D
       <pubDate>Fri, 09 Nov 2018 18:52:59 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/count-primes/</guid>
-      <description>Count the number of prime numbers less than a non-negative number, n.
-Example:
-Input: 10 Output: 4  Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution:
-class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)+1): if marked[i] != 1: prime = i + 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count += 1 return count  </description>
+      <description> Count the number of prime numbers less than a non-negative number, n.
+Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)+1): if marked[i] != 1: prime = i + 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count += 1 return count  </description>
     </item>
     
     <item>
@@ -1104,9 +1064,8 @@ class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n
       
       <guid>http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/</guid>
       <description>Implement a trie with insert, search, and startsWith methods.
-Example:
-Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true  Note: You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings. Solution:
-# o(n) class TrieNode(): def __init__(self): self.children = {} self.isWholeWord = False class Trie: def __init__(self): &amp;quot;&amp;quot;&amp;quot; Initialize your data structure here.</description>
+Example Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true  Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
+Solution # o(n) class TrieNode(): def __init__(self): self.children = {} self.isWholeWord = False class Trie: def __init__(self): &amp;quot;&amp;quot;&amp;quot; Initialize your data structure here.</description>
     </item>
     
     <item>
@@ -1117,11 +1076,7 @@ Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp
       <guid>http://www.hashnopolis.com/post/2018/11/excel-sheet-column-title/</guid>
       <description>Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 For example:
- 1 -&amp;gt; A 2 -&amp;gt; B 3 -&amp;gt; C ... 26 -&amp;gt; Z 27 -&amp;gt; AA 28 -&amp;gt; AB ...  Example 1:
-Input: 1 Output: &amp;quot;A&amp;quot;  Example 2:
-Input: 28 Output: &amp;quot;AB&amp;quot;  Example 3:
-Input: 701 Output: &amp;quot;ZY&amp;quot;  Solution:
-class Solution: def convertToTitle(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: str &amp;quot;&amp;quot;&amp;quot; digit = 1 res = &amp;quot;&amp;quot; while n &amp;gt; 0: # Because we start from A.</description>
+ 1 -&amp;gt; A 2 -&amp;gt; B 3 -&amp;gt; C ... 26 -&amp;gt; Z 27 -&amp;gt; AA 28 -&amp;gt; AB ...  Example 1 Input: 1 Output: &amp;quot;A&amp;quot;  Example 2 Input: 28 Output: &amp;quot;AB&amp;quot;  Example 3 Input: 701 Output: &amp;quot;ZY&amp;quot;  Solution class Solution: def convertToTitle(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: str &amp;quot;&amp;quot;&amp;quot; digit = 1 res = &amp;quot;&amp;quot; while n &amp;gt; 0: # Because we start from A.</description>
     </item>
     
     <item>
@@ -1130,11 +1085,10 @@ class Solution: def convertToTitle(self, n): &amp;quot;&amp;quot;&amp;quot; :typ
       <pubDate>Thu, 08 Nov 2018 22:10:52 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/</guid>
-      <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
+      <description> Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
-Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false. Note: Your algorithm should run in O(n) time complexity and O(1) space complexity.
-Example 1:
-Input: [1,2,3,4,5] Output: true  Example 2:</description>
+Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution class Solution: def increasingTriplet(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: bool &amp;quot;&amp;quot;&amp;quot; if not nums or len(nums) &amp;lt; 3: return False min_1, min_2 = max(nums), max(nums) # Not asking to find 3 consecutive increasing numbers for n in nums: if n &amp;gt; min_2: return True elif n &amp;lt; min_1: min_1 = n elif n &amp;gt; min_1 and n &amp;lt; min_2: min_2 = n return False  </description>
     </item>
     
     <item>
@@ -1157,9 +1111,7 @@ In a UNIX-style file system, a period (&amp;lsquo;.&amp;rsquo;) refers to the cu
       <description>Implement int sqrt(int x).
 Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
 Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
-Example 1:
-Input: 4 Output: 2  Example 2:
-Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842&amp;hellip;, and since the decimal part is truncated, 2 is returned.</description>
+Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842&amp;hellip;, and since the decimal part is truncated, 2 is returned.</description>
     </item>
     
     <item>
@@ -1170,8 +1122,7 @@ Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842&amp;hellip;, an
       <guid>http://www.hashnopolis.com/post/2018/11/sort-colors/</guid>
       <description>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
-Note: You are not suppose to use the library&amp;rsquo;s sort function for this problem. Example:
-Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow up: 1.</description>
+Note You are not suppose to use the library&amp;rsquo;s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort.</description>
     </item>
     
     <item>
@@ -1192,7 +1143,7 @@ Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow up: 1.</description>
       <description>Given an array of n integers where n &amp;gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
 Solve it without division and in O(n).
 For example, given [1,2,3,4], return [24,12,8,6].
-Follow up: Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.</description>
+Follow-up Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.</description>
     </item>
     
     <item>
@@ -1203,7 +1154,8 @@ Follow up: Could you solve it with constant space complexity? (Note: The output 
       <guid>http://www.hashnopolis.com/post/2018/11/move-zeroes/</guid>
       <description>Given an array nums, write a function to move all 0&amp;rsquo;s to the end of it while maintaining the relative order of the non-zero elements.
 For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
-Note: You must do this in-place without making a copy of the array. Minimize the total number of operations. Credits: Special thanks to @jianchao.</description>
+Note: You must do this in-place without making a copy of the array. Minimize the total number of operations.
+Credit Special thanks to @jianchao.</description>
     </item>
     
     <item>
@@ -1224,10 +1176,7 @@ Note: You must do this in-place without making a copy of the array. Minimize the
       <guid>http://www.hashnopolis.com/post/2018/11/implement-strstr/</guid>
       <description>Implement strstr().
 Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
-Example 1:
-Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Output: 2  Example 2:
-Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1  Clarification:
-What should we return when needle is an empty string? This is a great question to ask during an interview.
+Example 1 Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Output: 2  Example 2 Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1  Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
 For the purpose of this problem, we will return 0 when needle is an empty string.</description>
     </item>
     
@@ -1250,13 +1199,13 @@ Example 1: Input: &amp;quot;()&amp;quot; Output: true  Example 2: Input: &amp;qu
       
       <guid>http://www.hashnopolis.com/post/2018/11/maximal-square/</guid>
       <description>Given a 2D binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest square containing only 1&amp;rsquo;s and return its area.
-Example: Input:
+Example Input:
 1 0 1 0 0
 1 0 1 1 1
 1 1 1 1 1
 1 0 0 1 0
-Output: 4 Solution:
-class Solution: def maximalSquare(self, matrix): &amp;quot;&amp;quot;&amp;quot; :type matrix: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;quot;1&amp;quot;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;quot;1&amp;quot;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;quot;0&amp;quot;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2  class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</description>
+Output: 4
+Solution class Solution: def maximalSquare(self, matrix): &amp;quot;&amp;quot;&amp;quot; :type matrix: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;quot;1&amp;quot;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;quot;1&amp;quot;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;quot;0&amp;quot;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2  class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</description>
     </item>
     
     <item>
@@ -1267,10 +1216,7 @@ class Solution: def maximalSquare(self, matrix): &amp;quot;&amp;quot;&amp;quot; 
       <guid>http://www.hashnopolis.com/post/2018/11/valid-palindrome/</guid>
       <description>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 Note: For the purpose of this problem, we define empty string as valid palindrome.
-Example 1:
-Input: &amp;quot;A man, a plan, a canal: Panama&amp;quot; Output: true  Example 2:
-Input: &amp;quot;race a car&amp;quot; Output: false  Solution:
-class Solution: def isPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: bool &amp;quot;&amp;quot;&amp;quot; if not s: return True head = 0 tail = len(s) - 1 while head &amp;lt;= tail: cHead, cTail = s[head], s[tail] if not cHead.</description>
+Example 1 Input: &amp;quot;A man, a plan, a canal: Panama&amp;quot; Output: true  Example 2 Input: &amp;quot;race a car&amp;quot; Output: false  Solution class Solution: def isPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: bool &amp;quot;&amp;quot;&amp;quot; if not s: return True head = 0 tail = len(s) - 1 while head &amp;lt;= tail: cHead, cTail = s[head], s[tail] if not cHead.</description>
     </item>
     
     <item>
@@ -1293,7 +1239,7 @@ Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]</description>
       <description>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 According to the : “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
 Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]
- _______3______ / \ ___5__ ___1__  / \ / 6 _2 0 8 / 7 4 Example 1:</description>
+ _______3______ / \ ___5__ ___1__  / \ / 6 _2 0 8 / 7 4</description>
     </item>
     
     <item>
@@ -1303,10 +1249,7 @@ Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]
       
       <guid>http://www.hashnopolis.com/post/2018/10/summary-ranges/</guid>
       <description>Given a sorted integer array without duplicates, return the summary of its ranges.
-Example 1:
-Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.  Example 2:
-Input: [0,2,3,4,6,8,9] Output: [&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.  Solution:
-class Solution: def summaryRanges(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i+1] == nums[i] + 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1].</description>
+Example 1 Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.  Example 2 Input: [0,2,3,4,6,8,9] Output: [&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.  Solution class Solution: def summaryRanges(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i+1] == nums[i] + 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1].</description>
     </item>
     
     <item>
@@ -1315,8 +1258,8 @@ class Solution: def summaryRanges(self, nums): &amp;quot;&amp;quot;&amp;quot; :t
       <pubDate>Tue, 30 Oct 2018 23:56:03 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/10/search-a-2d-matrix/</guid>
-      <description>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: - Integers in each row are sorted from left to right. - The first integer of each row is greater than the last integer of the previous row. Example 1:
-Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 Output: true  Example 2:</description>
+      <description>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: - Integers in each row are sorted from left to right. - The first integer of each row is greater than the last integer of the previous row.
+Example 1 Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 Output: true  Example 2 Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 13 Output: false  Solution # Treat the 2-d matrix as a 1-d list of length rows * cols.</description>
     </item>
     
     <item>
@@ -1326,9 +1269,7 @@ Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 
       
       <guid>http://www.hashnopolis.com/post/2018/10/find-the-duplicate-number/</guid>
       <description>Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
-Example 1:
-Input: [1,3,4,2,2] Output: 2  Example 2:
-Input: [3,1,3,4,2] Output: 3  Note: You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space.</description>
+Example 1 Input: [1,3,4,2,2] Output: 2  Example 2 Input: [3,1,3,4,2] Output: 3  Note You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space.</description>
     </item>
     
     <item>
@@ -1339,8 +1280,7 @@ Input: [3,1,3,4,2] Output: 3  Note: You must not modify the array (assume the ar
       <guid>http://www.hashnopolis.com/post/2018/10/h-index/</guid>
       <description>Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&amp;rsquo;s h-index.
 According to the definition of h-index on Wikipedia: &amp;ldquo;A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.&amp;rdquo;
-Example:
-Input: citations = [3,0,6,1,5] Output: 3  Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.</description>
+Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.</description>
     </item>
     
     <item>
@@ -1349,7 +1289,8 @@ Input: citations = [3,0,6,1,5] Output: 3  Explanation: [3,0,6,1,5] means the res
       <pubDate>Sat, 27 Oct 2018 01:05:07 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/10/word-ladder/</guid>
-      <description>Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 1. Only one letter can be changed at a time. 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word. Note: - Return 0 if there is no such transformation sequence. - All words have the same length. - All words contain only lowercase alphabetic characters.</description>
+      <description>Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 1. Only one letter can be changed at a time. 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
+Note  Return 0 if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</description>
     </item>
     
     <item>
@@ -1383,9 +1324,7 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written a
       <description>Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
 Your algorithm&amp;rsquo;s runtime complexity must be in the order of O(log n).
 If the target is not found in the array, return [-1, -1].
-Example 1:
-Input: nums = [5,7,7,8,8,10], target = 8 Output: [3,4]  Example 2:
-Input: nums = [5,7,7,8,8,10], target = 6 Output: [-1,-1]  Solution: Time: O(logN)</description>
+Example 1 Input: nums = [5,7,7,8,8,10], target = 8 Output: [3,4]  Example 2 Input: nums = [5,7,7,8,8,10], target = 6 Output: [-1,-1]  Solution Time: O(logN)</description>
     </item>
     
     <item>
@@ -1394,13 +1333,12 @@ Input: nums = [5,7,7,8,8,10], target = 6 Output: [-1,-1]  Solution: Time: O(logN
       <pubDate>Fri, 26 Oct 2018 23:08:49 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/10/search-in-rotated-sorted-array/</guid>
-      <description>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+      <description> Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
 You are given a target value to search. If found in the array return its index, otherwise return -1.
 You may assume no duplicate exists in the array.
 Your algorithm&amp;rsquo;s runtime complexity must be in the order of O(log n).
-Example 1:
-Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2:</description>
+Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1  Solution class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start + 1) &amp;lt; end: mid = start + (end - start) // 2 if nums[mid] == target: return mid if nums[start] &amp;lt; nums[mid]: if nums[start] &amp;lt;= target and target &amp;lt;= nums[mid]: end = mid else: start = mid else: if nums[mid] &amp;lt;= target and target &amp;lt;= nums[end]: start = mid else: end = mid if nums[start] == target: return start if nums[end] == target: return end return -1  </description>
     </item>
     
     <item>
@@ -1420,10 +1358,7 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
       
       <guid>http://www.hashnopolis.com/post/2018/10/minimum-path-sum/</guid>
       <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note: You can only move either down or right at any point in time.
-Example:
-Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation: Because the path 1→3→1→1→1 minimizes the sum. Solution:
-class Solution: def minPathSum(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[int]] :rtype: int &amp;quot;&amp;quot;&amp;quot; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
+Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution: def minPathSum(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[int]] :rtype: int &amp;quot;&amp;quot;&amp;quot; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
     </item>
     
     <item>
@@ -1473,9 +1408,7 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
       
       <guid>http://www.hashnopolis.com/post/2018/10/multiply-strings/</guid>
       <description>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
-Example 1:
-Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Output: &amp;quot;6&amp;quot;  Example 2:
-Input: num1 = &amp;quot;123&amp;quot;, num2 = &amp;quot;456&amp;quot; Output: &amp;quot;56088&amp;quot;  Note: - The length of both num1 and num2 is &amp;lt; 110. - Both num1 and num2 contain only digits 0-9. - Both num1 and num2 do not contain any leading zero, except the number 0 itself.</description>
+Example 1 Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Output: &amp;quot;6&amp;quot;  Example 2 Input: num1 = &amp;quot;123&amp;quot;, num2 = &amp;quot;456&amp;quot; Output: &amp;quot;56088&amp;quot;  Note  The length of both num1 and num2 is &amp;lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself.</description>
     </item>
     
     <item>
@@ -1485,10 +1418,8 @@ Input: num1 = &amp;quot;123&amp;quot;, num2 = &amp;quot;456&amp;quot; Output: &a
       
       <guid>http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/</guid>
       <description>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
-Note:
-You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1:
-Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2: ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
-**Follow up:** What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</description>
+Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1 Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2 ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
+### Follow-up What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</description>
     </item>
     
     <item>
@@ -1509,9 +1440,8 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
       
       <guid>http://www.hashnopolis.com/post/2018/10/group-anagrams/</guid>
       <description>Given an array of strings, group anagrams together.
-Example:
-Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Note: - All inputs will be in lowercase. - The order of your output does not matter. Solution:
-class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: List[List[str]] &amp;quot;&amp;quot;&amp;quot; primeNums = { &amp;quot;a&amp;quot;: 2, &amp;quot;b&amp;quot;: 3, &amp;quot;c&amp;quot;: 5, &amp;quot;d&amp;quot;: 7, &amp;quot;e&amp;quot;: 11, &amp;quot;f&amp;quot;: 13, &amp;quot;g&amp;quot;: 17, &amp;quot;h&amp;quot;: 19, &amp;quot;i&amp;quot;: 23, &amp;quot;j&amp;quot;: 29, &amp;quot;k&amp;quot;: 31, &amp;quot;m&amp;quot;: 37, &amp;quot;l&amp;quot;: 41, &amp;quot;n&amp;quot;: 43, &amp;quot;o&amp;quot;: 47, &amp;quot;p&amp;quot;: 53, &amp;quot;q&amp;quot;: 59, &amp;quot;r&amp;quot;: 61, &amp;quot;s&amp;quot;: 67, &amp;quot;t&amp;quot;: 71, &amp;quot;u&amp;quot;: 73, &amp;quot;v&amp;quot;: 79, &amp;quot;w&amp;quot;: 83, &amp;quot;x&amp;quot;: 89, &amp;quot;y&amp;quot;: 97, &amp;quot;z&amp;quot;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</description>
+Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Note  All inputs will be in lowercase. The order of your output does not matter.
+Solution class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: List[List[str]] &amp;quot;&amp;quot;&amp;quot; primeNums = { &amp;quot;a&amp;quot;: 2, &amp;quot;b&amp;quot;: 3, &amp;quot;c&amp;quot;: 5, &amp;quot;d&amp;quot;: 7, &amp;quot;e&amp;quot;: 11, &amp;quot;f&amp;quot;: 13, &amp;quot;g&amp;quot;: 17, &amp;quot;h&amp;quot;: 19, &amp;quot;i&amp;quot;: 23, &amp;quot;j&amp;quot;: 29, &amp;quot;k&amp;quot;: 31, &amp;quot;m&amp;quot;: 37, &amp;quot;l&amp;quot;: 41, &amp;quot;n&amp;quot;: 43, &amp;quot;o&amp;quot;: 47, &amp;quot;p&amp;quot;: 53, &amp;quot;q&amp;quot;: 59, &amp;quot;r&amp;quot;: 61, &amp;quot;s&amp;quot;: 67, &amp;quot;t&amp;quot;: 71, &amp;quot;u&amp;quot;: 73, &amp;quot;v&amp;quot;: 79, &amp;quot;w&amp;quot;: 83, &amp;quot;x&amp;quot;: 89, &amp;quot;y&amp;quot;: 97, &amp;quot;z&amp;quot;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</description>
     </item>
     
     <item>
@@ -1533,8 +1463,8 @@ Solution: /** * Definition for singly-linked list. * class ListNode { * int val;
       
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle/</guid>
       <description>Given a linked list, determine if it has a cycle in it.
-Follow up: Can you solve it without using extra space? Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
+Follow-up Can you solve it without using extra space?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
     </item>
     
     <item>
@@ -1555,8 +1485,7 @@ You may assume that the version strings are non-empty and contain only digits an
       <guid>http://www.hashnopolis.com/post/2018/10/word-search/</guid>
       <description>Given a 2D board and a word, find if the word exists in the grid.
 The word can be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
-Example:
-board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;], [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;] ] Given word = &amp;quot;ABCCED&amp;quot;, return true. Given word = &amp;quot;SEE&amp;quot;, return true. Given word = &amp;quot;ABCB&amp;quot;, return false.</description>
+Example board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;], [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;] ] Given word = &amp;quot;ABCCED&amp;quot;, return true. Given word = &amp;quot;SEE&amp;quot;, return true. Given word = &amp;quot;ABCB&amp;quot;, return false.</description>
     </item>
     
     <item>
@@ -1568,7 +1497,7 @@ board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F
       <description>Write a program to find the node at which the intersection of two singly linked lists begins.
 For example, the following two linked lists:
 A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
-Notes: If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</description>
+Note If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</description>
     </item>
     
     <item>
@@ -1577,8 +1506,8 @@ Notes: If the two linked lists have no intersection at all, return null. The lin
       <pubDate>Sun, 14 Oct 2018 23:55:15 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/10/min-stack/</guid>
-      <description>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) &amp;ndash; Push element x onto stack. - pop() &amp;ndash; Removes the element on top of the stack. - top() &amp;ndash; Get the top element. - getMin() &amp;ndash; Retrieve the minimum element in the stack. Example:
-MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; Returns -3. minStack.pop(); minStack.top(); --&amp;gt; Returns 0. minStack.</description>
+      <description>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) &amp;ndash; Push element x onto stack. - pop() &amp;ndash; Removes the element on top of the stack. - top() &amp;ndash; Get the top element. - getMin() &amp;ndash; Retrieve the minimum element in the stack.
+Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; Returns -3. minStack.pop(); minStack.top(); --&amp;gt; Returns 0.</description>
     </item>
     
     <item>
@@ -1588,8 +1517,8 @@ MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStac
       
       <guid>http://www.hashnopolis.com/post/2018/10/word-break/</guid>
       <description>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
-Note: - The same word in the dictionary may be reused multiple times in the segmentation. - You may assume the dictionary does not contain duplicate words. Example 1:
-Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;.</description>
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.
+Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;.</description>
     </item>
     
     <item>
@@ -1599,10 +1528,7 @@ Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &
       
       <guid>http://www.hashnopolis.com/post/2018/10/number-of-islands/</guid>
       <description>Given a 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
-Example 1:
-Input: 11110 11010 11000 00000 Output: 1  Example 2:
-Input: 11000 11000 00100 00011 Output: 3  Solution:
-class Solution: def numIslands(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &amp;quot;1&amp;quot;: count += 1 self.</description>
+Example 1 Input: 11110 11010 11000 00000 Output: 1  Example 2 Input: 11000 11000 00100 00011 Output: 3  Solution class Solution: def numIslands(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &amp;quot;1&amp;quot;: count += 1 self.</description>
     </item>
     
     <item>
@@ -1613,9 +1539,7 @@ class Solution: def numIslands(self, grid): &amp;quot;&amp;quot;&amp;quot; :type
       <guid>http://www.hashnopolis.com/post/2018/10/binary-tree-maximum-path-sum/</guid>
       <description>Given a non-empty binary tree, find the maximum path sum.
 For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
-Example 1:
-Input: [1,2,3] 1 / \ 2 3 Output: 6  Example 2:
-Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42  Solution:</description>
+Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6  Example 2 Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42  Solution # Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -1625,10 +1549,7 @@ Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42  Solution:</de
       
       <guid>http://www.hashnopolis.com/post/2018/10/subsets-ii/</guid>
       <description>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note: The solution set must not contain duplicate subsets.
-Example:
-Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution:
-# Time: o(2^n) # Space: o(n) class Solution(object): def subsetsWithDup(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; # Edge case if nums == None or len(nums) == 0: return [] # Sort the given numbers nums.</description>
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution # Time: o(2^n) # Space: o(n) class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
     </item>
     
     <item>
@@ -1638,8 +1559,8 @@ Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution:
       
       <guid>http://www.hashnopolis.com/post/2018/10/merge-sorted-array/</guid>
       <description>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note: The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. Example:
-Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3</description>
+Note The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.
+Example Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3</description>
     </item>
     
     <item>
@@ -1650,9 +1571,7 @@ Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3</description>
       <guid>http://www.hashnopolis.com/post/2018/10/decode-ways/</guid>
       <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
 &amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
-Example 1:
-Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2:
-Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
+Example 1 Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2 Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
     </item>
     
     <item>
@@ -1709,10 +1628,8 @@ Credits: Special thanks to @jianchao.li.fighter for adding this problem and crea
       <pubDate>Wed, 19 Sep 2018 10:38:38 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list-ii/</guid>
-      <description>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
-Example 1:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 Output: 1-&amp;gt;2-&amp;gt;5  Example 2:
-Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 Output: 2-&amp;gt;3  </description>
+      <description> Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
+Example 1 Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 Output: 1-&amp;gt;2-&amp;gt;5  Example 2 Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 Output: 2-&amp;gt;3  </description>
     </item>
     
     <item>
@@ -1722,9 +1639,7 @@ Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 Output: 2-&amp;gt;3  </descript
       
       <guid>http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/</guid>
       <description>Remove all elements from a linked list of integers that have value val.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5  Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type val: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; pre = ListNode(0) pre.next = head pos = pre while pos.next !</description>
+Example Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5  Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type val: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; pre = ListNode(0) pre.next = head pos = pre while pos.</description>
     </item>
     
     <item>
@@ -1734,9 +1649,7 @@ Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Ou
       
       <guid>http://www.hashnopolis.com/post/2018/09/unique-binary-search-trees/</guid>
       <description>Given n, how many structurally unique BST&amp;rsquo;s (binary search trees) that store values 1 &amp;hellip; n?
-Example:
-Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  Exaplanation:
-n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0);  Solution:</description>
+Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  Exaplanation n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0);  Solution class Solution: def numTrees(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; res = [1] for i in range(1, n+1): for j in range(i): res.</description>
     </item>
     
     <item>
@@ -1748,8 +1661,7 @@ n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); ro
       <description>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
 For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
  1 / \ 2 2 / \ / \ 3 4 4 3  But the following [1,2,2,null,3,null,3] is not:
- 1 / \ 2 2 \ \ 3 3  Note: Bonus points if you could solve it both recursively and iteratively.
-Solution:</description>
+ 1 / \ 2 2 \ \ 3 3  Note Bonus points if you could solve it both recursively and iteratively.</description>
     </item>
     
     <item>
@@ -1774,8 +1686,7 @@ Solution class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&a
 Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
 Example 1:
 Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true  Example 2:
-Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:
-Input: 1 1 / \ / \ 2 1 1 2 [1,2,1], [1,1,2] Output: false  Solution</description>
+Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:</description>
     </item>
     
     <item>
@@ -1787,8 +1698,7 @@ Input: 1 1 / \ / \ 2 1 1 2 [1,2,1], [1,1,2] Output: false  Solution</description
       <description>Given an array nums and a value val, remove all instances of that value in-place and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
 The order of elements can be changed. It doesn&amp;rsquo;t matter what you leave beyond the new length.
-Example 1:
-Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with the first two elements of nums being 2.</description>
+Example 1 Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with the first two elements of nums being 2.</description>
     </item>
     
     <item>
@@ -1798,10 +1708,7 @@ Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with th
       
       <guid>http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list/</guid>
       <description>Given a sorted linked list, delete all duplicates such that each element appear only once.
-Example 1:
-Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2  Example 2:
-Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3  Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr = head while curr != None and curr.</description>
+Example 1 Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2  Example 2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr = head while curr != None and curr.</description>
     </item>
     
     <item>
@@ -1810,12 +1717,8 @@ Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3  
       <pubDate>Sat, 15 Sep 2018 12:56:41 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/09/power-of-two/</guid>
-      <description>Given an integer, write a function to determine if it is a power of two.
-Example 1:
-Input: 1 Output: true Explanation: 2**0 = 1  Example 2:
-Input: 16 Output: true Explanation: 2**4 = 16  Example 3:
-Input: 218 Output: false  Solution:
-class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: bool &amp;quot;&amp;quot;&amp;quot; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False  </description>
+      <description> Given an integer, write a function to determine if it is a power of two.
+Example 1 Input: 1 Output: true Explanation: 2**0 = 1  Example 2 Input: 16 Output: true Explanation: 2**4 = 16  Example 3 Input: 218 Output: false  Solution class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: bool &amp;quot;&amp;quot;&amp;quot; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False  </description>
     </item>
     
     <item>
@@ -1827,8 +1730,7 @@ class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type 
       <description>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
 The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
 You may assume the integer does not contain any leading zero, except the number 0 itself.
-Example 1:
-Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</description>
+Example 1 Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</description>
     </item>
     
     <item>
@@ -1838,9 +1740,9 @@ Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123
       
       <guid>http://www.hashnopolis.com/post/2018/09/swap-nodes-in-pairs/</guid>
       <description>Given a linked list, swap every two adjacent nodes and return its head.
-Example:
-Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note: - Your algorithm should use only constant extra space. - You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed. Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; # https://www.</description>
+Example Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note  Your algorithm should use only constant extra space. You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.
+Solution ```python
+Definition for singly-linked list. class ListNode(object): def init(self, x): self.val = x self.next = None  class Solution(object): def swapPairs(self, head): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type head: ListNode :rtype: ListNode &amp;ldquo;&amp;rdquo;&amp;rdquo; # https://www.</description>
     </item>
     
     <item>
@@ -1865,7 +1767,7 @@ Above is a 7 x 3 grid. How many possible unique paths are there?</description>
 Example 1:
 Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true  Example 2:
 Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false  Note: You may assume the string contains only lowercase alphabets.
-Follow up: What if the inputs contain unicode characters? How would you adapt your solution to such case?</description>
+Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?</description>
     </item>
     
     <item>
@@ -1876,10 +1778,7 @@ Follow up: What if the inputs contain unicode characters? How would you adapt yo
       <guid>http://www.hashnopolis.com/post/2018/09/ugly-number/</guid>
       <description>Write a program to check whether a given number is an ugly number.
 Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-Example 1:
-Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2:
-Input: 8 Output: true Explanation: 8 = 2 × 2 × 2  Example 3:
-Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7.</description>
+Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2 Input: 8 Output: true Explanation: 8 = 2 × 2 × 2  Example 3 Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7.</description>
     </item>
     
     <item>
@@ -1889,10 +1788,7 @@ Input: 14 Output: false Explanation: 14 is not ugly since it includes another pr
       
       <guid>http://www.hashnopolis.com/post/2018/09/subsets/</guid>
       <description>Given a set of distinct integers, nums, return all possible subsets (the power set).
-Note: The solution set must not contain duplicate subsets.
-Example:
-Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]  Solution:
-# Time: o(2^n) # Space: o(n) class Solution: def subsets(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]  Solution # Time: o(2^n) # Space: o(n) class Solution: def subsets(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
     </item>
     
     <item>
@@ -1912,8 +1808,8 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written a
       
       <guid>http://www.hashnopolis.com/post/2018/09/single-number-iii/</guid>
       <description>Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
-For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5]. Note:
- The order of the result is not important. So in the above example, [5, 3] is also correct. Your algorithm should run in linear runtime complexity.</description>
+For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].
+Note:  The order of the result is not important. So in the above example, [5, 3] is also correct. Your algorithm should run in linear runtime complexity.</description>
     </item>
     
     <item>
@@ -1923,12 +1819,8 @@ For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5]. Note:
       
       <guid>http://www.hashnopolis.com/post/2018/09/single-number-ii/</guid>
       <description>Given a non-empty array of integers, every element appears three times except for one, which appears exactly once. Find that single one.
-Note:
-Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
-Example 1:
-Input: [2,2,3,2] Output: 3  Example 2:
-Input: [0,1,0,1,0,1,99] Output: 99  Solution:
-class Solution: def singleNumber(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.csdn.net/karen0310/article/details/78226261 ones, twos = 0, 0 for _, num in enumerate(nums): ones = (ones ^ num) &amp;amp; ~twos twos = (twos ^ num) &amp;amp; ~ones print(bin(num), &amp;quot;ones: &amp;quot;, bin(ones), &amp;quot;twos: &amp;quot;, bin(twos)) return ones  </description>
+Note Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+Example 1 Input: [2,2,3,2] Output: 3  Example 2 Input: [0,1,0,1,0,1,99] Output: 99  Solution class Solution: def singleNumber(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.</description>
     </item>
     
     <item>
@@ -1953,8 +1845,7 @@ Input: [2,2,1] Output: 1 Example 2:  Input: [4,1,2,1,2] Output: 4  Solution:
 Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index.
 The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
 You may imagine that nums[-1] = nums[n] = -∞.
-Example 1:
-Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</description>
+Example 1 Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</description>
     </item>
     
     <item>
@@ -1963,14 +1854,11 @@ Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your func
       <pubDate>Fri, 14 Sep 2018 11:50:46 +0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/09/find-minimum-in-rotated-sorted-array/</guid>
-      <description>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+      <description> Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
 Find the minimum element.
 You may assume no duplicate exists in the array.
-Example 1:
-Input: [3,4,5,1,2] Output: 1  Example 2:
-Input: [4,5,6,7,0,1,2] Output: 0  Solution:
-class Solution: def findMin(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; if len(nums) == 1: return nums[0] if len(nums) == 2: return min(nums[0], nums[1]) if nums[0] &amp;lt; nums[len(nums)-1]: return nums[0] if nums[len(nums)-2] &amp;gt; nums[len(nums)-1]: return nums[len(nums)-1] for i in range(1, len(nums)-1): if nums[i] &amp;lt; nums[i-1] and nums[i] &amp;lt; nums[i+1]: return nums[i] def bsFindMin(self, nums): l, r = 0, len(nums) - 1 while l &amp;lt; r: m = (l + r) // 2 if nums[m] &amp;gt; nums[m - 1] and nums[m] &amp;gt; nums[m + 1]: return nums[m + 1] if nums[m] &amp;lt; nums[m - 1] and nums[m] &amp;lt; nums[m + 1]: return nums[m] if nums[m] &amp;gt;= nums[r]: l = m else: r = m return nums[0]  </description>
+Example 1 Input: [3,4,5,1,2] Output: 1  Example 2 Input: [4,5,6,7,0,1,2] Output: 0  Solution class Solution: def findMin(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; if len(nums) == 1: return nums[0] if len(nums) == 2: return min(nums[0], nums[1]) if nums[0] &amp;lt; nums[len(nums)-1]: return nums[0] if nums[len(nums)-2] &amp;gt; nums[len(nums)-1]: return nums[len(nums)-1] for i in range(1, len(nums)-1): if nums[i] &amp;lt; nums[i-1] and nums[i] &amp;lt; nums[i+1]: return nums[i] def bsFindMin(self, nums): l, r = 0, len(nums) - 1 while l &amp;lt; r: m = (l + r) // 2 if nums[m] &amp;gt; nums[m - 1] and nums[m] &amp;gt; nums[m + 1]: return nums[m + 1] if nums[m] &amp;lt; nums[m - 1] and nums[m] &amp;lt; nums[m + 1]: return nums[m] if nums[m] &amp;gt;= nums[r]: l = m else: r = m return nums[0]  </description>
     </item>
     
     <item>
@@ -1981,8 +1869,7 @@ class Solution: def findMin(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nu
       <guid>http://www.hashnopolis.com/post/2018/09/delete-node-in-a-linked-list/</guid>
       <description>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
 Supposed the linked list is 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 and you are given the third node with value 3, the linked list should become 1 -&amp;gt; 2 -&amp;gt; 4 after calling your function.
-Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
     </item>
     
     <item>
@@ -1993,8 +1880,7 @@ Solution:
       <guid>http://www.hashnopolis.com/post/2018/09/convert-sorted-array-to-binary-search-tree/</guid>
       <description>Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
 For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
-Example:
-Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5  Solution:</description>
+Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5  Solution # Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -2004,9 +1890,7 @@ Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null
       
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-right-side-view/</guid>
       <description>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
-Example:
-Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &amp;lt;--- / \ 2 3 &amp;lt;--- \ \ 5 4 &amp;lt;---  Solution:
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
+Example Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &amp;lt;--- / \ 2 3 &amp;lt;--- \ \ 5 4 &amp;lt;---  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
     </item>
     
     <item>
@@ -2017,9 +1901,7 @@ Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &amp;lt;--- / \ 2 
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-preorder-traversal/</guid>
       <description>Given a binary tree, return the preorder traversal of its nodes&amp;rsquo; values.
 Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow up: Recursive solution is trivial, could you do it iteratively?
-Solution:
-# Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; if root is None: return [] return [root.</description>
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; if root is None: return [] return [root.</description>
     </item>
     
     <item>
@@ -2029,11 +1911,8 @@ Solution:
       
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-postorder-traversal/</guid>
       <description>Given a binary tree, return the postorder traversal of its nodes&amp;rsquo; values.
-Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1]  Follow up:
-Recursive solution is trivial, could you do it iteratively?
-Solution:
-Recursive👇
+Example Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1]  Follow-up Recursive solution is trivial, could you do it iteratively?
+Solution Recursive👇
 # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def postorderTraversal(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; def traverse(node): if node == None: return [] return traverse(node.</description>
     </item>
     
@@ -2045,10 +1924,8 @@ Recursive👇
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-paths/</guid>
       <description>Given a binary tree, return all root-to-leaf paths.
 Note: A leaf is a node with no children.
-Example:
-Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;]  Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3
-Solution:
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] def traverse(root, path): if root == None: return path += str(root.</description>
+Example Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;]  Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] def traverse(root, path): if root == None: return path += str(root.</description>
     </item>
     
     <item>
@@ -2058,10 +1935,8 @@ Solution:
       
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal/</guid>
       <description>Given a binary tree, return the level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level).
-For example:
-Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7  return its level order traversal as:
-[ [3], [9,20], [15,7] ]  Solution:
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
+Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7  return its level order traversal as:
+[ [3], [9,20], [15,7] ]  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
     </item>
     
     <item>
@@ -2073,8 +1948,7 @@ Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7  return its lev
       <description>Given a binary tree, return the bottom-up level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level from leaf to root).
 For example: Given binary tree [3,9,20,null,null,15,7],
  3 / \ 9 20 / \ 15 7  return its bottom-up level order traversal as:
-[ [15,7], [9,20], [3] ]  Solution:
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
+[ [15,7], [9,20], [3] ]  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
     </item>
     
     <item>
@@ -2084,10 +1958,8 @@ For example: Given binary tree [3,9,20,null,null,15,7],
       
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-inorder-traversal/</guid>
       <description>Given a binary tree, return the inorder traversal of its nodes&amp;rsquo; values.
-Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Follow up: the Recursive solution is trivial, could you do it iteratively?
-Solution
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; &amp;quot;&amp;quot;&amp;quot;Check root == None to reduce time on checking&amp;quot;&amp;quot;&amp;quot; if root == None: return [] stack = [] result = [] current = root while (current!</description>
+Example: Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Follow-up the Recursive solution is trivial, could you do it iteratively?
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; &amp;quot;&amp;quot;&amp;quot;Check root == None to reduce time on checking&amp;quot;&amp;quot;&amp;quot; if root == None: return [] stack = [] result = [] current = root while (current!</description>
     </item>
     
     <item>
@@ -2105,10 +1977,10 @@ Solution
       <pubDate>Wed, 12 Sep 2018 23:55:39 +0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/09/duplicate-emails/</guid>
-      <description>Write a SQL query to find all duplicate emails in a table named Person.
+      <description> Write a SQL query to find all duplicate emails in a table named Person.
 +----+---------+ | Id | Email | +----+---------+ | 1 | a@b.com | | 2 | c@d.com | | 3 | a@b.com | +----+---------+  For example, your query should return the following for the above table:
-+---------+ | Email | +---------+ | a@b.com | +---------+  Note: All emails are in lowercase. Solution:
-# Write your MySQL query statement below SELECT email FROM Person WHERE email IN ( SELECT email FROM Person GROUP BY email HAVING COUNT(*) &amp;gt; 1 ) GROUP BY email  </description>
++---------+ | Email | +---------+ | a@b.com | +---------+  Note: All emails are in lowercase.
+Solution # Write your MySQL query statement below SELECT email FROM Person WHERE email IN ( SELECT email FROM Person GROUP BY email HAVING COUNT(*) &amp;gt; 1 ) GROUP BY email  </description>
     </item>
     
     <item>
@@ -2121,7 +1993,7 @@ Solution
 Note:
 All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
 Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
-Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution:</description>
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution: def combinationSum3(self, k, n): &amp;quot;&amp;quot;&amp;quot; :type k: int :type n: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; self.</description>
     </item>
     
     <item>
@@ -2132,9 +2004,8 @@ Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution:</description>
       <guid>http://www.hashnopolis.com/post/2018/09/combination-sum/</guid>
       <description>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 The same repeated number may be chosen from candidates unlimited number of times.
-Note:
-All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations. Example 1:
-Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2:</description>
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ]  Solution class Solution: def combinationSum(self, candidates, target): &amp;quot;&amp;quot;&amp;quot; :type candidates: List[int] :type target: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] def add(candidates, target, tempAns, i, sum): # clone a copy of tempAns ans = list(tempAns) # print(&amp;quot;res:&amp;quot;, res, &amp;quot;; ans:&amp;quot;, ans, &amp;quot;; i:&amp;quot;, i, &amp;quot;; sum&amp;quot;, sum) if(sum&amp;gt;target): return if(sum==target): res.</description>
     </item>
     
     <item>
@@ -2144,9 +2015,7 @@ Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  
       
       <guid>http://www.hashnopolis.com/post/2018/09/combinations/</guid>
       <description>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example:
-Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution:
-class Solution: def combine(self, n, k): &amp;quot;&amp;quot;&amp;quot; :type n: int :type k: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] nums = list(range(1, n+1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans.</description>
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution class Solution: def combine(self, n, k): &amp;quot;&amp;quot;&amp;quot; :type n: int :type k: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] nums = list(range(1, n+1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans.</description>
     </item>
     
     <item>
@@ -2166,13 +2035,12 @@ class Solution: def combine(self, n, k): &amp;quot;&amp;quot;&amp;quot; :type n:
       <pubDate>Mon, 10 Sep 2018 21:39:18 +0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/09/contains-duplicate/</guid>
-      <description>Given an array of integers, find if the array contains any duplicates.
+      <description> Given an array of integers, find if the array contains any duplicates.
 Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
 Example 1:
 Input: [1,2,3,1] Output: true  Example 2:
 Input: [1,2,3,4] Output: false  Example 3:
-Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution:
-class Solution: def containsDuplicate(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: bool &amp;quot;&amp;quot;&amp;quot; sortedNums = sorted(nums) for i in range(1, len(nums)): if sortedNums[i] == sortedNums[i-1]: return True return False  </description>
+Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution class Solution: def containsDuplicate(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: bool &amp;quot;&amp;quot;&amp;quot; sortedNums = sorted(nums) for i in range(1, len(nums)): if sortedNums[i] == sortedNums[i-1]: return True return False  </description>
     </item>
     
     <item>
@@ -2183,9 +2051,7 @@ class Solution: def containsDuplicate(self, nums): &amp;quot;&amp;quot;&amp;quot
       <guid>http://www.hashnopolis.com/post/2018/09/climbing-stairs/</guid>
       <description>You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note: Given n will be a positive integer.
-Example 1:
-Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps  Example 2:</description>
+Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</description>
     </item>
     
     <item>
@@ -2196,9 +2062,7 @@ Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 ste
       <guid>http://www.hashnopolis.com/post/2018/09/binary-search-tree-iterator/</guid>
       <description>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
 Calling next() will return the next smallest number in the BST.
-Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
-Solution:
-# Definition for a binary tree node # class TreeNode(object): # def __init__(self, x): # self.</description>
+Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree. Solution # Definition for a binary tree node # class TreeNode(object): # def __init__(self, x): # self.</description>
     </item>
     
     <item>
@@ -2209,7 +2073,7 @@ Solution:
       <guid>http://www.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</guid>
       <description>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
 The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
-Note: - Your returned answers (both index1 and index2) are not zero-based. - You may assume that each input would have exactly one solution and you may not use the same element twice.</description>
+Note  Your returned answers (both index1 and index2) are not zero-based. You may assume that each input would have exactly one solution and you may not use the same element twice.</description>
     </item>
     
     <item>
@@ -2232,8 +2096,7 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
       <description>Say you have an array for which the ith element is the price of a given stock on day i.
 If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
 Note that you cannot sell a stock before you buy one.
-Example 1:
-Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</description>
+Example 1 Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</description>
     </item>
     
     <item>
@@ -2244,10 +2107,7 @@ Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on
       <guid>http://www.hashnopolis.com/post/2018/09/add-binary/</guid>
       <description>Given two binary strings, return their sum (also a binary string).
 The input strings are both non-empty and contains only characters 1 or 0.
-Example 1:
-Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot;  Example 2:
-Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  Solution:
-class Solution: def addBinary(self, a, b): &amp;quot;&amp;quot;&amp;quot; :type a: str :type b: str :rtype: str &amp;quot;&amp;quot;&amp;quot; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &amp;gt;= 0 or j &amp;gt;= 0: total = carry if i &amp;gt;= 0: total += int(a[i]) i -= 1 if j &amp;gt;= 0: total += int(b[j]) j -= 1 result.</description>
+Example 1 Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot;  Example 2 Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  Solution class Solution: def addBinary(self, a, b): &amp;quot;&amp;quot;&amp;quot; :type a: str :type b: str :rtype: str &amp;quot;&amp;quot;&amp;quot; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &amp;gt;= 0 or j &amp;gt;= 0: total = carry if i &amp;gt;= 0: total += int(a[i]) i -= 1 if j &amp;gt;= 0: total += int(b[j]) j -= 1 result.</description>
     </item>
     
     <item>
@@ -2258,9 +2118,7 @@ class Solution: def addBinary(self, a, b): &amp;quot;&amp;quot;&amp;quot; :type 
       <guid>http://www.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/</guid>
       <description>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
-Example:
-Input: &amp;quot;23&amp;quot; Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].  Note:
-Although the above answer is in lexicographical order, your answer could be in any order you want.</description>
+Example Input: &amp;quot;23&amp;quot; Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].  Note Although the above answer is in lexicographical order, your answer could be in any order you want.</description>
     </item>
     
     <item>
@@ -2269,9 +2127,8 @@ Although the above answer is in lexicographical order, your answer could be in a
       <pubDate>Fri, 31 Aug 2018 23:30:43 +0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/08/18.-4sum/</guid>
-      <description>Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
-Note:
-The solution set must not contain duplicate quadruplets.
+      <description> Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
+Note The solution set must not contain duplicate quadruplets.
 Example:
 Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ]  </description>
     </item>
@@ -2282,11 +2139,9 @@ Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-
       <pubDate>Wed, 29 Aug 2018 00:44:49 +0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/08/two-sum/</guid>
-      <description>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+      <description> Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example:
-Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution:
-# time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </description>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </description>
     </item>
     
     <item>
@@ -2319,8 +2174,7 @@ Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to th
       <description>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 Note:
 The solution set must not contain duplicate triplets.
-Example:
-Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution:</description>
+Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution # time: o(n^2) # space: o(1) class Solution: def threeSum(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; nums.</description>
     </item>
     
     <item>
@@ -2341,10 +2195,7 @@ Example: Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Ou
       <guid>http://www.hashnopolis.com/post/2018/08/57.-insert-interval/</guid>
       <description>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
 You may assume that the intervals were initially sorted according to their start times.
-Example 1:
-Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2:
-Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</description>
+Example 1 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</description>
     </item>
     
     <item>
@@ -2354,10 +2205,7 @@ Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Outpu
       
       <guid>http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/</guid>
       <description>Given a collection of intervals, merge all overlapping intervals.
-Example 1:
-Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
-Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: List[Interval] &amp;quot;&amp;quot;&amp;quot; intervals.</description>
+Example 1 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2 Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: List[Interval] &amp;quot;&amp;quot;&amp;quot; intervals.</description>
     </item>
     
     <item>
@@ -2368,8 +2216,7 @@ Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are 
       <guid>http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/</guid>
       <description>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</description>
+Example 1 Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</description>
     </item>
     
     <item>
@@ -2380,8 +2227,7 @@ Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the fir
       <guid>http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/</guid>
       <description>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-Example 1:
-Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</description>
+Example 1 Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</description>
     </item>
     
     <item>
@@ -2404,13 +2250,9 @@ Example 2: nums1 = [1, 2] nums2 = [3, 4]  The median is (2 + 3)/2 = 2.</descript
       
       <guid>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</guid>
       <description>Given a linked list, remove the n-th node from the end of list and return its head.
-Example:
-Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note:
-Given n will always be valid.
-Follow up:
-Could you do this in one pass?
-Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
+Example Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note Given n will always be valid.
+Follow-up Could you do this in one pass?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
     </item>
     
     <item>
@@ -2424,7 +2266,7 @@ Solution:
 You are given a target value to search. If found in the array return true, otherwise return false.
 Example 1:
 Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</description>
+Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</description>
     </item>
     
     <item>

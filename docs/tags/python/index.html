@@ -207,10 +207,8 @@ For example, given n = 3, a solution set is:
 
       <p>Write a function to find the longest common prefix string amongst an array of strings.
 If there is no common prefix, return an empty string “”.
-Example 1:
-Input: [&#34;flower&#34;,&#34;flow&#34;,&#34;flight&#34;] Output: &#34;fl&#34;  Example 2:
-Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explanation: There is no common prefix among the input strings.  Note: All given inputs are in lowercase letters a-z. Note:
-# Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: str &#34;&#34;&#34; if not strs or len(strs) == 0: return &#34;&#34; res = strs[0] for s in strs: # string.</p>
+Example 1 Input: [&#34;flower&#34;,&#34;flow&#34;,&#34;flight&#34;] Output: &#34;fl&#34;  Example 2 Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explanation: There is no common prefix among the input strings.  Note All given inputs are in lowercase letters a-z.
+Note # Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: str &#34;&#34;&#34; if not strs or len(strs) == 0: return &#34;&#34; res = strs[0] for s in strs: # string.</p>
 
       <p class="meta">
         
@@ -236,9 +234,8 @@ Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explan
       <h2><a href="http://www.hashnopolis.com/post/2018/12/random-pick-index/">Random Pick Index</a></h2>
 
       <p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.
-Note: The array size can be very large. Solution that uses too much extra space will not pass the judge.
-Example:
-int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</p>
+Note The array size can be very large. Solution that uses too much extra space will not pass the judge.
+Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</p>
 
       <p class="meta">
         
@@ -291,9 +288,7 @@ Now you want to find out who the celebrity is or verify that there is not one. T
 
       <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
-Example:
-Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution:
-# Time: o(n) class Solution(object): def longestConsecutive(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</p>
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution(object): def longestConsecutive(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</p>
 
       <p class="meta">
         
@@ -344,11 +339,7 @@ Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive ele
       <h2><a href="http://www.hashnopolis.com/post/2018/11/interger-to-english-words/">Interger to English Words</a></h2>
 
       <p>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
-Example 1:
-Input: 123 Output: &#34;One Hundred Twenty Three&#34;  Example 2:
-Input: 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34;  Example 3:
-Input: 1234567 Output: &#34;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&#34;  Example 4:
-Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&#34;  Solution:</p>
+Example 1 Input: 123 Output: &#34;One Hundred Twenty Three&#34;  Example 2 Input: 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34;  Example 3 Input: 1234567 Output: &#34;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&#34;  Example 4 Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&#34;  Solution class Solution: def __init__(self): self.</p>
 
       <p class="meta">
         
@@ -373,11 +364,10 @@ Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five 
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/">Increasing Triplet Subsequence</a></h2>
 
-      <p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
+      <p> Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
-Return true if there exists i, j, k such that arr[i] &lt; arr[j] &lt; arr[k] given 0 ≤ i &lt; j &lt; k ≤ n-1 else return false. Note: Your algorithm should run in O(n) time complexity and O(1) space complexity.
-Example 1:
-Input: [1,2,3,4,5] Output: true  Example 2:</p>
+Return true if there exists i, j, k such that arr[i] &lt; arr[j] &lt; arr[k] given 0 ≤ i &lt; j &lt; k ≤ n-1 else return false.
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution class Solution: def increasingTriplet(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: bool &#34;&#34;&#34; if not nums or len(nums) &lt; 3: return False min_1, min_2 = max(nums), max(nums) # Not asking to find 3 consecutive increasing numbers for n in nums: if n &gt; min_2: return True elif n &lt; min_1: min_1 = n elif n &gt; min_1 and n &lt; min_2: min_2 = n return False  </p>
 
       <p class="meta">
         
@@ -431,8 +421,7 @@ In a UNIX-style file system, a period (‘.’) refers to the current directory,
 
       <p>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
-Note: You are not suppose to use the library’s sort function for this problem. Example:
-Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow up: 1.</p>
+Note You are not suppose to use the library’s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort.</p>
 
       <p class="meta">
         

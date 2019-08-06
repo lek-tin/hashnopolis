@@ -180,10 +180,7 @@
 
       <p>Given two binary strings, return their sum (also a binary string).
 The input strings are both non-empty and contains only characters 1 or 0.
-Example 1:
-Input: a = &#34;11&#34;, b = &#34;1&#34; Output: &#34;100&#34;  Example 2:
-Input: a = &#34;1010&#34;, b = &#34;1011&#34; Output: &#34;10101&#34;  Solution:
-class Solution: def addBinary(self, a, b): &#34;&#34;&#34; :type a: str :type b: str :rtype: str &#34;&#34;&#34; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &gt;= 0 or j &gt;= 0: total = carry if i &gt;= 0: total &#43;= int(a[i]) i -= 1 if j &gt;= 0: total &#43;= int(b[j]) j -= 1 result.</p>
+Example 1 Input: a = &#34;11&#34;, b = &#34;1&#34; Output: &#34;100&#34;  Example 2 Input: a = &#34;1010&#34;, b = &#34;1011&#34; Output: &#34;10101&#34;  Solution class Solution: def addBinary(self, a, b): &#34;&#34;&#34; :type a: str :type b: str :rtype: str &#34;&#34;&#34; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &gt;= 0 or j &gt;= 0: total = carry if i &gt;= 0: total &#43;= int(a[i]) i -= 1 if j &gt;= 0: total &#43;= int(b[j]) j -= 1 result.</p>
 
       <p class="meta">
         
@@ -210,9 +207,7 @@ class Solution: def addBinary(self, a, b): &#34;&#34;&#34; :type a: str :type b:
 
       <p>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
-Example:
-Input: &#34;23&#34; Output: [&#34;ad&#34;, &#34;ae&#34;, &#34;af&#34;, &#34;bd&#34;, &#34;be&#34;, &#34;bf&#34;, &#34;cd&#34;, &#34;ce&#34;, &#34;cf&#34;].  Note:
-Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
+Example Input: &#34;23&#34; Output: [&#34;ad&#34;, &#34;ae&#34;, &#34;af&#34;, &#34;bd&#34;, &#34;be&#34;, &#34;bf&#34;, &#34;cd&#34;, &#34;ce&#34;, &#34;cf&#34;].  Note Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
 
       <p class="meta">
         
@@ -237,9 +232,8 @@ Although the above answer is in lexicographical order, your answer could be in a
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/08/18.-4sum/">18. 4Sum</a></h2>
 
-      <p>Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a &#43; b &#43; c &#43; d = target? Find all unique quadruplets in the array which gives the sum of target.
-Note:
-The solution set must not contain duplicate quadruplets.
+      <p> Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a &#43; b &#43; c &#43; d = target? Find all unique quadruplets in the array which gives the sum of target.
+Note The solution set must not contain duplicate quadruplets.
 Example:
 Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ]  </p>
 
@@ -266,11 +260,9 @@ Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/08/two-sum/">Two Sum</a></h2>
 
-      <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+      <p> Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example:
-Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution:
-# time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </p>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </p>
 
       <p class="meta">
         
@@ -351,8 +343,7 @@ Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to th
       <p>Given an array nums of n integers, are there elements a, b, c in nums such that a &#43; b &#43; c = 0? Find all unique triplets in the array which gives the sum of zero.
 Note:
 The solution set must not contain duplicate triplets.
-Example:
-Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution:</p>
+Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution # time: o(n^2) # space: o(1) class Solution: def threeSum(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: List[List[int]] &#34;&#34;&#34; nums.</p>
 
       <p class="meta">
         
@@ -405,10 +396,7 @@ Example: Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-
 
       <p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
 You may assume that the intervals were initially sorted according to their start times.
-Example 1:
-Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2:
-Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</p>
+Example 1 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</p>
 
       <p class="meta">
         
@@ -434,10 +422,7 @@ Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Outpu
       <h2><a href="http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/">56. Merge Intervals</a></h2>
 
       <p>Given a collection of intervals, merge all overlapping intervals.
-Example 1:
-Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2:
-Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution:
-# Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: List[Interval] &#34;&#34;&#34; intervals.</p>
+Example 1 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2 Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: List[Interval] &#34;&#34;&#34; intervals.</p>
 
       <p class="meta">
         

@@ -30,8 +30,7 @@ If there are multiple suitable places for insertion, you may choose any place to
       <guid>http://www.hashnopolis.com/post/2019/01/add-two-numbers/</guid>
       <description>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-Example:
-Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
+Example Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
     </item>
     
     <item>
@@ -42,8 +41,7 @@ Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp
       <guid>http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/</guid>
       <description>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
 Return a deep copy of the list.
-Solution:
-# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: RandomListNode :rtype: RandomListNode &amp;quot;&amp;quot;&amp;quot; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</description>
+Solution # Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: RandomListNode :rtype: RandomListNode &amp;quot;&amp;quot;&amp;quot; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</description>
     </item>
     
     <item>
@@ -54,7 +52,7 @@ Solution:
       <guid>http://www.hashnopolis.com/post/2018/11/reverse-nodes-in-k-group/</guid>
       <description>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
 k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
-Example: Given this linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
+Example Given this linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
 For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5</description>
     </item>
     
@@ -97,8 +95,8 @@ Solution: /** * Definition for singly-linked list. * class ListNode { * int val;
       
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle/</guid>
       <description>Given a linked list, determine if it has a cycle in it.
-Follow up: Can you solve it without using extra space? Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
+Follow-up Can you solve it without using extra space?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
     </item>
     
     <item>
@@ -131,9 +129,7 @@ Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Outp
       
       <guid>http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/</guid>
       <description>Remove all elements from a linked list of integers that have value val.
-Example:
-Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5  Solution:
-# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type val: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; pre = ListNode(0) pre.next = head pos = pre while pos.next !</description>
+Example Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5  Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type val: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; pre = ListNode(0) pre.next = head pos = pre while pos.</description>
     </item>
     
     <item>
@@ -143,10 +139,7 @@ Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Ou
       
       <guid>http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list/</guid>
       <description>Given a sorted linked list, delete all duplicates such that each element appear only once.
-Example 1:
-Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2  Example 2:
-Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3  Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr = head while curr != None and curr.</description>
+Example 1 Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2  Example 2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr = head while curr != None and curr.</description>
     </item>
     
     <item>
@@ -157,8 +150,7 @@ Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3  
       <guid>http://www.hashnopolis.com/post/2018/09/delete-node-in-a-linked-list/</guid>
       <description>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
 Supposed the linked list is 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 and you are given the third node with value 3, the linked list should become 1 -&amp;gt; 2 -&amp;gt; 4 after calling your function.
-Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
     </item>
     
     <item>
@@ -168,13 +160,9 @@ Solution:
       
       <guid>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</guid>
       <description>Given a linked list, remove the n-th node from the end of list and return its head.
-Example:
-Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note:
-Given n will always be valid.
-Follow up:
-Could you do this in one pass?
-Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
+Example Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note Given n will always be valid.
+Follow-up Could you do this in one pass?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
     </item>
     
   </channel>
