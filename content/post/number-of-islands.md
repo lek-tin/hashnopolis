@@ -2,7 +2,7 @@
 title: "Number of Islands"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dfs"]
+tags: ["leetcode", "dfs", "bfs"]
 categories: ["algorithm"]
 date: 2018-10-09T23:52:32-07:00
 draft: false
@@ -30,6 +30,7 @@ Input:
 
 Output: 3
 ```
+DFS
 ### Solution
 ```python
 class Solution:
@@ -64,4 +65,53 @@ class Solution:
             adjacentX = x + dir[0]
             adjacentY = y + dir[1]
             self.markNeighbours(grid, rows, cols, adjacentX, adjacentY)
+```
+BFS
+```python
+from collections import deque
+
+class Coordinate:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        res = 0
+
+        if len(grid) == 0 or len(grid[0]) == 0:
+            return res
+
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j]:
+                    self.search(i, j, grid)
+                    res += 1
+        return res
+
+    def inBound(self, coor, grid):
+        x = coor.x
+        y = coor.y
+        return x >= 0 and x < len(grid) and y >= 0 and y < len(grid[0])
+
+    def search(self, i, j, grid):
+        directions = [
+            [0, 1],
+            [0, -1],
+            [1, 0],
+            [-1, 0]
+        ]
+        q = deque()
+        q.append(Coordinate(i,j))
+        grid[i][j] = False
+
+        while q:
+            coor = q.popleft()
+            for _, dir in enumerate(directions):
+                neighbour = Coordinate(coor.x + dir[0], coor.y + dir[1])
+                if not self.inBound(neighbour, grid):
+                    continue
+                if grid[neighbour.x][neighbour.y]:
+                    grid[neighbour.x][neighbour.y] = False
+                    q.append(neighbour)
 ```

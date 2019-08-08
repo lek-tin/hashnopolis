@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "hugo server --disableFastRender",
-    "audit": "hugo list drafts",
+    "audit": "blc https://www.hashnopolis.com -ro",
+    "misc": "hugo list drafts",
     "build": "hugo && git add . && git commit -m \"dev: build\" && git push origin"
   },
   "repository": {
