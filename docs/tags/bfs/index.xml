@@ -52,5 +52,16 @@ Example 1 Input: 2 / \ 1 3 Output: true  Example 2  5 / \ 1 4 / \ 3 6 Output: fa
 Note  Return 0 if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</description>
     </item>
     
+    <item>
+      <title>Number of Islands</title>
+      <link>http://www.hashnopolis.com/post/2018/10/number-of-islands/</link>
+      <pubDate>Tue, 09 Oct 2018 23:52:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/10/number-of-islands/</guid>
+      <description>Given a 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+Example 1 Input: 11110 11010 11000 00000 Output: 1  Example 2 Input: 11000 11000 00100 00011 Output: 3  DFS
+Solution class Solution: def numIslands(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &amp;quot;1&amp;quot;: count += 1 self.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -230,42 +230,48 @@ Output: false
 
 <h3 id="solution">Solution</h3>
 
-<pre><code class="language-python">class Solution(object):
-    def search(self, nums, target):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :type target: int
-        :rtype: bool
-        &quot;&quot;&quot;
-        # Time: O(logN)
+<pre><code class="language-python">class Solution:
+    def search(self, nums: List[int], target: int) -&gt; bool:
+        # Time: average is O(logN), worst is o(n)
         # Space: O(1)
         if nums == None or len(nums) == 0:
-            return False
-
+            return 0
         start, end = 0, len(nums) - 1
-        while (start + 1) &lt; end:
-            mid = start + (end - start) // 2
+
+        while start + 1 &lt; end:
+            print(start, end)
+            mid = start + (end - start)//2
             if nums[mid] == target:
                 return True
-            # Edge case: [1, 1, 1, 4, 5, 8, 0, 1]
+            # Skip duplicate numbers
             if nums[start] == nums[mid] and nums[start] == nums[end]:
                 start += 1
                 end -= 1
             else:
                 if nums[start] &lt;= nums[mid]:
+                    # Case 1
                     if nums[start] &lt;= target and target &lt;= nums[mid]:
                         end = mid
+                    # Case 2
                     else:
                         start = mid
                 else:
+                    # Case 3
                     if nums[mid] &lt;= target and target &lt;= nums[end]:
                         start = mid
+                    # Case 4
                     else:
                         end = mid
-        if nums[start] == target or nums[end] == target:
+
+        if nums[start] == target:
+            return True
+        if nums[end] == target:
             return True
         return False
 </code></pre>
+
+<p>4 scenarios when searching
+<img src="/img/post/search-in-rotated-sorted-array.jpg" alt="Search in Rotated Sorted Array" /></p>
 
   </div>
 

@@ -7,10 +7,56 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 22 Jul 2019 23:08:05 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 18:04:36 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reverse Nodes in K Group</title>
+      <link>http://www.hashnopolis.com/post/2019/08/reverse-nodes-in-k-group/</link>
+      <pubDate>Sun, 11 Aug 2019 18:04:36 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/reverse-nodes-in-k-group/</guid>
+      <description>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
+Example Given this linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
+For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5</description>
+    </item>
+    
+    <item>
+      <title>Reverse Linked List</title>
+      <link>http://www.hashnopolis.com/post/2019/08/reverse-linked-list/</link>
+      <pubDate>Sat, 10 Aug 2019 23:51:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/reverse-linked-list/</guid>
+      <description>Reverse a singly linked list.
+Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL // prev cur after while (cur !</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Partitioning</title>
+      <link>http://www.hashnopolis.com/post/2019/08/palindrome-partitioning/</link>
+      <pubDate>Wed, 07 Aug 2019 00:27:33 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/palindrome-partitioning/</guid>
+      <description>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return all possible palindrome partitioning of s.
+Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;] ]  Solution # Time: O(n*2^n) # Space: O(n). At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&amp;gt;&#39;b&#39;-&amp;gt;&#39;aa&#39;-&amp;gt;&#39;e&#39;-&amp;gt;&#39;q&#39;-&amp;gt;&#39;w&#39;-&amp;gt;&#39;d&#39;-&amp;gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum Ii</title>
+      <link>http://www.hashnopolis.com/post/2019/08/combination-sum-ii/</link>
+      <pubDate>Tue, 06 Aug 2019 00:57:28 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/combination-sum-ii/</guid>
+      <description>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+Each number in candidates may only be used once in the combination.
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ]  ###Example 2:</description>
+    </item>
     
     <item>
       <title>Generate Parentheses</title>
@@ -481,7 +527,7 @@ Example: Input: 1 - 0 - 0 - 0 - 1 | | | | | 0 - 0 - 0 - 0 - 0 | | | | | 0 - 0 - 
       <guid>http://www.hashnopolis.com/post/2019/02/maximum-subarray/</guid>
       <description>Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 Example: Input: [-2,1,-3,4,-1,2,1,-5,4], Output: 6 Explanation: [4,-1,2,1] has the largest sum = 6.  Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
-Solution: Iterative:
+Solution: Dynamic Programming
 class Solution { public int maxSubArray(int[] nums) { if (nums.</description>
     </item>
     
@@ -940,18 +986,6 @@ Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling nex
     </item>
     
     <item>
-      <title>Reverse Nodes in K Group</title>
-      <link>http://www.hashnopolis.com/post/2018/11/reverse-nodes-in-k-group/</link>
-      <pubDate>Tue, 13 Nov 2018 18:04:36 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/11/reverse-nodes-in-k-group/</guid>
-      <description>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
-k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
-Example Given this linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
-For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5</description>
-    </item>
-    
-    <item>
       <title>Serialize and Deserialize Binary Tree</title>
       <link>http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/</link>
       <pubDate>Tue, 13 Nov 2018 17:31:13 -0800</pubDate>
@@ -1333,12 +1367,12 @@ Example 1 Input: nums = [5,7,7,8,8,10], target = 8 Output: [3,4]  Example 2 Inpu
       <pubDate>Fri, 26 Oct 2018 23:08:49 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/10/search-in-rotated-sorted-array/</guid>
-      <description> Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+      <description>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
 You are given a target value to search. If found in the array return its index, otherwise return -1.
 You may assume no duplicate exists in the array.
 Your algorithm&amp;rsquo;s runtime complexity must be in the order of O(log n).
-Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1  Solution class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start + 1) &amp;lt; end: mid = start + (end - start) // 2 if nums[mid] == target: return mid if nums[start] &amp;lt; nums[mid]: if nums[start] &amp;lt;= target and target &amp;lt;= nums[mid]: end = mid else: start = mid else: if nums[mid] &amp;lt;= target and target &amp;lt;= nums[end]: start = mid else: end = mid if nums[start] == target: return start if nums[end] == target: return end return -1  </description>
+Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1  Solution class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start + 1) &amp;lt; end: mid = start + (end - start) // 2 if nums[mid] == target: return mid # &amp;lt; because there are no duplicate numbers.</description>
     </item>
     
     <item>
@@ -1528,7 +1562,8 @@ Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&am
       
       <guid>http://www.hashnopolis.com/post/2018/10/number-of-islands/</guid>
       <description>Given a 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
-Example 1 Input: 11110 11010 11000 00000 Output: 1  Example 2 Input: 11000 11000 00100 00011 Output: 3  Solution class Solution: def numIslands(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &amp;quot;1&amp;quot;: count += 1 self.</description>
+Example 1 Input: 11110 11010 11000 00000 Output: 1  Example 2 Input: 11000 11000 00100 00011 Output: 3  DFS
+Solution class Solution: def numIslands(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &amp;quot;1&amp;quot;: count += 1 self.</description>
     </item>
     
     <item>
@@ -1572,17 +1607,6 @@ Example Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3</description
       <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
 &amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
 Example 1 Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2 Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
-    </item>
-    
-    <item>
-      <title>Reverse Linked List</title>
-      <link>http://www.hashnopolis.com/post/2018/10/reverse-linked-list/</link>
-      <pubDate>Tue, 02 Oct 2018 23:51:13 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/10/reverse-linked-list/</guid>
-      <description>Reverse a singly linked list.
-Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
-Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL // prev cur after while (cur !</description>
     </item>
     
     <item>
@@ -2005,7 +2029,7 @@ Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution
       <description>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 The same repeated number may be chosen from candidates unlimited number of times.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ]  Solution class Solution: def combinationSum(self, candidates, target): &amp;quot;&amp;quot;&amp;quot; :type candidates: List[int] :type target: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] def add(candidates, target, tempAns, i, sum): # clone a copy of tempAns ans = list(tempAns) # print(&amp;quot;res:&amp;quot;, res, &amp;quot;; ans:&amp;quot;, ans, &amp;quot;; i:&amp;quot;, i, &amp;quot;; sum&amp;quot;, sum) if(sum&amp;gt;target): return if(sum==target): res.</description>
+Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ]  Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&amp;gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</description>
     </item>
     
     <item>
