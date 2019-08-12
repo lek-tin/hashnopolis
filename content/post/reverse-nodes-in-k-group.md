@@ -4,7 +4,7 @@ description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "linked-list"]
 categories: ["algorithm"]
-date: 2018-11-13T18:04:36-08:00
+date: 2019-08-11T18:04:36-08:00
 draft: false
 archive: false
 ---
@@ -50,10 +50,8 @@ class Solution(object):
         dummy = ListNode(0)
         dummy.next = head
         prev = dummy
-        print(dummy.next.val)
         while prev is not None:
             prev = self.reverse(prev, k)
-        print(dummy.next.val)
         return dummy.next
 
     def reverse(self, prev, k):
@@ -75,4 +73,50 @@ class Solution(object):
         # when curr == last, stack has been reversed completely
         # after the first iteration, tail is node(1), which is the prev for the next k-long stack
         return tail
+```
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
+            dummy = ListNode(0)
+            dummy.next = head
+            head = dummy
+            while True:
+                head = self.reverse(head, k)
+                if head == None:
+                    break
+            return dummy.next
+
+    # head -> [Node1 -> Node2 -> ... -> NodeK] -> NodeKPlus
+    def reverse(self, head, k):
+        # kth node
+        nodeK = head
+        for i in range(k):
+            # Always check validity of nodeK
+            if nodeK == None:
+                return None
+            nodeK = nodeK.next
+        # Always check validity of nodeK
+        if nodeK == None:
+            return None
+        # Get (k+1)th node
+        node1 = head.next
+        nodeKPlus = nodeK.next
+        # Reverse the [Node1 ... NodeK]
+        prev = None
+        curr = node1
+        while curr != nodeKPlus:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        # connecting two sides
+        head.next = nodeK
+        node1.next = nodeKPlus
+        return node1
 ```

@@ -2,9 +2,9 @@
 title: "Reverse Linked List"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "linked-list", "iterative"]
+tags: ["leetcode", "linked-list", "iterative", "two-pointers"]
 categories: ["algorithm"]
-date: 2018-10-02T23:51:13-07:00
+date: 2019-08-10T23:51:13-07:00
 draft: false
 archive: false
 ---
@@ -32,7 +32,7 @@ class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode cur = head, prev = null, after = new ListNode(0);
         // null   1  ->  2  -> 3 -> 4 -> 5 -> NULL
-        // prev  cur   after 
+        // prev  cur   after
         while (cur != null) {
             after = cur.next;
             cur.next = prev;
@@ -58,16 +58,14 @@ class Solution {
 #            prev     curr    after
 # https://www.youtube.com/watch?v=D7y_hoT_YZI
 class Solution:
-    def reverseList(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
-        curr, prev, after = head, None, ListNode(None)
-        while curr != None:
-          after = curr.next
-          curr.next = prev
-          prev = curr
-          curr = after
+    def reverseList(self, head: ListNode) -> ListNode:
+        prev = None
+
+        while head != None:
+            temp = head.next
+            head.next = prev
+            prev = head
+            head = temp
+
         return prev
 ```

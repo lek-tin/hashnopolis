@@ -2,7 +2,7 @@
 title: "Remove Element"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "two-pointer"]
+tags: ["leetcode", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-09-16T15:02:20-07:00
 draft: false
