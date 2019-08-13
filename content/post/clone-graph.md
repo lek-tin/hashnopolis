@@ -4,7 +4,7 @@ description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "graph", "dfs", "bfs"]
 categories: ["algorithm"]
-date: 2019-02-27T23:50:12-08:00
+date: 2019-08-11T01:12:12-08:00
 draft: false
 archive: false
 ---
@@ -116,3 +116,40 @@ class Solution {
     }
 }
 ```
+BFS
+```python
+from collections import deque
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val, neighbors):
+        self.val = val
+        self.neighbors = neighbors
+"""
+class Solution:
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        if node == None:
+            return Node
+
+        copy = Node(node.val, [])
+        clones = {node: copy}
+        q = deque([node])
+
+        while q:
+            candidate = q.popleft()
+            clone = clones[candidate]
+            # BFS
+            for neighbor in candidate.neighbors:
+                # If a clone node exists, copy edge by appending the mapped node to clone.neighbors
+                if neighbor in clones:
+                    clone.neighbors.append(clones[neighbor])
+                # Otherwise, construct new a node with neighbor.val and an empty list.
+                else:
+                    newNode = Node(neighbor.val, [])
+                    clones[neighbor] = newNode
+                    clone.neighbors.append(newNode)
+                    q.append(neighbor)
+        return copy
+```
+Mapping shown:
+![Clone graph](/img/post/clone-graph.jpg)
