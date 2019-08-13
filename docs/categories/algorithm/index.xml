@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 11 Aug 2019 18:04:36 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 23:34:11 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Copy List With Random Pointer</title>
+      <link>http://www.hashnopolis.com/post/2019/08/copy-list-with-random-pointer/</link>
+      <pubDate>Sun, 11 Aug 2019 23:34:11 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/copy-list-with-random-pointer/</guid>
+      <description>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution Solution 1: Insert cloned nodes in between original nodes then connect the cloned nodes
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.</description>
+    </item>
     
     <item>
       <title>Reverse Nodes in K Group</title>
@@ -22,6 +34,16 @@
 k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
 Example Given this linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
 For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5</description>
+    </item>
+    
+    <item>
+      <title>Clone Graph</title>
+      <link>http://www.hashnopolis.com/post/2019/08/clone-graph/</link>
+      <pubDate>Sun, 11 Aug 2019 01:12:12 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/clone-graph/</guid>
+      <description>Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors.
+Example: Input: {&amp;quot;$id&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;neighbors&amp;quot;:[{&amp;quot;$id&amp;quot;:&amp;quot;2&amp;quot;,&amp;quot;neighbors&amp;quot;:[{&amp;quot;$ref&amp;quot;:&amp;quot;1&amp;quot;},{&amp;quot;$id&amp;quot;:&amp;quot;3&amp;quot;,&amp;quot;neighbors&amp;quot;:[{&amp;quot;$ref&amp;quot;:&amp;quot;2&amp;quot;},{&amp;quot;$id&amp;quot;:&amp;quot;4&amp;quot;,&amp;quot;neighbors&amp;quot;:[{&amp;quot;$ref&amp;quot;:&amp;quot;3&amp;quot;},{&amp;quot;$ref&amp;quot;:&amp;quot;1&amp;quot;}],&amp;quot;val&amp;quot;:4}],&amp;quot;val&amp;quot;:3}],&amp;quot;val&amp;quot;:2},{&amp;quot;$ref&amp;quot;:&amp;quot;4&amp;quot;}],&amp;quot;val&amp;quot;:1} Explanation: Node 1&#39;s value is 1, and it has two neighbors: Node 2 and 4. Node 2&#39;s value is 2, and it has two neighbors: Node 1 and 3. Node 3&#39;s value is 3, and it has two neighbors: Node 2 and 4.</description>
     </item>
     
     <item>
@@ -404,16 +426,6 @@ Return the starting gas station&amp;rsquo;s index if you can travel around the c
     </item>
     
     <item>
-      <title>Clone Graph</title>
-      <link>http://www.hashnopolis.com/post/2019/02/clone-graph/</link>
-      <pubDate>Wed, 27 Feb 2019 23:50:12 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/02/clone-graph/</guid>
-      <description>Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors.
-Example: Input: {&amp;quot;$id&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;neighbors&amp;quot;:[{&amp;quot;$id&amp;quot;:&amp;quot;2&amp;quot;,&amp;quot;neighbors&amp;quot;:[{&amp;quot;$ref&amp;quot;:&amp;quot;1&amp;quot;},{&amp;quot;$id&amp;quot;:&amp;quot;3&amp;quot;,&amp;quot;neighbors&amp;quot;:[{&amp;quot;$ref&amp;quot;:&amp;quot;2&amp;quot;},{&amp;quot;$id&amp;quot;:&amp;quot;4&amp;quot;,&amp;quot;neighbors&amp;quot;:[{&amp;quot;$ref&amp;quot;:&amp;quot;3&amp;quot;},{&amp;quot;$ref&amp;quot;:&amp;quot;1&amp;quot;}],&amp;quot;val&amp;quot;:4}],&amp;quot;val&amp;quot;:3}],&amp;quot;val&amp;quot;:2},{&amp;quot;$ref&amp;quot;:&amp;quot;4&amp;quot;}],&amp;quot;val&amp;quot;:1} Explanation: Node 1&#39;s value is 1, and it has two neighbors: Node 2 and 4. Node 2&#39;s value is 2, and it has two neighbors: Node 1 and 3. Node 3&#39;s value is 3, and it has two neighbors: Node 2 and 4.</description>
-    </item>
-    
-    <item>
       <title>Largest Rectangle in Histogram</title>
       <link>http://www.hashnopolis.com/post/2019/02/largest-rectangle-in-histogram/</link>
       <pubDate>Mon, 25 Feb 2019 23:58:00 -0800</pubDate>
@@ -712,17 +724,6 @@ Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output:
       <guid>http://www.hashnopolis.com/post/2019/01/find-a-local-minima-in-an-array/</guid>
       <description>Given an array arr[0 .. n-1] of distinct integers, the task is to find a local minima in it. We say that an element arr[x] is a local minimum if it is less than or equal to both its neighbors.
 For corner elements, we need to consider only one neighbor for comparison. There can be more than one local minima in an array, we need to find any one of them.</description>
-    </item>
-    
-    <item>
-      <title>Copy List With Random Pointer</title>
-      <link>http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/</link>
-      <pubDate>Mon, 07 Jan 2019 23:34:11 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/</guid>
-      <description>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
-Return a deep copy of the list.
-Solution # Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: RandomListNode :rtype: RandomListNode &amp;quot;&amp;quot;&amp;quot; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</description>
     </item>
     
     <item>

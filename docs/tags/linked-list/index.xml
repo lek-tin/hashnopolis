@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 11 Aug 2019 18:04:36 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 23:34:11 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Copy List With Random Pointer</title>
+      <link>http://www.hashnopolis.com/post/2019/08/copy-list-with-random-pointer/</link>
+      <pubDate>Sun, 11 Aug 2019 23:34:11 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/copy-list-with-random-pointer/</guid>
+      <description>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution Solution 1: Insert cloned nodes in between original nodes then connect the cloned nodes
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.</description>
+    </item>
     
     <item>
       <title>Reverse Nodes in K Group</title>
@@ -54,17 +66,6 @@ If there are multiple suitable places for insertion, you may choose any place to
       <description>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 Example Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
-    </item>
-    
-    <item>
-      <title>Copy List With Random Pointer</title>
-      <link>http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/</link>
-      <pubDate>Mon, 07 Jan 2019 23:34:11 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/01/copy-list-with-random-pointer/</guid>
-      <description>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
-Return a deep copy of the list.
-Solution # Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.random = None class Solution(object): def copyRandomList(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: RandomListNode :rtype: RandomListNode &amp;quot;&amp;quot;&amp;quot; # corner case if head == None: return None # First pass: for each node in the original list, inset a copied node between the node tne node.</description>
     </item>
     
     <item>
