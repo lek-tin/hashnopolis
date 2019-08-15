@@ -31,3 +31,9 @@ INNER JOIN
   ) C2
 ON C1.Code = C2.Code
 ```
+
+### Override column values conditionally
+```sql
+SELECT id, name, CASE WHEN hide = 0 THEN 'false' ELSE 'true' END AS hide
+  FROM YOUR_FAVE_TABLE
+```

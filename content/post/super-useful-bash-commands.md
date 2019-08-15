@@ -4,7 +4,7 @@ description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["bash", "cli", "terminal"]
 categories: ["linux"]
-date: 2018-11-19T23:44:01-08:00
+date: 2019-08-12T23:44:01-08:00
 draft: false
 archive: false
 ---
@@ -145,4 +145,32 @@ apt list --installed
 21. List kernel attributes
 ```bash
 sysctl -a
+```
+22. Passing parameters to `awk`
+```bash
+echo 'Hello world' | awk '{ print $0 }'
+```
+Output:
+```
+Hello world
+```
+```bash
+echo 3 4 | awk '{ print $1 + $2 }'
+```
+Output:
+```
+7
+```
+23. Kill processes listening at `PORT_NUMBER`
+```bash
+lsof -i :<PORT_NUMBER> | awk -v i=2 -v j=2 'FNR==i {system("kill -9 " $2)}'
+```
+24. `awk` Print the `j`th field of the `i`th line
+```bash
+awk -v i=5 -v j=3 'FNR == i {print $j}'
+```
+25. Embed sub scripts in main script. Sub script will be evaluated/executed before the main script.
+```bash
+# List current user directory
+ls /Users/`echo $USER`
 ```
