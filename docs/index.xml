@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 11 Aug 2019 23:34:11 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Aug 2019 23:44:01 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Super Useful Bash Commands</title>
+      <link>http://www.hashnopolis.com/post/2019/08/super-useful-bash-commands/</link>
+      <pubDate>Mon, 12 Aug 2019 23:44:01 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/super-useful-bash-commands/</guid>
+      <description>List all services
+sudo service --status-all  Create a nested directory if it doesn&amp;rsquo;t exist already.
+mkdir -p /nested/directory  To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)
+ls -al  To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)</description>
+    </item>
     
     <item>
       <title>Copy List With Random Pointer</title>
@@ -909,18 +921,6 @@ mv downloads-folder/jdk-&amp;lt;version&amp;gt;-linux-xxx.tar.gz /usr/java tar -
 The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
 By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
 Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;.</description>
-    </item>
-    
-    <item>
-      <title>Super Useful Bash Commands</title>
-      <link>http://www.hashnopolis.com/post/2018/11/super-useful-bash-commands/</link>
-      <pubDate>Mon, 19 Nov 2018 23:44:01 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/11/super-useful-bash-commands/</guid>
-      <description>List all services
-sudo service --status-all  Create a nested directory if it doesn&amp;rsquo;t exist already.
-mkdir -p /nested/directory  To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)
-ls -al  To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)</description>
     </item>
     
     <item>
