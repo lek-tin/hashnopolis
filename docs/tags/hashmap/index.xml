@@ -153,9 +153,9 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written a
       <pubDate>Wed, 29 Aug 2018 00:44:49 +0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/08/two-sum/</guid>
-      <description> Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+      <description>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </description>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) from functools import cmp_to_key class Pair: def __init__(self, index, val): self.</description>
     </item>
     
   </channel>

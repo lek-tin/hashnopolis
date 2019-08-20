@@ -170,6 +170,58 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/arrays-in-python/">Arrays in Python</a></h2>
+
+      <p>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1]  Clone a list newArr = oldArr[:]</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/programming-language" ><strong>"programming-language"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/">Flatten Nested List Iterator</a></h2>
+
+      <p>Given a nested list of integers, implement an iterator to flatten it.
+Each element is either an integer, or a list – whose elements may also be integers or other lists.
+Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/">Serialize and Deserialize Binary Tree</a></h2>
 
       <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
@@ -362,58 +414,6 @@ Time: o(logN) Space: o(n) class Solution: def myPow(self, x, n): “”” :type
       <p>Given a binary tree, determine if it is a valid binary search tree (BST).
 Assume a BST is defined as follows: - The left subtree of a node contains only nodes with keys less than the node’s key. - The right subtree of a node contains only nodes with keys greater than the node’s key. - Both the left and right subtrees must also be binary search trees.
 Example 1 Input: 2 / \ 1 3 Output: true  Example 2  5 / \ 1 4 / \ 3 6 Output: false  Explanation The input is: [5,1,4,null,null,3,6].</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/arrays-in-cpp/">Arrays in CPP</a></h2>
-
-      <p>To get the number of elements in an array in C&#43;&#43;:
-sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. Divide it with the size of one element in the array will give you the number of elements in the array: sizeof(awesomeArray)/sizeof(awesomeArray[0])</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/programming-language" ><strong>"programming-language"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/count-primes/">Count Primes</a></h2>
-
-      <p> Count the number of prime numbers less than a non-negative number, n.
-Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &#34;&#34;&#34; :type n: int :rtype: int &#34;&#34;&#34; if n &lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &lt; len(marked)-1: count &#43;= 1 return count  </p>
 
       <p class="meta">
         

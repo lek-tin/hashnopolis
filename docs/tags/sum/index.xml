@@ -7,21 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 07 Sep 2018 23:53:18 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 Aug 2018 23:30:43 +0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/sum/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Two Sum II Input Array Is Sorted</title>
-      <link>http://www.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</link>
-      <pubDate>Fri, 07 Sep 2018 23:53:18 +0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/09/two-sum-ii-input-array-is-sorted/</guid>
-      <description>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
-The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
-Note  Your returned answers (both index1 and index2) are not zero-based. You may assume that each input would have exactly one solution and you may not use the same element twice.</description>
-    </item>
     
     <item>
       <title>18. 4Sum</title>
@@ -33,17 +22,6 @@ Note  Your returned answers (both index1 and index2) are not zero-based. You may
 Note The solution set must not contain duplicate quadruplets.
 Example:
 Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ]  </description>
-    </item>
-    
-    <item>
-      <title>Two Sum</title>
-      <link>http://www.hashnopolis.com/post/2018/08/two-sum/</link>
-      <pubDate>Wed, 29 Aug 2018 00:44:49 +0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/08/two-sum/</guid>
-      <description> Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  </description>
     </item>
     
     <item>
