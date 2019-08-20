@@ -2,7 +2,7 @@
 title: "Two Sum"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "hashmap", "sum"]
+tags: ["leetcode", "hashmap", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-08-29T00:44:49+08:00
 draft: false
@@ -43,4 +43,41 @@ class Solution:
             solutionMap[nums[pos]] = pos
 
         return res
+```
+```python
+# time: o(nlogn)
+# space: o(1)
+from functools import cmp_to_key
+
+class Pair:
+    def __init__(self, index, val):
+        self.index = index
+        self.val = val
+    def getIndex(self):
+        return self.index
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        pairs = []
+        for i, num in enumerate(nums):
+            pairs.append(Pair(num, i))
+        # pairs.sort(key=cmp_to_key(self.ascendSort))
+        pairs = sorted(pairs, key=lambda pair: pair.val)
+
+        left, right = 0, len(nums)-1
+
+        for pair in pairs:
+            print(pair.index, pair.val)
+
+        while left < right:
+            temp = pairs[left].val + pairs[right].val
+            if temp == target:
+                return [pairs[left].index, pairs[right].index]
+            elif temp < target:
+                left += 1
+            else:
+                right -= 1
+
+    def ascendSort(self, x, y):
+        return x.val - y.val
 ```
