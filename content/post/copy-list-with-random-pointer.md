@@ -31,7 +31,7 @@ class Solution(object):
         if head == None:
             return None
 
-        # First pass: for each node in the original list, inset a copied node between the node tne node.next
+        # First pass: for each node in the original list, insert a copied node between the node tne node.next
         cur = head
         while cur != None:
             # Make a copy of cur node, inset it to the middle of cur and cur.next
@@ -45,19 +45,25 @@ class Solution(object):
         cur = head
         while cur != None:
             if cur.random != None:
-                # now points to the "newly" created node, node'
+                # now point to the "newly" created node, node'
                 cur.next.random = cur.random.next
             cur = cur.next.next
 
         # third pass: extract the copied node
         cur = head
         dummy = RandomListNode(0)
-        copyPrev = dummy
+        prev = dummy
         while cur != None:
-            copyPrev.next = cur.next
+            prev.next = cur.next
             cur.next = cur.next.next
-            copyPrev = copyPrev.next
+            prev = prev.next
             cur = cur.next
+            # OR
+            # prev.next = curr.next
+            # # Avoid error: "Next pointer of node with val 1 from the original list was modified."
+            # curr.next = None
+            # prev = prev.next
+            # curr = prev.next
 
         return dummy.next
 ```

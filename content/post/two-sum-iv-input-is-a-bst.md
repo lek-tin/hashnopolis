@@ -38,6 +38,8 @@ Output: False
 ```
 ### Solution
 ```python
+# time: o(n)
+# space: o(n)
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -45,6 +47,33 @@ Output: False
 #         self.left = None
 #         self.right = None
 
+class Solution:
+    def findTarget(self, root: TreeNode, k: int) -> bool:
+        if not root:
+            return False
+
+        visited = set()
+        return self.traverse(root, visited, k)
+
+    def traverse(self, root, visited, k):
+        if root == None:
+            return False
+
+        if k - root.val in visited:
+            return True
+        visited.add(root.val)
+
+        return self.traverse(root.left, visited, k) or self.traverse(root.right, visited, k)
+```
+```python
+# time: o(n)
+# space: o(n)
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
 class Solution:
     def findTarget(self, root: TreeNode, k: int) -> bool:
         if not root:

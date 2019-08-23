@@ -54,14 +54,14 @@ class Solution:
         return self.validate(root, None, None)
 
     def validate(self, node, minVal, maxVal):
-        # Reaches leftmost/rightmost node;
+        # Reaches leftmost/rightmost node
         if not node:
             return True
-
-        if minVal != None and node.val <= minVal:
-            return False
-
+        # validate left node
         if maxVal != None and node.val >= maxVal:
+            return False
+        # validate right node
+        if minVal != None and node.val <= minVal:
             return False
 
         return self.validate(node.left, minVal, node.val) and self.validate(node.right, node.val, maxVal)
