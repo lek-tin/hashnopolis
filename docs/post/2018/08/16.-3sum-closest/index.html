@@ -203,38 +203,26 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 <pre><code class="language-python"># Time: o(n^2)
 # Space: o(1)
 class Solution:
-  def threeSumClosest(self, nums, target):
-    &quot;&quot;&quot;
-    :type nums: List[int]
-    :type target: int
-    :rtype: int
-    &quot;&quot;&quot;
-    if nums is None or len(nums) &lt; 3:
-      return None
+    def threeSumClosest(self, nums: List[int], target: int) -&gt; int:
+        if not nums or len(nums) &lt; 3:
+            return -1
 
-    nums.sort()
-    closest = nums[0] + nums[1] + nums[-1]
+        nums.sort()
+        bestSum = nums[0] + nums[1] + nums[2]
+        for i in range(0, len(nums)-2):
+            num = nums[i]
+            left = i + 1
+            right = len(nums) - 1
+            while left &lt; right:
+                newSum = num + nums[left] + nums[right]
+                if abs(target - newSum) &lt; abs(target - bestSum):
+                    bestSum = newSum
+                elif newSum &lt; target:
+                    left += 1
+                else:
+                    right -= 1
 
-    for i in range(len(nums)-2):
-      low = i+1
-      high = len(nums)-1
-
-      while low &lt; high:
-        tempSum = nums[i] + nums[low] + nums[high]
-        # Perfect =&gt; exit
-        if tempSum == target:
-          return target
-
-        if abs(tempSum - target) &lt; abs(closest - target):
-          closest = tempSum
-
-        # Continue the iteration
-        if tempSum - target &gt; 0:
-          high -= 1
-        else:
-          low += 1
-
-    return closest
+        return bestSum
 </code></pre>
 
   </div>

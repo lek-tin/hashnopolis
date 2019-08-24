@@ -5,7 +5,7 @@
 
   
   <title>
-        15. 3sum | Hashnopolis
+        3sum Smaller | Hashnopolis
       </title>
 
     
@@ -16,20 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given an array nums of n integers, are there elements a, b, c in nums such that a &#43; b &#43; c = 0? Find all unique triplets in the array which gives the sum of zero.
-Note:
-The solution set must not contain duplicate triplets.
-Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution # time: o(n^2) # space: o(1) class Solution: def threeSum(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] if not nums: return results nums." />
-  <meta name="keywords" content="leetcode two-pointers " />
+  <meta name="description" content="Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &amp;lt;= i &amp;lt; j &amp;lt; k &amp;lt; n that satisfy the condition nums[i] &#43; nums[j] &#43; nums[k] &amp;lt; target.
+Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3]  Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&amp;gt; int: res = 0 if not nums: return res nums." />
+  <meta name="keywords" content="leetcode " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="15. 3sum" />
-    <meta name="twitter:description" content="Given an array nums of n integers, are there elements a, b, c in nums such that a &#43; b &#43; c = 0? Find all unique triplets in the array which gives the sum of zero.
-Note:
-The solution set must not contain duplicate triplets.
-Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution # time: o(n^2) # space: o(1) class Solution: def threeSum(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] if not nums: return results nums." />
+    <meta name="twitter:title" content="3sum Smaller" />
+    <meta name="twitter:description" content="Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &amp;lt;= i &amp;lt; j &amp;lt; k &amp;lt; n that satisfy the condition nums[i] &#43; nums[j] &#43; nums[k] &amp;lt; target.
+Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3]  Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&amp;gt; int: res = 0 if not nums: return res nums." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -39,7 +35,7 @@ Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2018/08/15.-3sum/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/3sum-smaller/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -183,69 +179,47 @@ Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/two-pointers"><strong>two-pointers</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 1-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/3sum.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>15. 3sum</h1>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/3sum-smaller.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>3sum Smaller</h1>
       
 
-<p>Given an array <code>nums</code> of <code>n</code> integers, are there elements <code>a, b, c</code> in <code>nums</code> such that <code>a + b + c = 0</code>? Find all unique triplets in the array which gives the sum of zero.</p>
+<p>Given an array of <code>n</code> integers nums and a target, find the number of index triplets <code>i</code>, <code>j</code>, <code>k</code> with <code>0 &lt;= i &lt; j &lt; k &lt; n</code> that satisfy the condition <code>nums[i] + nums[j] + nums[k] &lt; target</code>.</p>
 
-<p>Note:</p>
+<h3 id="example">Example:</h3>
 
-<p>The solution set must not contain duplicate triplets.</p>
-
-<h3 id="example">Example</h3>
-
-<pre><code>Given array nums = [-1, 0, 1, 2, -1, -4],
-
-A solution set is:
-[
-  [-1, 0, 1],
-  [-1, -1, 2]
-]
+<pre><code>Input: nums = [-2,0,1,3], and target = 2
+Output: 2 
+Explanation: Because there are two triplets which sums are less than 2:
+             [-2,0,1]
+             [-2,0,3]
 </code></pre>
 
 <h3 id="solution">Solution</h3>
 
-<pre><code class="language-python"># time: o(n^2)
-# space: o(1)
-class Solution:
-    def threeSum(self, nums: List[int]) -&gt; List[List[int]]:
-        results = []
-
+<pre><code class="language-python">class Solution:
+    def threeSumSmaller(self, nums: List[int], target: int) -&gt; int:
+        res = 0
         if not nums:
-            return results
+            return res
 
         nums.sort()
-        # low starts from 0, high starts from listLen - 1, so i needs to iterate between 1~(listLen-3)
+        # No need to skip duplicates
         for i in range(0, len(nums)-2):
             num = nums[i]
-            # i &gt; 0 to prevent reading nums[0 - 1] when i == 0
-            # skip duplicating starting points
-            if i &gt; 0 and nums[i] == nums[i-1]:
-                continue
             left = i + 1
             right = len(nums) - 1
             while left &lt; right:
-                sum = nums[left] + nums[right]
-                if sum + num == 0:
-                    results.append([nums[left], num, nums[right]])
+                if num + nums[left] + nums[right] &lt; target:
+                    # No need to loop from left+1 -&gt; right, simple count them all in
+                    res += right - left
                     left += 1
-                    right -= 1
-                    # skip duplicates
-                    while left &lt; right and nums[left-1] == nums[left]:
-                        left += 1
-                    while left &lt; right and nums[right] == nums[right+1]:
-                        right -= 1
-                elif sum + num &lt; 0:
-                    left += 1
+                    # not need to right--
                 else:
                     right -= 1
 
-        return results
+        return res
 </code></pre>
 
   </div>
