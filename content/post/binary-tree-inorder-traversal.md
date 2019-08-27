@@ -55,25 +55,3 @@ class Solution:
             current = current.right
         return result
 ```
-```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-# Time: o(h)
-class Solution:
-    def inorderSuccessor(self, root: 'TreeNode', p: 'TreeNode') -> 'TreeNode':
-        if not root:
-            return None
-
-        if root.val > p.val:
-            # Root is greater than p, so traverse down to left substree
-            succ = self.inorderSuccessor(root.left, p)
-            # If not succ is found, return root; Elsewise return the smaller succ
-            return root if succ == None else succ
-        else:
-            # Search in right subtree only, as the succucor definitely doesn't exist in the left subtree
-            return self.inorderSuccessor(root.right, p)
-```

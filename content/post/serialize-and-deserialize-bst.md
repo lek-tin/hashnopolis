@@ -1,5 +1,5 @@
 ---
-title: "Serialize and Deserialize Bst"
+title: "Serialize and Deserialize BST"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "bst"]
