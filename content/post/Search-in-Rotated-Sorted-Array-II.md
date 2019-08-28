@@ -24,45 +24,50 @@ Example 2:
 Input: nums = [2,5,6,0,0,1,2], target = 3
 Output: false
 ```
-**Follow up:**
+### Follow-up
 - This is a follow up problem to [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/), where nums may contain duplicates.
 - Would this affect the run-time complexity? How and why?
 
-**Solution:**
+### Solution
 ```python
-class Solution(object):
-    def search(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: bool
-        """
-        # Time: O(logN)
+class Solution:
+    def search(self, nums: List[int], target: int) -> bool:
+        # Time: average is O(logN), worst is o(n)
         # Space: O(1)
         if nums == None or len(nums) == 0:
-            return False
-
+            return 0
         start, end = 0, len(nums) - 1
-        while (start + 1) < end:
-            mid = start + (end - start) // 2
+
+        while start + 1 < end:
+            print(start, end)
+            mid = start + (end - start)//2
             if nums[mid] == target:
                 return True
-            # Edge case: [1, 1, 1, 4, 5, 8, 0, 1]
+            # Skip duplicate numbers
             if nums[start] == nums[mid] and nums[start] == nums[end]:
                 start += 1
                 end -= 1
             else:
                 if nums[start] <= nums[mid]:
+                    # Case 1
                     if nums[start] <= target and target <= nums[mid]:
                         end = mid
+                    # Case 2
                     else:
                         start = mid
                 else:
+                    # Case 3
                     if nums[mid] <= target and target <= nums[end]:
                         start = mid
+                    # Case 4
                     else:
                         end = mid
-        if nums[start] == target or nums[end] == target:
+
+        if nums[start] == target:
+            return True
+        if nums[end] == target:
             return True
         return False
 ```
+4 scenarios when searching
+![Search in Rotated Sorted Array](/img/post/search-in-rotated-sorted-array.jpg)

@@ -15,7 +15,7 @@ bool search(word)
 ```
 `search(word)` can search a literal word or a regular expression string containing only letters `a-z` or `.. A` . means it can represent any one letter.
 
-**Example:**
+### Example
 ```
 addWord("bad")
 addWord("dad")
@@ -25,9 +25,9 @@ search("bad") -> true
 search(".ad") -> true
 search("b..") -> true
 ```
-**Note:**
+### Note
 You may assume that all words are consist of lowercase letters `a-z`.
-**Solution:**
+### Solution
 ```python
 # o(n)
 ```

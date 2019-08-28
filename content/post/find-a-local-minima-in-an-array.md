@@ -12,7 +12,7 @@ Given an array `arr[0 .. n-1]` of distinct integers, the task is to find a local
 
 For corner elements, we need to consider only one neighbor for comparison.
 There can be more than one local minima in an array, we need to find any one of them.
-**Examples:**
+### Examples
 ```
 Input: arr[] = {9, 6, 3, 14, 5, 7, 4};
 Output: Index of local minima is 2
@@ -26,7 +26,7 @@ Input: arr[] = {1, 2, 3};
 Output: Index of local minima is 0
 ```
 
-**Solution:**
+### Solution
 ```python
 # A binary search based function that
 # returns index of a local minima.

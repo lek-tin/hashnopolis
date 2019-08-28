@@ -12,9 +12,9 @@ Implement an iterator over a binary search tree (BST). Your iterator will be ini
 
 Calling `next()` will return the next smallest number in the BST.
 
-**Note**: `next()` and `hasNext()` should run in average `O(1)` time and uses `O(h)` memory, where h is the height of the tree.
+### Note: `next()` and `hasNext()` should run in average `O(1)` time and uses `O(h)` memory, where h is the height of the tree.
 
-**Solution:**
+### Solution
 ```python
 # Definition for a binary tree node
 # class TreeNode(object):
@@ -50,5 +50,5 @@ class BSTIterator(object):
 # i, v = BSTIterator(root), []
 # while i.hasNext(): v.append(i.next())
 ```
-**Explanation:**
+### Explanation
 left < root < right, if there is no right subtree, the next element is the stack top.

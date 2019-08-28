@@ -12,15 +12,15 @@ Given an array of numbers `nums`, in which exactly two elements appear only once
 
 For example:
 Given `nums = [1, 2, 1, 3, 2, 5]`, return `[3, 5]`.
-**Note**:
+### Note:
 
 1. The order of the result is not important. So in the above example, `[5, 3]` is also correct.
 2. Your algorithm should run in linear runtime complexity. Could you implement it using only constant space complexity?
 
-**Credits:**
+### Credit
 Special thanks to [@jianchao.li.fighter](https://leetcode.com/discuss/user/jianchao.li.fighter) for adding this problem and creating all test cases.
 
-**solution**
+### Solution
 ```c++
 class Solution {
 public:
@@ -49,12 +49,12 @@ public:
 };
 ```
 
-**Thought**
+### Think beyond
 How come 
 `twoSinglesXORed &= ~(twoSinglesXORed-1);`
 equals
 `twoSinglesXORed &= -twoSinglesXORed-1`
 
-**Explanation**
+### Explanation
 1. [https://leetcode.com/problems/single-number-iii/discuss/68901/Sharing-explanation-of-the-solution](https://leetcode.com/problems/single-number-iii/discuss/68901/Sharing-explanation-of-the-solution)
 2. [https://leetcode.com/problems/single-number-iii/discuss/68900/Accepted-C++Java-O(n)-time-O(1)-space-Easy-Solution-with-Detail-Explanations]("https://leetcode.com/problems/single-number-iii/discuss/68900/Accepted-C++Java-O(n)-time-O(1)-space-Easy-Solution-with-Detail-Explanations")

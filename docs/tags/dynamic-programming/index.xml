@@ -84,7 +84,7 @@ Given a list of non-negative integers representing the amount of money of each h
       <guid>http://www.hashnopolis.com/post/2019/02/maximum-subarray/</guid>
       <description>Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 Example: Input: [-2,1,-3,4,-1,2,1,-5,4], Output: 6 Explanation: [4,-1,2,1] has the largest sum = 6.  Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
-Solution: Iterative:
+Solution: Dynamic Programming
 class Solution { public int maxSubArray(int[] nums) { if (nums.</description>
     </item>
     
@@ -105,9 +105,7 @@ Optimal Substructure: Let the input sequences be X[0..m-1] and Y[0..n-1] of leng
       
       <guid>http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/</guid>
       <description>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-Example 1:
-Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2:
-Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution: Dynamic Programming
+Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution Dynamic Programming
 # https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start + max_len] return solution  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</description>
     </item>
     
@@ -129,13 +127,13 @@ Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;q
       
       <guid>http://www.hashnopolis.com/post/2018/11/maximal-square/</guid>
       <description>Given a 2D binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest square containing only 1&amp;rsquo;s and return its area.
-Example: Input:
+Example Input:
 1 0 1 0 0
 1 0 1 1 1
 1 1 1 1 1
 1 0 0 1 0
-Output: 4 Solution:
-class Solution: def maximalSquare(self, matrix): &amp;quot;&amp;quot;&amp;quot; :type matrix: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;quot;1&amp;quot;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;quot;1&amp;quot;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;quot;0&amp;quot;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2  class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</description>
+Output: 4
+Solution class Solution: def maximalSquare(self, matrix): &amp;quot;&amp;quot;&amp;quot; :type matrix: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;quot;1&amp;quot;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;quot;1&amp;quot;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;quot;0&amp;quot;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2  class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</description>
     </item>
     
     <item>
@@ -145,10 +143,7 @@ class Solution: def maximalSquare(self, matrix): &amp;quot;&amp;quot;&amp;quot; 
       
       <guid>http://www.hashnopolis.com/post/2018/10/minimum-path-sum/</guid>
       <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note: You can only move either down or right at any point in time.
-Example:
-Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation: Because the path 1→3→1→1→1 minimizes the sum. Solution:
-class Solution: def minPathSum(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[int]] :rtype: int &amp;quot;&amp;quot;&amp;quot; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
+Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution: def minPathSum(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[int]] :rtype: int &amp;quot;&amp;quot;&amp;quot; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
     </item>
     
     <item>
@@ -168,8 +163,8 @@ Given a list of non-negative integers representing the amount of money of each h
       
       <guid>http://www.hashnopolis.com/post/2018/10/word-break/</guid>
       <description>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
-Note: - The same word in the dictionary may be reused multiple times in the segmentation. - You may assume the dictionary does not contain duplicate words. Example 1:
-Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;.</description>
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.
+Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;.</description>
     </item>
     
     <item>
@@ -180,9 +175,7 @@ Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &
       <guid>http://www.hashnopolis.com/post/2018/10/decode-ways/</guid>
       <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
 &amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
-Example 1:
-Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2:
-Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
+Example 1 Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2 Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
     </item>
     
     <item>
@@ -192,9 +185,7 @@ Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &am
       
       <guid>http://www.hashnopolis.com/post/2018/09/unique-binary-search-trees/</guid>
       <description>Given n, how many structurally unique BST&amp;rsquo;s (binary search trees) that store values 1 &amp;hellip; n?
-Example:
-Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  Exaplanation:
-n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0);  Solution:</description>
+Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  Exaplanation n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0);  Solution class Solution: def numTrees(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; res = [1] for i in range(1, n+1): for j in range(i): res.</description>
     </item>
     
     <item>

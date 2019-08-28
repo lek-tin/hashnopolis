@@ -10,9 +10,9 @@ archive: false
 ---
 Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
 
-**Note:** The solution set must not contain duplicate subsets.
+### Note The solution set must not contain duplicate subsets.
 
-Example:
+### Example:
 ```
 Input: [1,2,2]
 Output:
@@ -25,39 +25,44 @@ Output:
   []
 ]
 ```
-**Solution:**
+### Solution
 ```python
 # Time: o(2^n)
 # Space: o(n)
-class Solution(object):
-    def subsetsWithDup(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
-        # Edge case
-        if nums == None or len(nums) == 0:
-            return []
-
-        # Sort the given numbers
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        results = []
+        subset = []
+        # Edge case 1
+        if nums == None:
+            return results
+        # Edge case 2
+        if len(nums) == 0:
+            results.append([])
+            return results
+        # Sort nums in ascending order
         nums.sort()
-        res = []
+        # start recursion
+        self.dfs(0, subset, nums, results)
+        return results
 
-        # Backtrack
-        self.backtrack(res, [], nums, 0)
-        return res
-
-    def backtrack(self, res, given_arr, nums, index):
-        res.append(list(given_arr))
-        print("index: ", index, "    given_arr: ", given_arr)
-        for i in range(index, len(nums)):
-            print("i: ", i)
-            print("-------------------")
-            # Only use the last one of duplicates, for example, 4,4,4,_4_,5
-            if i > index and nums[i] == nums[i - 1]: continue
-            # Choose to add nums[i] to the dfs function
-            given_arr.append(nums[i])
-            self.backtrack(res, given_arr, nums, i+1)
-            # Choose NOT to add nums[i] to the dfs function
-            given_arr.pop()
+    def dfs(self, startIndex, subset, nums, results):
+        # Recursion exit condition met
+        # add a copy of the current subset
+        results.append(subset[:])
+        # Entering the next recursion level
+        for i in range(startIndex, len(nums)):
+            # Skip duplicate
+            if (i>=0 and i != startIndex and nums[i] == nums[i-1]):
+                continue
+            # add a new number to the current subset
+            # [1] -> [1,2]
+            subset.append(nums[i])
+            # find all subsets to append to [1,2]
+            self.dfs(i+1, subset, nums, results)
+            # backtrack by removing 2 from subset: [1,2].
+            subset.pop()
+```
+Iterations shown in:  
+![Subsets backtracking solution iterations](/img/post/subsets-backtracking.jpg)
 ```

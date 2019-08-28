@@ -18,25 +18,20 @@ You may assume no duplicate exists in the array.
 
 Your algorithm's runtime complexity must be in the order of `O(log n)`.
 
-**Example 1:**
+### Example 1
 ```
 Input: nums = [4,5,6,7,0,1,2], target = 0
 Output: 4
 ```
-**Example 2:**
+### Example 2
 ```
 Input: nums = [4,5,6,7,0,1,2], target = 3
 Output: -1
 ```
-**Solution:**
+### Solution
 ```python
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
         if nums == None or len(nums) == 0:
             return -1
 
@@ -45,14 +40,19 @@ class Solution:
             mid = start + (end - start) // 2
             if nums[mid] == target:
                 return mid
+            # < because there are no duplicate numbers.
             if nums[start] < nums[mid]:
+                # case 1
                 if nums[start] <= target and target <= nums[mid]:
                     end = mid
+                # case 2
                 else:
                     start = mid
             else:
+                # case 3
                 if nums[mid] <= target and target <= nums[end]:
                     start = mid
+                # case 4
                 else:
                     end = mid
 
@@ -63,3 +63,5 @@ class Solution:
 
         return -1
 ```
+4 scenarios when searching
+![Search in Rotated Sorted Array](/img/post/search-in-rotated-sorted-array.jpg)

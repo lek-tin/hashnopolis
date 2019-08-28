@@ -66,8 +66,8 @@ Example 1: Input: &amp;quot;()&amp;quot; Output: true  Example 2: Input: &amp;qu
       <pubDate>Sun, 14 Oct 2018 23:55:15 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/10/min-stack/</guid>
-      <description>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) &amp;ndash; Push element x onto stack. - pop() &amp;ndash; Removes the element on top of the stack. - top() &amp;ndash; Get the top element. - getMin() &amp;ndash; Retrieve the minimum element in the stack. Example:
-MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; Returns -3. minStack.pop(); minStack.top(); --&amp;gt; Returns 0. minStack.</description>
+      <description>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) &amp;ndash; Push element x onto stack. - pop() &amp;ndash; Removes the element on top of the stack. - top() &amp;ndash; Get the top element. - getMin() &amp;ndash; Retrieve the minimum element in the stack.
+Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; Returns -3. minStack.pop(); minStack.top(); --&amp;gt; Returns 0.</description>
     </item>
     
     <item>
@@ -78,10 +78,7 @@ MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStac
       <guid>http://www.hashnopolis.com/post/2018/09/add-binary/</guid>
       <description>Given two binary strings, return their sum (also a binary string).
 The input strings are both non-empty and contains only characters 1 or 0.
-Example 1:
-Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot;  Example 2:
-Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  Solution:
-class Solution: def addBinary(self, a, b): &amp;quot;&amp;quot;&amp;quot; :type a: str :type b: str :rtype: str &amp;quot;&amp;quot;&amp;quot; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &amp;gt;= 0 or j &amp;gt;= 0: total = carry if i &amp;gt;= 0: total += int(a[i]) i -= 1 if j &amp;gt;= 0: total += int(b[j]) j -= 1 result.</description>
+Example 1 Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot;  Example 2 Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot;  Solution class Solution: def addBinary(self, a, b): &amp;quot;&amp;quot;&amp;quot; :type a: str :type b: str :rtype: str &amp;quot;&amp;quot;&amp;quot; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &amp;gt;= 0 or j &amp;gt;= 0: total = carry if i &amp;gt;= 0: total += int(a[i]) i -= 1 if j &amp;gt;= 0: total += int(b[j]) j -= 1 result.</description>
     </item>
     
   </channel>

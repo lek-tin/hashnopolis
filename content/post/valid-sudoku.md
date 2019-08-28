@@ -9,7 +9,7 @@ A partially filled sudoku which is valid.
 
 The Sudoku board could be partially filled, where empty cells are filled with the character `'.'`.
 
-**Example 1:**
+### Example 1
 ```
 Input:
 [
@@ -25,7 +25,7 @@ Input:
 ]
 Output: true
 ```
-**Example 2:**
+### Example 2
 ```
 Input:
 [
@@ -43,6 +43,6 @@ Output: false
 Explanation: Same as Example 1, except with the 5 in the top left corner being 
     modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
 ```
-**Note:**
+### Note
 - A Sudoku board (partially filled) could be valid but is not necessarily solvable.
 - Only the filled cells need to be validated according to the

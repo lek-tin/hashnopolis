@@ -176,12 +176,38 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/compare-version-numbers/">Compare Version Numbers</a></h2>
+
+      <p>Compare two version numbers version1 and version2. If version1 &gt; version2 return 1; if version1 &lt; version2 return -1;otherwise return 0.
+You may assume that the version strings are non-empty and contain only digits and the . character. The . character does not represent a decimal point and is used to separate number sequences. For instance, 2.5 is not “two and a half” or “half way to version three”, it is the fifth second-level revision of the second first-level revision.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/10/intersection-of-two-linked-lists/">Intersection of Two Linked Lists</a></h2>
 
       <p>Write a program to find the node at which the intersection of two singly linked lists begins.
 For example, the following two linked lists:
 A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
-Notes: If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</p>
+Note If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</p>
 
       <p class="meta">
         
@@ -207,10 +233,7 @@ Notes: If the two linked lists have no intersection at all, return null. The lin
       <h2><a href="http://www.hashnopolis.com/post/2018/10/subsets-ii/">Subsets Ii</a></h2>
 
       <p>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note: The solution set must not contain duplicate subsets.
-Example:
-Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution:
-# Time: o(2^n) # Space: o(n) class Solution(object): def subsetsWithDup(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: List[List[int]] &#34;&#34;&#34; # Edge case if nums == None or len(nums) == 0: return [] # Sort the given numbers nums.</p>
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution # Time: o(2^n) # Space: o(n) class Solution: def subsetsWithDup(self, nums: List[int]) -&gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</p>
 
       <p class="meta">
         
@@ -266,10 +289,7 @@ Credits: Special thanks to @jianchao.li.fighter for adding this problem and crea
 
       <p>Write a program to check whether a given number is an ugly number.
 Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-Example 1:
-Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2:
-Input: 8 Output: true Explanation: 8 = 2 × 2 × 2  Example 3:
-Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7.</p>
+Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2 Input: 8 Output: true Explanation: 8 = 2 × 2 × 2  Example 3 Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7.</p>
 
       <p class="meta">
         
@@ -298,7 +318,7 @@ Input: 14 Output: false Explanation: 14 is not ugly since it includes another pr
 Note:
 All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
 Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
-Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution:</p>
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution: def combinationSum3(self, k, n): &#34;&#34;&#34; :type k: int :type n: int :rtype: List[List[int]] &#34;&#34;&#34; self.</p>
 
       <p class="meta">
         
@@ -325,9 +345,8 @@ Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution:</p>
 
       <p>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 The same repeated number may be chosen from candidates unlimited number of times.
-Note:
-All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations. Example 1:
-Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2:</p>
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ]  Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</p>
 
       <p class="meta">
         
@@ -339,7 +358,7 @@ Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
@@ -353,9 +372,7 @@ Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  
       <h2><a href="http://www.hashnopolis.com/post/2018/09/combinations/">Combinations</a></h2>
 
       <p>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example:
-Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution:
-class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
 
       <p class="meta">
         
@@ -409,9 +426,7 @@ class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: i
 
       <p>You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note: Given n will be a positive integer.
-Example 1:
-Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2:</p>
+Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</p>
 
       <p class="meta">
         
@@ -424,33 +439,6 @@ Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 ste
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/">Best Time to Buy and Sell Stock Ii</a></h2>
-
-      <p>Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
-Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

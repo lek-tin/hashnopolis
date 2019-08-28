@@ -179,9 +179,7 @@
       <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/">Longest Palindromic Substring</a></h2>
 
       <p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-Example 1:
-Input: &#34;babad&#34; Output: &#34;bab&#34; Note: &#34;aba&#34; is also a valid answer.  Example 2:
-Input: &#34;cbbd&#34; Output: &#34;bb&#34;  Solution: Dynamic Programming
+Example 1 Input: &#34;babad&#34; Output: &#34;bab&#34; Note: &#34;aba&#34; is also a valid answer.  Example 2 Input: &#34;cbbd&#34; Output: &#34;bb&#34;  Solution Dynamic Programming
 # https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &#34;&#34;&#34; :type s: str :rtype: str &#34;&#34;&#34; str_len = len(s) if str_len == 0: return &#34;&#34; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start &#43; max_len] return solution  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</p>
 
       <p class="meta">
@@ -209,10 +207,7 @@ Input: &#34;cbbd&#34; Output: &#34;bb&#34;  Solution: Dynamic Programming
 
       <p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 Note: For the purpose of this problem, we define empty string as valid palindrome.
-Example 1:
-Input: &#34;A man, a plan, a canal: Panama&#34; Output: true  Example 2:
-Input: &#34;race a car&#34; Output: false  Solution:
-class Solution: def isPalindrome(self, s): &#34;&#34;&#34; :type s: str :rtype: bool &#34;&#34;&#34; if not s: return True head = 0 tail = len(s) - 1 while head &lt;= tail: cHead, cTail = s[head], s[tail] if not cHead.</p>
+Example 1 Input: &#34;A man, a plan, a canal: Panama&#34; Output: true  Example 2 Input: &#34;race a car&#34; Output: false  Solution class Solution: def isPalindrome(self, s): &#34;&#34;&#34; :type s: str :rtype: bool &#34;&#34;&#34; if not s: return True head = 0 tail = len(s) - 1 while head &lt;= tail: cHead, cTail = s[head], s[tail] if not cHead.</p>
 
       <p class="meta">
         

@@ -79,7 +79,7 @@ are useful for building websites. Functions are called by using their name
 followed by the required parameters separated by spaces. Template
 functions cannot be added without recompiling hugo.
 
-**Example:**
+### Example
 
     {{ add 1 2 }}
 
@@ -90,7 +90,7 @@ able to access. To pass along the current context please remember to
 include a trailing dot. The templates location will always be starting at
 the /layout/ directory within Hugo.
 
-**Example:**
+### Example
 
     {{ template "chrome/header.html" . }}
 
@@ -224,7 +224,7 @@ will no longer refer to the data available to the entire page. If you need to
 access this from within the loop you will likely want to set it to a variable
 instead of depending on the context.
 
-**Example:**
+### Example
 
       {{ $title := .Site.Title }}
       {{ range .Params.tags }}

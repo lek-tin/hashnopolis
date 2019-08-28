@@ -14,7 +14,7 @@ Constraints
 `1 <= |T| <= |S| <= 106`, where `|X|` denotes the length of string `X`.
 The length of each word will be less than `15`.
 
-**Function Parameter:**
+### Function Parameter
 You are given a function missingWords that takes the strings `S` and `T` as its arguments. Your solution should return an array of the missing words.
 
 Sample Input:  
@@ -33,7 +33,7 @@ Missing words are:
 1. I
 2. using
 3. programming
-**Solution:**
+### Solution
 ```python
 def missingWords(s, t):
   missing = []

@@ -12,11 +12,11 @@ Given a **set** of candidate numbers (`candidates`) **(without duplicates)** and
 
 The same repeated number may be chosen from `candidates` unlimited number of times.
 
-**Note:**
+### Note
 
 All numbers (including `target`) will be positive integers.
 The solution set must not contain duplicate combinations.
-**Example 1:**
+### Example 1
 ```
 Input: candidates = [2,3,6,7], target = 7,
 A solution set is:
@@ -25,7 +25,7 @@ A solution set is:
   [2,2,3]
 ]
 ```
-**Example 2:**
+### Example 2
 ```
 Input: candidates = [2,3,5], target = 8,
 A solution set is:
@@ -35,35 +35,42 @@ A solution set is:
   [3,5]
 ]
 ```
-**Solution:**
+### Solution
 ```python
 class Solution:
-    def combinationSum(self, candidates, target):
-        """
-        :type candidates: List[int]
-        :type target: int
-        :rtype: List[List[int]]
-        """
-        res = []
-        def add(candidates, target, tempAns, i, sum):
-            # clone a copy of tempAns
-            ans = list(tempAns)
-            # print("res:", res, "; ans:", ans, "; i:", i, "; sum", sum)
-            if(sum>target):
-                return
-            if(sum==target):
-                res.append(ans) 
-                return
-            if(i>=len(candidates)):
-                return
-            # recursive cases
-            # Try current index again. so sum increases by a[i] and as that element can be choosen for unlimited times
-            ans.append(candidates[i])
-            add(candidates, target, ans, i, sum+candidates[i])
-            # backtracking
-            ans.pop()
-            # excluding the current element
-            add(candidates, target, ans, i+1, sum)
-        add(candidates,target, [], 0, 0)
-        return res
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        # Equivalent to subsets
+        results = []
+        combination = []
+        # Edge cases
+        if candidates == None:
+            return results
+        if len(candidates) == 0:
+            results.append([])
+            return results
+        # Sort candidates in ascending order
+        candidates.sort()
+        # Start DFS
+        self.dfs(0, combination, target, results, candidates)
+        return results
+
+    def dfs(self, startIndex, combination, target, results, candidates):
+        # Recursion exit condition met
+        # Combination with a sum equal to target is found
+        if target == 0:
+            results.append(combination[:])
+            return
+        # If startIndex is out of bound, this loop will do nothing.
+        for i in range(startIndex, len(candidates)):
+            # Since candidates is in ascending order, if the current number at i is already bigger than target, there is no need to continue. Abort the searching.
+            if target < candidates[i]:
+                break
+            ## Since there are not duplicates in candidates, we don't need to add logic to skip dups
+            ## In contrast to https://www.lintcode.com/problem/combination-sum/description
+            ## Choose current number at i
+            combination.append(candidates[i])
+            ## Deduct current number at i from target and go one level deeper
+            self.dfs(i, combination, target - candidates[i], results, candidates)
+            ## Choose current number at i
+            combination.pop()
 ```

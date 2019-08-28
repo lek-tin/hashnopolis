@@ -10,24 +10,24 @@ archive: false
 ---
 Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
 
-**Note:** The input string may contain letters other than the parentheses `(` and `)`.
+### Note The input string may contain letters other than the parentheses `(` and `)`.
 
-***Example 1:**
+*### Example 1
 ```
 Input: "()())()"
 Output: ["()()()", "(())()"]
 ```
-***Example 2:**
+*### Example 2
 ```
 Input: "(a)())()"
 Output: ["(a)()()", "(a())()"]
 ```
-***Example 3:**
+*### Example 3
 ```
 Input: ")("
 Output: [""]
 ```
-***Solution:**
+*### Solution
 ```python
 # Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS
 class Solution(object):

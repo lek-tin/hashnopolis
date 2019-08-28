@@ -21,9 +21,9 @@ Input: [1,null,2,3]
 
 Output: [1,2,3]
 ```
-**Follow up:** Recursive solution is trivial, could you do it iteratively?
+### Follow-up Recursive solution is trivial, could you do it iteratively?
 
-**Solution:**
+### Solution
 ```python
 # Definition for a binary tree node.
 # class TreeNode(object):

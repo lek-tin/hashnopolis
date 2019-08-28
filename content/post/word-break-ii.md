@@ -10,10 +10,10 @@ archive: false
 ---
 Given a **non-empty** string s and a dictionary wordDict containing a list of **non-empty** words, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
 
-**Note:**
+### Note
 - The same word in the dictionary may be reused multiple times in the segmentation.
 - You may assume the dictionary does not contain duplicate words.
-**Example 1:**
+### Example 1
 ```
 Input:
 s = "catsanddog"
@@ -24,7 +24,7 @@ Output:
   "cat sand dog"
 ]
 ```
-**Example 2:**
+### Example 2
 ```
 Input:
 s = "pineapplepenapple"
@@ -37,7 +37,7 @@ Output:
 ]
 Explanation: Note that you are allowed to reuse a dictionary word.
 ```
-**Example 3:**
+### Example 3
 ```
 Input:
 s = "catsandog"

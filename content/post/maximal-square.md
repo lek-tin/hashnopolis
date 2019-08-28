@@ -10,7 +10,7 @@ archive: false
 ---
 Given a 2D binary matrix filled with `0`'s and `1`'s, find the largest square containing only `1`'s and return its area.
 
-**Example:**
+### Example
 Input: 
 
 1 0 1 0 0  
@@ -19,7 +19,7 @@ Input:
 1 0 0 1 0  
 
 Output: 4
-**Solution:**
+### Solution
 ```python
 class Solution:
     def maximalSquare(self, matrix):

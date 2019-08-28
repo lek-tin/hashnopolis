@@ -2,9 +2,9 @@
 title: "Copy List With Random Pointer"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "linked-list"]
+tags: ["leetcode", "linked-list", "hashmap"]
 categories: ["algorithm"]
-date: 2019-01-07T23:34:11-08:00
+date: 2019-08-11T23:34:11-08:00
 draft: false
 archive: false
 ---
@@ -12,7 +12,8 @@ A linked list is given such that each node contains an additional random pointer
 
 Return a deep copy of the list.
 
-**Solution:**
+### Solution
+Solution 1: Insert cloned nodes in between original nodes then connect the cloned nodes
 ```python
 # Definition for singly-linked list with a random pointer.
 # class RandomListNode(object):
@@ -20,7 +21,6 @@ Return a deep copy of the list.
 #         self.label = x
 #         self.next = None
 #         self.random = None
-
 class Solution(object):
     def copyRandomList(self, head):
         """
@@ -31,7 +31,7 @@ class Solution(object):
         if head == None:
             return None
 
-        # First pass: for each node in the original list, inset a copied node between the node tne node.next
+        # First pass: for each node in the original list, insert a copied node between the node tne node.next
         cur = head
         while cur != None:
             # Make a copy of cur node, inset it to the middle of cur and cur.next
@@ -45,19 +45,64 @@ class Solution(object):
         cur = head
         while cur != None:
             if cur.random != None:
-                # now points to the "newly" created node, node'
+                # now point to the "newly" created node, node'
                 cur.next.random = cur.random.next
             cur = cur.next.next
 
         # third pass: extract the copied node
         cur = head
         dummy = RandomListNode(0)
-        copyPrev = dummy
+        prev = dummy
         while cur != None:
-            copyPrev.next = cur.next
+            prev.next = cur.next
             cur.next = cur.next.next
-            copyPrev = copyPrev.next
+            prev = prev.next
             cur = cur.next
+            # OR
+            # prev.next = curr.next
+            # # Avoid error: "Next pointer of node with val 1 from the original list was modified."
+            # curr.next = None
+            # prev = prev.next
+            # curr = prev.next
 
         return dummy.next
+```
+Solution 2: using hashmap
+```python
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val, next, random):
+        self.val = val
+        self.next = next
+        self.random = random
+"""
+class Solution:
+    def copyRandomList(self, head: 'Node') -> 'Node':
+        if head is None:
+            return None
+
+        copy = Node(head.val, None, None)
+        mapping = {head: copy}
+
+        while head is not None:
+            clone = mapping[head]
+            # Copy next pointer
+            if head.next in mapping:
+                clone.next = mapping[head.next]
+            else:
+                newNode = None if head.next is None else Node(head.next.val, None, None)
+                clone.next = newNode
+                mapping[head.next] = newNode
+            # Copy random pointer
+            if head.random in mapping:
+                clone.random = mapping[head.random]
+            else:
+                newNode = None if head.random is None else Node(head.random.val, None, None)
+                clone.random = newNode
+                mapping[head.random] = newNode
+            # Move onto the next linked node
+            head = head.next
+
+        return copy
 ```

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="no-js" language="en-us">
+
+<head>
+
+  
+  <title>
+        Super Useful Bash Commands | Hashnopolis
+      </title>
+
+    
+  
+
+
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="List all services
+sudo service --status-all  Create a nested directory if it doesn&amp;rsquo;t exist already.
+mkdir -p /nested/directory  To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)
+ls -al  To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)" />
+  <meta name="keywords" content="bash cli terminal " />
+  
+  
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Super Useful Bash Commands" />
+    <meta name="twitter:description" content="List all services
+sudo service --status-all  Create a nested directory if it doesn&amp;rsquo;t exist already.
+mkdir -p /nested/directory  To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)
+ls -al  To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)" />
+    <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+  
+
+
+
+
+<meta name="generator" content="Hugo 0.30.2" />
+
+
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/super-useful-bash-commands/" />
+<link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="msapplication-TileColor" content="#7679EC">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#7679EC">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Hashnopolis" />
+<meta name="msapplication-tooltip" content="Hashnopolis" />
+<meta name='msapplication-navbutton-color' content="#7679EC" />
+<meta name="msapplication-TileColor" content="#7679EC" />
+<meta name="msapplication-TileImage" content="/img/favicon/favicon-32x32.png" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="/css/highlight.css" />
+<link rel="stylesheet" href="/css/highlight-atom-one-dark.min.css" />
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/overrides.css" />
+
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+</head>
+
+<body>
+  
+  <main class="container left-container">
+
+      <div class="row">
+
+        <section id="sideber" class="sidebar">
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+<a href="/" class="menu-logo">
+  <h1  class="menu-logo__text"># Hashnopolis #</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
+    <g>
+      <path d="M10.001 16l-.143-.01c-.547-.078-.926-.585-.849-1.132l2-14c.078-.546.588-.926 1.132-.848.547.078.927.584.849 1.131l-2 14c-.071.5-.499.859-.989.859zM4.001 16l-.143-.01c-.546-.078-.926-.585-.848-1.132l2-14c.078-.547.58-.927 1.132-.848.546.078.926.585.848 1.132l-2 14c-.072.499-.499.858-.989.858zM15 6h-13c-.552 0-1-.448-1-1s.448-1 1-1h13c.553 0 1 .448 1 1s-.447 1-1 1zM14 12h-13c-.552 0-1-.447-1-1s.448-1 1-1h13c.553 0 1 .447 1 1s-.447 1-1 1z"/>
+    </g>
+  </svg>
+</a>
+
+
+
+
+<ul id="mobile-menu" class="navigation">
+  <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
+  <li><a href="/">Home</a></li>
+  
+  
+  <li><a href="/categories/java">Java</a></li>
+  <li><a href="/categories/python">Python</a></li>
+  <li><a href="/categories/javascript">JavaScript</a></li>
+  <li><a href="/categories/algorithm">Algorithm</a></li>
+  <li><a href="/categories">Categories</a></li>
+  <li><a href="/tags">tags</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+<div class="site-info">
+  <div class="primary-info">
+    <h1>Computer Science, Data Science and Awesome Technology</h1>
+    <footer class="site-footer">
+    <p>© 2016-2019 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    
+    </footer>
+  </div>
+
+  
+  <div class="social-info">
+      <a href="https://linkedin.com/in/lektin/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/lek-tin"><i class="fa fa-github" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+        </section>
+    
+        <section class="main-content">
+          
+  
+
+  
+  <div>
+      <p class="meta">
+        
+        
+        Tags:
+        
+          "<a href="/tags/bash"><strong>bash</strong></a>",
+        
+          "<a href="/tags/cli"><strong>cli</strong></a>",
+        
+          "<a href="/tags/terminal"><strong>terminal</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 3-min read
+      </p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/super-useful-bash-commands.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Super Useful Bash Commands</h1>
+      <ol>
+<li><p>List all services</p>
+
+<pre><code class="language-bash">sudo service --status-all
+</code></pre></li>
+
+<li><p>Create a nested directory if it doesn&rsquo;t exist already.</p>
+
+<pre><code class="language-bash">mkdir -p /nested/directory
+</code></pre></li>
+
+<li><p>To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)</p>
+
+<pre><code class="language-bash">ls -al
+</code></pre></li>
+
+<li><p>To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)</p>
+
+<pre><code class="language-bash">ls -R ~/Documents
+</code></pre></li>
+
+<li><p>Find process which is listening to port 3000, and kill that process</p>
+
+<pre><code class="language-bash">sudo lsof -i :3000 
+kill -9 &lt;PID&gt;
+</code></pre></li>
+
+<li><p>[Dangerous] Recursively delete <strong>EVERYTHING</strong> files</p>
+
+<pre><code class="language-bash">rm -rf /tmp/*   // everything in '/tmp/' folder
+rm -rf ./*      // everything in current folder
+</code></pre></li>
+
+<li><p>Delete curtain files</p>
+
+<pre><code class="language-bash">// Your exact case would be handled by brace expansion, like so:
+rm -rf abc.log.2012-03-{14,27,28}
+rm -rf abc.log.2012-03-14 abc.log.2012-03-27 abc.log.2012-03-28
+</code></pre></li>
+
+<li><p>Search</p>
+
+<pre><code class="language-bash"># search text or searches the given file for lines containing a match to the given strings or words.
+docker logs | grep xxx
+grep xxx
+# Search for files that contains a specific text
+find PATH -type f | xargs grep 'youtube.com'
+# Recursively search for a text in files
+grep -Ril &quot;text-to-find&quot; /
+# i stands for ignore case (optional in your case).
+# R stands for recursive.
+# l stands for &quot;show the file name, not the result itself&quot;.
+# / stands for starting at the root of your machine.
+</code></pre></li>
+
+<li><p>Limit output</p>
+
+<pre><code class="language-bash"># Display only the first 10 lines or the last 20 lines
+ll | head -n 10 | tail -n 20
+</code></pre></li>
+
+<li><p>Check memory usage</p>
+
+<pre><code class="language-bash">free
+# total used free shared buffers cached
+# Mem: 8027952 4377300 3650652 0 103648 1630364
+# -/+ buffers/cache: 2643288 5384664
+# Swap: 15624188 608948 15015240
+</code></pre></li>
+
+<li><p>Count total number of lines of code of all the php files in a directory recursively</p>
+
+<pre><code class="language-bash">find . -name '*.php' | xargs wc -l
+</code></pre></li>
+
+<li><p>List ports in use</p>
+
+<pre><code class="language-bash">netstat -a
+</code></pre></li>
+
+<li><p>Find a file by name</p>
+
+<pre><code class="language-bash">find . -name 'filename*'
+</code></pre></li>
+
+<li><p>Append content to a file.</p>
+
+<pre><code class="language-bash">cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</code></pre></li>
+
+<li><p>Change permission</p>
+
+<pre><code class="language-bash"># owner can read and write
+chmod 600 file
+# owner can read, write and execute
+chmod 700 file
+# all can read and write
+chmod 666 file
+# all can read, write and execute
+chmod 777 file
+</code></pre></li>
+
+<li><p>Locate executable<br />
+<code>which</code> command is very small and simple command to locate executables in the system. It allows user to pass several command names as arguments to get their paths in the system.</p>
+
+<pre><code class="language-bash">$ which [-option]
+$ which ls gdb open grep
+/bin/ls
+/usr/bin/gdb
+/bin/open
+/bin/grep
+</code></pre></li>
+
+<li><p>Alias</p>
+
+<pre><code class="language-bash">alias ll='ls -al'
+</code></pre></li>
+
+<li><p>Upload files to the server</p>
+
+<pre><code class="language-bash"># Secure copy
+scp FILE USER@SERVER_IP:.
+</code></pre></li>
+
+<li><p>Extract <code>bz2</code> files</p>
+
+<pre><code class="language-bash"># flag -k means keeping the source file
+bzip2 -dk AREAWATER.csv.bz2
+</code></pre></li>
+
+<li><p>show CPU architecture-related information</p>
+
+<pre><code class="language-bash">lscpu
+</code></pre></li>
+
+<li><p>install a package</p>
+
+<pre><code class="language-bash">apt-get install &lt;package-name&gt;
+</code></pre></li>
+
+<li><p>list the installed packages</p>
+
+<pre><code class="language-bash">apt list --installed
+</code></pre></li>
+
+<li><p>List kernel attributes</p>
+
+<pre><code class="language-bash">sysctl -a
+</code></pre></li>
+
+<li><p>Passing parameters to <code>awk</code></p>
+
+<pre><code class="language-bash">echo 'Hello world' | awk '{ print $0 }'
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code>Hello world
+</code></pre>
+
+<pre><code class="language-bash">echo 3 4 | awk '{ print $1 + $2 }'
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code>7
+</code></pre></li>
+
+<li><p>Kill processes listening at <code>PORT_NUMBER</code></p>
+
+<pre><code class="language-bash">lsof -i :&lt;PORT_NUMBER&gt; | awk -v i=2 -v j=2 'FNR==i {system(&quot;kill -9 &quot; $2)}'
+</code></pre></li>
+
+<li><p><code>awk</code> Print the <code>j</code>th field of the <code>i</code>th line</p>
+
+<pre><code class="language-bash">awk -v i=5 -v j=3 'FNR == i {print $j}'
+</code></pre></li>
+
+<li><p>Embed sub scripts in main script. Sub script will be evaluated/executed before the main script.</p>
+
+<pre><code class="language-bash"># List current user directory
+ls /Users/`echo $USER`
+</code></pre></li>
+</ol>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+<script>
+  
+
+  
+
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+        </section>
+        
+
+      </div>
+      
+
+  </main>
+
+  
+
+
+<script src="/js/bundle.js"></script>
+
+
+<script src="/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js"></script>
+<script src="/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="/js/vendor/jquery.jpanelmenu.min.js"></script>
+<script src="/js/vendor/highlight.min.js"></script>
+<script src="/js/vendor/fastclick.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script id="dsq-count-scr" src="//hashnopolis.disqus.com/count.js" async></script>
+
+</body>
+
+</html>

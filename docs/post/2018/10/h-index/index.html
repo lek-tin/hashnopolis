@@ -18,8 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&amp;rsquo;s h-index.
 According to the definition of h-index on Wikipedia: &amp;ldquo;A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.&amp;rdquo;
-Example:
-Input: citations = [3,0,6,1,5] Output: 3  Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively." />
+Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively." />
   <meta name="keywords" content="leetcode python " />
   
   
@@ -28,8 +27,7 @@ Input: citations = [3,0,6,1,5] Output: 3  Explanation: [3,0,6,1,5] means the res
     <meta name="twitter:title" content="H-Index" />
     <meta name="twitter:description" content="Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&amp;rsquo;s h-index.
 According to the definition of h-index on Wikipedia: &amp;ldquo;A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.&amp;rdquo;
-Example:
-Input: citations = [3,0,6,1,5] Output: 3  Explanation: [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively." />
+Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -189,18 +187,23 @@ Input: citations = [3,0,6,1,5] Output: 3  Explanation: [3,0,6,1,5] means the res
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/h-index.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>H-Index</h1>
-      <p>Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&rsquo;s h-index.</p>
+      
 
-<p>According to the <a href="https://en.wikipedia.org/wiki/H-index">definition of <em>h-index</em> on Wikipedia</a>: &ldquo;A scientist has index <em>h</em> if <em>h</em> of his/her <em>N</em> papers have <strong>at least</strong> h citations each, and the other <em>N − h</em> papers have <strong>no more than</strong> h citations each.&rdquo;<br />
-<strong>Example:</strong></p>
+<p>Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&rsquo;s h-index.</p>
+
+<p>According to the <a href="https://en.wikipedia.org/wiki/H-index">definition of <em>h-index</em> on Wikipedia</a>: &ldquo;A scientist has index <em>h</em> if <em>h</em> of his/her <em>N</em> papers have <strong>at least</strong> h citations each, and the other <em>N − h</em> papers have <strong>no more than</strong> h citations each.&rdquo;</p>
+
+<h3 id="example">Example</h3>
 
 <pre><code>Input: citations = [3,0,6,1,5]
 Output: 3
 </code></pre>
 
-<p><strong>Explanation:</strong> <code>[3,0,6,1,5]</code> means the researcher has <code>5</code> papers in total and each of them had received <code>3, 0, 6, 1, 5</code> citations respectively. Since the researcher has <code>3</code> papers with at least <code>3</code> citations each and the remaining two with no more than <code>3</code> citations each, her <em>h-index</em> is <code>3</code>.
-<strong>Note:</strong> If there are several possible values for <em>h</em>, the maximum one is taken as the <em>h-index</em>.
-<strong>Solution:</strong></p>
+<h3 id="explanation-3-0-6-1-5-means-the-researcher-has-5-papers-in-total-and-each-of-them-had-received-3-0-6-1-5-citations-respectively-since-the-researcher-has-3-papers-with-at-least-3-citations-each-and-the-remaining-two-with-no-more-than-3-citations-each-her-h-index-is-3">Explanation <code>[3,0,6,1,5]</code> means the researcher has <code>5</code> papers in total and each of them had received <code>3, 0, 6, 1, 5</code> citations respectively. Since the researcher has <code>3</code> papers with at least <code>3</code> citations each and the remaining two with no more than <code>3</code> citations each, her <em>h-index</em> is <code>3</code>.</h3>
+
+<h3 id="note-if-there-are-several-possible-values-for-h-the-maximum-one-is-taken-as-the-h-index">Note If there are several possible values for <em>h</em>, the maximum one is taken as the <em>h-index</em>.</h3>
+
+<h3 id="solution">Solution</h3>
 
 <pre><code class="language-python">class Solution:
     def hIndex(self, citations):

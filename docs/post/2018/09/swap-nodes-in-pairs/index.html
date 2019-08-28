@@ -17,9 +17,9 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a linked list, swap every two adjacent nodes and return its head.
-Example:
-Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note: - Your algorithm should use only constant extra space. - You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed. Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; # https://www." />
+Example Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note  Your algorithm should use only constant extra space. You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.
+Solution ```python
+Definition for singly-linked list. class ListNode(object): def init(self, x): self.val = x self.next = None  class Solution(object): def swapPairs(self, head): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type head: ListNode :rtype: ListNode &amp;ldquo;&amp;rdquo;&amp;rdquo; # https://www." />
   <meta name="keywords" content="leetcode binary-tree " />
   
   
@@ -27,9 +27,9 @@ Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1
     
     <meta name="twitter:title" content="Swap Nodes in Pairs" />
     <meta name="twitter:description" content="Given a linked list, swap every two adjacent nodes and return its head.
-Example:
-Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note: - Your algorithm should use only constant extra space. - You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed. Solution:
-# Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; # https://www." />
+Example Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note  Your algorithm should use only constant extra space. You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.
+Solution ```python
+Definition for singly-linked list. class ListNode(object): def init(self, x): self.val = x self.next = None  class Solution(object): def swapPairs(self, head): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type head: ListNode :rtype: ListNode &amp;ldquo;&amp;rdquo;&amp;rdquo; # https://www." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -189,31 +189,44 @@ Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/swap-nodes-in-pairs.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Swap Nodes in Pairs</h1>
-      <p>Given a linked list, swap every two adjacent nodes and return its head.</p>
+      
 
-<p><strong>Example:</strong></p>
+<p>Given a linked list, swap every two adjacent nodes and return its head.</p>
+
+<h3 id="example">Example</h3>
 
 <pre><code>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.
 </code></pre>
 
-<p><strong>Note:</strong>
-- Your algorithm should use only constant extra space.
-- You may not modify the values in the list&rsquo;s nodes, only nodes itself may be changed.
-<strong>Solution:</strong></p>
+<h3 id="note">Note</h3>
 
-<pre><code class="language-python"># Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+<ul>
+<li>Your algorithm should use only constant extra space.</li>
 
-class Solution(object):
+<li><p>You may not modify the values in the list&rsquo;s nodes, only nodes itself may be changed.</p>
+
+<h3 id="solution">Solution</h3>
+
+<p>```python</p>
+
+<h1 id="definition-for-singly-linked-list">Definition for singly-linked list.</h1>
+
+<h1 id="class-listnode-object">class ListNode(object):</h1>
+
+<h1 id="def-init-self-x">def <strong>init</strong>(self, x):</h1>
+
+<h1 id="self-val-x">self.val = x</h1>
+
+<h1 id="self-next-none">self.next = None</h1></li>
+</ul>
+
+<p>class Solution(object):
     def swapPairs(self, head):
-        &quot;&quot;&quot;
+        &ldquo;&rdquo;&rdquo;
         :type head: ListNode
         :rtype: ListNode
-        &quot;&quot;&quot;
-        # https://www.youtube.com/watch?v=f45_eF1gmn8
+        &ldquo;&rdquo;&rdquo;
+        # <a href="https://www.youtube.com/watch?v=f45_eF1gmn8">https://www.youtube.com/watch?v=f45_eF1gmn8</a>
         root = ListNode(0)
         root.next = head
         pre = root
@@ -238,7 +251,7 @@ class Solution(object):
             else:
                 break
         return root.next
-</code></pre>
+```</p>
 
   </div>
 

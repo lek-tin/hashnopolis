@@ -27,7 +27,7 @@ return its bottom-up level order traversal as:
   [3]
 ]
 ```
-**Solution:**
+### Solution
 ```python
 # Definition for a binary tree node.
 # class TreeNode:

@@ -10,9 +10,9 @@ archive: false
 ---
 Given a set of `distinct` integers, nums, return all possible subsets (the power set).
 
-**Note:** The solution set must not contain duplicate subsets.
+### Note The solution set must not contain duplicate subsets.
 
-**Example:**
+### Example
 ```
 Input: nums = [1,2,3]
 Output:
@@ -27,7 +27,7 @@ Output:
   []
 ]
 ```
-**Solution:**
+### Solution
 ```python
 # Time: o(2^n)
 # Space: o(n)

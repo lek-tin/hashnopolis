@@ -233,9 +233,7 @@ For corner elements, we need to consider only one neighbor for comparison. There
       <p>Implement int sqrt(int x).
 Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
 Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
-Example 1:
-Input: 4 Output: 2  Example 2:
-Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned.</p>
+Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned.</p>
 
       <p class="meta">
         
@@ -260,8 +258,8 @@ Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842…, and since t
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/10/search-a-2d-matrix/">Search a 2D Matrix</a></h2>
 
-      <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: - Integers in each row are sorted from left to right. - The first integer of each row is greater than the last integer of the previous row. Example 1:
-Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 Output: true  Example 2:</p>
+      <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: - Integers in each row are sorted from left to right. - The first integer of each row is greater than the last integer of the previous row.
+Example 1 Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 Output: true  Example 2 Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 13 Output: false  Solution # Treat the 2-d matrix as a 1-d list of length rows * cols.</p>
 
       <p class="meta">
         
@@ -289,9 +287,7 @@ Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 
       <p>Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
 Your algorithm’s runtime complexity must be in the order of O(log n).
 If the target is not found in the array, return [-1, -1].
-Example 1:
-Input: nums = [5,7,7,8,8,10], target = 8 Output: [3,4]  Example 2:
-Input: nums = [5,7,7,8,8,10], target = 6 Output: [-1,-1]  Solution: Time: O(logN)</p>
+Example 1 Input: nums = [5,7,7,8,8,10], target = 8 Output: [3,4]  Example 2 Input: nums = [5,7,7,8,8,10], target = 6 Output: [-1,-1]  Solution Time: O(logN)</p>
 
       <p class="meta">
         
@@ -321,8 +317,7 @@ Input: nums = [5,7,7,8,8,10], target = 6 Output: [-1,-1]  Solution: Time: O(logN
 You are given a target value to search. If found in the array return its index, otherwise return -1.
 You may assume no duplicate exists in the array.
 Your algorithm’s runtime complexity must be in the order of O(log n).
-Example 1:
-Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2:</p>
+Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1  Solution class Solution: def search(self, nums: List[int], target: int) -&gt; int: if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start &#43; 1) &lt; end: mid = start &#43; (end - start) // 2 if nums[mid] == target: return mid # &lt; because there are no duplicate numbers.</p>
 
       <p class="meta">
         
@@ -407,7 +402,7 @@ Example 2: nums1 = [1, 2] nums2 = [3, 4]  The median is (2 &#43; 3)/2 = 2.</p>
 You are given a target value to search. If found in the array return true, otherwise return false.
 Example 1:
 Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow up: - This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
+Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
 
       <p class="meta">
         

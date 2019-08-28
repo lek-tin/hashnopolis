@@ -191,7 +191,9 @@ Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]" />
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/lowest-common-ancestor-of-a-binary-search-tree.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Lowest Common Ancestor of a Binary Search Tree</h1>
-      <p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</p>
+      
+
+<p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</p>
 
 <p>According to <a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor">the definition of LCA</a> on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow <strong>a node to be a descendant of itself</strong>).”</p>
 
@@ -206,14 +208,14 @@ Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]" />
          3   5
 </code></pre>
 
-<p><strong>Example 1:</strong></p>
+<h3 id="example-1">Example 1</h3>
 
 <pre><code>Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
 Output: 6
 Explanation: The LCA of nodes 2 and 8 is 6.
 </code></pre>
 
-<p><strong>Example 2:</strong></p>
+<h3 id="example-2">Example 2</h3>
 
 <pre><code>Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
 Output: 2
@@ -221,46 +223,59 @@ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of 
              according to the LCA definition.
 </code></pre>
 
-<p><strong>Note:</strong>
-- All of the nodes&rsquo; values will be unique.
-- p and q are different and both values will exist in the BST.
-<strong>Solution:</strong></p>
+<h3 id="note">Note</h3>
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<ul>
+<li>All of the nodes&rsquo; values will be unique.</li>
 
-class Solution(object):
+<li><p>p and q are different and both values will exist in the BST.</p>
+
+<h3 id="solution">Solution</h3>
+
+<p>```python</p>
+
+<h1 id="definition-for-a-binary-tree-node">Definition for a binary tree node.</h1>
+
+<h1 id="class-treenode-object">class TreeNode(object):</h1>
+
+<h1 id="def-init-self-x">def <strong>init</strong>(self, x):</h1>
+
+<h1 id="self-val-x">self.val = x</h1>
+
+<h1 id="self-left-none">self.left = None</h1>
+
+<h1 id="self-right-none">self.right = None</h1></li>
+</ul>
+
+<p>class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
-        &quot;&quot;&quot;
+        &ldquo;&rdquo;&rdquo;
         :type root: TreeNode
         :type p: TreeNode
         :type q: TreeNode
         :rtype: TreeNode
-        &quot;&quot;&quot;
+        &ldquo;&rdquo;&rdquo;
         # Edge/Condition
         if not root:
             return None
         if root == p or root == q:
-            return root
+            return root</p>
 
-        # Divide
-        left = self.lowestCommonAncestor(root.left, p, q)
-        right = self.lowestCommonAncestor(root.right, p, q)
+<pre><code>    # Divide
+    left = self.lowestCommonAncestor(root.left, p, q)
+    right = self.lowestCommonAncestor(root.right, p, q)
 
-        # Conquer
-        if left and right:
-            return root
-        if not left:
-            return right
-        if not right:
-            return left
+    # Conquer
+    if left and right:
+        return root
+    if not left:
+        return right
+    if not right:
+        return left
 </code></pre>
 
-<pre><code class="language-java">/**
+<pre><code>```java
+/**
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;

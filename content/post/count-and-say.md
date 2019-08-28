@@ -23,17 +23,17 @@ Given an integer `n` where `1 ≤ n ≤ 30`, generate the `n`<sup>th</sup> term 
 
 Note: Each term of the sequence of integers will be represented as a string.
 
-**Example 1:**
+### Example 1
 ```
 Input: 1
 Output: "1"
 ```
-**Example 2:**
+### Example 2
 ```
 Input: 4
 Output: "1211"
 ```
-**Solution:**
+### Solution
 ```python
 class Solution:
     def countAndSay(self, n):

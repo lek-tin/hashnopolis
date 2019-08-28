@@ -21,23 +21,23 @@ Given the following binary tree:  root = [3,5,1,6,2,0,8,null,null,7,4]
    6      _2       0       8
          /  \
          7   4
-**Example 1:**
+### Example 1
 ```
 Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
 Output: 3
 Explanation: The LCA of of nodes 5 and 1 is 3.
 ```
-**Example 2:**
+### Example 2
 ```
 Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
 Output: 5
 Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
 ```
-**Note:**
+### Note
 - All of the nodes' values will be unique.
 - p and q are different and both values will exist in the binary tree.
 
-**Solution:**
+### Solution
 ```python
 # Definition for a binary tree node.
 # class TreeNode(object):

@@ -4,7 +4,7 @@ description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "sum"]
 categories: ["algorithm"]
-date: 2018-08-27T23:30:43+08:00
+date: 2018-08-23T23:30:43+08:00
 draft: false
 archive: false
 ---
@@ -16,41 +16,29 @@ Given array nums = [-1, 2, 1, -4], and target = 1.
 
 The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 ```
-**Solution:**
+### Solution
 ```python
 # Time: o(n^2)
 # Space: o(1)
 class Solution:
-  def threeSumClosest(self, nums, target):
-    """
-    :type nums: List[int]
-    :type target: int
-    :rtype: int
-    """
-    if nums is None or len(nums) < 3:
-      return None
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
+        if not nums or len(nums) < 3:
+            return -1
 
-    nums.sort()
-    closest = nums[0] + nums[1] + nums[-1]
+        nums.sort()
+        bestSum = nums[0] + nums[1] + nums[2]
+        for i in range(0, len(nums)-2):
+            num = nums[i]
+            left = i + 1
+            right = len(nums) - 1
+            while left < right:
+                newSum = num + nums[left] + nums[right]
+                if abs(target - newSum) < abs(target - bestSum):
+                    bestSum = newSum
+                elif newSum < target:
+                    left += 1
+                else:
+                    right -= 1
 
-    for i in range(len(nums)-2):
-      low = i+1
-      high = len(nums)-1
-
-      while low < high:
-        tempSum = nums[i] + nums[low] + nums[high]
-        # Perfect => exit
-        if tempSum == target:
-          return target
-
-        if abs(tempSum - target) < abs(closest - target):
-          closest = tempSum
-
-        # Continue the iteration
-        if tempSum - target > 0:
-          high -= 1
-        else:
-          low += 1
-
-    return closest
+        return bestSum
 ```
