@@ -2,8 +2,8 @@
 title: "Serialize and Deserialize Binary Tree"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "binary-tree", "serialization", ""]
-categories: ["algorithm"]`
+tags: ["leetcode", "binary-tree", "serialization"]
+categories: ["algorithm"]
 date: 2018-11-13T17:31:13-08:00
 draft: false
 archive: false

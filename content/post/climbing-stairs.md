@@ -4,7 +4,7 @@ description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "python"]
 categories: ["algorithm"]
-date: 2018-09-09T15:16:10+08:00
+date: 2019-08-28T15:16:10+08:00
 draft: false
 archive: false
 ---
@@ -50,4 +50,21 @@ class Solution:
                 s1, s2 = s2, s1+s2
                 n -= 1
         return s2
+```
+or
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n == 1:
+            return 1
+        if n == 2:
+            return 2
+
+        dp = [1] * n
+        dp[0] = 1
+        dp[1] = 2
+        for i in range(2, n):
+            dp[i] = dp[i-1] + dp[i-2]
+
+        return dp[n-1]
 ```

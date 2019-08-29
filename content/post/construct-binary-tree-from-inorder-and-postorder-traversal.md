@@ -64,3 +64,34 @@ class Solution {
     }
 }
 ```
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+        if len(inorder) != len(postorder):
+            return None
+        n = len(postorder)
+        return self.build(postorder, 0, n-1, inorder, 0, n-1)
+
+    def findPosition(self, nodeList, start, end, target):
+        for i in range(start, end+1):
+            if nodeList[i] == target:
+                return i
+        return -1
+
+    def build(self, postOrder, postStart, postEnd, inOrder, inStart, inEnd):
+        if inStart > inEnd:
+            return None
+
+        root = TreeNode(postOrder[postEnd])
+        root_post_inorder = self.findPosition(inOrder, inStart, inEnd, root.val)
+        root.left = self.build(postOrder, postStart, postStart+(root_post_inorder-inStart)-1, inOrder, inStart, root_post_inorder-1)
+        root.right = self.build(postOrder, postStart+(root_post_inorder-inStart), postEnd-1, inOrder, root_post_inorder+1, inEnd)
+        return root
+```
