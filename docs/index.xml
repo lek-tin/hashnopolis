@@ -7,10 +7,67 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 22 Aug 2019 01:23:49 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2019 02:15:01 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Largest Divisible Subset</title>
+      <link>http://www.hashnopolis.com/post/2019/08/largest-divisible-subset/</link>
+      <pubDate>Thu, 29 Aug 2019 02:15:01 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/largest-divisible-subset/</guid>
+      <description>Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
+Si % Sj = 0 or Sj % Si = 0.
+If there are multiple solutions, return any subset is fine.
+Example 1: Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok)  Example 2: Input: [1,2,4,8] Output: [1,2,4,8]  Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&amp;gt; List[int]: if not nums or len(nums) == 0: return [] nums.</description>
+    </item>
+    
+    <item>
+      <title>Climbing Stairs</title>
+      <link>http://www.hashnopolis.com/post/2019/08/climbing-stairs/</link>
+      <pubDate>Wed, 28 Aug 2019 15:16:10 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/climbing-stairs/</guid>
+      <description>You are climbing a stair case. It takes n steps to reach to the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</description>
+    </item>
+    
+    <item>
+      <title>Valid Triangle Number</title>
+      <link>http://www.hashnopolis.com/post/2019/08/valid-triangle-number/</link>
+      <pubDate>Sun, 25 Aug 2019 01:33:06 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/valid-triangle-number/</guid>
+      <description>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
+Example 1: Input: [2,2,3,4] Output: 3  Explanation: Valid combinations are:
+2,3,4 (using the first 2) 2,3,4 (using the second 2) 2,2,3
+Note:  The length of the given array won&amp;rsquo;t exceed 1000. The integers in the given array are in the range of [0, 1000].</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Linked List</title>
+      <link>http://www.hashnopolis.com/post/2019/08/palindrome-linked-list/</link>
+      <pubDate>Sat, 24 Aug 2019 17:36:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/palindrome-linked-list/</guid>
+      <description>Given a singly linked list, determine if it is a palindrome.
+Example 1: Input: 1-&amp;gt;2 Output: false  Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true  Follow up: Could you do it in O(n) time and O(1) space?
+Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&amp;gt; bool: if not head: return True middle = self.</description>
+    </item>
+    
+    <item>
+      <title>3sum With Multiplicity</title>
+      <link>http://www.hashnopolis.com/post/2019/08/3sum-with-multiplicity/</link>
+      <pubDate>Sat, 24 Aug 2019 14:58:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/3sum-with-multiplicity/</guid>
+      <description>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &amp;lt; j &amp;lt; k and A[i] + A[j] + A[k] == target.
+As the answer can be very large, return it modulo 10^9 + 7.
+Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</description>
+    </item>
     
     <item>
       <title>3sum Smaller</title>
@@ -442,7 +499,7 @@ Left boundary is defined as the path from root to the left-most node. Right boun
     </item>
     
     <item>
-      <title>Serialize and Deserialize Bst</title>
+      <title>Serialize and Deserialize BST</title>
       <link>http://www.hashnopolis.com/post/2019/03/serialize-and-deserialize-bst/</link>
       <pubDate>Sun, 10 Mar 2019 22:59:14 -0700</pubDate>
       
@@ -2140,17 +2197,6 @@ Example 1:
 Input: [1,2,3,1] Output: true  Example 2:
 Input: [1,2,3,4] Output: false  Example 3:
 Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution class Solution: def containsDuplicate(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: bool &amp;quot;&amp;quot;&amp;quot; sortedNums = sorted(nums) for i in range(1, len(nums)): if sortedNums[i] == sortedNums[i-1]: return True return False  </description>
-    </item>
-    
-    <item>
-      <title>Climbing Stairs</title>
-      <link>http://www.hashnopolis.com/post/2018/09/climbing-stairs/</link>
-      <pubDate>Sun, 09 Sep 2018 15:16:10 +0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/09/climbing-stairs/</guid>
-      <description>You are climbing a stair case. It takes n steps to reach to the top.
-Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</description>
     </item>
     
     <item>
