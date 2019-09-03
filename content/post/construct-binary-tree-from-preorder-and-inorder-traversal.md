@@ -4,7 +4,7 @@ description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "binary-tree"]
 categories: ["algorithm"]
-date: 2019-01-28T23:20:01-08:00
+date: 2019-08-24T23:20:01-08:00
 draft: false
 archive: false
 ---
@@ -26,6 +26,8 @@ Return the following binary tree:
     /  \
    15   7
 ```
+### Hint
+![construct-binary-tree-from-preorder-and-inorder-traversal](/img/post/construct-binary-tree-from-preorder-and-inorder-traversal.jpg)
 ### Solution:
 ```java
 /**
