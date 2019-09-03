@@ -48,6 +48,32 @@ Note:  The length of the given array won&amp;rsquo;t exceed 1000. The integers i
     </item>
     
     <item>
+      <title>Construct Binary Tree From Inorder and Postorder Traversal</title>
+      <link>http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-inorder-and-postorder-traversal/</link>
+      <pubDate>Sat, 24 Aug 2019 23:50:51 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-inorder-and-postorder-traversal/</guid>
+      <description>Given inorder and postorder traversal of a tree, construct the binary tree.
+Note: You may assume that duplicates do not exist in the tree.
+For example, given
+inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</description>
+    </item>
+    
+    <item>
+      <title>Construct Binary Tree From Preorder and Inorder Traversal</title>
+      <link>http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-preorder-and-inorder-traversal/</link>
+      <pubDate>Sat, 24 Aug 2019 23:20:01 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-preorder-and-inorder-traversal/</guid>
+      <description>Given preorder and inorder traversal of a tree, construct the binary tree.
+Note: You may assume that duplicates do not exist in the tree.
+For example, given:
+preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</description>
+    </item>
+    
+    <item>
       <title>Palindrome Linked List</title>
       <link>http://www.hashnopolis.com/post/2019/08/palindrome-linked-list/</link>
       <pubDate>Sat, 24 Aug 2019 17:36:35 -0700</pubDate>
@@ -700,19 +726,6 @@ Example: Given binary tree [3,9,20,null,null,15,7],
     </item>
     
     <item>
-      <title>Construct Binary Tree From Inorder and Postorder Traversal</title>
-      <link>http://www.hashnopolis.com/post/2019/02/construct-binary-tree-from-inorder-and-postorder-traversal/</link>
-      <pubDate>Mon, 04 Feb 2019 23:50:51 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/02/construct-binary-tree-from-inorder-and-postorder-traversal/</guid>
-      <description>Given inorder and postorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
-For example, given
-inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</description>
-    </item>
-    
-    <item>
       <title>Count Number of Substrings With K Distinct Characters</title>
       <link>http://www.hashnopolis.com/post/2019/01/count-number-of-substrings-with-k-distinct-characters/</link>
       <pubDate>Wed, 30 Jan 2019 00:56:00 -0800</pubDate>
@@ -720,19 +733,6 @@ inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary t
       <guid>http://www.hashnopolis.com/post/2019/01/count-number-of-substrings-with-k-distinct-characters/</guid>
       <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
 Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters.  Example 2 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str.</description>
-    </item>
-    
-    <item>
-      <title>Construct Binary Tree From Preorder and Inorder Traversal</title>
-      <link>http://www.hashnopolis.com/post/2019/01/construct-binary-tree-from-preorder-and-inorder-traversal/</link>
-      <pubDate>Mon, 28 Jan 2019 23:20:01 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/01/construct-binary-tree-from-preorder-and-inorder-traversal/</guid>
-      <description>Given preorder and inorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
-For example, given:
-preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</description>
     </item>
     
     <item>

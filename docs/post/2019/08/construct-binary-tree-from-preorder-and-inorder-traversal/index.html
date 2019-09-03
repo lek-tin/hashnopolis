@@ -5,7 +5,7 @@
 
   
   <title>
-        Unique Paths II | Hashnopolis
+        Construct Binary Tree From Preorder and Inorder Traversal | Hashnopolis
       </title>
 
     
@@ -16,18 +16,22 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
-The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
-Now consider if some obstacles are added to the grids. How many unique paths would there be?" />
-  <meta name="keywords" content="leetcode java dynamic-programming " />
+  <meta name="description" content="Given preorder and inorder traversal of a tree, construct the binary tree.
+Note: You may assume that duplicates do not exist in the tree.
+For example, given:
+preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder." />
+  <meta name="keywords" content="leetcode binary-tree " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Unique Paths II" />
-    <meta name="twitter:description" content="A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
-The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
-Now consider if some obstacles are added to the grids. How many unique paths would there be?" />
+    <meta name="twitter:title" content="Construct Binary Tree From Preorder and Inorder Traversal" />
+    <meta name="twitter:description" content="Given preorder and inorder traversal of a tree, construct the binary tree.
+Note: You may assume that duplicates do not exist in the tree.
+For example, given:
+preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -37,7 +41,7 @@ Now consider if some obstacles are added to the grids. How many unique paths wou
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/unique-paths-ii/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-preorder-and-inorder-traversal/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -181,111 +185,107 @@ Now consider if some obstacles are added to the grids. How many unique paths wou
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/java"><strong>java</strong></a>",
-        
-          "<a href="/tags/dynamic-programming"><strong>dynamic-programming</strong></a>",
+          "<a href="/tags/binary-tree"><strong>binary-tree</strong></a>",
         
         <i class="small material-icons">access_time</i> 2-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/unique-paths-ii.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Unique Paths II</h1>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/construct-binary-tree-from-preorder-and-inorder-traversal.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Construct Binary Tree From Preorder and Inorder Traversal</h1>
       
 
-<p>A robot is located at the top-left corner of a <code>m x n</code> grid (marked &lsquo;Start&rsquo; in the diagram below).</p>
-
-<p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &lsquo;Finish&rsquo; in the diagram below).</p>
-
-<p>Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
-
-<p><img src="https://leetcode.com/static/images/problemset/robot_maze.png" alt="unique paths" title="Unique paths" /></p>
-
-<p>An obstacle and empty space is marked as <code>1</code> and <code>0</code> respectively in the grid.</p>
+<p>Given preorder and inorder traversal of a tree, construct the binary tree.</p>
 
 <h3 id="note">Note:</h3>
 
-<ul>
-<li>m and n will be at most 100.</li>
-</ul>
+<p>You may assume that duplicates do not exist in the tree.</p>
 
-<h3 id="example-1">Example 1:</h3>
+<p>For example, given:</p>
 
-<pre><code>Input:
-[
-  [0,0,0],
-  [0,1,0],
-  [0,0,0]
-]
-Output: 2
-Explanation:
-There is one obstacle in the middle of the 3x3 grid above.
-There are two ways to reach the bottom-right corner:
-1. Right -&gt; Right -&gt; Down -&gt; Down
-2. Down -&gt; Down -&gt; Right -&gt; Right
+<pre><code>preorder = [3,9,20,15,7]
+inorder = [9,3,15,20,7]
 </code></pre>
+
+<p>Return the following binary tree:</p>
+
+<pre><code>    3
+   / \
+  9  20
+    /  \
+   15   7
+</code></pre>
+
+<h3 id="hint">Hint</h3>
+
+<p><img src="/img/post/construct-binary-tree-from-preorder-and-inorder-traversal.jpg" alt="construct-binary-tree-from-preorder-and-inorder-traversal" /></p>
 
 <h3 id="solution">Solution:</h3>
 
-<pre><code class="language-python"># Time: O(m*n)
-# Space: O(n)
-class Solution:
-    def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -&gt; int:
-        m = len(obstacleGrid)
-        n = len(obstacleGrid[0])
-        if m == 0 or n == 0:
-            return 0
-
-        dp = [[0 for i in range(n)] for j in range(m)]
-
-        for i in range(m):
-            if obstacleGrid[i][0] != 1:
-                dp[i][0] = 1
-            else:
-                break
-
-        for i in range(n):
-            if obstacleGrid[0][i] != 1:
-                dp[0][i] = 1
-            else:
-                break
-
-        for i in range(1, m):
-            for j in range(1, n):
-                if obstacleGrid[i][j] == 1:
-                    dp[i][j] = 0
-                else:
-                    dp[i][j] = dp[i-1][j] + dp[i][j-1]
-
-        if dp[-1][-1] &gt; 2147483647:
-            return -1
-        else:
-            return dp[-1][-1]
-</code></pre>
-
-<pre><code class="language-java">// Time: O(m*n)
-// Space: O(n)
+<pre><code class="language-java">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 class Solution {
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        if (obstacleGrid == null || obstacleGrid.length == 0 || obstacleGrid[0].length == 0) {
-            return 0;
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return helper(0, 0, inorder.length - 1, preorder, inorder);
+    }
+
+    public TreeNode helper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
+        if (preStart &gt; preorder.length - 1 || inStart &gt; inEnd) {
+            return null;
         }
-
-        int rows = obstacleGrid.length;
-        int cols = obstacleGrid[0].length;
-        int[] res = new int[cols];
-        res[0] = 1;
-
-        for (int i = 0; i &lt; rows; i++) {
-            for (int j = 0; j &lt; cols; j++) {
-                if (obstacleGrid[i][j] == 1) {
-                    res[j] = 0;
-                } else if (j &gt; 0) {
-                    res[j] += res[j-1];
-                }
+        TreeNode root = new TreeNode(preorder[preStart]);
+        // Index of current root in inorder
+        int inIndex = 0;
+        for (int i = inStart; i &lt;= inEnd; i++) {
+            if (inorder[i] == root.val) {
+                inIndex = i;
             }
         }
-        return res[cols-1];
+        root.left = helper(preStart + 1, inStart, inIndex - 1, preorder, inorder);
+        root.right = helper(preStart + inIndex - inStart + 1, inIndex + 1, inEnd, preorder, inorder);
+        return root;
     }
 }
+</code></pre>
+
+<pre><code class="language-python"># Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def buildTree(self, preorder: List[int], inorder: List[int]) -&gt; TreeNode:
+        if len(preorder) != len(inorder):
+            return None
+
+        return self.traverse(preorder, 0, len(preorder)-1, inorder, 0, len(inorder)-1)
+
+    def findPosition(self, nodeArr, start, end, target):
+        for i in range(start, end+1):
+            if nodeArr[i] == target:
+                return i
+        return -1
+
+    def traverse(self, preOrder, preStart, preEnd, inOrder, inStart, inEnd):
+        if preStart &gt; preEnd:
+            return None
+
+        root = TreeNode(preOrder[preStart])
+
+        root_pos_inorder = self.findPosition(inOrder, inStart, inEnd, root.val)
+
+        root.left = self.traverse(preOrder, preStart+1, preStart + (root_pos_inorder - 1 - inStart + 1), inOrder, inStart, root_pos_inorder-1)
+
+        root.right = self.traverse(preOrder, preEnd - (inEnd - root_pos_inorder)+1, preEnd, inOrder, root_pos_inorder+1, inEnd)
+
+        return root
 </code></pre>
 
   </div>
