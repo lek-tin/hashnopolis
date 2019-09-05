@@ -4,7 +4,7 @@ description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "matrix", "dynamic-programming"]
 categories: ["algorithm"]
-date: 2018-10-26T23:04:31-07:00
+date: 2019-09-02T23:04:31-07:00
 draft: false
 archive: false
 ---
@@ -41,4 +41,28 @@ class Solution:
                     grid[r][c] += min(grid[r-1][c], grid[r][c-1])
 
         return grid[len(grid) - 1][len(grid[0]) - 1]
+```
+```python
+class Solution:
+    def minPathSum(self, grid: List[List[int]]) -> int:
+        m = len(grid)
+        n = len(grid[0])
+
+        if m == 0 or n == 0:
+            return 0
+
+        sums = [[0 for _ in range(n)] for _ in range(m)]
+        sums[0][0] = grid[0][0]
+
+        for i in range(1, m):
+            sums[i][0] = sums[i-1][0] + grid[i][0]
+
+        for i in range(1, n):
+            sums[0][i] = sums[0][i-1] + grid[0][i]
+
+        for i in range(1, m):
+            for j in range(1, n):
+                sums[i][j] = min(sums[i-1][j], sums[i][j-1]) + grid[i][j]
+
+        return sums[-1][-1]
 ```
