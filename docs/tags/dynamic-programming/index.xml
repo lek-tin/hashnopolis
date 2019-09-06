@@ -7,10 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 06 Apr 2019 22:45:41 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2019 23:06:05 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Triangle</title>
+      <link>http://www.hashnopolis.com/post/2019/09/triangle/</link>
+      <pubDate>Wed, 04 Sep 2019 23:06:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/triangle/</guid>
+      <description>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
+For example, given the following triangle
+[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).  Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Path Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/09/minimum-path-sum/</link>
+      <pubDate>Mon, 02 Sep 2019 23:04:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/minimum-path-sum/</guid>
+      <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution: def minPathSum(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[int]] :rtype: int &amp;quot;&amp;quot;&amp;quot; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
+    </item>
+    
+    <item>
+      <title>Largest Divisible Subset</title>
+      <link>http://www.hashnopolis.com/post/2019/08/largest-divisible-subset/</link>
+      <pubDate>Thu, 29 Aug 2019 02:15:01 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/08/largest-divisible-subset/</guid>
+      <description>Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
+Si % Sj = 0 or Sj % Si = 0.
+If there are multiple solutions, return any subset is fine.
+Example 1: Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok)  Example 2: Input: [1,2,4,8] Output: [1,2,4,8]  Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&amp;gt; List[int]: if not nums or len(nums) == 0: return [] nums.</description>
+    </item>
     
     <item>
       <title>Coin Change 2</title>
@@ -134,16 +167,6 @@ Example Input:
 1 0 0 1 0
 Output: 4
 Solution class Solution: def maximalSquare(self, matrix): &amp;quot;&amp;quot;&amp;quot; :type matrix: List[List[str]] :rtype: int &amp;quot;&amp;quot;&amp;quot; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;quot;1&amp;quot;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;quot;1&amp;quot;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;quot;0&amp;quot;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2  class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</description>
-    </item>
-    
-    <item>
-      <title>Minimum Path Sum</title>
-      <link>http://www.hashnopolis.com/post/2018/10/minimum-path-sum/</link>
-      <pubDate>Fri, 26 Oct 2018 23:04:31 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/10/minimum-path-sum/</guid>
-      <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution: def minPathSum(self, grid): &amp;quot;&amp;quot;&amp;quot; :type grid: List[List[int]] :rtype: int &amp;quot;&amp;quot;&amp;quot; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
     </item>
     
     <item>

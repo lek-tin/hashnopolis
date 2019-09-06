@@ -2,7 +2,7 @@
 title: "Inorder Successor in BST"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "bst"]
+tags: ["leetcode", "bst", "stack"]
 categories: ["algorithm"]
 date: 2019-08-22T00:23:43-07:00
 draft: false
@@ -38,15 +38,42 @@ Explanation: There is no in-order successor of the current node, so the answer i
 #         self.val = x
 #         self.left = None
 #         self.right = None
-
+# Time: o(h)
 class Solution:
     def inorderSuccessor(self, root: 'TreeNode', p: 'TreeNode') -> 'TreeNode':
         if not root:
             return None
 
         if root.val > p.val:
+            # Root is greater than p, so traverse down to left substree
             succ = self.inorderSuccessor(root.left, p)
+            # If not succ is found, return root; Otherwise return the smaller succ
             return root if succ == None else succ
         else:
+            # Search in right subtree only, as the successor definitely doesn't exist in the left subtree
             return self.inorderSuccessor(root.right, p)
+```
+```python
+# time: o(n)
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def inorderSuccessor(self, root: 'TreeNode', p: 'TreeNode') -> 'TreeNode':
+        stack = []
+        found = False
+
+        while root or stack:
+            while root:
+                stack.append(root)
+                root = root.left
+            if found:
+                return stack[-1]
+            found = p.val == stack[-1].val
+            root = stack.pop().right
+        return None
 ```
