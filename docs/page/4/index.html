@@ -170,6 +170,86 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/06/machine-learning-questions/">Machine Learning Questions</a></h2>
+
+      <p>What is an Eigenvalue and Eigenvector? Eigenvectors are used for understanding linear transformations. In data analysis, we usually calculate the eigenvectors for a correlation or covariance matrix. Eigenvectors are the directions along which a particular linear transformation acts by flipping, compressing or stretching. Eigenvalue can be referred to as the strength of the transformation in the direction of eigenvector or the factor by which the compression occurs.
+What is Gradient Descent?</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/machine-learning" ><strong>"machine-learning"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 7-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/coin-change-2/">Coin Change 2</a></h2>
+
+      <p>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2&#43;2&#43;1 5=2&#43;1&#43;1&#43;1 5=1&#43;1&#43;1&#43;1&#43;1  Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/">Playing with Node.js Event Loop</a></h2>
+
+      <p>setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
+process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
+function cb(msg){ console.log(msg); } setImmediate(cb, &#39;setImmediate&#39;); process.nextTick(cb, &#39;process.nextTick: 1&#39;); process.nextTick(cb, &#39;process.nextTick: 2&#39;); process.nextTick(cb, &#39;process.nextTick: 3&#39;); console.log(&#39;Processed in the first iteration&#39;); process.nextTick(cb, &#39;process.nextTick: 4&#39;); process.nextTick(cb, &#39;process.nextTick: 5&#39;);  Output:
+Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/programming" ><strong>"programming"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/">Search a 2d Matrix Ii</a></h2>
 
       <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
@@ -343,85 +423,6 @@ List&lt;Integer&gt; list = new List&lt;&gt;(); // Remove the element at index 4 
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/">Insert Into a Cyclic Sorted List</a></h2>
-
-      <p>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
-If there are multiple suitable places for insertion, you may choose any place to insert the new value.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/closest-two-sum/">Closest Two Sum</a></h2>
-
-      <p>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
-Return the difference between the sum of the two integers and the target.
-Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 &#43; 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;&amp; nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/minimum-window-substring/">Minimum Window Substring</a></h2>
-
-      <p>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
-Example: Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; Output: &#34;BANC&#34;  Note:  If there is no such window in S that covers all characters in T, return the empty string “”. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

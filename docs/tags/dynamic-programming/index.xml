@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 04 Sep 2019 23:06:05 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 07 Sep 2019 23:58:51 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Coin Change</title>
+      <link>http://www.hashnopolis.com/post/2019/09/coin-change/</link>
+      <pubDate>Sat, 07 Sep 2019 23:58:51 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/coin-change/</guid>
+      <description>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Product Subarray</title>
+      <link>http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/</link>
+      <pubDate>Wed, 04 Sep 2019 23:44:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/</guid>
+      <description> Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.  Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.  Solution # time: o(n) class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res  </description>
+    </item>
     
     <item>
       <title>Triangle</title>
@@ -64,16 +84,6 @@ Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are
       <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
 Note: You can only move either down or right at any point in time.
 Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum.  Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</description>
-    </item>
-    
-    <item>
-      <title>Coin Change</title>
-      <link>http://www.hashnopolis.com/post/2019/03/coin-change/</link>
-      <pubDate>Fri, 08 Mar 2019 23:58:51 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/03/coin-change/</guid>
-      <description>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin.</description>
     </item>
     
     <item>
