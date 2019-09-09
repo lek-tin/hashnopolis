@@ -2,7 +2,7 @@
 title: "Stone Game"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-09-04T00:10:31-07:00
 draft: true
@@ -36,5 +36,61 @@ This demonstrated that taking the first 5 was a winning move for Alex, so we ret
 4. `sum(piles)` is odd.
 
 ### Solution
+DFS with memoization
 ```python
+class Solution:
+    def stoneGame(self, piles: List[int]) -> bool:
+        n = len(piles)
+        mem = [ [ None for _ in range(n)] for _ in range(n)]
+        return self.search(0, n-1, piles, mem) > 0
+
+    def search(self, left, right, piles, mem):
+
+        if mem[left][right] != None:
+            return mem[left][right]
+
+        if left == right:
+            return piles[left]
+
+        mem[left][right] = max(
+            piles[left] - self.search(left+1, right, piles, mem),
+            piles[right] - self.search(left, right-1, piles, mem)
+        )
+
+        return mem[left][right]
 ```
+Bottom-up Dynamic programming
+```python
+import sys
+INT_MAX = sys.maxsize
+
+class Solution:
+    def stoneGame(self, piles: List[int]) -> bool:
+        n = len(piles)
+        prefixSum = [ [ INT_MAX for _ in range(n)] for _ in range(n)]
+        for i in range(n):
+            prefixSum[i][i] = piles[i]
+
+        for size in range(1, n):
+            # size = 1, n = 10
+            for i in range(0, n-size):
+                # left/i: [0, 8], 9 numbers
+                # right/j
+                j = i + size - 1
+                parity = i + j % 2
+                # first player moves. A max sum is desired.
+                if parity == 1:
+                    prefixSum[i][j] = max(
+                        piles[i] - prefixSum[i+1][j],
+                        piles[j] - prefixSum[i][j-1]
+                    )
+                # second player moves. A min sum is desired.
+                else:
+                    prefixSum[i][j] = min(
+                        -piles[i] + prefixSum[i+1][j],
+                        -piles[j] + prefixSum[i][j-1]
+                    )
+        # 0 + n - 1 % 2 = 1 => play 1
+        return prefixSum[0][-1] > 0
+```
+credit: <https://massivealgorithms.blogspot.com/2018/11/leetcode-877-stone-game.html?m=1>
