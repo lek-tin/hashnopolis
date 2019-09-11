@@ -8,7 +8,7 @@ def searchInsertPos(nums, target):
 
   if target < nums[0]:
     return 0
-  
+
   while True:
     midPos = (startPos + endPos) // 2
     if nums[midPos] == target:

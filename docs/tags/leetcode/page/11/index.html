@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/meeting-rooms-ii/">Meeting Rooms II</a></h2>
+
+      <p>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required.
+Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2 Input: [[7,10],[2,4]] Output: 1  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: int &#34;&#34;&#34; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/lru-cache/">LRU Cache</a></h2>
 
       <p>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
@@ -395,34 +421,6 @@ Note Your algorithm should run in O(n) time complexity and O(1) space complexity
       <p>Given an absolute path for a file (Unix-style), simplify it.
 For example, path = &#34;/home/&#34;, =&gt; &#34;/home&#34; path = &#34;/a/./b/../../c/&#34;, =&gt; &#34;/c&#34; path = &#34;/a/../../b/../c//.//&#34;, =&gt; &#34;/c&#34; path = &#34;/a//b////c/d//././/..&#34;, =&gt; &#34;/a/b/c&#34;
 In a UNIX-style file system, a period (‘.’) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (“..”) moves up a directory, so it cancels out whatever the last directory was.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/sqrtx/">Sqrtx</a></h2>
-
-      <p>Implement int sqrt(int x).
-Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
-Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
-Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned.</p>
 
       <p class="meta">
         

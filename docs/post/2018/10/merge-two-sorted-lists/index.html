@@ -239,37 +239,38 @@ class Solution {
 }
 </code></pre>
 
-<pre><code class="language-python">class Solution:
-    def mergeTwoLists(self, l1, l2):
-        &quot;&quot;&quot;
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-        &quot;&quot;&quot;
-        if l1 == None:
-            return l2
+<pre><code class="language-python"># Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
 
-        if l2 == None:
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&gt; ListNode:
+        if not l1:
+            return l2
+        if not l2:
             return l1
 
-        root = ListNode(0)
-        temp = root
+        dummy = ListNode(0)
+        head = dummy
 
         while l1 and l2:
-            if l1.val &gt; l2.val:
-                temp.next = l2
-                l2 = l2.next
-            else:
-                temp.next = l1
+            if l1.val &lt; l2.val:
+                head.next = l1
                 l1 = l1.next
-            temp = temp.next
+            else:
+                head.next = l2
+                l2 = l2.next
+            head = head.next
 
         if l1:
-            temp.next = l1
+            head.next = l1
         if l2:
-            temp.next = l2
+            head.next = l2
 
-        return root.next
+        return dummy.next
+
 </code></pre>
 
   </div>

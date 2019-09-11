@@ -2,7 +2,7 @@
 title: "Minimum Size Subarray Sum"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "two-pointers"]
+tags: ["leetcode", "two-pointers", "sliding-window"]
 categories: ["algorithm"]
 date: 2019-09-08T23:43:48-07:00
 draft: false

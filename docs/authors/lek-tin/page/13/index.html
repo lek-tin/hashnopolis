@@ -176,6 +176,60 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/">Implement Trie Prefix Tree</a></h2>
+
+      <p>Implement a trie with insert, search, and startsWith methods.
+Example Trie trie = new Trie(); trie.insert(&#34;apple&#34;); trie.search(&#34;apple&#34;); // returns true trie.search(&#34;app&#34;); // returns false trie.startsWith(&#34;app&#34;); // returns true trie.insert(&#34;app&#34;); trie.search(&#34;app&#34;); // returns true  Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
+Solution # o(n) class TrieNode(): def __init__(self): self.children = {} self.isWholeWord = False class Trie: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/excel-sheet-column-title/">Excel Sheet Column Title</a></h2>
+
+      <p>Given a positive integer, return its corresponding column title as appear in an Excel sheet.
+For example:
+ 1 -&gt; A 2 -&gt; B 3 -&gt; C ... 26 -&gt; Z 27 -&gt; AA 28 -&gt; AB ...  Example 1 Input: 1 Output: &#34;A&#34;  Example 2 Input: 28 Output: &#34;AB&#34;  Example 3 Input: 701 Output: &#34;ZY&#34;  Solution class Solution: def convertToTitle(self, n): &#34;&#34;&#34; :type n: int :rtype: str &#34;&#34;&#34; digit = 1 res = &#34;&#34; while n &gt; 0: # Because we start from A.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/">Increasing Triplet Subsequence</a></h2>
 
       <p> Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
@@ -371,62 +425,6 @@ Credit Special thanks to @jianchao.</p>
 
       <p>The count-and-say sequence is the sequence of integers with the first five terms as following:
  1 11 21 1211 111221 1 is read off as &#34;one 1&#34; or 11. 11 is read off as &#34;two 1s&#34; or 21. 21 is read off as &#34;one 2, then one 1&#34; or 1211.  Given an integer n where 1 ≤ n ≤ 30, generate the nth term of the count-and-say sequence.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/implement-strstr/">Implement Strstr</a></h2>
-
-      <p>Implement strstr().
-Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
-Example 1 Input: haystack = &#34;hello&#34;, needle = &#34;ll&#34; Output: 2  Example 2 Input: haystack = &#34;aaaaa&#34;, needle = &#34;bba&#34; Output: -1  Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
-For the purpose of this problem, we will return 0 when needle is an empty string.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/valid-parentheses/">Valid Parentheses</a></h2>
-
-      <p>Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid.
-An input string is valid if:
-Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
-Example 1: Input: &#34;()&#34; Output: true  Example 2: Input: &#34;()[]{}&#34; Output: true  Example 3: Input: &#34;(]&#34; Output: false  Example 4: Input: &#34;([)]&#34; Output: false  Example 5: Input: &#34;{[]}&#34; Output: true  Solution: class Solution { public boolean isValid(String s) { HashMap&lt;Character, Character&gt; charMap = new HashMap&lt;&gt;(); charMap.</p>
 
       <p class="meta">
         
