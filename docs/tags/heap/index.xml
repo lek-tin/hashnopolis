@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heap on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/heap/</link>
+    <description>Recent content in Heap on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Wed, 11 Sep 2019 22:43:29 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/heap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ugly Number II</title>
+      <link>http://www.hashnopolis.com/post/2019/09/ugly-number-ii/</link>
+      <pubDate>Wed, 11 Sep 2019 22:43:29 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/ugly-number-ii/</guid>
+      <description>Write a program to find the n-th ugly number.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
+Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.  Note:  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&amp;gt; int: if n &amp;lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !</description>
+    </item>
+    
+  </channel>
+</rss>

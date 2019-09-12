@@ -170,6 +170,60 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/add-binary/">Add Binary</a></h2>
+
+      <p>Given two binary strings, return their sum (also a binary string).
+The input strings are both non-empty and contains only characters 1 or 0.
+Example 1 Input: a = &#34;11&#34;, b = &#34;1&#34; Output: &#34;100&#34;  Example 2 Input: a = &#34;1010&#34;, b = &#34;1011&#34; Output: &#34;10101&#34;  Solution class Solution: def addBinary(self, a, b): &#34;&#34;&#34; :type a: str :type b: str :rtype: str &#34;&#34;&#34; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &gt;= 0 or j &gt;= 0: total = carry if i &gt;= 0: total &#43;= int(a[i]) i -= 1 if j &gt;= 0: total &#43;= int(b[j]) j -= 1 result.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/">17. Letter Combinations of a Phone Number</a></h2>
+
+      <p>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
+A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+Example Input: &#34;23&#34; Output: [&#34;ad&#34;, &#34;ae&#34;, &#34;af&#34;, &#34;bd&#34;, &#34;be&#34;, &#34;bf&#34;, &#34;cd&#34;, &#34;ce&#34;, &#34;cf&#34;].  Note Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/08/18.-4sum/">18. 4Sum</a></h2>
 
       <p> Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a &#43; b &#43; c &#43; d = target? Find all unique quadruplets in the array which gives the sum of target.
@@ -374,63 +428,6 @@ Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to th
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/15.-3sum/">15. 3sum</a></h2>
-
-      <p>Given an array nums of n integers, are there elements a, b, c in nums such that a &#43; b &#43; c = 0? Find all unique triplets in the array which gives the sum of zero.
-Note:
-The solution set must not contain duplicate triplets.
-Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution # time: o(n^2) # space: o(1) class Solution: def threeSum(self, nums: List[int]) -&gt; List[List[int]]: results = [] if not nums: return results nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/">4. Median of Two Sorted Arrays</a></h2>
-
-      <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m&#43;n)).
-You may assume nums1 and nums2 cannot be both empty.
-Example 1: nums1 = [1, 3] nums2 = [2]  The median is 2.0
-Example 2: nums1 = [1, 2] nums2 = [3, 4]  The median is (2 &#43; 3)/2 = 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 

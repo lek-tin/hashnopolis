@@ -170,6 +170,60 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/reverse-linked-list/">Reverse Linked List</a></h2>
+
+      <p>Reverse a singly linked list.
+Example: Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; NULL // prev cur after while (cur !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/palindrome-partitioning/">Palindrome Partitioning</a></h2>
+
+      <p>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return all possible palindrome partitioning of s.
+Example Input: &#34;aab&#34; Output: [ [&#34;aa&#34;,&#34;b&#34;], [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;] ]  Solution # Time: O(n*2^n) # Space: O(n). At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&gt;&#39;b&#39;-&gt;&#39;aa&#39;-&gt;&#39;e&#39;-&gt;&#39;q&#39;-&gt;&#39;w&#39;-&gt;&#39;d&#39;-&gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/08/combination-sum-ii/">Combination Sum Ii</a></h2>
 
       <p>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
@@ -376,59 +430,6 @@ Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], 
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/">Subtree With Maximum Average</a></h2>
-
-      <p>Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It’s guaranteed that there is only one subtree with maximum average.
-Example Given a binary tree:
- 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11.  Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/validate-subtree/">Validate Subtree</a></h2>
-
-      <p>Given two trees, T1 and T2, write an function to test whether T2 is a subtree of T1.
-Solution public class Subtree { public boolean isSubTree(TreeNode T1, TreeNode T2) { if (T2 == null) return true; if (T1 == null) return false; return (isSameTree(T1,T2) || isSubTree(T1.left, T2) || isSubTree(T1.right, T2)); } public boolean isSameTree(TreeNode T1, TreeNode T2) { if (T1 == null &amp;&amp; T2 == null) return true; if (T1 == null || T2 == null) return false; if (T1.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

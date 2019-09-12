@@ -223,6 +223,8 @@ Explanation: 14 is not ugly since it includes another prime factor 7.
 
 <h3 id="solution">Solution</h3>
 
+<p>Recursion</p>
+
 <pre><code class="language-python">class Solution(object):
 def isUgly(self, num):
     &quot;&quot;&quot;
@@ -241,6 +243,25 @@ def isUgly(self, num):
         return self.isUgly(num//5)
     else:
         return False
+</code></pre>
+
+<p>Iterative</p>
+
+<pre><code class="language-python">class Solution:
+def isUgly(self, num: int) -&gt; bool:
+    if num &lt;= 0:
+        return False
+    if num == 1:
+        return True
+
+    while num &gt;= 2 and num%2 == 0:
+        num /= 2
+    while num &gt;= 3 and num%3 == 0:
+        num /= 3
+    while num &gt;= 5 and num%5 == 0:
+        num /= 5
+
+    return num == 1
 </code></pre></li>
 </ol>
 
