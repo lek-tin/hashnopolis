@@ -2,7 +2,7 @@
 title: "Count Primes"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "sieve-of-eratosthenes", "prime-number"]
+tags: ["leetcode", "sieve-of-eratosthenes", "prime-number", "hashmap"]
 categories: ["algorithm"]
 date: 2018-11-09T18:52:59-08:00
 draft: false
@@ -37,5 +37,25 @@ class Solution:
             # We are counting numbers less than n, hence len(marked)-1
             if k == 0 and c < len(marked)-1:
                 count += 1
+        return count
+```
+Cleaner version
+```python
+class Solution:
+    def countPrimes(self, n: int) -> int:
+        if n <= 1:
+            return 0
+
+        primes = [True for _ in range(n)]
+        count = 0
+        for i in range(2, n):
+            if primes[i]:
+                print(i)
+                count += 1
+                for j in range(2, n):
+                    if j * i >= n:
+                        break
+                    primes[i*j] = False
+
         return count
 ```

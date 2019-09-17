@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["bash", "cli", "terminal"]
 categories: ["linux"]
 date: 2019-08-12T23:44:01-08:00
+updated_at: 2019-09-16T00:49:01-08:00
 draft: false
 archive: false
 ---
@@ -173,4 +174,8 @@ awk -v i=5 -v j=3 'FNR == i {print $j}'
 ```bash
 # List current user directory
 ls /Users/`echo $USER`
+```
+26. To check whether a program is running
+```bash
+ps -ef | grep tomcat
 ```

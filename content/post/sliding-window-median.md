@@ -1,11 +1,10 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
+title: "Sliding Window Median"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "sliding-window"]
 categories: ["algorithm"]
-date: {{ .Date }}
-updated_at: {{ .Date }}
+date: 2019-09-15T15:05:09-07:00
 draft: true
 archive: false
 ---

@@ -2,7 +2,7 @@
 title: "23. Merge k Sorted Lists"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "min-heap", "merge"]
+tags: ["leetcode", "heap", "merge"]
 categories: ["algorithm"]
 date: 2018-08-26T17:54:18+08:00
 draft: false

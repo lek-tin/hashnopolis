@@ -2,7 +2,7 @@
 title: "K Closest Points to Origin"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "quick-select"]
 categories: ["algorithm"]
 date: 2019-03-03T23:24:48-08:00
 draft: false
@@ -79,4 +79,47 @@ class Solution {
         return p1[0]*p1[0] + p1[1]*p1[1] - p2[0]*p2[0] - p2[1]*p2[1];
     }
 }
+```
+Python version
+```python
+class Solution:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        l, r = 0, len(points)-1
+        while l < r:
+            mid = self.select(points, l, r)
+            if k == mid:
+                break
+            if mid > k:
+                r = mid - 1
+            else:
+                l = mid + 1
+
+        return points[0:k]
+
+    def select(self, points, l, r):
+        #   1   2 10 4 5 "6" 7 9 1 2 8
+        # pivot
+        pivot = points[l]
+        while l < r:
+            #   1 2 10 4 5 "6" 7 9 1 2 8
+            #   l                    r
+            while l < r and self.compare(points[r], pivot) >= 0:
+                r -= 1
+            #   2 2 10 4 5 "6" 7 9 1 2 8
+            #   l                    r
+            points[l] = points[r]
+            while l < r and self.compare(points[l], pivot) <= 0:
+                l += 1
+            #   2 2 10 4 5 "6" 7 9 1 10 8
+            #        l               r
+            points[r] = points[l]
+        #   2 2  1  4 5 "6" 7 9 1 10 8
+        #        l                 r
+        # inset pivot back into the list
+        points[l] = pivot
+
+        return l
+
+    def compare(self, p1, p2):
+        return p1[0]*p1[0] + p1[1]*p1[1] - p2[0]*p2[0] - p2[1]*p2[1]
 ```

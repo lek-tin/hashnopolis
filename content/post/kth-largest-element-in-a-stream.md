@@ -27,6 +27,7 @@ kthLargest.add(4);   // returns 8
 You may assume that nums' `length ≥ k-1` and `k ≥ 1`.
 
 ### Solution:
+Java
 ```java
 class KthLargest {
     private PriorityQueue<Integer> pQueue = null;
@@ -55,4 +56,28 @@ class KthLargest {
  * KthLargest obj = new KthLargest(k, nums);
  * int param_1 = obj.add(val);
  */
+```
+Python
+```python
+import queue as Q
+
+class KthLargest:
+    def __init__(self, k: int, nums: List[int]):
+        self.heap = []
+        self.k = k
+        self.q = Q.PriorityQueue()
+        for num in nums:
+            self.add(num)
+
+    def add(self, val: int) -> int:
+        self.q.put(val)
+        if self.q.qsize() > self.k:
+            self.q.get()
+        ans = self.q.get()
+        self.q.put(ans)
+        return ans
+
+# Your KthLargest object will be instantiated and called as such:
+# obj = KthLargest(k, nums)
+# param_1 = obj.add(val)
 ```
