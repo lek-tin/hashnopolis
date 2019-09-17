@@ -54,8 +54,10 @@
       <!-- {{ if .Params.updated_at }}
         <h4>Updated at: {{ dateFormat "January 2, 2006" .Params.updated_at  }}</h4>
         {{ end }} -->
-      <h4>Created: {{ dateFormat "January 2, 2006" .Params.date }} by {{ .Params.authors }}</h4>
-      <h5>Last updated: {{ .Page.Lastmod.Format "January 2, 2006"  }}</h5>
+      <h4>Created: {{ dateFormat "January 2, 2006" .Page.Date }} by {{ .Params.authors }}</h4>
+      {{ if .Page.Lastmod }}
+        <h5>Last updated: {{ .Page.Lastmod.Format "January 2, 2006"  }}</h5>
+      {{ end }}
       <hr />
       {{ .Content }}
   </div><!-- main-content/col -->

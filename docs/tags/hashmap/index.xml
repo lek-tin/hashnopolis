@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 10 Sep 2019 12:01:01 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Sep 2019 22:35:23 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Super Ugly Number</title>
+      <link>http://www.hashnopolis.com/post/2019/09/super-ugly-number/</link>
+      <pubDate>Sat, 14 Sep 2019 22:35:23 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/super-ugly-number/</guid>
+      <description>Write a program to find the nth super ugly number.
+Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
+Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4.  Note:  1 is a super ugly number for any given primes.</description>
+    </item>
     
     <item>
       <title>Longest Consecutive Sequence</title>
@@ -143,6 +154,16 @@ Design the encode and decode methods for the TinyURL service. There is no restri
       <guid>http://www.hashnopolis.com/post/2018/11/lru-cache/</guid>
       <description>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
 get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</description>
+    </item>
+    
+    <item>
+      <title>Count Primes</title>
+      <link>http://www.hashnopolis.com/post/2018/11/count-primes/</link>
+      <pubDate>Fri, 09 Nov 2018 18:52:59 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/count-primes/</guid>
+      <description>Count the number of prime numbers less than a non-negative number, n.
+Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)+1): if marked[i] != 1: prime = i + 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count += 1 return count  Cleaner version</description>
     </item>
     
     <item>

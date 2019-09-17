@@ -7,10 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 11 Sep 2019 22:43:29 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2019 21:03:31 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pancake Sorting</title>
+      <link>http://www.hashnopolis.com/post/2019/09/pancake-sorting/</link>
+      <pubDate>Sun, 15 Sep 2019 21:03:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/pancake-sorting/</guid>
+      <description>Given an array A, we can perform a pancake flip: We choose some positive integer k &amp;lt;= A.length, then reverse the order of the first k elements of A. We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array A.
+Return the k-values corresponding to a sequence of pancake flips that sortA. Any valid answer that sorts the array within 10 * A.</description>
+    </item>
+    
+    <item>
+      <title>Super Ugly Number</title>
+      <link>http://www.hashnopolis.com/post/2019/09/super-ugly-number/</link>
+      <pubDate>Sat, 14 Sep 2019 22:35:23 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/super-ugly-number/</guid>
+      <description>Write a program to find the nth super ugly number.
+Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
+Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4.  Note:  1 is a super ugly number for any given primes.</description>
+    </item>
+    
+    <item>
+      <title>Perfect Squares</title>
+      <link>http://www.hashnopolis.com/post/2019/09/perfect-squares/</link>
+      <pubDate>Sat, 14 Sep 2019 16:03:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/perfect-squares/</guid>
+      <description> Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4.  Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 + 9.  Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n+1)] for i in range(1, n+1): for j in range(1, n+1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]+1) return count[n]  </description>
+    </item>
     
     <item>
       <title>Ugly Number II</title>
@@ -615,6 +646,17 @@ Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Expl
     </item>
     
     <item>
+      <title>Prison Cells After N Days</title>
+      <link>http://www.hashnopolis.com/post/2019/03/prison-cells-after-n-days/</link>
+      <pubDate>Fri, 08 Mar 2019 01:33:22 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/prison-cells-after-n-days/</guid>
+      <description>There are 8 prison cells in a row, and each cell is either occupied or vacant.
+Each day, whether the cell is occupied or vacant changes according to the following rules:
+ If a cell has two adjacent neighbors that are both occupied or both vacant, then the cell becomes occupied. Otherwise, it becomes vacant. (Note that because the prison is a row, the first and the last cells in the row can&amp;rsquo;t have two adjacent neighbors.</description>
+    </item>
+    
+    <item>
       <title>Most Common Word</title>
       <link>http://www.hashnopolis.com/post/2019/03/most-common-word/</link>
       <pubDate>Thu, 07 Mar 2019 23:04:58 -0800</pubDate>
@@ -1176,8 +1218,8 @@ Example 1 Input: 2 / \ 1 3 Output: true  Example 2  5 / \ 1 4 / \ 3 6 Output: fa
       <pubDate>Fri, 09 Nov 2018 18:52:59 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/count-primes/</guid>
-      <description> Count the number of prime numbers less than a non-negative number, n.
-Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)+1): if marked[i] != 1: prime = i + 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count += 1 return count  </description>
+      <description>Count the number of prime numbers less than a non-negative number, n.
+Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)+1): if marked[i] != 1: prime = i + 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count += 1 return count  Cleaner version</description>
     </item>
     
     <item>
@@ -1208,10 +1250,10 @@ For example:
       <pubDate>Thu, 08 Nov 2018 22:10:52 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/</guid>
-      <description> Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
+      <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution class Solution: def increasingTriplet(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: bool &amp;quot;&amp;quot;&amp;quot; if not nums or len(nums) &amp;lt; 3: return False min_1, min_2 = max(nums), max(nums) # Not asking to find 3 consecutive increasing numbers for n in nums: if n &amp;gt; min_2: return True elif n &amp;lt; min_1: min_1 = n elif n &amp;gt; min_1 and n &amp;lt; min_2: min_2 = n return False  </description>
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution import sys INT_MAX = sys.</description>
     </item>
     
     <item>

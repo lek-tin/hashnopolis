@@ -176,6 +176,85 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/triangle/">Triangle</a></h2>
+
+      <p>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
+For example, given the following triangle
+[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11).  Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/dungeon-game/">Dungeon Game</a></h2>
+
+      <p>The demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (K) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.
+The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/minimum-path-sum/">Minimum Path Sum</a></h2>
+
+      <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution: def minPathSum(self, grid): &#34;&#34;&#34; :type grid: List[List[int]] :rtype: int &#34;&#34;&#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/08/largest-divisible-subset/">Largest Divisible Subset</a></h2>
 
       <p>Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
@@ -349,85 +428,6 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
       <p>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &lt; j &lt; k and A[i] &#43; A[j] &#43; A[k] == target.
 As the answer can be very large, return it modulo 10^9 &#43; 7.
 Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/3sum-smaller/">3sum Smaller</a></h2>
-
-      <p>Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &lt;= i &lt; j &lt; k &lt; n that satisfy the condition nums[i] &#43; nums[j] &#43; nums[k] &lt; target.
-Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3]  Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&gt; int: res = 0 if not nums: return res nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-less-than-k/">Two Sum Less Than K</a></h2>
-
-      <p>Given an array A of integers and integer K, return the maximum S such that there exists i &lt; j with A[i] &#43; A[j] = S and S &lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60.  Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/inorder-successor-in-bst/">Inorder Successor in BST</a></h2>
-
-      <p>Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
-The successor of a node p is the node with the smallest key greater than p.val.
-Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type.  Example 2: Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null.</p>
 
       <p class="meta">
         

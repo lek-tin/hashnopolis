@@ -176,6 +176,87 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/">Playing with Node.js Event Loop</a></h2>
+
+      <p>setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
+process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
+function cb(msg){ console.log(msg); } setImmediate(cb, &#39;setImmediate&#39;); process.nextTick(cb, &#39;process.nextTick: 1&#39;); process.nextTick(cb, &#39;process.nextTick: 2&#39;); process.nextTick(cb, &#39;process.nextTick: 3&#39;); console.log(&#39;Processed in the first iteration&#39;); process.nextTick(cb, &#39;process.nextTick: 4&#39;); process.nextTick(cb, &#39;process.nextTick: 5&#39;);  Output:
+Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/programming" ><strong>"programming"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/">Search a 2d Matrix Ii</a></h2>
+
+      <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+- Integers in each row are sorted in ascending from left to right. - Integers in each column are sorted in ascending from top to bottom.
+Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ]  Given target = 5, return true.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/max-stack/">Max Stack</a></h2>
+
+      <p>Design a max stack that supports push, pop, top, peekMax and popMax.
+1. push(x) – Push element x onto stack. 2. pop() – Remove the element on top of the stack and return it. 3. top() – Get the element on the top. 4. peekMax() – Retrieve the maximum element in the stack. 5. popMax() – Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/">Subtree With Maximum Average</a></h2>
 
       <p>Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It’s guaranteed that there is only one subtree with maximum average.
@@ -337,85 +418,6 @@ If there are multiple suitable places for insertion, you may choose any place to
       <p>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
 Return the difference between the sum of the two integers and the target.
 Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 &#43; 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;&amp; nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/minimum-window-substring/">Minimum Window Substring</a></h2>
-
-      <p>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
-Example: Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; Output: &#34;BANC&#34;  Note:  If there is no such window in S that covers all characters in T, return the empty string “”. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/">Longest Substring With at Most Two Distinct Characters</a></h2>
-
-      <p>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
-Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; which its length is 3.  Example 2: Input: &#34;ccaabbb&#34; Output: 5 Explanation: t is &#34;aabbb&#34; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&lt;Character, Integer&gt; countMap = new HashMap&lt;Character, Integer&gt;(); int left = 0; int max = 0; for (int i = 0; i &lt; s.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/maximum-path-sum/">Maximum Path Sum</a></h2>
-
-      <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note: You can only move either down or right at any point in time.
-Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum.  Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</p>
 
       <p class="meta">
         

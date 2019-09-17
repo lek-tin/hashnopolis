@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 10 Sep 2019 00:37:14 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 14 Sep 2019 16:03:20 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Perfect Squares</title>
+      <link>http://www.hashnopolis.com/post/2019/09/perfect-squares/</link>
+      <pubDate>Sat, 14 Sep 2019 16:03:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/perfect-squares/</guid>
+      <description> Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4.  Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 + 9.  Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n+1)] for i in range(1, n+1): for j in range(1, n+1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]+1) return count[n]  </description>
+    </item>
     
     <item>
       <title>Russian Doll Envelopes</title>

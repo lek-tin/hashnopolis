@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
 Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7  Note: You may assume k is always valid, 1 ≤ k ≤ input array&amp;rsquo;s size for non-empty array." />
-  <meta name="keywords" content="leetcode deque monotonic-queue double-ended-queue " />
+  <meta name="keywords" content="leetcode deque monotonic-queue sliding-window " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -171,11 +171,11 @@ Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Expl
   
 
   
-  <div>
+  <div class="post">
       <p class="meta">
         
         
-        Tags:
+        <span class="highlight">Tags:</span>
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
@@ -183,12 +183,18 @@ Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Expl
         
           "<a href="/tags/monotonic-queue"><strong>monotonic-queue</strong></a>",
         
-          "<a href="/tags/double-ended-queue"><strong>double-ended-queue</strong></a>",
+          "<a href="/tags/sliding-window"><strong>sliding-window</strong></a>",
         
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 3-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/sliding-window-maximum.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Sliding Window Maximum</h1>
+      
+      <h4>Created: March 8, 2019 by [lek-tin]</h4>
+      
+        <h5>Last updated: March 8, 2019</h5>
+      
+      <hr />
       
 
 <p>Given an array nums, there is a sliding window of size <code>k</code> which is moving from the very left of the array to the very right. You can only see the <code>k</code> numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.</p>
@@ -218,6 +224,8 @@ Window position                Max
 <p>Could you solve it in linear time?</p>
 
 <h3 id="solution">Solution:</h3>
+
+<p>Java version</p>
 
 <pre><code class="language-java">class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
@@ -249,6 +257,32 @@ Window position                Max
         return res;
     }
 }
+</code></pre>
+
+<p>Python version</p>
+
+<pre><code class="language-python">from collections import deque
+class Solution:
+    def maxSlidingWindow(self, nums: List[int], k: int) -&gt; List[int]:
+        if not nums or len(nums) == 0 or k == 0:
+            return list([])
+
+        maxArr = []
+        indexWindow = deque([])
+        for i in range(len(nums)):
+            curr = nums[i]
+            if len(indexWindow) &gt; 0 and indexWindow[0] == i-k:
+                indexWindow.popleft()
+            # Remove all the element in deque that is smaller than the new number so that the head of the deque will always be the maximum.
+            while len(indexWindow) &gt; 0 and nums[indexWindow[-1]] &lt; curr:
+                indexWindow.pop()
+
+            indexWindow.append(i)
+            if i &lt; k-1:
+                continue
+            maxArr.append(nums[indexWindow[0]])
+
+        return maxArr
 </code></pre>
 
 <h3 id="explanation">Explanation:</h3>

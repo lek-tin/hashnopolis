@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/perfect-squares/">Perfect Squares</a></h2>
+
+      <p> Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 &#43; 4 &#43; 4.  Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 &#43; 9.  Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n&#43;1)] for i in range(1, n&#43;1): for j in range(1, n&#43;1): if j*j &gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]&#43;1) return count[n]  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/russian-doll-envelopes/">Russian Doll Envelopes</a></h2>
 
       <p>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
@@ -395,34 +421,6 @@ Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the
       <p>A robot is located at the top-left corner of a m x n grid (marked ‘Start’ in the diagram below).
 The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked ‘Finish’ in the diagram below).
 Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/maximal-rectangle/">Maximal Rectangle</a></h2>
-
-      <p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area.
-Example: Input: [ [&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;,&#34;0&#34;], [&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;], [&#34;1&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;], [&#34;1&#34;,&#34;0&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;] ] Output: 6  Hint Height:
-1 0 1 0 0 2 0 2 1 1 3 1 3 2 2 4 0 0 3 0  Left:
-0 0 2 0 0 0 0 2 2 2 0 0 2 2 2 0 0 0 3 0  Right:</p>
 
       <p class="meta">
         
