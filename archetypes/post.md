@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode"]
 categories: ["algorithm"]
 date: {{ .Date }}
-updated_at: {{ .Date }}
+lastmod: {{ .Date }}
 draft: true
 archive: false
 ---

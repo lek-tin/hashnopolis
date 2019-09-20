@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["bash", "cli", "terminal"]
 categories: ["linux"]
 date: 2019-08-12T23:44:01-08:00
-updated_at: 2019-09-16T00:49:01-08:00
+lastmod: 2019-09-16T00:49:01-08:00
 draft: false
 archive: false
 ---

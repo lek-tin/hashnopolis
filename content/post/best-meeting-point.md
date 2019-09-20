@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "sort", "java", "manhattan-distance"]
 categories: ["algorithm"]
 date: 2019-02-21T10:15:51-08:00
-updated_at: 2019-09-15T22:39:51-08:00
+lastmod: 2019-09-15T22:39:51-08:00
 draft: false
 archive: false
 ---

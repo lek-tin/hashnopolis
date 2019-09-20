@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "bit-manipulation", "loop-detection"]
 categories: ["algorithm"]
 date: 2019-03-08T01:33:22-08:00
-updated_at: 2019-09-16T01:33:22-08:00
+lastmod: 2019-09-16T01:33:22-08:00
 draft: false
 archive: false
 ---

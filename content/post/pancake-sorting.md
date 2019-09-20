@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "sort"]
 categories: ["algorithm"]
 date: 2019-09-15T21:03:31-07:00
-updated_at: 2019-09-15T22:39:51-08:00
+lastmod: 2019-09-15T22:39:51-08:00
 draft: false
 archive: false
 ---
@@ -32,7 +32,6 @@ Output: []
 Explanation: The input is already sorted, so there is no need to flip anything.
 Note that other answers, such as [3, 3], would also be accepted.
 ```
-
 ### Note:
 1. `1 <= A.length <= 100`
 2. `A[i]` is a permutation of `[1, 2, ..., A.length]`

@@ -2,9 +2,10 @@
 title: "4. Median of Two Sorted Arrays"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "array", "sorted-array", "binary-search"]
+tags: ["leetcode", "array", "binary-search"]
 categories: ["algorithm"]
 date: 2018-08-21T20:54:32+08:00
+lastmod: 2019-09-19T20:54:32+08:00
 draft: false
 archive: false
 ---
@@ -18,15 +19,14 @@ You may assume nums1 and nums2 cannot be both empty.
 ```
 nums1 = [1, 3]
 nums2 = [2]
+The median is 2.0
 ```
-The median is 2.0  
 ### Example 2:
 ```
 nums1 = [1, 2]
 nums2 = [3, 4]
+The median is (2 + 3)/2 = 2.5
 ```
-The median is (2 + 3)/2 = 2.5  
-
 ### Solution:
 `Time: O(log(m+n))`
 ```python
@@ -47,14 +47,15 @@ class Solution:
         start, end = 0, len1
 
         while start <= end:
-            pos1 = (start + end) // 2
-            pos2 = (len1 + len2 + 1) // 2 - pos1
-
-            maxLeft1 = -math.inf if pos1 == 0 else nums1[pos1-1]
-            minRight1 = math.inf if pos1 == len1 else nums1[pos1]
+            # mid1, mid2: number of elements in each array that are used
+            mid1 = (start + end) // 2
+            mid2 = (len1 + len2 + 1) // 2 - mid1
+            print(mid1, mid2)
+            maxLeft1 = -math.inf if mid1 == 0 else nums1[mid1-1]
+            minRight1 = math.inf if mid1 == len1 else nums1[mid1]
             print(maxLeft1, minRight1)
-            maxLeft2 = -math.inf if pos2 == 0 else nums2[pos2-1]
-            minRight2 = math.inf if pos2 == len2 else nums2[pos2]
+            maxLeft2 = -math.inf if mid2 == 0 else nums2[mid2-1]
+            minRight2 = math.inf if mid2 == len2 else nums2[mid2]
             print(maxLeft2, minRight2)
             # Found the middle elements, now see if the combined length is even or odd.
             if maxLeft1 <= minRight2 and maxLeft2 <= minRight1:
@@ -64,11 +65,13 @@ class Solution:
                     return max(maxLeft1, maxLeft2)
             # Too far to the right-hand side for nums1, move <-
             if maxLeft1 > minRight2:
-                end = pos1 - 1
+                end = mid1 - 1
             # Too far to the left-hand side for nums1, move ->
             else:
-                start = pos1 + 1
+                start = mid1 + 1
             print('--------')
+
+        return -1
 ```
 ```java
 class Solution {

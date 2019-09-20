@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "deque", "monotonic-queue", "sliding-window"]
 categories: ["algorithm"]
 date: 2019-03-08T23:26:00-08:00
-updated_at: 2019-09-15T16:46:00-08:00
+lastmod: 2019-09-15T16:46:00-08:00
 draft: false
 archive: false
 ---

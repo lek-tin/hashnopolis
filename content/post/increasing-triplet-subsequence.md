@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-11-08T22:10:52-08:00
-updated_at: 2019-09-15T14:10:52-08:00
+lastmod: 2019-09-15T14:10:52-08:00
 draft: false
 archive: false
 ---
