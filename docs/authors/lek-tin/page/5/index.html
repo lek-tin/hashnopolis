@@ -176,6 +176,86 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/">Top Useful Sql Templates</a></h2>
+
+      <p>In this post, we introduce the most useful SQL template statements.
+Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &gt; 1)  This is significantly more efficient than using EXISTS
+Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&gt;18).
+Select duplicate rows based on column SELECT TOP 1 C1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/06/machine-learning-questions/">Machine Learning Questions</a></h2>
+
+      <p>What is an Eigenvalue and Eigenvector? Eigenvectors are used for understanding linear transformations. In data analysis, we usually calculate the eigenvectors for a correlation or covariance matrix. Eigenvectors are the directions along which a particular linear transformation acts by flipping, compressing or stretching. Eigenvalue can be referred to as the strength of the transformation in the direction of eigenvector or the factor by which the compression occurs.
+What is Gradient Descent?</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/machine-learning" ><strong>"machine-learning"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 7-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/coin-change-2/">Coin Change 2</a></h2>
+
+      <p>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2&#43;2&#43;1 5=2&#43;1&#43;1&#43;1 5=1&#43;1&#43;1&#43;1&#43;1  Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/">Playing with Node.js Event Loop</a></h2>
 
       <p>setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
@@ -350,84 +430,6 @@ List&lt;Integer&gt; list = new List&lt;&gt;(); // Remove the element at index 4 
         in
         
           <a  class="meta--cat" href="/categories/java" ><strong>"java"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/">LRU Cache Miss Count</a></h2>
-
-      <p> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&lt;Integer&gt; cache = new LinkedList&lt;&gt;(); int count = 0; for (int i = 0; i &lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/">Insert Into a Cyclic Sorted List</a></h2>
-
-      <p>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
-If there are multiple suitable places for insertion, you may choose any place to insert the new value.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/closest-two-sum/">Closest Two Sum</a></h2>
-
-      <p>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
-Return the difference between the sum of the two integers and the target.
-Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 &#43; 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;&amp; nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>

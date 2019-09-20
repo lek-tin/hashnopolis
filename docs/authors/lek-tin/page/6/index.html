@@ -176,6 +176,84 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/">LRU Cache Miss Count</a></h2>
+
+      <p> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&lt;Integer&gt; cache = new LinkedList&lt;&gt;(); int count = 0; for (int i = 0; i &lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/">Insert Into a Cyclic Sorted List</a></h2>
+
+      <p>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
+If there are multiple suitable places for insertion, you may choose any place to insert the new value.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/closest-two-sum/">Closest Two Sum</a></h2>
+
+      <p>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
+Return the difference between the sum of the two integers and the target.
+Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 &#43; 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;&amp; nums.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/03/minimum-window-substring/">Minimum Window Substring</a></h2>
 
       <p>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
@@ -353,86 +431,6 @@ Example 1: Input: [&#34;FreqStack&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/snakes-and-ladders/">Snakes and Ladders</a></h2>
-
-      <p>On an N x N board, the numbers from 1 to N*N are written boustrophedonically starting from the bottom left of the board, and alternating direction each row. For example, for a 6 x 6 board, the numbers are written as follows: You start on square 1 of the board (which is always in the last row and first column). Each move, starting from square x, consists of the following:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/find-median-from-data-stream/">Find Median From Data Stream</a></h2>
-
-      <p>Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.
-Example [2,3,4], the median is 3
-[2,3], the median is (2 &#43; 3) / 2 = 2.5
-Design a data structure that supports the following two operations:
-1. void addNum(int num) - Add a integer number from the data stream to the data structure.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/design-tic-tac-toe/">Design Tic Tac Toe</a></h2>
-
-      <p>Design a Tic-tac-toe game that is played between two players on a n x n grid.
-You may assume the following rules: 1. A move is guaranteed to be valid and is placed on an empty block. 2. Once a winning condition is reached, no more moves is allowed. 3. A player who succeeds in placing n of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 
