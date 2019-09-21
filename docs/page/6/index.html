@@ -170,6 +170,58 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/minimum-path-sum-in-binary-tree/">Minimum Path Sum in Binary Tree</a></h2>
+
+      <p>Given a Binary Tree, find the minimum sum path from a leaf to root. For example, in the following tree, there are three leaf to root paths 8-&gt;-2-&gt;10, -4-&gt;-2-&gt;10 and 7-&gt;10. The sums of these three paths are 16, 4 and 17 respectively. The minimum of them is 17 and the path for minimum is -4-&gt;-2-&gt;10.
+ 10 / \ -2 7 / \ 8 -4  Solution public class PathSum { public int Solution(TreeNode root) { if (root == null) return 0; if (root.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/lists-in-java/">Lists in Java</a></h2>
+
+      <p> List interface: The List interface specifies two remove methods:
+List&lt;Integer&gt; list = new List&lt;&gt;(); // Remove the element at index 4 remove(int index): list.remove(4); // Remove the first occurrence of the object 4 remove(Object o): list.remove(new Integer(4));  Linked List:    Pros Cons     Can insert or remove anywhere in the list without shifting elements Not sortable   Insert: O(1) Elements are not stored in contiguous memory addresses   Remove: O(1) Find: O(n), as must traverse to find an element    </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/java" ><strong>"java"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/">LRU Cache Miss Count</a></h2>
 
       <p> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&lt;Integer&gt; cache = new LinkedList&lt;&gt;(); int count = 0; for (int i = 0; i &lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </p>
@@ -357,62 +409,6 @@ Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2: Input: [1,
 
       <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.
 Example 1: Input: s = &#34;eceba&#34;, k = 2 Output: 3 Explanation: T is &#34;ece&#34; which its length is 3.  Example 2: Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: T is &#34;aa&#34; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&lt;Character, Integer&gt; countMap = new HashMap&lt;&gt;(); int left = 0; int max = 0; for(int i = 0; i &lt; s.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/peeking-iterator/">Peeking Iterator</a></h2>
-
-      <p>Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation – it essentially peek() at the element that will be returned by the next call to next().
-Example: Assume that the iterator is initialized to the beginning of the list: [1,2,3]. Call next() gets you 1, the first element in the list. Now you call peek() and it returns 2, the next element.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/maximum-frequency-stack/">Maximum Frequency Stack</a></h2>
-
-      <p>Implement FreqStack, a class which simulates the operation of a stack-like data structure.
-FreqStack has two functions:
-1. push(int x), which pushes an integer x onto the stack.
-2. pop(), which removes and returns the most frequent element in the stack.
-3. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.
-Example 1: Input: [&#34;FreqStack&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;pop&#34;,&#34;pop&#34;,&#34;pop&#34;,&#34;pop&#34;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six .</p>
 
       <p class="meta">
         

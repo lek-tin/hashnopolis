@@ -191,7 +191,7 @@ Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The squ
       <h1>Sqrtx</h1>
       <h4>Created: November 8, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: November 8, 2018</h5>
+        <h5>Last updated: September 19, 2019</h5>
       
       <hr />
       
@@ -220,21 +220,17 @@ Output: 2
 
 <pre><code class="language-python"># log(x)
 class Solution:
-    def mySqrt(self, x):
-        &quot;&quot;&quot;
-        :type x: int
-        :rtype: int
-        &quot;&quot;&quot;
-        l = 1
-        r = x
-        while l &lt;= r:
-            m = l + (r-l)//2
-            if m &gt; x/m:
-                r = m - 1
+    def mySqrt(self, x: int) -&gt; int:
+        left, right = 1, x
+        while left &lt;= right:
+            mid = left + (right-left)//2
+            if mid &gt; x/mid:
+                right = mid - 1
             else:
-                l = m + 1
-
-        return r
+                left = mid + 1
+        # left == right or left &gt; right
+        # since we need to floor the result, we return right
+        return right
 </code></pre>
 
   </div>

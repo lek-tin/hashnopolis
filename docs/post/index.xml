@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 19 Sep 2019 23:33:43 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 20 Sep 2019 00:21:44 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sum of Square Numbers</title>
+      <link>http://www.hashnopolis.com/post/2019/09/sum-of-square-numbers/</link>
+      <pubDate>Fri, 20 Sep 2019 00:21:44 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/sum-of-square-numbers/</guid>
+      <description> Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c.
+Example 1: Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5  Example 2: Input: 3 Output: False  Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left + right*right &amp;lt; c: if (left+1)*(left+1) + right*right &amp;gt; c: right -= 1 else: left += 1 if left*left + right*right == c: return True return False  </description>
+    </item>
+    
+    <item>
+      <title>Valid Perfect Square</title>
+      <link>http://www.hashnopolis.com/post/2019/09/valid-perfect-square/</link>
+      <pubDate>Thu, 19 Sep 2019 23:47:10 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/valid-perfect-square/</guid>
+      <description>Given a positive integer num, write a function which returns True if num is a perfect square else False.
+Note: Do not use any built-in library function such as sqrt.
+Example 1: Input: 16 Output: true  Example 2: Input: 14 Output: false  Solution Binary search version 1
+class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left + (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid + 1 else: right = mid - 1 return False  Binary search version 2</description>
+    </item>
     
     <item>
       <title>Guess Number Higher or Lower Ii</title>
