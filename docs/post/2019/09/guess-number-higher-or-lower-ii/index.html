@@ -20,7 +20,7 @@
 I pick a number from 1 to n. You have to guess which number I picked.
 Every time you guess wrong, I&amp;rsquo;ll tell you whether the number I picked is higher or lower.
 However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked." />
-  <meta name="keywords" content="leetcode binary-search " />
+  <meta name="keywords" content="leetcode dynamic-programming " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -183,15 +183,15 @@ However, when you guess a particular number x, and you guess wrong, you pay $x. 
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/binary-search"><strong>binary-search</strong></a>",
+          "<a href="/tags/dynamic-programming"><strong>dynamic-programming</strong></a>",
         
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/guess-number-higher-or-lower-ii.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Guess Number Higher or Lower Ii</h1>
       <h4>Created: September 19, 2019 by [lek-tin]</h4>
       
-        <h5>Last updated: September 19, 2019</h5>
+        <h5>Last updated: September 20, 2019</h5>
       
       <hr />
       
@@ -215,6 +215,38 @@ You end up paying `$5 + $7 + $9 = $21`.
 </code></pre>
 
 <p>Given a particular <code>n ≥ 1</code>, find out how much money you need to have to guarantee a win.</p>
+
+<h3 id="solution">Solution</h3>
+
+<pre><code class="language-python">#                   [i, pivot-1] + pivot + [pivot+1, j]
+# cost(i,j) = pivot + max( cost(i,pivot−1), cost(pivot+1,n) )
+# n = 10
+# dp = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+# index: 0  1  2  3  4  5  6  7  8  9  10
+# len = 3
+#   start = 4
+#     piv = 5
+#       res = 5 + max(dp[4][5-1] + dp[5+1][4+3-1])
+#       res = 5 + max(dp[4][4] + dp[6][6])
+
+# time: o(n^3)
+# space: o(n^2)
+import math
+
+class Solution:
+    def getMoneyAmount(self, n: int) -&gt; int:
+        dp = [[0 for _ in range(n+1)] for _ in range(n+1)]
+
+        for len in range(2, n+1):
+            for start in range(1, n-len+2):
+                minVal = math.inf
+                for pivot in range(start, start+len-1):
+                    tempMin = pivot + max(dp[start][pivot-1], dp[pivot+1][start+len-1])
+                    minVal = min(minVal, tempMin)
+                dp[start][start+len-1] = minVal
+
+        return dp[1][n]
+</code></pre>
 
   </div>
 

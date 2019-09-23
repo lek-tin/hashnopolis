@@ -170,6 +170,34 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower-ii/">Guess Number Higher or Lower Ii</a></h2>
+
+      <p>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I’ll tell you whether the number I picked is higher or lower.
+However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/sum-of-square-numbers/">Sum of Square Numbers</a></h2>
 
       <p> Given a non-negative integer c, your task is to decide whether there’re two integers a and b such that a2 &#43; b2 = c.
@@ -202,34 +230,6 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5  Example 2: 
 Note: Do not use any built-in library function such as sqrt.
 Example 1: Input: 16 Output: true  Example 2: Input: 14 Output: false  Solution Binary search version 1
 class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: return True left, right = 0, num while left &lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &lt; num: left = mid &#43; 1 else: right = mid - 1 return False  Binary search version 2</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower-ii/">Guess Number Higher or Lower Ii</a></h2>
-
-      <p>We are playing the Guess Game. The game is as follows:
-I pick a number from 1 to n. You have to guess which number I picked.
-Every time you guess wrong, I’ll tell you whether the number I picked is higher or lower.
-However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</p>
 
       <p class="meta">
         
