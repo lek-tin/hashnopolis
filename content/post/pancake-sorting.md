@@ -50,7 +50,7 @@ class Solution:
                 if nums[j] > nums[MAX]:
                     MAX = j
             # MAX != 0 means MAX is not at index 0
-            # MAX != i, mean the number at index i is indeed the WRONG number
+            # MAX != i means the number at index i is indeed the WRONG number
             if MAX != 0 and MAX != i:
                 ks.append(MAX+1)
                 nums[:MAX+1] = reversed(nums[:MAX+1])

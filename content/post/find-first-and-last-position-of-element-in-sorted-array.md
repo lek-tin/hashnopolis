@@ -2,9 +2,10 @@
 title: "Find First and Last Position of Element in Sorted Array"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "sorted-array", "binary-search"]
+tags: ["leetcode", "binary-search"]
 categories: ["algorithm"]
 date: 2018-10-26T23:10:23-07:00
+lastmod: 2019-09-22T22:30:23-07:00
 draft: false
 archive: false
 ---
@@ -26,16 +27,16 @@ Input: nums = [5,7,7,8,8,10], target = 6
 Output: [-1,-1]
 ```
 ### Solution
-Time: O(logN)
+`Time: O(logN)`
 ```python
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        if not nums or len(nums) == 0:
-            return [-1, -1]
-        N = len(nums)
+        res = [-1, -1]
+        n = len(nums)
+        if not nums or n == 0:
+            return res
 
-        start, end = 0, N-1
-        first = -1
+        start, end = 0, n-1
         while start+1 < end:
             mid = start + (end-start)//2
             if nums[mid] >= target:
@@ -43,12 +44,11 @@ class Solution:
             else:
                 start = mid
         if nums[start] == target:
-            first = start
+            res[0] = start
         elif nums[end] == target:
-            first = end
+            res[0] = end
 
-        start, end = 0, N-1
-        second = -1
+        start, end = 0, n-1
         while start+1 < end:
             mid = start + (end-start)//2
             if nums[mid] <= target:
@@ -56,9 +56,9 @@ class Solution:
             else:
                 end = mid
         if nums[end] == target:
-            second = end
+            res[1] = end
         elif nums[start] == target:
-            second = start
+            res[1] = start
 
-        return [first, second]
+        return res
 ```

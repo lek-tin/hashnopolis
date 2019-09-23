@@ -2,7 +2,7 @@
 title: "Convert Sorted Array to Binary Search Tree"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "sorted-array", "bst"]
+tags: ["leetcode", "bst"]
 categories: ["algorithm"]
 date: 2018-09-14T10:23:36+08:00
 draft: false

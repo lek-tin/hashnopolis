@@ -2,7 +2,7 @@
 title: "Merge Sorted Array"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "sorted-array"]
+tags: ["leetcode"]
 categories: ["algorithm"]
 date: 2018-10-08T13:03:08-07:00
 draft: false

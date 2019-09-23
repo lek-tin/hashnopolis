@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python", "binary-search"]
 categories: ["algorithm"]
 date: 2018-10-26T23:07:46-07:00
+lastmod: 2019-09-22T20:07:46-07:00
 draft: false
 archive: false
 ---
@@ -30,21 +31,25 @@ Then 4 is the first bad version.
 # @param version, an integer
 # @return a bool
 # def isBadVersion(version):
-class Solution(object):
+
+class Solution:
     def firstBadVersion(self, n):
         """
         :type n: int
         :rtype: int
         """
         start, end = 1, n
-        if isBadVersion(1):
-            return start
-        while (start + 1) < end:
-            mid = start + (end - start)//2
+        ## "start+1" ensures start and end never cross
+        while start + 1 < end:
+            mid = start + (end-start)//2
             if isBadVersion(mid):
                 end = mid
             # If a version is ok, all the preceding versions should be ok too 😉
             else:
-                start = mid
-        return end
+                start = mid + 1
+
+        if isBadVersion(start):
+            return start
+        if isBadVersion(end):
+            return end
 ```

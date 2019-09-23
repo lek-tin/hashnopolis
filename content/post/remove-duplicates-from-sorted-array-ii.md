@@ -2,7 +2,7 @@
 title: "80. Remove Duplicates From Sorted Array II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "array", "sorted-array", "two-pointers", "remove-duplicates"]
+tags: ["leetcode", "array", "two-pointers", "remove-duplicates"]
 categories: ["algorithm"]
 date: 2018-08-24T00:48:48+08:00
 draft: false
