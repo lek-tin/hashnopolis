@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "binary-search", "python", "array", "logn"]
 categories: ["algorithm"]
 date: 2018-08-15T12:50:21+08:00
+lastmod: 2019-09-22T12:50:21+08:00
 draft: false
 archive: false
 ---
@@ -44,9 +45,8 @@ class Solution:
             if nums[mid] == target:
                 return True
             # Skip duplicate numbers
-            if nums[start] == nums[mid] and nums[start] == nums[end]:
+            if nums[start] == nums[mid]:
                 start += 1
-                end -= 1
             else:
                 if nums[start] <= nums[mid]:
                     # Case 1

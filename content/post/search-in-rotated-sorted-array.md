@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "binary-search"]
 categories: ["algorithm"]
 date: 2018-10-26T23:08:49-07:00
+lastmod: 2019-09-22T23:08:49-07:00
 draft: false
 archive: false
 ---
