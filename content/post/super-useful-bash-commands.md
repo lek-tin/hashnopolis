@@ -165,6 +165,9 @@ Output:
 23. Kill processes listening at `PORT_NUMBER`
 ```bash
 lsof -i :<PORT_NUMBER> | awk -v i=2 -v j=2 'FNR==i {system("kill -9 " $2)}'
+sudo kill -9 `sudo lsof -t -i:9001`
+# If that doesn't work you could also use $() for command interpolation:
+sudo kill -9 $(sudo lsof -t -i:9001)
 ```
 24. `awk` Print the `j`th field of the `i`th line
 ```bash

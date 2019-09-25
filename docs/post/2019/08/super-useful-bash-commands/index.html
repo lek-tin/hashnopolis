@@ -367,6 +367,9 @@ bzip2 -dk AREAWATER.csv.bz2
 <li><p>Kill processes listening at <code>PORT_NUMBER</code></p>
 
 <pre><code class="language-bash">lsof -i :&lt;PORT_NUMBER&gt; | awk -v i=2 -v j=2 'FNR==i {system(&quot;kill -9 &quot; $2)}'
+sudo kill -9 `sudo lsof -t -i:9001`
+# If that doesn't work you could also use $() for command interpolation:
+sudo kill -9 $(sudo lsof -t -i:9001)
 </code></pre></li>
 
 <li><p><code>awk</code> Print the <code>j</code>th field of the <code>i</code>th line</p>
