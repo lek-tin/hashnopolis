@@ -7,10 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 23 Sep 2019 01:36:19 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 29 Sep 2019 20:18:05 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Maze</title>
+      <link>http://www.hashnopolis.com/post/2019/09/the-maze/</link>
+      <pubDate>Sun, 29 Sep 2019 20:18:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/the-maze/</guid>
+      <description>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won&amp;rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
+Given the ball&amp;rsquo;s start position, the destination and the maze, determine whether the ball could stop at the destination.
+The maze is represented by a binary 2D array.</description>
+    </item>
+    
+    <item>
+      <title>Island Perimeter</title>
+      <link>http://www.hashnopolis.com/post/2019/09/island-perimeter/</link>
+      <pubDate>Fri, 27 Sep 2019 16:50:11 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/island-perimeter/</guid>
+      <description>You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
+Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
+The island doesn&amp;rsquo;t have &amp;ldquo;lakes&amp;rdquo; (water inside that isn&amp;rsquo;t connected to the water around the island). One cell is a square with side length 1.</description>
+    </item>
+    
+    <item>
+      <title>Verifying an Alien Dictionary</title>
+      <link>http://www.hashnopolis.com/post/2019/09/verifying-an-alien-dictionary/</link>
+      <pubDate>Thu, 26 Sep 2019 16:52:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/verifying-an-alien-dictionary/</guid>
+      <description>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
+Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
+Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</description>
+    </item>
+    
+    <item>
+      <title>Subarray Sum Equals K</title>
+      <link>http://www.hashnopolis.com/post/2019/09/subarray-sum-equals-k/</link>
+      <pubDate>Thu, 26 Sep 2019 15:33:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/subarray-sum-equals-k/</guid>
+      <description> Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+Example 1: Input:nums = [1,1,1], k = 2 Output: 2  Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] + nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count += mapping[s-k] temp = 0 try: temp = mapping[s] + 1 except: temp = 1 mapping[s] = temp return count  </description>
+    </item>
     
     <item>
       <title>Find in Mountain Array</title>

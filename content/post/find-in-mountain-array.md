@@ -40,3 +40,63 @@ Explanation: 3 does not exist in the array, so we return -1.
 1. 13 <= mountain_arr.length() <= 100001
 2. `0 <= target <= 10^91`
 3. `0 <= mountain_arr.get(index) <= 10^9`
+
+### Solution
+```python
+# """
+# This is MountainArray's API interface.
+# You should not implement it, or speculate about its implementation
+# """
+#class MountainArray:
+#    def get(self, index: int) -> int:
+#    def length(self) -> int:
+
+class Solution:
+    def findInMountainArray(self, target: int, mountain_arr: 'MountainArray') -> int:
+        if not mountain_arr:
+            return -1
+
+        peak = self.findPeakIndex(mountain_arr)
+        print("peak:", mountain_arr.get(peak))
+        start, end = 0, peak
+        # left: uphill
+        while start+1 < end:
+            mid = start + (end-start)//2
+            if mountain_arr.get(mid) < target:
+                start = mid
+            else:
+                end = mid
+        # print(mountain_arr.get(start), mountain_arr.get(end))
+        if mountain_arr.get(start) == target:
+            return start
+        elif mountain_arr.get(end) == target:
+            return end
+
+        start, end = peak, mountain_arr.length()-1
+        # left: uphill
+        while start+1 < end:
+            mid = start + (end-start)//2
+            if mountain_arr.get(mid) < target:
+                end = mid
+            else:
+                start = mid
+        # print(mountain_arr.get(start), mountain_arr.get(end))
+        if mountain_arr.get(end) == target:
+            return end
+        elif mountain_arr.get(start) == target:
+            return start
+        # not found
+        return -1
+
+    def findPeakIndex(self, arr):
+        start, end = 0, arr.length()-1
+
+        while start+1<end:
+            mid = start+(end-start)//2
+            if arr.get(mid-1) > arr.get(mid):
+                end = mid
+            elif arr.get(mid+1) > arr.get(mid):
+                start = mid
+            else:
+                return mid
+```
