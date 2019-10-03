@@ -7,10 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 29 Sep 2019 20:18:05 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 02 Oct 2019 23:49:15 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Strobogrammatic Number Ii</title>
+      <link>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number-ii/</link>
+      <pubDate>Wed, 02 Oct 2019 23:49:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number-ii/</guid>
+      <description> A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Find all strobogrammatic numbers that are of length = n.
+Example: Input: n = 2 Output: [&amp;quot;11&amp;quot;,&amp;quot;69&amp;quot;,&amp;quot;88&amp;quot;,&amp;quot;96&amp;quot;]  Solution  </description>
+    </item>
+    
+    <item>
+      <title>Strobogrammatic Number</title>
+      <link>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number/</link>
+      <pubDate>Wed, 02 Oct 2019 17:53:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number/</guid>
+      <description>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.
+Example 1: Input: &amp;quot;69&amp;quot; Output: true  Example 2: Input: &amp;quot;88&amp;quot; Output: true  Example 3: Input: &amp;quot;962&amp;quot; Output: false  Solution class Solution: def isStrobogrammatic(self, num: str) -&amp;gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2+1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</description>
+    </item>
+    
+    <item>
+      <title>The Maze II</title>
+      <link>http://www.hashnopolis.com/post/2019/10/the-maze-ii/</link>
+      <pubDate>Tue, 01 Oct 2019 23:34:03 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/the-maze-ii/</guid>
+      <description>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won&amp;rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
+Given the ball&amp;rsquo;s start position, the destination and the maze, find the shortest distance for the ball to stop at the destination. The distance is defined by the number of empty spaces traveled by the ball from the start position (excluded) to the destination (included).</description>
+    </item>
     
     <item>
       <title>The Maze</title>

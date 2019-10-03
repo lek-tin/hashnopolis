@@ -170,6 +170,86 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/strobogrammatic-number-ii/">Strobogrammatic Number Ii</a></h2>
+
+      <p> A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Find all strobogrammatic numbers that are of length = n.
+Example: Input: n = 2 Output: [&#34;11&#34;,&#34;69&#34;,&#34;88&#34;,&#34;96&#34;]  Solution  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/strobogrammatic-number/">Strobogrammatic Number</a></h2>
+
+      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.
+Example 1: Input: &#34;69&#34; Output: true  Example 2: Input: &#34;88&#34; Output: true  Example 3: Input: &#34;962&#34; Output: false  Solution class Solution: def isStrobogrammatic(self, num: str) -&gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2&#43;1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/the-maze-ii/">The Maze II</a></h2>
+
+      <p>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won’t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
+Given the ball’s start position, the destination and the maze, find the shortest distance for the ball to stop at the destination. The distance is defined by the number of empty spaces traveled by the ball from the start position (excluded) to the destination (included).</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/the-maze/">The Maze</a></h2>
 
       <p>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won’t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
@@ -329,95 +409,10 @@ Given an array that is definitely a mountain, return any i such that A[0] &lt; A
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower-ii/">Guess Number Higher or Lower Ii</a></h2>
-
-      <p>We are playing the Guess Game. The game is as follows:
-I pick a number from 1 to n. You have to guess which number I picked.
-Every time you guess wrong, I’ll tell you whether the number I picked is higher or lower.
-However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/sum-of-square-numbers/">Sum of Square Numbers</a></h2>
 
       <p> Given a non-negative integer c, your task is to decide whether there’re two integers a and b such that a2 &#43; b2 = c.
 Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5  Example 2: Input: 3 Output: False  Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/valid-perfect-square/">Valid Perfect Square</a></h2>
-
-      <p>Given a positive integer num, write a function which returns True if num is a perfect square else False.
-Note: Do not use any built-in library function such as sqrt.
-Example 1: Input: 16 Output: true  Example 2: Input: 14 Output: false  Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: return True left, right = 0, num while left &lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &lt; num: left = mid &#43; 1 else: right = mid - 1 return False  Binary search version 2</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower/">Guess Number Higher or Lower</a></h2>
-
-      <p>We are playing the Guess Game. The game is as follows:
-I pick a number from 1 to n. You have to guess which number I picked.
-Every time you guess wrong, I’ll tell you whether the number is higher or lower.
-You call a pre-defined API guess(int num) which returns 3 possible results (-1, 1, or 0):
--1 : My number is lower 1 : My number is higher 0 : Congrats!</p>
 
       <p class="meta">
         
