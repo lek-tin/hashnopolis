@@ -2,11 +2,11 @@
 title: "Read N Characters Given Read4 Ii Call Multiple Times"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "stream"]
 categories: ["algorithm"]
 date: 2019-10-03T14:51:32-07:00
 lastmod: 2019-10-03T14:51:32-07:00
-draft: true
+draft: false
 archive: false
 ---
 Given a file and assume that you can only `read` the file using a given method `read4`, implement a method read to `read` n characters. **Your method** `read` **may be called multiple times**.  
@@ -73,3 +73,47 @@ sol.read(buf, 1); // We have reached the end of file, no more characters can be 
 3. Please remember to **RESET** your class variables declared in Solution, as static/class variables are **persisted across multiple test cases**. Please see here for more details.
 4. You may assume the destination buffer array, `buf`, is guaranteed to have enough space for storing n characters.
 5. It is guaranteed that in a given test case the same buffer `buf` is called by `read`.
+
+### Solution
+```python
+"""
+The read4 API is already defined for you.
+
+    @param buf, a list of characters
+    @return an integer
+    def read4(buf):
+
+# Below is an example of how the read4 API can be called.
+file = File("abcdefghijk") # File is "abcdefghijk", initially file pointer (fp) points to 'a'
+buf = [' '] * 4 # Create buffer with enough space to store characters
+read4(buf) # read4 returns 4. Now buf = ['a','b','c','d'], fp points to 'e'
+read4(buf) # read4 returns 4. Now buf = ['e','f','g','h'], fp points to 'i'
+read4(buf) # read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
+"""
+class Solution:
+    def __init__(self):
+        self.buf4 = ["" for _ in range(4)]
+        self.start = 0
+        self.end = 0
+
+    def read(self, buf, n):
+        """
+        :type buf: Destination buffer (List[str])
+        :type n: Maximum number of characters to read (int)
+        :rtype: The number of characters read (int)
+        """
+        print(self.buf4, self.start, self.end)
+        for i in range(n):
+            # New cycle
+            if self.start == self.end:
+                self.end = read4(self.buf4)
+                self.start = 0
+                if self.end == 0:
+                    return i
+            # buf4 is used as a temp buffer.
+            # We extract elements out by increamenting start
+            # Once start == end, a new cycle starts
+            buf[i] = self.buf4[self.start]
+            self.start += 1
+        return n
+```

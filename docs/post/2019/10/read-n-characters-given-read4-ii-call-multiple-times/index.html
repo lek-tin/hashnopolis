@@ -5,7 +5,7 @@
 
   
   <title>
-        Read N Characters Given Read4 | Hashnopolis
+        Read N Characters Given Read4 Ii Call Multiple Times | Hashnopolis
       </title>
 
     
@@ -16,20 +16,20 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="The API: int read4(char *buf) reads 4 characters at a time from a file.
-The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
-Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;." />
+  <meta name="description" content="Given a file and assume that you can only read the file using a given method read4, implement a method read to read n characters. Your method read may be called multiple times.
+Method read4: The API read4 reads 4 consecutive characters from the file, then writes those characters into the buffer array buf.
+The return value is the number of actual characters read.
+Note that read4() has its own file pointer, much like FILE *fpin C." />
   <meta name="keywords" content="leetcode stream " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Read N Characters Given Read4" />
-    <meta name="twitter:description" content="The API: int read4(char *buf) reads 4 characters at a time from a file.
-The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
-Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;." />
+    <meta name="twitter:title" content="Read N Characters Given Read4 Ii Call Multiple Times" />
+    <meta name="twitter:description" content="Given a file and assume that you can only read the file using a given method read4, implement a method read to read n characters. Your method read may be called multiple times.
+Method read4: The API read4 reads 4 consecutive characters from the file, then writes those characters into the buffer array buf.
+The return value is the number of actual characters read.
+Note that read4() has its own file pointer, much like FILE *fpin C." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -39,7 +39,7 @@ Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/read-n-characters-given-read4-ii-call-multiple-times/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -185,39 +185,85 @@ Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;
         
           "<a href="/tags/stream"><strong>stream</strong></a>",
         
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 4-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/read-n-characters-given-read4.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Read N Characters Given Read4</h1>
-      <h4>Created: November 19, 2018 by [lek-tin]</h4>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/read-n-characters-given-read4-ii-call-multiple-times.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Read N Characters Given Read4 Ii Call Multiple Times</h1>
+      <h4>Created: October 3, 2019 by [lek-tin]</h4>
       
         <h5>Last updated: October 3, 2019</h5>
       
       <hr />
       
 
-<p>The API: <code>int read4(char *buf)</code> reads 4 characters at a time from a file.</p>
+<p>Given a file and assume that you can only <code>read</code> the file using a given method <code>read4</code>, implement a method read to <code>read</code> n characters. <strong>Your method</strong> <code>read</code> <strong>may be called multiple times</strong>.</p>
 
-<p>The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.</p>
+<h3 id="method-read4">Method read4:</h3>
 
-<p>By using the <code>read4</code> API, implement the function <code>int read(char *buf, int n)</code>that reads n characters from the file.</p>
+<p>The API <code>read4</code> reads 4 consecutive characters from the file, then writes those characters into the buffer array <code>buf</code>.</p>
 
-<h3 id="example-1">Example 1</h3>
+<p>The return value is the number of actual characters read.</p>
 
-<pre><code>Input: buf = &quot;abc&quot;, n = 4
-Output: &quot;abc&quot;
-Explanation: The actual number of characters read is 3, which is &quot;abc&quot;.
+<p>Note that <code>read4()</code> has its own file pointer, much like FILE <code>*fp</code>in <code>C</code>.</p>
+
+<h3 id="definition-of-read4">Definition of read4:</h3>
+
+<pre><code>    Parameter: ` char[] buf
+    Returns:    int
+
+Note: buf[] is destination not source, the results from read4 will be copied to buf[]
 </code></pre>
 
-<h3 id="example-2">Example 2</h3>
+<p>Below is a high level example of how <code>read4</code> works:</p>
 
-<pre><code>Input: buf = &quot;abcde&quot;, n = 5
-Output: &quot;abcde&quot;
+<pre><code>File file(&quot;abcdefghijk&quot;); // File is &quot;abcdefghijk&quot;, initially file pointer (fp) points to 'a'
+char[] buf = new char[4]; // Create buffer with enough space to store characters
+read4(buf); // read4 returns 4. Now buf = &quot;abcd&quot;, fp points to 'e'
+read4(buf); // read4 returns 4. Now buf = &quot;efgh&quot;, fp points to 'i'
+read4(buf); // read4 returns 3. Now buf = &quot;ijk&quot;, fp points to end of file
 </code></pre>
 
-<h3 id="note">Note</h3>
+<h3 id="method-read">Method read:</h3>
 
-<p>The read function will only be called once for each test case.</p>
+<p>By using the <code>read4</code> method, implement the method <code>read</code> that reads n characters from the file and store it in the buffer array <code>buf</code>. Consider that you <strong>cannot</strong> manipulate the file directly.</p>
+
+<p>The return value is the number of actual characters read.</p>
+
+<h3 id="definition-of-read">Definition of read:</h3>
+
+<pre><code>    Parameters:	char[] buf, int n
+    Returns:	int
+
+Note: buf[] is destination not source, you will need to write the results to buf[]
+</code></pre>
+
+<h3 id="example-1">Example 1:</h3>
+
+<pre><code>File file(&quot;abc&quot;);
+Solution sol;
+// Assume buf is allocated and guaranteed to have enough space for storing all characters from the file.
+sol.read(buf, 1); // After calling your read method, buf should contain &quot;a&quot;. We read a total of 1 character from the file, so return 1.
+sol.read(buf, 2); // Now buf should contain &quot;bc&quot;. We read a total of 2 characters from the file, so return 2.
+sol.read(buf, 1); // We have reached the end of file, no more characters can be read. So return 0.
+</code></pre>
+
+<p>Example 2:</p>
+
+<pre><code>File file(&quot;abc&quot;);
+Solution sol;
+sol.read(buf, 4); // After calling your read method, buf should contain &quot;abc&quot;. We read a total of 3 characters from the file, so return 3.
+sol.read(buf, 1); // We have reached the end of file, no more characters can be read. So return 0.
+</code></pre>
+
+<h3 id="note">Note:</h3>
+
+<ol>
+<li>Consider that you <strong>cannot</strong> manipulate the file directly, the file is only accesible for <code>read4</code> but <strong>not</strong> for <code>read</code>.</li>
+<li>The <code>read</code> function may be called <strong>multiple times</strong>.</li>
+<li>Please remember to <strong>RESET</strong> your class variables declared in Solution, as static/class variables are <strong>persisted across multiple test cases</strong>. Please see here for more details.</li>
+<li>You may assume the destination buffer array, <code>buf</code>, is guaranteed to have enough space for storing n characters.</li>
+<li>It is guaranteed that in a given test case the same buffer <code>buf</code> is called by <code>read</code>.</li>
+</ol>
 
 <h3 id="solution">Solution</h3>
 
@@ -235,43 +281,32 @@ read4(buf) # read4 returns 4. Now buf = ['a','b','c','d'], fp points to 'e'
 read4(buf) # read4 returns 4. Now buf = ['e','f','g','h'], fp points to 'i'
 read4(buf) # read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
 &quot;&quot;&quot;
-&quot;&quot;&quot;
-The read4 API is already defined for you.
-
-    @param buf, a list of characters
-    @return an integer
-    def read4(buf):
-
-# Below is an example of how the read4 API can be called.
-file = File(&quot;abcdefghijk&quot;) # File is &quot;abcdefghijk&quot;, initially file pointer (fp) points to 'a'
-buf = [' '] * 4 # Create buffer with enough space to store characters
-read4(buf) # read4 returns 4. Now buf = ['a','b','c','d'], fp points to 'e'
-read4(buf) # read4 returns 4. Now buf = ['e','f','g','h'], fp points to 'i'
-read4(buf) # read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
-&quot;&quot;&quot;
 class Solution:
+    def __init__(self):
+        self.buf4 = [&quot;&quot; for _ in range(4)]
+        self.start = 0
+        self.end = 0
+
     def read(self, buf, n):
         &quot;&quot;&quot;
         :type buf: Destination buffer (List[str])
-        :type n: Number of characters to read (int)
-        :rtype: The number of actual characters read (int)
+        :type n: Maximum number of characters to read (int)
+        :rtype: The number of characters read (int)
         &quot;&quot;&quot;
-        curr, size = 0, 4
-        while curr &lt; n:
-            tempBuf = [&quot;&quot; for _ in range(size)]
-            # n can be longer than the file size
-            # take the min to decide whether to stop
-            #           &quot;abc&quot;, 3
-            #                           &quot;abcdef&quot;, 5
-            chunk = min(read4(tempBuf), n-curr)
-            # If chunk == 0, file has been read completely
-            if chunk == 0:
-                break
-            print(chunk)
-            buf[curr: curr+chunk] = tempBuf
-            curr += chunk
-
-        return curr
+        print(self.buf4, self.start, self.end)
+        for i in range(n):
+            # New cycle
+            if self.start == self.end:
+                self.end = read4(self.buf4)
+                self.start = 0
+                if self.end == 0:
+                    return i
+            # buf4 is used as a temp buffer.
+            # We extract elements out by increamenting start
+            # Once start == end, a new cycle starts
+            buf[i] = self.buf4[self.start]
+            self.start += 1
+        return n
 </code></pre>
 
   </div>

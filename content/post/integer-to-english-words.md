@@ -1,5 +1,5 @@
 ---
-title: "Interger to English Words"
+title: "Integer to English Words"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "python"]
