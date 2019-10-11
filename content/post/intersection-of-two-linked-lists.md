@@ -2,9 +2,10 @@
 title: "Intersection of Two Linked Lists"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "linked-list"]
 categories: ["algorithm"]
 date: 2018-10-14T23:56:47-07:00
+lastmod: 2019-10-10T19:56:47-07:00
 draft: false
 archive: false
 ---
