@@ -19,7 +19,7 @@
   <meta name="description" content="Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
 Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
 Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)" />
-  <meta name="keywords" content="leetcode array two-pointers " />
+  <meta name="keywords" content="leetcode quick-select two-pointers " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -181,11 +181,11 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/array"><strong>array</strong></a>",
+          "<a href="/tags/quick-select"><strong>quick-select</strong></a>",
         
           "<a href="/tags/two-pointers"><strong>two-pointers</strong></a>",
         
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/kth-largest-Element-in-an-array.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Kth Largest Element in an Array</h1>
@@ -216,44 +216,44 @@ Output: 4
 
 <h3 id="solution">Solution:</h3>
 
-<p>Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n+kLogk)</p>
+<p>Average time complexity: <code>O(n)</code> if we don’t need the sorted output, otherwise <code>O(n+kLogk)</code><br />
+<code>T(n) = T(n/2) + n = n + n/2 + n/4 + ... = n * (1 + 1/2 + 1/4 + ...)</code><br />
+Thisa sum of geometric series, which is equal to 2. Therefore the sum is <code>2n</code>. So the complexity is <code>O(n)</code>.</p>
 
 <pre><code class="language-python">class Solution:
-    def findKthLargest(self, nums, k):
-        if (nums == None or len(nums) == 0):
-            return 0
+    def findKthLargest(self, nums: List[int], k: int) -&gt; int:
+        if not nums or k &lt;= 0 or k &gt; len(nums):
+            return -1
 
-        left, right = 0, len(nums) - 1
-
-        def swap(nums, i, j):
-            temp = nums[i]
-            nums[i] = nums[j]
-            nums[j] = temp
-
-        def partition(nums, left, right):
-            pivot = nums[left]
-            l = left + 1
-            r = right
-            while l &lt;= r:
-                if nums[l] &lt; pivot and nums[r] &gt; pivot:
-                    swap(nums, l, r)
-                    l += 1
-                    r -= 1
-                if nums[l] &gt;= pivot:
-                    l += 1
-                if nums[r] &lt;= pivot:
-                    r -= 1
-            swap(nums, left, r)
-            return r
-
+        pos, start, end = 0, 0, len(nums)-1
         while True:
-            pos = partition(nums, left, right)
-            if pos + 1 == k:
+            pos = self.partition(nums, start, end)
+            if pos+1 == k:
                 return nums[pos]
-            elif pos + 1 &gt; k:
-                right = pos - 1
-            elif pos + 1 &lt; k:
-                left = pos + 1
+            elif pos+1 &gt; k:
+                end = pos-1
+            else:
+                start = pos+1
+
+    def partition(self, nums, start, end):
+        pivot = start
+        start += 1
+        while start &lt;= end:
+            if nums[start] &lt; nums[pivot] and nums[end] &gt; nums[pivot]:
+                self.swap(nums, start, end)
+                start += 1
+                end -= 1
+            if nums[start] &gt;= nums[pivot]:
+                start += 1
+            if nums[end] &lt;= nums[pivot]:
+                end -= 1
+        self.swap(nums, pivot, end)
+        return end
+
+    def swap(self, nums, i, j):
+        temp = nums[i]
+        nums[i] = nums[j]
+        nums[j] = temp
 </code></pre>
 
   </div>

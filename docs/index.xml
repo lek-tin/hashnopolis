@@ -7,10 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 03 Oct 2019 14:51:32 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2019 17:43:14 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Path Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/10/path-sum/</link>
+      <pubDate>Sat, 12 Oct 2019 17:43:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/path-sum/</guid>
+      <description>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+Note: A leaf is a node with no children.
+Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1 return true, as there exist a root-to-leaf path 5-&amp;gt;4-&amp;gt;11-&amp;gt;2 which sum is 22.</description>
+    </item>
+    
+    <item>
+      <title>Continuous Subarray Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/10/continuous-subarray-sum/</link>
+      <pubDate>Fri, 11 Oct 2019 22:18:54 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/continuous-subarray-sum/</guid>
+      <description>Given a list of non-negative numbers and a target integer k, write a function to check if the array has a continuous subarray of size at least 2 that sums up to a multiple of k, that is, sums up to n*k where n is also an integer.
+Example 1: Input: [23, 2, 4, 6, 7], k=6 Output: True Explanation: Because [2, 4] is a continuous subarray of size 2 and sums up to 6.</description>
+    </item>
+    
+    <item>
+      <title>Convert Sorted List to Binary Search Tree</title>
+      <link>http://www.hashnopolis.com/post/2019/10/convert-sorted-list-to-binary-search-tree/</link>
+      <pubDate>Wed, 09 Oct 2019 23:51:44 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/convert-sorted-list-to-binary-search-tree/</guid>
+      <description>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+Example: Given the sorted linked list: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5  Solution python</description>
+    </item>
     
     <item>
       <title>Read N Characters Given Read4 Ii Call Multiple Times</title>
@@ -1267,6 +1299,17 @@ For corner elements, we need to consider only one neighbor for comparison. There
       <description>Given a binary tree, return the vertical order traversal of its nodes&amp;rsquo; values. (ie, from top to bottom, column by column).
 If two nodes are in the same row and column, the order should be from left to right.
 Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ]  Solution # https://www.</description>
+    </item>
+    
+    <item>
+      <title>Convert Binary Search Tree to Sorted Doubly Linked List</title>
+      <link>http://www.hashnopolis.com/post/2018/12/convert-binary-search-tree-to-sorted-doubly-linked-list/</link>
+      <pubDate>Wed, 26 Dec 2018 01:24:33 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/convert-binary-search-tree-to-sorted-doubly-linked-list/</guid>
+      <description>Convert a BST to a sorted circular doubly-linked list in-place. Think of the left and right pointers as synonymous to the previous and next pointers in a doubly-linked list.
+Let&amp;rsquo;s take the following BST as an example, it may help you understand the problem better:
+We want to transform this BST into a circular doubly linked list. Each node in a doubly linked list has a predecessor and successor. For a circular doubly linked list, the predecessor of the first element is the last element, and the successor of the last element is the first element.</description>
     </item>
     
     <item>
