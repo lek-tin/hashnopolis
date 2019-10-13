@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "dynamic-programming", "kadanes-algorithm"]
 categories: ["algorithm"]
 date: 2019-02-20T22:30:14-08:00
+lastmod: 2019-10-11T17:30:14-08:00
 draft: false
 archive: false
 ---
@@ -55,4 +56,21 @@ class Solution:
             minSum = min(total, minSum)
 
         return maxSum
+```
+Kadane's Algorithm (Python)
+```python
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        n = len(nums)
+        if n == 0:
+            return 0
+
+        localMaxSum = globalMaxSum = nums[0]
+
+        for i in range(1, n):
+            localMaxSum = max(localMaxSum+nums[i], nums[i])
+            if localMaxSum > globalMaxSum:
+                globalMaxSum = localMaxSum
+
+        return globalMaxSum
 ```

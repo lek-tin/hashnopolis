@@ -2,7 +2,7 @@
 title: "Kth Largest Element in an Array"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "array", "two-pointers"]
+tags: ["leetcode", "quick-select", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-10-24T23:38:20-07:00
 draft: false
@@ -23,42 +23,42 @@ Output: 4
 ### Note:
 You may assume `k` is always valid, `1 ≤ k ≤ array's length`.
 ### Solution:
-Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n+kLogk)
+Average time complexity: `O(n)` if we don’t need the sorted output, otherwise `O(n+kLogk)`  
+`T(n) = T(n/2) + n = n + n/2 + n/4 + ... = n * (1 + 1/2 + 1/4 + ...)`  
+Thisa sum of geometric series, which is equal to 2. Therefore the sum is `2n`. So the complexity is `O(n)`.
 ```python
 class Solution:
-    def findKthLargest(self, nums, k):
-        if (nums == None or len(nums) == 0):
-            return 0
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        if not nums or k <= 0 or k > len(nums):
+            return -1
 
-        left, right = 0, len(nums) - 1
-
-        def swap(nums, i, j):
-            temp = nums[i]
-            nums[i] = nums[j]
-            nums[j] = temp
-
-        def partition(nums, left, right):
-            pivot = nums[left]
-            l = left + 1
-            r = right
-            while l <= r:
-                if nums[l] < pivot and nums[r] > pivot:
-                    swap(nums, l, r)
-                    l += 1
-                    r -= 1
-                if nums[l] >= pivot:
-                    l += 1
-                if nums[r] <= pivot:
-                    r -= 1
-            swap(nums, left, r)
-            return r
-
+        pos, start, end = 0, 0, len(nums)-1
         while True:
-            pos = partition(nums, left, right)
-            if pos + 1 == k:
+            pos = self.partition(nums, start, end)
+            if pos+1 == k:
                 return nums[pos]
-            elif pos + 1 > k:
-                right = pos - 1
-            elif pos + 1 < k:
-                left = pos + 1
+            elif pos+1 > k:
+                end = pos-1
+            else:
+                start = pos+1
+
+    def partition(self, nums, start, end):
+        pivot = start
+        start += 1
+        while start <= end:
+            if nums[start] < nums[pivot] and nums[end] > nums[pivot]:
+                self.swap(nums, start, end)
+                start += 1
+                end -= 1
+            if nums[start] >= nums[pivot]:
+                start += 1
+            if nums[end] <= nums[pivot]:
+                end -= 1
+        self.swap(nums, pivot, end)
+        return end
+
+    def swap(self, nums, i, j):
+        temp = nums[i]
+        nums[i] = nums[j]
+        nums[j] = temp
 ```
