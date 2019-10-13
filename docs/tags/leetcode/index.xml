@@ -7,10 +7,281 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 04 Sep 2019 23:06:05 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 14:51:32 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Read N Characters Given Read4 Ii Call Multiple Times</title>
+      <link>http://www.hashnopolis.com/post/2019/10/read-n-characters-given-read4-ii-call-multiple-times/</link>
+      <pubDate>Thu, 03 Oct 2019 14:51:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/read-n-characters-given-read4-ii-call-multiple-times/</guid>
+      <description>Given a file and assume that you can only read the file using a given method read4, implement a method read to read n characters. Your method read may be called multiple times.
+Method read4: The API read4 reads 4 consecutive characters from the file, then writes those characters into the buffer array buf.
+The return value is the number of actual characters read.
+Note that read4() has its own file pointer, much like FILE *fpin C.</description>
+    </item>
+    
+    <item>
+      <title>Strobogrammatic Number II</title>
+      <link>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number-ii/</link>
+      <pubDate>Wed, 02 Oct 2019 23:49:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number-ii/</guid>
+      <description>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Find all strobogrammatic numbers that are of length = n.
+Example: Input: n = 2 Output: [&amp;quot;11&amp;quot;,&amp;quot;69&amp;quot;,&amp;quot;88&amp;quot;,&amp;quot;96&amp;quot;]  Solution # Time: O(n^2 * 5^(n/2)) # Space: O(n) class Solution: def findStrobogrammatic(self, n: int) -&amp;gt; List[str]: stroboPairs = { &amp;quot;0&amp;quot;: &amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;6&amp;quot;: &amp;quot;9&amp;quot;, &amp;quot;8&amp;quot;: &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;: &amp;quot;6&amp;quot; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&amp;quot;&amp;quot;] if curr == 1: return list(&amp;quot;018&amp;quot;) prev = self.</description>
+    </item>
+    
+    <item>
+      <title>Strobogrammatic Number</title>
+      <link>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number/</link>
+      <pubDate>Wed, 02 Oct 2019 17:53:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number/</guid>
+      <description>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.
+Example 1: Input: &amp;quot;69&amp;quot; Output: true  Example 2: Input: &amp;quot;88&amp;quot; Output: true  Example 3: Input: &amp;quot;962&amp;quot; Output: false  Solution class Solution: def isStrobogrammatic(self, num: str) -&amp;gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2+1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</description>
+    </item>
+    
+    <item>
+      <title>The Maze II</title>
+      <link>http://www.hashnopolis.com/post/2019/10/the-maze-ii/</link>
+      <pubDate>Tue, 01 Oct 2019 23:34:03 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/the-maze-ii/</guid>
+      <description>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won&amp;rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
+Given the ball&amp;rsquo;s start position, the destination and the maze, find the shortest distance for the ball to stop at the destination. The distance is defined by the number of empty spaces traveled by the ball from the start position (excluded) to the destination (included).</description>
+    </item>
+    
+    <item>
+      <title>The Maze</title>
+      <link>http://www.hashnopolis.com/post/2019/09/the-maze/</link>
+      <pubDate>Sun, 29 Sep 2019 20:18:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/the-maze/</guid>
+      <description>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won&amp;rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
+Given the ball&amp;rsquo;s start position, the destination and the maze, determine whether the ball could stop at the destination.
+The maze is represented by a binary 2D array.</description>
+    </item>
+    
+    <item>
+      <title>Island Perimeter</title>
+      <link>http://www.hashnopolis.com/post/2019/09/island-perimeter/</link>
+      <pubDate>Fri, 27 Sep 2019 16:50:11 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/island-perimeter/</guid>
+      <description>You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
+Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
+The island doesn&amp;rsquo;t have &amp;ldquo;lakes&amp;rdquo; (water inside that isn&amp;rsquo;t connected to the water around the island). One cell is a square with side length 1.</description>
+    </item>
+    
+    <item>
+      <title>Verifying an Alien Dictionary</title>
+      <link>http://www.hashnopolis.com/post/2019/09/verifying-an-alien-dictionary/</link>
+      <pubDate>Thu, 26 Sep 2019 16:52:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/verifying-an-alien-dictionary/</guid>
+      <description>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
+Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
+Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</description>
+    </item>
+    
+    <item>
+      <title>Subarray Sum Equals K</title>
+      <link>http://www.hashnopolis.com/post/2019/09/subarray-sum-equals-k/</link>
+      <pubDate>Thu, 26 Sep 2019 15:33:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/subarray-sum-equals-k/</guid>
+      <description> Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+Example 1: Input:nums = [1,1,1], k = 2 Output: 2  Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] + nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count += mapping[s-k] temp = 0 try: temp = mapping[s] + 1 except: temp = 1 mapping[s] = temp return count  </description>
+    </item>
+    
+    <item>
+      <title>Find in Mountain Array</title>
+      <link>http://www.hashnopolis.com/post/2019/09/find-in-mountain-array/</link>
+      <pubDate>Mon, 23 Sep 2019 01:36:19 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/find-in-mountain-array/</guid>
+      <description>(This problem is an interactive problem.)
+You may recall that an array A is a mountain array if and only if: 1. A.length &amp;gt;= 3 2. There exists some i with 0 &amp;lt; i &amp;lt; A.length - 1 such that: * A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] * A[i] &amp;gt; A[i+1] &amp;gt; ... &amp;gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.</description>
+    </item>
+    
+    <item>
+      <title>Peak Index in a Mountain Array</title>
+      <link>http://www.hashnopolis.com/post/2019/09/peak-index-in-a-mountain-array/</link>
+      <pubDate>Mon, 23 Sep 2019 01:02:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/peak-index-in-a-mountain-array/</guid>
+      <description>Let&amp;rsquo;s call an array A a mountain if the following properties hold: 1. A.length &amp;gt;= 3 2. There exists some 0 &amp;lt; i &amp;lt; A.length - 1 such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i+1] &amp;gt; ... &amp;gt; A[A.length - 1]
+Given an array that is definitely a mountain, return any i such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i+1] &amp;gt; .</description>
+    </item>
+    
+    <item>
+      <title>Sum of Square Numbers</title>
+      <link>http://www.hashnopolis.com/post/2019/09/sum-of-square-numbers/</link>
+      <pubDate>Fri, 20 Sep 2019 00:21:44 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/sum-of-square-numbers/</guid>
+      <description> Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c.
+Example 1: Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5  Example 2: Input: 3 Output: False  Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left + right*right &amp;lt; c: if (left+1)*(left+1) + right*right &amp;gt; c: right -= 1 else: left += 1 if left*left + right*right == c: return True return False  </description>
+    </item>
+    
+    <item>
+      <title>Valid Perfect Square</title>
+      <link>http://www.hashnopolis.com/post/2019/09/valid-perfect-square/</link>
+      <pubDate>Thu, 19 Sep 2019 23:47:10 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/valid-perfect-square/</guid>
+      <description>Given a positive integer num, write a function which returns True if num is a perfect square else False.
+Note: Do not use any built-in library function such as sqrt.
+Example 1: Input: 16 Output: true  Example 2: Input: 14 Output: false  Solution Binary search version 1
+class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left + (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid + 1 else: right = mid - 1 return False  Binary search version 2</description>
+    </item>
+    
+    <item>
+      <title>Guess Number Higher or Lower Ii</title>
+      <link>http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower-ii/</link>
+      <pubDate>Thu, 19 Sep 2019 23:33:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower-ii/</guid>
+      <description>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I&amp;rsquo;ll tell you whether the number I picked is higher or lower.
+However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</description>
+    </item>
+    
+    <item>
+      <title>Guess Number Higher or Lower</title>
+      <link>http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower/</link>
+      <pubDate>Thu, 19 Sep 2019 23:19:54 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower/</guid>
+      <description>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I&amp;rsquo;ll tell you whether the number is higher or lower.
+You call a pre-defined API guess(int num) which returns 3 possible results (-1, 1, or 0):
+-1 : My number is lower 1 : My number is higher 0 : Congrats!</description>
+    </item>
+    
+    <item>
+      <title>Find Anagram Mappings</title>
+      <link>http://www.hashnopolis.com/post/2019/09/find-anagram-mappings/</link>
+      <pubDate>Tue, 17 Sep 2019 00:30:24 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/find-anagram-mappings/</guid>
+      <description>Given two lists A and B, and B is an anagram of A. B is an anagram of A means B is made by randomizing the order of the elements in A.
+We want to find an index mapping P, from A to B. A mapping P[i] = j means the ith element in A appears in B at index j.
+These lists A and B may contain duplicates. If there are multiple answers, output any of them.</description>
+    </item>
+    
+    <item>
+      <title>Pancake Sorting</title>
+      <link>http://www.hashnopolis.com/post/2019/09/pancake-sorting/</link>
+      <pubDate>Sun, 15 Sep 2019 21:03:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/pancake-sorting/</guid>
+      <description>Given an array A, we can perform a pancake flip: We choose some positive integer k &amp;lt;= A.length, then reverse the order of the first k elements of A. We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array A.
+Return the k-values corresponding to a sequence of pancake flips that sortA. Any valid answer that sorts the array within 10 * A.</description>
+    </item>
+    
+    <item>
+      <title>Super Ugly Number</title>
+      <link>http://www.hashnopolis.com/post/2019/09/super-ugly-number/</link>
+      <pubDate>Sat, 14 Sep 2019 22:35:23 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/super-ugly-number/</guid>
+      <description>Write a program to find the nth super ugly number.
+Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
+Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4.  Note:  1 is a super ugly number for any given primes.</description>
+    </item>
+    
+    <item>
+      <title>Perfect Squares</title>
+      <link>http://www.hashnopolis.com/post/2019/09/perfect-squares/</link>
+      <pubDate>Sat, 14 Sep 2019 16:03:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/perfect-squares/</guid>
+      <description> Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4.  Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 + 9.  Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n+1)] for i in range(1, n+1): for j in range(1, n+1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]+1) return count[n]  </description>
+    </item>
+    
+    <item>
+      <title>Ugly Number II</title>
+      <link>http://www.hashnopolis.com/post/2019/09/ugly-number-ii/</link>
+      <pubDate>Wed, 11 Sep 2019 22:43:29 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/ugly-number-ii/</guid>
+      <description>Write a program to find the n-th ugly number.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
+Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.  Note:  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&amp;gt; int: if n &amp;lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !</description>
+    </item>
+    
+    <item>
+      <title>Longest Consecutive Sequence</title>
+      <link>http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/</link>
+      <pubDate>Tue, 10 Sep 2019 12:01:01 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/</guid>
+      <description> Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+Your algorithm should run in O(n) complexity.
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num+1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l += 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right += 1 l += 1 # Update longest longest = max(longest, l) return longest  </description>
+    </item>
+    
+    <item>
+      <title>Subarray Product Less Than K</title>
+      <link>http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/</link>
+      <pubDate>Tue, 10 Sep 2019 00:38:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/</guid>
+      <description>Your are given an array of positive integers nums.
+Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than k.
+Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]. Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</description>
+    </item>
+    
+    <item>
+      <title>Russian Doll Envelopes</title>
+      <link>http://www.hashnopolis.com/post/2019/09/russian-doll-envelopes/</link>
+      <pubDate>Tue, 10 Sep 2019 00:37:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/russian-doll-envelopes/</guid>
+      <description>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
+What is the maximum number of envelopes can you Russian doll? (put one inside other)
+Note: Rotation is not allowed.
+Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&amp;gt; [5,4] =&amp;gt; [6,7]).</description>
+    </item>
+    
+    <item>
+      <title>Minimum Size Subarray Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/09/minimum-size-subarray-sum/</link>
+      <pubDate>Sun, 08 Sep 2019 23:43:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/minimum-size-subarray-sum/</guid>
+      <description>Given an array of n positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum ≥ s. If there isn&amp;rsquo;t one, return 0 instead.
+Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray [4,3] has the minimal length under the problem constraint. Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).</description>
+    </item>
+    
+    <item>
+      <title>Coin Change</title>
+      <link>http://www.hashnopolis.com/post/2019/09/coin-change/</link>
+      <pubDate>Sat, 07 Sep 2019 23:58:51 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/coin-change/</guid>
+      <description>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Product Subarray</title>
+      <link>http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/</link>
+      <pubDate>Wed, 04 Sep 2019 23:44:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/</guid>
+      <description> Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.  Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.  Solution # time: o(n) class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res  </description>
+    </item>
     
     <item>
       <title>Triangle</title>
@@ -530,16 +801,6 @@ Your KthLargest class will have a constructor which accepts an integer k and an 
     </item>
     
     <item>
-      <title>Coin Change</title>
-      <link>http://www.hashnopolis.com/post/2019/03/coin-change/</link>
-      <pubDate>Fri, 08 Mar 2019 23:58:51 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/03/coin-change/</guid>
-      <description>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin.</description>
-    </item>
-    
-    <item>
       <title>Sliding Window Maximum</title>
       <link>http://www.hashnopolis.com/post/2019/03/sliding-window-maximum/</link>
       <pubDate>Fri, 08 Mar 2019 23:26:00 -0800</pubDate>
@@ -547,6 +808,17 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 +
       <guid>http://www.hashnopolis.com/post/2019/03/sliding-window-maximum/</guid>
       <description>Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
 Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7  Note: You may assume k is always valid, 1 ≤ k ≤ input array&amp;rsquo;s size for non-empty array.</description>
+    </item>
+    
+    <item>
+      <title>Prison Cells After N Days</title>
+      <link>http://www.hashnopolis.com/post/2019/03/prison-cells-after-n-days/</link>
+      <pubDate>Fri, 08 Mar 2019 01:33:22 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/prison-cells-after-n-days/</guid>
+      <description>There are 8 prison cells in a row, and each cell is either occupied or vacant.
+Each day, whether the cell is occupied or vacant changes according to the following rules:
+ If a cell has two adjacent neighbors that are both occupied or both vacant, then the cell becomes occupied. Otherwise, it becomes vacant. (Note that because the prison is a row, the first and the last cells in the row can&amp;rsquo;t have two adjacent neighbors.</description>
     </item>
     
     <item>
@@ -1009,17 +1281,6 @@ Now you want to find out who the celebrity is or verify that there is not one. T
     </item>
     
     <item>
-      <title>Longest Consecutive Sequence</title>
-      <link>http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/</link>
-      <pubDate>Wed, 14 Nov 2018 12:01:01 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/11/longest-consecutive-sequence/</guid>
-      <description>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
-Your algorithm should run in O(n) complexity.
-Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution(object): def longestConsecutive(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; if nums is None or len(nums) == 0: return 0 map = {} maxLen = 0; for num in nums: if num in map: # skip duplicates continue # initialize ranges low, upp = num, num if num - 1 in map: low = map.</description>
-    </item>
-    
-    <item>
       <title>Flatten Nested List Iterator</title>
       <link>http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/</link>
       <pubDate>Tue, 13 Nov 2018 20:03:07 -0800</pubDate>
@@ -1085,11 +1346,11 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
     </item>
     
     <item>
-      <title>Interger to English Words</title>
-      <link>http://www.hashnopolis.com/post/2018/11/interger-to-english-words/</link>
+      <title>Integer to English Words</title>
+      <link>http://www.hashnopolis.com/post/2018/11/integer-to-english-words/</link>
       <pubDate>Sun, 11 Nov 2018 13:27:05 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/11/interger-to-english-words/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/11/integer-to-english-words/</guid>
       <description>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
 Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Example 2 Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot;  Example 3 Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot;  Example 4 Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot;  Solution class Solution: def __init__(self): self.</description>
     </item>
@@ -1122,8 +1383,8 @@ Example 1 Input: 2 / \ 1 3 Output: true  Example 2  5 / \ 1 4 / \ 3 6 Output: fa
       <pubDate>Fri, 09 Nov 2018 18:52:59 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/count-primes/</guid>
-      <description> Count the number of prime numbers less than a non-negative number, n.
-Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)+1): if marked[i] != 1: prime = i + 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count += 1 return count  </description>
+      <description>Count the number of prime numbers less than a non-negative number, n.
+Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)+1): if marked[i] != 1: prime = i + 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count += 1 return count  Cleaner version</description>
     </item>
     
     <item>
@@ -1154,10 +1415,10 @@ For example:
       <pubDate>Thu, 08 Nov 2018 22:10:52 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/</guid>
-      <description> Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
+      <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution class Solution: def increasingTriplet(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: bool &amp;quot;&amp;quot;&amp;quot; if not nums or len(nums) &amp;lt; 3: return False min_1, min_2 = max(nums), max(nums) # Not asking to find 3 consecutive increasing numbers for n in nums: if n &amp;gt; min_2: return True elif n &amp;lt; min_1: min_1 = n elif n &amp;gt; min_1 and n &amp;lt; min_2: min_2 = n return False  </description>
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution import sys INT_MAX = sys.</description>
     </item>
     
     <item>
@@ -2234,8 +2495,7 @@ Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1
       <description>There are two sorted arrays nums1 and nums2 of size m and n respectively.
 Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 You may assume nums1 and nums2 cannot be both empty.
-Example 1: nums1 = [1, 3] nums2 = [2]  The median is 2.0
-Example 2: nums1 = [1, 2] nums2 = [3, 4]  The median is (2 + 3)/2 = 2.</description>
+Example 1: nums1 = [1, 3] nums2 = [2] The median is 2.0  Example 2: nums1 = [1, 2] nums2 = [3, 4] The median is (2 + 3)/2 = 2.</description>
     </item>
     
     <item>

@@ -176,12 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-postorder-traversal/">Binary Tree Postorder Traversal</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/">Remove Linked List Elements</a></h2>
 
-      <p>Given a binary tree, return the postorder traversal of its nodes’ values.
-Example Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1]  Follow-up Recursive solution is trivial, could you do it iteratively?
-Solution Recursive👇
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def postorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; def traverse(node): if node == None: return [] return traverse(node.</p>
+      <p>Remove all elements from a linked list of integers that have value val.
+Example Input: 1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6 Output: 1-&gt;2-&gt;3-&gt;4-&gt;5  Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &#34;&#34;&#34; :type head: ListNode :type val: int :rtype: ListNode &#34;&#34;&#34; pre = ListNode(0) pre.next = head pos = pre while pos.</p>
 
       <p class="meta">
         
@@ -204,12 +202,10 @@ Solution Recursive👇
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-paths/">Binary Tree Paths</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/unique-binary-search-trees/">Unique Binary Search Trees</a></h2>
 
-      <p>Given a binary tree, return all root-to-leaf paths.
-Note: A leaf is a node with no children.
-Example Input: 1 / \ 2 3 \ 5 Output: [&#34;1-&gt;2-&gt;5&#34;, &#34;1-&gt;3&#34;]  Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[str] &#34;&#34;&#34; res = [] def traverse(root, path): if root == None: return path &#43;= str(root.</p>
+      <p>Given n, how many structurally unique BST’s (binary search trees) that store values 1 … n?
+Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  Exaplanation n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0);  Solution class Solution: def numTrees(self, n): &#34;&#34;&#34; :type n: int :rtype: int &#34;&#34;&#34; res = [1] for i in range(1, n&#43;1): for j in range(i): res.</p>
 
       <p class="meta">
         
@@ -232,149 +228,12 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/symmetric-tree/">Symmetric Tree</a></h2>
 
-      <p>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).
-Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7  return its level order traversal as:
-[ [3], [9,20], [15,7] ]  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal-ii/">Binary Tree Level Order Traversal II</a></h2>
-
-      <p>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).
-For example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7  return its bottom-up level order traversal as:
-[ [15,7], [9,20], [3] ]  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/">Employees Earning More Than Their Managers</a></h2>
-
-      <p># SQL Schema: Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int) Truncate table Employee insert into Employee (Id, Name, Salary, ManagerId) values (&#39;1&#39;, &#39;Joe&#39;, &#39;70000&#39;, &#39;3&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;2&#39;, &#39;Henry&#39;, &#39;80000&#39;, &#39;4&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;3&#39;, &#39;Sam&#39;, &#39;60000&#39;, &#39;None&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;4&#39;, &#39;Max&#39;, &#39;90000&#39;, &#39;None&#39;)  The Employee table holds all employees including their managers.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/duplicate-emails/">Duplicate Emails</a></h2>
-
-      <p> Write a SQL query to find all duplicate emails in a table named Person.
-&#43;----&#43;---------&#43; | Id | Email | &#43;----&#43;---------&#43; | 1 | a@b.com | | 2 | c@d.com | | 3 | a@b.com | &#43;----&#43;---------&#43;  For example, your query should return the following for the above table:
-&#43;---------&#43; | Email | &#43;---------&#43; | a@b.com | &#43;---------&#43;  Note: All emails are in lowercase.
-Solution # Write your MySQL query statement below SELECT email FROM Person WHERE email IN ( SELECT email FROM Person GROUP BY email HAVING COUNT(*) &gt; 1 ) GROUP BY email  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/combination-sum-iii/">Combination Sum III</a></h2>
-
-      <p>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
-Note:
-All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
-Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
-Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution: def combinationSum3(self, k, n): &#34;&#34;&#34; :type k: int :type n: int :rtype: List[List[int]] &#34;&#34;&#34; self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/combination-sum/">Combination Sum</a></h2>
-
-      <p>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
-The same repeated number may be chosen from candidates unlimited number of times.
-Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ]  Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</p>
+      <p>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
+ 1 / \ 2 2 / \ / \ 3 4 4 3  But the following [1,2,2,null,3,null,3] is not:
+ 1 / \ 2 2 \ \ 3 3  Note Bonus points if you could solve it both recursively and iteratively.</p>
 
       <p class="meta">
         
@@ -397,10 +256,41 @@ Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/combinations/">Combinations</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/top-k-frequent-elements/">Top K Frequent Elements</a></h2>
 
-      <p>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
+      <p>Given a non-empty array of integers, return the k most frequent elements.
+For example, Given [1,1,1,2,2,3] and k = 2, return [1,2].
+Note You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm’s time complexity must be better than O(n log n), where n is the array’s size.
+Solution class Solution: def topKFrequent(self, nums, k): &#34;&#34;&#34; :type nums: List[int] :type k: int :rtype: List[int] &#34;&#34;&#34; freqMap = dict() for num in nums: if freqMap.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/same-tree/">Same Tree</a></h2>
+
+      <p>Given two binary trees, write a function to check if they are the same or not.
+Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
+Example 1:
+Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true  Example 2:
+Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:</p>
 
       <p class="meta">
         
@@ -423,11 +313,120 @@ Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/combine-two-tables/">Combine Two Tables</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-element/">Remove Element</a></h2>
 
-      <p>Table: Person
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | PersonId | int | | FirstName | varchar | | LastName | varchar | &#43;-------------&#43;---------&#43; PersonId is the primary key column for this table.  Table: Address
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | &#43;-------------&#43;---------&#43; AddressId is the primary key column for this table.</p>
+      <p>Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+The order of elements can be changed. It doesn’t matter what you leave beyond the new length.
+Example 1 Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with the first two elements of nums being 2.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list/">Remove Duplicates From Sorted List</a></h2>
+
+      <p>Given a sorted linked list, delete all duplicates such that each element appear only once.
+Example 1 Input: 1-&gt;1-&gt;2 Output: 1-&gt;2  Example 2 Input: 1-&gt;1-&gt;2-&gt;3-&gt;3 Output: 1-&gt;2-&gt;3  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr = head while curr != None and curr.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/power-of-two/">Power of Two</a></h2>
+
+      <p> Given an integer, write a function to determine if it is a power of two.
+Example 1 Input: 1 Output: true Explanation: 2**0 = 1  Example 2 Input: 16 Output: true Explanation: 2**4 = 16  Example 3 Input: 218 Output: false  Solution class Solution: def isPowerOfTwo(self, n): &#34;&#34;&#34; :type n: int :rtype: bool &#34;&#34;&#34; if n == 0: return False if n &amp; (n - 1) == 0: return True return False  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/plus-one/">Plus One</a></h2>
+
+      <p>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
+You may assume the integer does not contain any leading zero, except the number 0 itself.
+Example 1 Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/swap-nodes-in-pairs/">Swap Nodes in Pairs</a></h2>
+
+      <p>Given a linked list, swap every two adjacent nodes and return its head.
+Example Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.  Note  Your algorithm should use only constant extra space. You may not modify the values in the list’s nodes, only nodes itself may be changed.
+Solution ```python
+Definition for singly-linked list. class ListNode(object): def init(self, x): self.val = x self.next = None  class Solution(object): def swapPairs(self, head): “”” :type head: ListNode :rtype: ListNode “”” # https://www.</p>
 
       <p class="meta">
         

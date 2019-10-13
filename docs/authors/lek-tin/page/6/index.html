@@ -176,10 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/serialize-and-deserialize-bst/">Serialize and Deserialize BST</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/combination-sum-ii/">Combination Sum Ii</a></h2>
 
-      <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
-Design an algorithm to serialize and deserialize a binary search tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary search tree can be serialized to a string and this string can be deserialized to the original tree structure.</p>
+      <p>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+Each number in candidates may only be used once in the combination.
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ]  ###Example 2:</p>
 
       <p class="meta">
         
@@ -202,10 +204,11 @@ Design an algorithm to serialize and deserialize a binary search tree. There is 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/diameter-of-binary-tree/">Diameter of Binary Tree</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/07/generate-parentheses/">Generate Parentheses</a></h2>
 
-      <p>Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
-Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].</p>
+      <p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+For example, given n = 3, a solution set is:
+[ &#34;((()))&#34;, &#34;(()())&#34;, &#34;(())()&#34;, &#34;()(())&#34;, &#34;()()()&#34; ]  Solution class Solution: def generateParenthesis(self, n: int) -&gt; List[str]: &#34;&#34;&#34; :type n: int :rtype: List[str] &#34;&#34;&#34; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</p>
 
       <p class="meta">
         
@@ -228,10 +231,119 @@ Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/kth-largest-element-in-a-stream/">Kth Largest Element in a Stream</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/">Top Useful Sql Templates</a></h2>
 
-      <p>Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Your KthLargest class will have a constructor which accepts an integer k and an integer array nums, which contains initial elements from the stream. For each call to the method KthLargest.add, return the element representing the kth largest element in the stream.</p>
+      <p>In this post, we introduce the most useful SQL template statements.
+Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &gt; 1)  This is significantly more efficient than using EXISTS
+Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&gt;18).
+Select duplicate rows based on column SELECT TOP 1 C1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/06/machine-learning-questions/">Machine Learning Questions</a></h2>
+
+      <p>What is an Eigenvalue and Eigenvector? Eigenvectors are used for understanding linear transformations. In data analysis, we usually calculate the eigenvectors for a correlation or covariance matrix. Eigenvectors are the directions along which a particular linear transformation acts by flipping, compressing or stretching. Eigenvalue can be referred to as the strength of the transformation in the direction of eigenvector or the factor by which the compression occurs.
+What is Gradient Descent?</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/machine-learning" ><strong>"machine-learning"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 7-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/coin-change-2/">Coin Change 2</a></h2>
+
+      <p>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2&#43;2&#43;1 5=2&#43;1&#43;1&#43;1 5=1&#43;1&#43;1&#43;1&#43;1  Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/">Playing with Node.js Event Loop</a></h2>
+
+      <p>setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
+process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
+function cb(msg){ console.log(msg); } setImmediate(cb, &#39;setImmediate&#39;); process.nextTick(cb, &#39;process.nextTick: 1&#39;); process.nextTick(cb, &#39;process.nextTick: 2&#39;); process.nextTick(cb, &#39;process.nextTick: 3&#39;); console.log(&#39;Processed in the first iteration&#39;); process.nextTick(cb, &#39;process.nextTick: 4&#39;); process.nextTick(cb, &#39;process.nextTick: 5&#39;);  Output:
+Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/programming" ><strong>"programming"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/">Search a 2d Matrix Ii</a></h2>
+
+      <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+- Integers in each row are sorted in ascending from left to right. - Integers in each column are sorted in ascending from top to bottom.
+Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ]  Given target = 5, return true.</p>
 
       <p class="meta">
         
@@ -254,36 +366,10 @@ Your KthLargest class will have a constructor which accepts an integer k and an 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/coin-change/">Coin Change</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/max-stack/">Max Stack</a></h2>
 
-      <p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/sliding-window-maximum/">Sliding Window Maximum</a></h2>
-
-      <p>Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
-Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7  Note: You may assume k is always valid, 1 ≤ k ≤ input array’s size for non-empty array.</p>
+      <p>Design a max stack that supports push, pop, top, peekMax and popMax.
+1. push(x) – Push element x onto stack. 2. pop() – Remove the element on top of the stack and return it. 3. top() – Get the element on the top. 4. peekMax() – Retrieve the maximum element in the stack. 5. popMax() – Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.</p>
 
       <p class="meta">
         
@@ -306,10 +392,11 @@ Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Expl
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/most-common-word/">Most Common Word</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/">Subtree With Maximum Average</a></h2>
 
-      <p>Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words. It is guaranteed there is at least one word that isn’t banned, and that the answer is unique.
-Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase.</p>
+      <p>Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It’s guaranteed that there is only one subtree with maximum average.
+Example Given a binary tree:
+ 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11.  Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this.</p>
 
       <p class="meta">
         
@@ -332,9 +419,10 @@ Words in the list of banned words are given in lowercase, and free of punctuatio
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/graph-and-tree-basics/">Graph and Tree Basics</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/validate-subtree/">Validate Subtree</a></h2>
 
-      <p>Tree: n - 1 edges, all nodes connected, contains no loop.</p>
+      <p>Given two trees, T1 and T2, write an function to test whether T2 is a subtree of T1.
+Solution public class Subtree { public boolean isSubTree(TreeNode T1, TreeNode T2) { if (T2 == null) return true; if (T1 == null) return false; return (isSameTree(T1,T2) || isSubTree(T1.left, T2) || isSubTree(T1.right, T2)); } public boolean isSameTree(TreeNode T1, TreeNode T2) { if (T1 == null &amp;&amp; T2 == null) return true; if (T1 == null || T2 == null) return false; if (T1.</p>
 
       <p class="meta">
         
@@ -344,90 +432,9 @@ Words in the list of banned words are given in lowercase, and free of punctuatio
         
         in
         
-          <a  class="meta--cat" href="/categories/data-structure" ><strong>"data-structure"</strong></a>
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/number-of-connected-components-in-an-undirected-graph/">Number of Connected Components in an Undirected Graph</a></h2>
-
-      <p>Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.
-Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2  Example 2: Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1  Note: You can assume that no duplicate edges will appear in edges.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/graph-valid-tree/">Graph Valid Tree</a></h2>
-
-      <p>Given n nodes labeled from 0 to n-1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
-###Example 1:
-Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true  Example 2: Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false  ###Note: you can assume that no duplicate edges will appear in edges.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/k-closest-points-to-origin/">K Closest Points to Origin</a></h2>
-
-      <p>We have a list of points on the plane. Find the K closest points to the origin (0, 0).
-(Here, the distance between two points on a plane is the Euclidean distance.)
-You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in.)
-Example 1: Input: points = [[1,3],[-2,2]], K = 1 Output: [[-2,2]] Explanation: The distance between (1, 3) and the origin is sqrt(10).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

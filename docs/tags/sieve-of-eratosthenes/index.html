@@ -178,8 +178,8 @@
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/count-primes/">Count Primes</a></h2>
 
-      <p> Count the number of prime numbers less than a non-negative number, n.
-Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &#34;&#34;&#34; :type n: int :rtype: int &#34;&#34;&#34; if n &lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &lt; len(marked)-1: count &#43;= 1 return count  </p>
+      <p>Count the number of prime numbers less than a non-negative number, n.
+Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &#34;&#34;&#34; :type n: int :rtype: int &#34;&#34;&#34; if n &lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &lt; len(marked)-1: count &#43;= 1 return count  Cleaner version</p>
 
       <p class="meta">
         

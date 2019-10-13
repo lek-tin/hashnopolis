@@ -34,6 +34,7 @@ Explanation: 14 is not ugly since it includes another prime factor 7.
 1. `1` is typically treated as an ugly number.
 2. Input is within the 32-bit signed integer range: `[−2**31,  2**31 − 1]`.
 ### Solution
+Recursion
 ```python
 class Solution(object):
     def isUgly(self, num):
@@ -53,4 +54,22 @@ class Solution(object):
             return self.isUgly(num//5)
         else:
             return False
+```
+Iterative
+```python
+class Solution:
+    def isUgly(self, num: int) -> bool:
+        if num <= 0:
+            return False
+        if num == 1:
+            return True
+
+        while num >= 2 and num%2 == 0:
+            num /= 2
+        while num >= 3 and num%3 == 0:
+            num /= 3
+        while num >= 5 and num%5 == 0:
+            num /= 5
+
+        return num == 1
 ```

@@ -7,10 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 04 Sep 2019 23:06:05 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2019 23:33:43 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Guess Number Higher or Lower Ii</title>
+      <link>http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower-ii/</link>
+      <pubDate>Thu, 19 Sep 2019 23:33:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower-ii/</guid>
+      <description>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I&amp;rsquo;ll tell you whether the number I picked is higher or lower.
+However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</description>
+    </item>
+    
+    <item>
+      <title>Perfect Squares</title>
+      <link>http://www.hashnopolis.com/post/2019/09/perfect-squares/</link>
+      <pubDate>Sat, 14 Sep 2019 16:03:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/perfect-squares/</guid>
+      <description> Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4.  Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 + 9.  Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n+1)] for i in range(1, n+1): for j in range(1, n+1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]+1) return count[n]  </description>
+    </item>
+    
+    <item>
+      <title>Russian Doll Envelopes</title>
+      <link>http://www.hashnopolis.com/post/2019/09/russian-doll-envelopes/</link>
+      <pubDate>Tue, 10 Sep 2019 00:37:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/russian-doll-envelopes/</guid>
+      <description>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
+What is the maximum number of envelopes can you Russian doll? (put one inside other)
+Note: Rotation is not allowed.
+Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&amp;gt; [5,4] =&amp;gt; [6,7]).</description>
+    </item>
+    
+    <item>
+      <title>Coin Change</title>
+      <link>http://www.hashnopolis.com/post/2019/09/coin-change/</link>
+      <pubDate>Sat, 07 Sep 2019 23:58:51 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/coin-change/</guid>
+      <description>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Product Subarray</title>
+      <link>http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/</link>
+      <pubDate>Wed, 04 Sep 2019 23:44:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/</guid>
+      <description> Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.  Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.  Solution # time: o(n) class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res  </description>
+    </item>
     
     <item>
       <title>Triangle</title>
@@ -64,16 +118,6 @@ Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are
       <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
 Note: You can only move either down or right at any point in time.
 Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum.  Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</description>
-    </item>
-    
-    <item>
-      <title>Coin Change</title>
-      <link>http://www.hashnopolis.com/post/2019/03/coin-change/</link>
-      <pubDate>Fri, 08 Mar 2019 23:58:51 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/03/coin-change/</guid>
-      <description>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin.</description>
     </item>
     
     <item>
@@ -151,6 +195,16 @@ Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note:
       <description>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
 You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
 Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot; Output: 3 Explanation: horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&amp;gt; rose (remove &#39;r&#39;) rose -&amp;gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot; Output: 5 Explanation: intention -&amp;gt; inention (remove &#39;t&#39;) inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&amp;gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</description>
+    </item>
+    
+    <item>
+      <title>Longest Increasing Subsequence</title>
+      <link>http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/</link>
+      <pubDate>Wed, 19 Dec 2018 10:47:57 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/</guid>
+      <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</description>
     </item>
     
     <item>

@@ -2,9 +2,10 @@
 title: "Read N Characters Given Read4"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "api"]
+tags: ["leetcode", "stream"]
 categories: ["algorithm"]
 date: 2018-11-19T23:52:19-08:00
+lastmod: 2019-10-03T15:52:19-08:00
 draft: false
 archive: false
 ---
@@ -29,29 +30,55 @@ Output: "abcde"
 The read function will only be called once for each test case.
 ### Solution
 ```python
-# The read4 API is already defined for you.
-# @param buf, a list of characters
-# @return an integer
-# def read4(buf):
-# Read up to 4 chars into buf4 and copy to buf (which is modified in-place).
-# Time - O(n)
-# Space - O(n)
-class Solution(object):
+"""
+The read4 API is already defined for you.
+
+    @param buf, a list of characters
+    @return an integer
+    def read4(buf):
+
+# Below is an example of how the read4 API can be called.
+file = File("abcdefghijk") # File is "abcdefghijk", initially file pointer (fp) points to 'a'
+buf = [' '] * 4 # Create buffer with enough space to store characters
+read4(buf) # read4 returns 4. Now buf = ['a','b','c','d'], fp points to 'e'
+read4(buf) # read4 returns 4. Now buf = ['e','f','g','h'], fp points to 'i'
+read4(buf) # read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
+"""
+"""
+The read4 API is already defined for you.
+
+    @param buf, a list of characters
+    @return an integer
+    def read4(buf):
+
+# Below is an example of how the read4 API can be called.
+file = File("abcdefghijk") # File is "abcdefghijk", initially file pointer (fp) points to 'a'
+buf = [' '] * 4 # Create buffer with enough space to store characters
+read4(buf) # read4 returns 4. Now buf = ['a','b','c','d'], fp points to 'e'
+read4(buf) # read4 returns 4. Now buf = ['e','f','g','h'], fp points to 'i'
+read4(buf) # read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
+"""
+class Solution:
     def read(self, buf, n):
         """
         :type buf: Destination buffer (List[str])
-        :type n: Maximum number of characters to read (int)
-        :rtype: The numbaer of characters read (int)
+        :type n: Number of characters to read (int)
+        :rtype: The number of actual characters read (int)
         """
-        total, count = 0, 4
+        curr, size = 0, 4
+        while curr < n:
+            tempBuf = ["" for _ in range(size)]
+            # n can be longer than the file size
+            # take the min to decide whether to stop
+            #           "abc", 3
+            #                           "abcdef", 5
+            chunk = min(read4(tempBuf), n-curr)
+            # If chunk == 0, file has been read completely
+            if chunk == 0:
+                break
+            print(chunk)
+            buf[curr: curr+chunk] = tempBuf
+            curr += chunk
 
-        while count == 4 and total < n:
-
-            buf4 = [""] * 4 # temporary buffer
-            # If count is not 4, while will break from next iteration
-            count = min(read4(buf4), n - total)
-            buf[total:total+count] = buf4
-            total += count
-
-        return total
+        return curr
 ```

@@ -2,7 +2,7 @@
 title: "Two Sum II Input Array Is Sorted"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "sorted-array", "two-pointers"]
+tags: ["leetcode", "two-pointers"]
 categories: ["algorithm"]
 date: 2019-08-18T23:53:18+08:00
 draft: false

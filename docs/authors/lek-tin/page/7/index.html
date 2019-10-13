@@ -176,92 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/meeting-room/">Meeting Room</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/minimum-path-sum-in-binary-tree/">Minimum Path Sum in Binary Tree</a></h2>
 
-      <p>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), determine if a person could attend all meetings.
-Example 1: Input: [[0,30],[5,10],[15,20]] Output: false  Example 2: Input: [[7,10],[2,4]] Output: true  Solution /** * Definition for an interval. * public class Interval { * int start; * int end; * Interval() { start = 0; end = 0; } * Interval(int s, int e) { start = s; end = e; } * } */ class Solution { public boolean canAttendMeetings(Interval[] intervals) { Arrays.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/unique-paths-ii/">Unique Paths II</a></h2>
-
-      <p>A robot is located at the top-left corner of a m x n grid (marked ‘Start’ in the diagram below).
-The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked ‘Finish’ in the diagram below).
-Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/gas-station/">Gas Station</a></h2>
-
-      <p>There are N gas stations along a circular route, where the amount of gas at station i is gas[i].
-You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i&#43;1). You begin the journey with an empty tank at one of the gas stations.
-Return the starting gas station’s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/largest-rectangle-in-histogram/">Largest Rectangle in Histogram</a></h2>
-
-      <p>Given n non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
-Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
-The largest rectangle is shown in the shaded area, which has area = 10 unit.
-Example: Input: [2,1,5,6,2,3] Output: 10  Solution: Push height into the stack in ascending order.</p>
+      <p>Given a Binary Tree, find the minimum sum path from a leaf to root. For example, in the following tree, there are three leaf to root paths 8-&gt;-2-&gt;10, -4-&gt;-2-&gt;10 and 7-&gt;10. The sums of these three paths are 16, 4 and 17 respectively. The minimum of them is 17 and the path for minimum is -4-&gt;-2-&gt;10.
+ 10 / \ -2 7 / \ 8 -4  Solution public class PathSum { public int Solution(TreeNode root) { if (root == null) return 0; if (root.</p>
 
       <p class="meta">
         
@@ -284,12 +202,10 @@ Example: Input: [2,1,5,6,2,3] Output: 10  Solution: Push height into the stack i
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/maximal-rectangle/">Maximal Rectangle</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/lists-in-java/">Lists in Java</a></h2>
 
-      <p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area.
-Example: Input: [ [&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;,&#34;0&#34;], [&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;], [&#34;1&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;], [&#34;1&#34;,&#34;0&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;] ] Output: 6  Hint Height:
-1 0 1 0 0 2 0 2 1 1 3 1 3 2 2 4 0 0 3 0  Left:
-0 0 2 0 0 0 0 2 2 2 0 0 2 2 2 0 0 0 3 0  Right:</p>
+      <p> List interface: The List interface specifies two remove methods:
+List&lt;Integer&gt; list = new List&lt;&gt;(); // Remove the element at index 4 remove(int index): list.remove(4); // Remove the first occurrence of the object 4 remove(Object o): list.remove(new Integer(4));  Linked List:    Pros Cons     Can insert or remove anywhere in the list without shifting elements Not sortable   Insert: O(1) Elements are not stored in contiguous memory addresses   Remove: O(1) Find: O(n), as must traverse to find an element    </p>
 
       <p class="meta">
         
@@ -299,9 +215,9 @@ Example: Input: [ [&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;,&#34;0&#34;],
         
         in
         
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+          <a  class="meta--cat" href="/categories/java" ><strong>"java"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -312,89 +228,9 @@ Example: Input: [ [&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;,&#34;0&#34;],
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/house-robber-iii/">House Robber III</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/">LRU Cache Miss Count</a></h2>
 
-      <p>The thief has found himself a new place for his thievery again. There is only one entrance to this area, called the “root.” Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that “all houses in this place forms a binary tree”. It will automatically contact the police if two directly-linked houses were broken into on the same night.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/house-robber-ii/">House Robber II</a></h2>
-
-      <p>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
-Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/best-meeting-point/">Best Meeting Point</a></h2>
-
-      <p>A group of two or more people wants to meet and minimize the total travel distance. You are given a 2D grid of values 0 or 1, where each 1 marks the home of someone in the group. The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| &#43; |p2.y - p1.y|.
-Example: Input: 1 - 0 - 0 - 0 - 1 | | | | | 0 - 0 - 0 - 0 - 0 | | | | | 0 - 0 - 1 - 0 - 0 Output: 6  ###Explanation: Given three people living at (0,0), (0,4), and (2,2): The point (0,2) is an ideal meeting point, as the total travel distance of 2&#43;2&#43;2=6 is minimal.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/maximum-subarray/">Maximum Subarray</a></h2>
-
-      <p>Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-Example: Input: [-2,1,-3,4,-1,2,1,-5,4], Output: 6 Explanation: [4,-1,2,1] has the largest sum = 6.  Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
-Solution: Dynamic Programming
-class Solution { public int maxSubArray(int[] nums) { if (nums.</p>
+      <p> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&lt;Integer&gt; cache = new LinkedList&lt;&gt;(); int count = 0; for (int i = 0; i &lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </p>
 
       <p class="meta">
         
@@ -417,11 +253,168 @@ class Solution { public int maxSubArray(int[] nums) { if (nums.</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/intersection-of-two-arrays-ii/">Intersection of Two Arrays II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/">Insert Into a Cyclic Sorted List</a></h2>
 
-      <p>Given two arrays, write a function to compute their intersection.
-Example 1: Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2,2]  Example 2: Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [4,9]  Note: Each element in the result should appear as many times as it shows in both arrays. The result can be in any order.
-Follow up:  What if the given array is already sorted? How would you optimize your algorithm?</p>
+      <p>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
+If there are multiple suitable places for insertion, you may choose any place to insert the new value.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/closest-two-sum/">Closest Two Sum</a></h2>
+
+      <p>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
+Return the difference between the sum of the two integers and the target.
+Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 &#43; 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;&amp; nums.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/minimum-window-substring/">Minimum Window Substring</a></h2>
+
+      <p>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+Example: Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; Output: &#34;BANC&#34;  Note:  If there is no such window in S that covers all characters in T, return the empty string “”. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/">Longest Substring With at Most Two Distinct Characters</a></h2>
+
+      <p>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
+Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; which its length is 3.  Example 2: Input: &#34;ccaabbb&#34; Output: 5 Explanation: t is &#34;aabbb&#34; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&lt;Character, Integer&gt; countMap = new HashMap&lt;Character, Integer&gt;(); int left = 0; int max = 0; for (int i = 0; i &lt; s.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/maximum-path-sum/">Maximum Path Sum</a></h2>
+
+      <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Note: You can only move either down or right at any point in time.
+Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum.  Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/find-k-closest-elements/">Find K Closest Elements</a></h2>
+
+      <p>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
+Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2: Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note:  The value k is positive and will always be smaller than the length of the sorted array.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/">Longest Substring With at Most K Distinct Characters</a></h2>
+
+      <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1: Input: s = &#34;eceba&#34;, k = 2 Output: 3 Explanation: T is &#34;ece&#34; which its length is 3.  Example 2: Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: T is &#34;aa&#34; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&lt;Character, Integer&gt; countMap = new HashMap&lt;&gt;(); int left = 0; int max = 0; for(int i = 0; i &lt; s.</p>
 
       <p class="meta">
         

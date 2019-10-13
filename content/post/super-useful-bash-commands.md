@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["bash", "cli", "terminal"]
 categories: ["linux"]
 date: 2019-08-12T23:44:01-08:00
+lastmod: 2019-09-16T00:49:01-08:00
 draft: false
 archive: false
 ---
@@ -164,6 +165,9 @@ Output:
 23. Kill processes listening at `PORT_NUMBER`
 ```bash
 lsof -i :<PORT_NUMBER> | awk -v i=2 -v j=2 'FNR==i {system("kill -9 " $2)}'
+sudo kill -9 `sudo lsof -t -i:9001`
+# If that doesn't work you could also use $() for command interpolation:
+sudo kill -9 $(sudo lsof -t -i:9001)
 ```
 24. `awk` Print the `j`th field of the `i`th line
 ```bash
@@ -173,4 +177,8 @@ awk -v i=5 -v j=3 'FNR == i {print $j}'
 ```bash
 # List current user directory
 ls /Users/`echo $USER`
+```
+26. To check whether a program is running
+```bash
+ps -ef | grep tomcat
 ```

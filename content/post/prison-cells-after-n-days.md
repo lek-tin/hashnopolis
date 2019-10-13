@@ -5,20 +5,21 @@ authors: ["lek-tin"]
 tags: ["leetcode", "bit-manipulation", "loop-detection"]
 categories: ["algorithm"]
 date: 2019-03-08T01:33:22-08:00
-draft: true
+lastmod: 2019-09-16T01:33:22-08:00
+draft: false
 archive: false
 ---
-There are **8** prison cells in a row, and each cell is either occupied or vacant.
+There are `8` prison cells in a row, and each cell is either occupied or vacant.  
 
-Each day, whether the cell is occupied or vacant changes according to the following rules:
+Each day, whether the cell is occupied or vacant changes according to the following rules:  
 
 1. If a cell has two adjacent neighbors that are both occupied or both vacant, then the cell becomes occupied.
 2. Otherwise, it becomes vacant.
-(Note that because the prison is a row, the first and the last cells in the row can't have two adjacent neighbors.)
+(Note that because the prison is a row, the first and the last cells in the row can't have two adjacent neighbors.)  
 
-We describe the current state of the prison in the following way: `cells[i] == 1` if the `i-th` cell is occupied, else `cells[i] == 0`.
+We describe the current state of the prison in the following way: `cells[i] == 1` if the `i-th` cell is occupied, else `cells[i] == 0`.  
 
-Given the initial state of the prison, return the state of the prison after `N` days (and `N` such changes described above.)
+Given the initial state of the prison, return the state of the prison after `N` days (and `N` such changes described above.)  
 
 ### Example 1:
 ```
@@ -62,3 +63,22 @@ For a single flip:
  result         = 0b   0 1 1 0 0 0 0 0
 ```
 Hint: <https://leetcode.com/problems/prison-cells-after-n-days/discuss/236914/Python-Bit-Manipulation-with-detailed-explanation>
+
+### Solution
+```python
+class Solution:
+    def prisonAfterNDays(self, cells: List[int], N: int) -> List[int]:
+        day = N % 14
+        day = day if day != 0 else 14
+        for i in range(day):
+            temp = [0 for _ in range(len(cells))]
+            for j in range(1, len(cells)-1):
+                if cells[j-1] == cells[j+1] == 1 or cells[j-1] == cells[j+1] == 0:
+                    temp[j] = 1
+                else:
+                    temp[j] = 0
+            cells = temp[:]
+            # print("day ", i+1, ": ", cells)
+
+        return cells
+```

@@ -2,7 +2,7 @@
 title: "Find Minimum in Rotated Sorted Array"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "sorted-array"]
+tags: ["leetcode", "binary-search"]
 categories: ["algorithm"]
 date: 2018-09-14T11:50:46+08:00
 draft: false

@@ -2,9 +2,9 @@
 title: "Longest Consecutive Sequence"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "union-find", "hashmap"]
 categories: ["algorithm"]
-date: 2018-11-14T12:01:01-08:00
+date: 2019-09-10T12:01:01-08:00
 draft: false
 archive: false
 ---
@@ -21,31 +21,36 @@ Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefor
 ### Solution
 ```python
 # Time: o(n)
-class Solution(object):
-    def longestConsecutive(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        if nums is None or len(nums) == 0:
-            return 0
-        map = {}
-        maxLen = 0;
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        # Count occurence of nums
+        mapping = {}
         for num in nums:
-            if num in map:
-                # skip duplicates
-                continue
-            # initialize ranges
-            low, upp = num, num
-            if num - 1 in map:
-                low = map.get(num - 1)
-            if num + 1 in map:
-                upp = map.get(num + 1)
-            # update length
-            maxLen = max(maxLen, upp - low + 1)
-            # put possible ranges into map for next iteration
-            map[num] = num
-            map[low] = upp
-            map[upp] = low
-        return maxLen
+            mapping[num] = True
+        # init longest length
+        longest = 0
+        # iterate over nums
+        for num in nums:
+            if num in mapping:
+                # num exists in mapping => init l = 1
+                l = 1
+                # num was counted, so we delete num
+                del mapping[num]
+                left, right = num-1, num+1
+                # Move left
+                while left in mapping:
+                    # left was counted, so we delete left
+                    del mapping[left]
+                    left -= 1
+                    l += 1
+                # Move right
+                while right in mapping:
+                    # right was counted, so we delete right
+                    del mapping[right]
+                    right += 1
+                    l += 1
+                # Update longest
+                longest = max(longest, l)
+
+        return longest
 ```

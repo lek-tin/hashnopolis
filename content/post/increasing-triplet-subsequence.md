@@ -2,9 +2,10 @@
 title: "Increasing Triplet Subsequence"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-11-08T22:10:52-08:00
+lastmod: 2019-09-15T14:10:52-08:00
 draft: false
 archive: false
 ---
@@ -28,23 +29,23 @@ Output: false
 ```
 ### Solution
 ```python
+import sys
+INT_MAX = sys.maxsize
+
 class Solution:
-    def increasingTriplet(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
+    def increasingTriplet(self, nums: List[int]) -> bool:
         if not nums or len(nums) < 3:
             return False
-
-        min_1, min_2 = max(nums), max(nums)
-        # Not asking to find 3 consecutive increasing numbers
+        # min_1 < min_2
+        min_1, min_2 = INT_MAX-1, INT_MAX
         for n in nums:
-            if n > min_2:
-                return True
-            elif n < min_1:
+            # use = to skip duplicate value, for example, [1,1,1,1,1,1,1,1,1,1]
+            if n <= min_1:
                 min_1 = n
-            elif n > min_1 and n < min_2:
+            elif n <= min_2:
                 min_2 = n
+            else:
+                return True
+
         return False
 ```

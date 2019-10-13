@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "binary-search"]
 categories: ["algorithm"]
 date: 2018-11-08T21:59:03-08:00
+lastmod: 2019-09-19T23:59:03-08:00
 draft: false
 archive: false
 ---
@@ -29,19 +30,15 @@ Explanation: The square root of 8 is 2.82842..., and since the decimal part is t
 ```python
 # log(x)
 class Solution:
-    def mySqrt(self, x):
-        """
-        :type x: int
-        :rtype: int
-        """
-        l = 1
-        r = x
-        while l <= r:
-            m = l + (r-l)//2
-            if m > x/m:
-                r = m - 1
+    def mySqrt(self, x: int) -> int:
+        left, right = 1, x
+        while left <= right:
+            mid = left + (right-left)//2
+            if mid > x/mid:
+                right = mid - 1
             else:
-                l = m + 1
-
-        return r
+                left = mid + 1
+        # left == right or left > right
+        # since we need to floor the result, we return right
+        return right
 ```

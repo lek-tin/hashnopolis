@@ -2,7 +2,7 @@
 title: "Longest Increasing Subsequence"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "recursion", "memoization"]
+tags: ["leetcode", "recursion", "memoization", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-12-19T10:47:57-08:00
 draft: false
@@ -13,7 +13,7 @@ Given an unsorted array of integers, find the length of longest increasing subse
 ### Example:
 ```
 Input: [10,9,2,5,3,7,101,18]
-Output: 4 
+Output: 4
 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. 
 ```
 ### Note

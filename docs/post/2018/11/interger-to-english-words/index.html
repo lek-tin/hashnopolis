@@ -171,11 +171,11 @@ Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Examp
   
 
   
-  <div>
+  <div class="post">
       <p class="meta">
         
         
-        Tags:
+        <span class="highlight">Tags:</span>
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
@@ -185,6 +185,11 @@ Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Examp
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/interger-to-english-words.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Interger to English Words</h1>
+      <h4>Created: November 11, 2018 by [lek-tin]</h4>
+      
+        <h5>Last updated: October 2, 2019</h5>
+      
+      <hr />
       
 
 <p>Convert a <strong>non-negative</strong> integer to its english words representation. Given input is guaranteed to be less than <code>231 - 1</code>.</p>
@@ -252,6 +257,75 @@ Thousand Eight Hundred Ninety One&quot;
             return self.tens[num // 10] + &quot; &quot; + self.helper(num % 10)
         else:
             return self.lessThan20[num // 100] + &quot; Hundred &quot; + self.helper(num % 100)
+</code></pre>
+
+<p>Iterative</p>
+
+<pre><code class="language-python">class Solution:
+    def numberToWords(self, num: int) -&gt; str:
+        if num == 0:
+            return &quot;Zero&quot;
+
+        underTwenty = {
+            1: &quot;One&quot;,
+            2: &quot;Two&quot;,
+            3: &quot;Three&quot;,
+            4: &quot;Four&quot;,
+            5: &quot;Five&quot;,
+            6: &quot;Six&quot;,
+            7: &quot;Seven&quot;,
+            8: &quot;Eight&quot;,
+            9: &quot;Nine&quot;,
+            10: &quot;Ten&quot;,
+            11: &quot;Eleven&quot;,
+            12: &quot;Twelve&quot;,
+            13: &quot;Thirteen&quot;,
+            14: &quot;Fourteen&quot;,
+            15: &quot;Fifteen&quot;,
+            16: &quot;Sixteen&quot;,
+            17: &quot;Seventeen&quot;,
+            18: &quot;Eighteen&quot;,
+            19: &quot;Nineteen&quot;
+        }
+        tens = {
+            20: &quot;Twenty&quot;,
+            30: &quot;Thirty&quot;,
+            40: &quot;Forty&quot;,
+            50: &quot;Fifty&quot;,
+            60: &quot;Sixty&quot;,
+            70: &quot;Seventy&quot;,
+            80: &quot;Eighty&quot;,
+            90: &quot;Ninety&quot;,
+        }
+        thousands = {
+            1: &quot;&quot;,
+            1000: &quot;Thousand&quot;,
+            1000000: &quot;Million&quot;,
+            1000000000: &quot;Billion&quot;
+        }
+
+        words = []
+
+        for denome in [1000000000, 1000000, 1000, 1]:
+            temp = num//denome
+            num %= denome
+            if temp &gt; 0:
+                hundreds = temp // 100
+                if hundreds &gt; 0:
+                    words.append(underTwenty[hundreds])
+                    words.append(&quot;Hundred&quot;)
+                temp %= 100
+                if temp &gt;= 20:
+                    digit = temp % 10
+                    words.append(tens[temp-digit])
+                    if digit &gt; 0:
+                        words.append(underTwenty[digit])
+                elif temp &gt; 0:
+                    words.append(underTwenty[temp])
+
+                words.append(thousands[denome])
+
+        return &quot; &quot;.join(words).strip()
 </code></pre>
 
   </div>

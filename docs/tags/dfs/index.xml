@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 11 Aug 2019 01:12:12 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 02 Oct 2019 23:49:15 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Strobogrammatic Number II</title>
+      <link>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number-ii/</link>
+      <pubDate>Wed, 02 Oct 2019 23:49:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number-ii/</guid>
+      <description>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Find all strobogrammatic numbers that are of length = n.
+Example: Input: n = 2 Output: [&amp;quot;11&amp;quot;,&amp;quot;69&amp;quot;,&amp;quot;88&amp;quot;,&amp;quot;96&amp;quot;]  Solution # Time: O(n^2 * 5^(n/2)) # Space: O(n) class Solution: def findStrobogrammatic(self, n: int) -&amp;gt; List[str]: stroboPairs = { &amp;quot;0&amp;quot;: &amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;6&amp;quot;: &amp;quot;9&amp;quot;, &amp;quot;8&amp;quot;: &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;: &amp;quot;6&amp;quot; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&amp;quot;&amp;quot;] if curr == 1: return list(&amp;quot;018&amp;quot;) prev = self.</description>
+    </item>
     
     <item>
       <title>Clone Graph</title>

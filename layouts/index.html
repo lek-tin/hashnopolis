@@ -2,7 +2,7 @@
   <div>
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") (index .Site.Params "paginate" | default 10) }}
     {{ if ne $paginator.TotalPages 0 }}
-      {{ range $paginator.Pages.ByDate.Reverse }}
+      {{ range $paginator.Pages.ByLastmod.Reverse }}
         {{ .Render "summary" }}
       {{ end }}
     {{ else }}

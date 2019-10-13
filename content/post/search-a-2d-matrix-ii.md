@@ -2,9 +2,10 @@
 title: "Search a 2d Matrix Ii"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "matrix", "divide-and-conquer"]
+tags: ["leetcode", "binary-search", "divide-and-conquer"]
 categories: ["algorithm"]
 date: 2019-04-02T23:59:01-07:00
+lastmod: 2019-09-19T23:59:01-07:00
 draft: false
 archive: false
 ---

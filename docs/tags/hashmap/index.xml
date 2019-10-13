@@ -7,10 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 20 Aug 2019 01:18:01 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 26 Sep 2019 16:52:43 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Verifying an Alien Dictionary</title>
+      <link>http://www.hashnopolis.com/post/2019/09/verifying-an-alien-dictionary/</link>
+      <pubDate>Thu, 26 Sep 2019 16:52:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/verifying-an-alien-dictionary/</guid>
+      <description>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
+Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
+Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</description>
+    </item>
+    
+    <item>
+      <title>Subarray Sum Equals K</title>
+      <link>http://www.hashnopolis.com/post/2019/09/subarray-sum-equals-k/</link>
+      <pubDate>Thu, 26 Sep 2019 15:33:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/subarray-sum-equals-k/</guid>
+      <description> Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+Example 1: Input:nums = [1,1,1], k = 2 Output: 2  Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] + nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count += mapping[s-k] temp = 0 try: temp = mapping[s] + 1 except: temp = 1 mapping[s] = temp return count  </description>
+    </item>
+    
+    <item>
+      <title>Find Anagram Mappings</title>
+      <link>http://www.hashnopolis.com/post/2019/09/find-anagram-mappings/</link>
+      <pubDate>Tue, 17 Sep 2019 00:30:24 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/find-anagram-mappings/</guid>
+      <description>Given two lists A and B, and B is an anagram of A. B is an anagram of A means B is made by randomizing the order of the elements in A.
+We want to find an index mapping P, from A to B. A mapping P[i] = j means the ith element in A appears in B at index j.
+These lists A and B may contain duplicates. If there are multiple answers, output any of them.</description>
+    </item>
+    
+    <item>
+      <title>Super Ugly Number</title>
+      <link>http://www.hashnopolis.com/post/2019/09/super-ugly-number/</link>
+      <pubDate>Sat, 14 Sep 2019 22:35:23 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/super-ugly-number/</guid>
+      <description>Write a program to find the nth super ugly number.
+Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
+Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4.  Note:  1 is a super ugly number for any given primes.</description>
+    </item>
+    
+    <item>
+      <title>Longest Consecutive Sequence</title>
+      <link>http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/</link>
+      <pubDate>Tue, 10 Sep 2019 12:01:01 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/</guid>
+      <description> Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+Your algorithm should run in O(n) complexity.
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num+1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l += 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right += 1 l += 1 # Update longest longest = max(longest, l) return longest  </description>
+    </item>
     
     <item>
       <title>Two Sum Iii Data Structure Design Design</title>
@@ -132,6 +186,16 @@ Design the encode and decode methods for the TinyURL service. There is no restri
       <guid>http://www.hashnopolis.com/post/2018/11/lru-cache/</guid>
       <description>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
 get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</description>
+    </item>
+    
+    <item>
+      <title>Count Primes</title>
+      <link>http://www.hashnopolis.com/post/2018/11/count-primes/</link>
+      <pubDate>Fri, 09 Nov 2018 18:52:59 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/count-primes/</guid>
+      <description>Count the number of prime numbers less than a non-negative number, n.
+Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)+1): if marked[i] != 1: prime = i + 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count += 1 return count  Cleaner version</description>
     </item>
     
     <item>

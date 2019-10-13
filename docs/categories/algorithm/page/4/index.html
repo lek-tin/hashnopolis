@@ -176,35 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/minimum-path-sum-in-binary-tree/">Minimum Path Sum in Binary Tree</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/valid-triangle-number/">Valid Triangle Number</a></h2>
 
-      <p>Given a Binary Tree, find the minimum sum path from a leaf to root. For example, in the following tree, there are three leaf to root paths 8-&gt;-2-&gt;10, -4-&gt;-2-&gt;10 and 7-&gt;10. The sums of these three paths are 16, 4 and 17 respectively. The minimum of them is 17 and the path for minimum is -4-&gt;-2-&gt;10.
- 10 / \ -2 7 / \ 8 -4  Solution public class PathSum { public int Solution(TreeNode root) { if (root == null) return 0; if (root.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/">LRU Cache Miss Count</a></h2>
-
-      <p> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&lt;Integer&gt; cache = new LinkedList&lt;&gt;(); int count = 0; for (int i = 0; i &lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </p>
+      <p>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
+Example 1: Input: [2,2,3,4] Output: 3  Explanation: Valid combinations are:
+2,3,4 (using the first 2) 2,3,4 (using the second 2) 2,2,3
+Note:  The length of the given array won’t exceed 1000. The integers in the given array are in the range of [0, 1000].</p>
 
       <p class="meta">
         
@@ -227,10 +204,13 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/">Insert Into a Cyclic Sorted List</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-inorder-and-postorder-traversal/">Construct Binary Tree From Inorder and Postorder Traversal</a></h2>
 
-      <p>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
-If there are multiple suitable places for insertion, you may choose any place to insert the new value.</p>
+      <p>Given inorder and postorder traversal of a tree, construct the binary tree.
+Note: You may assume that duplicates do not exist in the tree.
+For example, given
+inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</p>
 
       <p class="meta">
         
@@ -253,11 +233,40 @@ If there are multiple suitable places for insertion, you may choose any place to
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/closest-two-sum/">Closest Two Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-preorder-and-inorder-traversal/">Construct Binary Tree From Preorder and Inorder Traversal</a></h2>
 
-      <p>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
-Return the difference between the sum of the two integers and the target.
-Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 &#43; 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;&amp; nums.</p>
+      <p>Given preorder and inorder traversal of a tree, construct the binary tree.
+Note: You may assume that duplicates do not exist in the tree.
+For example, given:
+preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/palindrome-linked-list/">Palindrome Linked List</a></h2>
+
+      <p>Given a singly linked list, determine if it is a palindrome.
+Example 1: Input: 1-&gt;2 Output: false  Example 2: Input: 1-&gt;2-&gt;2-&gt;1 Output: true  Follow up: Could you do it in O(n) time and O(1) space?
+Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&gt; bool: if not head: return True middle = self.</p>
 
       <p class="meta">
         
@@ -280,10 +289,11 @@ Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum differenc
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/minimum-window-substring/">Minimum Window Substring</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/3sum-with-multiplicity/">3sum With Multiplicity</a></h2>
 
-      <p>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
-Example: Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; Output: &#34;BANC&#34;  Note:  If there is no such window in S that covers all characters in T, return the empty string “”. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</p>
+      <p>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &lt; j &lt; k and A[i] &#43; A[j] &#43; A[k] == target.
+As the answer can be very large, return it modulo 10^9 &#43; 7.
+Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</p>
 
       <p class="meta">
         
@@ -306,10 +316,10 @@ Example: Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; Output: &#34;BANC
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/">Longest Substring With at Most Two Distinct Characters</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/3sum-smaller/">3sum Smaller</a></h2>
 
-      <p>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
-Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; which its length is 3.  Example 2: Input: &#34;ccaabbb&#34; Output: 5 Explanation: t is &#34;aabbb&#34; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&lt;Character, Integer&gt; countMap = new HashMap&lt;Character, Integer&gt;(); int left = 0; int max = 0; for (int i = 0; i &lt; s.</p>
+      <p>Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &lt;= i &lt; j &lt; k &lt; n that satisfy the condition nums[i] &#43; nums[j] &#43; nums[k] &lt; target.
+Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3]  Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&gt; int: res = 0 if not nums: return res nums.</p>
 
       <p class="meta">
         
@@ -332,11 +342,10 @@ Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; whic
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/maximum-path-sum/">Maximum Path Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-less-than-k/">Two Sum Less Than K</a></h2>
 
-      <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note: You can only move either down or right at any point in time.
-Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum.  Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</p>
+      <p>Given an array A of integers and integer K, return the maximum S such that there exists i &lt; j with A[i] &#43; A[j] = S and S &lt; K. If no i, j exist satisfying this equation, return -1.
+Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60.  Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</p>
 
       <p class="meta">
         
@@ -359,36 +368,11 @@ Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/find-k-closest-elements/">Find K Closest Elements</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/inorder-successor-in-bst/">Inorder Successor in BST</a></h2>
 
-      <p>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2: Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note:  The value k is positive and will always be smaller than the length of the sorted array.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/">Longest Substring With at Most K Distinct Characters</a></h2>
-
-      <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1: Input: s = &#34;eceba&#34;, k = 2 Output: 3 Explanation: T is &#34;ece&#34; which its length is 3.  Example 2: Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: T is &#34;aa&#34; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&lt;Character, Integer&gt; countMap = new HashMap&lt;&gt;(); int left = 0; int max = 0; for(int i = 0; i &lt; s.</p>
+      <p>Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
+The successor of a node p is the node with the smallest key greater than p.val.
+Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type.  Example 2: Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null.</p>
 
       <p class="meta">
         
@@ -411,10 +395,11 @@ Example 1: Input: s = &#34;eceba&#34;, k = 2 Output: 3 Explanation: T is &#34;ec
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/peeking-iterator/">Peeking Iterator</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></h2>
 
-      <p>Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation – it essentially peek() at the element that will be returned by the next call to next().
-Example: Assume that the iterator is initialized to the beginning of the list: [1,2,3]. Call next() gets you 1, the first element in the list. Now you call peek() and it returns 2, the next element.</p>
+      <p>Given a binary tree, return the inorder traversal of its nodes’ values.
+Example: Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Follow-up the Recursive solution is trivial, could you do it iteratively?
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; &#34;&#34;&#34;Check root == None to reduce time on checking&#34;&#34;&#34; if root == None: return [] stack = [] result = [] current = root while (current!</p>
 
       <p class="meta">
         
@@ -426,7 +411,34 @@ Example: Assume that the iterator is initialized to the beginning of the list: [
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-iii-data-structure-design-design/">Two Sum Iii Data Structure Design Design</a></h2>
+
+      <p>Design and implement a TwoSum class. It should support the following operations: add and find.
+add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
+Example 1: add(1); add(3); add(5); find(4) -&gt; true find(7) -&gt; false  Example 2: add(3); add(1); add(2); find(3) -&gt; true find(6) -&gt; false  Solution # Time: add is o(1), find is o(n) # Space: o(n) class TwoSum: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

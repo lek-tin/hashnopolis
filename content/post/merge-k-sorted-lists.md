@@ -2,7 +2,7 @@
 title: "23. Merge k Sorted Lists"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "min-heap", "merge"]
+tags: ["leetcode", "heap", "merge"]
 categories: ["algorithm"]
 date: 2018-08-26T17:54:18+08:00
 draft: false
@@ -112,4 +112,45 @@ class Solution {
         return dummy.next;
     }
 }
+```
+Python heap
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+import heapq
+
+ListNode.__lt__ = lambda x, y: (x.val < y.val)
+
+class Node:
+    def __init__(self, node):
+        self.val = node.val
+        self.next = node.val
+    def __cmp__(self, other):
+        return cmp(self.val, other.val)
+
+class Solution:
+    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+        if not lists:
+            return None
+
+        dummy = ListNode(0)
+        prev = dummy
+
+        heap = []
+
+        for head in lists:
+            if head:
+                heapq.heappush(heap, head)
+
+        while heap:
+            node = heapq.heappop(heap)
+            prev.next = node
+            prev = node
+            if node.next:
+                heapq.heappush(heap, node.next)
+
+        return dummy.next
 ```

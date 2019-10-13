@@ -2,9 +2,9 @@
 title: "Top K Frequent Words"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "python", "heap"]
 categories: ["algorithm"]
-date: 2018-12-20T00:26:38-08:00
+date: 2019-09-09T00:26:38-08:00
 draft: true
 archive: false
 ---
@@ -31,3 +31,37 @@ You may assume k is always valid, `1 ≤ k ≤` number of unique elements.
 Input words contain only lowercase letters.
 ### Follow-up
 Try to solve it in `O(n log k)` time and `O(n)` extra space.
+
+### Solution
+```python
+from collections import Counter
+import heapq
+
+class Pair:
+    def __init__(self, word, count):
+        self.word = word
+        self.count = count
+
+Pair.__lt__ = lambda x, y: x.count > y.count or (x.count == y.count and x.word < y.word)
+
+class Solution:
+    def topKFrequent(self, words: List[str], k: int) -> List[str]:
+        countMap = Counter(words)
+
+        for word in words:
+            try:
+                countMap[word] += 1
+            except:
+                countMap[word] = 0
+
+        q = []
+        for word, count in countMap.items():
+            heapq.heappush(q, Pair(word, count))
+
+        res = []
+        while k > 0:
+            res.append(heapq.heappop(q).word)
+            k -= 1
+
+        return res
+```

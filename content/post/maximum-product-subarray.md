@@ -2,10 +2,10 @@
 title: "Maximum Product Subarray"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-09-04T23:44:12-07:00
-draft: true
+draft: false
 archive: false
 ---
 Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
@@ -24,4 +24,20 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 ```
 ### Solution
 ```python
+# time: o(n)
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        n = len(nums)
+        if n == 0:
+            return 0
+
+        res = currMax = currMin = nums[0]
+
+        for i in range(1, n):
+            newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i])
+            newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i])
+            currMax, currMin = newCurrMax, newCurrMin
+            res = max(currMax, res)
+
+        return res
 ```

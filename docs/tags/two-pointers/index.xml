@@ -7,10 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 25 Aug 2019 01:33:06 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 10 Sep 2019 00:38:42 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Subarray Product Less Than K</title>
+      <link>http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/</link>
+      <pubDate>Tue, 10 Sep 2019 00:38:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/</guid>
+      <description>Your are given an array of positive integers nums.
+Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than k.
+Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]. Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Size Subarray Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/09/minimum-size-subarray-sum/</link>
+      <pubDate>Sun, 08 Sep 2019 23:43:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/09/minimum-size-subarray-sum/</guid>
+      <description>Given an array of n positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum ≥ s. If there isn&amp;rsquo;t one, return 0 instead.
+Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray [4,3] has the minimal length under the problem constraint. Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).</description>
+    </item>
     
     <item>
       <title>Valid Triangle Number</title>
@@ -160,6 +181,18 @@ Note: You may not slant the container and n is at least 2. The above vertical li
       <description>Given two strings s and t, determine if they are both one edit distance apart.
 Note There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t
 Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</description>
+    </item>
+    
+    <item>
+      <title>Increasing Triplet Subsequence</title>
+      <link>http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/</link>
+      <pubDate>Thu, 08 Nov 2018 22:10:52 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/</guid>
+      <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
+Formally the function should:
+Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution import sys INT_MAX = sys.</description>
     </item>
     
     <item>
