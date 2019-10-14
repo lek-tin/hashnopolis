@@ -170,6 +170,61 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/add-and-search-word-data-structure-design/">Add and Search Word Data Structure Design</a></h2>
+
+      <p>Design a data structure that supports the following two operations:
+void addWord(word) bool search(word)  search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.
+Example addWord(&#34;bad&#34;) addWord(&#34;dad&#34;) addWord(&#34;mad&#34;) search(&#34;pad&#34;) -&gt; false search(&#34;bad&#34;) -&gt; true search(&#34;.ad&#34;) -&gt; true search(&#34;b..&#34;) -&gt; true  Note You may assume that all words are consist of lowercase letters a-z.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/">Implement Trie Prefix Tree</a></h2>
+
+      <p>Implement a trie with insert, search, and startsWith methods.
+Example Trie trie = new Trie(); trie.insert(&#34;apple&#34;); trie.search(&#34;apple&#34;); // returns true trie.search(&#34;app&#34;); // returns false trie.startsWith(&#34;app&#34;); // returns true trie.insert(&#34;app&#34;); trie.search(&#34;app&#34;); // returns true  Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
+Solution Python
+class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _ in range(26)] self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/sqrtx/">Sqrtx</a></h2>
 
       <p>Implement int sqrt(int x).
@@ -332,33 +387,6 @@ Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10,
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/">Implement Trie Prefix Tree</a></h2>
-
-      <p>Implement a trie with insert, search, and startsWith methods.
-Example Trie trie = new Trie(); trie.insert(&#34;apple&#34;); trie.search(&#34;apple&#34;); // returns true trie.search(&#34;app&#34;); // returns false trie.startsWith(&#34;app&#34;); // returns true trie.insert(&#34;app&#34;); trie.search(&#34;app&#34;); // returns true  Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
-Solution # o(n) class TrieNode(): def __init__(self): self.children = {} self.isWholeWord = False class Trie: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/excel-sheet-column-title/">Excel Sheet Column Title</a></h2>
 
       <p>Given a positive integer, return its corresponding column title as appear in an Excel sheet.
@@ -391,33 +419,6 @@ For example:
       <p>Given an absolute path for a file (Unix-style), simplify it.
 For example, path = &#34;/home/&#34;, =&gt; &#34;/home&#34; path = &#34;/a/./b/../../c/&#34;, =&gt; &#34;/c&#34; path = &#34;/a/../../b/../c//.//&#34;, =&gt; &#34;/c&#34; path = &#34;/a//b////c/d//././/..&#34;, =&gt; &#34;/a/b/c&#34;
 In a UNIX-style file system, a period (‘.’) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (“..”) moves up a directory, so it cancels out whatever the last directory was.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/sort-colors/">Sort Colors</a></h2>
-
-      <p>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
-Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
-Note You are not suppose to use the library’s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort.</p>
 
       <p class="meta">
         

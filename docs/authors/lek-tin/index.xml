@@ -1577,7 +1577,8 @@ Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10,
       <guid>http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/</guid>
       <description>Implement a trie with insert, search, and startsWith methods.
 Example Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true  Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
-Solution # o(n) class TrieNode(): def __init__(self): self.children = {} self.isWholeWord = False class Trie: def __init__(self): &amp;quot;&amp;quot;&amp;quot; Initialize your data structure here.</description>
+Solution Python
+class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _ in range(26)] self.</description>
     </item>
     
     <item>
@@ -1589,6 +1590,17 @@ Solution # o(n) class TrieNode(): def __init__(self): self.children = {} self.is
       <description>Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 For example:
  1 -&amp;gt; A 2 -&amp;gt; B 3 -&amp;gt; C ... 26 -&amp;gt; Z 27 -&amp;gt; AA 28 -&amp;gt; AB ...  Example 1 Input: 1 Output: &amp;quot;A&amp;quot;  Example 2 Input: 28 Output: &amp;quot;AB&amp;quot;  Example 3 Input: 701 Output: &amp;quot;ZY&amp;quot;  Solution class Solution: def convertToTitle(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: str &amp;quot;&amp;quot;&amp;quot; digit = 1 res = &amp;quot;&amp;quot; while n &amp;gt; 0: # Because we start from A.</description>
+    </item>
+    
+    <item>
+      <title>Add and Search Word Data Structure Design</title>
+      <link>http://www.hashnopolis.com/post/2018/11/add-and-search-word-data-structure-design/</link>
+      <pubDate>Thu, 08 Nov 2018 22:37:27 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/add-and-search-word-data-structure-design/</guid>
+      <description>Design a data structure that supports the following two operations:
+void addWord(word) bool search(word)  search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.
+Example addWord(&amp;quot;bad&amp;quot;) addWord(&amp;quot;dad&amp;quot;) addWord(&amp;quot;mad&amp;quot;) search(&amp;quot;pad&amp;quot;) -&amp;gt; false search(&amp;quot;bad&amp;quot;) -&amp;gt; true search(&amp;quot;.ad&amp;quot;) -&amp;gt; true search(&amp;quot;b..&amp;quot;) -&amp;gt; true  Note You may assume that all words are consist of lowercase letters a-z.</description>
     </item>
     
     <item>

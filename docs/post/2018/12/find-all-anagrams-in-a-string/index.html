@@ -193,7 +193,7 @@ Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Ou
       <h1>Find All Anagrams in a String</h1>
       <h4>Created: December 15, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: December 15, 2018</h5>
+        <h5>Last updated: October 12, 2019</h5>
       
       <hr />
       
@@ -233,56 +233,31 @@ The substring with start index = 2 is &quot;ab&quot;, which is an anagram of &qu
 
 <h3 id="solution">Solution</h3>
 
-<pre><code class="language-python">class Solution:
-    def findAnagrams(self, s, p):
-        &quot;&quot;&quot;
-        :type s: str
-        :type p: str
-        :rtype: List[int]
-        &quot;&quot;&quot;
-        result = []
-        primeNums = {
-          &quot;a&quot;: 2,
-          &quot;b&quot;: 3,
-          &quot;c&quot;: 5,
-          &quot;d&quot;: 7,
-          &quot;e&quot;: 11,
-          &quot;f&quot;: 13,
-          &quot;g&quot;: 17,
-          &quot;h&quot;: 19,
-          &quot;i&quot;: 23,
-          &quot;j&quot;: 29,
-          &quot;k&quot;: 31,
-          &quot;m&quot;: 37,
-          &quot;l&quot;: 41,
-          &quot;n&quot;: 43,
-          &quot;o&quot;: 47,
-          &quot;p&quot;: 53,
-          &quot;q&quot;: 59,
-          &quot;r&quot;: 61,
-          &quot;s&quot;: 67,
-          &quot;t&quot;: 71,
-          &quot;u&quot;: 73,
-          &quot;v&quot;: 79,
-          &quot;w&quot;: 83,
-          &quot;x&quot;: 89,
-          &quot;y&quot;: 97,
-          &quot;z&quot;: 101
-        }
-        target = 0
-        for p_ in p:
-            target += primeNums.get(p_)
+<p>Python</p>
 
-        sizeP = len(p)
+<pre><code class="language-python">from collections import Counter
 
-        for i in range(len(s) - sizeP + 1):
-            temp = 0
-            for j in range(sizeP):
-                temp += primeNums.get(s[i+j])
-            if temp == target:
-                result.append(i)
+class Solution:
+    def findAnagrams(self, s: str, target: str) -&gt; List[int]:
+        res = []
+        counter_target = Counter(target)
+        counter_cur = Counter(s[:len(target)])
 
-        return result
+        if counter_cur == counter_target:
+            res.append(0)
+
+        for id in range(len(target), len(s)):
+            head = s[id - len(target)]
+            tail = s[id]
+            counter_cur[tail] += 1
+            counter_cur[head] -= 1
+            if counter_cur[head] == 0:
+                del counter_cur[head]  # requried for comparison
+            if counter_cur == counter_target:
+                # id is the ending index, find the starting
+                res.append(id - len(target) + 1)
+
+        return res
 </code></pre>
 
   </div>

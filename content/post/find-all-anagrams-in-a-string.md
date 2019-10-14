@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "hashtable", "sliding-window"]
 categories: ["algorithm"]
 date: 2018-12-15T09:42:45-08:00
+lastmod: 2019-10-12T09:42:45-08:00
 draft: false
 archive: false
 ---
@@ -40,55 +41,29 @@ The substring with start index = 1 is "ba", which is an anagram of "ab".
 The substring with start index = 2 is "ab", which is an anagram of "ab".
 ```
 ### Solution
+Python
 ```python
+from collections import Counter
+
 class Solution:
-    def findAnagrams(self, s, p):
-        """
-        :type s: str
-        :type p: str
-        :rtype: List[int]
-        """
-        result = []
-        primeNums = {
-          "a": 2,
-          "b": 3,
-          "c": 5,
-          "d": 7,
-          "e": 11,
-          "f": 13,
-          "g": 17,
-          "h": 19,
-          "i": 23,
-          "j": 29,
-          "k": 31,
-          "m": 37,
-          "l": 41,
-          "n": 43,
-          "o": 47,
-          "p": 53,
-          "q": 59,
-          "r": 61,
-          "s": 67,
-          "t": 71,
-          "u": 73,
-          "v": 79,
-          "w": 83,
-          "x": 89,
-          "y": 97,
-          "z": 101
-        }
-        target = 0
-        for p_ in p:
-            target += primeNums.get(p_)
+    def findAnagrams(self, s: str, target: str) -> List[int]:
+        res = []
+        counter_target = Counter(target)
+        counter_cur = Counter(s[:len(target)])
 
-        sizeP = len(p)
+        if counter_cur == counter_target:
+            res.append(0)
 
-        for i in range(len(s) - sizeP + 1):
-            temp = 0
-            for j in range(sizeP):
-                temp += primeNums.get(s[i+j])
-            if temp == target:
-                result.append(i)
+        for id in range(len(target), len(s)):
+            head = s[id - len(target)]
+            tail = s[id]
+            counter_cur[tail] += 1
+            counter_cur[head] -= 1
+            if counter_cur[head] == 0:
+                del counter_cur[head]  # requried for comparison
+            if counter_cur == counter_target:
+                # id is the ending index, find the starting
+                res.append(id - len(target) + 1)
 
-        return result
+        return res
 ```
