@@ -185,3 +185,8 @@ ps -ef | grep tomcat
 ```
 
 27. check user manual for a command. `man` command in Linux is used to display the user manual of any command that we can run on the terminal. It provides a detailed view of the command which includes
+
+28. Search for occurrences of a target value against all files in a directory
+```bash
+find . -name '*.js' -exec grep -i 'string to search for' {} \; -print
+```

@@ -189,7 +189,7 @@ Example: Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Ou
       <h1>23. Merge k Sorted Lists</h1>
       <h4>Created: August 26, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: August 26, 2018</h5>
+        <h5>Last updated: October 14, 2019</h5>
       
       <hr />
       
@@ -312,20 +312,13 @@ import heapq
 
 ListNode.__lt__ = lambda x, y: (x.val &lt; y.val)
 
-class Node:
-    def __init__(self, node):
-        self.val = node.val
-        self.next = node.val
-    def __cmp__(self, other):
-        return cmp(self.val, other.val)
-
 class Solution:
     def mergeKLists(self, lists: List[ListNode]) -&gt; ListNode:
         if not lists:
             return None
 
         dummy = ListNode(0)
-        prev = dummy
+        curr = dummy
 
         heap = []
 
@@ -335,8 +328,8 @@ class Solution:
 
         while heap:
             node = heapq.heappop(heap)
-            prev.next = node
-            prev = node
+            curr.next = node
+            curr = node
             if node.next:
                 heapq.heappush(heap, node.next)
 
