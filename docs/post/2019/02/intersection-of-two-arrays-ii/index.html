@@ -19,7 +19,7 @@
   <meta name="description" content="Given two arrays, write a function to compute their intersection.
 Example 1: Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2,2]  Example 2: Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [4,9]  Note: Each element in the result should appear as many times as it shows in both arrays. The result can be in any order.
 Follow up:  What if the given array is already sorted? How would you optimize your algorithm?" />
-  <meta name="keywords" content="leetcode hashmap " />
+  <meta name="keywords" content="leetcode hashset " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -181,7 +181,7 @@ Follow up:  What if the given array is already sorted? How would you optimize yo
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/hashmap"><strong>hashmap</strong></a>",
+          "<a href="/tags/hashset"><strong>hashset</strong></a>",
         
         <i class="small material-icons">access_time</i> 2-min read
       </p>
@@ -222,6 +222,8 @@ The result can be in any order.</p>
 <li><p>What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?</p>
 
 <h3 id="solution">Solution:</h3>
+
+<p>Java</p>
 
 <pre><code class="language-java">// Time: O(m+n)
 class Solution {
@@ -271,8 +273,27 @@ public int[] intersect(int[] nums1, int[] nums2) {
     return res;
 }
 }
-</code></pre></li>
+</code></pre>
+
+<p>Python
+```python
+from collections import Counter</p></li>
 </ol>
+
+<p>class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
+        counter = Counter(nums1)</p>
+
+<pre><code>    res = []
+    for num in nums2:
+        if counter[num] &gt; 0:
+            res.append(num)
+            counter[num] -= 1
+
+    return res
+</code></pre>
+
+<p>```</p>
 
   </div>
 

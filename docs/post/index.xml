@@ -7,10 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 15 Oct 2019 23:57:45 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 19:13:18 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Intersection of Three Sorted Arrays</title>
+      <link>http://www.hashnopolis.com/post/2019/10/intersection-of-three-sorted-arrays/</link>
+      <pubDate>Wed, 16 Oct 2019 19:13:18 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/intersection-of-three-sorted-arrays/</guid>
+      <description>Given three integer arrays arr1, arr2 and arr3 sorted in strictly increasing order, return a sorted array of only the integers that appeared in all three arrays.
+Example 1:
+Input: arr1 = [1,2,3,4,5], arr2 = [1,2,5,7,9], arr3 = [1,3,4,5,8] Output: [1,5] Explanation: Only 1 and 5 appeared in the three arrays.  Constraints:  1 &amp;lt;= arr1.length, arr2.length, arr3.length &amp;lt;= 1000 1 &amp;lt;= arr1[i], arr2[i], arr3[i] &amp;lt;= 2000  Solution Python</description>
+    </item>
+    
+    <item>
+      <title>Add Strings</title>
+      <link>http://www.hashnopolis.com/post/2019/10/add-strings/</link>
+      <pubDate>Wed, 16 Oct 2019 00:06:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/add-strings/</guid>
+      <description>Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
+Note:  The length of both num1 and num2 is &amp;lt; 5100. Both num1 and num2 contains only digits 0-9. Both num1 and num2 does not contain any leading zero. You must not use any built-in BigInteger library or convert the inputs to integer directly.  Solution class Solution: def addStrings(self, num1: str, num2: str) -&amp;gt; str: if len(num1) &amp;lt; len(num2): return self.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Words in a String</title>
+      <link>http://www.hashnopolis.com/post/2019/10/reverse-words-in-a-string/</link>
+      <pubDate>Wed, 16 Oct 2019 00:04:09 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/reverse-words-in-a-string/</guid>
+      <description>Given an input string, reverse the string word by word.
+Example 1: Input: &amp;quot;the sky is blue&amp;quot; Output: &amp;quot;blue is sky the&amp;quot;  Example 2: Input: &amp;quot; hello world! &amp;quot; Output: &amp;quot;world! hello&amp;quot;  Explanation: Your reversed string should not contain leading or trailing spaces.
+Example 3: Input: &amp;quot;a good example&amp;quot; Output: &amp;quot;example good a&amp;quot; Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.</description>
+    </item>
+    
+    <item>
+      <title>Count Complete Tree Nodes</title>
+      <link>http://www.hashnopolis.com/post/2019/10/count-complete-tree-nodes/</link>
+      <pubDate>Wed, 16 Oct 2019 00:00:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/count-complete-tree-nodes/</guid>
+      <description>Given a complete binary tree, count the number of nodes.
+Note: Definition of a complete binary tree from Wikipedia: In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.
+Example: Input: 1 / \ 2 3 / \ / 4 5 6 Output: 6  Solution # Definition for a binary tree node.</description>
+    </item>
     
     <item>
       <title>Kth Smallest Element in a Sorted Matrix</title>
@@ -1417,7 +1460,8 @@ Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(num
       <guid>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</guid>
       <description>Given two arrays, write a function to compute their intersection.
 Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
-Solution class Solution: def intersection(self, nums1, nums2): &amp;quot;&amp;quot;&amp;quot; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = set([]) dict1 = {} for n in nums1: if dict1.</description>
+Solution Use binary search when one of the lists is very long and the other is short
+class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: if len(nums1) &amp;lt; len(nums2): return self.</description>
     </item>
     
     <item>
