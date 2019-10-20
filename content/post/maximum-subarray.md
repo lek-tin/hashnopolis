@@ -2,7 +2,7 @@
 title: "Maximum Subarray"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dynamic-programming", "kadanes-algorithm"]
+tags: ["leetcode", "dynamic-programming", "kadanes-algorithm", "prefix-sum"]
 categories: ["algorithm"]
 date: 2019-02-20T22:30:14-08:00
 lastmod: 2019-10-11T17:30:14-08:00
@@ -45,7 +45,7 @@ prefix sum
 ```python
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        total, minSum, maxSum = 0, 0, nums[0]-1
+        total, minSum, maxSum = 0, 0, -math.inf
 
         for i, num in enumerate(nums):
             # prefixSum[n+1] = prefixSum[n] + nums[n+1]
