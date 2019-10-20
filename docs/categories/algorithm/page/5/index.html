@@ -176,6 +176,113 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/dungeon-game/">Dungeon Game</a></h2>
+
+      <p>The demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (K) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.
+The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/minimum-path-sum/">Minimum Path Sum</a></h2>
+
+      <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution: def minPathSum(self, grid): &#34;&#34;&#34; :type grid: List[List[int]] :rtype: int &#34;&#34;&#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/largest-divisible-subset/">Largest Divisible Subset</a></h2>
+
+      <p>Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
+Si % Sj = 0 or Sj % Si = 0.
+If there are multiple solutions, return any subset is fine.
+Example 1: Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok)  Example 2: Input: [1,2,4,8] Output: [1,2,4,8]  Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&gt; List[int]: if not nums or len(nums) == 0: return [] nums.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/climbing-stairs/">Climbing Stairs</a></h2>
+
+      <p>You are climbing a stair case. It takes n steps to reach to the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/08/valid-triangle-number/">Valid Triangle Number</a></h2>
 
       <p>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
@@ -320,113 +427,6 @@ Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation:
 
       <p>Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &lt;= i &lt; j &lt; k &lt; n that satisfy the condition nums[i] &#43; nums[j] &#43; nums[k] &lt; target.
 Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3]  Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&gt; int: res = 0 if not nums: return res nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-less-than-k/">Two Sum Less Than K</a></h2>
-
-      <p>Given an array A of integers and integer K, return the maximum S such that there exists i &lt; j with A[i] &#43; A[j] = S and S &lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60.  Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/inorder-successor-in-bst/">Inorder Successor in BST</a></h2>
-
-      <p>Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
-The successor of a node p is the node with the smallest key greater than p.val.
-Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type.  Example 2: Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></h2>
-
-      <p>Given a binary tree, return the inorder traversal of its nodes’ values.
-Example: Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Follow-up the Recursive solution is trivial, could you do it iteratively?
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; &#34;&#34;&#34;Check root == None to reduce time on checking&#34;&#34;&#34; if root == None: return [] stack = [] result = [] current = root while (current!</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-iii-data-structure-design-design/">Two Sum Iii Data Structure Design Design</a></h2>
-
-      <p>Design and implement a TwoSum class. It should support the following operations: add and find.
-add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
-Example 1: add(1); add(3); add(5); find(4) -&gt; true find(7) -&gt; false  Example 2: add(3); add(1); add(2); find(3) -&gt; true find(6) -&gt; false  Solution # Time: add is o(1), find is o(n) # Space: o(n) class TwoSum: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
 
       <p class="meta">
         

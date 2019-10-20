@@ -7,10 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 16 Oct 2019 19:13:18 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 19 Oct 2019 22:15:17 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Prefix Postfix Conversion</title>
+      <link>http://www.hashnopolis.com/post/2019/10/prefix-postfix-conversion/</link>
+      <pubDate>Sat, 19 Oct 2019 22:15:17 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/prefix-postfix-conversion/</guid>
+      <description>Prefix : An expression is called the prefix expression if the operator appears in the expression before the operands. Simply of the form (operator operand1 operand2). Example : *+AB-CD (Infix : (A+B) * (C-D) )
+Postfix: An expression is called the postfix expression if the operator appears in the expression after the operands. Simply of the form (operand1 operand2 operator). Example : AB+CD-* (Infix : (A+B * (C-D) )</description>
+    </item>
+    
+    <item>
+      <title>Maximum Value Array M Range Increment Operations</title>
+      <link>http://www.hashnopolis.com/post/2019/10/maximum-value-array-m-range-increment-operations/</link>
+      <pubDate>Sat, 19 Oct 2019 22:11:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/maximum-value-array-m-range-increment-operations/</guid>
+      <description>Consider an array of size n with all initial values as 0, we need to perform following m range increment operations.
+increment(a, b, k) : Increment values from a to b by k. After m operations, we need to calculate the maximum of the values in the array.
+Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2, b = 3, k = 100 Output : 200 Explanation: Initially array = {0, 0, 0, 0, 0} After first operation: array = {100, 100, 0, 0, 0} After second operation: array = {100, 200, 100, 100, 100} After third operation: array = {100, 200, 200, 200, 100} Maximum element after m operations is 200.</description>
+    </item>
+    
+    <item>
+      <title>Consecutive Numbers Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/10/consecutive-numbers-sum/</link>
+      <pubDate>Sat, 19 Oct 2019 22:09:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/consecutive-numbers-sum/</guid>
+      <description>Given a positive integer N, how many ways can we write it as a sum of consecutive positive integers?
+Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 + 3  Example 2: Input: 9 Output: 3 Explanation: 9 = 9 = 4 + 5 = 2 + 3 + 4  Example 3: Input: 15 Output: 4 Explanation: 15 = 15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5  Note  1 &amp;lt;= N &amp;lt;= 10 ^ 9.</description>
+    </item>
+    
+    <item>
+      <title>Beautiful Subarrays</title>
+      <link>http://www.hashnopolis.com/post/2019/10/beautiful-subarrays/</link>
+      <pubDate>Sat, 19 Oct 2019 15:06:26 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/beautiful-subarrays/</guid>
+      <description>Find the distinct subarrays with m odd numbers
+Example 1: Input : arr = {2, 5, 6, 9}, m = 2 Output : 2 Explanation: subarrays are [2, 5, 6, 9] and [5, 6, 9]  Example 2: Input : arr = {2, 2, 5, 6, 9, 2, 11}, m = 2 Output : 8 Explanation: subarrays are [2, 2, 5, 6, 9], [2, 5, 6, 9], [5, 6, 9], [2, 2, 5, 6, 9, 2], [2, 5, 6, 9, 2], [5, 6, 9, 2], [6, 9, 2, 11] and [9, 2, 11]  Solution python</description>
+    </item>
     
     <item>
       <title>Intersection of Three Sorted Arrays</title>
@@ -1209,7 +1250,7 @@ Note # Time: O(n*l), l: number of strings class Solution(object): def longestCom
       <guid>http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/</guid>
       <description>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start + max_len] return solution  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</description>
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start + max_len]  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</description>
     </item>
     
     <item>
