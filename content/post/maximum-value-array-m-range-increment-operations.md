@@ -56,6 +56,11 @@ Python
 def listMax(n, operations):
     # Write your code here
 
+    # index:  0     1     2     3     4     5
+    # value:  0     0     0     0     0     0
+    #         100   0     0   -100    0     0      [0, 2] 100
+    #         100   50    0   -100    0    -50     [1, 4]  50
+    #         100   50   70   -100   -70   -50     [2, 3]  70
     sums = [0 for _ in range(n+1)]
     for op in operations:
         a = op[0]-1
