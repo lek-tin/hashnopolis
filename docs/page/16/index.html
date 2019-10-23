@@ -279,6 +279,32 @@ Note Your algorithm should run in O(n) time complexity and O(1) space complexity
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/lru-cache/">LRU Cache</a></h2>
+
+      <p>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
+get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/powx-n/">PowX N</a></h2>
 
       <p>Example 1 Input: 2.00000, 10 Output: 1024.00000  Example 2 Input: 2.10000, 3 Output: 9.26100  Example 3 Input: 2.00000, -2 Output: 0.25000  Explanation 2-2 = 1⁄22 = 1⁄4 = 0.25 Note  -100.0 &lt; x &lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]
@@ -390,33 +416,6 @@ Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10,
       <p>Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 For example:
  1 -&gt; A 2 -&gt; B 3 -&gt; C ... 26 -&gt; Z 27 -&gt; AA 28 -&gt; AB ...  Example 1 Input: 1 Output: &#34;A&#34;  Example 2 Input: 28 Output: &#34;AB&#34;  Example 3 Input: 701 Output: &#34;ZY&#34;  Solution class Solution: def convertToTitle(self, n): &#34;&#34;&#34; :type n: int :rtype: str &#34;&#34;&#34; digit = 1 res = &#34;&#34; while n &gt; 0: # Because we start from A.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/simplify-path/">Simplify Path</a></h2>
-
-      <p>Given an absolute path for a file (Unix-style), simplify it.
-For example, path = &#34;/home/&#34;, =&gt; &#34;/home&#34; path = &#34;/a/./b/../../c/&#34;, =&gt; &#34;/c&#34; path = &#34;/a/../../b/../c//.//&#34;, =&gt; &#34;/c&#34; path = &#34;/a//b////c/d//././/..&#34;, =&gt; &#34;/a/b/c&#34;
-In a UNIX-style file system, a period (‘.’) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (“..”) moves up a directory, so it cancels out whatever the last directory was.</p>
 
       <p class="meta">
         

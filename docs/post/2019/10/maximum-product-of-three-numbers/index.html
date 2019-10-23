@@ -5,7 +5,7 @@
 
   
   <title>
-        Maximum Value Array M Range Increment Operations | Hashnopolis
+        Maximum Product of Three Numbers | Hashnopolis
       </title>
 
     
@@ -16,18 +16,20 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Consider an array of size n with all initial values as 0, we need to perform following m range increment operations.
-increment(a, b, k) : Increment values from a to b by k. After m operations, we need to calculate the maximum of the values in the array.
-Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2, b = 3, k = 100 Output : 200 Explanation: Initially array = {0, 0, 0, 0, 0} After first operation: array = {100, 100, 0, 0, 0} After second operation: array = {100, 200, 100, 100, 100} After third operation: array = {100, 200, 200, 200, 100} Maximum element after m operations is 200." />
-  <meta name="keywords" content="leetcode prefix-sum " />
+  <meta name="description" content=" Given an integer array, find three numbers whose product is maximum and output the maximum product.
+Example 1:
+Input: [1,2,3] Output: 6  Example 2:
+Input: [1,2,3,4] Output: 24  Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&amp;rsquo;t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; min_1, min_2 = float(&amp;quot;inf&amp;quot;), float(&amp;quot;inf&amp;quot;) max_1, max_2, max_3 = float(&amp;quot;-inf&amp;quot;), float(&amp;quot;-inf&amp;quot;), float(&amp;quot;-inf&amp;quot;) for num in nums: if num &amp;lt; min_1: min_2 = min_1 min_1 = num elif num &amp;lt; min_2: min_2 = num if num &amp;gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &amp;gt; max_2: max_3 = max_2 max_2 = num elif num &amp;gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3)  " />
+  <meta name="keywords" content="leetcode " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="Maximum Value Array M Range Increment Operations" />
-    <meta name="twitter:description" content="Consider an array of size n with all initial values as 0, we need to perform following m range increment operations.
-increment(a, b, k) : Increment values from a to b by k. After m operations, we need to calculate the maximum of the values in the array.
-Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2, b = 3, k = 100 Output : 200 Explanation: Initially array = {0, 0, 0, 0, 0} After first operation: array = {100, 100, 0, 0, 0} After second operation: array = {100, 200, 100, 100, 100} After third operation: array = {100, 200, 200, 200, 100} Maximum element after m operations is 200." />
+    <meta name="twitter:title" content="Maximum Product of Three Numbers" />
+    <meta name="twitter:description" content=" Given an integer array, find three numbers whose product is maximum and output the maximum product.
+Example 1:
+Input: [1,2,3] Output: 6  Example 2:
+Input: [1,2,3,4] Output: 24  Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&amp;rsquo;t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; min_1, min_2 = float(&amp;quot;inf&amp;quot;), float(&amp;quot;inf&amp;quot;) max_1, max_2, max_3 = float(&amp;quot;-inf&amp;quot;), float(&amp;quot;-inf&amp;quot;), float(&amp;quot;-inf&amp;quot;) for num in nums: if num &amp;lt; min_1: min_2 = min_1 min_1 = num elif num &amp;lt; min_2: min_2 = num if num &amp;gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &amp;gt; max_2: max_3 = max_2 max_2 = num elif num &amp;gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3)  " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -37,7 +39,7 @@ Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2
 <meta name="generator" content="Hugo 0.30.2" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/maximum-value-array-m-range-increment-operations/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/maximum-product-of-three-numbers/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -181,12 +183,10 @@ Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/prefix-sum"><strong>prefix-sum</strong></a>",
-        
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 1-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/maximum-value-array-m-range-increment-operations.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1>Maximum Value Array M Range Increment Operations</h1>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/maximum-product-of-three-numbers.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Maximum Product of Three Numbers</h1>
       <h4>Created: October 19, 2019 by [lek-tin]</h4>
       
         <h5>Last updated: October 19, 2019</h5>
@@ -194,73 +194,56 @@ Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2
       <hr />
       
 
-<p>Consider an array of size <code>n</code> with all initial values as 0, we need to perform following <code>m</code> range increment operations.</p>
+<p>Given an integer array, find three numbers whose product is maximum and output the maximum product.</p>
 
-<p><code>increment(a, b, k)</code> : Increment values from <code>a</code> to <code>b</code> by <code>k</code>. After <code>m</code> operations, we need to calculate the maximum of the values in the array.</p>
+<p>Example 1:</p>
 
-<h3 id="example-1">Example 1:</h3>
-
-<pre><code>Input : n = 5 m = 3
-        a = 0, b = 1, k = 100
-        a = 1, b = 4, k = 100
-        a = 2, b = 3, k = 100
-Output : 200
-Explanation:
-Initially array = {0, 0, 0, 0, 0}
-After first operation:
-array = {100, 100, 0, 0, 0}
-After second operation:
-array = {100, 200, 100, 100, 100}
-After third operation:
-array = {100, 200, 200, 200, 100}
-Maximum element after m operations 
-is 200.
+<pre><code>Input: [1,2,3]
+Output: 6
 </code></pre>
 
-<h3 id="example-2">Example 2:</h3>
+<p>Example 2:</p>
 
-<pre><code>Input : n = 4 m = 3
-        a = 1, b = 2, k = 603
-        a = 0, b = 0, k = 286
-        a = 3, b = 3, k = 882
-Output : 882
-Explanation:
-Initially array = {0, 0, 0, 0}
-After first operation:
-array = {0, 603, 603, 0}
-After second operation:
-array = {286, 603, 603, 0}
-After third operation:
-array = {286, 603, 603, 882}
-Maximum element after m operations
-is 882.
+<pre><code>Input: [1,2,3,4]
+Output: 24
 </code></pre>
+
+<h3 id="note">Note:</h3>
+
+<ol>
+<li>The length of the given array will be in range <code>[3,104]</code> and all elements are in the range <code>[-1000, 1000]</code>.</li>
+<li>Multiplication of any three numbers in the input won&rsquo;t exceed the range of <code>32-bit</code> signed integer.</li>
+</ol>
 
 <h3 id="solution">Solution</h3>
 
-<p>Python</p>
+<pre><code class="language-python">class Solution(object):
+    def maximumProduct(self, nums):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: int
+        &quot;&quot;&quot;
 
-<pre><code class="language-python">def listMax(n, operations):
-    # Write your code here
+        min_1, min_2 = float(&quot;inf&quot;), float(&quot;inf&quot;)
+        max_1, max_2, max_3 = float(&quot;-inf&quot;), float(&quot;-inf&quot;), float(&quot;-inf&quot;)
 
-    # index:  0     1     2     3     4     5
-    # value:  0     0     0     0     0     0
-    #         100   0     0   -100    0     0      [0, 2] 100
-    #         100   50    0   -100    0    -50     [1, 4]  50
-    #         100   50   70   -100   -70   -50     [2, 3]  70
-    sums = [0 for _ in range(n+1)]
-    for op in operations:
-        a = op[0]-1
-        b = op[1]-1
-        k = op[2]
-        sums[a] += k
-        sums[b+1] -= k
-    res, total = -math.inf, 0
-    for sum in sums:
-        total += sum
-        res = max(res, total)
+        for num in nums:
+            if num &lt; min_1:
+                min_2 = min_1
+                min_1 = num
+            elif num &lt; min_2:
+                min_2 = num
 
-    return res
+            if num &gt; max_1:
+                max_3 = max_2
+                max_2 = max_1
+                max_1 = num
+            elif num &gt; max_2:
+                max_3 = max_2
+                max_2 = num
+            elif num &gt; max_3:
+                max_3 = num
+        return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3)
 </code></pre>
 
   </div>
