@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 19 Oct 2019 23:01:34 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2019 01:26:32 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Before and After Puzzle</title>
+      <link>http://www.hashnopolis.com/post/2019/10/before-and-after-puzzle/</link>
+      <pubDate>Fri, 25 Oct 2019 01:26:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/before-and-after-puzzle/</guid>
+      <description>Given a list of phrases, generate a list of Before and After puzzles.
+A phrase is a string that consists of lowercase English letters and spaces only. No space appears in the start or the end of a phrase. There are no consecutive spaces in a phrase.
+Before and After puzzles are phrases that are formed by merging two phrases where the last word of the first phrase is the same as the first word of the second phrase.</description>
+    </item>
     
     <item>
       <title>Maximum Product of Three Numbers</title>
@@ -2096,7 +2107,7 @@ Solution class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;q
       <description>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
 Note: Do not modify the linked list.
 Follow up: Can you solve it without using extra space?
-Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</description>
+Observation: Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</description>
     </item>
     
     <item>
