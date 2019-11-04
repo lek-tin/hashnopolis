@@ -34,6 +34,7 @@ cache.get(4);       // returns 4
 ```java
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 public class LRUCache {
     private Map<Integer, Integer> cache;
     private int capacity;
