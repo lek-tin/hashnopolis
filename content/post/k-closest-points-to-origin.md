@@ -123,3 +123,27 @@ class Solution:
     def compare(self, p1, p2):
         return p1[0]*p1[0] + p1[1]*p1[1] - p2[0]*p2[0] - p2[1]*p2[1]
 ```
+Python:
+```python
+# time: O(nlogk)
+# space: O(k)
+
+import heapq
+class Solution:
+    def dist(self, point):
+        return point[0]*point[0] + point[1]*point[1]
+
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        q = []
+
+        for i in range(len(points)):
+            heapq.heappush(q, (-self.dist(points[i]), points[i]) )
+            if i >= k:
+                heapq.heappop(q)
+
+        res = []
+        for p in q:
+            res.append(p[1])
+
+        return res
+```
