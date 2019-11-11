@@ -176,32 +176,6 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/">Maximum Product Subarray</a></h2>
-
-      <p> Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
-Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.  Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.  Solution # time: o(n) class Solution: def maxProduct(self, nums: List[int]) -&gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/triangle/">Triangle</a></h2>
 
       <p>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
@@ -439,6 +413,33 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/3sum-with-multiplicity/">3sum With Multiplicity</a></h2>
+
+      <p>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &lt; j &lt; k and A[i] &#43; A[j] &#43; A[k] == target.
+As the answer can be very large, return it modulo 10^9 &#43; 7.
+Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

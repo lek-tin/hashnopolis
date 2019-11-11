@@ -176,6 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/edit-distance/">Edit Distance</a></h2>
+
+      <p>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
+Example 1: Input: word1 = &#34;horse&#34;, word2 = &#34;ros&#34; Output: 3 Explanation: horse -&gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&gt; rose (remove &#39;r&#39;) rose -&gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &#34;intention&#34;, word2 = &#34;execution&#34; Output: 5 Explanation: intention -&gt; inention (remove &#39;t&#39;) inention -&gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/01/reverse-integer/">Reverse Integer</a></h2>
 
       <p>Given a 32-bit signed integer, reverse digits of an integer.
@@ -395,32 +422,6 @@ Example 1 Input: s: &#34;cbaebabacd&#34; p: &#34;abc&#34; Output: [0, 6] Explana
 Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
 Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
 Example 1 Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 courses to take.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/12/alien-dictionary/">Alien Dictionary</a></h2>
-
-      <p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1 Input: [ &#34;wrt&#34;, &#34;wrf&#34;, &#34;er&#34;, &#34;ett&#34;, &#34;rftt&#34; ] Output: &#34;wertf&#34;  Example 2 Input: [ &#34;z&#34;, &#34;x&#34; ] Output: &#34;zx&#34;  Example 3 Input: [ &#34;z&#34;, &#34;x&#34;, &#34;z&#34; ] Output: &#34;&#34;  Explanation The order is invalid, so return “”.</p>
 
       <p class="meta">
         

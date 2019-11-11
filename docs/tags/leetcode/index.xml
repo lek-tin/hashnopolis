@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 25 Oct 2019 01:26:32 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 08 Nov 2019 23:56:44 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reorder Data in Log Files</title>
+      <link>http://www.hashnopolis.com/post/2019/11/reorder-data-in-log-files/</link>
+      <pubDate>Fri, 08 Nov 2019 23:56:44 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/11/reorder-data-in-log-files/</guid>
+      <description>You have an array of logs. Each log is a space delimited string of words.
+For each log, the first word in each log is an alphanumeric identifier. Then, either:
+Each word after the identifier will consist only of lowercase letters, or; Each word after the identifier will consist only of digits. We will call these two varieties of logs letter-logs and digit-logs. It is guaranteed that each log has at least one word after its identifier.</description>
+    </item>
     
     <item>
       <title>Before and After Puzzle</title>
@@ -215,27 +226,6 @@ Example: Input: n = 2 Output: [&amp;quot;11&amp;quot;,&amp;quot;69&amp;quot;,&am
       <description>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
 Write a function to determine if a number is strobogrammatic. The number is represented as a string.
 Example 1: Input: &amp;quot;69&amp;quot; Output: true  Example 2: Input: &amp;quot;88&amp;quot; Output: true  Example 3: Input: &amp;quot;962&amp;quot; Output: false  Solution class Solution: def isStrobogrammatic(self, num: str) -&amp;gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2+1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</description>
-    </item>
-    
-    <item>
-      <title>The Maze II</title>
-      <link>http://www.hashnopolis.com/post/2019/10/the-maze-ii/</link>
-      <pubDate>Tue, 01 Oct 2019 23:34:03 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/10/the-maze-ii/</guid>
-      <description>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won&amp;rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
-Given the ball&amp;rsquo;s start position, the destination and the maze, find the shortest distance for the ball to stop at the destination. The distance is defined by the number of empty spaces traveled by the ball from the start position (excluded) to the destination (included).</description>
-    </item>
-    
-    <item>
-      <title>The Maze</title>
-      <link>http://www.hashnopolis.com/post/2019/09/the-maze/</link>
-      <pubDate>Sun, 29 Sep 2019 20:18:05 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/09/the-maze/</guid>
-      <description>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won&amp;rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
-Given the ball&amp;rsquo;s start position, the destination and the maze, determine whether the ball could stop at the destination.
-The maze is represented by a binary 2D array.</description>
     </item>
     
     <item>
@@ -811,6 +801,27 @@ Solution public class Subtree { public boolean isSubTree(TreeNode T1, TreeNode T
       <guid>http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/</guid>
       <description>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
 If there are multiple suitable places for insertion, you may choose any place to insert the new value.</description>
+    </item>
+    
+    <item>
+      <title>The Maze II</title>
+      <link>http://www.hashnopolis.com/post/2019/03/the-maze-ii/</link>
+      <pubDate>Mon, 18 Mar 2019 20:34:03 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/the-maze-ii/</guid>
+      <description>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won&amp;rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
+Given the ball&amp;rsquo;s start position, the destination and the maze, find the shortest distance for the ball to stop at the destination. The distance is defined by the number of empty spaces traveled by the ball from the start position (excluded) to the destination (included).</description>
+    </item>
+    
+    <item>
+      <title>The Maze</title>
+      <link>http://www.hashnopolis.com/post/2019/03/the-maze/</link>
+      <pubDate>Sun, 17 Mar 2019 20:18:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/03/the-maze/</guid>
+      <description>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won&amp;rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
+Given the ball&amp;rsquo;s start position, the destination and the maze, determine whether the ball could stop at the destination.
+The maze is represented by a binary 2D array.</description>
     </item>
     
     <item>
