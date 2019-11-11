@@ -55,12 +55,12 @@ class Solution:
             res.append(0)
 
         for id in range(len(target), len(s)):
-            head = s[id - len(target)]
-            tail = s[id]
-            counter_cur[tail] += 1
-            counter_cur[head] -= 1
-            if counter_cur[head] == 0:
-                del counter_cur[head]  # requried for comparison
+            startChar = s[id - len(target)]
+            endChar = s[id]
+            counter_cur[endChar] += 1
+            counter_cur[startChar] -= 1
+            if counter_cur[startChar] == 0:
+                del counter_cur[startChar]  # required for comparison
             if counter_cur == counter_target:
                 # id is the ending index, find the starting
                 res.append(id - len(target) + 1)

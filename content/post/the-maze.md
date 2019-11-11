@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "bfs"]
 categories: ["algorithm"]
 date: 2019-03-17T20:18:05-07:00
-date: 2019-09-29T20:18:05-07:00
+lastmod: 2019-11-09T20:18:05-07:00
 draft: false
 archive: false
 ---
@@ -83,6 +83,7 @@ class Solution:
                     x += dir[1]
                 y -= dir[0]
                 x -= dir[1]
+                # only need to check whether the stop point has been visited - not the points along the way, because a point can be visited multiple times as a along-the-path point
                 if not visited[y][x]:
                     visited[y][x] = True
                     q.append([y, x])

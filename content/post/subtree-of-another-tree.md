@@ -66,7 +66,7 @@ class Solution:
 
         if root1.val == root2.val:
             if self.checkSameTree(root1, root2):
-                return self.checkSameTree(root1,root2)
+                return True
 
         return self.dfs(root1.left, root2) or self.dfs(root1.right, root2)
 

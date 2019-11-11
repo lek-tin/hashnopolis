@@ -32,10 +32,10 @@ public class Solution {
             this.size = size;
         }
     }
-    
+
     private TreeNode subtree = null;
     private ResultType subtreeResult = null;
-    
+
     /**
      * @param root the root of binary tree
      * @return the root of the maximum average of subtree
@@ -44,7 +44,7 @@ public class Solution {
         helper(root);
         return subtree;
     }
-    
+
     private ResultType helper(TreeNode root) {
         if (root == null) {
             return new ResultType(0, 0);

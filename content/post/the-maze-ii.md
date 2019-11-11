@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "bfs"]
 categories: ["algorithm"]
 date: 2019-03-18T20:34:03-07:00
-date: 2019-10-01T23:34:03-07:00
+lastmod: 2019-10-01T23:34:03-07:00
 draft: false
 archive: false
 ---
