@@ -2,9 +2,10 @@
 title: "Longest Substring Without Repeating Characters"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "string", "substring", "hashmap"]
+tags: ["leetcode", "string", "sliding-window", "hashmap"]
 categories: ["algorithm"]
 date: 2019-01-22T22:24:06-08:00
+date: 2019-11-21T22:24:06-08:00
 draft: false
 archive: false
 ---
@@ -55,4 +56,20 @@ class Solution(object):
             lastSeen[c] = i
 
         return longest
+```
+Python
+```python
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        uniqueChars = {}
+        ans, slow, n = 0, 0, len(s)
+
+        for fast in range(n):
+            if s[fast] in uniqueChars:
+                # take max because of instance like this: "abba"
+                slow = max(uniqueChars[s[fast]], slow)
+            ans = max(ans, fast-slow+1)
+            uniqueChars[s[fast]] = fast+1
+
+        return ans
 ```

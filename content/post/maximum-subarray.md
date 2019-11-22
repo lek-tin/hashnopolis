@@ -57,6 +57,7 @@ class Solution:
 
         return maxSum
 ```
+![Prefix Sum Maximum Subarray](/img/post/prefix-sum-maximum-subarray.jpeg)
 Kadane's Algorithm (Python)
 ```python
 class Solution:
