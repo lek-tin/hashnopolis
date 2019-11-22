@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "palindrome", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-01-22T22:29:56-08:00
+lastmod: 2019-10-19T22:29:56-08:00
 draft: false
 archive: false
 ---
@@ -57,7 +58,6 @@ class Solution(object):
 
         # Fill DP table for palindromes of every other length
         # starting from 3
-        length = 3
         for length in range(3, str_len + 1):
             for i in range(str_len - length + 1):
                 j = i + (length - 1)
@@ -66,9 +66,7 @@ class Solution(object):
                     start = i
                     max_len = length
 
-        solution = s[start: start + max_len]
-
-        return solution
+        return s[start: start + max_len]
 ```
 ```python
 # time: O(n^2)

@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "heap", "merge"]
 categories: ["algorithm"]
 date: 2018-08-26T17:54:18+08:00
+lastmod: 2019-10-14T17:54:18+08:00
 draft: false
 archive: false
 ---
@@ -124,20 +125,13 @@ import heapq
 
 ListNode.__lt__ = lambda x, y: (x.val < y.val)
 
-class Node:
-    def __init__(self, node):
-        self.val = node.val
-        self.next = node.val
-    def __cmp__(self, other):
-        return cmp(self.val, other.val)
-
 class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         if not lists:
             return None
 
         dummy = ListNode(0)
-        prev = dummy
+        curr = dummy
 
         heap = []
 
@@ -147,8 +141,8 @@ class Solution:
 
         while heap:
             node = heapq.heappop(heap)
-            prev.next = node
-            prev = node
+            curr.next = node
+            curr = node
             if node.next:
                 heapq.heappush(heap, node.next)
 

@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start &#43; max_len] return solution  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self." />
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len]  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self." />
   <meta name="keywords" content="leetcode palindrome dynamic-programming " />
   
   
@@ -27,7 +27,7 @@ Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note:
     <meta name="twitter:title" content="Longest Palindromic Substring" />
     <meta name="twitter:description" content="Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 length = 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length solution = s[start: start &#43; max_len] return solution  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self." />
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len]  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -191,7 +191,7 @@ Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note:
       <h1>Longest Palindromic Substring</h1>
       <h4>Created: January 22, 2019 by [lek-tin]</h4>
       
-        <h5>Last updated: January 22, 2019</h5>
+        <h5>Last updated: October 19, 2019</h5>
       
       <hr />
       
@@ -248,7 +248,6 @@ class Solution(object):
 
         # Fill DP table for palindromes of every other length
         # starting from 3
-        length = 3
         for length in range(3, str_len + 1):
             for i in range(str_len - length + 1):
                 j = i + (length - 1)
@@ -257,9 +256,7 @@ class Solution(object):
                     start = i
                     max_len = length
 
-        solution = s[start: start + max_len]
-
-        return solution
+        return s[start: start + max_len]
 </code></pre>
 
 <pre><code class="language-python"># time: O(n^2)

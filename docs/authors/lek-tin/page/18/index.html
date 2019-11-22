@@ -176,37 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/multiply-strings/">Multiply Strings</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/implement-strstr/">Implement Strstr</a></h2>
 
-      <p>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
-Example 1 Input: num1 = &#34;2&#34;, num2 = &#34;3&#34; Output: &#34;6&#34;  Example 2 Input: num1 = &#34;123&#34;, num2 = &#34;456&#34; Output: &#34;56088&#34;  Note  The length of both num1 and num2 is &lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/">Kth Smallest Element in a BST</a></h2>
-
-      <p>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
-Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1 Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2 ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
-### Follow-up What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</p>
+      <p>Implement strstr().
+Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Example 1 Input: haystack = &#34;hello&#34;, needle = &#34;ll&#34; Output: 2  Example 2 Input: haystack = &#34;aaaaa&#34;, needle = &#34;bba&#34; Output: -1  Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
+For the purpose of this problem, we will return 0 when needle is an empty string.</p>
 
       <p class="meta">
         
@@ -229,38 +204,12 @@ Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Ex
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/valid-parentheses/">Valid Parentheses</a></h2>
 
-      <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
-Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/group-anagrams/">Group Anagrams</a></h2>
-
-      <p>Given an array of strings, group anagrams together.
-Example Input: [&#34;eat&#34;, &#34;tea&#34;, &#34;tan&#34;, &#34;ate&#34;, &#34;nat&#34;, &#34;bat&#34;], Output: [ [&#34;ate&#34;,&#34;eat&#34;,&#34;tea&#34;], [&#34;nat&#34;,&#34;tan&#34;], [&#34;bat&#34;] ]  Note  All inputs will be in lowercase. The order of your output does not matter.
-Solution class Solution(object): def groupAnagrams(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: List[List[str]] &#34;&#34;&#34; primeNums = { &#34;a&#34;: 2, &#34;b&#34;: 3, &#34;c&#34;: 5, &#34;d&#34;: 7, &#34;e&#34;: 11, &#34;f&#34;: 13, &#34;g&#34;: 17, &#34;h&#34;: 19, &#34;i&#34;: 23, &#34;j&#34;: 29, &#34;k&#34;: 31, &#34;m&#34;: 37, &#34;l&#34;: 41, &#34;n&#34;: 43, &#34;o&#34;: 47, &#34;p&#34;: 53, &#34;q&#34;: 59, &#34;r&#34;: 61, &#34;s&#34;: 67, &#34;t&#34;: 71, &#34;u&#34;: 73, &#34;v&#34;: 79, &#34;w&#34;: 83, &#34;x&#34;: 89, &#34;y&#34;: 97, &#34;z&#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</p>
+      <p>Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid.
+An input string is valid if:
+Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
+Example 1: Input: &#34;()&#34; Output: true  Example 2: Input: &#34;()[]{}&#34; Output: true  Example 3: Input: &#34;(]&#34; Output: false  Example 4: Input: &#34;([)]&#34; Output: false  Example 5: Input: &#34;{[]}&#34; Output: true  Solution: class Solution { public boolean isValid(String s) { HashMap&lt;Character, Character&gt; charMap = new HashMap&lt;&gt;(); charMap.</p>
 
       <p class="meta">
         
@@ -283,12 +232,16 @@ Solution class Solution(object): def groupAnagrams(self, strs): &#34;&#34;&#34; 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/">Linked List Cycle II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/maximal-square/">Maximal Square</a></h2>
 
-      <p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
-Note: Do not modify the linked list.
-Follow up: Can you solve it without using extra space?
-Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</p>
+      <p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest square containing only 1’s and return its area.
+Example Input:
+1 0 1 0 0
+1 0 1 1 1
+1 1 1 1 1
+1 0 0 1 0
+Output: 4
+Solution class Solution: def maximalSquare(self, matrix): &#34;&#34;&#34; :type matrix: List[List[str]] :rtype: int &#34;&#34;&#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &#34;1&#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &#34;1&#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &#34;0&#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin &#43; 1 if matrix[i][j] &gt; area: area = matrix[i][j] return area**2  class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</p>
 
       <p class="meta">
         
@@ -311,37 +264,11 @@ Solution: /** * Definition for singly-linked list. * class ListNode { * int val;
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle/">Linked List Cycle</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/valid-palindrome/">Valid Palindrome</a></h2>
 
-      <p>Given a linked list, determine if it has a cycle in it.
-Follow-up Can you solve it without using extra space?
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: bool &#34;&#34;&#34; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/compare-version-numbers/">Compare Version Numbers</a></h2>
-
-      <p>Compare two version numbers version1 and version2. If version1 &gt; version2 return 1; if version1 &lt; version2 return -1;otherwise return 0.
-You may assume that the version strings are non-empty and contain only digits and the . character. The . character does not represent a decimal point and is used to separate number sequences. For instance, 2.5 is not “two and a half” or “half way to version three”, it is the fifth second-level revision of the second first-level revision.</p>
+      <p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+Note: For the purpose of this problem, we define empty string as valid palindrome.
+Example 1 Input: &#34;A man, a plan, a canal: Panama&#34; Output: true  Example 2 Input: &#34;race a car&#34; Output: false  Solution class Solution: def isPalindrome(self, s): &#34;&#34;&#34; :type s: str :rtype: bool &#34;&#34;&#34; if not s: return True head = 0 tail = len(s) - 1 while head &lt;= tail: cHead, cTail = s[head], s[tail] if not cHead.</p>
 
       <p class="meta">
         
@@ -364,39 +291,11 @@ You may assume that the version strings are non-empty and contain only digits an
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/word-search/">Word Search</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-search-tree/">Lowest Common Ancestor of a Binary Search Tree</a></h2>
 
-      <p>Given a 2D board and a word, find if the word exists in the grid.
-The word can be constructed from letters of sequentially adjacent cell, where “adjacent” cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
-Example board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;], [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;] ] Given word = &#34;ABCCED&#34;, return true. Given word = &#34;SEE&#34;, return true. Given word = &#34;ABCB&#34;, return false.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/intersection-of-two-linked-lists/">Intersection of Two Linked Lists</a></h2>
-
-      <p>Write a program to find the node at which the intersection of two singly linked lists begins.
-For example, the following two linked lists:
-A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
-Note If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</p>
+      <p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]</p>
 
       <p class="meta">
         
@@ -419,10 +318,117 @@ Note If the two linked lists have no intersection at all, return null. The linke
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/min-stack/">Min Stack</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-tree/">Lowest Common Ancestor of a Binary Tree</a></h2>
 
-      <p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) – Push element x onto stack. - pop() – Removes the element on top of the stack. - top() – Get the top element. - getMin() – Retrieve the minimum element in the stack.
-Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&gt; Returns -3. minStack.pop(); minStack.top(); --&gt; Returns 0.</p>
+      <p>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+According to the : “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]
+ _______3______ / \ ___5__ ___1__  / \ / 6 _2 0 8 / 7 4</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/summary-ranges/">Summary Ranges</a></h2>
+
+      <p>Given a sorted integer array without duplicates, return the summary of its ranges.
+Example 1 Input: [0,1,2,4,5,7] Output: [&#34;0-&gt;2&#34;,&#34;4-&gt;5&#34;,&#34;7&#34;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.  Example 2 Input: [0,2,3,4,6,8,9] Output: [&#34;0&#34;,&#34;2-&gt;4&#34;,&#34;6&#34;,&#34;8-&gt;9&#34;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.  Solution class Solution: def summaryRanges(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: List[str] &#34;&#34;&#34; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i&#43;1] == nums[i] &#43; 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1].</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/search-a-2d-matrix/">Search a 2D Matrix</a></h2>
+
+      <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties: - Integers in each row are sorted from left to right. - The first integer of each row is greater than the last integer of the previous row.
+Example 1 Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 Output: true  Example 2 Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 13 Output: false  Solution # Treat the 2-d matrix as a 1-d list of length rows * cols.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/find-the-duplicate-number/">Find the Duplicate Number</a></h2>
+
+      <p>Given an array nums containing n &#43; 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
+Example 1 Input: [1,3,4,2,2] Output: 2  Example 2 Input: [3,1,3,4,2] Output: 3  Note You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/h-index/">H-Index</a></h2>
+
+      <p>Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher’s h-index.
+According to the definition of h-index on Wikipedia: “A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.”
+Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.</p>
 
       <p class="meta">
         

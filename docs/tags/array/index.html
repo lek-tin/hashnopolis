@@ -176,6 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/intersection-of-three-sorted-arrays/">Intersection of Three Sorted Arrays</a></h2>
+
+      <p>Given three integer arrays arr1, arr2 and arr3 sorted in strictly increasing order, return a sorted array of only the integers that appeared in all three arrays.
+Example 1:
+Input: arr1 = [1,2,3,4,5], arr2 = [1,2,5,7,9], arr3 = [1,3,4,5,8] Output: [1,5] Explanation: Only 1 and 5 appeared in the three arrays.  Constraints:  1 &lt;= arr1.length, arr2.length, arr3.length &lt;= 1000 1 &lt;= arr1[i], arr2[i], arr3[i] &lt;= 2000  Solution Python</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/">Longest Continuous Increasing Subsequence</a></h2>
 
       <p>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
@@ -206,7 +233,8 @@ Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous incre
 
       <p>Given two arrays, write a function to compute their intersection.
 Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
-Solution class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &#34;&#34;&#34; res = set([]) dict1 = {} for n in nums1: if dict1.</p>
+Solution Use binary search when one of the lists is very long and the other is short
+class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]: if len(nums1) &lt; len(nums2): return self.</p>
 
       <p class="meta">
         
@@ -268,33 +296,6 @@ sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. D
         in
         
           <a  class="meta--cat" href="/categories/programming-language" ><strong>"programming-language"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
-
-      <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
-Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>

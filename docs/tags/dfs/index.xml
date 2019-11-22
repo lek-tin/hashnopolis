@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 02 Oct 2019 23:49:15 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2019 17:43:14 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Path Sum</title>
+      <link>http://www.hashnopolis.com/post/2019/10/path-sum/</link>
+      <pubDate>Sat, 12 Oct 2019 17:43:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/path-sum/</guid>
+      <description>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+Note: A leaf is a node with no children.
+Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1 return true, as there exist a root-to-leaf path 5-&amp;gt;4-&amp;gt;11-&amp;gt;2 which sum is 22.</description>
+    </item>
+    
+    <item>
+      <title>Convert Sorted List to Binary Search Tree</title>
+      <link>http://www.hashnopolis.com/post/2019/10/convert-sorted-list-to-binary-search-tree/</link>
+      <pubDate>Wed, 09 Oct 2019 23:51:44 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/convert-sorted-list-to-binary-search-tree/</guid>
+      <description>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+Example: Given the sorted linked list: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5  Solution python</description>
+    </item>
     
     <item>
       <title>Strobogrammatic Number II</title>
@@ -121,6 +143,17 @@ Input: &amp;quot;()())()&amp;quot; Output: [&amp;quot;()()()&amp;quot;, &amp;quo
 Input: &amp;quot;(a)())()&amp;quot; Output: [&amp;quot;(a)()()&amp;quot;, &amp;quot;(a())()&amp;quot;]  *### Example 3
 Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *### Solution
 # Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] self.</description>
+    </item>
+    
+    <item>
+      <title>Add and Search Word Data Structure Design</title>
+      <link>http://www.hashnopolis.com/post/2018/11/add-and-search-word-data-structure-design/</link>
+      <pubDate>Thu, 08 Nov 2018 22:37:27 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/add-and-search-word-data-structure-design/</guid>
+      <description>Design a data structure that supports the following two operations:
+void addWord(word) bool search(word)  search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.
+Example addWord(&amp;quot;bad&amp;quot;) addWord(&amp;quot;dad&amp;quot;) addWord(&amp;quot;mad&amp;quot;) search(&amp;quot;pad&amp;quot;) -&amp;gt; false search(&amp;quot;bad&amp;quot;) -&amp;gt; true search(&amp;quot;.ad&amp;quot;) -&amp;gt; true search(&amp;quot;b..&amp;quot;) -&amp;gt; true  Note You may assume that all words are consist of lowercase letters a-z.</description>
     </item>
     
     <item>

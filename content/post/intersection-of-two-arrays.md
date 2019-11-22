@@ -2,9 +2,10 @@
 title: "Intersection of Two Arrays"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "array"]
+tags: ["leetcode", "array", "hashset"]
 categories: ["algorithm"]
 date: 2018-11-28T23:56:14-08:00
+lastmod: 2018-11-28T23:56:14-08:00
 draft: false
 archive: false
 ---
@@ -24,29 +25,44 @@ Output: [9,4]
 - Each element in the result must be unique.
 - The result can be in any order.
 ### Solution
+Use binary search when one of the lists is very long and the other is short
 ```python
 class Solution:
-    def intersection(self, nums1, nums2):
-        """
-        :type nums1: List[int]
-        :type nums2: List[int]
-        :rtype: List[int]
-        """
-        res = set([])
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        if len(nums1) < len(nums2):
+            return self.intersection(nums2, nums1)
 
-        dict1 = {}
+        nums1.sort()
+        res = []
 
-        for n in nums1:
-            if dict1.get(n) == None:
-                dict1[n] = True
+        for target in set(nums2):
+            left, right = 0, len(nums1)-1
+            while left <= right:
+                mid = left + (right-left)//2
+                if nums1[mid] == target:
+                    res.append(target)
+                    break
+                elif nums1[mid] < target:
+                    left = mid + 1
+                else:
+                    right = mid - 1
 
-        print(dict1)
+        return res
+```
+Use `hashset`
+```python
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        lookup = {}
+        res = set()
+        for num in nums1:
+            lookup[num] = 1
 
-        for n in nums2:
-            if dict1.get(n):
-                res.add(n)
+        for num in nums2:
+            if num in lookup:
+                res.add(num)
 
-        return list(res)
+        return res
 ```
 ```java
 class Solution {

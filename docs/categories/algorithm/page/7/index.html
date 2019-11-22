@@ -176,63 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/">Longest Substring With at Most Two Distinct Characters</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/copy-list-with-random-pointer/">Copy List With Random Pointer</a></h2>
 
-      <p>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
-Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; which its length is 3.  Example 2: Input: &#34;ccaabbb&#34; Output: 5 Explanation: t is &#34;aabbb&#34; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&lt;Character, Integer&gt; countMap = new HashMap&lt;Character, Integer&gt;(); int left = 0; int max = 0; for (int i = 0; i &lt; s.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/maximum-path-sum/">Maximum Path Sum</a></h2>
-
-      <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note: You can only move either down or right at any point in time.
-Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum.  Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/find-k-closest-elements/">Find K Closest Elements</a></h2>
-
-      <p>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2: Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note:  The value k is positive and will always be smaller than the length of the sorted array.</p>
+      <p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution Solution 1: Insert cloned nodes in between original nodes then connect the cloned nodes
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.</p>
 
       <p class="meta">
         
@@ -255,146 +204,12 @@ Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2: Input: [1,
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/">Longest Substring With at Most K Distinct Characters</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/reverse-nodes-in-k-group/">Reverse Nodes in K Group</a></h2>
 
-      <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1: Input: s = &#34;eceba&#34;, k = 2 Output: 3 Explanation: T is &#34;ece&#34; which its length is 3.  Example 2: Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: T is &#34;aa&#34; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&lt;Character, Integer&gt; countMap = new HashMap&lt;&gt;(); int left = 0; int max = 0; for(int i = 0; i &lt; s.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/peeking-iterator/">Peeking Iterator</a></h2>
-
-      <p>Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation – it essentially peek() at the element that will be returned by the next call to next().
-Example: Assume that the iterator is initialized to the beginning of the list: [1,2,3]. Call next() gets you 1, the first element in the list. Now you call peek() and it returns 2, the next element.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/maximum-frequency-stack/">Maximum Frequency Stack</a></h2>
-
-      <p>Implement FreqStack, a class which simulates the operation of a stack-like data structure.
-FreqStack has two functions:
-1. push(int x), which pushes an integer x onto the stack.
-2. pop(), which removes and returns the most frequent element in the stack.
-3. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.
-Example 1: Input: [&#34;FreqStack&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;pop&#34;,&#34;pop&#34;,&#34;pop&#34;,&#34;pop&#34;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six .</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/snakes-and-ladders/">Snakes and Ladders</a></h2>
-
-      <p>On an N x N board, the numbers from 1 to N*N are written boustrophedonically starting from the bottom left of the board, and alternating direction each row. For example, for a 6 x 6 board, the numbers are written as follows: You start on square 1 of the board (which is always in the last row and first column). Each move, starting from square x, consists of the following:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/find-median-from-data-stream/">Find Median From Data Stream</a></h2>
-
-      <p>Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle value.
-Example [2,3,4], the median is 3
-[2,3], the median is (2 &#43; 3) / 2 = 2.5
-Design a data structure that supports the following two operations:
-1. void addNum(int num) - Add a integer number from the data stream to the data structure.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/design-tic-tac-toe/">Design Tic Tac Toe</a></h2>
-
-      <p>Design a Tic-tac-toe game that is played between two players on a n x n grid.
-You may assume the following rules: 1. A move is guaranteed to be valid and is placed on an empty block. 2. Once a winning condition is reached, no more moves is allowed. 3. A player who succeeds in placing n of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
+      <p>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
+Example Given this linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5
+For k = 2, you should return: 2-&gt;1-&gt;4-&gt;3-&gt;5</p>
 
       <p class="meta">
         
@@ -417,10 +232,10 @@ You may assume the following rules: 1. A move is guaranteed to be valid and is p
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/boundary-of-binary-tree/">Boundary of Binary Tree</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/clone-graph/">Clone Graph</a></h2>
 
-      <p>Given a binary tree, return the values of its boundary in anti-clockwise direction starting from root. Boundary includes left boundary, leaves, and right boundary in order without duplicate nodes.
-Left boundary is defined as the path from root to the left-most node. Right boundary is defined as the path from root to the right-most node. If the root doesn’t have left subtree or right subtree, then the root itself is left boundary or right boundary.</p>
+      <p>Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph. Each node in the graph contains a val (int) and a list (List[Node]) of its neighbors.
+Example: Input: {&#34;$id&#34;:&#34;1&#34;,&#34;neighbors&#34;:[{&#34;$id&#34;:&#34;2&#34;,&#34;neighbors&#34;:[{&#34;$ref&#34;:&#34;1&#34;},{&#34;$id&#34;:&#34;3&#34;,&#34;neighbors&#34;:[{&#34;$ref&#34;:&#34;2&#34;},{&#34;$id&#34;:&#34;4&#34;,&#34;neighbors&#34;:[{&#34;$ref&#34;:&#34;3&#34;},{&#34;$ref&#34;:&#34;1&#34;}],&#34;val&#34;:4}],&#34;val&#34;:3}],&#34;val&#34;:2},{&#34;$ref&#34;:&#34;4&#34;}],&#34;val&#34;:1} Explanation: Node 1&#39;s value is 1, and it has two neighbors: Node 2 and 4. Node 2&#39;s value is 2, and it has two neighbors: Node 1 and 3. Node 3&#39;s value is 3, and it has two neighbors: Node 2 and 4.</p>
 
       <p class="meta">
         
@@ -433,6 +248,194 @@ Left boundary is defined as the path from root to the left-most node. Right boun
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/reverse-linked-list/">Reverse Linked List</a></h2>
+
+      <p>Reverse a singly linked list.
+Example: Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; NULL // prev cur after while (cur !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/palindrome-partitioning/">Palindrome Partitioning</a></h2>
+
+      <p>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return all possible palindrome partitioning of s.
+Example Input: &#34;aab&#34; Output: [ [&#34;aa&#34;,&#34;b&#34;], [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;] ]  Solution # Time: O(n*2^n) # Space: O(n). At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&gt;&#39;b&#39;-&gt;&#39;aa&#39;-&gt;&#39;e&#39;-&gt;&#39;q&#39;-&gt;&#39;w&#39;-&gt;&#39;d&#39;-&gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/combination-sum-ii/">Combination Sum Ii</a></h2>
+
+      <p>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+Each number in candidates may only be used once in the combination.
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ]  ###Example 2:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/07/generate-parentheses/">Generate Parentheses</a></h2>
+
+      <p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+For example, given n = 3, a solution set is:
+[ &#34;((()))&#34;, &#34;(()())&#34;, &#34;(())()&#34;, &#34;()(())&#34;, &#34;()()()&#34; ]  Solution class Solution: def generateParenthesis(self, n: int) -&gt; List[str]: &#34;&#34;&#34; :type n: int :rtype: List[str] &#34;&#34;&#34; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/coin-change-2/">Coin Change 2</a></h2>
+
+      <p>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2&#43;2&#43;1 5=2&#43;1&#43;1&#43;1 5=1&#43;1&#43;1&#43;1&#43;1  Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/">Search a 2d Matrix Ii</a></h2>
+
+      <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+- Integers in each row are sorted in ascending from left to right. - Integers in each column are sorted in ascending from top to bottom.
+Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ]  Given target = 5, return true.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/max-stack/">Max Stack</a></h2>
+
+      <p>Design a max stack that supports push, pop, top, peekMax and popMax.
+1. push(x) – Push element x onto stack. 2. pop() – Remove the element on top of the stack and return it. 3. top() – Get the element on the top. 4. peekMax() – Retrieve the maximum element in the stack. 5. popMax() – Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

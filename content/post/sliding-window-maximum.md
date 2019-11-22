@@ -74,6 +74,7 @@ class Solution:
             return list([])
 
         maxArr = []
+        # indexWindow is used to store indices, not the actual values. We can detect distance with lastIndex - firstIndex.
         indexWindow = deque([])
         for i in range(len(nums)):
             curr = nums[i]

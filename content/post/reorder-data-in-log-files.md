@@ -1,11 +1,11 @@
 ---
-title: "Reorder Log Files"
+title: "Reorder Data in Log Files"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "sort", "comparator"]
 categories: ["algorithm"]
-date: 2019-03-08T23:56:44-08:00
-draft: true
+date: 2019-11-08T23:56:44-08:00
+draft: false
 archive: false
 ---
 You have an array of `logs`.  Each log is a space delimited string of words.
@@ -34,6 +34,7 @@ Output: ["g1 act car","a8 act zoo","ab1 off key dog","a1 9 2 3 1","zo4 4 7"]
 3. `logs[i]` is guaranteed to have an identifier, and a word after the identifier.
 
 ### Solution:
+Java comparator
 ```java
 class Solution {
 
@@ -52,7 +53,7 @@ class Solution {
             if (!isDigit(char_a) && isDigit(char_b)) {
                 return -1;
             }
-            // char should be brought foward, return positive value;
+            // char should be brought forward, return positive value;
             if (isDigit(char_a) && !isDigit(char_b)) {
                 return 1;
             }
@@ -73,4 +74,19 @@ class Solution {
         return logs;
     }
 }
+```
+Python:
+```python
+class Solution(object):
+    def reorderLogFiles(self, logs):
+        """
+        :type logs: List[str]
+        :rtype: List[str]
+        """
+        def f(log):
+            i, content = log.split(" ", 1)
+            return (0, content, i) if content[0].isalpha() else (1,)
+
+        logs.sort(key=f)
+        return logs
 ```

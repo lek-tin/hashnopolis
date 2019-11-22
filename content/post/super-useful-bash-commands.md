@@ -29,10 +29,11 @@ ls -al
 ls -R ~/Documents
 ```
 
-5. Find process which is listening to port 3000, and kill that process
+5. Find process which is listening to port 3000, and kill that process or process group
 ```bash
-sudo lsof -i :3000 
+sudo lsof -i :3000
 kill -9 <PID>
+kill -9 -<PID>
 ```
 
 6. [Dangerous] Recursively delete **EVERYTHING** files
@@ -181,4 +182,11 @@ ls /Users/`echo $USER`
 26. To check whether a program is running
 ```bash
 ps -ef | grep tomcat
+```
+
+27. check user manual for a command. `man` command in Linux is used to display the user manual of any command that we can run on the terminal. It provides a detailed view of the command which includes
+
+28. Search for occurrences of a target value against all files in a directory
+```bash
+find . -name '*.js' -exec grep -i 'string to search for' {} \; -print
 ```

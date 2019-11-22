@@ -176,11 +176,65 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/simplify-path/">Simplify Path</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/course-schedule/">Course Schedule</a></h2>
 
-      <p>Given an absolute path for a file (Unix-style), simplify it.
-For example, path = &#34;/home/&#34;, =&gt; &#34;/home&#34; path = &#34;/a/./b/../../c/&#34;, =&gt; &#34;/c&#34; path = &#34;/a/../../b/../c//.//&#34;, =&gt; &#34;/c&#34; path = &#34;/a//b////c/d//././/..&#34;, =&gt; &#34;/a/b/c&#34;
-In a UNIX-style file system, a period (‘.’) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (“..”) moves up a directory, so it cancels out whatever the last directory was.</p>
+      <p>There are a total of n courses you have to take, labeled from 0 to n-1.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+Example 1 Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 courses to take.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/alien-dictionary/">Alien Dictionary</a></h2>
+
+      <p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
+Example 1 Input: [ &#34;wrt&#34;, &#34;wrf&#34;, &#34;er&#34;, &#34;ett&#34;, &#34;rftt&#34; ] Output: &#34;wertf&#34;  Example 2 Input: [ &#34;z&#34;, &#34;x&#34; ] Output: &#34;zx&#34;  Example 3 Input: [ &#34;z&#34;, &#34;x&#34;, &#34;z&#34; ] Output: &#34;&#34;  Explanation The order is invalid, so return “”.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/random-pick-index/">Random Pick Index</a></h2>
+
+      <p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.
+Note The array size can be very large. Solution that uses too much extra space will not pass the judge.
+Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</p>
 
       <p class="meta">
         
@@ -203,174 +257,12 @@ In a UNIX-style file system, a period (‘.’) refers to the current directory,
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/sqrtx/">Sqrtx</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/">Intersection of Two Arrays</a></h2>
 
-      <p>Implement int sqrt(int x).
-Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
-Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
-Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/sort-colors/">Sort Colors</a></h2>
-
-      <p>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
-Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
-Note You are not suppose to use the library’s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/missing-words/">Missing Words</a></h2>
-
-      <p>Julia and Samantha are playing with strings. Julia has a string S, and Samantha has a string T which is a subsequence of string S. They are trying to find out what words are missing in T. Help Julia and Samantha to solve the problem. List all the missing words in T, such that inserting them at the appropriate positions in T, in the same order, results in the string S.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/product-of-array-except-self/">Product of Array Except Self</a></h2>
-
-      <p>Given an array of n integers where n &gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
-Solve it without division and in O(n).
-For example, given [1,2,3,4], return [24,12,8,6].
-Follow-up Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/move-zeroes/">Move Zeroes</a></h2>
-
-      <p>Given an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements.
-For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
-Note: You must do this in-place without making a copy of the array. Minimize the total number of operations.
-Credit Special thanks to @jianchao.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/count-and-say/">Count and Say</a></h2>
-
-      <p>The count-and-say sequence is the sequence of integers with the first five terms as following:
- 1 11 21 1211 111221 1 is read off as &#34;one 1&#34; or 11. 11 is read off as &#34;two 1s&#34; or 21. 21 is read off as &#34;one 2, then one 1&#34; or 1211.  Given an integer n where 1 ≤ n ≤ 30, generate the nth term of the count-and-say sequence.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/implement-strstr/">Implement Strstr</a></h2>
-
-      <p>Implement strstr().
-Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
-Example 1 Input: haystack = &#34;hello&#34;, needle = &#34;ll&#34; Output: 2  Example 2 Input: haystack = &#34;aaaaa&#34;, needle = &#34;bba&#34; Output: -1  Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
-For the purpose of this problem, we will return 0 when needle is an empty string.</p>
+      <p>Given two arrays, write a function to compute their intersection.
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
+Solution Use binary search when one of the lists is very long and the other is short
+class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]: if len(nums1) &lt; len(nums2): return self.</p>
 
       <p class="meta">
         
@@ -393,12 +285,12 @@ For the purpose of this problem, we will return 0 when needle is an empty string
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/valid-parentheses/">Valid Parentheses</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/">Read N Characters Given Read4</a></h2>
 
-      <p>Given a string containing just the characters ‘(’, ‘)’, ‘{’, ‘}’, ‘[’ and ‘]’, determine if the input string is valid.
-An input string is valid if:
-Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
-Example 1: Input: &#34;()&#34; Output: true  Example 2: Input: &#34;()[]{}&#34; Output: true  Example 3: Input: &#34;(]&#34; Output: false  Example 4: Input: &#34;([)]&#34; Output: false  Example 5: Input: &#34;{[]}&#34; Output: true  Solution: class Solution { public boolean isValid(String s) { HashMap&lt;Character, Character&gt; charMap = new HashMap&lt;&gt;(); charMap.</p>
+      <p>The API: int read4(char *buf) reads 4 characters at a time from a file.
+The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
+By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
+Example 1 Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: The actual number of characters read is 3, which is &#34;abc&#34;.</p>
 
       <p class="meta">
         
@@ -410,7 +302,7 @@ Example 1: Input: &#34;()&#34; Output: true  Example 2: Input: &#34;()[]{}&#34; 
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
@@ -421,16 +313,119 @@ Example 1: Input: &#34;()&#34; Output: true  Example 2: Input: &#34;()[]{}&#34; 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/maximal-square/">Maximal Square</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/find-the-celebrity/">Find the Celebrity</a></h2>
 
-      <p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest square containing only 1’s and return its area.
-Example Input:
-1 0 1 0 0
-1 0 1 1 1
-1 1 1 1 1
-1 0 0 1 0
-Output: 4
-Solution class Solution: def maximalSquare(self, matrix): &#34;&#34;&#34; :type matrix: List[List[str]] :rtype: int &#34;&#34;&#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &#34;1&#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &#34;1&#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &#34;0&#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin &#43; 1 if matrix[i][j] &gt; area: area = matrix[i][j] return area**2  class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</p>
+      <p>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
+Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: “Hi, A.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/">Flatten Nested List Iterator</a></h2>
+
+      <p>Given a nested list of integers, implement an iterator to flatten it.
+Each element is either an integer, or a list – whose elements may also be integers or other lists.
+Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/">Serialize and Deserialize Binary Tree</a></h2>
+
+      <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/">Remove Invalid Parentheses</a></h2>
+
+      <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+Note The input string may contain letters other than the parentheses ( and ). *### Example 1
+Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;]  *### Example 2
+Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;]  *### Example 3
+Input: &#34;)(&#34; Output: [&#34;&#34;]  *### Solution
+# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &#34;&#34;&#34; :type s: str :rtype: List[str] &#34;&#34;&#34; res = [] self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/encode-and-decode-tinyurl/">Encode and Decode Tinyurl</a></h2>
+
+      <p>Note This is a companion problem to the System Design problem: Design TinyURL. TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk.
+Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</p>
 
       <p class="meta">
         

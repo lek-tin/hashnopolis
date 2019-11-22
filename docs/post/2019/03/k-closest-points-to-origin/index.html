@@ -315,6 +315,31 @@ Average time complexity: O(n) if we don’t need the sorted output, otherwise O(
         return p1[0]*p1[0] + p1[1]*p1[1] - p2[0]*p2[0] - p2[1]*p2[1]
 </code></pre>
 
+<p>Python:</p>
+
+<pre><code class="language-python"># time: O(nlogk)
+# space: O(k)
+
+import heapq
+class Solution:
+    def dist(self, point):
+        return point[0]*point[0] + point[1]*point[1]
+
+    def kClosest(self, points: List[List[int]], k: int) -&gt; List[List[int]]:
+        q = []
+
+        for i in range(len(points)):
+            heapq.heappush(q, (-self.dist(points[i]), points[i]) )
+            if i &gt;= k:
+                heapq.heappop(q)
+
+        res = []
+        for p in q:
+            res.append(p[1])
+
+        return res
+</code></pre>
+
   </div>
 
   <div id="disqus_thread"></div>

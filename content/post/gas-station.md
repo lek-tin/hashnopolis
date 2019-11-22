@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "greedy-algorithm"]
 categories: ["algorithm"]
 date: 2019-02-28T23:51:02-08:00
+lastmod: 2019-10-11T13:51:02-08:00
 draft: false
 archive: false
 ---
@@ -54,6 +55,7 @@ Therefore, you can't travel around the circuit once no matter where you start.
 ```
 
 ### Solution:
+Java
 ```java
 class Solution {
     public int canCompleteCircuit(int[] gas, int[] cost) {
@@ -68,7 +70,23 @@ class Solution {
             }
         }
 
-        return tank + short >= 0 ? start : -1;
+        return tank + short >= 0 ? start % gas.length : -1;
     }
 }
+```
+Python:
+```python
+class Solution:
+    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+        start, short, tank = 0, 0, 0
+        n = len(gas)
+
+        for i in range(n):
+            tank += gas[i] - cost[i]
+            if tank < 0:
+                short += tank
+                start = i + 1
+                tank = 0
+
+        return start%n if tank+short>=0 else -1
 ```

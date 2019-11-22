@@ -176,12 +176,13 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/valid-triangle-number/">Valid Triangle Number</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower/">Guess Number Higher or Lower</a></h2>
 
-      <p>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
-Example 1: Input: [2,2,3,4] Output: 3  Explanation: Valid combinations are:
-2,3,4 (using the first 2) 2,3,4 (using the second 2) 2,2,3
-Note:  The length of the given array won’t exceed 1000. The integers in the given array are in the range of [0, 1000].</p>
+      <p>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I’ll tell you whether the number is higher or lower.
+You call a pre-defined API guess(int num) which returns 3 possible results (-1, 1, or 0):
+-1 : My number is lower 1 : My number is higher 0 : Congrats!</p>
 
       <p class="meta">
         
@@ -204,13 +205,37 @@ Note:  The length of the given array won’t exceed 1000. The integers in the gi
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-inorder-and-postorder-traversal/">Construct Binary Tree From Inorder and Postorder Traversal</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/find-anagram-mappings/">Find Anagram Mappings</a></h2>
 
-      <p>Given inorder and postorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
-For example, given
-inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</p>
+      <p>Given two lists A and B, and B is an anagram of A. B is an anagram of A means B is made by randomizing the order of the elements in A.
+We want to find an index mapping P, from A to B. A mapping P[i] = j means the ith element in A appears in B at index j.
+These lists A and B may contain duplicates. If there are multiple answers, output any of them.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/pancake-sorting/">Pancake Sorting</a></h2>
+
+      <p>Given an array A, we can perform a pancake flip: We choose some positive integer k &lt;= A.length, then reverse the order of the first k elements of A. We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array A.
+Return the k-values corresponding to a sequence of pancake flips that sortA. Any valid answer that sorts the array within 10 * A.</p>
 
       <p class="meta">
         
@@ -233,13 +258,146 @@ inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary t
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-preorder-and-inorder-traversal/">Construct Binary Tree From Preorder and Inorder Traversal</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/super-ugly-number/">Super Ugly Number</a></h2>
 
-      <p>Given preorder and inorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
-For example, given:
-preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</p>
+      <p>Write a program to find the nth super ugly number.
+Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
+Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4.  Note:  1 is a super ugly number for any given primes.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/perfect-squares/">Perfect Squares</a></h2>
+
+      <p> Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 &#43; 4 &#43; 4.  Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 &#43; 9.  Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n&#43;1)] for i in range(1, n&#43;1): for j in range(1, n&#43;1): if j*j &gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]&#43;1) return count[n]  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/ugly-number-ii/">Ugly Number II</a></h2>
+
+      <p>Write a program to find the n-th ugly number.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
+Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.  Note:  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&gt; int: if n &lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
+
+      <p> Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+Your algorithm should run in O(n) complexity.
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution: def longestConsecutive(self, nums: List[int]) -&gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/">Subarray Product Less Than K</a></h2>
+
+      <p>Your are given an array of positive integers nums.
+Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than k.
+Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]. Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/russian-doll-envelopes/">Russian Doll Envelopes</a></h2>
+
+      <p>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
+What is the maximum number of envelopes can you Russian doll? (put one inside other)
+Note: Rotation is not allowed.
+Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&gt; [5,4] =&gt; [6,7]).</p>
 
       <p class="meta">
         
@@ -262,38 +420,10 @@ preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tr
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/palindrome-linked-list/">Palindrome Linked List</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/minimum-size-subarray-sum/">Minimum Size Subarray Sum</a></h2>
 
-      <p>Given a singly linked list, determine if it is a palindrome.
-Example 1: Input: 1-&gt;2 Output: false  Example 2: Input: 1-&gt;2-&gt;2-&gt;1 Output: true  Follow up: Could you do it in O(n) time and O(1) space?
-Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&gt; bool: if not head: return True middle = self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/3sum-with-multiplicity/">3sum With Multiplicity</a></h2>
-
-      <p>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &lt; j &lt; k and A[i] &#43; A[j] &#43; A[k] == target.
-As the answer can be very large, return it modulo 10^9 &#43; 7.
-Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</p>
+      <p>Given an array of n positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum ≥ s. If there isn’t one, return 0 instead.
+Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray [4,3] has the minimal length under the problem constraint. Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).</p>
 
       <p class="meta">
         
@@ -304,137 +434,6 @@ Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation:
         in
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/3sum-smaller/">3sum Smaller</a></h2>
-
-      <p>Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &lt;= i &lt; j &lt; k &lt; n that satisfy the condition nums[i] &#43; nums[j] &#43; nums[k] &lt; target.
-Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3]  Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&gt; int: res = 0 if not nums: return res nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-less-than-k/">Two Sum Less Than K</a></h2>
-
-      <p>Given an array A of integers and integer K, return the maximum S such that there exists i &lt; j with A[i] &#43; A[j] = S and S &lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60.  Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/inorder-successor-in-bst/">Inorder Successor in BST</a></h2>
-
-      <p>Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
-The successor of a node p is the node with the smallest key greater than p.val.
-Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type.  Example 2: Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></h2>
-
-      <p>Given a binary tree, return the inorder traversal of its nodes’ values.
-Example: Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Follow-up the Recursive solution is trivial, could you do it iteratively?
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; &#34;&#34;&#34;Check root == None to reduce time on checking&#34;&#34;&#34; if root == None: return [] stack = [] result = [] current = root while (current!</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/python-modules/">Python Modules</a></h2>
-
-      <p>https://www.tutorialsteacher.com/python/python-module-attributes</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/python" ><strong>"python"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>

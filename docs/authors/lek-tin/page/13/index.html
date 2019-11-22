@@ -176,37 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/12/alien-dictionary/">Alien Dictionary</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/count-number-of-substrings-with-k-distinct-characters/">Count Number of Substrings With K Distinct Characters</a></h2>
 
-      <p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1 Input: [ &#34;wrt&#34;, &#34;wrf&#34;, &#34;er&#34;, &#34;ett&#34;, &#34;rftt&#34; ] Output: &#34;wertf&#34;  Example 2 Input: [ &#34;z&#34;, &#34;x&#34; ] Output: &#34;zx&#34;  Example 3 Input: [ &#34;z&#34;, &#34;x&#34;, &#34;z&#34; ] Output: &#34;&#34;  Explanation The order is invalid, so return “”.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/12/random-pick-index/">Random Pick Index</a></h2>
-
-      <p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.
-Note The array size can be very large. Solution that uses too much extra space will not pass the judge.
-Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</p>
+      <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1 Input: s = &#34;eceba&#34;, k = 2 Output: 5 Explanation: &#34;ec&#34;, &#34;ce&#34;, &#34;eb&#34;, &#34;ba&#34; and &#34;ece&#34; k distinct characters.  Example 2 Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: &#34;a&#34; and &#34;aa&#34; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str.</p>
 
       <p class="meta">
         
@@ -229,11 +202,11 @@ Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(num
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/">Intersection of Two Arrays</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/trapping-rain-water/">Trapping Rain Water</a></h2>
 
-      <p>Given two arrays, write a function to compute their intersection.
-Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
-Solution class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :type nums1: List[int] :type nums2: List[int] :rtype: List[int] &#34;&#34;&#34; res = set([]) dict1 = {} for n in nums1: if dict1.</p>
+      <p>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
+Example: Input: [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6  Solution: class Solution { public int trap(int[] height) { int n = height.</p>
 
       <p class="meta">
         
@@ -244,33 +217,6 @@ Solution class Solution: def intersection(self, nums1, nums2): &#34;&#34;&#34; :
         in
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/install-java-on-linux/">Install Java on Linux</a></h2>
-
-      <p>Install manually Step 1: Download the source package from the oracle repository. If your computer is 64-bit, download the x64 version; if it is 32-bit, download the x86 version.
-Step 2: Extract from the compressed file and move the package folder to /usr/java. rememeber to run these commands as sudo is not the root user.
-mv downloads-folder/jdk-&lt;version&gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk-&lt;version&gt;-linux-xxx.tar.gz rm jdk-&lt;version&gt;-linux-xxx.tar.gz  Step 3: Add the java path to the ~/.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/linux" ><strong>"linux"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -283,12 +229,10 @@ mv downloads-folder/jdk-&lt;version&gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/">Read N Characters Given Read4</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/container-with-most-water/">Container With Most Water</a></h2>
 
-      <p>The API: int read4(char *buf) reads 4 characters at a time from a file.
-The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
-Example 1 Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: The actual number of characters read is 3, which is &#34;abc&#34;.</p>
+      <p>Given n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+Note: You may not slant the container and n is at least 2. The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7].</p>
 
       <p class="meta">
         
@@ -299,32 +243,6 @@ Example 1 Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: T
         in
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/cpp-data-types/">CPP Data Types</a></h2>
-
-      <p>https://stackoverflow.com/questions/2550345/whats-the-difference-between-unsigned-long-long-int-in-c-c
-   Type Typical Bit Width Typical Range     char 1byte -127 to 127 or 0 to 255   unsigned char 1byte 0 to 255   signed char 1byte -127 to 127   int 4bytes -2147483648 to 2147483647   unsigned int 4bytes 0 to 4294967295   signed int 4bytes -2147483648 to 2147483647   short int 2bytes -32768 to 32767   unsigned short int Range 0 to 65,535   signed short int Range -32768 to 32767   long int 4bytes -2,147,483,648 to 2,147,483,647   signed long int 4bytes same as long int   unsigned long int 4bytes 0 to 4,294,967,295   float 4bytes &#43;/- 3.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/data-types" ><strong>"data-types"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -337,10 +255,39 @@ Example 1 Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: T
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/find-the-celebrity/">Find the Celebrity</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/binary-tree-zigzag-level-order-traversal/">Binary Tree Zigzag Level Order Traversal</a></h2>
 
-      <p>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
-Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: “Hi, A.</p>
+      <p>Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).
+Example Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7  return its zigzag level order traversal as:
+[ [3], [20,9], [15,7] ]  Solution: # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/string-to-integer-atoi/">String to Integer Atoi</a></h2>
+
+      <p>Implement atoi which converts a string to an integer.
+The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
+The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.</p>
 
       <p class="meta">
         
@@ -363,12 +310,12 @@ Now you want to find out who the celebrity is or verify that there is not one. T
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/binary-numbers/">Binary Numbers</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-common-prefix/">Longest Common Prefix</a></h2>
 
-      <p>For a 8-bit number, there are two ways to represent number:
-unsigned values 0 to 255
-signed values range from -128 (-2^8 = 10000000) to 127 (2^8 - 1)
-signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00000000 signed 127 = 01111111 signed 127 &#43; (-127) = 10000001 &#43; 01111111 = 0  If a number is assigned with value that is too big for it to hold, overflowing would happen, 2^32 = 4,294,967,296 is the largest unsigned 32 bit value.</p>
+      <p>Write a function to find the longest common prefix string amongst an array of strings.
+If there is no common prefix, return an empty string “”.
+Example 1 Input: [&#34;flower&#34;,&#34;flow&#34;,&#34;flight&#34;] Output: &#34;fl&#34;  Example 2 Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explanation: There is no common prefix among the input strings.  Note All given inputs are in lowercase letters a-z.
+Note # Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: str &#34;&#34;&#34; if not strs or len(strs) == 0: return &#34;&#34; res = strs[0] for s in strs: # string.</p>
 
       <p class="meta">
         
@@ -378,7 +325,7 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
         
         in
         
-          <a  class="meta--cat" href="/categories/computing" ><strong>"computing"</strong></a>
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -391,9 +338,11 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/arrays-in-python/">Arrays in Python</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/">Longest Palindromic Substring</a></h2>
 
-      <p>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1]  Clone a list newArr = oldArr[:]</p>
+      <p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+Example 1 Input: &#34;babad&#34; Output: &#34;bab&#34; Note: &#34;aba&#34; is also a valid answer.  Example 2 Input: &#34;cbbd&#34; Output: &#34;bb&#34;  Solution Dynamic Programming
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &#34;&#34;&#34; :type s: str :rtype: str &#34;&#34;&#34; str_len = len(s) if str_len == 0: return &#34;&#34; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len]  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</p>
 
       <p class="meta">
         
@@ -403,7 +352,34 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
         
         in
         
-          <a  class="meta--cat" href="/categories/programming-language" ><strong>"programming-language"</strong></a>
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/add-two-numbers/">Add Two Numbers</a></h2>
+
+      <p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+Example Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 Explanation: 342 &#43; 465 = 807.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -416,11 +392,40 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/">Flatten Nested List Iterator</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/nvidia-cuda-architecture/">Nvidia Cuda Architecture</a></h2>
 
-      <p>Given a nested list of integers, implement an iterator to flatten it.
-Each element is either an integer, or a list – whose elements may also be integers or other lists.
-Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
+      <p>Fundamental concepts/components in the CUDA architecture:  thread:
+ core/kernel:
+ Block: a collection of parallel threads.
+ Grid: a collection of parallel thread blocks.
+ warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as “warps” in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/computer-architecture" ><strong>"computer-architecture"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/edit-distance/">Edit Distance</a></h2>
+
+      <p>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
+Example 1: Input: word1 = &#34;horse&#34;, word2 = &#34;ros&#34; Output: 3 Explanation: horse -&gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&gt; rose (remove &#39;r&#39;) rose -&gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &#34;intention&#34;, word2 = &#34;execution&#34; Output: 5 Explanation: intention -&gt; inention (remove &#39;t&#39;) inention -&gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</p>
 
       <p class="meta">
         

@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "linked-list", "slow-fast-pointers", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-10-21T23:08:30-07:00
+lastmod: 2019-11-03T23:08:30-07:00
 draft: false
 archive: false
 ---
@@ -15,6 +16,9 @@ Do not modify the linked list.
 
 ## Follow up:
 Can you solve it without using extra space?
+
+**Observation:**
+![Linked List Cycle II](/img/post/linked-list-cycle-ii.jpg)
 
 ## Solution:
 ```java

@@ -2,9 +2,10 @@
 title: "Intersection of Two Arrays II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "hashmap"]
+tags: ["leetcode", "hashset"]
 categories: ["algorithm"]
 date: 2019-02-18T23:55:24-08:00
+lastmod: 2019-02-18T23:55:24-08:00
 draft: false
 archive: false
 ---
@@ -28,6 +29,7 @@ The result can be in any order.
 2. What if nums1's size is small compared to nums2's size? Which algorithm is better?
 3. What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 ### Solution:
+Java
 ```java
 // Time: O(m+n)
 class Solution {
@@ -77,4 +79,20 @@ class Solution {
         return res;
     }
 }
+```
+Python
+```python
+from collections import Counter
+
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        counter = Counter(nums1)
+
+        res = []
+        for num in nums2:
+            if counter[num] > 0:
+                res.append(num)
+                counter[num] -= 1
+
+        return res
 ```
