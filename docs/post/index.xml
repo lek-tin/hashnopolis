@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 20 Nov 2019 23:55:40 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 Nov 2019 22:24:06 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Longest Substring Without Repeating Characters</title>
+      <link>http://www.hashnopolis.com/post/2019/11/longest-substring-without-repeating-characters/</link>
+      <pubDate>Thu, 21 Nov 2019 22:24:06 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/11/longest-substring-without-repeating-characters/</guid>
+      <description>Given a string, find the length of the longest substring without repeating characters.
+*### Example 1
+Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  *### Example 2
+Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  *### Example 3
+Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3. Note that the answer must be a substring, &amp;quot;pwke&amp;quot; is a subsequence and not a substring.</description>
+    </item>
     
     <item>
       <title>Min Cost Climbing Stairs</title>
@@ -1370,19 +1383,6 @@ Note # Time: O(n*l), l: number of strings class Solution(object): def longestCom
       <description>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution Dynamic Programming
 # https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start + max_len]  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</description>
-    </item>
-    
-    <item>
-      <title>Longest Substring Without Repeating Characters</title>
-      <link>http://www.hashnopolis.com/post/2019/01/longest-substring-without-repeating-characters/</link>
-      <pubDate>Tue, 22 Jan 2019 22:24:06 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/01/longest-substring-without-repeating-characters/</guid>
-      <description>Given a string, find the length of the longest substring without repeating characters.
-*### Example 1
-Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  *### Example 2
-Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  *### Example 3
-Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3. Note that the answer must be a substring, &amp;quot;pwke&amp;quot; is a subsequence and not a substring.</description>
     </item>
     
     <item>
