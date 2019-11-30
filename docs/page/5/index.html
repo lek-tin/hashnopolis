@@ -196,6 +196,32 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/minimum-size-subarray-sum/">Minimum Size Subarray Sum</a></h2>
+
+      <p>Given an array of n positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum ≥ s. If there isn’t one, return 0 instead.
+Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray [4,3] has the minimal length under the problem constraint. Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/">Maximum Product Subarray</a></h2>
 
       <p> Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
@@ -391,35 +417,6 @@ Note: You may assume that duplicates do not exist in the tree.
 For example, given
 inorder = [9,3,15,20,7] postorder = [9,15,7,20,3]  Return the following binary tree:
  3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-preorder-and-inorder-traversal/">Construct Binary Tree From Preorder and Inorder Traversal</a></h2>
-
-      <p>Given preorder and inorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
-For example, given:
-preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</p>
 
       <p class="meta">
         

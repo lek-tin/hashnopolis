@@ -176,6 +176,31 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/">LRU Cache Miss Count</a></h2>
+
+      <p> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&lt;Integer&gt; cache = new LinkedList&lt;&gt;(); int count = 0; for (int i = 0; i &lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/03/insert-into-a-cyclic-sorted-list/">Insert Into a Cyclic Sorted List</a></h2>
 
       <p>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
@@ -391,32 +416,6 @@ Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2: Input: [1,
 
       <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.
 Example 1: Input: s = &#34;eceba&#34;, k = 2 Output: 3 Explanation: T is &#34;ece&#34; which its length is 3.  Example 2: Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: T is &#34;aa&#34; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&lt;Character, Integer&gt; countMap = new HashMap&lt;&gt;(); int left = 0; int max = 0; for(int i = 0; i &lt; s.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/peeking-iterator/">Peeking Iterator</a></h2>
-
-      <p>Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation – it essentially peek() at the element that will be returned by the next call to next().
-Example: Assume that the iterator is initialized to the beginning of the list: [1,2,3]. Call next() gets you 1, the first element in the list. Now you call peek() and it returns 2, the next element.</p>
 
       <p class="meta">
         

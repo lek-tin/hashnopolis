@@ -176,6 +176,34 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/">Top Useful Sql Templates</a></h2>
+
+      <p>In this post, we introduce the most useful SQL template statements.
+Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &gt; 1)  This is significantly more efficient than using EXISTS
+Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&gt;18).
+Select duplicate rows based on column SELECT TOP 1 C1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/06/machine-learning-questions/">Machine Learning Questions</a></h2>
 
       <p>What is an Eigenvalue and Eigenvector? Eigenvectors are used for understanding linear transformations. In data analysis, we usually calculate the eigenvectors for a correlation or covariance matrix. Eigenvectors are the directions along which a particular linear transformation acts by flipping, compressing or stretching. Eigenvalue can be referred to as the strength of the transformation in the direction of eigenvector or the factor by which the compression occurs.
@@ -402,31 +430,6 @@ List&lt;Integer&gt; list = new List&lt;&gt;(); // Remove the element at index 4 
         in
         
           <a  class="meta--cat" href="/categories/java" ><strong>"java"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/">LRU Cache Miss Count</a></h2>
-
-      <p> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&lt;Integer&gt; cache = new LinkedList&lt;&gt;(); int count = 0; for (int i = 0; i &lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>

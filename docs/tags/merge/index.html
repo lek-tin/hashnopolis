@@ -231,7 +231,13 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
       <h2><a href="http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/">23. Merge k Sorted Lists</a></h2>
 
       <p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example: Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6  Solution: # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&gt; merge(l3, l4) = m ---&gt;--&gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &#34;&#34;&#34; :type lists: List[ListNode] :rtype: ListNode &#34;&#34;&#34; if list is None or len(lists) == 0: return [] return self.</p>
+Example: Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6  Solution: Idea #1 - Brute force with sorting first:
+Time complexity : O(NlogN)
+Space complexity : O(N)
+Idea #2 - Compare head nodes one by one:
+Time complexity : O(kN)
+Space complexity : O(N)
+Idea #3 - Merge lists one by one:</p>
 
       <p class="meta">
         
@@ -243,7 +249,7 @@ Example: Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 

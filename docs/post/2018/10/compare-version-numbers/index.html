@@ -226,6 +226,9 @@ Output: -1
         :type version2: str
         :rtype: int
         &quot;&quot;&quot;
+        if version1 == version2:
+            return 0
+
         arr1 = version1.split(&quot;.&quot;)
         arr2 = version2.split(&quot;.&quot;)
         res = 0

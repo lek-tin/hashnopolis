@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 21 Nov 2019 22:24:06 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Nov 2019 23:12:48 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Best Time to Buy and Sell Stock III</title>
+      <link>http://www.hashnopolis.com/post/2019/11/best-time-to-buy-and-sell-stock-iii/</link>
+      <pubDate>Fri, 29 Nov 2019 23:12:48 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/11/best-time-to-buy-and-sell-stock-iii/</guid>
+      <description>Say you have an array for which the ith element is the price of a given stock on day i.
+Design an algorithm to find the maximum profit. You may complete at most two transactions.
+Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
+Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</description>
+    </item>
     
     <item>
       <title>Longest Substring Without Repeating Characters</title>
@@ -1464,6 +1476,17 @@ class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp
     </item>
     
     <item>
+      <title>Word Break II</title>
+      <link>http://www.hashnopolis.com/post/2018/11/word-break-ii/</link>
+      <pubDate>Thu, 29 Nov 2018 00:00:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/word-break-ii/</guid>
+      <description>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.
+Example 1 Input: s = &amp;quot;catsanddog&amp;quot; wordDict = [&amp;quot;cat&amp;quot;, &amp;quot;cats&amp;quot;, &amp;quot;and&amp;quot;, &amp;quot;sand&amp;quot;, &amp;quot;dog&amp;quot;] Output: [ &amp;quot;cats and dog&amp;quot;, &amp;quot;cat sand dog&amp;quot; ]  Example 2 Input: s = &amp;quot;pineapplepenapple&amp;quot; wordDict = [&amp;quot;apple&amp;quot;, &amp;quot;pen&amp;quot;, &amp;quot;applepen&amp;quot;, &amp;quot;pine&amp;quot;, &amp;quot;pineapple&amp;quot;] Output: [ &amp;quot;pine apple pen apple&amp;quot;, &amp;quot;pineapple pen apple&amp;quot;, &amp;quot;pine applepen apple&amp;quot; ] Explanation: Note that you are allowed to reuse a dictionary word.</description>
+    </item>
+    
+    <item>
       <title>Read N Characters Given Read4</title>
       <link>http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/</link>
       <pubDate>Mon, 19 Nov 2018 23:52:19 -0800</pubDate>
@@ -2550,7 +2573,7 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
     </item>
     
     <item>
-      <title>Best Time to Buy and Sell Stock Ii</title>
+      <title>Best Time to Buy and Sell Stock II</title>
       <link>http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/</link>
       <pubDate>Thu, 06 Sep 2018 23:39:13 +0800</pubDate>
       
@@ -2613,7 +2636,13 @@ Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-
       
       <guid>http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/</guid>
       <description>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example: Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution: # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None # time: o(nlogK), where k is the number of linked lists # space: o(n) # l1: xxxxx # l2: xxxxx ------&amp;gt; merge(l1, l2) = n ---↓ # l3: xxxxx ↓ # l4: xxxxx ------&amp;gt; merge(l3, l4) = m ---&amp;gt;--&amp;gt; merge(n, m) class Solution(object): def mergeKLists(self, lists): &amp;quot;&amp;quot;&amp;quot; :type lists: List[ListNode] :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; if list is None or len(lists) == 0: return [] return self.</description>
+Example: Input: [ 1-&amp;gt;4-&amp;gt;5, 1-&amp;gt;3-&amp;gt;4, 2-&amp;gt;6 ] Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5-&amp;gt;6  Solution: Idea #1 - Brute force with sorting first:
+Time complexity : O(NlogN)
+Space complexity : O(N)
+Idea #2 - Compare head nodes one by one:
+Time complexity : O(kN)
+Space complexity : O(N)
+Idea #3 - Merge lists one by one:</description>
     </item>
     
     <item>
@@ -2660,22 +2689,22 @@ Example 1 Given nums = [1,1,2], Your function should return length = 2, with the
     </item>
     
     <item>
-      <title>16. 3sum Closest</title>
-      <link>http://www.hashnopolis.com/post/2018/08/16.-3sum-closest/</link>
+      <title>3sum Closest</title>
+      <link>http://www.hashnopolis.com/post/2018/08/3sum-closest/</link>
       <pubDate>Thu, 23 Aug 2018 23:30:43 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/08/16.-3sum-closest/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/3sum-closest/</guid>
       <description>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
 Example:
 Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).</description>
     </item>
     
     <item>
-      <title>15. 3sum</title>
-      <link>http://www.hashnopolis.com/post/2018/08/15.-3sum/</link>
+      <title>3sum</title>
+      <link>http://www.hashnopolis.com/post/2018/08/3sum/</link>
       <pubDate>Thu, 23 Aug 2018 23:29:18 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/08/15.-3sum/</guid>
+      <guid>http://www.hashnopolis.com/post/2018/08/3sum/</guid>
       <description>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 Note:
 The solution set must not contain duplicate triplets.
