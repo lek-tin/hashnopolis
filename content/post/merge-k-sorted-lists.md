@@ -21,7 +21,29 @@ Input:
 ]
 Output: 1->1->2->3->4->4->5->6
 ```
+
 ### Solution:
+Idea #1 - Brute force with sorting first:  
+Time complexity : `O(NlogN)`  
+Space complexity : `O(N)`  
+
+Idea #2 - Compare head nodes one by one:  
+Time complexity : `O(kN)`  
+Space complexity : `O(N)`  
+
+Idea #3 - Merge lists one by one:  
+Time complexity : `O(kN)`  
+Space complexity : `O(N)`  
+
+Idea #4 - Merge with divide and conquer  
+Time complexity: `O(Nlogk)`  
+Space complexity : `O(N)`  
+
+Idea #5 - Merge with priority queue  
+Time complexity: `O(Nlogk)`  
+Space complexity : `O(N)`  
+
+`k` is the number of linked lists.
 ```python
 # Definition for singly-linked list.
 # class ListNode(object):
@@ -145,6 +167,33 @@ class Solution:
             curr = node
             if node.next:
                 heapq.heappush(heap, node.next)
+
+        return dummy.next
+```
+Python PriorityQueue:
+```python
+from Queue import PriorityQueue
+
+class Solution(object):
+    def mergeKLists(self, lists):
+        """
+        :type lists: List[ListNode]
+        :rtype: ListNode
+        """
+        dummy = head = ListNode(0)
+        pq = PriorityQueue()
+
+        for l in lists:
+            if l:
+                pq.put((l.val, l))
+
+        while not pq.empty():
+            val, node = pq.get()
+            head.next = ListNode(val)
+            head = head.next
+            node = node.next
+            if node:
+                pq.put((node.val, node))
 
         return dummy.next
 ```

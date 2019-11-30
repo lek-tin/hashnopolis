@@ -1,5 +1,5 @@
 ---
-title: "16. 3sum Closest"
+title: "3sum Closest"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "sum"]

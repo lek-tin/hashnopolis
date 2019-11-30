@@ -1,8 +1,8 @@
 ---
-title: "Best Time to Buy and Sell Stock Ii"
+title: "Best Time to Buy and Sell Stock II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "greedy"]
 categories: ["algorithm"]
 date: 2018-09-06T23:39:13+08:00
 draft: false

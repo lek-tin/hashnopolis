@@ -39,9 +39,12 @@ class Solution:
     intervals.sort(key=lambda x : x.start)
     merged = []
 
+    ## [[1,3],[2,6],[8,10],[15,18]]
     for interval in intervals:
+      # NO OVERLAP
       if not merged or merged[-1].end < interval.start:
         merged.append(interval)
+      # merge because last interval and the current interval OVERLAP
       else:
         merged[-1].end = max(merged[-1].end, interval.end)
     return merged

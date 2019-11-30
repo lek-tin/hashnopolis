@@ -45,5 +45,6 @@ class Solution(object):
                 continue
             if not knows(i, celebrity) or knows(celebrity, i):
                 return -1
+
         return celebrity
 ```

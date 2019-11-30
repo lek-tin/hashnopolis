@@ -100,7 +100,7 @@ class DLL:
         self.tail.prev = node
 
     def removeAtHead(self):
-        # head is  always a placeholder
+        # head is always a placeholder
         # head - 1 - 2 - 3 - 4 - 5 - 6 - tail
         #      node
         node = self.head.next
