@@ -2,7 +2,7 @@
 title: "LRU Cache"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "lru-cache", "dll", "linked-list", "hashmap"]
+tags: ["leetcode", "lru-cache", "dll", "linked-list", "hashmap", "linked-hashmap"]
 categories: ["algorithm"]
 date: 2018-11-11T15:33:09-08:00
 draft: false
@@ -162,4 +162,44 @@ class LRUCache(object):
         else:
             # decrement capacity
             self.capacity -= 1
+```
+Linked Hashmap
+```python
+from collections import OrderedDict
+
+class LRUCache(OrderedDict):
+
+    def __init__(self, capacity: int):
+        """
+        :type capacity: int
+        """
+        self.capacity = capacity
+
+    def get(self, key):
+        """
+        :type key: int
+        :rtype: int
+        """
+        if key not in self:
+            return - 1
+
+        self.move_to_end(key)
+        return self[key]
+
+    def put(self, key, value):
+        """
+        :type key: int
+        :type value: int
+        :rtype: void
+        """
+        if key in self:
+            self.move_to_end(key)
+        self[key] = value
+        if len(self) > self.capacity:
+            self.popitem(last = False)
+
+# Your LRUCache object will be instantiated and called as such:
+# obj = LRUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)
 ```
