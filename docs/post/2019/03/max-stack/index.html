@@ -181,7 +181,7 @@
         
           "<a href="/tags/stack"><strong>stack</strong></a>",
         
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 3-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/max-stack.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Max Stack</h1>
@@ -232,27 +232,27 @@ stack.top(); -&gt; 5
         stack = new Stack&lt;&gt;();
         maxStack = new Stack&lt;&gt;();
     }
-    
+
     public void push(int x) {
         int max = maxStack.isEmpty() ? x : maxStack.peek();
         // Assign a max to every newcomer
         maxStack.push(max &gt; x ? max : x);
         stack.push(x);
     }
-    
+
     public int pop() {
-        System.out.println(maxStack.pop());
+        maxStack.pop();
         return stack.pop();
     }
-    
+
     public int top() {
         return stack.peek();
     }
-    
+
     public int peekMax() {
         return maxStack.peek();
     }
-    
+
     public int popMax() {
         int val = peekMax();
         Stack&lt;Integer&gt; buffer = new Stack();
@@ -276,6 +276,92 @@ stack.top(); -&gt; 5
 
 <p><strong>Time Complexity</strong>: <code>O(N)</code> for the popMax operation, and <code>O(1)</code> for the other operations, where <code>N</code> is the number of operations performed.<br />
 <strong>Space Complexity</strong>: <code>O(N)</code>, the maximum size of the stack.</p>
+
+<p>Idea 2: double linked list + treeMap</p>
+
+<pre><code class="language-java">// Time: O(logN) for all operations except peek which is O(1)
+// Space: O(N)
+class MaxStack {
+    TreeMap&lt;Integer, List&lt;Node&gt;&gt; map;
+    DoubleLinkedList dll;
+
+    public MaxStack() {
+        map = new TreeMap();
+        dll = new DoubleLinkedList();
+    }
+
+    public void push(int x) {
+        Node node = dll.add(x);
+        if(!map.containsKey(x))
+            map.put(x, new ArrayList&lt;Node&gt;());
+        map.get(x).add(node);
+    }
+
+    public int pop() {
+        int val = dll.pop();
+        List&lt;Node&gt; L = map.get(val);
+        L.remove(L.size() - 1);
+        if (L.isEmpty()) map.remove(val);
+        return val;
+    }
+
+    public int top() {
+        return dll.peek();
+    }
+
+    public int peekMax() {
+        return map.lastKey();
+    }
+
+    public int popMax() {
+        int max = peekMax();
+        List&lt;Node&gt; L = map.get(max);
+        Node node = L.remove(L.size() - 1);
+        dll.unlink(node);
+        if (L.isEmpty()) map.remove(max);
+        return max;
+    }
+}
+
+class DoubleLinkedList {
+    Node head, tail;
+
+    public DoubleLinkedList() {
+        head = new Node(0);
+        tail = new Node(0);
+        head.next = tail;
+        tail.prev = head;
+    }
+
+    public Node add(int val) {
+        Node x = new Node(val);
+        x.next = tail;
+        x.prev = tail.prev;
+        tail.prev = tail.prev.next = x;
+        return x;
+    }
+
+    public int pop() {
+        return unlink(tail.prev).val;
+    }
+
+    public int peek() {
+        return tail.prev.val;
+    }
+
+    public Node unlink(Node node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+        return node;
+    }
+}
+
+class Node {
+    int val;
+    Node prev, next;
+    public Node(int v) {val = v;}
+}
+</code></pre>
 
   </div>
 

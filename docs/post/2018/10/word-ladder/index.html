@@ -191,7 +191,7 @@ Note  Return 0 if there is no such transformation sequence. All words have the s
       <h1>Word Ladder</h1>
       <h4>Created: October 27, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: October 27, 2018</h5>
+        <h5>Last updated: November 30, 2019</h5>
       
       <hr />
       
@@ -235,6 +235,7 @@ wordList = [&ldquo;hot&rdquo;,&ldquo;dot&rdquo;,&ldquo;dog&rdquo;,&ldquo;lot&rdq
 
 <pre><code>### Explanation The endWord &quot;cog&quot; is not in wordList, therefore no possible transformation.
 ### Solution
+BFS
 ```python
 # time: o(26^(L/2)), L is the length of the word
 class Solution:
@@ -261,8 +262,8 @@ class Solution:
             for node in startQ:
                 for i in range(0,len(node)):
                     char_arr = list(node)
-                    exclude = ord(node[i]);
-                    for j in range(ord('a'),ord('z')+1):
+                    exclude = ord(node[i])
+                    for j in range(ord('a'), ord('z')+1):
                         if j == exclude:
                             continue
 
@@ -284,6 +285,46 @@ class Solution:
             length += 1
 
         return 0
+</code></pre>
+
+<p>BFS 2</p>
+
+<pre><code class="language-python">class Solution:
+    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -&gt; int:
+        if endWord not in wordList:
+            return 0
+
+        wordList = set(wordList)
+        visited = set([beginWord])
+        queue = collections.deque([beginWord])
+
+        distance = 0
+        while queue:
+            distance += 1
+            for i in range(len(queue)):
+                word = queue.popleft()
+                if word == endWord:
+                    return distance
+
+                for next_word in self.get_next_words(word):
+                    if next_word not in wordList or next_word in visited:
+                        continue
+                    queue.append(next_word)
+                    visited.add(next_word)
+        return 0
+
+    # O(26 * L^2)
+    # L is the length of word
+    def get_next_words(self, word):
+        words = []
+        # hot: &quot;h&quot; -&gt; &quot;o&quot; -&gt; &quot;t&quot;
+        for i in range(len(word)):
+            # replace each letter with 25 other letters
+            for char in 'abcdefghijklmnopqrstuvwxyz':
+                if word[i] != char:
+                    tempWord = word[:i] + char + word[i + 1:]
+                    words.append(tempWord)
+        return words
 </code></pre>
 
   </div>

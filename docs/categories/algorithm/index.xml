@@ -7,10 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 29 Nov 2019 23:12:48 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Nov 2019 16:03:43 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Word Ladder Ii</title>
+      <link>http://www.hashnopolis.com/post/2019/11/word-ladder-ii/</link>
+      <pubDate>Sat, 30 Nov 2019 16:03:43 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/11/word-ladder-ii/</guid>
+      <description>Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that: 1. Only one letter can be changed at a time 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
+Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</description>
+    </item>
+    
+    <item>
+      <title>Longest Valid Parentheses</title>
+      <link>http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/</link>
+      <pubDate>Sat, 30 Nov 2019 03:24:56 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/</guid>
+      <description>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
+Example 1: Input: &amp;quot;(()&amp;quot; Output: 2 Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot;  Example 2: Input: &amp;quot;)()())&amp;quot; Output: 4 Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;  Solution Dynamic programming
+// Time: O(n) // Space: O(n) public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</description>
+    </item>
+    
+    <item>
+      <title>Path Sum II</title>
+      <link>http://www.hashnopolis.com/post/2019/11/path-sum-ii/</link>
+      <pubDate>Sat, 30 Nov 2019 01:51:33 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/11/path-sum-ii/</guid>
+      <description>Given a binary tree and a sum, find all root-to-leaf paths where each path&amp;rsquo;s sum equals the given sum.
+Note: A leaf is a node with no children.
+Example: Given the below binary tree and sum = 22,
+ 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1  Return:
+[ [5,4,11,2], [5,8,4,5] ]  Solution # Definition for a binary tree node.</description>
+    </item>
     
     <item>
       <title>Best Time to Buy and Sell Stock III</title>

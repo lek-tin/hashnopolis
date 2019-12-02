@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 19 Oct 2019 22:15:17 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 30 Nov 2019 03:24:56 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/stack/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Longest Valid Parentheses</title>
+      <link>http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/</link>
+      <pubDate>Sat, 30 Nov 2019 03:24:56 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/</guid>
+      <description>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
+Example 1: Input: &amp;quot;(()&amp;quot; Output: 2 Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot;  Example 2: Input: &amp;quot;)()())&amp;quot; Output: 4 Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;  Solution Dynamic programming
+// Time: O(n) // Space: O(n) public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</description>
+    </item>
     
     <item>
       <title>Prefix Postfix Conversion</title>
