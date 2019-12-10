@@ -170,12 +170,14 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/">Linked List Cycle II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/search-in-rotated-sorted-array/">Search in Rotated Sorted Array</a></h2>
 
-      <p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
-Note: Do not modify the linked list.
-Follow up: Can you solve it without using extra space?
-Observation: Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</p>
+      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+You are given a target value to search. If found in the array return its index, otherwise return -1.
+You may assume no duplicate exists in the array.
+Your algorithm’s runtime complexity must be in the order of O(log n).
+Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1  Solution class Solution: def search(self, nums: List[int], target: int) -&gt; int: if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start &#43; 1) &lt; end: mid = start &#43; (end - start) // 2 if nums[mid] == target: return mid # &lt; because there are no duplicate numbers.</p>
 
       <p class="meta">
         
@@ -187,7 +189,7 @@ Observation: Solution: /** * Definition for singly-linked list. * class ListNode
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

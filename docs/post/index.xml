@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 30 Nov 2019 16:03:43 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Dec 2019 21:41:31 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Concatenate String Using Smaller Strings</title>
+      <link>http://www.hashnopolis.com/post/2019/12/concatenate-string-using-smaller-strings/</link>
+      <pubDate>Mon, 09 Dec 2019 21:41:31 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/12/concatenate-string-using-smaller-strings/</guid>
+      <description> Given a big string and a list of small strings, find whether the big string can be represented only by concatenation of smaller strings.
+Example: target = &amp;quot;abccbacbb&amp;quot; smallerStrings = [&amp;quot;abc&amp;quot;, &amp;quot;cc&amp;quot;, &amp;quot;ab&amp;quot;, &amp;quot;bac&amp;quot;, &amp;quot;b&amp;quot;] Output: True  Solution Dynamic programming
+target = &amp;quot;abccbacbb&amp;quot; smallerStrings = [&amp;quot;abc&amp;quot;, &amp;quot;cc&amp;quot;, &amp;quot;ab&amp;quot;, &amp;quot;bac&amp;quot;, &amp;quot;b&amp;quot;] N = len(target) dp = [False for _ in range(N)] def check(i, target): for s in smallerStrings: l = len(s) # print(s) if i + l &amp;lt;= N: tryStr = target[i:i+l] # print(tryStr) if tryStr == s: dp[i+l-1] = True check(i+l, target) # print(&amp;quot;-------&amp;quot;) check(0, target) print(dp) print(dp[N-1])  </description>
+    </item>
     
     <item>
       <title>Word Ladder Ii</title>
@@ -2845,8 +2856,7 @@ Time complexity : O(NlogN)
 Space complexity : O(N)
 Idea #2 - Compare head nodes one by one:
 Time complexity : O(kN)
-Space complexity : O(N)
-Idea #3 - Merge lists one by one:</description>
+Space complexity : O(N) - creating a new linked list or O(1) in-place</description>
     </item>
     
     <item>
