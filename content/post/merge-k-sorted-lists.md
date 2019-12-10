@@ -29,19 +29,19 @@ Space complexity : `O(N)`
 
 Idea #2 - Compare head nodes one by one:  
 Time complexity : `O(kN)`  
-Space complexity : `O(N)`  
+Space complexity : `O(N) - creating a new linked list or O(1) in-place`  
 
 Idea #3 - Merge lists one by one:  
 Time complexity : `O(kN)`  
-Space complexity : `O(N)`  
+Space complexity : `O(1)`  
 
 Idea #4 - Merge with divide and conquer  
 Time complexity: `O(Nlogk)`  
-Space complexity : `O(N)`  
+Space complexity : `O(1)`  
 
 Idea #5 - Merge with priority queue  
 Time complexity: `O(Nlogk)`  
-Space complexity : `O(N)`  
+Space complexity : `O(k+N)`  
 
 `k` is the number of linked lists.
 ```python
