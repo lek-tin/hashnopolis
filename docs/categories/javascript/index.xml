@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hashnopolis</title>
+    <link>http://www.hashnopolis.com/categories/javascript/</link>
+    <description>Recent content on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Tue, 28 Aug 2018 23:31:12 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Conditional Render in React</title>
+      <link>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</link>
+      <pubDate>Tue, 28 Aug 2018 23:31:12 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</guid>
+      <description>In react, sometimes we need to render a component based on some flag, for example, we need to display a different set of information to the admin users than the normal users. We have a prop called isAdmin
+render () { const { isAdmin } = this.props return ( &amp;lt;div&amp;gt; { isAdmin ? &amp;lt;CustomeComponent {...propSetA} / &amp;gt; : &amp;lt;CustomeComponent {...propSetB} / &amp;gt; } &amp;lt;/div&amp;gt; ) }  Looks good right, but there is one problem.</description>
+    </item>
+    
+    <item>
+      <title>When You New a Class in JavaScript?</title>
+      <link>http://www.hashnopolis.com/post/2018/02/when-you-new-a-class-in-javascript/</link>
+      <pubDate>Tue, 13 Feb 2018 15:30:03 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/02/when-you-new-a-class-in-javascript/</guid>
+      <description>Here is an example of instantiating a class using the new operator:
+class Person { constructor(name, age) { this.name = name; this.age = age; } } const asian = new Person(&#39;Alice&#39;, 25); console.log(asian);  As you can see from below, asian is not a class, it is instead, an object:
+[object Object] { age: 25, name: &amp;quot;Alice&amp;quot; }  The values of asian are set by the constructor of the Person class.</description>
+    </item>
+    
+  </channel>
+</rss>
