@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Array on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/array/</link>
+    <description>Recent content in Array on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Wed, 16 Oct 2019 19:13:18 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intersection of Three Sorted Arrays</title>
+      <link>http://www.hashnopolis.com/post/2019/10/intersection-of-three-sorted-arrays/</link>
+      <pubDate>Wed, 16 Oct 2019 19:13:18 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/10/intersection-of-three-sorted-arrays/</guid>
+      <description>Given three integer arrays arr1, arr2 and arr3 sorted in strictly increasing order, return a sorted array of only the integers that appeared in all three arrays.
+Example 1:
+Input: arr1 = [1,2,3,4,5], arr2 = [1,2,5,7,9], arr3 = [1,3,4,5,8] Output: [1,5] Explanation: Only 1 and 5 appeared in the three arrays.  Constraints:  1 &amp;lt;= arr1.length, arr2.length, arr3.length &amp;lt;= 1000 1 &amp;lt;= arr1[i], arr2[i], arr3[i] &amp;lt;= 2000  Solution Python</description>
+    </item>
+    
+    <item>
+      <title>Longest Continuous Increasing Subsequence</title>
+      <link>http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/</link>
+      <pubDate>Wed, 19 Dec 2018 10:40:26 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/</guid>
+      <description>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
+Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2 Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</description>
+    </item>
+    
+    <item>
+      <title>Intersection of Two Arrays</title>
+      <link>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</link>
+      <pubDate>Wed, 28 Nov 2018 23:56:14 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</guid>
+      <description>Given two arrays, write a function to compute their intersection.
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
+Solution Use binary search when one of the lists is very long and the other is short
+class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: if len(nums1) &amp;lt; len(nums2): return self.</description>
+    </item>
+    
+    <item>
+      <title>Arrays in Python</title>
+      <link>http://www.hashnopolis.com/post/2018/11/arrays-in-python/</link>
+      <pubDate>Tue, 13 Nov 2018 22:05:44 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/arrays-in-python/</guid>
+      <description>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1]  Clone a list newArr = oldArr[:]</description>
+    </item>
+    
+    <item>
+      <title>Arrays in CPP</title>
+      <link>http://www.hashnopolis.com/post/2018/11/arrays-in-cpp/</link>
+      <pubDate>Sat, 10 Nov 2018 13:50:30 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/arrays-in-cpp/</guid>
+      <description>To get the number of elements in an array in C++:
+sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. Divide it with the size of one element in the array will give you the number of elements in the array: sizeof(awesomeArray)/sizeof(awesomeArray[0])</description>
+    </item>
+    
+    <item>
+      <title>Plus One</title>
+      <link>http://www.hashnopolis.com/post/2018/09/plus-one/</link>
+      <pubDate>Sat, 15 Sep 2018 12:56:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/plus-one/</guid>
+      <description>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
+You may assume the integer does not contain any leading zero, except the number 0 itself.
+Example 1 Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</description>
+    </item>
+    
+    <item>
+      <title>Find Peak Element</title>
+      <link>http://www.hashnopolis.com/post/2018/09/find-peak-element/</link>
+      <pubDate>Fri, 14 Sep 2018 11:51:46 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/find-peak-element/</guid>
+      <description>A peak element is an element that is greater than its neighbors.
+Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index.
+The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
+You may imagine that nums[-1] = nums[n] = -∞.
+Example 1 Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</description>
+    </item>
+    
+    <item>
+      <title>56. Merge Intervals</title>
+      <link>http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/</link>
+      <pubDate>Fri, 24 Aug 2018 02:19:05 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/</guid>
+      <description>Given a collection of intervals, merge all overlapping intervals.
+Example 1 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2 Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: List[Interval] &amp;quot;&amp;quot;&amp;quot; intervals.</description>
+    </item>
+    
+    <item>
+      <title>80. Remove Duplicates From Sorted Array II</title>
+      <link>http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/</link>
+      <pubDate>Fri, 24 Aug 2018 00:48:48 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/80.-remove-duplicates-from-sorted-array-ii/</guid>
+      <description>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+Example 1 Given nums = [1,1,1,2,2,3], Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</description>
+    </item>
+    
+    <item>
+      <title>Remove Duplicates From Sorted Array</title>
+      <link>http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/</link>
+      <pubDate>Thu, 23 Aug 2018 23:52:17 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/remove-duplicates-from-sorted-array/</guid>
+      <description>Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+Example 1 Given nums = [1,1,2], Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn&#39;t matter what you leave beyond the returned length.</description>
+    </item>
+    
+    <item>
+      <title>4. Median of Two Sorted Arrays</title>
+      <link>http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/</link>
+      <pubDate>Tue, 21 Aug 2018 20:54:32 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/</guid>
+      <description>There are two sorted arrays nums1 and nums2 of size m and n respectively.
+Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+You may assume nums1 and nums2 cannot be both empty.
+Example 1: nums1 = [1, 3] nums2 = [2] The median is 2.0  Example 2: nums1 = [1, 2] nums2 = [3, 4] The median is (2 + 3)/2 = 2.</description>
+    </item>
+    
+    <item>
+      <title>Search in Rotated Sorted Array II</title>
+      <link>http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/</link>
+      <pubDate>Wed, 15 Aug 2018 12:50:21 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/</guid>
+      <description>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
+You are given a target value to search. If found in the array return true, otherwise return false.
+Example 1:
+Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
+Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</description>
+    </item>
+    
+  </channel>
+</rss>
