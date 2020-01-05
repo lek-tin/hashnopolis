@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 09 Dec 2019 21:41:31 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jan 2020 18:19:16 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Package Dependencies</title>
+      <link>http://www.hashnopolis.com/post/2020/01/package-dependencies/</link>
+      <pubDate>Thu, 02 Jan 2020 18:19:16 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/01/package-dependencies/</guid>
+      <description> Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;quot;Have cycle in dependency graph.&amp;quot;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add)  </description>
+    </item>
+    
+    <item>
+      <title>Concatenated Words</title>
+      <link>http://www.hashnopolis.com/post/2019/12/concatenated-words/</link>
+      <pubDate>Thu, 12 Dec 2019 22:43:05 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/12/concatenated-words/</guid>
+      <description>Given a list of words (without duplicates), please write a program that returns all concatenated words in the given list of words. A concatenated word is defined as a string that is comprised entirely of at least two shorter words in the given array.
+Example: Input: [&amp;quot;cat&amp;quot;,&amp;quot;cats&amp;quot;,&amp;quot;catsdogcats&amp;quot;,&amp;quot;dog&amp;quot;,&amp;quot;dogcatsdog&amp;quot;,&amp;quot;hippopotamuses&amp;quot;,&amp;quot;rat&amp;quot;,&amp;quot;ratcatdogcat&amp;quot;] Output: [&amp;quot;catsdogcats&amp;quot;,&amp;quot;dogcatsdog&amp;quot;,&amp;quot;ratcatdogcat&amp;quot;] Explanation: &amp;quot;catsdogcats&amp;quot; can be concatenated by &amp;quot;cats&amp;quot;, &amp;quot;dog&amp;quot; and &amp;quot;cats&amp;quot;; &amp;quot;dogcatsdog&amp;quot; can be concatenated by &amp;quot;dog&amp;quot;, &amp;quot;cats&amp;quot; and &amp;quot;dog&amp;quot;; &amp;quot;ratcatdogcat&amp;quot; can be concatenated by &amp;quot;rat&amp;quot;, &amp;quot;cat&amp;quot;, &amp;quot;dog&amp;quot; and &amp;quot;cat&amp;quot;.</description>
+    </item>
     
     <item>
       <title>Concatenate String Using Smaller Strings</title>
@@ -844,6 +863,17 @@ Select duplicate rows based on column SELECT TOP 1 C1.</description>
       <guid>http://www.hashnopolis.com/post/2019/06/machine-learning-questions/</guid>
       <description>What is an Eigenvalue and Eigenvector? Eigenvectors are used for understanding linear transformations. In data analysis, we usually calculate the eigenvectors for a correlation or covariance matrix. Eigenvectors are the directions along which a particular linear transformation acts by flipping, compressing or stretching. Eigenvalue can be referred to as the strength of the transformation in the direction of eigenvector or the factor by which the compression occurs.
 What is Gradient Descent?</description>
+    </item>
+    
+    <item>
+      <title>Word Search II</title>
+      <link>http://www.hashnopolis.com/post/2019/04/word-search-ii/</link>
+      <pubDate>Mon, 08 Apr 2019 23:50:33 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/04/word-search-ii/</guid>
+      <description>Given a 2D board and a list of words from the dictionary, find all words in the board.
+Each word must be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
+Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&amp;quot;oath&amp;quot;,&amp;quot;pea&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;rain&amp;quot;] Output: [&amp;quot;eat&amp;quot;,&amp;quot;oath&amp;quot;]  Note:  All inputs are consist of lowercase letters a-z.</description>
     </item>
     
     <item>
