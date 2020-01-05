@@ -55,7 +55,7 @@ class Solution {
 
         // middle position will always beneficial
         // for all group members but it will be
-        // sorted which we have alredy done
+        // sorted which we have already done
         int pos = ys.size() / 2;
         int y = ys.get(pos);
         int x = xs.get(pos);

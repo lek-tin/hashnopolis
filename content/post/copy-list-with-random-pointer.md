@@ -34,7 +34,7 @@ class Solution(object):
         # First pass: for each node in the original list, insert a copied node between the node tne node.next
         cur = head
         while cur != None:
-            # Make a copy of cur node, inset it to the middle of cur and cur.next
+            # Make a copy of cur node, insert it to the middle of cur and cur.next
             copy = RandomListNode(cur.label)
             copy.next = cur.next
             # copy.random = cur.random
@@ -54,6 +54,9 @@ class Solution(object):
         dummy = RandomListNode(0)
         prev = dummy
         while cur != None:
+            # cur.next: first cloned node
+            #       node1 -> node1_copy -> node2    ->    node2_copy -> node3 -> node3_copy
+            # prev  cur      cur.next      cur.next.next
             prev.next = cur.next
             cur.next = cur.next.next
             prev = prev.next
@@ -83,7 +86,8 @@ class Solution:
             return None
 
         copy = Node(head.val, None, None)
-        mapping = {head: copy}
+        # { original node: cloned node }
+        mapping = { head: copy }
 
         while head is not None:
             clone = mapping[head]

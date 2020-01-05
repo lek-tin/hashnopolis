@@ -39,6 +39,9 @@ class Solution:
         :type version2: str
         :rtype: int
         """
+        if version1 == version2:
+            return 0
+
         arr1 = version1.split(".")
         arr2 = version2.split(".")
         res = 0
