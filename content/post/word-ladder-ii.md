@@ -62,6 +62,7 @@ class Solution:
         distance = {}
 
         # record distances
+        # from endWord to startWord
         self.bfs(endWord, distance, dict)
         # beginWord: "hit"
         # endWord:   "cog"
