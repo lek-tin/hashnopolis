@@ -176,6 +176,89 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/combination-sum-iii/">Combination Sum III</a></h2>
+
+      <p>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
+Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution: def combinationSum3(self, k, n): &#34;&#34;&#34; :type k: int :type n: int :rtype: List[List[int]] &#34;&#34;&#34; self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/combination-sum/">Combination Sum</a></h2>
+
+      <p>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ]  Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/combinations/">Combinations</a></h2>
+
+      <p>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/09/combine-two-tables/">Combine Two Tables</a></h2>
 
       <p>Table: Person
@@ -347,92 +430,6 @@ Example 1 Input: a = &#34;11&#34;, b = &#34;1&#34; Output: &#34;100&#34;  Exampl
       <p>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 Example Input: &#34;23&#34; Output: [&#34;ad&#34;, &#34;ae&#34;, &#34;af&#34;, &#34;bd&#34;, &#34;be&#34;, &#34;bf&#34;, &#34;cd&#34;, &#34;ce&#34;, &#34;cf&#34;].  Note Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/18.-4sum/">18. 4Sum</a></h2>
-
-      <p> Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a &#43; b &#43; c &#43; d = target? Find all unique quadruplets in the array which gives the sum of target.
-Note The solution set must not contain duplicate quadruplets.
-Example:
-Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ]  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/">23. Merge k Sorted Lists</a></h2>
-
-      <p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example: Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6  Solution: Idea #1 - Brute force with sorting first:
-Time complexity : O(NlogN)
-Space complexity : O(N)
-Idea #2 - Compare head nodes one by one:
-Time complexity : O(kN)
-Space complexity : O(N) - creating a new linked list or O(1) in-place</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/57.-insert-interval/">57. Insert Interval</a></h2>
-
-      <p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
-You may assume that the intervals were initially sorted according to their start times.
-Example 1 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</p>
 
       <p class="meta">
         

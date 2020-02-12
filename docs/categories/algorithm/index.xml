@@ -7,10 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 05 Feb 2020 23:38:00 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 23:25:11 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Largest Component Size by Common Factor</title>
+      <link>http://www.hashnopolis.com/post/2020/02/largest-component-size-by-common-factor/</link>
+      <pubDate>Tue, 11 Feb 2020 23:25:11 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/largest-component-size-by-common-factor/</guid>
+      <description>Given a non-empty array of unique positive integers A, consider the following graph:
+1. There are A.length nodes, labelled A[0] to A[A.length - 1]; 2. There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.
+Return the size of the largest connected component in the graph.
+Example 1: Input: [4,6,15,35] Output: 4  Example 2: Input: [20,50,9,63] Output: 2  Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8  Note:  1 &amp;lt;= A.</description>
+    </item>
+    
+    <item>
+      <title>Find All Duplicates in an Array</title>
+      <link>http://www.hashnopolis.com/post/2020/02/find-all-duplicates-in-an-array/</link>
+      <pubDate>Tue, 11 Feb 2020 00:06:03 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/find-all-duplicates-in-an-array/</guid>
+      <description>Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements that appear twice in this array.
+Could you do it without extra space and in O(n) runtime?
+Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3]  Solution # Time: O(n) # Space: O(1) class Solution: def findDuplicates(self, nums: List[int]) -&amp;gt; List[int]: &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; result = [] for i in nums: if nums[abs(i)-1] &amp;lt; 0: result.</description>
+    </item>
+    
+    <item>
+      <title>Squares of a Sorted Array</title>
+      <link>http://www.hashnopolis.com/post/2020/02/squares-of-a-sorted-array/</link>
+      <pubDate>Mon, 10 Feb 2020 20:20:33 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/squares-of-a-sorted-array/</guid>
+      <description> Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
+Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100]  Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121]  Note:  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i += 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr += 1 return result  </description>
+    </item>
     
     <item>
       <title>Minesweeper</title>
