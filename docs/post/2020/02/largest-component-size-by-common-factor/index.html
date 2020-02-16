@@ -20,7 +20,7 @@
 1. There are A.length nodes, labelled A[0] to A[A.length - 1]; 2. There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.
 Return the size of the largest connected component in the graph.
 Example 1: Input: [4,6,15,35] Output: 4  Example 2: Input: [20,50,9,63] Output: 2  Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8  Note:  1 &amp;lt;= A." />
-  <meta name="keywords" content="leetcode union-find " />
+  <meta name="keywords" content="leetcode graph union-find " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -183,9 +183,11 @@ Example 1: Input: [4,6,15,35] Output: 4  Example 2: Input: [20,50,9,63] Output: 
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
+          "<a href="/tags/graph"><strong>graph</strong></a>",
+        
           "<a href="/tags/union-find"><strong>union-find</strong></a>",
         
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/largest-component-size-by-common-factor.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Largest Component Size by Common Factor</h1>
@@ -230,8 +232,63 @@ Output: 8
 
 <h3 id="solution">Solution</h3>
 
-<pre><code class="language-python">
+<pre><code class="language-python">from collections import Counter
+
+class UnionFind:
+    def __init__(self, _arrSize):
+        self.arr = [i for i in range(_arrSize)]
+
+    def find(self, i):
+        # skip &quot;a&quot; looking for &quot;a&quot;
+        if self.arr[i] != i:
+            self.arr[i] = self.find(self.arr[i])
+        return self.arr[i]
+
+    def union(self, a, b):
+        # a and b need to be union'ed
+        a_root = self.find(a)
+        b_root = self.find(b)
+        # set a as the root
+        self.arr[a_root] = b_root
+
+class Solution:
+    def largestComponentSize(self, A: List[int]) -&gt; int:
+        fullFactors = []
+        for num in A:
+            factors = []
+            tempFactor = 2
+            while tempFactor * tempFactor &lt;= num:
+                if num % tempFactor == 0:
+                    while num % tempFactor == 0:
+                        num /= tempFactor
+                    factors.append(tempFactor)
+                tempFactor += 1
+            if num &gt; 1 or not factors:
+                factors.append(num)
+            fullFactors.append(factors)
+
+        # Input: [20,50,100,9,63,21,49]
+        # factors: [[2, 5.0], [2, 5], [2, 5], [3], [3, 7.0], [3, 7.0], [7]]
+        # primes are guaranteed to be sorted
+        primes = list({p for factors in fullFactors for p in factors})
+        # map each prime to its index
+        prime_to_index = {p: i for i, p in enumerate(primes)} # {2: 0, 3: 1, 5.0: 2, 7.0: 3}
+
+        unionFind = UnionFind(len(primes))
+
+        for factors in fullFactors:
+            for f in factors:
+                unionFind.union(prime_to_index[factors[0]], prime_to_index[f])
+        # Counter will count how many times each value in an array appears.
+        tempMap = [unionFind.find(prime_to_index[factors[0]]) for factors in fullFactors] # [2, 2, 2, 3, 3, 3, 3]
+        counter = Counter(tempMap) # Counter({3: 4, 2: 3})
+        return max(counter.values())
 </code></pre>
+
+<h3 id="illustration">Illustration:</h3>
+
+<p><img src="/img/post/largest-component-size-by-common-factor-1.jpg" alt="largest component size by common factor 1" />
+<img src="/img/post/largest-component-size-by-common-factor-2.jpg" alt="largest component size by common factor 2" /></p>
 
   </div>
 

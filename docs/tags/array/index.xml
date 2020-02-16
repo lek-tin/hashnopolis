@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 11 Feb 2020 00:06:03 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2020 12:22:27 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Maximum Swap</title>
+      <link>http://www.hashnopolis.com/post/2020/02/maximum-swap/</link>
+      <pubDate>Thu, 13 Feb 2020 12:22:27 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/maximum-swap/</guid>
+      <description>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
+Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7.  Example 2: Input: 9973 Output: 9973 Explanation: No swap.  Note:  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&amp;gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&amp;quot;0&amp;quot;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &amp;gt; int(ord(numChars[i])-ord(&amp;quot;0&amp;quot;)): if last[j] &amp;gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&amp;quot;&amp;quot;.</description>
+    </item>
     
     <item>
       <title>Find All Duplicates in an Array</title>

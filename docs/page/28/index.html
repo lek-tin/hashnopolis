@@ -170,42 +170,15 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/">Search in Rotated Sorted Array II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/">23. Merge k Sorted Lists</a></h2>
 
-      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
-(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
-You are given a target value to search. If found in the array return true, otherwise return false.
-Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/">4. Median of Two Sorted Arrays</a></h2>
-
-      <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m&#43;n)).
-You may assume nums1 and nums2 cannot be both empty.
-Example 1: nums1 = [1, 3] nums2 = [2] The median is 2.0  Example 2: nums1 = [1, 2] nums2 = [3, 4] The median is (2 &#43; 3)/2 = 2.</p>
+      <p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+Example: Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6  Solution: Idea #1 - Brute force with sorting first:
+Time complexity : O(NlogN)
+Space complexity : O(N)
+Idea #2 - Compare head nodes one by one:
+Time complexity : O(kN)
+Space complexity : O(N) - creating a new linked list or O(1) in-place</p>
 
       <p class="meta">
         
@@ -218,6 +191,140 @@ Example 1: nums1 = [1, 3] nums2 = [2] The median is 2.0  Example 2: nums1 = [1, 
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/">17. Letter Combinations of a Phone Number</a></h2>
+
+      <p>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
+A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+Example Input: &#34;23&#34; Output: [&#34;ad&#34;, &#34;ae&#34;, &#34;af&#34;, &#34;bd&#34;, &#34;be&#34;, &#34;bf&#34;, &#34;cd&#34;, &#34;ce&#34;, &#34;cf&#34;].  Note Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/18.-4sum/">18. 4Sum</a></h2>
+
+      <p> Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a &#43; b &#43; c &#43; d = target? Find all unique quadruplets in the array which gives the sum of target.
+Note The solution set must not contain duplicate quadruplets.
+Example:
+Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ]  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/">Conditional Render in React</a></h2>
+
+      <p>In react, sometimes we need to render a component based on some flag, for example, we need to display a different set of information to the admin users than the normal users. We have a prop called isAdmin
+render () { const { isAdmin } = this.props return ( &lt;div&gt; { isAdmin ? &lt;CustomeComponent {...propSetA} / &gt; : &lt;CustomeComponent {...propSetB} / &gt; } &lt;/div&gt; ) }  Looks good right, but there is one problem.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/javascript" ><strong>"javascript"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/57.-insert-interval/">57. Insert Interval</a></h2>
+
+      <p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
+You may assume that the intervals were initially sorted according to their start times.
+Example 1 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/">56. Merge Intervals</a></h2>
+
+      <p>Given a collection of intervals, merge all overlapping intervals.
+Example 1 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2 Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: List[Interval] &#34;&#34;&#34; intervals.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -334,85 +441,6 @@ Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1
 
 </article>
       
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></h2>
-
-      <p>Given a linked list, remove the n-th node from the end of list and return its head.
-Example Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.  Note Given n will always be valid.
-Follow-up Could you do this in one pass?
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/02/when-you-new-a-class-in-javascript/">When You New a Class in JavaScript?</a></h2>
-
-      <p>Here is an example of instantiating a class using the new operator:
-class Person { constructor(name, age) { this.name = name; this.age = age; } } const asian = new Person(&#39;Alice&#39;, 25); console.log(asian);  As you can see from below, asian is not a class, it is instead, an object:
-[object Object] { age: 25, name: &#34;Alice&#34; }  The values of asian are set by the constructor of the Person class.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/javascript" ><strong>"javascript"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/1/01/"></a></h2>
-
-      <p>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
-Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
-A partially filled sudoku which is valid.
-The Sudoku board could be partially filled, where empty cells are filled with the character &#39;.</p>
-
-      <p class="meta">
-        
-        by
-        
-        in
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
     
     
       <footer class="list-footer">
@@ -421,6 +449,8 @@ The Sudoku board could be partially filled, where empty cells are filled with th
         
           <a class="pagination-previous" href="/page/27/">← Newer Posts</a>
         
+        
+          <a class="pagination-next" href="/page/29/">Older Posts →</a>
         
         </nav>
       </footer>

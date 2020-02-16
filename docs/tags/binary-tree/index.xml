@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 24 Aug 2019 23:20:01 -0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2020 20:14:50 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/binary-tree/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Balanced Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2020/02/balanced-binary-tree/</link>
+      <pubDate>Sat, 15 Feb 2020 20:14:50 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/balanced-binary-tree/</guid>
+      <description>Given a binary tree, determine if it is height-balanced.
+For this problem, a height-balanced binary tree is defined as:
+&amp;gt; a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7 Return true.  Example 2: Given the following tree [1,2,2,3,3,null,null,4,4]: 1 / \ 2 2 / \ 3 3 / \ 4 4 Return false.</description>
+    </item>
+    
+    <item>
+      <title>Print Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2020/02/print-binary-tree/</link>
+      <pubDate>Sat, 15 Feb 2020 17:48:43 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/print-binary-tree/</guid>
+      <description>Print a binary tree in an m*n 2D string array following these rules:
+ The row number m should be equal to the height of the given binary tree. The column number n should always be an odd number. The root node&amp;rsquo;s value (in string format) should be put in the exactly middle of the first row it can be put. The column and the row where the root node belongs will separate the rest space into two parts (left-bottom part and right-bottom part).</description>
+    </item>
     
     <item>
       <title>Construct Binary Tree From Preorder and Inorder Traversal</title>
@@ -97,16 +119,17 @@ Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of 
     </item>
     
     <item>
-      <title>Minimum Depth of Binary Tree</title>
-      <link>http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/</link>
+      <title>Maximum Depth of Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2019/02/maximum-depth-of-binary-tree/</link>
       <pubDate>Tue, 12 Feb 2019 16:58:46 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/</guid>
-      <description>Given a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+      <guid>http://www.hashnopolis.com/post/2019/02/maximum-depth-of-binary-tree/</guid>
+      <description>Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 3.  Solution: /** * Definition for a binary tree node.</description>
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 3.  Solution: recursion
+/** * Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -119,7 +142,8 @@ Example: Given binary tree [3,9,20,null,null,15,7],
 The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 2.  Solution: /** * Definition for a binary tree node.</description>
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 2.  Solution: Recursion
+/** * Definition for a binary tree node.</description>
     </item>
     
     <item>

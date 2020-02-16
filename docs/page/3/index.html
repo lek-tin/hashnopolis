@@ -170,6 +170,167 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/11/reorder-data-in-log-files/">Reorder Data in Log Files</a></h2>
+
+      <p>You have an array of logs. Each log is a space delimited string of words.
+For each log, the first word in each log is an alphanumeric identifier. Then, either:
+Each word after the identifier will consist only of lowercase letters, or; Each word after the identifier will consist only of digits. We will call these two varieties of logs letter-logs and digit-logs. It is guaranteed that each log has at least one word after its identifier.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/before-and-after-puzzle/">Before and After Puzzle</a></h2>
+
+      <p>Given a list of phrases, generate a list of Before and After puzzles.
+A phrase is a string that consists of lowercase English letters and spaces only. No space appears in the start or the end of a phrase. There are no consecutive spaces in a phrase.
+Before and After puzzles are phrases that are formed by merging two phrases where the last word of the first phrase is the same as the first word of the second phrase.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/maximum-product-of-three-numbers/">Maximum Product of Three Numbers</a></h2>
+
+      <p> Given an integer array, find three numbers whose product is maximum and output the maximum product.
+Example 1:
+Input: [1,2,3] Output: 6  Example 2:
+Input: [1,2,3,4] Output: 24  Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won’t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; min_1, min_2 = float(&#34;inf&#34;), float(&#34;inf&#34;) max_1, max_2, max_3 = float(&#34;-inf&#34;), float(&#34;-inf&#34;), float(&#34;-inf&#34;) for num in nums: if num &lt; min_1: min_2 = min_1 min_1 = num elif num &lt; min_2: min_2 = num if num &gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &gt; max_2: max_3 = max_2 max_2 = num elif num &gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3)  </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/prefix-postfix-conversion/">Prefix Postfix Conversion</a></h2>
+
+      <p>Prefix : An expression is called the prefix expression if the operator appears in the expression before the operands. Simply of the form (operator operand1 operand2). Example : *&#43;AB-CD (Infix : (A&#43;B) * (C-D) )
+Postfix: An expression is called the postfix expression if the operator appears in the expression after the operands. Simply of the form (operand1 operand2 operator). Example : AB&#43;CD-* (Infix : (A&#43;B * (C-D) )</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/maximum-value-array-m-range-increment-operations/">Maximum Value Array M Range Increment Operations</a></h2>
+
+      <p>Consider an array of size n with all initial values as 0, we need to perform following m range increment operations.
+increment(a, b, k) : Increment values from a to b by k. After m operations, we need to calculate the maximum of the values in the array.
+Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2, b = 3, k = 100 Output : 200 Explanation: Initially array = {0, 0, 0, 0, 0} After first operation: array = {100, 100, 0, 0, 0} After second operation: array = {100, 200, 100, 100, 100} After third operation: array = {100, 200, 200, 200, 100} Maximum element after m operations is 200.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/consecutive-numbers-sum/">Consecutive Numbers Sum</a></h2>
+
+      <p>Given a positive integer N, how many ways can we write it as a sum of consecutive positive integers?
+Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 &#43; 3  Example 2: Input: 9 Output: 3 Explanation: 9 = 9 = 4 &#43; 5 = 2 &#43; 3 &#43; 4  Example 3: Input: 15 Output: 4 Explanation: 15 = 15 = 8 &#43; 7 = 4 &#43; 5 &#43; 6 = 1 &#43; 2 &#43; 3 &#43; 4 &#43; 5  Note  1 &lt;= N &lt;= 10 ^ 9.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/10/beautiful-subarrays/">Beautiful Subarrays</a></h2>
 
       <p>Find the distinct subarrays with m odd numbers
@@ -266,166 +427,6 @@ Example 3: Input: &#34;a good example&#34; Output: &#34;example good a&#34; Expl
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/count-complete-tree-nodes/">Count Complete Tree Nodes</a></h2>
-
-      <p>Given a complete binary tree, count the number of nodes.
-Note: Definition of a complete binary tree from Wikipedia: In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.
-Example: Input: 1 / \ 2 3 / \ / 4 5 6 Output: 6  Solution # Definition for a binary tree node.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/kth-smallest-element-in-a-sorted-matrix/">Kth Smallest Element in a Sorted Matrix</a></h2>
-
-      <p>Given a n x n matrix where each of the rows and columns are sorted in ascending order, find the kth smallest element in the matrix.
-Note that it is the kth smallest element in the sorted order, not the kth distinct element.
-Example: matrix = [ [ 1, 5, 9], [10, 11, 13], [12, 13, 15] ], k = 8, return 13.  Note:  You may assume k is always valid, 1 ≤ k ≤ n2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/subtree-of-another-tree/">Subtree of Another Tree</a></h2>
-
-      <p>Given two non-empty binary trees s and t, check whether tree t has exactly the same structure and node values with a subtree of s. A subtree of s is a tree consists of a node in s and all of this node’s descendants. The tree s could also be considered as a subtree of itself.
-Example 1: Given tree s:
- 3 / \ 4 5 / \ 1 2  Given tree t:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/campus-bikes/">Campus Bikes</a></h2>
-
-      <p>On a campus represented as a 2D grid, there are N workers and M bikes, with N &lt;= M. Each worker and bike is a 2D coordinate on this grid.
-Our goal is to assign a bike to each worker. Among the available bikes and workers, we choose the (worker, bike) pair with the shortest Manhattan distance between each other, and assign the bike to that worker. (If there are multiple (worker, bike) pairs with the same shortest Manhattan distance, we choose the pair with the smallest worker index; if there are multiple ways to do that, we choose the pair with the smallest bike index).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/path-sum/">Path Sum</a></h2>
-
-      <p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
-Note: A leaf is a node with no children.
-Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1 return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/continuous-subarray-sum/">Continuous Subarray Sum</a></h2>
-
-      <p>Given a list of non-negative numbers and a target integer k, write a function to check if the array has a continuous subarray of size at least 2 that sums up to a multiple of k, that is, sums up to n*k where n is also an integer.
-Example 1: Input: [23, 2, 4, 6, 7], k=6 Output: True Explanation: Because [2, 4] is a continuous subarray of size 2 and sums up to 6.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
