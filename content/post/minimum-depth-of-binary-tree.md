@@ -27,6 +27,7 @@ return its minimum depth = 2.
 ```
 
 ### Solution:
+Recursion
 ```java
 /**
  * Definition for a binary tree node.
@@ -47,4 +48,58 @@ class Solution {
     }
 
 }
+```
+DFS using stack
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def minDepth(self, root: TreeNode) -> int:
+        stack = []
+
+        if root:
+            stack.append((root, 1))
+
+        minDepth = math.inf
+        while stack:
+            root, currDepth = stack.pop()
+            if root:
+                if not root.left and not root.right:
+                    minDepth = min(minDepth, currDepth)
+                stack.append((root.left, currDepth+1))
+                stack.append((root.right, currDepth+1))
+
+        return minDepth if minDepth != math.inf else 0
+```
+BFS using queue
+```python
+from collections import deque
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def minDepth(self, root: TreeNode) -> int:
+        queue = deque([])
+
+        if not root:
+            return 0
+
+        queue.append((root, 1))
+
+        while deque:
+            root, currDepth = queue.popleft()
+            if root:
+                if not root.left and not root.right:
+                    return currDepth
+                queue.append((root.left, currDepth+1))
+                queue.append((root.right, currDepth+1))
 ```
