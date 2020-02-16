@@ -27,8 +27,8 @@ Output: false
 ```
 ### Solution
 ```python
-# time: o(n)
-# space: o(n)
+# time: `O(n)`
+# space: `O(n)`
 class Solution:
     def containsNearbyDuplicate(self, nums, k):
         """

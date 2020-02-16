@@ -24,7 +24,7 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 ```
 ### Solution
 ```python
-# time: o(n)
+# time: `O(n)`
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         n = len(nums)

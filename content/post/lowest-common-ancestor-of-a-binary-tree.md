@@ -2,7 +2,7 @@
 title: "Lowest Common Ancestor of a Binary Tree"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "binary-tree", "dfs", "divide-and-conquer"]
+tags: ["leetcode", "binary-tree", "recursion", "dfs", "divide-and-conquer"]
 categories: ["algorithm"]
 date: 2018-11-01T13:18:53-07:00
 draft: false
@@ -33,11 +33,14 @@ Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
 Output: 5
 Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
 ```
+
 ### Note
 - All of the nodes' values will be unique.
 - p and q are different and both values will exist in the binary tree.
 
 ### Solution
+Time complexity: `O(n)`
+Space complexity: `O(n)`
 ```python
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -103,4 +106,40 @@ class Solution {
         }
     }
 }
+```
+DFS using parent pointer
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        stack = [root]
+        parentMap = {root: None}
+
+        while p not in parentMap or q not in parentMap:
+            curr = stack.pop()
+
+            if curr.left:
+                parentMap[curr.left] = curr
+                stack.append(curr.left)
+
+            if curr.right:
+                parentMap[curr.right] = curr
+                stack.append(curr.right)
+
+        parents = set()
+
+        while p:
+            parents.add(p)
+            p = parentMap[p]
+
+        while q not in parents:
+            q = parentMap[q]
+
+        return q
 ```

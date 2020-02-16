@@ -84,7 +84,7 @@ class Solution:
     def getHeight(self, root):
         if not root:
             return 0
-        return 1 + max(self.getHeight(root.left), self.getHeight(root.right));
+        return 1 + max(self.getHeight(root.left), self.getHeight(root.right))
 
     def fill(self, res, root, i, l, r):
         if not root:

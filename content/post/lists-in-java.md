@@ -23,4 +23,4 @@ remove(Object o): list.remove(new Integer(4));
 |------|------|
 | Can insert or remove anywhere in the list without shifting elements | Not sortable |
 | Insert: O(1) | Elements are not stored in contiguous memory addresses |
-| Remove: O(1) | Find: O(n), as must traverse to find an element |
+| Remove: O(1) | Find: `O(n)`, as must traverse to find an element |

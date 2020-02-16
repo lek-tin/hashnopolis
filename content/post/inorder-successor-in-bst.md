@@ -54,7 +54,7 @@ class Solution:
             return self.inorderSuccessor(root.right, p)
 ```
 ```python
-# time: o(n)
+# time: `O(n)`
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):

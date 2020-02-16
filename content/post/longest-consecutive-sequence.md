@@ -20,7 +20,7 @@ Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefor
 ```
 ### Solution
 ```python
-# Time: o(n)
+# Time: `O(n)`
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         # Count occurence of nums

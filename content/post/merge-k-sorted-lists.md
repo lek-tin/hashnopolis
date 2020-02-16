@@ -51,7 +51,7 @@ Space complexity : `O(k+N)`
 #         self.val = x
 #         self.next = None
 # time: o(nlogK), where k is the number of linked lists
-# space: o(n)
+# space: `O(n)`
 # l1: xxxxx
 # l2: xxxxx  ------> merge(l1, l2) = n  ---↓
 # l3: xxxxx                                ↓

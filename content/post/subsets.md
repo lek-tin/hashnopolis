@@ -30,7 +30,7 @@ Output:
 ### Solution
 ```python
 # Time: o(2^n)
-# Space: o(n)
+# Space: `O(n)`
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         results = []

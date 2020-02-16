@@ -43,7 +43,7 @@ Return false.
 ### Solution
 Top-down recursion
 Time complexity: O(nlogn). We can calculate this using `T(h) = T(h−1) + T(h−2) + 1`, height denoted as `h`.
-Space complexity: O(n)
+Space complexity: `O(n)`
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
@@ -71,8 +71,8 @@ class Solution:
         return max(self.getHeight(root.left), self.getHeight(root.right)) + 1
 ```
 Bottom-up recurssion
-Time complexity: O(n).
-Space complexity: O(n)
+Time complexity: `O(n)`.
+Space complexity: `O(n)`
 ```python
 # Definition for a binary tree node.
 # class TreeNode:

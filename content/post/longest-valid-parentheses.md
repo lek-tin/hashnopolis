@@ -28,8 +28,8 @@ Explanation: The longest valid parentheses substring is "()()"
 ### Solution
 Dynamic programming
 ```java
-// Time: O(n)
-// Space: O(n)
+// Time: `O(n)`
+// Space: `O(n)`
 public class Solution {
     public int longestValidParentheses(String s) {
         int maxans = 0;
@@ -55,8 +55,8 @@ public class Solution {
 ```
 Stack
 ```java
-// Time: O(n)
-// Space: O(n)
+// Time: `O(n)`
+// Space: `O(n)`
 public class Solution {
 
     public int longestValidParentheses(String s) {
@@ -83,7 +83,7 @@ public class Solution {
 ```
 without extra space
 ```java
-// Time: O(n)
+// Time: `O(n)`
 // Space: O(1)
 public class Solution {
     public int longestValidParentheses(String s) {

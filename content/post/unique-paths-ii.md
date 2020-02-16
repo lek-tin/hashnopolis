@@ -41,7 +41,7 @@ There are two ways to reach the bottom-right corner:
 ### Solution:
 ```python
 # Time: O(m*n)
-# Space: O(n)
+# Space: `O(n)`
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
         m = len(obstacleGrid)
@@ -77,7 +77,7 @@ class Solution:
 ```
 ```java
 // Time: O(m*n)
-// Space: O(n)
+// Space: `O(n)`
 class Solution {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         if (obstacleGrid == null || obstacleGrid.length == 0 || obstacleGrid[0].length == 0) {

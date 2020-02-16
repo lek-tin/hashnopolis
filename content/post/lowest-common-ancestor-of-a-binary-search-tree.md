@@ -35,66 +35,60 @@ Output: 2
 Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself 
              according to the LCA definition.
 ```
+
 ### Note
 - All of the nodes' values will be unique.
 - p and q are different and both values will exist in the BST.
+
 ### Solution
+Recursion
+Time complexity: `O(n)`  
+Space complexity: `O(n)`  
 ```python
 # Definition for a binary tree node.
-# class TreeNode(object):
+# class TreeNode:
 #     def __init__(self, x):
 #         self.val = x
 #         self.left = None
 #         self.right = None
 
-class Solution(object):
-    def lowestCommonAncestor(self, root, p, q):
-        """
-        :type root: TreeNode
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: TreeNode
-        """
-        # Edge/Condition
-        if not root:
-            return None
-        if root == p or root == q:
-            return root
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        parentVal = root.val
+        pVal, qVal = p.val, q.val
 
-        # Divide
-        left = self.lowestCommonAncestor(root.left, p, q)
-        right = self.lowestCommonAncestor(root.right, p, q)
-
-        # Conquer
-        if left and right:
+        if pVal > parentVal and qVal > parentVal:
+            return self.lowestCommonAncestor(root.right, p, q)
+        elif pVal < parentVal and qVal < parentVal:
+            return self.lowestCommonAncestor(root.left, p, q)
+        else:
             return root
-        if not left:
-            return right
-        if not right:
-            return left
 ```
-```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        // base condition
-        if (root == null) return null;
+DFS using stack
+Time complexity: `O(n)`  
+Space complexity: `O(n)`  
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
 
-        if (root.val < Math.min(p.val, q.val)) {
-            return lowestCommonAncestor(root.right, p, q);
-        } else if (root.val > Math.max(p.val, q.val)) {
-            return lowestCommonAncestor(root.left, p, q);
-        } else {
-            return root;
-        }
-    }
-}
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        pVal, qVal = p.val, q.val
+
+        stack = [root]
+
+        while stack:
+            node = stack.pop()
+            if node:
+                parentVal = node.val
+                if pVal > parentVal and qVal > parentVal:
+                    stack.append(node.right)
+                elif pVal < parentVal and qVal < parentVal:
+                    stack.append(node.left)
+                else:
+                    return node
 ```

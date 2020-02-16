@@ -24,7 +24,7 @@ Output:
 ### Solution
 ```python
 # Time: O(n*2^n)
-# Space: O(n). At any time, only one call stack will be in progress
+# Space: `O(n)`. At any time, only one call stack will be in progress
 # For example, in put 'ababaaeqwds', one possible call stack will look like 'aba'->'b'->'aa'->'e'->'q'->'w'->'d'->'s': n space
 class Solution:
     def partition(self, s: str) -> List[List[str]]:

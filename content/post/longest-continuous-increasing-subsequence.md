@@ -26,7 +26,7 @@ Explanation: The longest continuous increasing subsequence is [2], its length is
 ### Note Length of the array will not exceed `10,000`.
 ### Solution
 ```python
-# Time: o(n)
+# Time: `O(n)`
 # Space: o(1)
 class Solution:
     def findLengthOfLCIS(self, nums):
