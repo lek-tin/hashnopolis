@@ -366,7 +366,7 @@ Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We
       <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-iv-input-is-a-bst/">Two Sum Iv Input Is a Bst</a></h2>
 
       <p>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: o(n) # space: o(n) # Definition for a binary tree node.</p>
+Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</p>
 
       <p class="meta">
         
@@ -393,7 +393,7 @@ Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Inpu
 
       <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
 
       <p class="meta">
         

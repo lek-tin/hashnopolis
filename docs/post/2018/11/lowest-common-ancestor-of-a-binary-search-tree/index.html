@@ -232,77 +232,62 @@ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of 
 
 <ul>
 <li>All of the nodes&rsquo; values will be unique.</li>
-
-<li><p>p and q are different and both values will exist in the BST.</p>
+<li>p and q are different and both values will exist in the BST.</li>
+</ul>
 
 <h3 id="solution">Solution</h3>
 
-<p>```python</p>
+<p>Recursion
+Time complexity: <code>O(n)</code><br />
+Space complexity: <code>O(n)</code></p>
 
-<h1 id="definition-for-a-binary-tree-node">Definition for a binary tree node.</h1>
+<pre><code class="language-python"># Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
 
-<h1 id="class-treenode-object">class TreeNode(object):</h1>
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -&gt; 'TreeNode':
+        parentVal = root.val
+        pVal, qVal = p.val, q.val
 
-<h1 id="def-init-self-x">def <strong>init</strong>(self, x):</h1>
-
-<h1 id="self-val-x">self.val = x</h1>
-
-<h1 id="self-left-none">self.left = None</h1>
-
-<h1 id="self-right-none">self.right = None</h1></li>
-</ul>
-
-<p>class Solution(object):
-    def lowestCommonAncestor(self, root, p, q):
-        &ldquo;&rdquo;&rdquo;
-        :type root: TreeNode
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: TreeNode
-        &ldquo;&rdquo;&rdquo;
-        # Edge/Condition
-        if not root:
-            return None
-        if root == p or root == q:
-            return root</p>
-
-<pre><code>    # Divide
-    left = self.lowestCommonAncestor(root.left, p, q)
-    right = self.lowestCommonAncestor(root.right, p, q)
-
-    # Conquer
-    if left and right:
-        return root
-    if not left:
-        return right
-    if not right:
-        return left
+        if pVal &gt; parentVal and qVal &gt; parentVal:
+            return self.lowestCommonAncestor(root.right, p, q)
+        elif pVal &lt; parentVal and qVal &lt; parentVal:
+            return self.lowestCommonAncestor(root.left, p, q)
+        else:
+            return root
 </code></pre>
 
-<pre><code>```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        // base condition
-        if (root == null) return null;
+<p>DFS using stack
+Time complexity: <code>O(n)</code><br />
+Space complexity: <code>O(n)</code></p>
 
-        if (root.val &lt; Math.min(p.val, q.val)) {
-            return lowestCommonAncestor(root.right, p, q);
-        } else if (root.val &gt; Math.max(p.val, q.val)) {
-            return lowestCommonAncestor(root.left, p, q);
-        } else {
-            return root;
-        }
-    }
-}
+<pre><code class="language-python"># Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -&gt; 'TreeNode':
+        pVal, qVal = p.val, q.val
+
+        stack = [root]
+
+        while stack:
+            node = stack.pop()
+            if node:
+                parentVal = node.val
+                if pVal &gt; parentVal and qVal &gt; parentVal:
+                    stack.append(node.right)
+                elif pVal &lt; parentVal and qVal &lt; parentVal:
+                    stack.append(node.left)
+                else:
+                    return node
 </code></pre>
 
   </div>

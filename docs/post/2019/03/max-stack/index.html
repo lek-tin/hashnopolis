@@ -280,7 +280,7 @@ stack.top(); -&gt; 5
 <p>Idea 2: double linked list + treeMap</p>
 
 <pre><code class="language-java">// Time: O(logN) for all operations except peek which is O(1)
-// Space: O(N)
+// Space: `O(n)`
 class MaxStack {
     TreeMap&lt;Integer, List&lt;Node&gt;&gt; map;
     DoubleLinkedList dll;

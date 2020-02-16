@@ -311,7 +311,7 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
 
       <p>Design and implement a TwoSum class. It should support the following operations: add and find.
 add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
-Example 1: add(1); add(3); add(5); find(4) -&gt; true find(7) -&gt; false  Example 2: add(3); add(1); add(2); find(3) -&gt; true find(6) -&gt; false  Solution # Time: add is o(1), find is o(n) # Space: o(n) class TwoSum: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
+Example 1: add(1); add(3); add(5); find(4) -&gt; true find(7) -&gt; false  Example 2: add(3); add(1); add(2); find(3) -&gt; true find(6) -&gt; false  Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
 
       <p class="meta">
         
@@ -337,7 +337,7 @@ Example 1: add(1); add(3); add(5); find(4) -&gt; true find(7) -&gt; false  Examp
       <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-iv-input-is-a-bst/">Two Sum Iv Input Is a Bst</a></h2>
 
       <p>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: o(n) # space: o(n) # Definition for a binary tree node.</p>
+Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</p>
 
       <p class="meta">
         
@@ -364,7 +364,7 @@ Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Inpu
 
       <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
 
       <p class="meta">
         

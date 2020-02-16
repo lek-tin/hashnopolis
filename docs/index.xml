@@ -180,7 +180,7 @@ Note:  Return an empty list if there is no such transformation sequence. All wor
       <guid>http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/</guid>
       <description>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
 Example 1: Input: &amp;quot;(()&amp;quot; Output: 2 Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot;  Example 2: Input: &amp;quot;)()())&amp;quot; Output: 4 Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;  Solution Dynamic programming
-// Time: O(n) // Space: O(n) public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</description>
+// Time: `O(n)` // Space: `O(n)` public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</description>
     </item>
     
     <item>
@@ -434,7 +434,7 @@ Note that read4() has its own file pointer, much like FILE *fpin C.</description
       <guid>http://www.hashnopolis.com/post/2019/10/strobogrammatic-number-ii/</guid>
       <description>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
 Find all strobogrammatic numbers that are of length = n.
-Example: Input: n = 2 Output: [&amp;quot;11&amp;quot;,&amp;quot;69&amp;quot;,&amp;quot;88&amp;quot;,&amp;quot;96&amp;quot;]  Solution # Time: O(n^2 * 5^(n/2)) # Space: O(n) class Solution: def findStrobogrammatic(self, n: int) -&amp;gt; List[str]: stroboPairs = { &amp;quot;0&amp;quot;: &amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;6&amp;quot;: &amp;quot;9&amp;quot;, &amp;quot;8&amp;quot;: &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;: &amp;quot;6&amp;quot; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&amp;quot;&amp;quot;] if curr == 1: return list(&amp;quot;018&amp;quot;) prev = self.</description>
+Example: Input: n = 2 Output: [&amp;quot;11&amp;quot;,&amp;quot;69&amp;quot;,&amp;quot;88&amp;quot;,&amp;quot;96&amp;quot;]  Solution # Time: O(n^2 * 5^(n/2)) # Space: `O(n)` class Solution: def findStrobogrammatic(self, n: int) -&amp;gt; List[str]: stroboPairs = { &amp;quot;0&amp;quot;: &amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;6&amp;quot;: &amp;quot;9&amp;quot;, &amp;quot;8&amp;quot;: &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;: &amp;quot;6&amp;quot; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&amp;quot;&amp;quot;] if curr == 1: return list(&amp;quot;018&amp;quot;) prev = self.</description>
     </item>
     
     <item>
@@ -608,7 +608,7 @@ Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is
       <guid>http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/</guid>
       <description> Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
-Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num+1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l += 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right += 1 l += 1 # Update longest longest = max(longest, l) return longest  </description>
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num+1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l += 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right += 1 l += 1 # Update longest longest = max(longest, l) return longest  </description>
     </item>
     
     <item>
@@ -661,7 +661,7 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 +
       
       <guid>http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/</guid>
       <description> Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
-Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.  Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.  Solution # time: o(n) class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res  </description>
+Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.  Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.  Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res  </description>
     </item>
     
     <item>
@@ -837,7 +837,7 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
       <guid>http://www.hashnopolis.com/post/2019/08/two-sum-iii-data-structure-design-design/</guid>
       <description>Design and implement a TwoSum class. It should support the following operations: add and find.
 add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
-Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false  Example 2: add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false  Solution # Time: add is o(1), find is o(n) # Space: o(n) class TwoSum: def __init__(self): &amp;quot;&amp;quot;&amp;quot; Initialize your data structure here.</description>
+Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false  Example 2: add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false  Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &amp;quot;&amp;quot;&amp;quot; Initialize your data structure here.</description>
     </item>
     
     <item>
@@ -847,7 +847,7 @@ Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; fals
       
       <guid>http://www.hashnopolis.com/post/2019/08/two-sum-iv-input-is-a-bst/</guid>
       <description>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: o(n) # space: o(n) # Definition for a binary tree node.</description>
+Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -858,7 +858,7 @@ Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Inpu
       <guid>http://www.hashnopolis.com/post/2019/08/two-sum/</guid>
       <description>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</description>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</description>
     </item>
     
     <item>
@@ -937,7 +937,7 @@ Solution: /** * Definition for singly-linked list. * public class ListNode { * i
       <guid>http://www.hashnopolis.com/post/2019/08/palindrome-partitioning/</guid>
       <description>Given a string s, partition s such that every substring of the partition is a palindrome.
 Return all possible palindrome partitioning of s.
-Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;] ]  Solution # Time: O(n*2^n) # Space: O(n). At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&amp;gt;&#39;b&#39;-&amp;gt;&#39;aa&#39;-&amp;gt;&#39;e&#39;-&amp;gt;&#39;q&#39;-&amp;gt;&#39;w&#39;-&amp;gt;&#39;d&#39;-&amp;gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</description>
+Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;] ]  Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&amp;gt;&#39;b&#39;-&amp;gt;&#39;aa&#39;-&amp;gt;&#39;e&#39;-&amp;gt;&#39;q&#39;-&amp;gt;&#39;w&#39;-&amp;gt;&#39;d&#39;-&amp;gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</description>
     </item>
     
     <item>
@@ -1927,7 +1927,7 @@ Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Examp
       <guid>http://www.hashnopolis.com/post/2018/11/powx-n/</guid>
       <description>Example 1 Input: 2.00000, 10 Output: 1024.00000  Example 2 Input: 2.10000, 3 Output: 9.26100  Example 3 Input: 2.00000, -2 Output: 0.25000  Explanation 2-2 = 1&amp;frasl;22 = 1&amp;frasl;4 = 0.25 Note  -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]
 Solution ```python
-Time: o(logN) Space: o(n) class Solution: def myPow(self, x, n): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type x: float :type n: int :rtype: float &amp;ldquo;&amp;rdquo;&amp;rdquo; if n &amp;gt; 0: return self.</description>
+Time: o(logN) Space: O(n) class Solution: def myPow(self, x, n): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type x: float :type n: int :rtype: float &amp;ldquo;&amp;rdquo;&amp;rdquo; if n &amp;gt; 0: return self.</description>
     </item>
     
     <item>
@@ -2456,7 +2456,7 @@ Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6  Example 2 Input: [-10,9,20,null,nu
       
       <guid>http://www.hashnopolis.com/post/2018/10/subsets-ii/</guid>
       <description>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution # Time: o(2^n) # Space: o(n) class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
     </item>
     
     <item>
@@ -2684,7 +2684,7 @@ Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2 Input: 8 Outp
       
       <guid>http://www.hashnopolis.com/post/2018/09/subsets/</guid>
       <description>Given a set of distinct integers, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]  Solution # Time: o(2^n) # Space: o(n) class Solution: def subsets(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]  Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsets(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
     </item>
     
     <item>
