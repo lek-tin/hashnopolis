@@ -7,10 +7,54 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 15 Feb 2020 20:14:50 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2020 23:36:34 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sliding Puzzle</title>
+      <link>http://www.hashnopolis.com/post/2020/02/sliding-puzzle/</link>
+      <pubDate>Mon, 17 Feb 2020 23:36:34 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/sliding-puzzle/</guid>
+      <description>On a 2x3 board, there are 5 tiles represented by the integers 1 through 5, and an empty square represented by 0.
+A move consists of choosing 0 and a 4-directionally adjacent number and swapping it.
+The state of the board is solved if and only if the board is [[1,2,3],[4,5,0]].
+Given a puzzle board, return the least number of moves required so that the state of the board is solved.</description>
+    </item>
+    
+    <item>
+      <title>Shortest Common Supersequence</title>
+      <link>http://www.hashnopolis.com/post/2020/02/shortest-common-supersequence/</link>
+      <pubDate>Sun, 16 Feb 2020 13:24:49 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/shortest-common-supersequence/</guid>
+      <description>Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If multiple answers exist, you may return any of them.
+(A string S is a subsequence of string T if deleting some number of characters from T (possibly 0, and the characters are chosen anywhere from T) results in the string S.)
+Example 1: Input: str1 = &amp;quot;abac&amp;quot;, str2 = &amp;quot;cab&amp;quot; Output: &amp;quot;cabac&amp;quot; Explanation: str1 = &amp;quot;abac&amp;quot; is a subsequence of &amp;quot;cabac&amp;quot; because we can delete the first &amp;quot;c&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Longest Common Substring</title>
+      <link>http://www.hashnopolis.com/post/2020/02/longest-common-substring/</link>
+      <pubDate>Sun, 16 Feb 2020 12:34:38 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/longest-common-substring/</guid>
+      <description>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m + 1, n + 1. int L[][] = new int[m+1][n+1]; /* Following steps build L[m+1][n+1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&amp;lt;=m; i++) { for (int j=0; j&amp;lt;=n; j++) { if (i == 0 || j == 0) // Initialise L[0][0] = 0 L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] + 1 = 0 + 1 = 1 L[i][j] = L[i-1][j-1] + 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</description>
+    </item>
+    
+    <item>
+      <title>Lexicographical Numbers</title>
+      <link>http://www.hashnopolis.com/post/2020/02/lexicographical-numbers/</link>
+      <pubDate>Sun, 16 Feb 2020 01:09:58 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/lexicographical-numbers/</guid>
+      <description>Given an integer n, return 1 - n in lexicographical order.
+For example, given 13, return: [1,10,11,12,13,2,3,4,5,6,7,8,9].
+Please optimize your algorithm to use less time and space. The input size may be as large as 5,000,000.
+Solution class Solution: def lexicalOrder(self, n: int) -&amp;gt; List[int]: res = [0 for i in range(n)] curr = 1 for i in range(n): res[i] = curr # lower digits if curr * 10 &amp;lt;= n: curr *= 10 # higher digits else: # if curr is greater than n, we reverse it by /10 if curr &amp;gt;= n: curr //= 10 curr += 1 # if curr becomes X00000, we need to get rid of the trailing 0&#39;s while curr % 10 == 0: curr //= 10 return res # Input: n = 50 # Output: [1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,6,7,8,9]  Recursion</description>
+    </item>
     
     <item>
       <title>Balanced Binary Tree</title>

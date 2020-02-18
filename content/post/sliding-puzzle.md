@@ -80,6 +80,7 @@ class Solution:
         while q:
             steps += 1
             size = len(q)
+            # Expand layer by layer
             while size > 0:
                 size -= 1
                 s = q.popleft()

@@ -176,6 +176,34 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/lexicographical-numbers/">Lexicographical Numbers</a></h2>
+
+      <p>Given an integer n, return 1 - n in lexicographical order.
+For example, given 13, return: [1,10,11,12,13,2,3,4,5,6,7,8,9].
+Please optimize your algorithm to use less time and space. The input size may be as large as 5,000,000.
+Solution class Solution: def lexicalOrder(self, n: int) -&gt; List[int]: res = [0 for i in range(n)] curr = 1 for i in range(n): res[i] = curr # lower digits if curr * 10 &lt;= n: curr *= 10 # higher digits else: # if curr is greater than n, we reverse it by /10 if curr &gt;= n: curr //= 10 curr &#43;= 1 # if curr becomes X00000, we need to get rid of the trailing 0&#39;s while curr % 10 == 0: curr //= 10 return res # Input: n = 50 # Output: [1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,6,7,8,9]  Recursion</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2020/02/k-th-smallest-in-lexicographical-order/">K Th Smallest in Lexicographical Order</a></h2>
 
       <p> Given integers n and k, find the lexicographically k-th smallest integer in the range from 1 to n.

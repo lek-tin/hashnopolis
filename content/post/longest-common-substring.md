@@ -2,7 +2,7 @@
 title: "Longest Common Substring"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dynamic-programming]
+tags: ["leetcode", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2020-02-16T12:34:38-08:00
 lastmod: 2020-02-16T12:34:38-08:00

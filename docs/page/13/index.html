@@ -170,11 +170,11 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/gas-station/">Gas Station</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/prison-cells-after-n-days/">Prison Cells After N Days</a></h2>
 
-      <p>There are N gas stations along a circular route, where the amount of gas at station i is gas[i].
-You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from station i to its next station (i&#43;1). You begin the journey with an empty tank at one of the gas stations.
-Return the starting gas station’s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.</p>
+      <p>There are 8 prison cells in a row, and each cell is either occupied or vacant.
+Each day, whether the cell is occupied or vacant changes according to the following rules:
+ If a cell has two adjacent neighbors that are both occupied or both vacant, then the cell becomes occupied. Otherwise, it becomes vacant. (Note that because the prison is a row, the first and the last cells in the row can’t have two adjacent neighbors.</p>
 
       <p class="meta">
         
@@ -187,6 +187,84 @@ Return the starting gas station’s index if you can travel around the circuit o
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/sliding-window-maximum/">Sliding Window Maximum</a></h2>
+
+      <p>Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
+Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7  Note: You may assume k is always valid, 1 ≤ k ≤ input array’s size for non-empty array.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/kth-largest-element-in-a-stream/">Kth Largest Element in a Stream</a></h2>
+
+      <p>Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+Your KthLargest class will have a constructor which accepts an integer k and an integer array nums, which contains initial elements from the stream. For each call to the method KthLargest.add, return the element representing the kth largest element in the stream.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/most-common-word/">Most Common Word</a></h2>
+
+      <p>Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words. It is guaranteed there is at least one word that isn’t banned, and that the answer is unique.
+Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
@@ -334,87 +412,6 @@ Example 1: Input: [[0,30],[5,10],[15,20]] Output: false  Example 2: Input: [[7,1
       <p>A robot is located at the top-left corner of a m x n grid (marked ‘Start’ in the diagram below).
 The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked ‘Finish’ in the diagram below).
 Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/largest-rectangle-in-histogram/">Largest Rectangle in Histogram</a></h2>
-
-      <p>Given n non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
-Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
-The largest rectangle is shown in the shaded area, which has area = 10 unit.
-Example: Input: [2,1,5,6,2,3] Output: 10  Solution: Push height into the stack in ascending order.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/maximal-rectangle/">Maximal Rectangle</a></h2>
-
-      <p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area.
-Example: Input: [ [&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;,&#34;0&#34;], [&#34;1&#34;,&#34;0&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;], [&#34;1&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;,&#34;1&#34;], [&#34;1&#34;,&#34;0&#34;,&#34;0&#34;,&#34;1&#34;,&#34;0&#34;] ] Output: 6  Hint Height:
-1 0 1 0 0 2 0 2 1 1 3 1 3 2 2 4 0 0 3 0  Left:
-0 0 2 0 0 0 0 2 2 2 0 0 2 2 2 0 0 0 3 0  Right:</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/house-robber-iii/">House Robber III</a></h2>
-
-      <p>The thief has found himself a new place for his thievery again. There is only one entrance to this area, called the “root.” Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that “all houses in this place forms a binary tree”. It will automatically contact the police if two directly-linked houses were broken into on the same night.</p>
 
       <p class="meta">
         

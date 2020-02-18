@@ -170,6 +170,114 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/sliding-puzzle/">Sliding Puzzle</a></h2>
+
+      <p>On a 2x3 board, there are 5 tiles represented by the integers 1 through 5, and an empty square represented by 0.
+A move consists of choosing 0 and a 4-directionally adjacent number and swapping it.
+The state of the board is solved if and only if the board is [[1,2,3],[4,5,0]].
+Given a puzzle board, return the least number of moves required so that the state of the board is solved.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/shortest-common-supersequence/">Shortest Common Supersequence</a></h2>
+
+      <p>Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If multiple answers exist, you may return any of them.
+(A string S is a subsequence of string T if deleting some number of characters from T (possibly 0, and the characters are chosen anywhere from T) results in the string S.)
+Example 1: Input: str1 = &#34;abac&#34;, str2 = &#34;cab&#34; Output: &#34;cabac&#34; Explanation: str1 = &#34;abac&#34; is a subsequence of &#34;cabac&#34; because we can delete the first &#34;c&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/longest-common-substring/">Longest Common Substring</a></h2>
+
+      <p>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m &#43; 1, n &#43; 1. int L[][] = new int[m&#43;1][n&#43;1]; /* Following steps build L[m&#43;1][n&#43;1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&lt;=m; i&#43;&#43;) { for (int j=0; j&lt;=n; j&#43;&#43;) { if (i == 0 || j == 0) // Initialise L[0][0] = 0 L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] &#43; 1 = 0 &#43; 1 = 1 L[i][j] = L[i-1][j-1] &#43; 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/lexicographical-numbers/">Lexicographical Numbers</a></h2>
+
+      <p>Given an integer n, return 1 - n in lexicographical order.
+For example, given 13, return: [1,10,11,12,13,2,3,4,5,6,7,8,9].
+Please optimize your algorithm to use less time and space. The input size may be as large as 5,000,000.
+Solution class Solution: def lexicalOrder(self, n: int) -&gt; List[int]: res = [0 for i in range(n)] curr = 1 for i in range(n): res[i] = curr # lower digits if curr * 10 &lt;= n: curr *= 10 # higher digits else: # if curr is greater than n, we reverse it by /10 if curr &gt;= n: curr //= 10 curr &#43;= 1 # if curr becomes X00000, we need to get rid of the trailing 0&#39;s while curr % 10 == 0: curr //= 10 return res # Input: n = 50 # Output: [1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,6,7,8,9]  Recursion</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2020/02/balanced-binary-tree/">Balanced Binary Tree</a></h2>
 
       <p>Given a binary tree, determine if it is height-balanced.
@@ -321,114 +429,6 @@ Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the numbe
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/largest-component-size-by-common-factor/">Largest Component Size by Common Factor</a></h2>
-
-      <p>Given a non-empty array of unique positive integers A, consider the following graph:
-1. There are A.length nodes, labelled A[0] to A[A.length - 1]; 2. There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.
-Return the size of the largest connected component in the graph.
-Example 1: Input: [4,6,15,35] Output: 4  Example 2: Input: [20,50,9,63] Output: 2  Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8  Note:  1 &lt;= A.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/find-all-duplicates-in-an-array/">Find All Duplicates in an Array</a></h2>
-
-      <p>Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
-Find all the elements that appear twice in this array.
-Could you do it without extra space and in O(n) runtime?
-Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3]  Solution # Time: O(n) # Space: O(1) class Solution: def findDuplicates(self, nums: List[int]) -&gt; List[int]: &#34;&#34;&#34; :type nums: List[int] :rtype: List[int] &#34;&#34;&#34; result = [] for i in nums: if nums[abs(i)-1] &lt; 0: result.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/squares-of-a-sorted-array/">Squares of a Sorted Array</a></h2>
-
-      <p> Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
-Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100]  Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121]  Note:  1 &lt;= A.length &lt;= 10000 -10000 &lt;= A[i] &lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &lt;= rightPtr: i &#43;= 1 if abs(A[leftPtr]) &lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr &#43;= 1 return result  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/minesweeper/">Minesweeper</a></h2>
-
-      <p>Let’s play the minesweeper game (Wikipedia, online game)!
-You are given a 2D char matrix representing the game board. &#39;M&#39; represents an unrevealed mine, &#39;E&#39; represents an unrevealed empty square, &#39;B&#39; represents a revealed blank square that has no adjacent (above, below, left, right, and all 4 diagonals) mines, digit (&#39;1&#39; to &#39;8&#39;) represents how many mines are adjacent to this revealed square, and finally &#39;X&#39; represents a revealed mine.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 
