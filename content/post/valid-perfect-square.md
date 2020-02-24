@@ -2,10 +2,10 @@
 title: "Valid Perfect Square"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "binary-search"]
+tags: ["leetcode", "binary-search", "newton-method", "math"]
 categories: ["algorithm"]
 date: 2019-09-19T23:47:10-07:00
-lastmod: 2019-09-19T23:47:10-07:00
+lastmod: 2020-02-19T23:47:10-07:00
 draft: false
 archive: false
 ---
@@ -47,7 +47,9 @@ class Solution:
 
         return False
 ```
-Binary search version 2
+Binary search version 2  
+Time: `O(logN)`  
+Space: `O(1)`  
 ```python
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
@@ -63,4 +65,24 @@ class Solution:
                 return True
 
         return False
+```
+Newton's method
+Time: `O(logN)`  
+Space: `O(1)`  
+```python
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        if num == 1:
+            return True
+
+        # newton's method
+        # f(x) = x^2 - num = 0
+        # x_next = x - f(x) / f'(x)
+        # f(x) = x^2 -num, f'(x) = 2x
+        # x_next = (x + num/x) / 2
+        x = num // 2
+        while x*x > num:
+            x = (x + num//x) // 2
+
+        return x*x == num
 ```

@@ -27,6 +27,7 @@ Output: -1
 You may assume that you have an infinite number of each kind of coin.
 
 ### Solution:
+Java top-down version  
 ```
 if i > coin[j]:
     T[i]       =     min{T[i]        ,  1+T[i - coin[j]]};
@@ -61,25 +62,58 @@ class Solution {
     }
 }
 ```
-Python version
+Python top-down version  
+Time complexity : `O(amount * coin_denoms)`  
+Space complexity : `O(coin_denoms)`  
 ```python
-import sys
-INT_MAX = sys.maxsize
+import math
 
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         n = amount + 1
-        ans = [INT_MAX for i in range(n)]
+        ans = [math.inf for i in range(n)]
         # for amount = 0, there is no solution
         ans[0] = 0
 
         for i in range(1, n):
             for coin in coins:
-                # skip all the coins whose denomination is greater that the current amout
+                # skip all the coins whose denomination is greater that the current amount
                 if i - coin < 0:
                     continue
                 #           coin excluded, coin included
                 ans[i] = min(ans[i], ans[i - coin] + 1)
 
-        return ans[amount] if ans[amount] != INT_MAX else -1
+        return ans[amount] if ans[amount] != math.inf else -1
+```
+Python top-down version
+```python
+import math
+
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        if amount < 1:
+            return 0
+
+        dp = [0 for i in range(amount)]
+
+        return self.helper(amount, coins, dp)
+
+    def helper(self, remain, coins, mem):
+        if remain < 0:
+            return -1
+        if remain == 0:
+            return 0
+        if mem[remain-1] != 0:
+            return mem[remain-1]
+
+        min = math.inf
+        for coin in coins:
+            # Get result for remain-coin
+            res = self.helper(remain-coin, coins, mem)
+            if (res >= 0 and res < min):
+                # if res is a better choice, update min with res
+                min = res+1
+        # keep traversing: check (remain-1)
+        mem[remain-1] = -1 if (min == math.inf) else min
+        return mem[remain-1]
 ```

@@ -64,9 +64,20 @@ class Solution:
 
         for i in range(n):
             for j in range(m):
-                start += str(board[i][j])
-                goal += str((i*m + j + 1) % (n*m))
-                # print(start, goal)
+                curr = board[i][j]
+                if curr == 0:
+                    start += "XX"
+                elif curr < 10:
+                    start += "0" + str(curr)
+                else:
+                    start += str(curr)
+                order = (i*m+j+1) % (n*m)
+                if order == 0:
+                    goal += "XX"
+                elif order < 10:
+                    goal += "0" + str(order)
+                else:
+                    goal += str(order)
 
         if start == goal:
             return 0
@@ -78,24 +89,24 @@ class Solution:
         q.append(start)
 
         while q:
+            # increment by 1 for each layer
             steps += 1
             size = len(q)
-            # Expand layer by layer
+            # Expand layer by layer: up, down, left or right
             while size > 0:
                 size -= 1
                 s = q.popleft()
-                print(s)
-                p = s.index('0')
-                y = p // m
-                x = p % m
+                p = s.index('XX')
+                y = (p//2) // m
+                x = (p//2) % m
                 for i in range(len(dirs)):
                     dx = x + dirs[i][0]
                     dy = y + dirs[i][1]
                     if dx < 0 or dy <0 or dx >= m or dy >= n:
                         continue
-                    new_p = dy*m + dx
+                    new_p = (dy*m + dx)*2
                     t_arr = list(s)
-                    t_arr[p], t_arr[new_p] = t_arr[new_p], t_arr[p]
+                    t_arr[p:p+2], t_arr[new_p:new_p+2] = t_arr[new_p:new_p+2], t_arr[p:p+2]
                     t = "".join(t_arr)
                     if t in visited:
                         continue
@@ -103,9 +114,10 @@ class Solution:
                         return steps
                     visited.add(t)
                     q.append(t)
+
         return -1
 # Input: [[4,1,2],[5,0,3]]
-# output:
+# output: 5
 # 412503
 # --------
 # 412530
