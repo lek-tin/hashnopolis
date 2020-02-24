@@ -176,6 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/is-graph-bipartite/">Is Graph Bipartite</a></h2>
+
+      <p>Given an undirected graph, return true if and only if it is bipartite.
+Recall that a graph is bipartite if we can split it’s set of nodes into two independent subsets A and B such that every edge in the graph has one node in A and another node in B.
+The graph is given in the following form: graph[i] is a list of indexes j for which the edge between nodes i and j exists.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2020/01/package-dependencies/">Package Dependencies</a></h2>
 
       <p> Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&#34;Have cycle in dependency graph.&#34;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add)  </p>
@@ -408,33 +435,6 @@ Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: 
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/07/generate-parentheses/">Generate Parentheses</a></h2>
-
-      <p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
-For example, given n = 3, a solution set is:
-[ &#34;((()))&#34;, &#34;(()())&#34;, &#34;(())()&#34;, &#34;()(())&#34;, &#34;()()()&#34; ]  Solution class Solution: def generateParenthesis(self, n: int) -&gt; List[str]: &#34;&#34;&#34; :type n: int :rtype: List[str] &#34;&#34;&#34; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

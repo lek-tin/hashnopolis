@@ -170,11 +170,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/">Longest Palindromic Substring</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/02/palindrome-number/">Palindrome Number</a></h2>
 
-      <p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-Example 1 Input: &#34;babad&#34; Output: &#34;bab&#34; Note: &#34;aba&#34; is also a valid answer.  Example 2 Input: &#34;cbbd&#34; Output: &#34;bb&#34;  Solution Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &#34;&#34;&#34; :type s: str :rtype: str &#34;&#34;&#34; str_len = len(s) if str_len == 0: return &#34;&#34; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len]  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</p>
+      <p>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+Example 1: Input: 121 Output: true  Example 2: Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.  Example 3: Input: 10 Output: false Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</p>
 
       <p class="meta">
         
@@ -186,7 +185,7 @@ Example 1 Input: &#34;babad&#34; Output: &#34;bab&#34; Note: &#34;aba&#34; is al
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

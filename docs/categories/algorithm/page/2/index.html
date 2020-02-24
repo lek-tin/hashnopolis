@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/maximum-swap/">Maximum Swap</a></h2>
+
+      <p>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
+Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7.  Example 2: Input: 9973 Output: 9973 Explanation: No swap.  Note:  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&#34;0&#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &gt; int(ord(numChars[i])-ord(&#34;0&#34;)): if last[j] &gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&#34;&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2020/02/largest-component-size-by-common-factor/">Largest Component Size by Common Factor</a></h2>
 
       <p>Given a non-empty array of unique positive integers A, consider the following graph:
@@ -393,33 +419,6 @@ target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34
 
       <p>Given two words (beginWord and endWord), and a dictionary’s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that: 1. Only one letter can be changed at a time 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
 Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/">Longest Valid Parentheses</a></h2>
-
-      <p>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
-Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parentheses substring is &#34;()&#34;  Example 2: Input: &#34;)()())&#34; Output: 4 Explanation: The longest valid parentheses substring is &#34;()()&#34;  Solution Dynamic programming
-// Time: `O(n)` // Space: `O(n)` public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</p>
 
       <p class="meta">
         

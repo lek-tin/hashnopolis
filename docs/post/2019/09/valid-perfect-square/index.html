@@ -20,7 +20,7 @@
 Note: Do not use any built-in library function such as sqrt.
 Example 1: Input: 16 Output: true  Example 2: Input: 14 Output: false  Solution Binary search version 1
 class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid &#43; 1 else: right = mid - 1 return False  Binary search version 2" />
-  <meta name="keywords" content="leetcode binary-search " />
+  <meta name="keywords" content="leetcode binary-search newton-method math " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -185,13 +185,17 @@ class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1:
         
           "<a href="/tags/binary-search"><strong>binary-search</strong></a>",
         
-        <i class="small material-icons">access_time</i> 1-min read
+          "<a href="/tags/newton-method"><strong>newton-method</strong></a>",
+        
+          "<a href="/tags/math"><strong>math</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/valid-perfect-square.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Valid Perfect Square</h1>
       <h4>Created: September 19, 2019 by [lek-tin]</h4>
       
-        <h5>Last updated: September 19, 2019</h5>
+        <h5>Last updated: February 19, 2020</h5>
       
       <hr />
       
@@ -238,7 +242,9 @@ Output: false
         return False
 </code></pre>
 
-<p>Binary search version 2</p>
+<p>Binary search version 2<br />
+Time: <code>O(logN)</code><br />
+Space: <code>O(1)</code></p>
 
 <pre><code class="language-python">class Solution:
     def isPerfectSquare(self, num: int) -&gt; bool:
@@ -254,6 +260,27 @@ Output: false
                 return True
 
         return False
+</code></pre>
+
+<p>Newton&rsquo;s method
+Time: <code>O(logN)</code><br />
+Space: <code>O(1)</code></p>
+
+<pre><code class="language-python">class Solution:
+    def isPerfectSquare(self, num: int) -&gt; bool:
+        if num == 1:
+            return True
+
+        # newton's method
+        # f(x) = x^2 - num = 0
+        # x_next = x - f(x) / f'(x)
+        # f(x) = x^2 -num, f'(x) = 2x
+        # x_next = (x + num/x) / 2
+        x = num // 2
+        while x*x &gt; num:
+            x = (x + num//x) // 2
+
+        return x*x == num
 </code></pre>
 
   </div>

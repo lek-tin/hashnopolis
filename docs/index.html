@@ -170,6 +170,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/is-graph-bipartite/">Is Graph Bipartite</a></h2>
+
+      <p>Given an undirected graph, return true if and only if it is bipartite.
+Recall that a graph is bipartite if we can split it’s set of nodes into two independent subsets A and B such that every edge in the graph has one node in A and another node in B.
+The graph is given in the following form: graph[i] is a list of indexes j for which the edge between nodes i and j exists.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2020/02/sliding-puzzle/">Sliding Puzzle</a></h2>
 
       <p>On a 2x3 board, there are 5 tiles represented by the integers 1 through 5, and an empty square represented by 0.
@@ -187,7 +214,7 @@ Given a puzzle board, return the least number of moves required so that the stat
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 
@@ -403,32 +430,6 @@ Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/maximum-swap/">Maximum Swap</a></h2>
-
-      <p>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
-Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7.  Example 2: Input: 9973 Output: 9973 Explanation: No swap.  Note:  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&#34;0&#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &gt; int(ord(numChars[i])-ord(&#34;0&#34;)): if last[j] &gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&#34;&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

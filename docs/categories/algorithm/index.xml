@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 17 Feb 2020 23:36:34 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 01:20:58 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Is Graph Bipartite</title>
+      <link>http://www.hashnopolis.com/post/2020/02/is-graph-bipartite/</link>
+      <pubDate>Fri, 21 Feb 2020 01:20:58 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/is-graph-bipartite/</guid>
+      <description>Given an undirected graph, return true if and only if it is bipartite.
+Recall that a graph is bipartite if we can split it&amp;rsquo;s set of nodes into two independent subsets A and B such that every edge in the graph has one node in A and another node in B.
+The graph is given in the following form: graph[i] is a list of indexes j for which the edge between nodes i and j exists.</description>
+    </item>
     
     <item>
       <title>Sliding Puzzle</title>
@@ -550,8 +561,8 @@ Given an array that is definitely a mountain, return any i such that A[0] &amp;l
       <pubDate>Fri, 20 Sep 2019 00:21:44 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2019/09/sum-of-square-numbers/</guid>
-      <description> Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5  Example 2: Input: 3 Output: False  Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left + right*right &amp;lt; c: if (left+1)*(left+1) + right*right &amp;gt; c: right -= 1 else: left += 1 if left*left + right*right == c: return True return False  </description>
+      <description>Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c.
+Example 1: Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5  Example 2: Input: 3 Output: False  Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left + right*right &amp;lt; c: if (left+1)*(left+1) + right*right &amp;gt; c: right -= 1 else: left += 1 if left*left + right*right == c: return True return False  Without sqrt function</description>
     </item>
     
     <item>
