@@ -2,9 +2,10 @@
 title: "Binary Tree Zigzag Level Order Traversal"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "binary-tree"]
+tags: ["leetcode", "binary-tree", "bfs", "dfs"]
 categories: ["algorithm"]
 date: 2019-01-25T00:12:07-08:00
+lastmod: 2020-02-27T00:12:07-08:00
 draft: false
 archive: false
 ---
@@ -27,7 +28,9 @@ return its zigzag level order traversal as:
   [15,7]
 ]
 ```
-### Solution:
+
+### Solution
+
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
@@ -37,29 +40,69 @@ return its zigzag level order traversal as:
 #         self.right = None
 
 class Solution:
-    def zigzagLevelOrder(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        """
+    def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         res = []
+        self.traverse(root, res, 0)
+        return res
 
-        def iterate(node, level):
-            if node is None:
-                return
+    def traverse(self, root, res, level):
+        if not root:
+            return
 
-            if level == len(res):
-                res.append([node.val])
-            elif level>>1<<1 == level:
-                # print("even level")
-                res[level].append(node.val)
+        if len(res) <= level:
+            res.append([root.val])
+        elif level>>1<<1 == level:
+            res[level].append(root.val)
+        else:
+            res[level].insert(0, root.val)
+
+        self.traverse(root.left, res, level+1)
+        self.traverse(root.right, res, level+1)
+```
+
+bfs  
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+from collections import deque
+
+class Solution:
+    def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
+        res = []
+        level_list = deque()
+        if root is None:
+            return []
+        # start with the level 0 with a delimiter
+        node_queue = deque([root, None])
+        is_order_left = True
+
+        while len(node_queue) > 0:
+            curr_node = node_queue.popleft()
+
+            if curr_node:
+                if is_order_left:
+                    level_list.append(curr_node.val)
+                else:
+                    level_list.appendleft(curr_node.val)
+
+                if curr_node.left:
+                    node_queue.append(curr_node.left)
+                if curr_node.right:
+                    node_queue.append(curr_node.right)
             else:
-                # print("odd level")
-                res[level].insert(0, node.val)
+                # we finish one level
+                res.append(level_list)
+                # add a delimiter to mark the level
+                if len(node_queue) > 0:
+                    node_queue.append(None)
 
-            iterate(node.left, level+1)
-            iterate(node.right, level+1)
+                # prepare for the next level
+                level_list = deque()
+                is_order_left = not is_order_left
 
-        iterate(root, 0)
         return res
 ```
