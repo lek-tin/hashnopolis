@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin." />
+Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1 Example 2: Input: coins = [2], amount = 3 Output: -1 Note: You may assume that you have an infinite number of each kind of coin." />
   <meta name="keywords" content="leetcode dynamic-programming " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &
     
     <meta name="twitter:title" content="Coin Change" />
     <meta name="twitter:description" content="You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin." />
+Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1 Example 2: Input: coins = [2], amount = 3 Output: -1 Note: You may assume that you have an infinite number of each kind of coin." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/coin-change/" />
@@ -181,7 +181,7 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &
         
           "<a href="/tags/dynamic-programming"><strong>dynamic-programming</strong></a>",
         
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 3-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/coin-change.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Coin Change</h1>
@@ -190,86 +190,100 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &
         <h5>Last updated: September 10, 2019</h5>
       
       <hr />
-      
-
-<p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return <code>-1</code>.</p>
-
+      <p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return <code>-1</code>.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: coins = [1, 2, 5], amount = 11
 Output: 3 
 Explanation: 11 = 5 + 5 + 1
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: coins = [2], amount = 3
 Output: -1
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <p>You may assume that you have an infinite number of each kind of coin.</p>
-
 <h3 id="solution">Solution:</h3>
-
+<p>Java top-down version</p>
 <pre><code>if i &gt; coin[j]:
     T[i]       =     min{T[i]        ,  1+T[i - coin[j]]};
     changes     not picking jth coin    picking the jth coin
-</code></pre>
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">coinChange</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> coins<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> amount<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>coins <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> coins<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0 <span style="color:#f92672">||</span> amount <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">class Solution {
-    public int coinChange(int[] coins, int amount) {
-        if (coins == null || coins.length == 0 || amount &lt; 0) return -1;
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> mem <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>amount<span style="color:#f92672">+</span>1<span style="color:#f92672">];</span>
+        <span style="color:#66d9ef">int</span> infLimit <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_VALUE</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> amount<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> mem<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">else</span>
+                mem<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> infLimit<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// coins then amount or amount then coin both work.
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> coins<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> coin <span style="color:#f92672">=</span> coins<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;=</span> amount<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&gt;=</span> coin<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">int</span> without <span style="color:#f92672">=</span> mem<span style="color:#f92672">[</span>j <span style="color:#f92672">-</span> coin<span style="color:#f92672">];</span>
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>without <span style="color:#f92672">+</span> 1 <span style="color:#f92672">&lt;</span> mem<span style="color:#f92672">[</span>j<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                        mem<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> without <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// return Integer.MAX_VALUE;
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> mem<span style="color:#f92672">[</span>amount<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> infLimit <span style="color:#f92672">?</span> <span style="color:#f92672">-</span>1 <span style="color:#f92672">:</span> mem<span style="color:#f92672">[</span>amount<span style="color:#f92672">];</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Python top-down version<br>
+Time complexity : <code>O(amount * coin_denoms)</code><br>
+Space complexity : <code>O(coin_denoms)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 
-        int[] mem = new int[amount+1];
-        int infLimit = Integer.MAX_VALUE - 1;
-        for (int i = 0; i &lt;= amount; i++) {
-            if (i == 0) mem[0] = 0;
-            else
-                mem[i] = infLimit;
-        }
-        // coins then amount or amount then coin both work.
-        for (int i = 0; i &lt; coins.length; i++) {
-            int coin = coins[i];
-            for (int j = 1; j &lt;= amount; j++) {
-                if (j &gt;= coin) {
-                    int without = mem[j - coin];
-                    if (without + 1 &lt; mem[j]) {
-                        mem[j] = without + 1;
-                    }
-                }
-            }
-        }
-        // return Integer.MAX_VALUE;
-        return mem[amount] == infLimit ? -1 : mem[amount];
-    }
-}
-</code></pre>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">coinChange</span>(self, coins: List[int], amount: int) <span style="color:#f92672">-&gt;</span> int:
+        n <span style="color:#f92672">=</span> amount <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+        ans <span style="color:#f92672">=</span> [math<span style="color:#f92672">.</span>inf <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)]
+        <span style="color:#75715e"># for amount = 0, there is no solution</span>
+        ans[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 
-<p>Python version</p>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n):
+            <span style="color:#66d9ef">for</span> coin <span style="color:#f92672">in</span> coins:
+                <span style="color:#75715e"># skip all the coins whose denomination is greater that the current amount</span>
+                <span style="color:#66d9ef">if</span> i <span style="color:#f92672">-</span> coin <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+                    <span style="color:#66d9ef">continue</span>
+                <span style="color:#75715e">#           coin excluded, coin included</span>
+                ans[i] <span style="color:#f92672">=</span> min(ans[i], ans[i <span style="color:#f92672">-</span> coin] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
 
-<pre><code class="language-python">import sys
-INT_MAX = sys.maxsize
+        <span style="color:#66d9ef">return</span> ans[amount] <span style="color:#66d9ef">if</span> ans[amount] <span style="color:#f92672">!=</span> math<span style="color:#f92672">.</span>inf <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>Python top-down version</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 
-class Solution:
-    def coinChange(self, coins: List[int], amount: int) -&gt; int:
-        n = amount + 1
-        ans = [INT_MAX for i in range(n)]
-        # for amount = 0, there is no solution
-        ans[0] = 0
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">coinChange</span>(self, coins: List[int], amount: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> amount <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-        for i in range(1, n):
-            for coin in coins:
-                # skip all the coins whose denomination is greater that the current amout
-                if i - coin &lt; 0:
-                    continue
-                #           coin excluded, coin included
-                ans[i] = min(ans[i], ans[i - coin] + 1)
+        dp <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(amount)]
 
-        return ans[amount] if ans[amount] != INT_MAX else -1
-</code></pre>
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>helper(amount, coins, dp)
 
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">helper</span>(self, remain, coins, mem):
+        <span style="color:#66d9ef">if</span> remain <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">if</span> remain <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">if</span> mem[remain<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> mem[remain<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+
+        min <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>inf
+        <span style="color:#66d9ef">for</span> coin <span style="color:#f92672">in</span> coins:
+            <span style="color:#75715e"># Get result for remain-coin</span>
+            res <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>helper(remain<span style="color:#f92672">-</span>coin, coins, mem)
+            <span style="color:#66d9ef">if</span> (res <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> res <span style="color:#f92672">&lt;</span> min):
+                <span style="color:#75715e"># if res is a better choice, update min with res</span>
+                min <span style="color:#f92672">=</span> res<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+        <span style="color:#75715e"># keep traversing: check (remain-1)</span>
+        mem[remain<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> (min <span style="color:#f92672">==</span> math<span style="color:#f92672">.</span>inf) <span style="color:#66d9ef">else</span> min
+        <span style="color:#66d9ef">return</span> mem[remain<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

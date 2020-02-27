@@ -34,7 +34,7 @@ Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to th
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/08/3sum-closest/" />
@@ -192,44 +192,36 @@ Given array nums = [-1, 2, 1, -4], and target = 1. The sum that is closest to th
         <h5>Last updated: August 23, 2018</h5>
       
       <hr />
-      
-
-<p>Given an array <code>nums</code> of n integers and an integer <code>target</code>, find three integers in <code>nums</code> such that the sum is closest to <code>target</code>. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
-
+      <p>Given an array <code>nums</code> of n integers and an integer <code>target</code>, find three integers in <code>nums</code> such that the sum is closest to <code>target</code>. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
 <p>Example:</p>
-
 <pre><code>Given array nums = [-1, 2, 1, -4], and target = 1.
 
 The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: o(n^2)</span>
+<span style="color:#75715e"># Space: o(1)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">threeSumClosest</span>(self, nums: List[int], target: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> nums <span style="color:#f92672">or</span> len(nums) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-<h3 id="solution">Solution</h3>
+        nums<span style="color:#f92672">.</span>sort()
+        bestSum <span style="color:#f92672">=</span> nums[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> nums[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> nums[<span style="color:#ae81ff">2</span>]
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>):
+            num <span style="color:#f92672">=</span> nums[i]
+            left <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+            right <span style="color:#f92672">=</span> len(nums) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+                newSum <span style="color:#f92672">=</span> num <span style="color:#f92672">+</span> nums[left] <span style="color:#f92672">+</span> nums[right]
+                <span style="color:#66d9ef">if</span> abs(target <span style="color:#f92672">-</span> newSum) <span style="color:#f92672">&lt;</span> abs(target <span style="color:#f92672">-</span> bestSum):
+                    bestSum <span style="color:#f92672">=</span> newSum
+                <span style="color:#66d9ef">elif</span> newSum <span style="color:#f92672">&lt;</span> target:
+                    left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">else</span>:
+                    right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python"># Time: o(n^2)
-# Space: o(1)
-class Solution:
-    def threeSumClosest(self, nums: List[int], target: int) -&gt; int:
-        if not nums or len(nums) &lt; 3:
-            return -1
-
-        nums.sort()
-        bestSum = nums[0] + nums[1] + nums[2]
-        for i in range(0, len(nums)-2):
-            num = nums[i]
-            left = i + 1
-            right = len(nums) - 1
-            while left &lt; right:
-                newSum = num + nums[left] + nums[right]
-                if abs(target - newSum) &lt; abs(target - bestSum):
-                    bestSum = newSum
-                elif newSum &lt; target:
-                    left += 1
-                else:
-                    right -= 1
-
-        return bestSum
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> bestSum
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

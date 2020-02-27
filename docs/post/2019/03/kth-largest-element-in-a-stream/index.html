@@ -32,7 +32,7 @@ Your KthLargest class will have a constructor which accepts an integer k and an 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/kth-largest-element-in-a-stream/" />
@@ -192,14 +192,9 @@ Your KthLargest class will have a constructor which accepts an integer k and an 
         <h5>Last updated: March 9, 2019</h5>
       
       <hr />
-      
-
-<p>Design a class to find the <code>kth</code> largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.</p>
-
+      <p>Design a class to find the <code>kth</code> largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.</p>
 <p>Your <code>KthLargest</code> class will have a constructor which accepts an integer <code>k</code> and an integer array nums, which contains initial elements from the stream. For each call to the method <code>KthLargest.add</code>, return the element representing the kth largest element in the stream.</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>int k = 3;
 int[] arr = [4,5,8,2];
 KthLargest kthLargest = new KthLargest(3, arr);
@@ -208,70 +203,60 @@ kthLargest.add(5);   // returns 5
 kthLargest.add(10);  // returns 5
 kthLargest.add(9);   // returns 8
 kthLargest.add(4);   // returns 8
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <p>You may assume that nums&rsquo; <code>length ≥ k-1</code> and <code>k ≥ 1</code>.</p>
-
 <h3 id="solution">Solution:</h3>
-
 <p>Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KthLargest</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> PriorityQueue<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> pQueue <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">class KthLargest {
-    private PriorityQueue&lt;Integer&gt; pQueue = null;
-    private int k = 0;
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">KthLargest</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        pQueue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PriorityQueue<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;(</span>k<span style="color:#f92672">+</span>1<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">k</span> <span style="color:#f92672">=</span> k<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> num<span style="color:#f92672">:</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            add<span style="color:#f92672">(</span>num<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
 
-    public KthLargest(int k, int[] nums) {
-        pQueue = new PriorityQueue&lt;Integer&gt;(k+1);
-        this.k = k;
-        for (int num: nums) {
-            add(num);
-        }
-    }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> val<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        pQueue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>val<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>pQueue<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            pQueue<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
 
-    public int add(int val) {
-        pQueue.offer(val);
-        if (pQueue.size() &gt; k) {
-            pQueue.poll();
-        }
+        <span style="color:#66d9ef">return</span> pQueue<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-        return pQueue.peek();
-    }
-}
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Your KthLargest object will be instantiated and called as such:
+</span><span style="color:#75715e"> * KthLargest obj = new KthLargest(k, nums);
+</span><span style="color:#75715e"> * int param_1 = obj.add(val);
+</span><span style="color:#75715e"> */</span>
+</code></pre></div><p>Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> queue <span style="color:#f92672">as</span> Q
 
-/**
- * Your KthLargest object will be instantiated and called as such:
- * KthLargest obj = new KthLargest(k, nums);
- * int param_1 = obj.add(val);
- */
-</code></pre>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">KthLargest</span>:
+    <span style="color:#66d9ef">def</span> __init__(self, k: int, nums: List[int]):
+        self<span style="color:#f92672">.</span>heap <span style="color:#f92672">=</span> []
+        self<span style="color:#f92672">.</span>k <span style="color:#f92672">=</span> k
+        self<span style="color:#f92672">.</span>q <span style="color:#f92672">=</span> Q<span style="color:#f92672">.</span>PriorityQueue()
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> nums:
+            self<span style="color:#f92672">.</span>add(num)
 
-<p>Python</p>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(self, val: int) <span style="color:#f92672">-&gt;</span> int:
+        self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>put(val)
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>qsize() <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>k:
+            self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>get()
+        ans <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>get()
+        self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>put(ans)
+        <span style="color:#66d9ef">return</span> ans
 
-<pre><code class="language-python">import queue as Q
-
-class KthLargest:
-    def __init__(self, k: int, nums: List[int]):
-        self.heap = []
-        self.k = k
-        self.q = Q.PriorityQueue()
-        for num in nums:
-            self.add(num)
-
-    def add(self, val: int) -&gt; int:
-        self.q.put(val)
-        if self.q.qsize() &gt; self.k:
-            self.q.get()
-        ans = self.q.get()
-        self.q.put(ans)
-        return ans
-
-# Your KthLargest object will be instantiated and called as such:
-# obj = KthLargest(k, nums)
-# param_1 = obj.add(val)
-</code></pre>
-
+<span style="color:#75715e"># Your KthLargest object will be instantiated and called as such:</span>
+<span style="color:#75715e"># obj = KthLargest(k, nums)</span>
+<span style="color:#75715e"># param_1 = obj.add(val)</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

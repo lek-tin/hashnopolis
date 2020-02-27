@@ -22,7 +22,7 @@ Output: ["11","69","88","96"]
 ### Solution
 ```python
 # Time:  O(n^2 * 5^(n/2))
-# Space: O(n)
+# Space: `O(n)`
 class Solution:
     def findStrobogrammatic(self, n: int) -> List[str]:
         stroboPairs = { "0": "0", "1": "1", "6": "9", "8": "8", "9": "6" }

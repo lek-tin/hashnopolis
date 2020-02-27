@@ -32,7 +32,7 @@ Note:  The length of both num1 and num2 is &amp;lt; 5100. Both num1 and num2 con
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/add-strings/" />
@@ -192,44 +192,37 @@ Note:  The length of both num1 and num2 is &amp;lt; 5100. Both num1 and num2 con
         <h5>Last updated: October 16, 2019</h5>
       
       <hr />
-      
-
-<p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as string, return the sum of <code>num1</code> and <code>num2</code>.</p>
-
+      <p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as string, return the sum of <code>num1</code> and <code>num2</code>.</p>
 <h3 id="note">Note:</h3>
-
 <ol>
 <li>The length of both <code>num1</code> and <code>num2</code> is <code>&lt; 5100</code>.</li>
 <li>Both <code>num1</code> and <code>num2</code> contains only digits <code>0-9</code>.</li>
 <li>Both <code>num1</code> and <code>num2</code> does not contain any leading zero.</li>
 <li>You must not use any built-in BigInteger library or convert the inputs to integer directly.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">addStrings</span>(self, num1: str, num2: str) <span style="color:#f92672">-&gt;</span> str:
+        <span style="color:#66d9ef">if</span> len(num1) <span style="color:#f92672">&lt;</span> len(num2):
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>addStrings(num2, num1)
 
-<pre><code class="language-python">class Solution:
-    def addStrings(self, num1: str, num2: str) -&gt; str:
-        if len(num1) &lt; len(num2):
-            return self.addStrings(num2, num1)
+        n, m <span style="color:#f92672">=</span> len(num1), len(num2)
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> n:
+            <span style="color:#66d9ef">return</span> num2
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> m:
+            <span style="color:#66d9ef">return</span> num1
 
-        n, m = len(num1), len(num2)
-        if not n:
-            return num2
-        if not m:
-            return num1
-
-        res, carry, zero = &quot;&quot;, 0, ord(&quot;0&quot;)
-        for i in range(n):
-            a, b =  ord(num1[-i-1])-zero, ord(num2[-i-1])-zero if i &lt;m else 0
-            print(a, b)
-            sum = carry + a + b
-            carry = sum // 10
-            res = chr(sum % 10 + zero) + res
-        if carry &gt; 0:
-            res = chr(carry + zero) + res
-        return res
-</code></pre>
-
+        res, carry, zero <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#ae81ff">0</span>, ord(<span style="color:#e6db74">&#34;0&#34;</span>)
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+            a, b <span style="color:#f92672">=</span>  ord(num1[<span style="color:#f92672">-</span>i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])<span style="color:#f92672">-</span>zero, ord(num2[<span style="color:#f92672">-</span>i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])<span style="color:#f92672">-</span>zero <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&lt;</span>m <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+            <span style="color:#66d9ef">print</span>(a, b)
+            sum <span style="color:#f92672">=</span> carry <span style="color:#f92672">+</span> a <span style="color:#f92672">+</span> b
+            carry <span style="color:#f92672">=</span> sum <span style="color:#f92672">//</span> <span style="color:#ae81ff">10</span>
+            res <span style="color:#f92672">=</span> chr(sum <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> zero) <span style="color:#f92672">+</span> res
+        <span style="color:#66d9ef">if</span> carry <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+            res <span style="color:#f92672">=</span> chr(carry <span style="color:#f92672">+</span> zero) <span style="color:#f92672">+</span> res
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

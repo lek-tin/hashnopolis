@@ -38,8 +38,8 @@ Output: False
 ```
 ### Solution
 ```python
-# time: o(n)
-# space: o(n)
+# time: `O(n)`
+# space: `O(n)`
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -66,8 +66,8 @@ class Solution:
         return self.traverse(root.left, visited, k) or self.traverse(root.right, visited, k)
 ```
 ```python
-# time: o(n)
-# space: o(n)
+# time: `O(n)`
+# space: `O(n)`
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):

@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
-Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Example 2 Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot;  Example 3 Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot;  Example 4 Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot;  Solution class Solution: def __init__(self): self." />
+Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot; Example 2 Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot; Example 3 Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot; Example 4 Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot; Solution class Solution: def __init__(self): self." />
   <meta name="keywords" content="leetcode python " />
   
   
@@ -25,14 +25,14 @@ Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Examp
     
     <meta name="twitter:title" content="Integer to English Words" />
     <meta name="twitter:description" content="Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
-Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Example 2 Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot;  Example 3 Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot;  Example 4 Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot;  Solution class Solution: def __init__(self): self." />
+Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot; Example 2 Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot; Example 3 Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot; Example 4 Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot; Solution class Solution: def __init__(self): self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/integer-to-english-words/" />
@@ -190,144 +190,124 @@ Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Examp
         <h5>Last updated: October 2, 2019</h5>
       
       <hr />
-      
-
-<p>Convert a <strong>non-negative</strong> integer to its english words representation. Given input is guaranteed to be less than <code>231 - 1</code>.</p>
-
+      <p>Convert a <strong>non-negative</strong> integer to its english words representation. Given input is guaranteed to be less than <code>231 - 1</code>.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: 123
 Output: &quot;One Hundred Twenty Three&quot;
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 12345
 Output: &quot;Twelve Thousand Three Hundred Forty Five&quot;
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: 1234567
 Output: &quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&quot;
-</code></pre>
-
-<h3 id="example-4">Example 4</h3>
-
+</code></pre><h3 id="example-4">Example 4</h3>
 <pre><code>Input: 1234567891
 Output: &quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven 
 Thousand Eight Hundred Ninety One&quot;
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>lessThan20 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;One&#34;</span>, <span style="color:#e6db74">&#34;Two&#34;</span>, <span style="color:#e6db74">&#34;Three&#34;</span>, <span style="color:#e6db74">&#34;Four&#34;</span>, <span style="color:#e6db74">&#34;Five&#34;</span>, <span style="color:#e6db74">&#34;Six&#34;</span>, <span style="color:#e6db74">&#34;Seven&#34;</span>, <span style="color:#e6db74">&#34;Eight&#34;</span>, <span style="color:#e6db74">&#34;Nine&#34;</span>, <span style="color:#e6db74">&#34;Ten&#34;</span>, <span style="color:#e6db74">&#34;Eleven&#34;</span>, <span style="color:#e6db74">&#34;Twelve&#34;</span>, <span style="color:#e6db74">&#34;Thirteen&#34;</span>, <span style="color:#e6db74">&#34;Fourteen&#34;</span>, <span style="color:#e6db74">&#34;Fifteen&#34;</span>, <span style="color:#e6db74">&#34;Sixteen&#34;</span>, <span style="color:#e6db74">&#34;Seventeen&#34;</span>, <span style="color:#e6db74">&#34;Eighteen&#34;</span>, <span style="color:#e6db74">&#34;Nineteen&#34;</span>]
+        self<span style="color:#f92672">.</span>tens <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;Ten&#34;</span>, <span style="color:#e6db74">&#34;Twenty&#34;</span>, <span style="color:#e6db74">&#34;Thirty&#34;</span>, <span style="color:#e6db74">&#34;Forty&#34;</span>, <span style="color:#e6db74">&#34;Fifty&#34;</span>, <span style="color:#e6db74">&#34;Sixty&#34;</span>, <span style="color:#e6db74">&#34;Seventy&#34;</span>, <span style="color:#e6db74">&#34;Eighty&#34;</span>, <span style="color:#e6db74">&#34;Ninety&#34;</span>]
+        self<span style="color:#f92672">.</span>thousands <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#e6db74">&#34;Thousand&#34;</span>, <span style="color:#e6db74">&#34;Million&#34;</span>, <span style="color:#e6db74">&#34;Billion&#34;</span>, <span style="color:#e6db74">&#34;Trillion]</span>
 
-<h3 id="solution">Solution</h3>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numberToWords</span>(self, num):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type num: int
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> num <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Zero&#34;</span>;
 
-<pre><code class="language-python">class Solution:
-    def __init__(self):
-        self.lessThan20 = [&quot;&quot;, &quot;One&quot;, &quot;Two&quot;, &quot;Three&quot;, &quot;Four&quot;, &quot;Five&quot;, &quot;Six&quot;, &quot;Seven&quot;, &quot;Eight&quot;, &quot;Nine&quot;, &quot;Ten&quot;, &quot;Eleven&quot;, &quot;Twelve&quot;, &quot;Thirteen&quot;, &quot;Fourteen&quot;, &quot;Fifteen&quot;, &quot;Sixteen&quot;, &quot;Seventeen&quot;, &quot;Eighteen&quot;, &quot;Nineteen&quot;]
-        self.tens = [&quot;&quot;, &quot;Ten&quot;, &quot;Twenty&quot;, &quot;Thirty&quot;, &quot;Forty&quot;, &quot;Fifty&quot;, &quot;Sixty&quot;, &quot;Seventy&quot;, &quot;Eighty&quot;, &quot;Ninety&quot;]
-        self.thousands = [&quot;&quot;, &quot;Thousand&quot;, &quot;Million&quot;, &quot;Billion&quot;, &quot;Trillion]
+        i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        words <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
 
-    def numberToWords(self, num):
-        &quot;&quot;&quot;
-        :type num: int
-        :rtype: str
-        &quot;&quot;&quot;
-        if num == 0:
-            return &quot;Zero&quot;;
+        <span style="color:#66d9ef">while</span> num <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+            n <span style="color:#f92672">=</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">1000</span>
+            <span style="color:#66d9ef">if</span> n <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+                words <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>helper(n) <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>thousands[i] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> words
+            num <span style="color:#f92672">//=</span> <span style="color:#ae81ff">1000</span>
+            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-        i = 0;
-        words = &quot;&quot;
+        <span style="color:#66d9ef">return</span> words<span style="color:#f92672">.</span>strip()
 
-        while num &gt; 0:
-            n = num % 1000
-            if n != 0:
-                words = self.helper(n) + self.thousands[i] + &quot; &quot; + words
-            num //= 1000
-            i += 1
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">helper</span>(self, num):
+        <span style="color:#66d9ef">if</span> num <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
+        <span style="color:#66d9ef">elif</span> num <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">20</span>:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>lessThan20[int(num)] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>
+        <span style="color:#66d9ef">elif</span> num <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>:
+            <span style="color:#75715e"># Any number under 100 can be decomposed to tens + a single digit</span>
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>tens[num <span style="color:#f92672">//</span> <span style="color:#ae81ff">10</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>helper(num <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>lessThan20[num <span style="color:#f92672">//</span> <span style="color:#ae81ff">100</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; Hundred &#34;</span> <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>helper(num <span style="color:#f92672">%</span> <span style="color:#ae81ff">100</span>)
+</code></pre></div><p>Iterative</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numberToWords</span>(self, num: int) <span style="color:#f92672">-&gt;</span> str:
+        <span style="color:#66d9ef">if</span> num <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Zero&#34;</span>
 
-        return words.strip()
-
-    def helper(self, num):
-        if num == 0:
-            return &quot;&quot;
-        elif num &lt; 20:
-            return self.lessThan20[int(num)] + &quot; &quot;
-        elif num &lt; 100:
-            # Any number under 100 can be decomposed to tens + a single digit
-            return self.tens[num // 10] + &quot; &quot; + self.helper(num % 10)
-        else:
-            return self.lessThan20[num // 100] + &quot; Hundred &quot; + self.helper(num % 100)
-</code></pre>
-
-<p>Iterative</p>
-
-<pre><code class="language-python">class Solution:
-    def numberToWords(self, num: int) -&gt; str:
-        if num == 0:
-            return &quot;Zero&quot;
-
-        underTwenty = {
-            1: &quot;One&quot;,
-            2: &quot;Two&quot;,
-            3: &quot;Three&quot;,
-            4: &quot;Four&quot;,
-            5: &quot;Five&quot;,
-            6: &quot;Six&quot;,
-            7: &quot;Seven&quot;,
-            8: &quot;Eight&quot;,
-            9: &quot;Nine&quot;,
-            10: &quot;Ten&quot;,
-            11: &quot;Eleven&quot;,
-            12: &quot;Twelve&quot;,
-            13: &quot;Thirteen&quot;,
-            14: &quot;Fourteen&quot;,
-            15: &quot;Fifteen&quot;,
-            16: &quot;Sixteen&quot;,
-            17: &quot;Seventeen&quot;,
-            18: &quot;Eighteen&quot;,
-            19: &quot;Nineteen&quot;
+        underTwenty <span style="color:#f92672">=</span> {
+            <span style="color:#ae81ff">1</span>: <span style="color:#e6db74">&#34;One&#34;</span>,
+            <span style="color:#ae81ff">2</span>: <span style="color:#e6db74">&#34;Two&#34;</span>,
+            <span style="color:#ae81ff">3</span>: <span style="color:#e6db74">&#34;Three&#34;</span>,
+            <span style="color:#ae81ff">4</span>: <span style="color:#e6db74">&#34;Four&#34;</span>,
+            <span style="color:#ae81ff">5</span>: <span style="color:#e6db74">&#34;Five&#34;</span>,
+            <span style="color:#ae81ff">6</span>: <span style="color:#e6db74">&#34;Six&#34;</span>,
+            <span style="color:#ae81ff">7</span>: <span style="color:#e6db74">&#34;Seven&#34;</span>,
+            <span style="color:#ae81ff">8</span>: <span style="color:#e6db74">&#34;Eight&#34;</span>,
+            <span style="color:#ae81ff">9</span>: <span style="color:#e6db74">&#34;Nine&#34;</span>,
+            <span style="color:#ae81ff">10</span>: <span style="color:#e6db74">&#34;Ten&#34;</span>,
+            <span style="color:#ae81ff">11</span>: <span style="color:#e6db74">&#34;Eleven&#34;</span>,
+            <span style="color:#ae81ff">12</span>: <span style="color:#e6db74">&#34;Twelve&#34;</span>,
+            <span style="color:#ae81ff">13</span>: <span style="color:#e6db74">&#34;Thirteen&#34;</span>,
+            <span style="color:#ae81ff">14</span>: <span style="color:#e6db74">&#34;Fourteen&#34;</span>,
+            <span style="color:#ae81ff">15</span>: <span style="color:#e6db74">&#34;Fifteen&#34;</span>,
+            <span style="color:#ae81ff">16</span>: <span style="color:#e6db74">&#34;Sixteen&#34;</span>,
+            <span style="color:#ae81ff">17</span>: <span style="color:#e6db74">&#34;Seventeen&#34;</span>,
+            <span style="color:#ae81ff">18</span>: <span style="color:#e6db74">&#34;Eighteen&#34;</span>,
+            <span style="color:#ae81ff">19</span>: <span style="color:#e6db74">&#34;Nineteen&#34;</span>
         }
-        tens = {
-            20: &quot;Twenty&quot;,
-            30: &quot;Thirty&quot;,
-            40: &quot;Forty&quot;,
-            50: &quot;Fifty&quot;,
-            60: &quot;Sixty&quot;,
-            70: &quot;Seventy&quot;,
-            80: &quot;Eighty&quot;,
-            90: &quot;Ninety&quot;,
+        tens <span style="color:#f92672">=</span> {
+            <span style="color:#ae81ff">20</span>: <span style="color:#e6db74">&#34;Twenty&#34;</span>,
+            <span style="color:#ae81ff">30</span>: <span style="color:#e6db74">&#34;Thirty&#34;</span>,
+            <span style="color:#ae81ff">40</span>: <span style="color:#e6db74">&#34;Forty&#34;</span>,
+            <span style="color:#ae81ff">50</span>: <span style="color:#e6db74">&#34;Fifty&#34;</span>,
+            <span style="color:#ae81ff">60</span>: <span style="color:#e6db74">&#34;Sixty&#34;</span>,
+            <span style="color:#ae81ff">70</span>: <span style="color:#e6db74">&#34;Seventy&#34;</span>,
+            <span style="color:#ae81ff">80</span>: <span style="color:#e6db74">&#34;Eighty&#34;</span>,
+            <span style="color:#ae81ff">90</span>: <span style="color:#e6db74">&#34;Ninety&#34;</span>,
         }
-        thousands = {
-            1: &quot;&quot;,
-            1000: &quot;Thousand&quot;,
-            1000000: &quot;Million&quot;,
-            1000000000: &quot;Billion&quot;
+        thousands <span style="color:#f92672">=</span> {
+            <span style="color:#ae81ff">1</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#ae81ff">1000</span>: <span style="color:#e6db74">&#34;Thousand&#34;</span>,
+            <span style="color:#ae81ff">1000000</span>: <span style="color:#e6db74">&#34;Million&#34;</span>,
+            <span style="color:#ae81ff">1000000000</span>: <span style="color:#e6db74">&#34;Billion&#34;</span>
         }
 
-        words = []
+        words <span style="color:#f92672">=</span> []
 
-        for denome in [1000000000, 1000000, 1000, 1]:
-            temp = num//denome
-            num %= denome
-            if temp &gt; 0:
-                hundreds = temp // 100
-                if hundreds &gt; 0:
-                    words.append(underTwenty[hundreds])
-                    words.append(&quot;Hundred&quot;)
-                temp %= 100
-                if temp &gt;= 20:
-                    digit = temp % 10
-                    words.append(tens[temp-digit])
-                    if digit &gt; 0:
-                        words.append(underTwenty[digit])
-                elif temp &gt; 0:
-                    words.append(underTwenty[temp])
+        <span style="color:#66d9ef">for</span> denome <span style="color:#f92672">in</span> [<span style="color:#ae81ff">1000000000</span>, <span style="color:#ae81ff">1000000</span>, <span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">1</span>]:
+            temp <span style="color:#f92672">=</span> num<span style="color:#f92672">//</span>denome
+            num <span style="color:#f92672">%=</span> denome
+            <span style="color:#66d9ef">if</span> temp <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+                hundreds <span style="color:#f92672">=</span> temp <span style="color:#f92672">//</span> <span style="color:#ae81ff">100</span>
+                <span style="color:#66d9ef">if</span> hundreds <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+                    words<span style="color:#f92672">.</span>append(underTwenty[hundreds])
+                    words<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;Hundred&#34;</span>)
+                temp <span style="color:#f92672">%=</span> <span style="color:#ae81ff">100</span>
+                <span style="color:#66d9ef">if</span> temp <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">20</span>:
+                    digit <span style="color:#f92672">=</span> temp <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>
+                    words<span style="color:#f92672">.</span>append(tens[temp<span style="color:#f92672">-</span>digit])
+                    <span style="color:#66d9ef">if</span> digit <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+                        words<span style="color:#f92672">.</span>append(underTwenty[digit])
+                <span style="color:#66d9ef">elif</span> temp <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+                    words<span style="color:#f92672">.</span>append(underTwenty[temp])
 
-                words.append(thousands[denome])
+                words<span style="color:#f92672">.</span>append(thousands[denome])
 
-        return &quot; &quot;.join(words).strip()
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">.</span>join(words)<span style="color:#f92672">.</span>strip()
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

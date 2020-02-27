@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters.  Example 2 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str." />
+Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters. Example 2 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters. import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings  // with exactly k unique characters  int countkDist(String str, int k) { // Initialize result  int res = 0; int n = str." />
   <meta name="keywords" content="leetcode substring " />
   
   
@@ -25,14 +25,14 @@ Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &am
     
     <meta name="twitter:title" content="Count Number of Substrings With K Distinct Characters" />
     <meta name="twitter:description" content="Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters.  Example 2 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters.  import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings // with exactly k unique characters int countkDist(String str, int k) { // Initialize result int res = 0; int n = str." />
+Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters. Example 2 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters. import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings  // with exactly k unique characters  int countkDist(String str, int k) { // Initialize result  int res = 0; int n = str." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/count-number-of-substrings-with-k-distinct-characters/" />
@@ -190,71 +190,61 @@ Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &am
         <h5>Last updated: January 30, 2019</h5>
       
       <hr />
-      
-
-<p>Given a string, find the length of the longest substring T that contains at most k distinct characters.</p>
-
+      <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: s = &quot;eceba&quot;, k = 2
 Output: 5
 Explanation: &quot;ec&quot;, &quot;ce&quot;, &quot;eb&quot;, &quot;ba&quot; and &quot;ece&quot; k distinct characters.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: s = &quot;aa&quot;, k = 1
 Output: 2
 Explanation: &quot;a&quot; and &quot;aa&quot; have k distinct characters.
-</code></pre>
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Arrays<span style="color:#f92672">;</span> 
+  
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountKSubStr</span> 
+<span style="color:#f92672">{</span> 
+    <span style="color:#75715e">// Function to count number of substrings 
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// with exactly k unique characters 
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">countkDist</span><span style="color:#f92672">(</span>String str<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+        <span style="color:#75715e">// Initialize result 
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> 
+  
+        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span> 
+  
+        <span style="color:#75715e">// To store count of characters from &#39;a&#39; to &#39;z&#39; 
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> count<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>26<span style="color:#f92672">];</span> 
+  
+        <span style="color:#75715e">// Consider all substrings beginning with 
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// str[i] 
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span> 
+            <span style="color:#66d9ef">int</span> distinctChars <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> 
+  
+            <span style="color:#75715e">// Initializing count array with 0 
+</span><span style="color:#75715e"></span>            Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">fill</span><span style="color:#f92672">(</span>count<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span> 
+  
+            <span style="color:#75715e">// Consider all substrings between str[i..j] 
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span>i<span style="color:#f92672">;</span> j<span style="color:#f92672">&lt;</span>n<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span> 
+            	<span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
 
-<pre><code class="language-java">import java.util.Arrays; 
+                <span style="color:#75715e">// If this is a new character for this 
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// substring, increment distinctChars. 
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>count<span style="color:#f92672">[</span>c <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> 
+                    distinctChars<span style="color:#f92672">++;</span> 
   
-public class CountKSubStr 
-{ 
-    // Function to count number of substrings 
-    // with exactly k unique characters 
-    int countkDist(String str, int k) { 
-        // Initialize result 
-        int res = 0; 
+                <span style="color:#75715e">// Increment count of current character 
+</span><span style="color:#75715e"></span>                count<span style="color:#f92672">[</span>c <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]++;</span> 
   
-        int n = str.length(); 
+                <span style="color:#75715e">// If distinct character count becomes k, 
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// then increment result. 
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>distinctChars <span style="color:#f92672">==</span> k<span style="color:#f92672">)</span> 
+                    res<span style="color:#f92672">++;</span> 
+            <span style="color:#f92672">}</span> 
+        <span style="color:#f92672">}</span> 
   
-        // To store count of characters from 'a' to 'z' 
-        int count[] = new int[26]; 
-  
-        // Consider all substrings beginning with 
-        // str[i] 
-        for (int i = 0; i &lt; n; i++) { 
-            int distinctChars = 0; 
-  
-            // Initializing count array with 0 
-            Arrays.fill(count, 0); 
-  
-            // Consider all substrings between str[i..j] 
-            for (int j=i; j&lt;n; j++) { 
-            	char c = str.charAt(j);
-
-                // If this is a new character for this 
-                // substring, increment distinctChars. 
-                if (count[c - 'a'] == 0) 
-                    distinctChars++; 
-  
-                // Increment count of current character 
-                count[c - 'a']++; 
-  
-                // If distinct character count becomes k, 
-                // then increment result. 
-                if (distinctChars == k) 
-                    res++; 
-            } 
-        } 
-  
-        return res; 
-    } 
-} 
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span> 
+    <span style="color:#f92672">}</span> 
+<span style="color:#f92672">}</span> 
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

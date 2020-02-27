@@ -32,7 +32,7 @@ Explanation: There are a total of 2 courses to take. To take course 1 you should
 ### Solution
 ```python
 # time: O(Vertices + Edges)
-# space: O(n)
+# space: `O(n)`
 class Solution:
     # @param {integer} numCourses
     # @param {integer[][]} prerequisites

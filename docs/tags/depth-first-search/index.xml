@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Depth First Search on Hashnopolis</title>
+    <title>depth-first-search on Hashnopolis</title>
     <link>http://www.hashnopolis.com/tags/depth-first-search/</link>
-    <description>Recent content in Depth First Search on Hashnopolis</description>
+    <description>Recent content in depth-first-search on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
@@ -13,16 +13,17 @@
     
     
     <item>
-      <title>Minimum Depth of Binary Tree</title>
-      <link>http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/</link>
+      <title>Maximum Depth of Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2019/02/maximum-depth-of-binary-tree/</link>
       <pubDate>Tue, 12 Feb 2019 16:58:46 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/</guid>
-      <description>Given a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+      <guid>http://www.hashnopolis.com/post/2019/02/maximum-depth-of-binary-tree/</guid>
+      <description>Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 3.  Solution: /** * Definition for a binary tree node.</description>
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 3. Solution: recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int maxDepth(TreeNode root) { if (root == null) return 0; int left = maxDepth(root.</description>
     </item>
     
     <item>
@@ -35,7 +36,8 @@ Example: Given binary tree [3,9,20,null,null,15,7],
 The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 2.  Solution: /** * Definition for a binary tree node.</description>
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 2. Solution: Recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int minDepth(TreeNode root) { if (root == null) return 0; int left = minDepth(root.</description>
     </item>
     
   </channel>

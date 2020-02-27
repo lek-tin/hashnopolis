@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a singly linked list, determine if it is a palindrome.
-Example 1: Input: 1-&amp;gt;2 Output: false  Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true  Follow up: Could you do it in O(n) time and O(1) space?
+Example 1: Input: 1-&amp;gt;2 Output: false Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&amp;gt; bool: if not head: return True middle = self." />
   <meta name="keywords" content="leetcode linked-list two-pointers " />
   
@@ -26,7 +26,7 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
     
     <meta name="twitter:title" content="Palindrome Linked List" />
     <meta name="twitter:description" content="Given a singly linked list, determine if it is a palindrome.
-Example 1: Input: 1-&amp;gt;2 Output: false  Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true  Follow up: Could you do it in O(n) time and O(1) space?
+Example 1: Input: 1-&amp;gt;2 Output: false Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&amp;gt; bool: if not head: return True middle = self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
@@ -34,7 +34,7 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/palindrome-linked-list/" />
@@ -194,80 +194,67 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
         <h5>Last updated: August 24, 2019</h5>
       
       <hr />
-      
-
-<p>Given a singly linked list, determine if it is a palindrome.</p>
-
+      <p>Given a singly linked list, determine if it is a palindrome.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: 1-&gt;2
 Output: false
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: 1-&gt;2-&gt;2-&gt;1
 Output: true
-</code></pre>
-
-<h3 id="follow-up">Follow up:</h3>
-
+</code></pre><h3 id="follow-up">Follow up:</h3>
 <p>Could you do it in <code>O(n)</code> time and <code>O(1)</code> space?</p>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
 
-<pre><code class="language-python"># Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, head: ListNode) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> head:
+            <span style="color:#66d9ef">return</span> True
 
-class Solution:
-    def isPalindrome(self, head: ListNode) -&gt; bool:
-        if not head:
-            return True
+        middle <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>findMedian(head)
+        middle<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>reverse(middle<span style="color:#f92672">.</span>next)
 
-        middle = self.findMedian(head)
-        middle.next = self.reverse(middle.next)
+        <span style="color:#66d9ef">print</span>(middle<span style="color:#f92672">.</span>val)
+        <span style="color:#75715e"># original ll: 1-&gt;2-&gt;3-&gt;4-&gt;3-&gt;2-&gt;1-&gt;None or 1-&gt;2-&gt;3-&gt;3-&gt;2-&gt;1</span>
+        <span style="color:#75715e">#              s  f                         s  f</span>
+        <span style="color:#75715e">#                 s     f                      s     f</span>
+        <span style="color:#75715e">#                    s        f                    s       f</span>
+        <span style="color:#75715e">#                       s            f</span>
+        <span style="color:#75715e">#           middle is 4                  or  the first 3</span>
+        <span style="color:#75715e"># new ll is:   1-&gt;2-&gt;3-&gt;4-&gt;1-&gt;2-&gt;3 or 1-&gt;2-&gt;3-&gt;3-&gt;2-&gt;1</span>
+        p1, p2 <span style="color:#f92672">=</span> head, middle<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">while</span> p1 <span style="color:#f92672">and</span> p2:
+            <span style="color:#66d9ef">if</span> p1<span style="color:#f92672">.</span>val <span style="color:#f92672">!=</span> p2<span style="color:#f92672">.</span>val:
+                <span style="color:#66d9ef">return</span> False
+            p1 <span style="color:#f92672">=</span> p1<span style="color:#f92672">.</span>next
+            p2 <span style="color:#f92672">=</span> p2<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">return</span> True
 
-        print(middle.val)
-        # original ll: 1-&gt;2-&gt;3-&gt;4-&gt;3-&gt;2-&gt;1-&gt;None or 1-&gt;2-&gt;3-&gt;3-&gt;2-&gt;1
-        #              s  f                         s  f
-        #                 s     f                      s     f
-        #                    s        f                    s       f
-        #                       s            f
-        #           middle is 4                  or  the first 3
-        # new ll is:   1-&gt;2-&gt;3-&gt;4-&gt;1-&gt;2-&gt;3 or 1-&gt;2-&gt;3-&gt;3-&gt;2-&gt;1
-        p1, p2 = head, middle.next
-        while p1 and p2:
-            if p1.val != p2.val:
-                return False
-            p1 = p1.next
-            p2 = p2.next
-        return True
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findMedian</span>(self, head):
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> head:
+            <span style="color:#66d9ef">return</span> None
 
-    def findMedian(self, head):
-        if not head:
-            return None
+        slow <span style="color:#f92672">=</span> head
+        fast <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">while</span> fast <span style="color:#f92672">and</span> fast<span style="color:#f92672">.</span>next:
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span>next
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">return</span> slow
 
-        slow = head
-        fast = head.next
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
-        return slow
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverse</span>(self, head):
+        prev <span style="color:#f92672">=</span> None
+        <span style="color:#66d9ef">while</span> head:
+            nextNode <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
+            head<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> prev
+            prev <span style="color:#f92672">=</span> head
+            head <span style="color:#f92672">=</span> nextNode
 
-    def reverse(self, head):
-        prev = None
-        while head:
-            nextNode = head.next
-            head.next = prev
-            prev = head
-            head = nextNode
-
-        return prev
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> prev
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

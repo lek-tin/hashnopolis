@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="In this post, we introduce the most useful SQL template statements.
-Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1)  This is significantly more efficient than using EXISTS
+Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1) This is significantly more efficient than using EXISTS
 Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18).
 Select duplicate rows based on column SELECT TOP 1 C1." />
   <meta name="keywords" content="sql " />
@@ -27,7 +27,7 @@ Select duplicate rows based on column SELECT TOP 1 C1." />
     
     <meta name="twitter:title" content="Top Useful Sql Templates" />
     <meta name="twitter:description" content="In this post, we introduce the most useful SQL template statements.
-Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1)  This is significantly more efficient than using EXISTS
+Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1) This is significantly more efficient than using EXISTS
 Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18).
 Select duplicate rows based on column SELECT TOP 1 C1." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
@@ -36,7 +36,7 @@ Select duplicate rows based on column SELECT TOP 1 C1." />
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/" />
@@ -192,40 +192,26 @@ Select duplicate rows based on column SELECT TOP 1 C1." />
         <h5>Last updated: July 15, 2019</h5>
       
       <hr />
-      
-
-<p>In this post, we introduce the most useful SQL template statements.</p>
-
+      <p>In this post, we introduce the most useful SQL template statements.</p>
 <h3 id="find-all-duplicates-based-on-a-field">Find all duplicates based on a field</h3>
-
-<pre><code class="language-sql">SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN
-  (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &gt; 1)
-</code></pre>
-
-<p>This is significantly more efficient than using <code>EXISTS</code></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> [EmailAddress], [CustomerName] <span style="color:#66d9ef">FROM</span> [Customers] <span style="color:#66d9ef">WHERE</span> [EmailAddress] <span style="color:#66d9ef">IN</span>
+  (<span style="color:#66d9ef">SELECT</span> [EmailAddress] <span style="color:#66d9ef">FROM</span> [Customers] <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> [EmailAddress] <span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>)
+</code></pre></div><p>This is significantly more efficient than using <code>EXISTS</code></p>
 <h3 id="select-distinct-on-multiple-columns">Select DISTINCT on multiple columns</h3>
-
 <p>We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) <strong>AND</strong> age(&gt;18).</p>
-
 <h3 id="select-duplicate-rows-based-on-column">Select duplicate rows based on column</h3>
-
-<pre><code class="language-sql">SELECT TOP 1 C1.ID, C1.Code, C1.OwnerName, C2.NumberDuplicates
-FROM
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> TOP <span style="color:#ae81ff">1</span> C1.ID, C1.Code, C1.OwnerName, C2.NumberDuplicates
+<span style="color:#66d9ef">FROM</span>
 Customers C1
-INNER JOIN
+<span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span>
   (
-  SELECT Code, COUNT(*) as NumberDuplicates  FROM Customers GROUP BY code HAVING COUNT(*) &gt; 1
+  <span style="color:#66d9ef">SELECT</span> Code, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">as</span> NumberDuplicates  <span style="color:#66d9ef">FROM</span> Customers <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> code <span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>
   ) C2
-ON C1.Code = C2.Code
-</code></pre>
-
-<h3 id="override-column-values-conditionally">Override column values conditionally</h3>
-
-<pre><code class="language-sql">SELECT id, name, CASE WHEN hide = 0 THEN 'false' ELSE 'true' END AS hide
-  FROM YOUR_FAVE_TABLE
-</code></pre>
-
+<span style="color:#66d9ef">ON</span> C1.Code <span style="color:#f92672">=</span> C2.Code
+</code></pre></div><h3 id="override-column-values-conditionally">Override column values conditionally</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> id, name, <span style="color:#66d9ef">CASE</span> <span style="color:#66d9ef">WHEN</span> hide <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">THEN</span> <span style="color:#e6db74">&#39;false&#39;</span> <span style="color:#66d9ef">ELSE</span> <span style="color:#e6db74">&#39;true&#39;</span> <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">AS</span> hide
+  <span style="color:#66d9ef">FROM</span> YOUR_FAVE_TABLE
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

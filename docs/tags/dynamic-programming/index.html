@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/dynamic-programming/" />
@@ -176,6 +176,111 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/decode-ways-ii/">Decode Ways II</a></h2>
+
+      <p>A message containing letters from A-Z is being encoded to numbers using the following mapping way:
+&#39;A&#39; -&gt; 1 &#39;B&#39; -&gt; 2 ... &#39;Z&#39; -&gt; 26 Beyond that, now the encoded string can also contain the character &#39;*&#39;, which can be treated as one of the numbers from 1 to 9.
+Given the encoded message containing digits and the character &#39;*&#39;, return the total number of ways to decode it.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/shortest-common-supersequence/">Shortest Common Supersequence</a></h2>
+
+      <p>Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If multiple answers exist, you may return any of them.
+(A string S is a subsequence of string T if deleting some number of characters from T (possibly 0, and the characters are chosen anywhere from T) results in the string S.)
+Example 1: Input: str1 = &#34;abac&#34;, str2 = &#34;cab&#34; Output: &#34;cabac&#34; Explanation: str1 = &#34;abac&#34; is a subsequence of &#34;cabac&#34; because we can delete the first &#34;c&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/longest-common-substring/">Longest Common Substring</a></h2>
+
+      <p>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m &#43; 1, n &#43; 1.  int L[][] = new int[m&#43;1][n&#43;1]; /* Following steps build L[m&#43;1][n&#43;1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&lt;=m; i&#43;&#43;) { for (int j=0; j&lt;=n; j&#43;&#43;) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] &#43; 1 = 0 &#43; 1 = 1  L[i][j] = L[i-1][j-1] &#43; 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/greatest-sum-divisible-by-three/">Greatest Sum Divisible by Three</a></h2>
+
+      <p>Given an array nums of integers, we need to find the maximum possible sum of elements of the array such that it is divisible by three.
+Example 1: Input: nums = [3,6,5,1,8] Output: 18 Explanation: Pick numbers 3, 6, 1 and 8 their sum is 18 (maximum sum divisible by 3). Example 2: Input: nums = [4] Output: 0 Explanation: Since 4 is not divisible by 3, do not pick any number.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/12/concatenated-words/">Concatenated Words</a></h2>
 
       <p>Given a list of words (without duplicates), please write a program that returns all concatenated words in the given list of words. A concatenated word is defined as a string that is comprised entirely of at least two shorter words in the given array.
@@ -204,9 +309,9 @@ Example: Input: [&#34;cat&#34;,&#34;cats&#34;,&#34;catsdogcats&#34;,&#34;dog&#34
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/12/concatenate-string-using-smaller-strings/">Concatenate String Using Smaller Strings</a></h2>
 
-      <p> Given a big string and a list of small strings, find whether the big string can be represented only by concatenation of smaller strings.
-Example: target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] Output: True  Solution Dynamic programming
-target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] N = len(target) dp = [False for _ in range(N)] def check(i, target): for s in smallerStrings: l = len(s) # print(s) if i &#43; l &lt;= N: tryStr = target[i:i&#43;l] # print(tryStr) if tryStr == s: dp[i&#43;l-1] = True check(i&#43;l, target) # print(&#34;-------&#34;) check(0, target) print(dp) print(dp[N-1])  </p>
+      <p>Given a big string and a list of small strings, find whether the big string can be represented only by concatenation of smaller strings.
+Example: target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] Output: True Solution Dynamic programming
+target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] N = len(target) dp = [False for _ in range(N)] def check(i, target): for s in smallerStrings: l = len(s) # print(s) if i &#43; l &lt;= N: tryStr = target[i:i&#43;l] # print(tryStr) if tryStr == s: dp[i&#43;l-1] = True check(i&#43;l, target) # print(&#34;-------&#34;) check(0, target) print(dp) print(dp[N-1]) </p>
 
       <p class="meta">
         
@@ -232,8 +337,8 @@ target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34
       <h2><a href="http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/">Longest Valid Parentheses</a></h2>
 
       <p>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
-Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parentheses substring is &#34;()&#34;  Example 2: Input: &#34;)()())&#34; Output: 4 Explanation: The longest valid parentheses substring is &#34;()()&#34;  Solution Dynamic programming
-// Time: O(n) // Space: O(n) public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</p>
+Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parentheses substring is &#34;()&#34; Example 2: Input: &#34;)()())&#34; Output: 4 Explanation: The longest valid parentheses substring is &#34;()()&#34; Solution Dynamic programming
+// Time: `O(n)` // Space: `O(n)` public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</p>
 
       <p class="meta">
         
@@ -258,7 +363,7 @@ Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parenth
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/11/best-time-to-buy-and-sell-stock-iii/">Best Time to Buy and Sell Stock III</a></h2>
 
-      <p>Say you have an array for which the ith element is the price of a given stock on day i.
+      <p>Say you have an array for which the ithelement is the price of a given stock on day i.
 Design an algorithm to find the maximum profit. You may complete at most two transactions.
 Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
 Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</p>
@@ -329,112 +434,6 @@ However, when you guess a particular number x, and you guess wrong, you pay $x. 
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/perfect-squares/">Perfect Squares</a></h2>
-
-      <p> Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
-Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 &#43; 4 &#43; 4.  Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 &#43; 9.  Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n&#43;1)] for i in range(1, n&#43;1): for j in range(1, n&#43;1): if j*j &gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]&#43;1) return count[n]  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/russian-doll-envelopes/">Russian Doll Envelopes</a></h2>
-
-      <p>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
-What is the maximum number of envelopes can you Russian doll? (put one inside other)
-Note: Rotation is not allowed.
-Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&gt; [5,4] =&gt; [6,7]).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/coin-change/">Coin Change</a></h2>
-
-      <p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/">Maximum Product Subarray</a></h2>
-
-      <p> Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
-Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.  Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.  Solution # time: o(n) class Solution: def maxProduct(self, nums: List[int]) -&gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res  </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

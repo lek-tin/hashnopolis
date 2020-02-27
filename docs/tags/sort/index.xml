@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sort on Hashnopolis</title>
+    <title>sort on Hashnopolis</title>
     <link>http://www.hashnopolis.com/tags/sort/</link>
-    <description>Recent content in Sort on Hashnopolis</description>
+    <description>Recent content in sort on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
@@ -40,7 +40,7 @@ Our goal is to assign a bike to each worker. Among the available bikes and worke
       
       <guid>http://www.hashnopolis.com/post/2019/09/pancake-sorting/</guid>
       <description>Given an array A, we can perform a pancake flip: We choose some positive integer k &amp;lt;= A.length, then reverse the order of the first k elements of A. We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array A.
-Return the k-values corresponding to a sequence of pancake flips that sortA. Any valid answer that sorts the array within 10 * A.</description>
+Return the k-values corresponding to a sequence of pancake flips that sort A. Any valid answer that sorts the array within 10 * A.</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@ Return the k-values corresponding to a sequence of pancake flips that sortA. Any
       
       <guid>http://www.hashnopolis.com/post/2019/02/best-meeting-point/</guid>
       <description>A group of two or more people wants to meet and minimize the total travel distance. You are given a 2D grid of values 0 or 1, where each 1 marks the home of someone in the group. The distance is calculated using Manhattan Distance, where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|.
-Example: Input: 1 - 0 - 0 - 0 - 1 | | | | | 0 - 0 - 0 - 0 - 0 | | | | | 0 - 0 - 1 - 0 - 0 Output: 6  ###Explanation: Given three people living at (0,0), (0,4), and (2,2): The point (0,2) is an ideal meeting point, as the total travel distance of 2+2+2=6 is minimal.</description>
+Example: Input: 1 - 0 - 0 - 0 - 1 | | | | | 0 - 0 - 0 - 0 - 0 | | | | | 0 - 0 - 1 - 0 - 0 Output: 6 ###Explanation: Given three people living at (0,0), (0,4), and (2,2): The point (0,2) is an ideal meeting point, as the total travel distance of 2+2+2=6 is minimal.</description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@ Example: Input: 1 - 0 - 0 - 0 - 1 | | | | | 0 - 0 - 0 - 0 - 0 | | | | | 0 - 0 - 
       
       <guid>http://www.hashnopolis.com/post/2018/08/56.-merge-intervals/</guid>
       <description>Given a collection of intervals, merge all overlapping intervals.
-Example 1 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].  Example 2 Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping.  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: List[Interval] &amp;quot;&amp;quot;&amp;quot; intervals.</description>
+Example 1 Input: [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6]. Example 2 Input: [[1,4],[4,5]] Output: [[1,5]] Explanation: Intervals [1,4] and [4,5] are considered overlapping. Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e class Solution: def merge(self, intervals): &amp;#34;&amp;#34;&amp;#34; :type intervals: List[Interval] :rtype: List[Interval] &amp;#34;&amp;#34;&amp;#34; intervals.</description>
     </item>
     
   </channel>

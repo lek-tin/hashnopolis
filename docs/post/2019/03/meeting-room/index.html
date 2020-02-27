@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &amp;lt; ei), determine if a person could attend all meetings.
-Example 1: Input: [[0,30],[5,10],[15,20]] Output: false  Example 2: Input: [[7,10],[2,4]] Output: true  Solution /** * Definition for an interval. * public class Interval { * int start; * int end; * Interval() { start = 0; end = 0; } * Interval(int s, int e) { start = s; end = e; } * } */ class Solution { public boolean canAttendMeetings(Interval[] intervals) { Arrays." />
+Example 1: Input: [[0,30],[5,10],[15,20]] Output: false Example 2: Input: [[7,10],[2,4]] Output: true Solution /** * Definition for an interval. * public class Interval { * int start; * int end; * Interval() { start = 0; end = 0; } * Interval(int s, int e) { start = s; end = e; } * } */ class Solution { public boolean canAttendMeetings(Interval[] intervals) { Arrays." />
   <meta name="keywords" content="leetcode greedy-algorithm " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: [[0,30],[5,10],[15,20]] Output: false  Example 2: Input: [[7,1
     
     <meta name="twitter:title" content="Meeting Room" />
     <meta name="twitter:description" content="Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &amp;lt; ei), determine if a person could attend all meetings.
-Example 1: Input: [[0,30],[5,10],[15,20]] Output: false  Example 2: Input: [[7,10],[2,4]] Output: true  Solution /** * Definition for an interval. * public class Interval { * int start; * int end; * Interval() { start = 0; end = 0; } * Interval(int s, int e) { start = s; end = e; } * } */ class Solution { public boolean canAttendMeetings(Interval[] intervals) { Arrays." />
+Example 1: Input: [[0,30],[5,10],[15,20]] Output: false Example 2: Input: [[7,10],[2,4]] Output: true Solution /** * Definition for an interval. * public class Interval { * int start; * int end; * Interval() { start = 0; end = 0; } * Interval(int s, int e) { start = s; end = e; } * } */ class Solution { public boolean canAttendMeetings(Interval[] intervals) { Arrays." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/meeting-room/" />
@@ -190,47 +190,36 @@ Example 1: Input: [[0,30],[5,10],[15,20]] Output: false  Example 2: Input: [[7,1
         <h5>Last updated: March 2, 2019</h5>
       
       <hr />
-      
-
-<p>Given an array of meeting time intervals consisting of start and end times <code>[[s1,e1],[s2,e2],...] (si &lt; ei)</code>, determine if a person could attend all meetings.</p>
-
+      <p>Given an array of meeting time intervals consisting of start and end times <code>[[s1,e1],[s2,e2],...] (si &lt; ei)</code>, determine if a person could attend all meetings.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: [[0,30],[5,10],[15,20]]
 Output: false
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: [[7,10],[2,4]]
 Output: true
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for an interval.
+</span><span style="color:#75715e"> * public class Interval {
+</span><span style="color:#75715e"> *     int start;
+</span><span style="color:#75715e"> *     int end;
+</span><span style="color:#75715e"> *     Interval() { start = 0; end = 0; }
+</span><span style="color:#75715e"> *     Interval(int s, int e) { start = s; end = e; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">canAttendMeetings</span><span style="color:#f92672">(</span>Interval<span style="color:#f92672">[]</span> intervals<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-<h3 id="solution">Solution</h3>
+        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>intervals<span style="color:#f92672">,</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">,</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span> <span style="color:#f92672">-</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">);</span>
 
-<pre><code class="language-java">/**
- * Definition for an interval.
- * public class Interval {
- *     int start;
- *     int end;
- *     Interval() { start = 0; end = 0; }
- *     Interval(int s, int e) { start = s; end = e; }
- * }
- */
-class Solution {
-    public boolean canAttendMeetings(Interval[] intervals) {
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> len<span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>intervals<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">end</span> <span style="color:#f92672">&gt;</span> intervals<span style="color:#f92672">[</span>i<span style="color:#f92672">+</span>1<span style="color:#f92672">].</span><span style="color:#a6e22e">start</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        Arrays.sort(intervals, (a, b) -&gt; a.start - b.start);
-
-        for (int i = 0; i &lt; len-1; i++) {
-            if (intervals[i].end &gt; intervals[i+1].start) return false;
-        }
-
-        return true;
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array A, we can perform a pancake flip: We choose some positive integer k &amp;lt;= A.length, then reverse the order of the first k elements of A. We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array A.
-Return the k-values corresponding to a sequence of pancake flips that sortA. Any valid answer that sorts the array within 10 * A." />
+Return the k-values corresponding to a sequence of pancake flips that sort A. Any valid answer that sorts the array within 10 * A." />
   <meta name="keywords" content="leetcode sort " />
   
   
@@ -25,14 +25,14 @@ Return the k-values corresponding to a sequence of pancake flips that sortA. Any
     
     <meta name="twitter:title" content="Pancake Sorting" />
     <meta name="twitter:description" content="Given an array A, we can perform a pancake flip: We choose some positive integer k &amp;lt;= A.length, then reverse the order of the first k elements of A. We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array A.
-Return the k-values corresponding to a sequence of pancake flips that sortA. Any valid answer that sorts the array within 10 * A." />
+Return the k-values corresponding to a sequence of pancake flips that sort A. Any valid answer that sorts the array within 10 * A." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/pancake-sorting/" />
@@ -190,14 +190,9 @@ Return the k-values corresponding to a sequence of pancake flips that sortA. Any
         <h5>Last updated: September 15, 2019</h5>
       
       <hr />
-      
-
-<p>Given an array <code>A</code>, we can perform a pancake flip: We choose some positive integer <code>k &lt;= A.length</code>, then reverse the order of the first <code>k</code> elements of <code>A</code>.  We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array <code>A</code>.</p>
-
-<p>Return the k-values corresponding to a sequence of pancake flips that sort<code>A</code>.  Any valid answer that sorts the array within <code>10 * A.length</code> flips will be judged as correct.</p>
-
+      <p>Given an array <code>A</code>, we can perform a pancake flip: We choose some positive integer <code>k &lt;= A.length</code>, then reverse the order of the first <code>k</code> elements of <code>A</code>.  We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array <code>A</code>.</p>
+<p>Return the k-values corresponding to a sequence of pancake flips that sort<code> A</code>.  Any valid answer that sorts the array within <code>10 * A.length</code> flips will be judged as correct.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: [3,2,4,1]
 Output: [4,2,4,3]
 Explanation: 
@@ -207,49 +202,40 @@ After 1st flip (k=4): A = [1, 4, 2, 3]
 After 2nd flip (k=2): A = [4, 1, 2, 3]
 After 3rd flip (k=4): A = [3, 2, 1, 4]
 After 4th flip (k=3): A = [1, 2, 3, 4], which is sorted.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: [1,2,3]
 Output: []
 Explanation: The input is already sorted, so there is no need to flip anything.
 Note that other answers, such as [3, 3], would also be accepted.
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>1 &lt;= A.length &lt;= 100</code></li>
 <li><code>A[i]</code> is a permutation of <code>[1, 2, ..., A.length]</code></li>
 </ol>
-
 <h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution:
-    def pancakeSort(self, nums: List[int]) -&gt; List[int]:
-        n = len(nums)
-        ks = []
-        # We can confidently skip the the last element, which is at index 0, because it is guaranteed to be 1 after the last flip
-        for i in range(n-1, 0, -1):
-            # suppose the max value in at index 0
-            MAX = 0
-            for j in range(1, i+1):
-                if nums[j] &gt; nums[MAX]:
-                    MAX = j
-            # MAX != 0 means MAX is not at index 0
-            # MAX != i means the number at index i is indeed the WRONG number
-            if MAX != 0 and MAX != i:
-                ks.append(MAX+1)
-                nums[:MAX+1] = reversed(nums[:MAX+1])
-                ks.append(i+1)
-                nums[:i+1] = reversed(nums[:i+1])
-            elif MAX == 0:
-                ks.append(i+1)
-                nums[:i+1] = reversed(nums[:i+1])
-        return ks
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pancakeSort</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> List[int]:
+        n <span style="color:#f92672">=</span> len(nums)
+        ks <span style="color:#f92672">=</span> []
+        <span style="color:#75715e"># We can confidently skip the the last element, which is at index 0, because it is guaranteed to be 1 after the last flip</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#75715e"># suppose the max value in at index 0</span>
+            MAX <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+                <span style="color:#66d9ef">if</span> nums[j] <span style="color:#f92672">&gt;</span> nums[MAX]:
+                    MAX <span style="color:#f92672">=</span> j
+            <span style="color:#75715e"># MAX != 0 means MAX is not at index 0</span>
+            <span style="color:#75715e"># MAX != i means the number at index i is indeed the WRONG number</span>
+            <span style="color:#66d9ef">if</span> MAX <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> MAX <span style="color:#f92672">!=</span> i:
+                ks<span style="color:#f92672">.</span>append(MAX<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+                nums[:MAX<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> reversed(nums[:MAX<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+                ks<span style="color:#f92672">.</span>append(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+                nums[:i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> reversed(nums[:i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+            <span style="color:#66d9ef">elif</span> MAX <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                ks<span style="color:#f92672">.</span>append(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+                nums[:i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> reversed(nums[:i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+        <span style="color:#66d9ef">return</span> ks
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

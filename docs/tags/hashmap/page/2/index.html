@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/hashmap/" />
@@ -179,7 +179,7 @@
       <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/">Longest Substring With at Most Two Distinct Characters</a></h2>
 
       <p>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
-Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; which its length is 3.  Example 2: Input: &#34;ccaabbb&#34; Output: 5 Explanation: t is &#34;aabbb&#34; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&lt;Character, Integer&gt; countMap = new HashMap&lt;Character, Integer&gt;(); int left = 0; int max = 0; for (int i = 0; i &lt; s.</p>
+Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; which its length is 3. Example 2: Input: &#34;ccaabbb&#34; Output: 5 Explanation: t is &#34;aabbb&#34; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&lt;Character, Integer&gt; countMap = new HashMap&lt;Character, Integer&gt;(); int left = 0; int max = 0; for (int i = 0; i &lt; s.</p>
 
       <p class="meta">
         
@@ -205,7 +205,7 @@ Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; whic
       <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/">Longest Substring With at Most K Distinct Characters</a></h2>
 
       <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1: Input: s = &#34;eceba&#34;, k = 2 Output: 3 Explanation: T is &#34;ece&#34; which its length is 3.  Example 2: Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: T is &#34;aa&#34; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&lt;Character, Integer&gt; countMap = new HashMap&lt;&gt;(); int left = 0; int max = 0; for(int i = 0; i &lt; s.</p>
+Example 1: Input: s = &#34;eceba&#34;, k = 2 Output: 3 Explanation: T is &#34;ece&#34; which its length is 3. Example 2: Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: T is &#34;aa&#34; which its length is 2. Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&lt;Character, Integer&gt; countMap = new HashMap&lt;&gt;(); int left = 0; int max = 0; for(int i = 0; i &lt; s.</p>
 
       <p class="meta">
         
@@ -232,10 +232,7 @@ Example 1: Input: s = &#34;eceba&#34;, k = 2 Output: 3 Explanation: T is &#34;ec
 
       <p>Implement FreqStack, a class which simulates the operation of a stack-like data structure.
 FreqStack has two functions:
-1. push(int x), which pushes an integer x onto the stack.
-2. pop(), which removes and returns the most frequent element in the stack.
-3. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.
-Example 1: Input: [&#34;FreqStack&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;pop&#34;,&#34;pop&#34;,&#34;pop&#34;,&#34;pop&#34;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six .</p>
+ push(int x), which pushes an integer x onto the stack. pop(), which removes and returns the most frequent element in the stack. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.  Example 1: Input: [&#34;FreqStack&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#34;,&#34;pop&#34;,&#34;pop&#34;,&#34;pop&#34;,&#34;pop&#34;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six .</p>
 
       <p class="meta">
         
@@ -261,7 +258,8 @@ Example 1: Input: [&#34;FreqStack&#34;,&#34;push&#34;,&#34;push&#34;,&#34;push&#
       <h2><a href="http://www.hashnopolis.com/post/2019/03/most-common-word/">Most Common Word</a></h2>
 
       <p>Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words. It is guaranteed there is at least one word that isn’t banned, and that the answer is unique.
-Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase.</p>
+Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase.
+Example: Input: paragraph = &#34;Bob hit a ball, the hit BALL flew far after it was hit.</p>
 
       <p class="meta">
         
@@ -339,7 +337,7 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
       <h2><a href="http://www.hashnopolis.com/post/2018/11/count-primes/">Count Primes</a></h2>
 
       <p>Count the number of prime numbers less than a non-negative number, n.
-Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &#34;&#34;&#34; :type n: int :rtype: int &#34;&#34;&#34; if n &lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &lt; len(marked)-1: count &#43;= 1 return count  Cleaner version</p>
+Example Input: 10 Output: 4 Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &#34;&#34;&#34; :type n: int :rtype: int &#34;&#34;&#34; if n &lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &lt; len(marked)-1: count &#43;= 1 return count Cleaner version</p>
 
       <p class="meta">
         
@@ -394,9 +392,10 @@ Solution class Solution: def topKFrequent(self, nums, k): &#34;&#34;&#34; :type 
 
       <p>Given two strings s and t , write a function to determine if t is an anagram of s.
 Example 1:
-Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; Output: true  Example 2:
-Input: s = &#34;rat&#34;, t = &#34;car&#34; Output: false  Note: You may assume the string contains only lowercase alphabets.
-Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?</p>
+Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; Output: true Example 2:
+Input: s = &#34;rat&#34;, t = &#34;car&#34; Output: false Note: You may assume the string contains only lowercase alphabets.
+Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
+Solution: class Solution: def isAnagram(self, s, t): &#34;&#34;&#34; :type s: str :type t: str :rtype: bool &#34;&#34;&#34; primeNums = { &#34;a&#34;: 2, &#34;b&#34;: 3, &#34;c&#34;: 5, &#34;d&#34;: 7, &#34;e&#34;: 11, &#34;f&#34;: 13, &#34;g&#34;: 17, &#34;h&#34;: 19, &#34;i&#34;: 23, &#34;j&#34;: 29, &#34;k&#34;: 31, &#34;m&#34;: 37, &#34;l&#34;: 41, &#34;n&#34;: 43, &#34;o&#34;: 47, &#34;p&#34;: 53, &#34;q&#34;: 59, &#34;r&#34;: 61, &#34;s&#34;: 67, &#34;t&#34;: 71, &#34;u&#34;: 73, &#34;v&#34;: 79, &#34;w&#34;: 83, &#34;x&#34;: 89, &#34;y&#34;: 97, &#34;z&#34;: 101 } val_1 = 0 val_2 = 0 list_1 = list(s) list_2 = list(t) &#34;&#34;&#34; Continue only if the two lists are of the same length&#34;&#34;&#34; if(len(list_1) == len(list_2)): for i in range(len(list_1)): val_1 &#43;= primeNums[list_1[i]] val_2 &#43;= primeNums[list_2[i]] if (val_1 == val_2): return True return False </p>
 
       <p class="meta">
         
@@ -422,7 +421,7 @@ Follow-up What if the inputs contain unicode characters? How would you adapt you
       <h2><a href="http://www.hashnopolis.com/post/2018/09/roman-to-integer/">Roman to Integer</a></h2>
 
       <p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written as II in Roman numeral, just two one’s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II.</p>
+Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as II in Roman numeral, just two one’s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II.</p>
 
       <p class="meta">
         

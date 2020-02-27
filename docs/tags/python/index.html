@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/python/" />
@@ -178,9 +178,9 @@
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
 
-      <p> Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
-Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution: def longestConsecutive(self, nums: List[int]) -&gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest  </p>
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4. Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest </p>
 
       <p class="meta">
         
@@ -207,7 +207,7 @@ Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecu
 
       <p>You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</p>
+Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</p>
 
       <p class="meta">
         
@@ -235,7 +235,7 @@ Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanatio
       <p>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ]  ###Example 2:</p>
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</p>
 
       <p class="meta">
         
@@ -262,7 +262,7 @@ Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: 
 
       <p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 For example, given n = 3, a solution set is:
-[ &#34;((()))&#34;, &#34;(()())&#34;, &#34;(())()&#34;, &#34;()(())&#34;, &#34;()()()&#34; ]  Solution class Solution: def generateParenthesis(self, n: int) -&gt; List[str]: &#34;&#34;&#34; :type n: int :rtype: List[str] &#34;&#34;&#34; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</p>
+[ &#34;((()))&#34;, &#34;(()())&#34;, &#34;(())()&#34;, &#34;()(())&#34;, &#34;()()()&#34; ] Solution class Solution: def generateParenthesis(self, n: int) -&gt; List[str]: &#34;&#34;&#34; :type n: int :rtype: List[str] &#34;&#34;&#34; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</p>
 
       <p class="meta">
         
@@ -288,8 +288,8 @@ For example, given n = 3, a solution set is:
       <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-common-prefix/">Longest Common Prefix</a></h2>
 
       <p>Write a function to find the longest common prefix string amongst an array of strings.
-If there is no common prefix, return an empty string “”.
-Example 1 Input: [&#34;flower&#34;,&#34;flow&#34;,&#34;flight&#34;] Output: &#34;fl&#34;  Example 2 Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explanation: There is no common prefix among the input strings.  Note All given inputs are in lowercase letters a-z.
+If there is no common prefix, return an empty string “&#34;.
+Example 1 Input: [&#34;flower&#34;,&#34;flow&#34;,&#34;flight&#34;] Output: &#34;fl&#34; Example 2 Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explanation: There is no common prefix among the input strings. Note All given inputs are in lowercase letters a-z.
 Note # Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: str &#34;&#34;&#34; if not strs or len(strs) == 0: return &#34;&#34; res = strs[0] for s in strs: # string.</p>
 
       <p class="meta">
@@ -368,7 +368,7 @@ Now you want to find out who the celebrity is or verify that there is not one. T
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/arrays-in-python/">Arrays in Python</a></h2>
 
-      <p>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1]  Clone a list newArr = oldArr[:]</p>
+      <p>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1] Clone a list newArr = oldArr[:]</p>
 
       <p class="meta">
         
@@ -394,7 +394,7 @@ Now you want to find out who the celebrity is or verify that there is not one. T
       <h2><a href="http://www.hashnopolis.com/post/2018/11/integer-to-english-words/">Integer to English Words</a></h2>
 
       <p>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
-Example 1 Input: 123 Output: &#34;One Hundred Twenty Three&#34;  Example 2 Input: 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34;  Example 3 Input: 1234567 Output: &#34;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&#34;  Example 4 Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&#34;  Solution class Solution: def __init__(self): self.</p>
+Example 1 Input: 123 Output: &#34;One Hundred Twenty Three&#34; Example 2 Input: 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34; Example 3 Input: 1234567 Output: &#34;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&#34; Example 4 Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&#34; Solution class Solution: def __init__(self): self.</p>
 
       <p class="meta">
         
@@ -422,7 +422,7 @@ Example 1 Input: 123 Output: &#34;One Hundred Twenty Three&#34;  Example 2 Input
       <p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &lt; arr[j] &lt; arr[k] given 0 ≤ i &lt; j &lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution import sys INT_MAX = sys.</p>
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import sys INT_MAX = sys.</p>
 
       <p class="meta">
         

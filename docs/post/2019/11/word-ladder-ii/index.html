@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that: 1. Only one letter can be changed at a time 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
-Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
+  <meta name="description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
+ Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
   <meta name="keywords" content="leetcode bfs dfs " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Word Ladder Ii" />
-    <meta name="twitter:description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that: 1. Only one letter can be changed at a time 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
-Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
+    <meta name="twitter:description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
+ Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/11/word-ladder-ii/" />
@@ -192,14 +192,12 @@ Note:  Return an empty list if there is no such transformation sequence. All wor
         <h5>Last updated: November 30, 2019</h5>
       
       <hr />
-      
-
-<p>Given two words (<code>beginWord</code> and <code>endWord</code>), and a dictionary&rsquo;s word list, find all shortest transformation sequence(s) from <code>beginWord</code> to <code>endWord</code>, such that:
-1. Only one letter can be changed at a time
-2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.</p>
-
+      <p>Given two words (<code>beginWord</code> and <code>endWord</code>), and a dictionary&rsquo;s word list, find all shortest transformation sequence(s) from <code>beginWord</code> to <code>endWord</code>, such that:</p>
+<ol>
+<li>Only one letter can be changed at a time</li>
+<li>Each transformed word must exist in the word list. Note that beginWord is not a transformed word.</li>
+</ol>
 <h3 id="note">Note:</h3>
-
 <ol>
 <li>Return an empty list if there is no such transformation sequence.</li>
 <li>All words have the same length.</li>
@@ -207,9 +205,7 @@ Note:  Return an empty list if there is no such transformation sequence. All wor
 <li>You may assume no duplicates in the word list.</li>
 <li>You may assume beginWord and endWord are non-empty and are not the same.</li>
 </ol>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input:
 beginWord = &quot;hit&quot;,
 endWord = &quot;cog&quot;,
@@ -220,82 +216,73 @@ Output:
   [&quot;hit&quot;,&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;cog&quot;],
   [&quot;hit&quot;,&quot;hot&quot;,&quot;lot&quot;,&quot;log&quot;,&quot;cog&quot;]
 ]
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input:
 beginWord = &quot;hit&quot;
 endWord = &quot;cog&quot;
 wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;]
 
 Output: []
-</code></pre>
-
-<p>Explanation: The endWord &ldquo;cog&rdquo; is not in wordList, therefore no possible transformation.</p>
-
+</code></pre><p>Explanation: The endWord &ldquo;cog&rdquo; is not in wordList, therefore no possible transformation.</p>
 <h3 id="solution">Solution</h3>
-
 <p>end   -&gt; start:  bfs
 start -&gt; end:    dfs</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
 
-<pre><code class="language-python">from collections import deque
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findLadders</span>(self, beginWord: str, endWord: str, wordList: List[str]) <span style="color:#f92672">-&gt;</span> List[List[str]]:
+        <span style="color:#66d9ef">if</span> endWord <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> wordList:
+            <span style="color:#66d9ef">return</span> []
 
-class Solution:
-    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -&gt; List[List[str]]:
-        if endWord not in wordList:
-            return []
+        dict <span style="color:#f92672">=</span> set(wordList)
+        dict<span style="color:#f92672">.</span>add(beginWord)
+        dict<span style="color:#f92672">.</span>add(endWord)
+        distance <span style="color:#f92672">=</span> {}
 
-        dict = set(wordList)
-        dict.add(beginWord)
-        dict.add(endWord)
-        distance = {}
+        <span style="color:#75715e"># record distances</span>
+        <span style="color:#75715e"># from endWord to startWord</span>
+        self<span style="color:#f92672">.</span>bfs(endWord, distance, dict)
+        <span style="color:#75715e"># beginWord: &#34;hit&#34;</span>
+        <span style="color:#75715e"># endWord:   &#34;cog&#34;</span>
+        <span style="color:#75715e"># wordList:  [&#34;hot&#34;,&#34;dot&#34;,&#34;dog&#34;,&#34;lot&#34;,&#34;log&#34;,&#34;cog&#34;]</span>
+        <span style="color:#75715e"># distance:  {&#39;cog&#39;: 0, &#39;dog&#39;: 1, &#39;log&#39;: 1, &#39;dot&#39;: 2, &#39;lot&#39;: 2, &#39;hot&#39;: 3, &#39;hit&#39;: 4}</span>
+        results <span style="color:#f92672">=</span> []
+        <span style="color:#75715e"># backtracking</span>
+        self<span style="color:#f92672">.</span>dfs(beginWord, endWord, distance, dict, [beginWord], results)
 
-        # record distances
-        # from endWord to startWord
-        self.bfs(endWord, distance, dict)
-        # beginWord: &quot;hit&quot;
-        # endWord:   &quot;cog&quot;
-        # wordList:  [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;,&quot;cog&quot;]
-        # distance:  {'cog': 0, 'dog': 1, 'log': 1, 'dot': 2, 'lot': 2, 'hot': 3, 'hit': 4}
-        results = []
-        # backtracking
-        self.dfs(beginWord, endWord, distance, dict, [beginWord], results)
+        <span style="color:#66d9ef">return</span> results
 
-        return results
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bfs</span>(self, start, distance, dict):
+        distance[start] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        queue <span style="color:#f92672">=</span> deque([start])
+        <span style="color:#66d9ef">while</span> queue:
+            word <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>popleft()
+            <span style="color:#66d9ef">for</span> next_word <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>get_next_words(word, dict):
+                <span style="color:#66d9ef">if</span> next_word <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> distance:
+                    distance[next_word] <span style="color:#f92672">=</span> distance[word] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+                    queue<span style="color:#f92672">.</span>append(next_word)
 
-    def bfs(self, start, distance, dict):
-        distance[start] = 0
-        queue = deque([start])
-        while queue:
-            word = queue.popleft()
-            for next_word in self.get_next_words(word, dict):
-                if next_word not in distance:
-                    distance[next_word] = distance[word] + 1
-                    queue.append(next_word)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next_words</span>(self, word, dict):
+        words <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(word)):
+            <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> <span style="color:#e6db74">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>:
+                next_word <span style="color:#f92672">=</span> word[:i] <span style="color:#f92672">+</span> c <span style="color:#f92672">+</span> word[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:]
+                <span style="color:#66d9ef">if</span> next_word <span style="color:#f92672">!=</span> word <span style="color:#f92672">and</span> next_word <span style="color:#f92672">in</span> dict:
+                    words<span style="color:#f92672">.</span>append(next_word)
+        <span style="color:#66d9ef">return</span> words
 
-    def get_next_words(self, word, dict):
-        words = []
-        for i in range(len(word)):
-            for c in 'abcdefghijklmnopqrstuvwxyz':
-                next_word = word[:i] + c + word[i + 1:]
-                if next_word != word and next_word in dict:
-                    words.append(next_word)
-        return words
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(self, curr, target, distance, dict, path, results):
+        <span style="color:#66d9ef">if</span> curr <span style="color:#f92672">==</span> target:
+            results<span style="color:#f92672">.</span>append(list(path))
+            <span style="color:#66d9ef">return</span>
 
-    def dfs(self, curr, target, distance, dict, path, results):
-        if curr == target:
-            results.append(list(path))
-            return
-
-        for word in self.get_next_words(curr, dict):
-            if distance[word] != distance[curr] - 1:
-                continue
-            path.append(word)
-            self.dfs(word, target, distance, dict, path, results)
-            path.pop()
-</code></pre>
-
+        <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>get_next_words(curr, dict):
+            <span style="color:#66d9ef">if</span> distance[word] <span style="color:#f92672">!=</span> distance[curr] <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+                <span style="color:#66d9ef">continue</span>
+            path<span style="color:#f92672">.</span>append(word)
+            self<span style="color:#f92672">.</span>dfs(word, target, distance, dict, path, results)
+            path<span style="color:#f92672">.</span>pop()
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -29,7 +29,7 @@ find(6) -> false
 ### Solution
 ```python
 # Time: add is o(1), find is o(n)
-# Space: o(n)
+# Space: `O(n)`
 class TwoSum:
     def __init__(self):
         """

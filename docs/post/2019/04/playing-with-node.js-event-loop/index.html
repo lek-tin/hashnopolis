@@ -18,8 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
 process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
-function cb(msg){ console.log(msg); } setImmediate(cb, &#39;setImmediate&#39;); process.nextTick(cb, &#39;process.nextTick: 1&#39;); process.nextTick(cb, &#39;process.nextTick: 2&#39;); process.nextTick(cb, &#39;process.nextTick: 3&#39;); console.log(&#39;Processed in the first iteration&#39;); process.nextTick(cb, &#39;process.nextTick: 4&#39;); process.nextTick(cb, &#39;process.nextTick: 5&#39;);  Output:
-Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process." />
+function cb(msg){ console.log(msg); } setImmediate(cb, &amp;#39;setImmediate&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 1&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 2&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 3&amp;#39;); console.log(&amp;#39;Processed in the first iteration&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 4&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 5&amp;#39;); Output:
+Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process.nextTick: 3 process." />
   <meta name="keywords" content="nodejs javascript " />
   
   
@@ -28,15 +28,15 @@ Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process
     <meta name="twitter:title" content="Playing with Node.js Event Loop" />
     <meta name="twitter:description" content="setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
 process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
-function cb(msg){ console.log(msg); } setImmediate(cb, &#39;setImmediate&#39;); process.nextTick(cb, &#39;process.nextTick: 1&#39;); process.nextTick(cb, &#39;process.nextTick: 2&#39;); process.nextTick(cb, &#39;process.nextTick: 3&#39;); console.log(&#39;Processed in the first iteration&#39;); process.nextTick(cb, &#39;process.nextTick: 4&#39;); process.nextTick(cb, &#39;process.nextTick: 5&#39;);  Output:
-Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process." />
+function cb(msg){ console.log(msg); } setImmediate(cb, &amp;#39;setImmediate&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 1&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 2&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 3&amp;#39;); console.log(&amp;#39;Processed in the first iteration&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 4&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 5&amp;#39;); Output:
+Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process.nextTick: 3 process." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/" />
@@ -194,23 +194,19 @@ Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process
         <h5>Last updated: April 4, 2019</h5>
       
       <hr />
-      <p><code>setImmediate/clearImmediate</code> - will execute code at the end of the current event loop cycle<br />
+      <p><code>setImmediate/clearImmediate</code> - will execute code at the end of the current event loop cycle<br>
 <code>process.nextTick</code> - used to schedule a callback function to be invoked in the next iteration of the Event Loop</p>
-
-<pre><code class="language-javascript">function cb(msg){
-  console.log(msg);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">cb</span>(<span style="color:#a6e22e">msg</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">msg</span>);
 }
-setImmediate(cb, 'setImmediate');
-process.nextTick(cb, 'process.nextTick: 1');
-process.nextTick(cb, 'process.nextTick: 2');
-process.nextTick(cb, 'process.nextTick: 3');
-console.log('Processed in the first iteration');
-process.nextTick(cb, 'process.nextTick: 4');
-process.nextTick(cb, 'process.nextTick: 5');
-</code></pre>
-
-<p>Output:</p>
-
+<span style="color:#a6e22e">setImmediate</span>(<span style="color:#a6e22e">cb</span>, <span style="color:#e6db74">&#39;setImmediate&#39;</span>);
+<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">nextTick</span>(<span style="color:#a6e22e">cb</span>, <span style="color:#e6db74">&#39;process.nextTick: 1&#39;</span>);
+<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">nextTick</span>(<span style="color:#a6e22e">cb</span>, <span style="color:#e6db74">&#39;process.nextTick: 2&#39;</span>);
+<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">nextTick</span>(<span style="color:#a6e22e">cb</span>, <span style="color:#e6db74">&#39;process.nextTick: 3&#39;</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Processed in the first iteration&#39;</span>);
+<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">nextTick</span>(<span style="color:#a6e22e">cb</span>, <span style="color:#e6db74">&#39;process.nextTick: 4&#39;</span>);
+<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">nextTick</span>(<span style="color:#a6e22e">cb</span>, <span style="color:#e6db74">&#39;process.nextTick: 5&#39;</span>);
+</code></pre></div><p>Output:</p>
 <pre><code>Processed in the first iteration
 process.nextTick: 1
 process.nextTick: 2
@@ -219,7 +215,6 @@ process.nextTick: 4
 process.nextTick: 5
 setImmediate
 </code></pre>
-
   </div>
 
   <div id="disqus_thread"></div>

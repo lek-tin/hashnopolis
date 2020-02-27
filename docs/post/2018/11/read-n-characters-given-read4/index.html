@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="The API: int read4(char *buf) reads 4 characters at a time from a file.
 The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
+By using the read4 API, implement the function int read(char *buf, int n) that reads n characters from the file.
 Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;." />
   <meta name="keywords" content="leetcode stream " />
   
@@ -28,7 +28,7 @@ Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;
     <meta name="twitter:title" content="Read N Characters Given Read4" />
     <meta name="twitter:description" content="The API: int read4(char *buf) reads 4 characters at a time from a file.
 The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
+By using the read4 API, implement the function int read(char *buf, int n) that reads n characters from the file.
 Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
@@ -36,7 +36,7 @@ Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/" />
@@ -194,86 +194,71 @@ Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;
         <h5>Last updated: October 3, 2019</h5>
       
       <hr />
-      
-
-<p>The API: <code>int read4(char *buf)</code> reads 4 characters at a time from a file.</p>
-
+      <p>The API: <code>int read4(char *buf)</code> reads 4 characters at a time from a file.</p>
 <p>The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.</p>
-
-<p>By using the <code>read4</code> API, implement the function <code>int read(char *buf, int n)</code>that reads n characters from the file.</p>
-
+<p>By using the <code>read4</code> API, implement the function <code>int read(char *buf, int n) </code>that reads n characters from the file.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: buf = &quot;abc&quot;, n = 4
 Output: &quot;abc&quot;
 Explanation: The actual number of characters read is 3, which is &quot;abc&quot;.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: buf = &quot;abcde&quot;, n = 5
 Output: &quot;abcde&quot;
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <p>The read function will only be called once for each test case.</p>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">The read4 API is already defined for you.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    @param buf, a list of characters
+</span><span style="color:#e6db74">    @return an integer
+</span><span style="color:#e6db74">    def read4(buf):
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"># Below is an example of how the read4 API can be called.
+</span><span style="color:#e6db74">file = File(&#34;abcdefghijk&#34;) # File is &#34;abcdefghijk&#34;, initially file pointer (fp) points to &#39;a&#39;
+</span><span style="color:#e6db74">buf = [&#39; &#39;] * 4 # Create buffer with enough space to store characters
+</span><span style="color:#e6db74">read4(buf) # read4 returns 4. Now buf = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;], fp points to &#39;e&#39;
+</span><span style="color:#e6db74">read4(buf) # read4 returns 4. Now buf = [&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;], fp points to &#39;i&#39;
+</span><span style="color:#e6db74">read4(buf) # read4 returns 3. Now buf = [&#39;i&#39;,&#39;j&#39;,&#39;k&#39;,...], fp points to end of file
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+<span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">The read4 API is already defined for you.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    @param buf, a list of characters
+</span><span style="color:#e6db74">    @return an integer
+</span><span style="color:#e6db74">    def read4(buf):
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"># Below is an example of how the read4 API can be called.
+</span><span style="color:#e6db74">file = File(&#34;abcdefghijk&#34;) # File is &#34;abcdefghijk&#34;, initially file pointer (fp) points to &#39;a&#39;
+</span><span style="color:#e6db74">buf = [&#39; &#39;] * 4 # Create buffer with enough space to store characters
+</span><span style="color:#e6db74">read4(buf) # read4 returns 4. Now buf = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;], fp points to &#39;e&#39;
+</span><span style="color:#e6db74">read4(buf) # read4 returns 4. Now buf = [&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;], fp points to &#39;i&#39;
+</span><span style="color:#e6db74">read4(buf) # read4 returns 3. Now buf = [&#39;i&#39;,&#39;j&#39;,&#39;k&#39;,...], fp points to end of file
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read</span>(self, buf, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type buf: Destination buffer (List[str])
+</span><span style="color:#e6db74">        :type n: Number of characters to read (int)
+</span><span style="color:#e6db74">        :rtype: The number of actual characters read (int)
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        curr, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>
+        <span style="color:#66d9ef">while</span> curr <span style="color:#f92672">&lt;</span> n:
+            tempBuf <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(size)]
+            <span style="color:#75715e"># n can be longer than the file size</span>
+            <span style="color:#75715e"># take the min to decide whether to stop</span>
+            <span style="color:#75715e">#           &#34;abc&#34;, 3</span>
+            <span style="color:#75715e">#                           &#34;abcdef&#34;, 5</span>
+            chunk <span style="color:#f92672">=</span> min(read4(tempBuf), n<span style="color:#f92672">-</span>curr)
+            <span style="color:#75715e"># If chunk == 0, file has been read completely</span>
+            <span style="color:#66d9ef">if</span> chunk <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#66d9ef">break</span>
+            <span style="color:#66d9ef">print</span>(chunk)
+            buf[curr: curr<span style="color:#f92672">+</span>chunk] <span style="color:#f92672">=</span> tempBuf
+            curr <span style="color:#f92672">+=</span> chunk
 
-<pre><code class="language-python">&quot;&quot;&quot;
-The read4 API is already defined for you.
-
-    @param buf, a list of characters
-    @return an integer
-    def read4(buf):
-
-# Below is an example of how the read4 API can be called.
-file = File(&quot;abcdefghijk&quot;) # File is &quot;abcdefghijk&quot;, initially file pointer (fp) points to 'a'
-buf = [' '] * 4 # Create buffer with enough space to store characters
-read4(buf) # read4 returns 4. Now buf = ['a','b','c','d'], fp points to 'e'
-read4(buf) # read4 returns 4. Now buf = ['e','f','g','h'], fp points to 'i'
-read4(buf) # read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
-&quot;&quot;&quot;
-&quot;&quot;&quot;
-The read4 API is already defined for you.
-
-    @param buf, a list of characters
-    @return an integer
-    def read4(buf):
-
-# Below is an example of how the read4 API can be called.
-file = File(&quot;abcdefghijk&quot;) # File is &quot;abcdefghijk&quot;, initially file pointer (fp) points to 'a'
-buf = [' '] * 4 # Create buffer with enough space to store characters
-read4(buf) # read4 returns 4. Now buf = ['a','b','c','d'], fp points to 'e'
-read4(buf) # read4 returns 4. Now buf = ['e','f','g','h'], fp points to 'i'
-read4(buf) # read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
-&quot;&quot;&quot;
-class Solution:
-    def read(self, buf, n):
-        &quot;&quot;&quot;
-        :type buf: Destination buffer (List[str])
-        :type n: Number of characters to read (int)
-        :rtype: The number of actual characters read (int)
-        &quot;&quot;&quot;
-        curr, size = 0, 4
-        while curr &lt; n:
-            tempBuf = [&quot;&quot; for _ in range(size)]
-            # n can be longer than the file size
-            # take the min to decide whether to stop
-            #           &quot;abc&quot;, 3
-            #                           &quot;abcdef&quot;, 5
-            chunk = min(read4(tempBuf), n-curr)
-            # If chunk == 0, file has been read completely
-            if chunk == 0:
-                break
-            print(chunk)
-            buf[curr: curr+chunk] = tempBuf
-            curr += chunk
-
-        return curr
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> curr
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

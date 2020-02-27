@@ -39,8 +39,8 @@ Words only consist of letters, never apostrophes or other punctuation symbols.
 
 ### SOlution:
 ```java
-// Time: O(n)
-// Space: O(n)
+// Time: `O(n)`
+// Space: `O(n)`
 class Solution {
     public String mostCommonWord(String paragraph, String[] banned) {
         HashSet<String> bannedWords = new HashSet<>(Arrays.asList(banned));

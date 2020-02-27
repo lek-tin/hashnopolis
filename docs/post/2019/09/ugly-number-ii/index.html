@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Write a program to find the n-th ugly number.
 Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.  Note:  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&amp;gt; int: if n &amp;lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !" />
+Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers. Note:  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&amp;gt; int: if n &amp;lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !" />
   <meta name="keywords" content="leetcode heap " />
   
   
@@ -27,14 +27,14 @@ Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is
     <meta name="twitter:title" content="Ugly Number II" />
     <meta name="twitter:description" content="Write a program to find the n-th ugly number.
 Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.  Note:  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&amp;gt; int: if n &amp;lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !" />
+Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers. Note:  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&amp;gt; int: if n &amp;lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/ugly-number-ii/" />
@@ -192,50 +192,40 @@ Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is
         <h5>Last updated: September 11, 2019</h5>
       
       <hr />
-      
-
-<p>Write a program to find the <code>n-th</code> ugly number.<br />
+      <p>Write a program to find the <code>n-th</code> ugly number.<br>
 Ugly numbers are positive numbers whose prime factors only include <code>2, 3, 5</code>.</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Input: n = 10
 Output: 12
 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>1</code> is typically treated as an ugly number.</li>
 <li><code>n</code> does not exceed <code>1690</code>.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> heapq
 
-<pre><code class="language-python">import heapq
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">nthUglyNumber</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
 
-class Solution:
-    def nthUglyNumber(self, n: int) -&gt; int:
-        if n &lt;= 0:
-            return 0
-        if n == 1:
-            return 1
-
-        q = [1]
-        visited = {1: True}
-        removed = 0
-        ans = 0
-        while removed != n:
-            ans = heapq.heappop(q)
-            removed += 1
-            for factor in [2, 3, 5]:
-                if ans*factor not in visited:
-                    heapq.heappush(q, ans*factor)
-                    visited[ans*factor] = True
-        return ans
-</code></pre>
-
+        q <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>]
+        visited <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>: True}
+        removed <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span> removed <span style="color:#f92672">!=</span> n:
+            ans <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(q)
+            removed <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">for</span> factor <span style="color:#f92672">in</span> [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>]:
+                <span style="color:#66d9ef">if</span> ans<span style="color:#f92672">*</span>factor <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+                    heapq<span style="color:#f92672">.</span>heappush(q, ans<span style="color:#f92672">*</span>factor)
+                    visited[ans<span style="color:#f92672">*</span>factor] <span style="color:#f92672">=</span> True
+        <span style="color:#66d9ef">return</span> ans
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

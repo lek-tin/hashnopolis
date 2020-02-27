@@ -16,27 +16,27 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content=" Given an integer array, find three numbers whose product is maximum and output the maximum product.
+  <meta name="description" content="Given an integer array, find three numbers whose product is maximum and output the maximum product.
 Example 1:
-Input: [1,2,3] Output: 6  Example 2:
-Input: [1,2,3,4] Output: 24  Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&amp;rsquo;t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; min_1, min_2 = float(&amp;quot;inf&amp;quot;), float(&amp;quot;inf&amp;quot;) max_1, max_2, max_3 = float(&amp;quot;-inf&amp;quot;), float(&amp;quot;-inf&amp;quot;), float(&amp;quot;-inf&amp;quot;) for num in nums: if num &amp;lt; min_1: min_2 = min_1 min_1 = num elif num &amp;lt; min_2: min_2 = num if num &amp;gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &amp;gt; max_2: max_3 = max_2 max_2 = num elif num &amp;gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3)  " />
+Input: [1,2,3] Output: 6 Example 2:
+Input: [1,2,3,4] Output: 24 Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&amp;rsquo;t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :rtype: int &amp;#34;&amp;#34;&amp;#34; min_1, min_2 = float(&amp;#34;inf&amp;#34;), float(&amp;#34;inf&amp;#34;) max_1, max_2, max_3 = float(&amp;#34;-inf&amp;#34;), float(&amp;#34;-inf&amp;#34;), float(&amp;#34;-inf&amp;#34;) for num in nums: if num &amp;lt; min_1: min_2 = min_1 min_1 = num elif num &amp;lt; min_2: min_2 = num if num &amp;gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &amp;gt; max_2: max_3 = max_2 max_2 = num elif num &amp;gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3) " />
   <meta name="keywords" content="leetcode " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Maximum Product of Three Numbers" />
-    <meta name="twitter:description" content=" Given an integer array, find three numbers whose product is maximum and output the maximum product.
+    <meta name="twitter:description" content="Given an integer array, find three numbers whose product is maximum and output the maximum product.
 Example 1:
-Input: [1,2,3] Output: 6  Example 2:
-Input: [1,2,3,4] Output: 24  Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&amp;rsquo;t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: int &amp;quot;&amp;quot;&amp;quot; min_1, min_2 = float(&amp;quot;inf&amp;quot;), float(&amp;quot;inf&amp;quot;) max_1, max_2, max_3 = float(&amp;quot;-inf&amp;quot;), float(&amp;quot;-inf&amp;quot;), float(&amp;quot;-inf&amp;quot;) for num in nums: if num &amp;lt; min_1: min_2 = min_1 min_1 = num elif num &amp;lt; min_2: min_2 = num if num &amp;gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &amp;gt; max_2: max_3 = max_2 max_2 = num elif num &amp;gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3)  " />
+Input: [1,2,3] Output: 6 Example 2:
+Input: [1,2,3,4] Output: 24 Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&amp;rsquo;t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :rtype: int &amp;#34;&amp;#34;&amp;#34; min_1, min_2 = float(&amp;#34;inf&amp;#34;), float(&amp;#34;inf&amp;#34;) max_1, max_2, max_3 = float(&amp;#34;-inf&amp;#34;), float(&amp;#34;-inf&amp;#34;), float(&amp;#34;-inf&amp;#34;) for num in nums: if num &amp;lt; min_1: min_2 = min_1 min_1 = num elif num &amp;lt; min_2: min_2 = num if num &amp;gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &amp;gt; max_2: max_3 = max_2 max_2 = num elif num &amp;gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3) " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/maximum-product-of-three-numbers/" />
@@ -192,60 +192,47 @@ Input: [1,2,3,4] Output: 24  Note:  The length of the given array will be in ran
         <h5>Last updated: October 19, 2019</h5>
       
       <hr />
-      
-
-<p>Given an integer array, find three numbers whose product is maximum and output the maximum product.</p>
-
+      <p>Given an integer array, find three numbers whose product is maximum and output the maximum product.</p>
 <p>Example 1:</p>
-
 <pre><code>Input: [1,2,3]
 Output: 6
-</code></pre>
-
-<p>Example 2:</p>
-
+</code></pre><p>Example 2:</p>
 <pre><code>Input: [1,2,3,4]
 Output: 24
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li>The length of the given array will be in range <code>[3,104]</code> and all elements are in the range <code>[-1000, 1000]</code>.</li>
 <li>Multiplication of any three numbers in the input won&rsquo;t exceed the range of <code>32-bit</code> signed integer.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maximumProduct</span>(self, nums):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
 
-<pre><code class="language-python">class Solution(object):
-    def maximumProduct(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: int
-        &quot;&quot;&quot;
+        min_1, min_2 <span style="color:#f92672">=</span> float(<span style="color:#e6db74">&#34;inf&#34;</span>), float(<span style="color:#e6db74">&#34;inf&#34;</span>)
+        max_1, max_2, max_3 <span style="color:#f92672">=</span> float(<span style="color:#e6db74">&#34;-inf&#34;</span>), float(<span style="color:#e6db74">&#34;-inf&#34;</span>), float(<span style="color:#e6db74">&#34;-inf&#34;</span>)
 
-        min_1, min_2 = float(&quot;inf&quot;), float(&quot;inf&quot;)
-        max_1, max_2, max_3 = float(&quot;-inf&quot;), float(&quot;-inf&quot;), float(&quot;-inf&quot;)
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> nums:
+            <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&lt;</span> min_1:
+                min_2 <span style="color:#f92672">=</span> min_1
+                min_1 <span style="color:#f92672">=</span> num
+            <span style="color:#66d9ef">elif</span> num <span style="color:#f92672">&lt;</span> min_2:
+                min_2 <span style="color:#f92672">=</span> num
 
-        for num in nums:
-            if num &lt; min_1:
-                min_2 = min_1
-                min_1 = num
-            elif num &lt; min_2:
-                min_2 = num
-
-            if num &gt; max_1:
-                max_3 = max_2
-                max_2 = max_1
-                max_1 = num
-            elif num &gt; max_2:
-                max_3 = max_2
-                max_2 = num
-            elif num &gt; max_3:
-                max_3 = num
-        return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3)
-</code></pre>
-
+            <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&gt;</span> max_1:
+                max_3 <span style="color:#f92672">=</span> max_2
+                max_2 <span style="color:#f92672">=</span> max_1
+                max_1 <span style="color:#f92672">=</span> num
+            <span style="color:#66d9ef">elif</span> num <span style="color:#f92672">&gt;</span> max_2:
+                max_3 <span style="color:#f92672">=</span> max_2
+                max_2 <span style="color:#f92672">=</span> num
+            <span style="color:#66d9ef">elif</span> num <span style="color:#f92672">&gt;</span> max_3:
+                max_3 <span style="color:#f92672">=</span> num
+        <span style="color:#66d9ef">return</span> max(min_1 <span style="color:#f92672">*</span> min_2 <span style="color:#f92672">*</span> max_1, max_1 <span style="color:#f92672">*</span> max_2 <span style="color:#f92672">*</span> max_3)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

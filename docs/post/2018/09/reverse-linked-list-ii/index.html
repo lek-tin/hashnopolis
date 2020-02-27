@@ -19,7 +19,7 @@
   <meta name="description" content="Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy." />
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy." />
   <meta name="keywords" content="leetcode linked-list " />
   
   
@@ -29,14 +29,14 @@ Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Outp
     <meta name="twitter:description" content="Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy." />
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/reverse-linked-list-ii/" />
@@ -194,88 +194,77 @@ Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Outp
         <h5>Last updated: September 30, 2018</h5>
       
       <hr />
-      
-
-<p>Reverse a linked list from position m to n. Do it in one-pass.</p>
-
+      <p>Reverse a linked list from position m to n. Do it in one-pass.</p>
 <p>Note: 1 ≤ m ≤ n ≤ length of list.</p>
-
 <p>Example:</p>
-
 <pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4
 
 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL
-</code></pre>
-
-<h3 id="solution">Solution:</h3>
-
-<pre><code class="language-java">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public ListNode reverseBetween(ListNode head, int m, int n) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode pre = dummy;
-        ListNode cur = dummy.next;
-        int counter = n - m;
+</code></pre><h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for singly-linked list.
+</span><span style="color:#75715e"> * public class ListNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     ListNode next;
+</span><span style="color:#75715e"> *     ListNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> ListNode <span style="color:#a6e22e">reverseBetween</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> m<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        ListNode dummy <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+        dummy<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        ListNode pre <span style="color:#f92672">=</span> dummy<span style="color:#f92672">;</span>
+        ListNode cur <span style="color:#f92672">=</span> dummy<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> counter <span style="color:#f92672">=</span> n <span style="color:#f92672">-</span> m<span style="color:#f92672">;</span>
         
-        dummy.next = head;
+        dummy<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
         
-        for (int i = 1; i &lt; m; i++) {
-            cur = cur.next;
-            pre = pre.next;
-        }
-        // 1  -&gt; 2  -&gt; 3  -&gt;    4     -&gt;  5  -&gt;  NULL, m = 2, n = 4
-        // pre  cur  after  after.next
-        // 1  -&gt; 3 -&gt;  2   -&gt;  4  -&gt;    5    -&gt;  NULL, m = 2, n = 4
-        // pre         cur  after   after.next
-        // 1  -&gt; 4 -&gt;  3 -&gt;  2  -&gt;  5    -&gt;    NULL, m = 2, n = 4
-        // pre              cur   after     after.next
-        for (int i = 0; i &lt; n -m; i++) {
-            ListNode after = cur.next;
-            // 1   -&gt; 2  -&gt;  4
-            // pre   cur   
-            cur.next = after.next;
-            //  3 -&gt; 2
-            after.next = pre.next;
-            // 1 -&gt; 3
-            pre.next = after;
-        }
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> m<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            pre <span style="color:#f92672">=</span> pre<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// 1  -&gt; 2  -&gt; 3  -&gt;    4     -&gt;  5  -&gt;  NULL, m = 2, n = 4
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// pre  cur  after  after.next
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 1  -&gt; 3 -&gt;  2   -&gt;  4  -&gt;    5    -&gt;  NULL, m = 2, n = 4
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// pre         cur  after   after.next
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 1  -&gt; 4 -&gt;  3 -&gt;  2  -&gt;  5    -&gt;    NULL, m = 2, n = 4
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// pre              cur   after     after.next
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">-</span>m<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            ListNode after <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#75715e">// 1   -&gt; 2  -&gt;  4
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// pre   cur   
+</span><span style="color:#75715e"></span>            cur<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> after<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#75715e">//  3 -&gt; 2
+</span><span style="color:#75715e"></span>            after<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> pre<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#75715e">// 1 -&gt; 3
+</span><span style="color:#75715e"></span>            pre<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> after<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        return dummy.next;
-    }
-}
-</code></pre>
-
-<pre><code class="language-python">class Solution:
-    def reverseBetween(self, head, m, n):
-        &quot;&quot;&quot;
-        :type head: ListNode
-        :type m: int
-        :type n: int
-        :rtype: ListNode
-        &quot;&quot;&quot;
-        dummy = ListNode(None)
-        dummy.next = head
-        pre = dummy
-        curr = dummy.next
-        for i in range(1, m):
-            curr = curr.next
-            pre = pre.next
-        for i in range(n-m):
-            temp = curr.next
-            curr.next = temp.next
-            temp.next = pre.next
-            pre.next = temp
-        return dummy.next
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseBetween</span>(self, head, m, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type head: ListNode
+</span><span style="color:#e6db74">        :type m: int
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: ListNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        dummy <span style="color:#f92672">=</span> ListNode(None)
+        dummy<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> head
+        pre <span style="color:#f92672">=</span> dummy
+        curr <span style="color:#f92672">=</span> dummy<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, m):
+            curr <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>next
+            pre <span style="color:#f92672">=</span> pre<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n<span style="color:#f92672">-</span>m):
+            temp <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>next
+            curr<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> temp<span style="color:#f92672">.</span>next
+            temp<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> pre<span style="color:#f92672">.</span>next
+            pre<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> temp
+        <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">.</span>next
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

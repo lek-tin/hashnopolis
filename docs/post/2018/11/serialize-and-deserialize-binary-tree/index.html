@@ -32,7 +32,7 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/serialize-and-deserialize-binary-tree/" />
@@ -192,14 +192,9 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
         <h5>Last updated: November 13, 2018</h5>
       
       <hr />
-      
-
-<p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.</p>
-
+      <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.</p>
 <p>Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>You may serialize the following tree:
 
     1
@@ -209,271 +204,259 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
     4   5
 
 as &quot;[1,2,3,null,null,4,5]&quot;
-</code></pre>
-
-<p><strong>Clarification</strong>: The above format is the same as <a href="https://leetcode.com/faq/#binary-tree">how LeetCode serializes a binary tree</a>. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.</p>
-
-<h3 id="note-do-not-use-class-member-global-static-variables-to-store-states-your-serialize-and-deserialize-algorithms-should-be-stateless">Note Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.</h3>
-
+</code></pre><p><strong>Clarification</strong>: The above format is the same as <a href="https://leetcode.com/faq/#binary-tree">how LeetCode serializes a binary tree</a>. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.</p>
+<h3 id="note-do-not-use-class-memberglobalstatic-variables-to-store-states-your-serialize-and-deserialize-algorithms-should-be-stateless">Note Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.</h3>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Codec</span>:
 
-class Codec:
-
-    def serialize(self, root):
-        &quot;&quot;&quot;Encodes a tree to a single string.
-        :type root: TreeNode
-        :rtype: str
-        &quot;&quot;&quot;
-        vals = []
-        def search(node):
-            if node:
-                vals.append(str(node.val))
-                search(node.left)
-                search(node.right)
-            else:
-                vals.append('#')
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">serialize</span>(self, root):
+        <span style="color:#e6db74">&#34;&#34;&#34;Encodes a tree to a single string.
+</span><span style="color:#e6db74">        :type root: TreeNode
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        vals <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(node):
+            <span style="color:#66d9ef">if</span> node:
+                vals<span style="color:#f92672">.</span>append(str(node<span style="color:#f92672">.</span>val))
+                search(node<span style="color:#f92672">.</span>left)
+                search(node<span style="color:#f92672">.</span>right)
+            <span style="color:#66d9ef">else</span>:
+                vals<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#39;#&#39;</span>)
         search(root)
-        return ' '.join(vals)
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(vals)
 
-    def deserialize(self, data):
-        &quot;&quot;&quot;Decodes your encoded data to tree.
-        :type data: str
-        :rtype: TreeNode
-        &quot;&quot;&quot;
-        vals = iter(data.split())
-        def build():
-            val = next(vals)
-            if val == '#':
-                return None
-            node = TreeNode(int(val))
-            node.left = build()
-            node.right = build()
-            return node
-        return build()
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">deserialize</span>(self, data):
+        <span style="color:#e6db74">&#34;&#34;&#34;Decodes your encoded data to tree.
+</span><span style="color:#e6db74">        :type data: str
+</span><span style="color:#e6db74">        :rtype: TreeNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        vals <span style="color:#f92672">=</span> iter(data<span style="color:#f92672">.</span>split())
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build</span>():
+            val <span style="color:#f92672">=</span> next(vals)
+            <span style="color:#66d9ef">if</span> val <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;#&#39;</span>:
+                <span style="color:#66d9ef">return</span> None
+            node <span style="color:#f92672">=</span> TreeNode(int(val))
+            node<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> build()
+            node<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> build()
+            <span style="color:#66d9ef">return</span> node
+        <span style="color:#66d9ef">return</span> build()
 
-# Your Codec object will be instantiated and called as such:
-# codec = Codec()
-# codec.deserialize(codec.serialize(root))
-</code></pre>
+<span style="color:#75715e"># Your Codec object will be instantiated and called as such:</span>
+<span style="color:#75715e"># codec = Codec()</span>
+<span style="color:#75715e"># codec.deserialize(codec.serialize(root))</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
+<span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-from collections import deque
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Codec</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">serialize</span>(self, root):
+        <span style="color:#e6db74">&#34;&#34;&#34;Encodes a tree to a single string.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">        :type root: TreeNode
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
 
-class Codec:
-    def serialize(self, root):
-        &quot;&quot;&quot;Encodes a tree to a single string.
+        q <span style="color:#f92672">=</span> deque([root])
+        res <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">while</span> q:
+            node <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> node:
+                res<span style="color:#f92672">.</span>append(str(<span style="color:#e6db74">&#34;#&#34;</span>))
+            <span style="color:#66d9ef">else</span>:
+                res<span style="color:#f92672">.</span>append(str(node<span style="color:#f92672">.</span>val))
+                q<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>left)
+                q<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>right)
 
-        :type root: TreeNode
-        :rtype: str
-        &quot;&quot;&quot;
-        if not root:
-            return &quot;&quot;
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">.</span>join(res)
 
-        q = deque([root])
-        res = []
-        while q:
-            node = q.popleft()
-            if not node:
-                res.append(str(&quot;#&quot;))
-            else:
-                res.append(str(node.val))
-                q.append(node.left)
-                q.append(node.right)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">deserialize</span>(self, data):
+        <span style="color:#e6db74">&#34;&#34;&#34;Decodes your encoded data to tree.
+</span><span style="color:#e6db74">        :type data: str
+</span><span style="color:#e6db74">        :rtype: TreeNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e"># None or &#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> data:
+            <span style="color:#66d9ef">return</span> None
 
-        return &quot; &quot;.join(res)
-
-    def deserialize(self, data):
-        &quot;&quot;&quot;Decodes your encoded data to tree.
-        :type data: str
-        :rtype: TreeNode
-        &quot;&quot;&quot;
-        # None or &quot;&quot;
-        if not data:
-            return None
-
-        nodeList = [
-            TreeNode(val) if val != &quot;#&quot; else None
-            for val in data.split(&quot; &quot;)
+        nodeList <span style="color:#f92672">=</span> [
+            TreeNode(val) <span style="color:#66d9ef">if</span> val <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#66d9ef">else</span> None
+            <span style="color:#66d9ef">for</span> val <span style="color:#f92672">in</span> data<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34; &#34;</span>)
         ]
 
-        curr, fast = 0, 1
-        validNodes = [nodeList[curr]]
+        curr, fast <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>
+        validNodes <span style="color:#f92672">=</span> [nodeList[curr]]
 
-        while curr &lt; len(validNodes):
-            node = validNodes[curr]
-            node.left = nodeList[fast]
-            node.right = nodeList[fast+1]
-            curr += 1
-            fast += 2
+        <span style="color:#66d9ef">while</span> curr <span style="color:#f92672">&lt;</span> len(validNodes):
+            node <span style="color:#f92672">=</span> validNodes[curr]
+            node<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> nodeList[fast]
+            node<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> nodeList[fast<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]
+            curr <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            fast <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>
 
-            if node.left:
-                validNodes.append(node.left)
-            if node.right:
-                validNodes.append(node.right)
+            <span style="color:#66d9ef">if</span> node<span style="color:#f92672">.</span>left:
+                validNodes<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>left)
+            <span style="color:#66d9ef">if</span> node<span style="color:#f92672">.</span>right:
+                validNodes<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>right)
 
-        return nodeList[0]
+        <span style="color:#66d9ef">return</span> nodeList[<span style="color:#ae81ff">0</span>]
 
 
-# Your Codec object will be instantiated and called as such:
-# codec = Codec()
-# codec.deserialize(codec.serialize(root))
-</code></pre>
+<span style="color:#75715e"># Your Codec object will be instantiated and called as such:</span>
+<span style="color:#75715e"># codec = Codec()</span>
+<span style="color:#75715e"># codec.deserialize(codec.serialize(root))</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Codec</span> <span style="color:#f92672">{</span>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-public class Codec {
+    <span style="color:#66d9ef">private</span> Queue <span style="color:#a6e22e">search</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> Queue<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> nodes<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            nodes<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">));</span>
+            search<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> nodes<span style="color:#f92672">);</span>
+            search<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> nodes<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">// If null node, stop search further. Add &#34;#&#34; to nodes.
+</span><span style="color:#75715e"></span>            nodes<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;#&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> nodes<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    private Queue search(TreeNode node, Queue&lt;String&gt; nodes) {
-        if (node != null) {
-            nodes.add(Integer.toString(node.val));
-            search(node.left, nodes);
-            search(node.right, nodes);
-        } else {
-            // If null node, stop search further. Add &quot;#&quot; to nodes.
-            nodes.add(&quot;#&quot;);
-        }
-        return nodes;
-    }
+    <span style="color:#75715e">// Encodes a tree to a single string.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">serialize</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        StringBuilder res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span>
+        Queue<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> nodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
 
-    // Encodes a tree to a single string.
-    public String serialize(TreeNode root) {
-        StringBuilder res = new StringBuilder();
-        Queue&lt;String&gt; nodes = new LinkedList&lt;&gt;();
+        search<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> nodes<span style="color:#f92672">);</span>
 
-        search(root, nodes);
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>nodes<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            res<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>nodes<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">());</span>
+            res<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// Delete the trailing &#34;,&#34;
+</span><span style="color:#75715e"></span>        res<span style="color:#f92672">.</span><span style="color:#a6e22e">deleteCharAt</span><span style="color:#f92672">(</span>res<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()-</span>1<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
 
-        while (!nodes.isEmpty()) {
-            res.append(nodes.poll());
-            res.append(&quot;,&quot;);
-        }
-        // Delete the trailing &quot;,&quot;
-        res.deleteCharAt(res.length()-1);
-        return res.toString();
-    }
+    <span style="color:#66d9ef">private</span> TreeNode <span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>Queue<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> nodes<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        String val <span style="color:#f92672">=</span> nodes<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>val<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;#&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        TreeNode node <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span>Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>val<span style="color:#f92672">));</span>
+        <span style="color:#75715e">// Build left node then right node
+</span><span style="color:#75715e"></span>        node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> build<span style="color:#f92672">(</span>nodes<span style="color:#f92672">);</span>
+        node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> build<span style="color:#f92672">(</span>nodes<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> node<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    private TreeNode build(Queue&lt;String&gt; nodes) {
-        String val = nodes.poll();
-        if (val.equals(&quot;#&quot;)) {
-            return null;
-        }
-        TreeNode node = new TreeNode(Integer.parseInt(val));
-        // Build left node then right node
-        node.left = build(nodes);
-        node.right = build(nodes);
-        return node;
-    }
+    <span style="color:#75715e">// Decodes your encoded data to tree.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> TreeNode <span style="color:#a6e22e">deserialize</span><span style="color:#f92672">(</span>String data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Queue<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> nodes <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>data<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">)));</span>
+        <span style="color:#66d9ef">return</span> build<span style="color:#f92672">(</span>nodes<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-    // Decodes your encoded data to tree.
-    public TreeNode deserialize(String data) {
-        Queue&lt;String&gt; nodes = new LinkedList&lt;&gt;(Arrays.asList(data.split(&quot;,&quot;)));
-        return build(nodes);
-    }
-}
+<span style="color:#75715e">// Your Codec object will be instantiated and called as such:
+</span><span style="color:#75715e">// Codec codec = new Codec();
+</span><span style="color:#75715e">// codec.deserialize(codec.serialize(root));
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Codec</span> <span style="color:#f92672">{</span>
 
-// Your Codec object will be instantiated and called as such:
-// Codec codec = new Codec();
-// codec.deserialize(codec.serialize(root));
-</code></pre>
+    <span style="color:#75715e">// Encodes a tree to a single string.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">serialize</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        StringBuilder res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-public class Codec {
+        LinkedList<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;();</span>
 
-    // Encodes a tree to a single string.
-    public String serialize(TreeNode root) {
-        StringBuilder res = new StringBuilder();
+        queue<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">while</span><span style="color:#f92672">(!</span>queue<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()){</span>
+            TreeNode t <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">();</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>t<span style="color:#f92672">!=</span><span style="color:#66d9ef">null</span><span style="color:#f92672">){</span>
+                res<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>t<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">);</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>t<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>t<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
+                res<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;#,&#34;</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// Delete the last &#34;,&#34;
+</span><span style="color:#75715e"></span>        res<span style="color:#f92672">.</span><span style="color:#a6e22e">deleteCharAt</span><span style="color:#f92672">(</span>res<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()-</span>1<span style="color:#f92672">);</span>
 
-        LinkedList&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
 
-        queue.add(root);
-        while(!queue.isEmpty()){
-            TreeNode t = queue.poll();
-            if(t!=null){
-                res.append(Integer.toString(t.val) + &quot;,&quot;);
-                queue.add(t.left);
-                queue.add(t.right);
-            }else{
-                res.append(&quot;#,&quot;);
-            }
-        }
-        // Delete the last &quot;,&quot;
-        res.deleteCharAt(res.length()-1);
+    <span style="color:#75715e">// Decodes your encoded data to tree.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> TreeNode <span style="color:#a6e22e">deserialize</span><span style="color:#f92672">(</span>String data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>data<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> data<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()==</span>0 <span style="color:#f92672">||</span> data<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 1<span style="color:#f92672">).</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;#&#34;</span><span style="color:#f92672">))</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 
-        return res.toString();
-    }
+        String<span style="color:#f92672">[]</span> strs <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">);</span>
+        TreeNode root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span>Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>strs<span style="color:#f92672">[</span>0<span style="color:#f92672">]));</span>
 
-    // Decodes your encoded data to tree.
-    public TreeNode deserialize(String data) {
-        if(data==null || data.length()==0 || data.substring(0, 1).equals(&quot;#&quot;)) return null;
+        LinkedList<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;();</span>
+        queue<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
 
-        String[] strs = data.split(&quot;,&quot;);
-        TreeNode root = new TreeNode(Integer.parseInt(strs[0]));
+        <span style="color:#75715e">// Skip root in strs
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>1<span style="color:#f92672">;</span>
+        <span style="color:#75715e">// i++: we move level by level. At each level, left to right
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span><span style="color:#f92672">(!</span>queue<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()){</span>
+            TreeNode node <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">();</span>
 
-        LinkedList&lt;TreeNode&gt; queue = new LinkedList&lt;TreeNode&gt;();
-        queue.add(root);
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
 
-        // Skip root in strs
-        int i=1;
-        // i++: we move level by level. At each level, left to right
-        while(!queue.isEmpty()){
-            TreeNode node = queue.poll();
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(!</span>strs<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;#&#34;</span><span style="color:#f92672">)){</span>
+                node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span>Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>strs<span style="color:#f92672">[</span>i<span style="color:#f92672">]));</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+            i<span style="color:#f92672">++;</span>
 
-            if(node == null) continue;
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(!</span>strs<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;#&#34;</span><span style="color:#f92672">)){</span>
+                node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span>Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>strs<span style="color:#f92672">[</span>i<span style="color:#f92672">]));</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+            i<span style="color:#f92672">++;</span>
+        <span style="color:#f92672">}</span>
 
-            if(!strs[i].equals(&quot;#&quot;)){
-                node.left = new TreeNode(Integer.parseInt(strs[i]));
-                queue.offer(node.left);
-            } else {
-                node.left = null;
-                queue.offer(null);
-            }
-            i++;
+        <span style="color:#66d9ef">return</span> root<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-            if(!strs[i].equals(&quot;#&quot;)){
-                node.right = new TreeNode(Integer.parseInt(strs[i]));
-                queue.offer(node.right);
-            } else {
-                node.right = null;
-                queue.offer(null);
-            }
-            i++;
-        }
-
-        return root;
-    }
-}
-
-// Your Codec object will be instantiated and called as such:
-// Codec codec = new Codec();
-// codec.deserialize(codec.serialize(root));
-</code></pre>
-
+<span style="color:#75715e">// Your Codec object will be instantiated and called as such:
+</span><span style="color:#75715e">// Codec codec = new Codec();
+</span><span style="color:#75715e">// codec.deserialize(codec.serialize(root));
+</span></code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

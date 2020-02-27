@@ -36,7 +36,7 @@ Example 1 Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the i
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/plus-one/" />
@@ -194,58 +194,45 @@ Example 1 Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the i
         <h5>Last updated: September 15, 2018</h5>
       
       <hr />
-      
-
-<p>Given a <code>non-empty</code> array of digits representing a non-negative integer, plus one to the integer.</p>
-
+      <p>Given a <code>non-empty</code> array of digits representing a non-negative integer, plus one to the integer.</p>
 <p>The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.</p>
-
 <p>You may assume the integer does not contain any leading zero, except the number 0 itself.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: [1,2,3]
 Output: [1,2,4]
 Explanation: The array represents the integer 123.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: [4,3,2,1]
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution(object):
-    def plusOne(self, digits):
-        &quot;&quot;&quot;
-        :type digits: List[int]
-        :rtype: List[int]
-        &quot;&quot;&quot;
-        pos = len(digits) - 1
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plusOne</span>(self, digits):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type digits: List[int]
+</span><span style="color:#e6db74">        :rtype: List[int]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        pos <span style="color:#f92672">=</span> len(digits) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
         
-        if digits == []:
-            return [1]
+        <span style="color:#66d9ef">if</span> digits <span style="color:#f92672">==</span> []:
+            <span style="color:#66d9ef">return</span> [<span style="color:#ae81ff">1</span>]
     
-        while pos &gt; -1:
-            # iterate backwards
-		    # if the current digit is less than 9, plus one then exit
-            if digits[pos] != 9:
-                digits[pos] += 1
-                break    
-			# if the current digit is equal to 9, set the value to 0, and continue
-            else:
-                digits[pos] = 0
-            pos -= 1
-        # check if the first element in the list is 0, if yes, insert 1 to the beginning of the list.
-        if digits[0] == 0:
-            digits.insert(0, 1)
+        <span style="color:#66d9ef">while</span> pos <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+            <span style="color:#75715e"># iterate backwards</span>
+		    <span style="color:#75715e"># if the current digit is less than 9, plus one then exit</span>
+            <span style="color:#66d9ef">if</span> digits[pos] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">9</span>:
+                digits[pos] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">break</span>    
+			<span style="color:#75715e"># if the current digit is equal to 9, set the value to 0, and continue</span>
+            <span style="color:#66d9ef">else</span>:
+                digits[pos] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+            pos <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#75715e"># check if the first element in the list is 0, if yes, insert 1 to the beginning of the list.</span>
+        <span style="color:#66d9ef">if</span> digits[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            digits<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
             
-        return digits
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> digits
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

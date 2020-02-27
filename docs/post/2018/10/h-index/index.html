@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&amp;rsquo;s h-index.
 According to the definition of h-index on Wikipedia: &amp;ldquo;A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.&amp;rdquo;
-Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively." />
+Example Input: citations = [3,0,6,1,5] Output: 3 Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively." />
   <meta name="keywords" content="leetcode python " />
   
   
@@ -27,14 +27,14 @@ Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means 
     <meta name="twitter:title" content="H-Index" />
     <meta name="twitter:description" content="Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&amp;rsquo;s h-index.
 According to the definition of h-index on Wikipedia: &amp;ldquo;A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.&amp;rdquo;
-Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively." />
+Example Input: citations = [3,0,6,1,5] Output: 3 Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/h-index/" />
@@ -192,38 +192,27 @@ Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means 
         <h5>Last updated: October 27, 2018</h5>
       
       <hr />
-      
-
-<p>Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&rsquo;s h-index.</p>
-
+      <p>Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&rsquo;s h-index.</p>
 <p>According to the <a href="https://en.wikipedia.org/wiki/H-index">definition of <em>h-index</em> on Wikipedia</a>: &ldquo;A scientist has index <em>h</em> if <em>h</em> of his/her <em>N</em> papers have <strong>at least</strong> h citations each, and the other <em>N − h</em> papers have <strong>no more than</strong> h citations each.&rdquo;</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>Input: citations = [3,0,6,1,5]
 Output: 3
-</code></pre>
-
-<h3 id="explanation-3-0-6-1-5-means-the-researcher-has-5-papers-in-total-and-each-of-them-had-received-3-0-6-1-5-citations-respectively-since-the-researcher-has-3-papers-with-at-least-3-citations-each-and-the-remaining-two-with-no-more-than-3-citations-each-her-h-index-is-3">Explanation <code>[3,0,6,1,5]</code> means the researcher has <code>5</code> papers in total and each of them had received <code>3, 0, 6, 1, 5</code> citations respectively. Since the researcher has <code>3</code> papers with at least <code>3</code> citations each and the remaining two with no more than <code>3</code> citations each, her <em>h-index</em> is <code>3</code>.</h3>
-
-<h3 id="note-if-there-are-several-possible-values-for-h-the-maximum-one-is-taken-as-the-h-index">Note If there are several possible values for <em>h</em>, the maximum one is taken as the <em>h-index</em>.</h3>
-
+</code></pre><h3 id="explanation-30615-means-the-researcher-has-5-papers-in-total-and-each-of-them-had-received-3-0-6-1-5-citations-respectively-since-the-researcher-has-3-papers-with-at-least-3-citations-each-and-the-remaining-two-with-no-more-than-3-citations-each-her-_h-index_-is-3">Explanation <code>[3,0,6,1,5]</code> means the researcher has <code>5</code> papers in total and each of them had received <code>3, 0, 6, 1, 5</code> citations respectively. Since the researcher has <code>3</code> papers with at least <code>3</code> citations each and the remaining two with no more than <code>3</code> citations each, her <em>h-index</em> is <code>3</code>.</h3>
+<h3 id="note-if-there-are-several-possible-values-for-_h_-the-maximum-one-is-taken-as-the-_h-index_">Note If there are several possible values for <em>h</em>, the maximum one is taken as the <em>h-index</em>.</h3>
 <h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution:
-    def hIndex(self, citations):
-        &quot;&quot;&quot;
-        :type citations: List[int]
-        :rtype: int
-        &quot;&quot;&quot;
-        citations.sort(reverse=True)
-        hIndex = 0
-        for i in range(len(citations)):
-            if i &lt; citations[i]:
-                hIndex = i + 1
-        return hIndex
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hIndex</span>(self, citations):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type citations: List[int]
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        citations<span style="color:#f92672">.</span>sort(reverse<span style="color:#f92672">=</span>True)
+        hIndex <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(citations)):
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&lt;</span> citations[i]:
+                hIndex <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> hIndex
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

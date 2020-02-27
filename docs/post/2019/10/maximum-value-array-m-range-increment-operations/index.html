@@ -34,7 +34,7 @@ Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/maximum-value-array-m-range-increment-operations/" />
@@ -192,14 +192,9 @@ Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2
         <h5>Last updated: October 19, 2019</h5>
       
       <hr />
-      
-
-<p>Consider an array of size <code>n</code> with all initial values as 0, we need to perform following <code>m</code> range increment operations.</p>
-
+      <p>Consider an array of size <code>n</code> with all initial values as 0, we need to perform following <code>m</code> range increment operations.</p>
 <p><code>increment(a, b, k)</code> : Increment values from <code>a</code> to <code>b</code> by <code>k</code>. After <code>m</code> operations, we need to calculate the maximum of the values in the array.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input : n = 5 m = 3
         a = 0, b = 1, k = 100
         a = 1, b = 4, k = 100
@@ -215,10 +210,7 @@ After third operation:
 array = {100, 200, 200, 200, 100}
 Maximum element after m operations 
 is 200.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input : n = 4 m = 3
         a = 1, b = 2, k = 603
         a = 0, b = 0, k = 286
@@ -234,35 +226,30 @@ After third operation:
 array = {286, 603, 603, 882}
 Maximum element after m operations
 is 882.
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
+</code></pre><h3 id="solution">Solution</h3>
 <p>Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">listMax</span>(n, operations):
+    <span style="color:#75715e"># Write your code here</span>
 
-<pre><code class="language-python">def listMax(n, operations):
-    # Write your code here
+    <span style="color:#75715e"># index:  0     1     2     3     4     5</span>
+    <span style="color:#75715e"># value:  0     0     0     0     0     0</span>
+    <span style="color:#75715e">#         100   0     0   -100    0     0      [0, 2] 100</span>
+    <span style="color:#75715e">#         100   50    0   -100    0    -50     [1, 4]  50</span>
+    <span style="color:#75715e">#         100   50   70   -100   -70   -50     [2, 3]  70</span>
+    sums <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+    <span style="color:#66d9ef">for</span> op <span style="color:#f92672">in</span> operations:
+        a <span style="color:#f92672">=</span> op[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        b <span style="color:#f92672">=</span> op[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        k <span style="color:#f92672">=</span> op[<span style="color:#ae81ff">2</span>]
+        sums[a] <span style="color:#f92672">+=</span> k
+        sums[b<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">-=</span> k
+    res, total <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>math<span style="color:#f92672">.</span>inf, <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> sum <span style="color:#f92672">in</span> sums:
+        total <span style="color:#f92672">+=</span> sum
+        res <span style="color:#f92672">=</span> max(res, total)
 
-    # index:  0     1     2     3     4     5
-    # value:  0     0     0     0     0     0
-    #         100   0     0   -100    0     0      [0, 2] 100
-    #         100   50    0   -100    0    -50     [1, 4]  50
-    #         100   50   70   -100   -70   -50     [2, 3]  70
-    sums = [0 for _ in range(n+1)]
-    for op in operations:
-        a = op[0]-1
-        b = op[1]-1
-        k = op[2]
-        sums[a] += k
-        sums[b+1] -= k
-    res, total = -math.inf, 0
-    for sum in sums:
-        total += sum
-        res = max(res, total)
-
-    return res
-</code></pre>
-
+    <span style="color:#66d9ef">return</span> res
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -34,7 +34,7 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/" />
@@ -192,54 +192,38 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
         <h5>Last updated: September 6, 2018</h5>
       
       <hr />
-      
-
-<p>Say you have an array for which the <code>i</code>th element is the price of a given stock on day i.</p>
-
+      <p>Say you have an array for which the <code>i</code>th element is the price of a given stock on day i.</p>
 <p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).</p>
-
 <p>Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: [7,1,5,3,6,4]
 Output: 7
 Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4. Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: [1,2,3,4,5]
 Output: 4
 Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4. Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
-</code></pre>
+</code></pre><h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxProfit</span>(self, prices):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type prices: List[int]
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">makeProfit</span>(priceList, price <span style="color:#f92672">=</span> None, profit <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>):
+            <span style="color:#66d9ef">if</span> (len(priceList) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>):
+                <span style="color:#66d9ef">return</span> profit
+            prevVal <span style="color:#f92672">=</span> priceList<span style="color:#f92672">.</span>pop()
+            <span style="color:#66d9ef">if</span> (price <span style="color:#f92672">and</span> price <span style="color:#f92672">&gt;</span> prevVal):
+                profit <span style="color:#f92672">+=</span> price <span style="color:#f92672">-</span> prevVal
+            <span style="color:#66d9ef">return</span> makeProfit(priceList, prevVal, profit)
 
-<h3 id="solution">Solution:</h3>
-
-<pre><code class="language-python">class Solution:
-    def maxProfit(self, prices):
-        &quot;&quot;&quot;
-        :type prices: List[int]
-        :rtype: int
-        &quot;&quot;&quot;
-        def makeProfit(priceList, price = None, profit = 0):
-            if (len(priceList) == 0):
-                return profit
-            prevVal = priceList.pop()
-            if (price and price &gt; prevVal):
-                profit += price - prevVal
-            return makeProfit(priceList, prevVal, profit)
-
-        return makeProfit(prices)
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> makeProfit(prices)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

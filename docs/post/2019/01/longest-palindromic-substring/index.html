@@ -17,8 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len]  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self." />
+Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer. Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot; Solution Dynamic Programming
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;#34;&amp;#34;&amp;#34; :type s: str :rtype: str &amp;#34;&amp;#34;&amp;#34; str_len = len(s) if str_len == 0: return &amp;#34;&amp;#34; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len] # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self." />
   <meta name="keywords" content="leetcode palindrome dynamic-programming " />
   
   
@@ -26,15 +26,15 @@ Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note:
     
     <meta name="twitter:title" content="Longest Palindromic Substring" />
     <meta name="twitter:description" content="Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer.  Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot;  Solution Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: str &amp;quot;&amp;quot;&amp;quot; str_len = len(s) if str_len == 0: return &amp;quot;&amp;quot; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len]  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self." />
+Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer. Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot; Solution Dynamic Programming
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;#34;&amp;#34;&amp;#34; :type s: str :rtype: str &amp;#34;&amp;#34;&amp;#34; str_len = len(s) if str_len == 0: return &amp;#34;&amp;#34; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len] # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/" />
@@ -194,136 +194,120 @@ Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note:
         <h5>Last updated: October 19, 2019</h5>
       
       <hr />
-      
-
-<p>Given a string <code>s</code>, find the longest palindromic substring in <code>s</code>. You may assume that the maximum length of <code>s</code> is 1000.</p>
-
+      <p>Given a string <code>s</code>, find the longest palindromic substring in <code>s</code>. You may assume that the maximum length of <code>s</code> is 1000.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: &quot;babad&quot;
 Output: &quot;bab&quot;
 Note: &quot;aba&quot; is also a valid answer.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: &quot;cbbd&quot;
 Output: &quot;bb&quot;
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
+</code></pre><h3 id="solution">Solution</h3>
 <p>Dynamic Programming</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments</span>
+<span style="color:#75715e"># time: O(n^2)</span>
+<span style="color:#75715e"># space: O(n^2)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">longestPalindrome</span>(self, s):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type s: str
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        str_len <span style="color:#f92672">=</span> len(s)
+        <span style="color:#66d9ef">if</span> str_len <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
 
-<pre><code class="language-python"># https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments
-# time: O(n^2)
-# space: O(n^2)
-class Solution(object):
-    def longestPalindrome(self, s):
-        &quot;&quot;&quot;
-        :type s: str
-        :rtype: str
-        &quot;&quot;&quot;
-        str_len = len(s)
-        if str_len == 0:
-            return &quot;&quot;
+        <span style="color:#75715e"># Initialize DP table (dimensions: str_len x str_len)</span>
+        memo <span style="color:#f92672">=</span> [[False <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(str_len)] <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(str_len)]
 
-        # Initialize DP table (dimensions: str_len x str_len)
-        memo = [[False for i in range(str_len)] for j in range(str_len)]
+        start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Starting index of the longest palindrome</span>
+        max_len <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># Length of the longest palindrome</span>
 
-        start = 0 # Starting index of the longest palindrome
-        max_len = 1 # Length of the longest palindrome
+        <span style="color:#75715e"># Fill DP table for single char palindromes</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(str_len):
+            memo[i][i] <span style="color:#f92672">=</span> True
 
-        # Fill DP table for single char palindromes
-        for i in range(str_len):
-            memo[i][i] = True
+        <span style="color:#75715e"># Fill DP table for 2 char long palindromes</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(str_len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+            j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> s[j]:
+                memo[i][j] <span style="color:#f92672">=</span> True
+                start <span style="color:#f92672">=</span> i
+                max_len <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
 
-        # Fill DP table for 2 char long palindromes
-        for i in range(str_len - 1):
-            j = i + 1
-            if s[i] == s[j]:
-                memo[i][j] = True
-                start = i
-                max_len = 2
+        <span style="color:#75715e"># Fill DP table for palindromes of every other length</span>
+        <span style="color:#75715e"># starting from 3</span>
+        <span style="color:#66d9ef">for</span> length <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>, str_len <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(str_len <span style="color:#f92672">-</span> length <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+                j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> (length <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+                <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> s[j] <span style="color:#f92672">and</span> memo[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+                    memo[i][j] <span style="color:#f92672">=</span> True
+                    start <span style="color:#f92672">=</span> i
+                    max_len <span style="color:#f92672">=</span> length
 
-        # Fill DP table for palindromes of every other length
-        # starting from 3
-        for length in range(3, str_len + 1):
-            for i in range(str_len - length + 1):
-                j = i + (length - 1)
-                if s[i] == s[j] and memo[i+1][j-1]:
-                    memo[i][j] = True
-                    start = i
-                    max_len = length
+        <span style="color:#66d9ef">return</span> s[start: start <span style="color:#f92672">+</span> max_len]
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># time: O(n^2)</span>
+<span style="color:#75715e"># space: O(1)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>longest <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
 
-        return s[start: start + max_len]
-</code></pre>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">longestPalindrome</span>(self, s):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type s: str
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> s <span style="color:#f92672">==</span> None <span style="color:#f92672">or</span> len(s) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
 
-<pre><code class="language-python"># time: O(n^2)
-# space: O(1)
-class Solution(object):
-    def __init__(self):
-        self.longest = &quot;&quot;
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)):
+            <span style="color:#75715e"># There are two types of palindromes</span>
+            <span style="color:#75715e">## &#34;abcbc&#34;</span>
+            self<span style="color:#f92672">.</span>helper(s, i, i)
+            <span style="color:#75715e">## &#34;axddxa&#34;</span>
+            self<span style="color:#f92672">.</span>helper(s, i, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
 
-    def longestPalindrome(self, s):
-        &quot;&quot;&quot;
-        :type s: str
-        :rtype: str
-        &quot;&quot;&quot;
-        if s == None or len(s) == 0:
-            return &quot;&quot;
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>longest
 
-        for i in range(len(s)):
-            # There are two types of palindromes
-            ## &quot;abcbc&quot;
-            self.helper(s, i, i)
-            ## &quot;axddxa&quot;
-            self.helper(s, i, i+1)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">helper</span>(self, s, left, right):
+        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> right <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> s[left] <span style="color:#f92672">==</span> s[right]:
+            left <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            right <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        curr <span style="color:#f92672">=</span> s[left <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>: right]
+        <span style="color:#66d9ef">if</span> len(curr) <span style="color:#f92672">&gt;</span> len(self<span style="color:#f92672">.</span>longest):
+            self<span style="color:#f92672">.</span>longest <span style="color:#f92672">=</span> curr
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> String res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
 
-        return self.longest
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">longestPalindrome</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
 
-    def helper(self, s, left, right):
-        while left &gt;= 0 and right &lt; len(s) and s[left] == s[right]:
-            left -= 1
-            right += 1
-        curr = s[left + 1: right]
-        if len(curr) &gt; len(self.longest):
-            self.longest = curr
-</code></pre>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            helper<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i<span style="color:#f92672">,</span> i<span style="color:#f92672">,</span> n<span style="color:#f92672">);</span>
+            helper<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> i<span style="color:#f92672">,</span> i<span style="color:#f92672">+</span>1<span style="color:#f92672">,</span> n<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">class Solution {
-    private String res = &quot;&quot;;
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    public String longestPalindrome(String s) {
-        if (s == null || s.length() == 0) return &quot;&quot;;
-        int n = s.length();
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">helper</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> left<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> right<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        String oldS <span style="color:#f92672">=</span> s<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> right <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">&amp;&amp;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>left<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>right<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+            left<span style="color:#f92672">--;</span>
+            right<span style="color:#f92672">++;</span>
+        <span style="color:#f92672">}</span>
+        StringBuilder newS <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> left<span style="color:#f92672">+</span>1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> right<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            newS<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">));</span>
+        <span style="color:#f92672">};</span>
 
-        for (int i = 0; i &lt; n; i++) {
-            helper(s, i, i, n);
-            helper(s, i, i+1, n);
-        }
-
-        return res;
-    }
-
-    private void helper(String s, int left, int right, int n) {
-        String oldS = s;
-        while (left &gt;= 0 &amp;&amp; right &lt; n &amp;&amp; s.charAt(left) == s.charAt(right)) {
-            left--;
-            right++;
-        }
-        StringBuilder newS = new StringBuilder();
-        for (int i = left+1; i &lt; right; i++) {
-            newS.append(s.charAt(i));
-        };
-
-        if (newS.toString().length() &gt; res.length()) {
-            res = newS.toString();
-        }
-    };
-}
-</code></pre>
-
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>newS<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">().</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> res<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            res <span style="color:#f92672">=</span> newS<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">};</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

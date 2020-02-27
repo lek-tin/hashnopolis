@@ -32,7 +32,7 @@ Example: Assume that the iterator is initialized to the beginning of the list: [
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/peeking-iterator/" />
@@ -190,59 +190,49 @@ Example: Assume that the iterator is initialized to the beginning of the list: [
         <h5>Last updated: March 12, 2019</h5>
       
       <hr />
-      
-
-<p>Given an Iterator class interface with methods: <code>next()</code> and <code>hasNext()</code>, design and implement a PeekingIterator that support the <code>peek()</code> operation &ndash; it essentially <code>peek()</code> at the element that will be returned by the next call to <code>next()</code>.</p>
-
+      <p>Given an Iterator class interface with methods: <code>next()</code> and <code>hasNext()</code>, design and implement a PeekingIterator that support the <code>peek()</code> operation &ndash; it essentially <code>peek()</code> at the element that will be returned by the next call to <code>next()</code>.</p>
 <h3 id="example">Example:</h3>
-
 <pre><code>Assume that the iterator is initialized to the beginning of the list: [1,2,3].
 
 Call next() gets you 1, the first element in the list.
 Now you call peek() and it returns 2, the next element. Calling next() after that still return 2. 
 You call next() the final time and it returns 3, the last element. 
 Calling hasNext() after that should return false.
-</code></pre>
-
-<h3 id="follow-up">Follow up</h3>
-
+</code></pre><h3 id="follow-up">Follow up</h3>
 <p>How would you extend your design to be generic and work with all types, not just integer?</p>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Java Iterator interface reference:
+</span><span style="color:#75715e">// https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PeekingIterator</span> <span style="color:#66d9ef">implements</span> Iterator<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Integer next <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> Iterator<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numIter<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">// Java Iterator interface reference:
-// https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
-class PeekingIterator implements Iterator&lt;Integer&gt; {
-    private Integer next = null;
-    private Iterator&lt;Integer&gt; numIter;
+	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">PeekingIterator</span><span style="color:#f92672">(</span>Iterator<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> iterator<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	    <span style="color:#75715e">// initialize any member here.
+</span><span style="color:#75715e"></span>	    numIter <span style="color:#f92672">=</span> iterator<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>numIter<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span>
+            next <span style="color:#f92672">=</span> numIter<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
 
-	public PeekingIterator(Iterator&lt;Integer&gt; iterator) {
-	    // initialize any member here.
-	    numIter = iterator;
-        if (numIter.hasNext())
-            next = numIter.next();
-	}
+    <span style="color:#75715e">// Returns the next element in the iteration without advancing the iterator.
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">peek</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> next<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
 
-    // Returns the next element in the iteration without advancing the iterator.
-	public Integer peek() {
-        return next;
-	}
+	<span style="color:#75715e">// hasNext() and next() should behave the same as in the Iterator interface.
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">// Override them if needed.
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">next</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	    Integer res <span style="color:#f92672">=</span> next<span style="color:#f92672">;</span>
+        next <span style="color:#f92672">=</span> numIter<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">()</span> <span style="color:#f92672">?</span> numIter<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">()</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
 
-	// hasNext() and next() should behave the same as in the Iterator interface.
-	// Override them if needed.
-	@Override
-	public Integer next() {
-	    Integer res = next;
-        next = numIter.hasNext() ? numIter.next() : null;
-        return res;
-
-	@Override
-	public boolean hasNext() {
-	    return next != null;
-	}
-}
-</code></pre>
-
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">hasNext</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	    <span style="color:#66d9ef">return</span> next <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

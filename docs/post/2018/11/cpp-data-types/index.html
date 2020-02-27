@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/cpp-data-types/" />
@@ -191,7 +191,6 @@
       
       <hr />
       <p><a href="https://stackoverflow.com/questions/2550345/whats-the-difference-between-unsigned-long-long-int-in-c-c">https://stackoverflow.com/questions/2550345/whats-the-difference-between-unsigned-long-long-int-in-c-c</a></p>
-
 <table>
 <thead>
 <tr>
@@ -200,98 +199,82 @@
 <th>Typical Range</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>char</td>
 <td>1byte</td>
 <td>-127 to 127 or 0 to 255</td>
 </tr>
-
 <tr>
 <td>unsigned char</td>
 <td>1byte</td>
 <td>0 to 255</td>
 </tr>
-
 <tr>
 <td>signed char</td>
 <td>1byte</td>
 <td>-127 to 127</td>
 </tr>
-
 <tr>
 <td>int</td>
 <td>4bytes</td>
 <td>-2147483648 to 2147483647</td>
 </tr>
-
 <tr>
 <td>unsigned int</td>
 <td>4bytes</td>
 <td>0 to 4294967295</td>
 </tr>
-
 <tr>
 <td>signed int</td>
 <td>4bytes</td>
 <td>-2147483648 to 2147483647</td>
 </tr>
-
 <tr>
 <td>short int</td>
 <td>2bytes</td>
 <td>-32768 to 32767</td>
 </tr>
-
 <tr>
 <td>unsigned short int</td>
 <td>Range</td>
 <td>0 to 65,535</td>
 </tr>
-
 <tr>
 <td>signed short int</td>
 <td>Range</td>
 <td>-32768 to 32767</td>
 </tr>
-
 <tr>
 <td>long int</td>
 <td>4bytes</td>
 <td>-2,147,483,648 to 2,147,483,647</td>
 </tr>
-
 <tr>
 <td>signed long int</td>
 <td>4bytes</td>
 <td>same as long int</td>
 </tr>
-
 <tr>
 <td>unsigned long int</td>
 <td>4bytes</td>
 <td>0 to 4,294,967,295</td>
 </tr>
-
 <tr>
 <td>float</td>
 <td>4bytes</td>
 <td>+/- 3.4e +/- 38 (~7 digits)</td>
 </tr>
-
 <tr>
 <td>double</td>
 <td>8bytes</td>
 <td>+/- 1.7e +/- 308 (~15 digits)</td>
 </tr>
-
 <tr>
 <td>long double</td>
 <td>8bytes</td>
 <td>+/- 1.7e +/- 308 (~15 digits)</td>
 </tr>
-
 <tr>
 <td>wchar_t</td>
 <td>2 or 4 bytes</td>
@@ -299,43 +282,39 @@
 </tr>
 </tbody>
 </table>
-
-<p><code>printf</code> format for different data types:<br />
-<code>%d</code>: <code>int</code><br />
-<code>%u</code>: <code>unsigned int</code><br />
-<code>%ld</code>: <code>long int</code><br />
-<code>%lu</code>: <code>unsigned long int</code><br />
-<code>%lld</code>: <code>long long int</code><br />
+<p><code>printf</code> format for different data types:<br>
+<code>%d</code>: <code>int</code><br>
+<code>%u</code>: <code>unsigned int</code><br>
+<code>%ld</code>: <code>long int</code><br>
+<code>%lu</code>: <code>unsigned long int</code><br>
+<code>%lld</code>: <code>long long int</code><br>
 <code>%llu</code>: <code>unsigned long long int</code></p>
-
 <p><code>32-bit</code> number range:</p>
-
-<pre><code class="language-c++">#include &lt;iostream&gt;
-#include &lt;bitset&gt;
-
-using namespace std;
-   int main()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bitset&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+   <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
    {
-    int min = 1 &lt;&lt; 31;
-    int max = (1 &lt;&lt; 31) - 1;
-    int minus_1 = -1;
-    int zero = 0;
-    cout&lt;&lt; std::bitset&lt;32&gt;(min);
-    cout&lt;&lt; &quot;\n&quot;;
-    cout&lt;&lt; std::bitset&lt;32&gt;(max);
-    cout&lt;&lt; &quot;\n&quot;;
-    cout&lt;&lt; std::bitset&lt;32&gt;(minus_1);
-    cout&lt;&lt; &quot;\n&quot;;
-    cout&lt;&lt; std::bitset&lt;32&gt;(zero);
-    // Ouput
-    // 10000000000000000000000000000000
-    // 01111111111111111111111111111111
-    // 11111111111111111111111111111111
-    // 00000000000000000000000000000000
-    return 0;
+    <span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>;
+    <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">31</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">int</span> minus_1 <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">int</span> zero <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    cout<span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>bitset<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">32</span><span style="color:#f92672">&gt;</span>(min);
+    cout<span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+    cout<span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>bitset<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">32</span><span style="color:#f92672">&gt;</span>(max);
+    cout<span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+    cout<span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>bitset<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">32</span><span style="color:#f92672">&gt;</span>(minus_1);
+    cout<span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+    cout<span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>bitset<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">32</span><span style="color:#f92672">&gt;</span>(zero);
+    <span style="color:#75715e">// Ouput
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 10000000000000000000000000000000
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 01111111111111111111111111111111
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 11111111111111111111111111111111
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 00000000000000000000000000000000
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
     }
-</code></pre>
-
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

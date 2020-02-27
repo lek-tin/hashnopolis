@@ -18,8 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a string, find the length of the longest substring without repeating characters.
 *### Example 1
-Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  *### Example 2
-Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  *### Example 3
+Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3. *### Example 2
+Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1. *### Example 3
 Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3. Note that the answer must be a substring, &amp;quot;pwke&amp;quot; is a subsequence and not a substring." />
   <meta name="keywords" content="leetcode string sliding-window hashmap " />
   
@@ -29,8 +29,8 @@ Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot
     <meta name="twitter:title" content="Longest Substring Without Repeating Characters" />
     <meta name="twitter:description" content="Given a string, find the length of the longest substring without repeating characters.
 *### Example 1
-Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  *### Example 2
-Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  *### Example 3
+Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3. *### Example 2
+Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1. *### Example 3
 Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3. Note that the answer must be a substring, &amp;quot;pwke&amp;quot; is a subsequence and not a substring." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
@@ -38,7 +38,7 @@ Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/11/longest-substring-without-repeating-characters/" />
@@ -200,77 +200,60 @@ Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot
         <h5>Last updated: November 21, 2019</h5>
       
       <hr />
-      
-
-<p>Given a string, find the length of the <strong>longest substring</strong> without <strong>repeating</strong> characters.</p>
-
+      <p>Given a string, find the length of the <strong>longest substring</strong> without <strong>repeating</strong> characters.</p>
 <p>*### Example 1</p>
-
 <pre><code>Input: &quot;abcabcbb&quot;
 Output: 3
 Explanation: The answer is &quot;abc&quot;, with the length of 3.
-</code></pre>
-
-<p>*### Example 2</p>
-
+</code></pre><p>*### Example 2</p>
 <pre><code>Input: &quot;bbbbb&quot;
 Output: 1
 Explanation: The answer is &quot;b&quot;, with the length of 1.
-</code></pre>
-
-<p>*### Example 3</p>
-
+</code></pre><p>*### Example 3</p>
 <pre><code>Input: &quot;pwwkew&quot;
 Output: 3
 Explanation: The answer is &quot;wke&quot;, with the length of 3. Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLongestSubstring</span>(self, s):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type s: str
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<h3 id="solution">Solution</h3>
+        lastSeen <span style="color:#f92672">=</span> {}
+        start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        longest <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 
-<pre><code class="language-python">class Solution(object):
-    def lengthOfLongestSubstring(self, s):
-        &quot;&quot;&quot;
-        :type s: str
-        :rtype: int
-        &quot;&quot;&quot;
-        if s == &quot;&quot;:
-            return 0
+        <span style="color:#66d9ef">for</span> i, c <span style="color:#f92672">in</span> enumerate(s):
 
-        lastSeen = {}
-        start = 0
-        longest = 0
+            <span style="color:#66d9ef">if</span> c <span style="color:#f92672">in</span> lastSeen <span style="color:#f92672">and</span> lastSeen[c] <span style="color:#f92672">&gt;=</span> start:
+                <span style="color:#75715e"># start counting a new string after the previous occurence of c</span>
+                start <span style="color:#f92672">=</span> lastSeen[c] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                longest <span style="color:#f92672">=</span> max(longest, i <span style="color:#f92672">-</span> start <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
 
-        for i, c in enumerate(s):
+            <span style="color:#75715e"># Update the last occurence of c</span>
+            lastSeen[c] <span style="color:#f92672">=</span> i
 
-            if c in lastSeen and lastSeen[c] &gt;= start:
-                # start counting a new string after the previous occurence of c
-                start = lastSeen[c] + 1
-            else:
-                longest = max(longest, i - start + 1)
+        <span style="color:#66d9ef">return</span> longest
+</code></pre></div><p>Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLongestSubstring</span>(self, s: str) <span style="color:#f92672">-&gt;</span> int:
+        uniqueChars <span style="color:#f92672">=</span> {}
+        ans, slow, n <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, len(s)
 
-            # Update the last occurence of c
-            lastSeen[c] = i
+        <span style="color:#66d9ef">for</span> fast <span style="color:#f92672">in</span> range(n):
+            <span style="color:#66d9ef">if</span> s[fast] <span style="color:#f92672">in</span> uniqueChars:
+                <span style="color:#75715e"># take max because of instance like this: &#34;abba&#34;</span>
+                slow <span style="color:#f92672">=</span> max(uniqueChars[s[fast]], slow)
+            ans <span style="color:#f92672">=</span> max(ans, fast<span style="color:#f92672">-</span>slow<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+            uniqueChars[s[fast]] <span style="color:#f92672">=</span> fast<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
 
-        return longest
-</code></pre>
-
-<p>Python</p>
-
-<pre><code class="language-python">class Solution:
-    def lengthOfLongestSubstring(self, s: str) -&gt; int:
-        uniqueChars = {}
-        ans, slow, n = 0, 0, len(s)
-
-        for fast in range(n):
-            if s[fast] in uniqueChars:
-                # take max because of instance like this: &quot;abba&quot;
-                slow = max(uniqueChars[s[fast]], slow)
-            ans = max(ans, fast-slow+1)
-            uniqueChars[s[fast]] = fast+1
-
-        return ans
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> ans
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

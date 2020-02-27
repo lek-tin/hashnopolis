@@ -32,7 +32,7 @@ For corner elements, we need to consider only one neighbor for comparison. There
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/find-a-local-minima-in-an-array/" />
@@ -190,15 +190,10 @@ For corner elements, we need to consider only one neighbor for comparison. There
         <h5>Last updated: January 14, 2019</h5>
       
       <hr />
-      
-
-<p>Given an array <code>arr[0 .. n-1]</code> of distinct integers, the task is to find a local minima in it. We say that an element <code>arr[x]</code> is a local minimum if it is less than or equal to both its neighbors.</p>
-
+      <p>Given an array <code>arr[0 .. n-1]</code> of distinct integers, the task is to find a local minima in it. We say that an element <code>arr[x]</code> is a local minimum if it is less than or equal to both its neighbors.</p>
 <p>For corner elements, we need to consider only one neighbor for comparison.
 There can be more than one local minima in an array, we need to find any one of them.</p>
-
 <h3 id="examples">Examples</h3>
-
 <pre><code>Input: arr[] = {9, 6, 3, 14, 5, 7, 4};
 Output: Index of local minima is 2
 The output prints index of 3 because it is smaller than both of its neighbors.
@@ -209,45 +204,41 @@ Output: Index of local minima is 1
 
 Input: arr[] = {1, 2, 3};
 Output: Index of local minima is 0
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># A binary search based function that</span>
+<span style="color:#75715e"># returns index of a local minima.</span>
+<span style="color:#75715e"># Time Complexity : O(Log n)</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">localMinUtil</span>(arr, low, high, n):
 
-<h3 id="solution">Solution</h3>
+    <span style="color:#75715e"># Find index of middle element</span>
+    mid <span style="color:#f92672">=</span> low <span style="color:#f92672">+</span> (high <span style="color:#f92672">-</span> low) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
 
-<pre><code class="language-python"># A binary search based function that
-# returns index of a local minima.
-# Time Complexity : O(Log n)
-def localMinUtil(arr, low, high, n):
+    <span style="color:#75715e"># Compare middle element with its</span>
+    <span style="color:#75715e"># neighbours (if neighbours exist)</span>
+    <span style="color:#66d9ef">if</span>(mid <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> arr[mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;</span> arr[mid] <span style="color:#f92672">and</span>
+        mid <span style="color:#f92672">==</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> arr[mid] <span style="color:#f92672">&lt;</span> arr[mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]):
+        <span style="color:#66d9ef">return</span> mid
 
-    # Find index of middle element
-    mid = low + (high - low) // 2
+    <span style="color:#75715e"># If middle element is not minima and its left</span>
+    <span style="color:#75715e"># neighbour is smaller than it, then left half</span>
+    <span style="color:#75715e"># must have a local minima.</span>
+    <span style="color:#66d9ef">elif</span>(mid <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> arr[mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;</span> arr[mid]):
+        <span style="color:#66d9ef">return</span> localMinUtil(arr, low, mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, n)
 
-    # Compare middle element with its
-    # neighbours (if neighbours exist)
-    if(mid == 0 or arr[mid - 1] &gt; arr[mid] and
-        mid == n - 1 or arr[mid] &lt; arr[mid + 1]):
-        return mid
+    <span style="color:#75715e"># If middle element is not minima and its right</span>
+    <span style="color:#75715e"># neighbour is smaller than it, then right half</span>
+    <span style="color:#75715e"># must have a local minima.</span>
+    <span style="color:#66d9ef">return</span> localMinUtil(arr, mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, high, n)
 
-    # If middle element is not minima and its left
-    # neighbour is smaller than it, then left half
-    # must have a local minima.
-    elif(mid &gt; 0 and arr[mid - 1] &lt; arr[mid]):
-        return localMinUtil(arr, low, mid - 1, n)
+<span style="color:#75715e"># A wrapper over recursive function localMinUtil()</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">localMin</span>(arr, n):
+    <span style="color:#66d9ef">return</span> localMinUtil(arr, <span style="color:#ae81ff">0</span>, n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, n)
 
-    # If middle element is not minima and its right
-    # neighbour is smaller than it, then right half
-    # must have a local minima.
-    return localMinUtil(arr, mid + 1, high, n)
-
-# A wrapper over recursive function localMinUtil()
-def localMin(arr, n):
-    return localMinUtil(arr, 0, n - 1, n)
-
-# Driver code
-arr = [4, 3, 1, 14, 16, 40]
-n = len(arr)
-print(&quot;Index of a local minima is &quot;, localMin(arr, n))
-</code></pre>
-
+<span style="color:#75715e"># Driver code</span>
+arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">40</span>]
+n <span style="color:#f92672">=</span> len(arr)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Index of a local minima is &#34;</span>, localMin(arr, n))
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

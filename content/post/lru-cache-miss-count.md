@@ -8,7 +8,9 @@ date: 2019-03-26T22:51:52-07:00
 draft: false
 archive: false
 ---
-### Solution:
+
+### Solution
+
 ```java
 public class CacheMiss {
     public int missCount(int[] array, int size) {

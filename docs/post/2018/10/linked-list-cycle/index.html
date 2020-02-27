@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a linked list, determine if it has a cycle in it.
 Follow-up Can you solve it without using extra space?
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast." />
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: bool &amp;#34;&amp;#34;&amp;#34; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast." />
   <meta name="keywords" content="leetcode linked-list slow-fast-pointers two-pointers " />
   
   
@@ -27,14 +27,14 @@ Solution # Definition for singly-linked list. # class ListNode(object): # def __
     <meta name="twitter:title" content="Linked List Cycle" />
     <meta name="twitter:description" content="Given a linked list, determine if it has a cycle in it.
 Follow-up Can you solve it without using extra space?
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast." />
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: bool &amp;#34;&amp;#34;&amp;#34; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle/" />
@@ -196,41 +196,34 @@ Solution # Definition for singly-linked list. # class ListNode(object): # def __
         <h5>Last updated: October 21, 2018</h5>
       
       <hr />
-      
-
-<p>Given a linked list, determine if it has a cycle in it.</p>
-
+      <p>Given a linked list, determine if it has a cycle in it.</p>
 <h3 id="follow-up">Follow-up</h3>
-
 <p>Can you solve it without using extra space?</p>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
 
-<pre><code class="language-python"># Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution(object):
-    def hasCycle(self, head):
-        &quot;&quot;&quot;
-        :type head: ListNode
-        :rtype: bool
-        &quot;&quot;&quot;
-        slow = head
-        fast = head
-        while fast:
-            # fast reaches the end, no cycle was detected
-            if fast and not fast.next:
-                return False
-            fast = fast.next.next
-            slow = slow.next
-            if fast == slow:
-                return True
-        return False
-</code></pre>
-
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hasCycle</span>(self, head):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type head: ListNode
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        slow <span style="color:#f92672">=</span> head
+        fast <span style="color:#f92672">=</span> head
+        <span style="color:#66d9ef">while</span> fast:
+            <span style="color:#75715e"># fast reaches the end, no cycle was detected</span>
+            <span style="color:#66d9ef">if</span> fast <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> fast<span style="color:#f92672">.</span>next:
+                <span style="color:#66d9ef">return</span> False
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span>next
+            <span style="color:#66d9ef">if</span> fast <span style="color:#f92672">==</span> slow:
+                <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

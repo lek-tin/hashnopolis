@@ -16,29 +16,21 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Fundamental concepts/components in the CUDA architecture:  thread:
- core/kernel:
- Block: a collection of parallel threads.
- Grid: a collection of parallel thread blocks.
- warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as &amp;ldquo;warps&amp;rdquo; in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs." />
+  <meta name="description" content="Fundamental concepts/components in the CUDA architecture:  thread: core/kernel: Block: a collection of parallel threads. Grid: a collection of parallel thread blocks. warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as &amp;ldquo;warps&amp;rdquo; in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs. Streaming Multiprocessor has a Shared Memory." />
   <meta name="keywords" content="gpu parallel-programming nvidia cuda " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Nvidia Cuda Architecture" />
-    <meta name="twitter:description" content="Fundamental concepts/components in the CUDA architecture:  thread:
- core/kernel:
- Block: a collection of parallel threads.
- Grid: a collection of parallel thread blocks.
- warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as &amp;ldquo;warps&amp;rdquo; in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs." />
+    <meta name="twitter:description" content="Fundamental concepts/components in the CUDA architecture:  thread: core/kernel: Block: a collection of parallel threads. Grid: a collection of parallel thread blocks. warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as &amp;ldquo;warps&amp;rdquo; in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs. Streaming Multiprocessor has a Shared Memory." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/nvidia-cuda-architecture/" />
@@ -200,47 +192,38 @@
         <h5>Last updated: January 18, 2019</h5>
       
       <hr />
-      
-
-<h3 id="fundamental-concepts-components-in-the-cuda-architecture">Fundamental concepts/components in the CUDA architecture:</h3>
-
+      <h3 id="fundamental-conceptscomponents-in-the-cuda-architecture">Fundamental concepts/components in the CUDA architecture:</h3>
 <ol>
-<li>thread:<br /></li>
-<li>core/kernel:<br /></li>
-<li>Block: a collection of parallel threads.<br /></li>
-<li>Grid: a collection of parallel thread blocks.<br /></li>
+<li>thread:</li>
+<li>core/kernel:</li>
+<li>Block: a collection of parallel threads.</li>
+<li>Grid: a collection of parallel thread blocks.</li>
 <li>warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as &ldquo;warps&rdquo; in sequence.</li>
-<li>streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs. Streaming Multiprocessor has a Shared Memory. (Hence &ldquo;private&rdquo;, like a private programmer-controlled L1 cache). Each thread block can allocate shared memory where the allocations are private to that thread block. If there are multiple thread blocks in the same Streaming Multiprocessor, each thread blocks&rsquo; shared memory allocation is in the same physical shared memory, but the contents are private to each thread block. (The content of <code>block 0</code>&rsquo;s shared memory is not visible to <code>block 1</code>&rsquo;s, etc.)</li>
-<li>texture:<br /></li>
-<li>control divergency:<br /></li>
-<li>CPU DMA:<br /></li>
+<li>streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs. Streaming Multiprocessor has a Shared Memory. (Hence &ldquo;private&rdquo;, like a private programmer-controlled L1 cache). Each thread block can allocate shared memory where the allocations are private to that thread block. If there are multiple thread blocks in the same Streaming Multiprocessor, each thread blocks&rsquo; shared memory allocation is in the same physical shared memory, but the contents are private to each thread block. (The content of <code>block 0</code>'s shared memory is not visible to <code>block 1</code>'s, etc.)</li>
+<li>texture:</li>
+<li>control divergency:</li>
+<li>CPU DMA:</li>
 <li>Shared memory: shared memory is much faster than local and global memory. Because it is on-chip, in fact, shared memory latency is roughly 100x lower than uncached global memory latency (provided that there are no bank conflicts between the threads. Threads within a thread block can cooperate via the shared memory.</li>
-<li>warp occupancy:<br /></li>
-<li>Local memory: &ldquo;Local memory&rdquo; in CUDA is actually global memory (and should really be called &ldquo;thread-local global memory&rdquo;) with interleaved addressing (which makes iterating over an array in parallel a bit faster than having each thread&rsquo;s data blocked together).<br /></li>
+<li>warp occupancy:</li>
+<li>Local memory: &ldquo;Local memory&rdquo; in CUDA is actually global memory (and should really be called &ldquo;thread-local global memory&rdquo;) with interleaved addressing (which makes iterating over an array in parallel a bit faster than having each thread&rsquo;s data blocked together).</li>
 </ol>
-
 <h3 id="apis">APIs:</h3>
-
 <ol>
-<li><code>__syncthreads</code>: wait for all threads in the block to finish an instruction.<br /></li>
+<li><code>__syncthreads</code>: wait for all threads in the block to finish an instruction.</li>
 <li><code>cudaThreadSynchronize()</code>: used when measuring performance to ensure that all device operations have completed before stopping the timer.</li>
-<li><code>cudaGetDeviceCount(int *count)</code>:<br /></li>
-<li><code>cudaSetDevice(int device)</code>:<br /></li>
-<li><code>cudaGetDevice(int *device)</code>:<br /></li>
-<li><code>cudaGetDeviceProperties(cudaDeviceProp *prop, int device)</code>:<br /></li>
-<li><code>cudaSetDevice(i)</code>: to select current device<br /></li>
+<li><code>cudaGetDeviceCount(int *count)</code>:</li>
+<li><code>cudaSetDevice(int device)</code>:</li>
+<li><code>cudaGetDevice(int *device)</code>:</li>
+<li><code>cudaGetDeviceProperties(cudaDeviceProp *prop, int device)</code>:</li>
+<li><code>cudaSetDevice(i)</code>: to select current device</li>
 <li><code>cudaMemcpy(...)</code>: for peer-to-peer copies. cpu cache is not used.</li>
 </ol>
-
 <h3 id="events">Events:</h3>
-
 <h3 id="performance">Performance:</h3>
-
 <ol>
 <li>Warp divergence: mainly caused by the SIMT execution model where 32 threads in a warp must execute the same instruction (all share the same Program Counter). Due to this, if threads diverge and operate on different instructions, the execution becomes serialized.</li>
 <li>Maximum number of threads per SM: the aim is to fit in as many threads in a SM as possible. For a SM has 1536 threads, a tile size of 16 we can fit up to 6 thread blocks in an SM (using all 1536 hardware thread contexts), while a tile size of 32 can only fit 1 thread block in an SM (using 1024 out of 1536 possible hardware thread contexts).</li>
 </ol>
-
 <p><em>As of Nvidia Fermi series GeForce GPUs</em></p>
 
   </div>

@@ -17,8 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
-- Integers in each row are sorted in ascending from left to right. - Integers in each column are sorted in ascending from top to bottom.
-Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ]  Given target = 5, return true." />
+ Integers in each row are sorted in ascending from left to right. Integers in each column are sorted in ascending from top to bottom.  Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ] Given target = 5, return true." />
   <meta name="keywords" content="leetcode binary-search divide-and-conquer " />
   
   
@@ -26,15 +25,14 @@ Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], 
     
     <meta name="twitter:title" content="Search a 2d Matrix Ii" />
     <meta name="twitter:description" content="Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
-- Integers in each row are sorted in ascending from left to right. - Integers in each column are sorted in ascending from top to bottom.
-Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ]  Given target = 5, return true." />
+ Integers in each row are sorted in ascending from left to right. Integers in each column are sorted in ascending from top to bottom.  Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ] Given target = 5, return true." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/" />
@@ -194,14 +192,12 @@ Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], 
         <h5>Last updated: September 19, 2019</h5>
       
       <hr />
-      
-
-<p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:<br />
-- Integers in each row are sorted in ascending from left to right.
-- Integers in each column are sorted in ascending from top to bottom.</p>
-
+      <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:</p>
+<ul>
+<li>Integers in each row are sorted in ascending from left to right.</li>
+<li>Integers in each column are sorted in ascending from top to bottom.</li>
+</ul>
 <h3 id="example">Example:</h3>
-
 <pre><code>Consider the following matrix:
 
 [
@@ -211,40 +207,34 @@ Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], 
   [10, 13, 14, 17, 24],
   [18, 21, 23, 26, 30]
 ]
-</code></pre>
-
-<p>Given <code>target = 5</code>, return <code>true</code>.</p>
-
+</code></pre><p>Given <code>target = 5</code>, return <code>true</code>.</p>
 <p>Given <code>target = 20</code>, return <code>false</code>.</p>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">searchMatrix</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> matrix<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>matrix <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> matrix<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0 <span style="color:#f92672">||</span> matrix<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">class Solution {
-    public boolean searchMatrix(int[][] matrix, int target) {
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-            return false;
-        }
+        <span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> matrix<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> col <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-        int row = matrix.length - 1;
-        int col = 0;
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>row <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> col <span style="color:#f92672">&lt;</span> matrix<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>matrix<span style="color:#f92672">[</span>row<span style="color:#f92672">][</span>col<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                row<span style="color:#f92672">--;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>matrix<span style="color:#f92672">[</span>row<span style="color:#f92672">][</span>col<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                col<span style="color:#f92672">++;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                <span style="color:#75715e">// found it
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#75715e">// continue searching
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span>
 
-        while (row &gt;= 0 &amp;&amp; col &lt; matrix[0].length) {
-            if (matrix[row][col] &gt; target) {
-                row--;
-            } else if (matrix[row][col] &lt; target) {
-                col++;
-            } else {
-                // found it
-                return true;
-            }
-            // continue searching
-        }
-
-        return false;
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

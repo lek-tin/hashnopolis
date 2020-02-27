@@ -36,7 +36,7 @@ Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum num
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/russian-doll-envelopes/" />
@@ -196,48 +196,37 @@ Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum num
         <h5>Last updated: September 10, 2019</h5>
       
       <hr />
-      
-
-<p>You have a number of envelopes with widths and heights given as a pair of integers <code>(w, h)</code>. One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.</p>
-
+      <p>You have a number of envelopes with widths and heights given as a pair of integers <code>(w, h)</code>. One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.</p>
 <p>What is the maximum number of envelopes can you Russian doll? (put one inside other)</p>
-
 <h3 id="note">Note:</h3>
-
 <p>Rotation is not allowed.</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Input: [[5,4],[6,4],[6,7],[2,3]]
 Output: 3
 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&gt; [5,4] =&gt; [6,7]).
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> bisect <span style="color:#f92672">import</span> bisect_left
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxEnvelopes</span>(self, envelopes: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+        n <span style="color:#f92672">=</span> len(envelopes)
+        <span style="color:#75715e"># Sort widths in ascending order, if widths are the same, sort heights in descending order</span>
+        <span style="color:#75715e"># In this way, we know for certainty that each width on a higher order can contain that on a lower order</span>
+        ascendHeights <span style="color:#f92672">=</span> [pair[<span style="color:#ae81ff">1</span>] <span style="color:#66d9ef">for</span> pair <span style="color:#f92672">in</span> sorted(envelopes, key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: (x[<span style="color:#ae81ff">0</span>], <span style="color:#f92672">-</span>x[<span style="color:#ae81ff">1</span>]))]
 
-<h3 id="solution">Solution</h3>
+        heightSet <span style="color:#f92672">=</span> [None <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+        most <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> height <span style="color:#f92672">in</span> ascendHeights:
+            <span style="color:#75715e"># Only consider [0, most)</span>
+            <span style="color:#75715e"># Find out the new position to inset current height</span>
+            pos <span style="color:#f92672">=</span> bisect_left(heightSet, height, <span style="color:#ae81ff">0</span>, most)
+            <span style="color:#75715e"># Update heightSet at the new position with height</span>
+            heightSet[pos] <span style="color:#f92672">=</span> height
+            <span style="color:#75715e"># If pos == most, it means the </span>
+            <span style="color:#66d9ef">if</span> pos <span style="color:#f92672">==</span> most:
+                most <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python">from bisect import bisect_left
-class Solution:
-    def maxEnvelopes(self, envelopes: List[List[int]]) -&gt; int:
-        n = len(envelopes)
-        # Sort widths in ascending order, if widths are the same, sort heights in descending order
-        # In this way, we know for certainty that each width on a higher order can contain that on a lower order
-        ascendHeights = [pair[1] for pair in sorted(envelopes, key=lambda x: (x[0], -x[1]))]
-
-        heightSet = [None for _ in range(n)]
-        most = 0
-        for height in ascendHeights:
-            # Only consider [0, most)
-            # Find out the new position to inset current height
-            pos = bisect_left(heightSet, height, 0, most)
-            # Update heightSet at the new position with height
-            heightSet[pos] = height
-            # If pos == most, it means the 
-            if pos == most:
-                most += 1
-
-        return most
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> most
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

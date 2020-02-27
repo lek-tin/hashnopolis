@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "lru-cache", "dll", "linked-list", "hashmap", "linked-hashmap"]
 categories: ["algorithm"]
 date: 2018-11-11T15:33:09-08:00
+lastmod: 2018-11-11T15:33:09-08:00
 draft: false
 archive: false
 ---
@@ -68,12 +69,13 @@ public class LRUCache {
  * obj.put(key,value);
  */
 ```
+Dynamic Link Library / Double linked list, used for insertion and deletion  
 ```python
 # Dictionary stores keys with values of nodes.  Nodes form
 # double linked list containing key, value pairs. DLL is in
 # order of use with least recent at head and most recent at tail.
-# Time - O(1) to set and get: hashmap and linked-list
-# Space - O(n)
+# Time - O(1)
+# Space - O(n) set and get: hashmap and linked-list
 class Node:
     def __init__(self, key, value):
         self.key = key
@@ -81,7 +83,6 @@ class Node:
         self.prev = None
         self.next = None
 
-# Dynamic Link Library / Double linked list, used for insertion and deletion
 class DLL:
     # head <--> key_1 <--> key_2 <--> key_3 <--> ... <-->tail
     def __init__(self):

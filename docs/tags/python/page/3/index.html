@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/python/" />
@@ -176,32 +176,6 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/multiply-strings/">Multiply Strings</a></h2>
-
-      <p>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
-Example 1 Input: num1 = &#34;2&#34;, num2 = &#34;3&#34; Output: &#34;6&#34;  Example 2 Input: num1 = &#34;123&#34;, num2 = &#34;456&#34; Output: &#34;56088&#34;  Note  The length of both num1 and num2 is &lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/10/compare-version-numbers/">Compare Version Numbers</a></h2>
 
       <p>Compare two version numbers version1 and version2. If version1 &gt; version2 return 1; if version1 &lt; version2 return -1;otherwise return 0.
@@ -231,7 +205,7 @@ You may assume that the version strings are non-empty and contain only digits an
       <h2><a href="http://www.hashnopolis.com/post/2018/10/subsets-ii/">Subsets Ii</a></h2>
 
       <p>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution # Time: o(2^n) # Space: o(n) class Solution: def subsetsWithDup(self, nums: List[int]) -&gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</p>
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</p>
 
       <p class="meta">
         
@@ -287,7 +261,7 @@ Credits: Special thanks to @jianchao.li.fighter for adding this problem and crea
 
       <p>Write a program to check whether a given number is an ugly number.
 Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2 Input: 8 Output: true Explanation: 8 = 2 × 2 × 2  Example 3 Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7.</p>
+Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3 Example 2 Input: 8 Output: true Explanation: 8 = 2 × 2 × 2 Example 3 Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7. Note  1 is typically treated as an ugly number.</p>
 
       <p class="meta">
         
@@ -315,8 +289,8 @@ Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2 Input: 8 Outp
       <p>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
 Note:
 All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
-Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
-Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution: def combinationSum3(self, k, n): &#34;&#34;&#34; :type k: int :type n: int :rtype: List[List[int]] &#34;&#34;&#34; self.</p>
+Input: k = 3, n = 7 Output: [[1,2,4]] Example 2:
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]] Solution class Solution: def combinationSum3(self, k, n): &#34;&#34;&#34; :type k: int :type n: int :rtype: List[List[int]] &#34;&#34;&#34; self.</p>
 
       <p class="meta">
         
@@ -344,7 +318,7 @@ Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution
       <p>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 The same repeated number may be chosen from candidates unlimited number of times.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ]  Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</p>
+Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ] Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</p>
 
       <p class="meta">
         
@@ -370,7 +344,7 @@ Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [
       <h2><a href="http://www.hashnopolis.com/post/2018/09/combinations/">Combinations</a></h2>
 
       <p>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
 
       <p class="meta">
         
@@ -396,7 +370,7 @@ Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], 
       <h2><a href="http://www.hashnopolis.com/post/2018/09/combine-two-tables/">Combine Two Tables</a></h2>
 
       <p>Table: Person
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | PersonId | int | | FirstName | varchar | | LastName | varchar | &#43;-------------&#43;---------&#43; PersonId is the primary key column for this table.  Table: Address
+&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | PersonId | int | | FirstName | varchar | | LastName | varchar | &#43;-------------&#43;---------&#43; PersonId is the primary key column for this table. Table: Address
 &#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | &#43;-------------&#43;---------&#43; AddressId is the primary key column for this table.</p>
 
       <p class="meta">
@@ -426,6 +400,33 @@ Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], 
 If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
 Note that you cannot sell a stock before you buy one.
 Example 1 Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/08/57.-insert-interval/">57. Insert Interval</a></h2>
+
+      <p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
+You may assume that the intervals were initially sorted according to their start times.
+Example 1 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]] Example 2 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10]. Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</p>
 
       <p class="meta">
         

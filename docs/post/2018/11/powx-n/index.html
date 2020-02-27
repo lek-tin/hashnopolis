@@ -16,25 +16,21 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Example 1 Input: 2.00000, 10 Output: 1024.00000  Example 2 Input: 2.10000, 3 Output: 9.26100  Example 3 Input: 2.00000, -2 Output: 0.25000  Explanation 2-2 = 1&amp;frasl;22 = 1&amp;frasl;4 = 0.25 Note  -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]
-Solution ```python
-Time: o(logN) Space: o(n) class Solution: def myPow(self, x, n): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type x: float :type n: int :rtype: float &amp;ldquo;&amp;rdquo;&amp;rdquo; if n &amp;gt; 0: return self." />
+  <meta name="description" content="Example 1 Input: 2.00000, 10 Output: 1024.00000 Example 2 Input: 2.10000, 3 Output: 9.26100 Example 3 Input: 2.00000, -2 Output: 0.25000 Explanation 2-2 = 1/22 = 1/4 = 0.25 Note  -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]  Solution # Time: o(logN) # Space: `O(n)` class Solution: def myPow(self, x, n): &amp;#34;&amp;#34;&amp;#34; :type x: float :type n: int :rtype: float &amp;#34;&amp;#34;&amp;#34; if n &amp;gt; 0: return self." />
   <meta name="keywords" content="leetcode recursion " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="PowX N" />
-    <meta name="twitter:description" content="Example 1 Input: 2.00000, 10 Output: 1024.00000  Example 2 Input: 2.10000, 3 Output: 9.26100  Example 3 Input: 2.00000, -2 Output: 0.25000  Explanation 2-2 = 1&amp;frasl;22 = 1&amp;frasl;4 = 0.25 Note  -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]
-Solution ```python
-Time: o(logN) Space: o(n) class Solution: def myPow(self, x, n): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type x: float :type n: int :rtype: float &amp;ldquo;&amp;rdquo;&amp;rdquo; if n &amp;gt; 0: return self." />
+    <meta name="twitter:description" content="Example 1 Input: 2.00000, 10 Output: 1024.00000 Example 2 Input: 2.10000, 3 Output: 9.26100 Example 3 Input: 2.00000, -2 Output: 0.25000 Explanation 2-2 = 1/22 = 1/4 = 0.25 Note  -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]  Solution # Time: o(logN) # Space: `O(n)` class Solution: def myPow(self, x, n): &amp;#34;&amp;#34;&amp;#34; :type x: float :type n: int :rtype: float &amp;#34;&amp;#34;&amp;#34; if n &amp;gt; 0: return self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/powx-n/" />
@@ -192,70 +188,48 @@ Time: o(logN) Space: o(n) class Solution: def myPow(self, x, n): &amp;ldquo;&amp
         <h5>Last updated: November 11, 2018</h5>
       
       <hr />
-      
-
-<h3 id="example-1">Example 1</h3>
-
+      <h3 id="example-1">Example 1</h3>
 <pre><code>Input: 2.00000, 10
 Output: 1024.00000
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 2.10000, 3
 Output: 9.26100
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: 2.00000, -2
 Output: 0.25000
-</code></pre>
-
-<h3 id="explanation-2-2-1-22-1-4-0-25">Explanation 2-2 = <sup>1</sup>&frasl;<sub>22</sub> = <sup>1</sup>&frasl;<sub>4</sub> = 0.25</h3>
-
+</code></pre><h3 id="explanation-2-2--122--14--025">Explanation 2-2 = 1/22 = 1/4 = 0.25</h3>
 <h3 id="note">Note</h3>
-
 <ul>
 <li><code>-100.0 &lt; x &lt; 100.0</code></li>
-
-<li><p><code>n</code> is a <code>32-bit</code> signed integer, within the range <code>[−231, 231 − 1]</code></p>
-
-<h3 id="solution">Solution</h3>
-
-<p>```python</p>
-
-<h1 id="time-o-logn">Time: o(logN)</h1>
-
-<h1 id="space-o-n">Space: o(n)</h1>
-
-<p>class Solution:
-def myPow(self, x, n):
-    &ldquo;&rdquo;&rdquo;
-    :type x: float
-    :type n: int
-    :rtype: float
-    &ldquo;&rdquo;&rdquo;
-    if n &gt; 0:
-        return self.calculate(x, n)
-    else:
-        return 1.0 / self.calculate(x, n)</p>
-
-<p>def calculate(self, x, n):
-    n = abs(n)
-    if n == 0:
-        return 1.0</p>
-
-<pre><code>temp = self.calculate(x, n//2)
-if n % 2 == 0:
-    return temp * temp
-else:
-    return temp * temp * x
-</code></pre></li>
+<li><code>n</code> is a <code>32-bit</code> signed integer, within the range <code>[−231, 231 − 1]</code></li>
 </ul>
+<h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: o(logN)</span>
+<span style="color:#75715e"># Space: `O(n)`</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">myPow</span>(self, x, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type x: float
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: float
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>calculate(x, n)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1.0</span> <span style="color:#f92672">/</span> self<span style="color:#f92672">.</span>calculate(x, n)
 
-<p>```</p>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate</span>(self, x, n):
+        n <span style="color:#f92672">=</span> abs(n)
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1.0</span>
 
+        temp <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>calculate(x, n<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> temp <span style="color:#f92672">*</span> temp
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> temp <span style="color:#f92672">*</span> temp <span style="color:#f92672">*</span> x
+
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hashnopolis</title>
@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 10 Sep 2019 00:38:42 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 20:20:33 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Squares of a Sorted Array</title>
+      <link>http://www.hashnopolis.com/post/2020/02/squares-of-a-sorted-array/</link>
+      <pubDate>Mon, 10 Feb 2020 20:20:33 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/squares-of-a-sorted-array/</guid>
+      <description>Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
+Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note:  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i += 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr += 1 return result </description>
+    </item>
     
     <item>
       <title>Subarray Product Less Than K</title>
@@ -40,7 +50,7 @@ Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray 
       
       <guid>http://www.hashnopolis.com/post/2019/08/valid-triangle-number/</guid>
       <description>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
-Example 1: Input: [2,2,3,4] Output: 3  Explanation: Valid combinations are:
+Example 1: Input: [2,2,3,4] Output: 3 Explanation: Valid combinations are:
 2,3,4 (using the first 2) 2,3,4 (using the second 2) 2,2,3
 Note:  The length of the given array won&amp;rsquo;t exceed 1000. The integers in the given array are in the range of [0, 1000].</description>
     </item>
@@ -52,7 +62,7 @@ Note:  The length of the given array won&amp;rsquo;t exceed 1000. The integers i
       
       <guid>http://www.hashnopolis.com/post/2019/08/palindrome-linked-list/</guid>
       <description>Given a singly linked list, determine if it is a palindrome.
-Example 1: Input: 1-&amp;gt;2 Output: false  Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true  Follow up: Could you do it in O(n) time and O(1) space?
+Example 1: Input: 1-&amp;gt;2 Output: false Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&amp;gt; bool: if not head: return True middle = self.</description>
     </item>
     
@@ -64,7 +74,7 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
       <guid>http://www.hashnopolis.com/post/2019/08/3sum-with-multiplicity/</guid>
       <description>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &amp;lt; j &amp;lt; k and A[i] + A[j] + A[k] == target.
 As the answer can be very large, return it modulo 10^9 + 7.
-Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</description>
+Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20 Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</description>
     </item>
     
     <item>
@@ -74,7 +84,7 @@ Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation:
       
       <guid>http://www.hashnopolis.com/post/2019/08/two-sum-less-than-k/</guid>
       <description>Given an array A of integers and integer K, return the maximum S such that there exists i &amp;lt; j with A[i] + A[j] = S and S &amp;lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60.  Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</description>
+Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60. Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</description>
     </item>
     
     <item>
@@ -84,7 +94,7 @@ Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We
       
       <guid>http://www.hashnopolis.com/post/2019/08/two-sum-iv-input-is-a-bst/</guid>
       <description>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: o(n) # space: o(n) # Definition for a binary tree node.</description>
+Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -95,7 +105,7 @@ Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Inpu
       <guid>http://www.hashnopolis.com/post/2019/08/two-sum/</guid>
       <description>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</description>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1]. Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :type target: int :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</description>
     </item>
     
     <item>
@@ -116,8 +126,8 @@ Note  Your returned answers (both index1 and index2) are not zero-based. You may
       
       <guid>http://www.hashnopolis.com/post/2019/08/reverse-linked-list/</guid>
       <description>Reverse a singly linked list.
-Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
-Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL // prev cur after while (cur !</description>
+Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL  // prev cur after  while (cur !</description>
     </item>
     
     <item>
@@ -128,7 +138,7 @@ Solution: /** * Definition for singly-linked list. * public class ListNode { * i
       <guid>http://www.hashnopolis.com/post/2019/03/closest-two-sum/</guid>
       <description>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
 Return the difference between the sum of the two integers and the target.
-Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 + 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;amp;&amp;amp; nums.</description>
+Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 + 1) = 1). Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;amp;&amp;amp; nums.</description>
     </item>
     
     <item>
@@ -138,7 +148,7 @@ Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum differenc
       
       <guid>http://www.hashnopolis.com/post/2019/03/minimum-window-substring/</guid>
       <description>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
-Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot;  Note:  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;rdquo;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
+Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot; Note:  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;quot;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
     </item>
     
     <item>
@@ -148,7 +158,7 @@ Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quo
       
       <guid>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/</guid>
       <description>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
-Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3.  Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
+Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
     </item>
     
     <item>
@@ -159,7 +169,7 @@ Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quo
       <guid>http://www.hashnopolis.com/post/2019/01/trapping-rain-water/</guid>
       <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
-Example: Input: [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6  Solution: class Solution { public int trap(int[] height) { int n = height.</description>
+Example: Input: [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6 Solution: class Solution { public int trap(int[] height) { int n = height.</description>
     </item>
     
     <item>
@@ -179,8 +189,8 @@ Note: You may not slant the container and n is at least 2. The above vertical li
       
       <guid>http://www.hashnopolis.com/post/2019/01/one-edit-distance/</guid>
       <description>Given two strings s and t, determine if they are both one edit distance apart.
-Note There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t
-Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</description>
+Note There are 3 possiblities to satisify one edit distance apart:
+ Insert a character into s to get t Delete a character from s to get t Replace a character of s to get t  Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</description>
     </item>
     
     <item>
@@ -192,7 +202,7 @@ Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output:
       <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution import sys INT_MAX = sys.</description>
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import sys INT_MAX = sys.</description>
     </item>
     
     <item>
@@ -201,7 +211,7 @@ Note Your algorithm should run in O(n) time complexity and O(1) space complexity
       <pubDate>Sat, 03 Nov 2018 16:25:23 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/move-zeroes/</guid>
-      <description>Given an array nums, write a function to move all 0&amp;rsquo;s to the end of it while maintaining the relative order of the non-zero elements.
+      <description>Given an array nums, write a function to move all 0&#39;s to the end of it while maintaining the relative order of the non-zero elements.
 For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
 Note: You must do this in-place without making a copy of the array. Minimize the total number of operations.
 Credit Special thanks to @jianchao.</description>
@@ -214,7 +224,7 @@ Credit Special thanks to @jianchao.</description>
       
       <guid>http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/</guid>
       <description>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5 Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4 Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
 Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n+kLogk)</description>
     </item>
     
@@ -238,7 +248,7 @@ Observation: Solution: /** * Definition for singly-linked list. * class ListNode
       <guid>http://www.hashnopolis.com/post/2018/10/linked-list-cycle/</guid>
       <description>Given a linked list, determine if it has a cycle in it.
 Follow-up Can you solve it without using extra space?
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: bool &amp;quot;&amp;quot;&amp;quot; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: bool &amp;#34;&amp;#34;&amp;#34; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
     </item>
     
     <item>
@@ -247,8 +257,8 @@ Solution # Definition for singly-linked list. # class ListNode(object): # def __
       <pubDate>Wed, 19 Sep 2018 10:38:38 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list-ii/</guid>
-      <description> Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
-Example 1 Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 Output: 1-&amp;gt;2-&amp;gt;5  Example 2 Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 Output: 2-&amp;gt;3  </description>
+      <description>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
+Example 1 Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 Output: 1-&amp;gt;2-&amp;gt;5 Example 2 Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3 Output: 2-&amp;gt;3 </description>
     </item>
     
     <item>
@@ -258,7 +268,7 @@ Example 1 Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 O
       
       <guid>http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/</guid>
       <description>Remove all elements from a linked list of integers that have value val.
-Example Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5  Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :type val: int :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; pre = ListNode(0) pre.next = head pos = pre while pos.</description>
+Example Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :type val: int :rtype: ListNode &amp;#34;&amp;#34;&amp;#34; pre = ListNode(0) pre.next = head pos = pre while pos.next != None: if pos.</description>
     </item>
     
     <item>
@@ -304,7 +314,7 @@ Example 1 Given nums = [1,1,2], Your function should return length = 2, with the
       <description>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 Note:
 The solution set must not contain duplicate triplets.
-Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ]  Solution # time: o(n^2) # space: o(1) class Solution: def threeSum(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] if not nums: return results nums.</description>
+Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ] Solution # time: o(n^2) # space: o(1) class Solution: def threeSum(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] if not nums: return results nums.</description>
     </item>
     
     <item>
@@ -314,9 +324,9 @@ Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1
       
       <guid>http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/</guid>
       <description>Given a linked list, remove the n-th node from the end of list and return its head.
-Example Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.  Note Given n will always be valid.
+Example Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5. Note Given n will always be valid.
 Follow-up Could you do this in one pass?
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.</description>
     </item>
     
   </channel>

@@ -36,7 +36,7 @@ Solution Solution 1: Insert cloned nodes in between original nodes then connect 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/copy-list-with-random-pointer/" />
@@ -196,113 +196,103 @@ Solution Solution 1: Insert cloned nodes in between original nodes then connect 
         <h5>Last updated: August 11, 2019</h5>
       
       <hr />
-      
-
-<p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.</p>
-
+      <p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.</p>
 <p>Return a deep copy of the list.</p>
-
 <h3 id="solution">Solution</h3>
-
 <p>Solution 1: Insert cloned nodes in between original nodes then connect the cloned nodes</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list with a random pointer.</span>
+<span style="color:#75715e"># class RandomListNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.label = x</span>
+<span style="color:#75715e">#         self.next = None</span>
+<span style="color:#75715e">#         self.random = None</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">copyRandomList</span>(self, head):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type head: RandomListNode
+</span><span style="color:#e6db74">        :rtype: RandomListNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e"># corner case</span>
+        <span style="color:#66d9ef">if</span> head <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> None
 
-<pre><code class="language-python"># Definition for singly-linked list with a random pointer.
-# class RandomListNode(object):
-#     def __init__(self, x):
-#         self.label = x
-#         self.next = None
-#         self.random = None
-class Solution(object):
-    def copyRandomList(self, head):
-        &quot;&quot;&quot;
-        :type head: RandomListNode
-        :rtype: RandomListNode
-        &quot;&quot;&quot;
-        # corner case
-        if head == None:
-            return None
+        <span style="color:#75715e"># First pass: for each node in the original list, insert a copied node between the node tne node.next</span>
+        cur <span style="color:#f92672">=</span> head
+        <span style="color:#66d9ef">while</span> cur <span style="color:#f92672">!=</span> None:
+            <span style="color:#75715e"># Make a copy of cur node, insert it to the middle of cur and cur.next</span>
+            copy <span style="color:#f92672">=</span> RandomListNode(cur<span style="color:#f92672">.</span>label)
+            copy<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>next
+            <span style="color:#75715e"># copy.random = cur.random</span>
+            cur<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> copy
+            cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
 
-        # First pass: for each node in the original list, insert a copied node between the node tne node.next
-        cur = head
-        while cur != None:
-            # Make a copy of cur node, insert it to the middle of cur and cur.next
-            copy = RandomListNode(cur.label)
-            copy.next = cur.next
-            # copy.random = cur.random
-            cur.next = copy
-            cur = cur.next.next
+        <span style="color:#75715e">#second pass: link the random pointer for the copied node</span>
+        cur <span style="color:#f92672">=</span> head
+        <span style="color:#66d9ef">while</span> cur <span style="color:#f92672">!=</span> None:
+            <span style="color:#66d9ef">if</span> cur<span style="color:#f92672">.</span>random <span style="color:#f92672">!=</span> None:
+                <span style="color:#75715e"># now point to the &#34;newly&#34; created node, node&#39;</span>
+                cur<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>random <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>next
+            cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
 
-        #second pass: link the random pointer for the copied node
-        cur = head
-        while cur != None:
-            if cur.random != None:
-                # now point to the &quot;newly&quot; created node, node'
-                cur.next.random = cur.random.next
-            cur = cur.next.next
+        <span style="color:#75715e"># third pass: extract the copied node</span>
+        cur <span style="color:#f92672">=</span> head
+        dummy <span style="color:#f92672">=</span> RandomListNode(<span style="color:#ae81ff">0</span>)
+        prev <span style="color:#f92672">=</span> dummy
+        <span style="color:#66d9ef">while</span> cur <span style="color:#f92672">!=</span> None:
+            <span style="color:#75715e"># cur.next: first cloned node</span>
+            <span style="color:#75715e">#       node1 -&gt; node1_copy -&gt; node2    -&gt;    node2_copy -&gt; node3 -&gt; node3_copy</span>
+            <span style="color:#75715e"># prev  cur      cur.next      cur.next.next</span>
+            prev<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>next
+            cur<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+            prev <span style="color:#f92672">=</span> prev<span style="color:#f92672">.</span>next
+            cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>next
+            <span style="color:#75715e"># OR</span>
+            <span style="color:#75715e"># prev.next = curr.next</span>
+            <span style="color:#75715e"># # Avoid error: &#34;Next pointer of node with val 1 from the original list was modified.&#34;</span>
+            <span style="color:#75715e"># curr.next = None</span>
+            <span style="color:#75715e"># prev = prev.next</span>
+            <span style="color:#75715e"># curr = prev.next</span>
 
-        # third pass: extract the copied node
-        cur = head
-        dummy = RandomListNode(0)
-        prev = dummy
-        while cur != None:
-            # cur.next: first cloned node
-            #       node1 -&gt; node1_copy -&gt; node2    -&gt;    node2_copy -&gt; node3 -&gt; node3_copy
-            # prev  cur      cur.next      cur.next.next
-            prev.next = cur.next
-            cur.next = cur.next.next
-            prev = prev.next
-            cur = cur.next
-            # OR
-            # prev.next = curr.next
-            # # Avoid error: &quot;Next pointer of node with val 1 from the original list was modified.&quot;
-            # curr.next = None
-            # prev = prev.next
-            # curr = prev.next
+        <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">.</span>next
+</code></pre></div><p>Solution 2: using hashmap</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"># Definition for a Node.
+</span><span style="color:#e6db74">class Node:
+</span><span style="color:#e6db74">    def __init__(self, val, next, random):
+</span><span style="color:#e6db74">        self.val = val
+</span><span style="color:#e6db74">        self.next = next
+</span><span style="color:#e6db74">        self.random = random
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">copyRandomList</span>(self, head: <span style="color:#e6db74">&#39;Node&#39;</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#39;Node&#39;</span>:
+        <span style="color:#66d9ef">if</span> head <span style="color:#f92672">is</span> None:
+            <span style="color:#66d9ef">return</span> None
 
-        return dummy.next
-</code></pre>
+        copy <span style="color:#f92672">=</span> Node(head<span style="color:#f92672">.</span>val, None, None)
+        <span style="color:#75715e"># { original node: cloned node }</span>
+        mapping <span style="color:#f92672">=</span> { head: copy }
 
-<p>Solution 2: using hashmap</p>
+        <span style="color:#66d9ef">while</span> head <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> None:
+            clone <span style="color:#f92672">=</span> mapping[head]
+            <span style="color:#75715e"># Copy next pointer</span>
+            <span style="color:#66d9ef">if</span> head<span style="color:#f92672">.</span>next <span style="color:#f92672">in</span> mapping:
+                clone<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> mapping[head<span style="color:#f92672">.</span>next]
+            <span style="color:#66d9ef">else</span>:
+                newNode <span style="color:#f92672">=</span> None <span style="color:#66d9ef">if</span> head<span style="color:#f92672">.</span>next <span style="color:#f92672">is</span> None <span style="color:#66d9ef">else</span> Node(head<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>val, None, None)
+                clone<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> newNode
+                mapping[head<span style="color:#f92672">.</span>next] <span style="color:#f92672">=</span> newNode
+            <span style="color:#75715e"># Copy random pointer</span>
+            <span style="color:#66d9ef">if</span> head<span style="color:#f92672">.</span>random <span style="color:#f92672">in</span> mapping:
+                clone<span style="color:#f92672">.</span>random <span style="color:#f92672">=</span> mapping[head<span style="color:#f92672">.</span>random]
+            <span style="color:#66d9ef">else</span>:
+                newNode <span style="color:#f92672">=</span> None <span style="color:#66d9ef">if</span> head<span style="color:#f92672">.</span>random <span style="color:#f92672">is</span> None <span style="color:#66d9ef">else</span> Node(head<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>val, None, None)
+                clone<span style="color:#f92672">.</span>random <span style="color:#f92672">=</span> newNode
+                mapping[head<span style="color:#f92672">.</span>random] <span style="color:#f92672">=</span> newNode
+            <span style="color:#75715e"># Move onto the next linked node</span>
+            head <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
 
-<pre><code class="language-python">&quot;&quot;&quot;
-# Definition for a Node.
-class Node:
-    def __init__(self, val, next, random):
-        self.val = val
-        self.next = next
-        self.random = random
-&quot;&quot;&quot;
-class Solution:
-    def copyRandomList(self, head: 'Node') -&gt; 'Node':
-        if head is None:
-            return None
-
-        copy = Node(head.val, None, None)
-        # { original node: cloned node }
-        mapping = { head: copy }
-
-        while head is not None:
-            clone = mapping[head]
-            # Copy next pointer
-            if head.next in mapping:
-                clone.next = mapping[head.next]
-            else:
-                newNode = None if head.next is None else Node(head.next.val, None, None)
-                clone.next = newNode
-                mapping[head.next] = newNode
-            # Copy random pointer
-            if head.random in mapping:
-                clone.random = mapping[head.random]
-            else:
-                newNode = None if head.random is None else Node(head.random.val, None, None)
-                clone.random = newNode
-                mapping[head.random] = newNode
-            # Move onto the next linked node
-            head = head.next
-
-        return copy
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> copy
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

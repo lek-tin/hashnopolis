@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Let&amp;rsquo;s call an array A a mountain if the following properties hold: 1. A.length &amp;gt;= 3 2. There exists some 0 &amp;lt; i &amp;lt; A.length - 1 such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A.length - 1]
-Given an array that is definitely a mountain, return any i such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i&#43;1] &amp;gt; ." />
+  <meta name="description" content="Let&amp;rsquo;s call an array A a mountain if the following properties hold:
+ A.length &amp;gt;= 3 There exists some 0 &amp;lt; i &amp;lt; A.length - 1 such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A.length - 1]  Given an array that is definitely a mountain, return any i such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A." />
   <meta name="keywords" content="leetcode binary-search " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Peak Index in a Mountain Array" />
-    <meta name="twitter:description" content="Let&amp;rsquo;s call an array A a mountain if the following properties hold: 1. A.length &amp;gt;= 3 2. There exists some 0 &amp;lt; i &amp;lt; A.length - 1 such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A.length - 1]
-Given an array that is definitely a mountain, return any i such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i&#43;1] &amp;gt; ." />
+    <meta name="twitter:description" content="Let&amp;rsquo;s call an array A a mountain if the following properties hold:
+ A.length &amp;gt;= 3 There exists some 0 &amp;lt; i &amp;lt; A.length - 1 such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A.length - 1]  Given an array that is definitely a mountain, return any i such that A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/peak-index-in-a-mountain-array/" />
@@ -190,53 +190,41 @@ Given an array that is definitely a mountain, return any i such that A[0] &amp;l
         <h5>Last updated: September 23, 2019</h5>
       
       <hr />
-      
-
-<p>Let&rsquo;s call an array <code>A</code> a mountain if the following properties hold:
-1. <code>A.length &gt;= 3</code>
-2. There exists some <code>0 &lt; i &lt; A.length - 1</code> such that <code>A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]</code></p>
-
+      <p>Let&rsquo;s call an array <code>A</code> a mountain if the following properties hold:</p>
+<ol>
+<li><code>A.length &gt;= 3</code></li>
+<li>There exists some <code>0 &lt; i &lt; A.length - 1</code> such that <code>A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]</code></li>
+</ol>
 <p>Given an array that is definitely a mountain, return any i such that <code>A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]</code>.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: [0,1,0]
 Output: 1
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: [0,2,1,0]
 Output: 1
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>3 &lt;= A.length &lt;= 10000</code></li>
 <li><code>0 &lt;= A[i] &lt;= 10^6</code></li>
 <li><code>A</code> is a mountain, as defined above.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">peakIndexInMountainArray</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> nums <span style="color:#f92672">or</span> len(nums) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python">class Solution:
-    def peakIndexInMountainArray(self, nums: List[int]) -&gt; int:
-        if not nums or len(nums) &lt; 3:
-            return -1
+        start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-        start, end = 0, len(nums)-1
-
-        while start + 1 &lt; end:
-            mid = start + (end-start)//2
-            if nums[mid] &lt; nums[mid-1]:
-                end = mid
-            elif nums[mid] &lt; nums[mid+1]:
-                start = mid
-            else:
-                return mid
-</code></pre>
-
+        <span style="color:#66d9ef">while</span> start <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> end:
+            mid <span style="color:#f92672">=</span> start <span style="color:#f92672">+</span> (end<span style="color:#f92672">-</span>start)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">if</span> nums[mid] <span style="color:#f92672">&lt;</span> nums[mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+                end <span style="color:#f92672">=</span> mid
+            <span style="color:#66d9ef">elif</span> nums[mid] <span style="color:#f92672">&lt;</span> nums[mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]:
+                start <span style="color:#f92672">=</span> mid
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">return</span> mid
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

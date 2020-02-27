@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
 The successor of a node p is the node with the smallest key greater than p.val.
-Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type.  Example 2: Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null." />
+Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type. Example 2: Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null." />
   <meta name="keywords" content="leetcode bst stack " />
   
   
@@ -27,14 +27,14 @@ Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order 
     <meta name="twitter:title" content="Inorder Successor in BST" />
     <meta name="twitter:description" content="Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
 The successor of a node p is the node with the smallest key greater than p.val.
-Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type.  Example 2: Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null." />
+Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type. Example 2: Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/inorder-successor-in-bst/" />
@@ -194,85 +194,67 @@ Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order 
         <h5>Last updated: August 22, 2019</h5>
       
       <hr />
-      
-
-<p>Given a binary search tree and a node in it, find the in-order successor of that node in the BST.</p>
-
+      <p>Given a binary search tree and a node in it, find the in-order successor of that node in the BST.</p>
 <p>The successor of a node <code>p</code> is the node with the smallest key greater than <code>p.val</code>.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
-<p><img src="https://assets.leetcode.com/uploads/2019/01/23/285_example_1.PNG" alt="Inorder Successor in BST Example 1" /></p>
-
+<p><img src="https://assets.leetcode.com/uploads/2019/01/23/285_example_1.PNG" alt="Inorder Successor in BST Example 1"></p>
 <pre><code>Input: root = [2,1,3], p = 1
 Output: 2
 Explanation: 1's in-order successor node is 2. Note that both p and the return value is of TreeNode type.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
-<p><img src="https://assets.leetcode.com/uploads/2019/01/23/285_example_2.PNG" alt="Inorder Successor in BST Example 1" /></p>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
+<p><img src="https://assets.leetcode.com/uploads/2019/01/23/285_example_2.PNG" alt="Inorder Successor in BST Example 1"></p>
 <pre><code>Input: root = [5,3,6,2,4,null,null,1], p = 6
 Output: null
 Explanation: There is no in-order successor of the current node, so the answer is null.
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li>If the given node has no in-order successor in the tree, return null.</li>
 <li>It&rsquo;s guaranteed that the values of the tree are unique.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
+<span style="color:#75715e"># Time: o(h)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inorderSuccessor</span>(self, root: <span style="color:#e6db74">&#39;TreeNode&#39;</span>, p: <span style="color:#e6db74">&#39;TreeNode&#39;</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#39;TreeNode&#39;</span>:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> None
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-# Time: o(h)
-class Solution:
-    def inorderSuccessor(self, root: 'TreeNode', p: 'TreeNode') -&gt; 'TreeNode':
-        if not root:
-            return None
+        <span style="color:#66d9ef">if</span> root<span style="color:#f92672">.</span>val <span style="color:#f92672">&gt;</span> p<span style="color:#f92672">.</span>val:
+            <span style="color:#75715e"># Root is greater than p, so traverse down to left substree</span>
+            succ <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>inorderSuccessor(root<span style="color:#f92672">.</span>left, p)
+            <span style="color:#75715e"># If not succ is found, return root; Otherwise return the smaller succ</span>
+            <span style="color:#66d9ef">return</span> root <span style="color:#66d9ef">if</span> succ <span style="color:#f92672">==</span> None <span style="color:#66d9ef">else</span> succ
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#75715e"># Search in right subtree only, as the successor definitely doesn&#39;t exist in the left subtree</span>
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>inorderSuccessor(root<span style="color:#f92672">.</span>right, p)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># time: `O(n)`</span>
+<span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-        if root.val &gt; p.val:
-            # Root is greater than p, so traverse down to left substree
-            succ = self.inorderSuccessor(root.left, p)
-            # If not succ is found, return root; Otherwise return the smaller succ
-            return root if succ == None else succ
-        else:
-            # Search in right subtree only, as the successor definitely doesn't exist in the left subtree
-            return self.inorderSuccessor(root.right, p)
-</code></pre>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inorderSuccessor</span>(self, root: <span style="color:#e6db74">&#39;TreeNode&#39;</span>, p: <span style="color:#e6db74">&#39;TreeNode&#39;</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#39;TreeNode&#39;</span>:
+        stack <span style="color:#f92672">=</span> []
+        found <span style="color:#f92672">=</span> False
 
-<pre><code class="language-python"># time: o(n)
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution:
-    def inorderSuccessor(self, root: 'TreeNode', p: 'TreeNode') -&gt; 'TreeNode':
-        stack = []
-        found = False
-
-        while root or stack:
-            while root:
-                stack.append(root)
-                root = root.left
-            if found:
-                return stack[-1]
-            found = p.val == stack[-1].val
-            root = stack.pop().right
-        return None
-</code></pre>
-
+        <span style="color:#66d9ef">while</span> root <span style="color:#f92672">or</span> stack:
+            <span style="color:#66d9ef">while</span> root:
+                stack<span style="color:#f92672">.</span>append(root)
+                root <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span>left
+            <span style="color:#66d9ef">if</span> found:
+                <span style="color:#66d9ef">return</span> stack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+            found <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span>val <span style="color:#f92672">==</span> stack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>val
+            root <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span>pop()<span style="color:#f92672">.</span>right
+        <span style="color:#66d9ef">return</span> None
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

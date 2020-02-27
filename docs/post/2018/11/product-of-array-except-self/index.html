@@ -19,8 +19,10 @@
   <meta name="description" content="Given an array of n integers where n &amp;gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
 Solve it without division and in O(n).
 For example, given [1,2,3,4], return [24,12,8,6].
-Follow-up Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis." />
-  <meta name="keywords" content="leetcode python " />
+Solution 1 Time: O(n)
+Space: O(n)
+class Solution: def productExceptSelf(self, nums: List[int]) -&amp;gt; List[int]: left, right = [nums[0]], [nums[-1]] N = len(nums) if N &amp;lt;= 1: return 0 res = [] for i in range(1, N-1): left." />
+  <meta name="keywords" content="leetcode dynamic-programming array " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -29,14 +31,16 @@ Follow-up Could you solve it with constant space complexity? (Note: The output a
     <meta name="twitter:description" content="Given an array of n integers where n &amp;gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
 Solve it without division and in O(n).
 For example, given [1,2,3,4], return [24,12,8,6].
-Follow-up Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis." />
+Solution 1 Time: O(n)
+Space: O(n)
+class Solution: def productExceptSelf(self, nums: List[int]) -&amp;gt; List[int]: left, right = [nums[0]], [nums[-1]] N = len(nums) if N &amp;lt;= 1: return 0 res = [] for i in range(1, N-1): left." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/product-of-array-except-self/" />
@@ -183,7 +187,9 @@ Follow-up Could you solve it with constant space complexity? (Note: The output a
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/python"><strong>python</strong></a>",
+          "<a href="/tags/dynamic-programming"><strong>dynamic-programming</strong></a>",
+        
+          "<a href="/tags/array"><strong>array</strong></a>",
         
         <i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -191,41 +197,59 @@ Follow-up Could you solve it with constant space complexity? (Note: The output a
       <h1>Product of Array Except Self</h1>
       <h4>Created: November 3, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: November 3, 2018</h5>
+        <h5>Last updated: February 26, 2020</h5>
       
       <hr />
-      
-
-<p>Given an array of n integers where <code>n &gt; 1</code>, <code>nums</code>, return an array output such that <code>output[i]</code> is equal to the product of all the elements of nums except <code>nums[i]</code>.</p>
-
+      <p>Given an array of n integers where <code>n &gt; 1</code>, <code>nums</code>, return an array output such that <code>output[i]</code> is equal to the product of all the elements of nums except <code>nums[i]</code>.</p>
 <p>Solve it <strong>without division</strong> and in <code>O(n)</code>.</p>
-
 <p>For example, given <code>[1,2,3,4]</code>, return <code>[24,12,8,6]</code>.</p>
+<h3 id="solution-1">Solution 1</h3>
+<p>Time: <code>O(n)</code><br>
+Space: <code>O(n)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">productExceptSelf</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> List[int]:
+        left, right <span style="color:#f92672">=</span> [nums[<span style="color:#ae81ff">0</span>]], [nums[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]
+        N <span style="color:#f92672">=</span> len(nums)
 
-<h3 id="follow-up">Follow-up</h3>
+        <span style="color:#66d9ef">if</span> N <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
+        res <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, N<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            left<span style="color:#f92672">.</span>append(left[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> nums[i])
+            right<span style="color:#f92672">.</span>insert(<span style="color:#ae81ff">0</span>, right[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> nums[N<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>i])
+
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N):
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                res<span style="color:#f92672">.</span>append(right[<span style="color:#ae81ff">0</span>])
+            <span style="color:#66d9ef">elif</span> i <span style="color:#f92672">==</span> N<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+                res<span style="color:#f92672">.</span>append(left[N<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>])
+            <span style="color:#66d9ef">else</span>:
+                res<span style="color:#f92672">.</span>append(left[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> right[i])
+
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div><h4 id="follow-up">Follow-up</h4>
 <p>Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)</p>
+<h3 id="solution-2">Solution 2</h3>
+<p>Time: <code>O(n)</code>
+Space: <code>O(1)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">productExceptSelf</span>(self, nums):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :rtype: List[int]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        products <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># product of all to left of nums[0] is set to 1</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(nums)):
+            products<span style="color:#f92672">.</span>append(nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> products[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+        <span style="color:#66d9ef">print</span>(products)
+        right_product <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            products[i] <span style="color:#f92672">*=</span> right_product
+            right_product <span style="color:#f92672">*=</span> nums[i]
 
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution(object):
-    def productExceptSelf(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: List[int]
-        &quot;&quot;&quot;
-        products = [1]  # product of all to left of nums[0] is set to 1
-        for i in range(1, len(nums)):
-            products.append(nums[i-1] * products[-1])
-        print(products)
-        right_product = 1
-        for i in range(len(nums)-1, -1, -1):
-            products[i] *= right_product
-            right_product *= nums[i]
-
-        return products
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> products
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

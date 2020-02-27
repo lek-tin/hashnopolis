@@ -30,7 +30,7 @@ Output: 0.25000
 ### Solution
 ```python
 # Time: o(logN)
-# Space: o(n)
+# Space: `O(n)`
 class Solution:
     def myPow(self, x, n):
         """

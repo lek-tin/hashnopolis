@@ -16,27 +16,21 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="List all services
-sudo service --status-all  Create a nested directory if it doesn&amp;rsquo;t exist already.
-mkdir -p /nested/directory  To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)
-ls -al  To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)" />
+  <meta name="description" content="List all services  sudo service --status-all Create a nested directory if it doesn&amp;rsquo;t exist already.  mkdir -p /nested/directory To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)  ls -al To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)  ls -R ~/Documents Find process which is listening to port 3000, and kill that process or process group  sudo lsof -i :3000 kill -9 &amp;lt;PID&amp;gt; kill -9 -&amp;lt;PID&amp;gt; [Dangerous] Recursively delete EVERYTHING files  rm -rf /tmp/* // everything in &amp;#39;/tmp/&amp;#39; folder rm -rf ." />
   <meta name="keywords" content="bash cli terminal " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Super Useful Bash Commands" />
-    <meta name="twitter:description" content="List all services
-sudo service --status-all  Create a nested directory if it doesn&amp;rsquo;t exist already.
-mkdir -p /nested/directory  To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)
-ls -al  To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)" />
+    <meta name="twitter:description" content="List all services  sudo service --status-all Create a nested directory if it doesn&amp;rsquo;t exist already.  mkdir -p /nested/directory To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)  ls -al To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)  ls -R ~/Documents Find process which is listening to port 3000, and kill that process or process group  sudo lsof -i :3000 kill -9 &amp;lt;PID&amp;gt; kill -9 -&amp;lt;PID&amp;gt; [Dangerous] Recursively delete EVERYTHING files  rm -rf /tmp/* // everything in &amp;#39;/tmp/&amp;#39; folder rm -rf ." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/super-useful-bash-commands/" />
@@ -197,206 +191,171 @@ ls -al  To list the contents of your Documents folder and all sub folders (this 
       
       <hr />
       <ol>
-<li><p>List all services</p>
-
-<pre><code class="language-bash">sudo service --status-all
-</code></pre></li>
-
-<li><p>Create a nested directory if it doesn&rsquo;t exist already.</p>
-
-<pre><code class="language-bash">mkdir -p /nested/directory
-</code></pre></li>
-
-<li><p>To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)</p>
-
-<pre><code class="language-bash">ls -al
-</code></pre></li>
-
-<li><p>To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)</p>
-
-<pre><code class="language-bash">ls -R ~/Documents
-</code></pre></li>
-
-<li><p>Find process which is listening to port 3000, and kill that process or process group</p>
-
-<pre><code class="language-bash">sudo lsof -i :3000
+<li>List all services</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo service --status-all
+</code></pre></div><ol start="2">
+<li>Create a nested directory if it doesn&rsquo;t exist already.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p /nested/directory
+</code></pre></div><ol start="3">
+<li>To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -al
+</code></pre></div><ol start="4">
+<li>To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -R ~/Documents
+</code></pre></div><ol start="5">
+<li>Find process which is listening to port 3000, and kill that process or process group</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo lsof -i :3000
 kill -9 &lt;PID&gt;
 kill -9 -&lt;PID&gt;
-</code></pre></li>
-
-<li><p>[Dangerous] Recursively delete <strong>EVERYTHING</strong> files</p>
-
-<pre><code class="language-bash">rm -rf /tmp/*   // everything in '/tmp/' folder
+</code></pre></div><ol start="6">
+<li>[Dangerous] Recursively delete <strong>EVERYTHING</strong> files</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf /tmp/*   // everything in <span style="color:#e6db74">&#39;/tmp/&#39;</span> folder
 rm -rf ./*      // everything in current folder
-</code></pre></li>
-
-<li><p>Delete curtain files</p>
-
-<pre><code class="language-bash">// Your exact case would be handled by brace expansion, like so:
-rm -rf abc.log.2012-03-{14,27,28}
+</code></pre></div><ol start="6">
+<li>Delete curtain files</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">// Your exact <span style="color:#66d9ef">case</span> would be handled by brace expansion, like so:
+rm -rf abc.log.2012-03-<span style="color:#f92672">{</span>14,27,28<span style="color:#f92672">}</span>
 rm -rf abc.log.2012-03-14 abc.log.2012-03-27 abc.log.2012-03-28
-</code></pre></li>
-
-<li><p>Search</p>
-
-<pre><code class="language-bash"># search text or searches the given file for lines containing a match to the given strings or words.
+</code></pre></div><ol start="7">
+<li>Search</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># search text or searches the given file for lines containing a match to the given strings or words.</span>
 docker logs | grep xxx
 grep xxx
-# Search for files that contains a specific text
-find PATH -type f | xargs grep 'youtube.com'
-# Recursively search for a text in files
-grep -Ril &quot;text-to-find&quot; /
-# i stands for ignore case (optional in your case).
-# R stands for recursive.
-# l stands for &quot;show the file name, not the result itself&quot;.
-# / stands for starting at the root of your machine.
-</code></pre></li>
-
-<li><p>Limit output</p>
-
-<pre><code class="language-bash"># Display only the first 10 lines or the last 20 lines
-ll | head -n 10 | tail -n 20
-</code></pre></li>
-
-<li><p>Check memory usage</p>
-
-<pre><code class="language-bash">free
-# total used free shared buffers cached
-# Mem: 8027952 4377300 3650652 0 103648 1630364
-# -/+ buffers/cache: 2643288 5384664
-# Swap: 15624188 608948 15015240
-</code></pre></li>
-
-<li><p>Count total number of lines of code of all the php files in a directory recursively</p>
-
-<pre><code class="language-bash">find . -name '*.php' | xargs wc -l
-</code></pre></li>
-
-<li><p>List ports in use</p>
-
-<pre><code class="language-bash">netstat -a
-</code></pre></li>
-
-<li><p>Find a file by name</p>
-
-<pre><code class="language-bash">find . -name 'filename*'
-</code></pre></li>
-
-<li><p>Append content to a file.</p>
-
-<pre><code class="language-bash">cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
-</code></pre></li>
-
-<li><p>Change permission</p>
-
-<pre><code class="language-bash"># owner can read and write
-chmod 600 file
-# owner can read, write and execute
-chmod 700 file
-# all can read and write
-chmod 666 file
-# all can read, write and execute
-chmod 777 file
-</code></pre></li>
-
-<li><p>Locate executable<br />
-<code>which</code> command is very small and simple command to locate executables in the system. It allows user to pass several command names as arguments to get their paths in the system.</p>
-
-<pre><code class="language-bash">$ which [-option]
+<span style="color:#75715e"># Search for files that contains a specific text</span>
+find PATH -type f | xargs grep <span style="color:#e6db74">&#39;youtube.com&#39;</span>
+<span style="color:#75715e"># Recursively search for a text in files</span>
+grep -Ril <span style="color:#e6db74">&#34;text-to-find&#34;</span> /
+<span style="color:#75715e"># i stands for ignore case (optional in your case).</span>
+<span style="color:#75715e"># R stands for recursive.</span>
+<span style="color:#75715e"># l stands for &#34;show the file name, not the result itself&#34;.</span>
+<span style="color:#75715e"># / stands for starting at the root of your machine.</span>
+</code></pre></div><ol start="8">
+<li>Limit output</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Display only the first 10 lines or the last 20 lines</span>
+ll | head -n <span style="color:#ae81ff">10</span> | tail -n <span style="color:#ae81ff">20</span>
+</code></pre></div><ol start="8">
+<li>Check memory usage</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">free
+<span style="color:#75715e"># total used free shared buffers cached</span>
+<span style="color:#75715e"># Mem: 8027952 4377300 3650652 0 103648 1630364</span>
+<span style="color:#75715e"># -/+ buffers/cache: 2643288 5384664</span>
+<span style="color:#75715e"># Swap: 15624188 608948 15015240</span>
+</code></pre></div><ol start="9">
+<li>Count total number of lines of code of all the php files in a directory recursively</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -name <span style="color:#e6db74">&#39;*.php&#39;</span> | xargs wc -l
+</code></pre></div><ol start="10">
+<li>List ports in use</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -a
+</code></pre></div><ol start="11">
+<li>Find a file by name</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -name <span style="color:#e6db74">&#39;filename*&#39;</span>
+</code></pre></div><ol start="12">
+<li>Append content to a file.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</code></pre></div><ol start="13">
+<li>Change permission</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># owner can read and write</span>
+chmod <span style="color:#ae81ff">600</span> file
+<span style="color:#75715e"># owner can read, write and execute</span>
+chmod <span style="color:#ae81ff">700</span> file
+<span style="color:#75715e"># all can read and write</span>
+chmod <span style="color:#ae81ff">666</span> file
+<span style="color:#75715e"># all can read, write and execute</span>
+chmod <span style="color:#ae81ff">777</span> file
+</code></pre></div><ol start="14">
+<li>Locate executable<br>
+<code>which</code> command is very small and simple command to locate executables in the system. It allows user to pass several command names as arguments to get their paths in the system.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ which <span style="color:#f92672">[</span>-option<span style="color:#f92672">]</span>
 $ which ls gdb open grep
 /bin/ls
 /usr/bin/gdb
 /bin/open
 /bin/grep
-</code></pre></li>
-
-<li><p>Alias</p>
-
-<pre><code class="language-bash">alias ll='ls -al'
-</code></pre></li>
-
-<li><p>Upload files to the server</p>
-
-<pre><code class="language-bash"># Secure copy
-scp FILE USER@SERVER_IP:.
-</code></pre></li>
-
-<li><p>Extract <code>bz2</code> files</p>
-
-<pre><code class="language-bash"># flag -k means keeping the source file
-bzip2 -dk AREAWATER.csv.bz2
-</code></pre></li>
-
-<li><p>show CPU architecture-related information</p>
-
-<pre><code class="language-bash">lscpu
-</code></pre></li>
-
-<li><p>install a package</p>
-
-<pre><code class="language-bash">apt-get install &lt;package-name&gt;
-</code></pre></li>
-
-<li><p>list the installed packages</p>
-
-<pre><code class="language-bash">apt list --installed
-</code></pre></li>
-
-<li><p>List kernel attributes</p>
-
-<pre><code class="language-bash">sysctl -a
-</code></pre></li>
-
-<li><p>Passing parameters to <code>awk</code></p>
-
-<pre><code class="language-bash">echo 'Hello world' | awk '{ print $0 }'
-</code></pre>
-
-<p>Output:</p>
-
-<pre><code>Hello world
-</code></pre>
-
-<pre><code class="language-bash">echo 3 4 | awk '{ print $1 + $2 }'
-</code></pre>
-
-<p>Output:</p>
-
-<pre><code>7
-</code></pre></li>
-
-<li><p>Kill processes listening at <code>PORT_NUMBER</code></p>
-
-<pre><code class="language-bash">lsof -i :&lt;PORT_NUMBER&gt; | awk -v i=2 -v j=2 'FNR==i {system(&quot;kill -9 &quot; $2)}'
-sudo kill -9 `sudo lsof -t -i:9001`
-# If that doesn't work you could also use $() for command interpolation:
-sudo kill -9 $(sudo lsof -t -i:9001)
-</code></pre></li>
-
-<li><p><code>awk</code> Print the <code>j</code>th field of the <code>i</code>th line</p>
-
-<pre><code class="language-bash">awk -v i=5 -v j=3 'FNR == i {print $j}'
-</code></pre></li>
-
-<li><p>Embed sub scripts in main script. Sub script will be evaluated/executed before the main script.</p>
-
-<pre><code class="language-bash"># List current user directory
-ls /Users/`echo $USER`
-</code></pre></li>
-
-<li><p>To check whether a program is running</p>
-
-<pre><code class="language-bash">ps -ef | grep tomcat
-</code></pre></li>
-
-<li><p>check user manual for a command. <code>man</code> command in Linux is used to display the user manual of any command that we can run on the terminal. It provides a detailed view of the command which includes</p></li>
-
-<li><p>Search for occurrences of a target value against all files in a directory</p>
-
-<pre><code class="language-bash">find . -name '*.js' -exec grep -i 'string to search for' {} \; -print
-</code></pre></li>
+</code></pre></div><ol start="15">
+<li>Alias</li>
 </ol>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias ll<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ls -al&#39;</span>
+</code></pre></div><ol start="16">
+<li>Upload files to the server</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Secure copy</span>
+scp FILE USER@SERVER_IP:.
+</code></pre></div><ol start="17">
+<li>Extract <code>bz2</code> files</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># flag -k means keeping the source file</span>
+bzip2 -dk AREAWATER.csv.bz2
+</code></pre></div><ol start="18">
+<li>show CPU architecture-related information</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lscpu
+</code></pre></div><ol start="19">
+<li>install a package</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install &lt;package-name&gt;
+</code></pre></div><ol start="20">
+<li>list the installed packages</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt list --installed
+</code></pre></div><ol start="21">
+<li>List kernel attributes</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sysctl -a
+</code></pre></div><ol start="22">
+<li>Passing parameters to <code>awk</code></li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#39;Hello world&#39;</span> | awk <span style="color:#e6db74">&#39;{ print $0 }&#39;</span>
+</code></pre></div><p>Output:</p>
+<pre><code>Hello world
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> | awk <span style="color:#e6db74">&#39;{ print $1 + $2 }&#39;</span>
+</code></pre></div><p>Output:</p>
+<pre><code>7
+</code></pre><ol start="23">
+<li>Kill processes listening at <code>PORT_NUMBER</code></li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lsof -i :&lt;PORT_NUMBER&gt; | awk -v i<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> -v j<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> <span style="color:#e6db74">&#39;FNR==i {system(&#34;kill -9 &#34; $2)}&#39;</span>
+sudo kill -9 <span style="color:#e6db74">`</span>sudo lsof -t -i:9001<span style="color:#e6db74">`</span>
+<span style="color:#75715e"># If that doesn&#39;t work you could also use $() for command interpolation:</span>
+sudo kill -9 <span style="color:#66d9ef">$(</span>sudo lsof -t -i:9001<span style="color:#66d9ef">)</span>
+</code></pre></div><ol start="24">
+<li><code>awk</code> Print the <code>j</code>th field of the <code>i</code>th line</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk -v i<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span> -v j<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> <span style="color:#e6db74">&#39;FNR == i {print $j}&#39;</span>
+</code></pre></div><ol start="25">
+<li>Embed sub scripts in main script. Sub script will be evaluated/executed before the main script.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># List current user directory</span>
+ls /Users/<span style="color:#e6db74">`</span>echo $USER<span style="color:#e6db74">`</span>
+</code></pre></div><ol start="26">
+<li>To check whether a program is running</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ps -ef | grep tomcat
+</code></pre></div><ol start="27">
+<li>
+<p>check user manual for a command. <code>man</code> command in Linux is used to display the user manual of any command that we can run on the terminal. It provides a detailed view of the command which includes</p>
+</li>
+<li>
+<p>Search for occurrences of a target value against all files in a directory</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -name <span style="color:#e6db74">&#39;*.js&#39;</span> -exec grep -i <span style="color:#e6db74">&#39;string to search for&#39;</span> <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span> -print
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

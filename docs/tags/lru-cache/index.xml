@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lru Cache on Hashnopolis</title>
+    <title>lru-cache on Hashnopolis</title>
     <link>http://www.hashnopolis.com/tags/lru-cache/</link>
-    <description>Recent content in Lru Cache on Hashnopolis</description>
+    <description>Recent content in lru-cache on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Tue, 26 Mar 2019 22:51:52 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/</guid>
-      <description> Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&amp;lt;Integer&amp;gt; cache = new LinkedList&amp;lt;&amp;gt;(); int count = 0; for (int i = 0; i &amp;lt; array.length; i++) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count++; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  </description>
+      <description>Solution public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&amp;lt;Integer&amp;gt; cache = new LinkedList&amp;lt;&amp;gt;(); int count = 0; for (int i = 0; i &amp;lt; array.length; i++) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count++; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } } </description>
     </item>
     
     <item>

@@ -17,9 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a linked list, swap every two adjacent nodes and return its head.
-Example Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note  Your algorithm should use only constant extra space. You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.
-Solution ```python
-Definition for singly-linked list. class ListNode(object): def init(self, x): self.val = x self.next = None  class Solution(object): def swapPairs(self, head): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type head: ListNode :rtype: ListNode &amp;ldquo;&amp;rdquo;&amp;rdquo; # https://www." />
+Example Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3. Note  Your algorithm should use only constant extra space. You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: ListNode &amp;#34;&amp;#34;&amp;#34; # https://www." />
   <meta name="keywords" content="leetcode binary-tree " />
   
   
@@ -27,16 +25,14 @@ Definition for singly-linked list. class ListNode(object): def init(self, x): se
     
     <meta name="twitter:title" content="Swap Nodes in Pairs" />
     <meta name="twitter:description" content="Given a linked list, swap every two adjacent nodes and return its head.
-Example Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note  Your algorithm should use only constant extra space. You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.
-Solution ```python
-Definition for singly-linked list. class ListNode(object): def init(self, x): self.val = x self.next = None  class Solution(object): def swapPairs(self, head): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type head: ListNode :rtype: ListNode &amp;ldquo;&amp;rdquo;&amp;rdquo; # https://www." />
+Example Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3. Note  Your algorithm should use only constant extra space. You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: ListNode &amp;#34;&amp;#34;&amp;#34; # https://www." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/swap-nodes-in-pairs/" />
@@ -194,70 +190,53 @@ Definition for singly-linked list. class ListNode(object): def init(self, x): se
         <h5>Last updated: September 15, 2018</h5>
       
       <hr />
-      
-
-<p>Given a linked list, swap every two adjacent nodes and return its head.</p>
-
+      <p>Given a linked list, swap every two adjacent nodes and return its head.</p>
 <h3 id="example">Example</h3>
-
 <pre><code>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <ul>
 <li>Your algorithm should use only constant extra space.</li>
-
-<li><p>You may not modify the values in the list&rsquo;s nodes, only nodes itself may be changed.</p>
-
-<h3 id="solution">Solution</h3>
-
-<p>```python</p>
-
-<h1 id="definition-for-singly-linked-list">Definition for singly-linked list.</h1>
-
-<h1 id="class-listnode-object">class ListNode(object):</h1>
-
-<h1 id="def-init-self-x">def <strong>init</strong>(self, x):</h1>
-
-<h1 id="self-val-x">self.val = x</h1>
-
-<h1 id="self-next-none">self.next = None</h1></li>
+<li>You may not modify the values in the list&rsquo;s nodes, only nodes itself may be changed.</li>
 </ul>
+<h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
 
-<p>class Solution(object):
-    def swapPairs(self, head):
-        &ldquo;&rdquo;&rdquo;
-        :type head: ListNode
-        :rtype: ListNode
-        &ldquo;&rdquo;&rdquo;
-        # <a href="https://www.youtube.com/watch?v=f45_eF1gmn8">https://www.youtube.com/watch?v=f45_eF1gmn8</a>
-        root = ListNode(0)
-        root.next = head
-        pre = root
-        # while new start is not None
-        while pre.next:
-            # the new following element being exists
-            if pre.next.next:
-                # reference: when pre changes, temp changes TOO
-                # e.g.,[1,2,3,4]
-                # temp = 1
-                temp = pre.next
-                # exchange 3 nodes
-                # pre -&gt; 2
-                pre.next = temp.next
-                # temp.next is 2, 1 -&gt; 3
-                temp.next = temp.next.next
-                # 2 -&gt; 1
-                pre.next.next = temp
-                # pre = 3
-                print(temp.val)
-                pre = temp
-            else:
-                break
-        return root.next
-```</p>
-
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swapPairs</span>(self, head):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type head: ListNode
+</span><span style="color:#e6db74">        :rtype: ListNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e"># https://www.youtube.com/watch?v=f45_eF1gmn8</span>
+        root <span style="color:#f92672">=</span> ListNode(<span style="color:#ae81ff">0</span>)
+        root<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> head
+        pre <span style="color:#f92672">=</span> root
+        <span style="color:#75715e"># while new start is not None</span>
+        <span style="color:#66d9ef">while</span> pre<span style="color:#f92672">.</span>next:
+            <span style="color:#75715e"># the new following element being exists</span>
+            <span style="color:#66d9ef">if</span> pre<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next:
+                <span style="color:#75715e"># reference: when pre changes, temp changes TOO</span>
+                <span style="color:#75715e"># e.g.,[1,2,3,4]</span>
+                <span style="color:#75715e"># temp = 1</span>
+                temp <span style="color:#f92672">=</span> pre<span style="color:#f92672">.</span>next
+                <span style="color:#75715e"># exchange 3 nodes</span>
+                <span style="color:#75715e"># pre -&gt; 2</span>
+                pre<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> temp<span style="color:#f92672">.</span>next
+                <span style="color:#75715e"># temp.next is 2, 1 -&gt; 3</span>
+                temp<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> temp<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+                <span style="color:#75715e"># 2 -&gt; 1</span>
+                pre<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> temp
+                <span style="color:#75715e"># pre = 3</span>
+                <span style="color:#66d9ef">print</span>(temp<span style="color:#f92672">.</span>val)
+                pre <span style="color:#f92672">=</span> temp
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">return</span> root<span style="color:#f92672">.</span>next
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

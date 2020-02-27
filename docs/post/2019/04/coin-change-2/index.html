@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
-Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2&#43;2&#43;1 5=2&#43;1&#43;1&#43;1 5=1&#43;1&#43;1&#43;1&#43;1  Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2." />
+Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2&#43;2&#43;1 5=2&#43;1&#43;1&#43;1 5=1&#43;1&#43;1&#43;1&#43;1 Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2." />
   <meta name="keywords" content="leetcode dynamic-programming " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are
     
     <meta name="twitter:title" content="Coin Change 2" />
     <meta name="twitter:description" content="You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
-Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2&#43;2&#43;1 5=2&#43;1&#43;1&#43;1 5=1&#43;1&#43;1&#43;1&#43;1  Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2." />
+Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2&#43;2&#43;1 5=2&#43;1&#43;1&#43;1 5=1&#43;1&#43;1&#43;1&#43;1 Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/04/coin-change-2/" />
@@ -181,7 +181,7 @@ Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are
         
           "<a href="/tags/dynamic-programming"><strong>dynamic-programming</strong></a>",
         
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 1-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/coin-change-2.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Coin Change 2</h1>
@@ -190,12 +190,8 @@ Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are
         <h5>Last updated: April 6, 2019</h5>
       
       <hr />
-      
-
-<p>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.</p>
-
+      <p>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: amount = 5, coins = [1, 2, 5]
 Output: 4
 Explanation: there are four ways to make up the amount:
@@ -203,54 +199,42 @@ Explanation: there are four ways to make up the amount:
 5=2+2+1
 5=2+1+1+1
 5=1+1+1+1+1
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: amount = 3, coins = [2]
 Output: 0
 Explanation: the amount of 3 cannot be made up just with coins of 2.
-</code></pre>
-
-<h3 id="example-3">Example 3:</h3>
-
+</code></pre><h3 id="example-3">Example 3:</h3>
 <pre><code>Input: amount = 10, coins = [10]
 Output: 1
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
-<p>You can assume that
-1. <code>0 &lt;= amount &lt;= 5000</code>
-2. <code>1 &lt;= coin &lt;= 5000</code>
-3. the number of coins is less than <code>500</code>
-4. the answer is guaranteed to fit into signed <code>32-bit</code> integer</p>
-
+</code></pre><h3 id="note">Note:</h3>
+<p>You can assume that</p>
+<ol>
+<li><code>0 &lt;= amount &lt;= 5000</code></li>
+<li><code>1 &lt;= coin &lt;= 5000</code></li>
+<li>the number of coins is less than <code>500</code></li>
+<li>the answer is guaranteed to fit into signed <code>32-bit</code> integer</li>
+</ol>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">change</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> amount<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> coins<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> combos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>amount <span style="color:#f92672">+</span> 1<span style="color:#f92672">];</span>
+        combos<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">class Solution {
-    public int change(int amount, int[] coins) {
-        int[] combos = new int[amount + 1];
-        combos[0] = 1;
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> coins<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> coin <span style="color:#f92672">=</span> coins<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;=</span> amount<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&gt;=</span> coin<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#75715e">//NEW combo = combo WITH coin + combo WITHOUT coin
+</span><span style="color:#75715e"></span>                    combos<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> combos<span style="color:#f92672">[</span>j <span style="color:#f92672">-</span> coin<span style="color:#f92672">];</span>
+                    <span style="color:#75715e">// System.out.println(Arrays.toString(combos));
+</span><span style="color:#75715e"></span>                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        for (int i = 0; i &lt; coins.length; i++) {
-            int coin = coins[i];
-            for (int j = 1; j &lt;= amount; j++) {
-                if (j &gt;= coin) {
-                    //NEW combo = combo WITH coin + combo WITHOUT coin
-                    combos[j] += combos[j - coin];
-                    // System.out.println(Arrays.toString(combos));
-                }
-            }
-        }
-
-        return combos[amount];
-    }
-}
-</code></pre>
-
-<h3 id="hint">Hint</h3>
-
+        <span style="color:#66d9ef">return</span> combos<span style="color:#f92672">[</span>amount<span style="color:#f92672">];</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="hint">Hint</h3>
 <p><a href="https://youtu.be/jaNZ83Q3QGc">https://youtu.be/jaNZ83Q3QGc</a></p>
 
   </div>

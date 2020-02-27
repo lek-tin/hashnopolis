@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "recursion", "dynamic-programming", "memoization"]
 categories: ["algorithm"]
 date: 2018-10-03T23:49:00-07:00
+lastmod: 2020-02-24T23:49:00-07:00
 draft: false
 archive: false
 ---
@@ -29,6 +30,7 @@ Output: 3
 Explanation: It could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
 ```
 ### Solution
+using a memoization array:
 ```python
 class Solution:
     def numDecodings(self, s):
@@ -63,4 +65,29 @@ class Solution:
             return 0
         memo = [None] * (len(s) + 1)
         return counter_dp(s, len(s), memo)
+```
+Sliding temp variables
+```python
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        if not s or len(s)==0 or s[0] == "0":
+            return 0
+        
+        s = list(s)
+        prev_prev = 1
+        prev = 1
+        
+        for i in range(2, len(s)+1):
+            curr = 0
+            oneChar = ord(s[i-1]) - ord("0")
+            twoChar = (ord(s[i-2]) - ord("0") ) * 10 + oneChar
+            
+            if 1 <= oneChar <= 9:
+                curr += prev
+            if 10 <= twoChar <= 26:
+                curr += prev_prev
+                
+            prev_prev, prev = prev, curr
+            
+        return prev
 ```

@@ -32,7 +32,7 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/lru-cache/" />
@@ -198,18 +198,12 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
         <h5>Last updated: November 11, 2018</h5>
       
       <hr />
-      
-
-<p>Design and implement a data structure for <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU">Least Recently Used (LRU)</a> cache. It should support the following operations: <code>get</code> and <code>put</code>.</p>
-
+      <p>Design and implement a data structure for <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU">Least Recently Used (LRU)</a> cache. It should support the following operations: <code>get</code> and <code>put</code>.</p>
 <p><code>get(key)</code> - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return <code>-1</code>.
 <code>put(key, value)</code> - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</p>
-
 <p>Follow up:
 Could you do both operations in <code>O(1)</code> time complexity?</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>LRUCache cache = new LRUCache( 2 /* capacity */ );
 
 cache.put(1, 1);
@@ -221,183 +215,174 @@ cache.put(4, 4);    // evicts key 1
 cache.get(1);       // returns -1 (not found)
 cache.get(3);       // returns 3
 cache.get(4);       // returns 4
-</code></pre>
+</code></pre><h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.LinkedHashMap<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.Map<span style="color:#f92672">;</span>
 
-<h3 id="solution">Solution:</h3>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LRUCache</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> cache<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> capacity<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">import java.util.LinkedHashMap;
-import java.util.Map;
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">LRUCache</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> capacity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">capacity</span> <span style="color:#f92672">=</span> capacity<span style="color:#f92672">;</span>
+        cache <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedHashMap<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;(</span>capacity<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-public class LRUCache {
-    private Map&lt;Integer, Integer&gt; cache;
-    private int capacity;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> key<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Integer val <span style="color:#f92672">=</span> cache<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>val <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+        cache<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+        cache<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> val<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> val<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    public LRUCache(int capacity) {
-        this.capacity = capacity;
-        cache = new LinkedHashMap&lt;Integer, Integer&gt;(capacity);
-    }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> key<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> val<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        cache<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+        cache<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> val<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cache<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> capacity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            cache<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>cache<span style="color:#f92672">.</span><span style="color:#a6e22e">entrySet</span><span style="color:#f92672">().</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">().</span><span style="color:#a6e22e">next</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">());</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-    public int get(int key) {
-        Integer val = cache.get(key);
-        if (val == null) return -1;
-        cache.remove(key);
-        cache.put(key, val);
-        return val;
-    }
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Your LRUCache object will be instantiated and called as such:
+</span><span style="color:#75715e"> * LRUCache obj = new LRUCache(capacity);
+</span><span style="color:#75715e"> * int param_1 = obj.get(key);
+</span><span style="color:#75715e"> * obj.put(key,value);
+</span><span style="color:#75715e"> */</span>
+</code></pre></div><p>Dynamic Link Library / Double linked list, used for insertion and deletion</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Dictionary stores keys with values of nodes.  Nodes form</span>
+<span style="color:#75715e"># double linked list containing key, value pairs. DLL is in</span>
+<span style="color:#75715e"># order of use with least recent at head and most recent at tail.</span>
+<span style="color:#75715e"># Time - O(1)</span>
+<span style="color:#75715e"># Space - O(n) set and get: hashmap and linked-list</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
+    <span style="color:#66d9ef">def</span> __init__(self, key, value):
+        self<span style="color:#f92672">.</span>key <span style="color:#f92672">=</span> key
+        self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> value
+        self<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> None
+        self<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> None
 
-    public void put(int key, int val) {
-        cache.remove(key);
-        cache.put(key, val);
-        if (cache.size() &gt; capacity) {
-            cache.remove(cache.entrySet().iterator().next().getKey());
-        }
-    }
-}
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DLL</span>:
+    <span style="color:#75715e"># head &lt;--&gt; key_1 &lt;--&gt; key_2 &lt;--&gt; key_3 &lt;--&gt; ... &lt;--&gt;tail</span>
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>head <span style="color:#f92672">=</span> Node(None, None)  <span style="color:#75715e"># least recently used, remove at head</span>
+        self<span style="color:#f92672">.</span>tail <span style="color:#f92672">=</span> Node(None, None)  <span style="color:#75715e"># most recently used, add and update at tail</span>
+        self<span style="color:#f92672">.</span>head<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>tail
+        self<span style="color:#f92672">.</span>tail<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>head
 
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache obj = new LRUCache(capacity);
- * int param_1 = obj.get(key);
- * obj.put(key,value);
- */
-</code></pre>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">appendToTail</span>(self, node):
+        <span style="color:#75715e"># tail is always a placeholder</span>
+        <span style="color:#75715e"># head - 1 - 2 - 3 - 4 - 5 - 6 ------ tail</span>
+        <span style="color:#75715e">#                             ↖ node ↗</span>
+        node<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>tail<span style="color:#f92672">.</span>prev
+        self<span style="color:#f92672">.</span>tail<span style="color:#f92672">.</span>prev<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> node
+        node<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>tail
+        self<span style="color:#f92672">.</span>tail<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> node
 
-<pre><code class="language-python"># Dictionary stores keys with values of nodes.  Nodes form
-# double linked list containing key, value pairs. DLL is in
-# order of use with least recent at head and most recent at tail.
-# Time - O(1) to set and get: hashmap and linked-list
-# Space - O(n)
-class Node:
-    def __init__(self, key, value):
-        self.key = key
-        self.value = value
-        self.prev = None
-        self.next = None
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">removeAtHead</span>(self):
+        <span style="color:#75715e"># head is always a placeholder</span>
+        <span style="color:#75715e"># head - 1 - 2 - 3 - 4 - 5 - 6 - tail</span>
+        <span style="color:#75715e">#      node</span>
+        node <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>head<span style="color:#f92672">.</span>next
+        node<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>head
+        self<span style="color:#f92672">.</span>head<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>head<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+        key <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span>key
+        <span style="color:#66d9ef">del</span> node
+        <span style="color:#66d9ef">return</span> key
 
-# Dynamic Link Library / Double linked list, used for insertion and deletion
-class DLL:
-    # head &lt;--&gt; key_1 &lt;--&gt; key_2 &lt;--&gt; key_3 &lt;--&gt; ... &lt;--&gt;tail
-    def __init__(self):
-        self.head = Node(None, None)  # least recently used, remove at head
-        self.tail = Node(None, None)  # most recently used, add and update at tail
-        self.head.next = self.tail
-        self.tail.prev = self.head
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update</span>(self, node):
+        <span style="color:#75715e"># take out from current position</span>
+        node<span style="color:#f92672">.</span>prev<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span>next
+        node<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span>prev
+        <span style="color:#75715e"># put back at tail</span>
+        self<span style="color:#f92672">.</span>appendToTail(node)
 
-    def appendToTail(self, node):
-        # tail is always a placeholder
-        # head - 1 - 2 - 3 - 4 - 5 - 6 ------ tail
-        #                             ↖ node ↗
-        node.prev = self.tail.prev
-        self.tail.prev.next = node
-        node.next = self.tail
-        self.tail.prev = node
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LRUCache</span>(object):
 
-    def removeAtHead(self):
-        # head is always a placeholder
-        # head - 1 - 2 - 3 - 4 - 5 - 6 - tail
-        #      node
-        node = self.head.next
-        node.next.prev = self.head
-        self.head.next = self.head.next.next
-        key = node.key
-        del node
-        return key
+    <span style="color:#66d9ef">def</span> __init__(self, capacity):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type capacity: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">=</span> capacity
+        self<span style="color:#f92672">.</span>queue <span style="color:#f92672">=</span> DLL()
+        self<span style="color:#f92672">.</span>map <span style="color:#f92672">=</span> {}
 
-    def update(self, node):
-        # take out from current position
-        node.prev.next = node.next
-        node.next.prev = node.prev
-        # put back at tail
-        self.appendToTail(node)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get</span>(self, key):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>map:
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        node <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>map[key]
+        self<span style="color:#f92672">.</span>queue<span style="color:#f92672">.</span>update(node)
+        <span style="color:#66d9ef">return</span> node<span style="color:#f92672">.</span>value
 
-class LRUCache(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">put</span>(self, key, value):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type key: int
+</span><span style="color:#e6db74">        :type value: int
+</span><span style="color:#e6db74">        :rtype: nothing
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e"># Key exists, so we update value and append node to tail</span>
+        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>map:
+            node <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>map[key]
+            node<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> value
+            self<span style="color:#f92672">.</span>queue<span style="color:#f92672">.</span>update(node)
+            <span style="color:#66d9ef">return</span>
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#75715e"># new key</span>
+            node <span style="color:#f92672">=</span> Node(key, value)
+            self<span style="color:#f92672">.</span>map[key] <span style="color:#f92672">=</span> node
+            self<span style="color:#f92672">.</span>queue<span style="color:#f92672">.</span>appendToTail(node)
 
-    def __init__(self, capacity):
-        &quot;&quot;&quot;
-        :type capacity: int
-        &quot;&quot;&quot;
-        self.capacity = capacity
-        self.queue = DLL()
-        self.map = {}
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#75715e"># cache is full, remove the oldest</span>
+            removed_key <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>queue<span style="color:#f92672">.</span>removeAtHead()
+            <span style="color:#66d9ef">del</span> self<span style="color:#f92672">.</span>map[removed_key]
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#75715e"># decrement capacity</span>
+            self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</code></pre></div><p>Linked Hashmap</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> OrderedDict
 
-    def get(self, key):
-        &quot;&quot;&quot;
-        :rtype: int
-        &quot;&quot;&quot;
-        if key not in self.map:
-            return -1
-        node = self.map[key]
-        self.queue.update(node)
-        return node.value
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LRUCache</span>(OrderedDict):
 
-    def put(self, key, value):
-        &quot;&quot;&quot;
-        :type key: int
-        :type value: int
-        :rtype: nothing
-        &quot;&quot;&quot;
-        # Key exists, so we update value and append node to tail
-        if key in self.map:
-            node = self.map[key]
-            node.value = value
-            self.queue.update(node)
-            return
-        else:
-            # new key
-            node = Node(key, value)
-            self.map[key] = node
-            self.queue.appendToTail(node)
+    <span style="color:#66d9ef">def</span> __init__(self, capacity: int):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type capacity: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">=</span> capacity
 
-        if self.capacity == 0:
-            # cache is full, remove the oldest
-            removed_key = self.queue.removeAtHead()
-            del self.map[removed_key]
-        else:
-            # decrement capacity
-            self.capacity -= 1
-</code></pre>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get</span>(self, key):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type key: int
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> self:
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
 
-<p>Linked Hashmap</p>
+        self<span style="color:#f92672">.</span>move_to_end(key)
+        <span style="color:#66d9ef">return</span> self[key]
 
-<pre><code class="language-python">from collections import OrderedDict
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">put</span>(self, key, value):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type key: int
+</span><span style="color:#e6db74">        :type value: int
+</span><span style="color:#e6db74">        :rtype: void
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">in</span> self:
+            self<span style="color:#f92672">.</span>move_to_end(key)
+        self[key] <span style="color:#f92672">=</span> value
+        <span style="color:#66d9ef">if</span> len(self) <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>capacity:
+            self<span style="color:#f92672">.</span>popitem(last <span style="color:#f92672">=</span> False)
 
-class LRUCache(OrderedDict):
-
-    def __init__(self, capacity: int):
-        &quot;&quot;&quot;
-        :type capacity: int
-        &quot;&quot;&quot;
-        self.capacity = capacity
-
-    def get(self, key):
-        &quot;&quot;&quot;
-        :type key: int
-        :rtype: int
-        &quot;&quot;&quot;
-        if key not in self:
-            return - 1
-
-        self.move_to_end(key)
-        return self[key]
-
-    def put(self, key, value):
-        &quot;&quot;&quot;
-        :type key: int
-        :type value: int
-        :rtype: void
-        &quot;&quot;&quot;
-        if key in self:
-            self.move_to_end(key)
-        self[key] = value
-        if len(self) &gt; self.capacity:
-            self.popitem(last = False)
-
-# Your LRUCache object will be instantiated and called as such:
-# obj = LRUCache(capacity)
-# param_1 = obj.get(key)
-# obj.put(key,value)
-</code></pre>
-
+<span style="color:#75715e"># Your LRUCache object will be instantiated and called as such:</span>
+<span style="color:#75715e"># obj = LRUCache(capacity)</span>
+<span style="color:#75715e"># param_1 = obj.get(key)</span>
+<span style="color:#75715e"># obj.put(key,value)</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

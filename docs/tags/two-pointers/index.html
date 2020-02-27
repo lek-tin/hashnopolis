@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/two-pointers/" />
@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/squares-of-a-sorted-array/">Squares of a Sorted Array</a></h2>
+
+      <p>Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
+Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note:  1 &lt;= A.length &lt;= 10000 -10000 &lt;= A[i] &lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &lt;= rightPtr: i &#43;= 1 if abs(A[leftPtr]) &lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr &#43;= 1 return result </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/">Subarray Product Less Than K</a></h2>
 
       <p>Your are given an array of positive integers nums.
@@ -232,7 +258,7 @@ Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray 
       <h2><a href="http://www.hashnopolis.com/post/2019/08/valid-triangle-number/">Valid Triangle Number</a></h2>
 
       <p>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
-Example 1: Input: [2,2,3,4] Output: 3  Explanation: Valid combinations are:
+Example 1: Input: [2,2,3,4] Output: 3 Explanation: Valid combinations are:
 2,3,4 (using the first 2) 2,3,4 (using the second 2) 2,2,3
 Note:  The length of the given array won’t exceed 1000. The integers in the given array are in the range of [0, 1000].</p>
 
@@ -260,7 +286,7 @@ Note:  The length of the given array won’t exceed 1000. The integers in the gi
       <h2><a href="http://www.hashnopolis.com/post/2019/08/palindrome-linked-list/">Palindrome Linked List</a></h2>
 
       <p>Given a singly linked list, determine if it is a palindrome.
-Example 1: Input: 1-&gt;2 Output: false  Example 2: Input: 1-&gt;2-&gt;2-&gt;1 Output: true  Follow up: Could you do it in O(n) time and O(1) space?
+Example 1: Input: 1-&gt;2 Output: false Example 2: Input: 1-&gt;2-&gt;2-&gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&gt; bool: if not head: return True middle = self.</p>
 
       <p class="meta">
@@ -288,7 +314,7 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
 
       <p>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &lt; j &lt; k and A[i] &#43; A[j] &#43; A[k] == target.
 As the answer can be very large, return it modulo 10^9 &#43; 7.
-Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</p>
+Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20 Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</p>
 
       <p class="meta">
         
@@ -314,7 +340,7 @@ Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20  Explanation:
       <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-less-than-k/">Two Sum Less Than K</a></h2>
 
       <p>Given an array A of integers and integer K, return the maximum S such that there exists i &lt; j with A[i] &#43; A[j] = S and S &lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60.  Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</p>
+Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60. Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</p>
 
       <p class="meta">
         
@@ -340,7 +366,7 @@ Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We
       <h2><a href="http://www.hashnopolis.com/post/2019/08/two-sum-iv-input-is-a-bst/">Two Sum Iv Input Is a Bst</a></h2>
 
       <p>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: o(n) # space: o(n) # Definition for a binary tree node.</p>
+Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</p>
 
       <p class="meta">
         
@@ -367,7 +393,7 @@ Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Inpu
 
       <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution # time: o(n) # space: o(n) class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1]. Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
 
       <p class="meta">
         
@@ -407,33 +433,6 @@ Note  Your returned answers (both index1 and index2) are not zero-based. You may
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/reverse-linked-list/">Reverse Linked List</a></h2>
-
-      <p>Reverse a singly linked list.
-Example: Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
-Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; NULL // prev cur after while (cur !</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

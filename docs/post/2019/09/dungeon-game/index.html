@@ -32,7 +32,7 @@ The knight has an initial health point represented by a positive integer. If at 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/dungeon-game/" />
@@ -188,59 +188,45 @@ The knight has an initial health point represented by a positive integer. If at 
         <h5>Last updated: September 3, 2019</h5>
       
       <hr />
-      
-
-<p>The demons had captured the princess (<code>P</code>) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (<code>K</code>) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.</p>
-
+      <p>The demons had captured the princess (<code>P</code>) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (<code>K</code>) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.</p>
 <p>The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
-
 <p>Some of the rooms are guarded by demons, so the knight loses health (negative integers) upon entering these rooms; other rooms are either empty (0&rsquo;s) or contain magic orbs that increase the knight&rsquo;s health (positive integers).</p>
-
 <p>In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.</p>
-
 <p><strong>Write a function to determine the knight&rsquo;s minimum initial health so that he is able to rescue the princess.</strong></p>
-
 <p>For example, given the dungeon below, the initial health of the knight must be at least <code>7</code> if he follows the optimal path <code>RIGHT-&gt; RIGHT -&gt; DOWN -&gt; DOWN</code>.</p>
-
-<p><img src="/img/post/dungeon-game-example.png" alt="dungeon-game-example" /></p>
-
+<p><img src="/img/post/dungeon-game-example.png" alt="dungeon-game-example"></p>
 <h3 id="note">Note:</h3>
-
 <ol>
 <li>The knight&rsquo;s health has no upper bound.</li>
 <li>Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># top-down solution</span>
+<span style="color:#f92672">import</span> sys
+INT_MAX <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>maxsize
 
-<pre><code class="language-python"># top-down solution
-import sys
-INT_MAX = sys.maxsize
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculateMinimumHP</span>(self, dungeon: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+        m <span style="color:#f92672">=</span> len(dungeon)
+        n <span style="color:#f92672">=</span> len(dungeon[<span style="color:#ae81ff">0</span>])
 
-class Solution:
-    def calculateMinimumHP(self, dungeon: List[List[int]]) -&gt; int:
-        m = len(dungeon)
-        n = len(dungeon[0])
+        <span style="color:#66d9ef">if</span> m <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-        if m == 0 or n == 0:
-            return 0
+        minVal <span style="color:#f92672">=</span> dungeon[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]
+        maxes <span style="color:#f92672">=</span> [[INT_MAX <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+        maxes[m][n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> maxes[m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][n] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
 
-        minVal = dungeon[0][0]
-        maxes = [[INT_MAX for _ in range(n+1)] for _ in range(m+1)]
-        maxes[m][n-1] = maxes[m-1][n] = 1
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+                <span style="color:#75715e"># choose right or down, whichever is lower</span>
+                maxes[i][j] <span style="color:#f92672">=</span> min(maxes[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j], maxes[i][j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]) <span style="color:#f92672">-</span> dungeon[i][j]
+                <span style="color:#75715e"># if maxes[i][j] &lt; 1, we only need 1</span>
+                maxes[i][j] <span style="color:#f92672">=</span> max(<span style="color:#ae81ff">1</span>, maxes[i][j])
 
-        for i in range(m-1, -1, -1):
-            for j in range(n-1, -1, -1):
-                # choose right or down, whichever is lower
-                maxes[i][j] = min(maxes[i+1][j], maxes[i][j+1]) - dungeon[i][j]
-                # if maxes[i][j] &lt; 1, we only need 1
-                maxes[i][j] = max(1, maxes[i][j])
-
-        return maxes[0][0]
-</code></pre>
-
-<p>Final state:
-<img src="/img/post/dungeon-game-example-final.png" alt="dungeon-game-example-final" /></p>
+        <span style="color:#66d9ef">return</span> maxes[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]
+</code></pre></div><p>Final state:
+<img src="/img/post/dungeon-game-example-final.png" alt="dungeon-game-example-final"></p>
 
   </div>
 

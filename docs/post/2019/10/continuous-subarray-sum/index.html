@@ -32,7 +32,7 @@ Example 1: Input: [23, 2, 4, 6, 7], k=6 Output: True Explanation: Because [2, 4]
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/continuous-subarray-sum/" />
@@ -192,62 +192,49 @@ Example 1: Input: [23, 2, 4, 6, 7], k=6 Output: True Explanation: Because [2, 4]
         <h5>Last updated: October 11, 2019</h5>
       
       <hr />
-      
-
-<p>Given a list of <strong>non-negative</strong> numbers and a target <strong>integer</strong> <code>k</code>, write a function to check if the array has a continuous subarray of size at least 2 that sums up to a multiple of <code>k</code>, that is, sums up to <code>n*k</code> where <code>n</code> is also an <strong>integer</strong>.</p>
-
+      <p>Given a list of <strong>non-negative</strong> numbers and a target <strong>integer</strong> <code>k</code>, write a function to check if the array has a continuous subarray of size at least 2 that sums up to a multiple of <code>k</code>, that is, sums up to <code>n*k</code> where <code>n</code> is also an <strong>integer</strong>.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: [23, 2, 4, 6, 7],  k=6
 Output: True
 Explanation: Because [2, 4] is a continuous subarray of size 2 and sums up to 6.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: [23, 2, 6, 4, 7],  k=6
 Output: True
 Explanation: Because [23, 2, 6, 4, 7] is an continuous subarray of size 5 and sums up to 42.
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li>The length of the array won&rsquo;t exceed <code>10,000</code>.</li>
 <li>You may assume the sum of all the numbers is in the range of a signed <code>32-bit</code> integer.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">checkSubarraySum</span>(self, nums: List[int], k: int) <span style="color:#f92672">-&gt;</span> bool:
+        remainder <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 
-<pre><code class="language-python">class Solution:
-    def checkSubarraySum(self, nums: List[int], k: int) -&gt; bool:
-        remainder = 0
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> nums <span style="color:#f92672">or</span> len(nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> False
 
-        if not nums or len(nums) == 0:
-            return False
+        <span style="color:#75715e"># we init lookup with {0:-1} because we want to disregard the first element if</span>
+        <span style="color:#75715e"># it is a multiple of k</span>
+        lookup <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>: <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>}
+        <span style="color:#66d9ef">for</span> i, num <span style="color:#f92672">in</span> enumerate(nums):
+            remainder <span style="color:#f92672">+=</span> num
+            <span style="color:#75715e"># k=0 is a valid input, but we cannot devide a number with 0</span>
+            <span style="color:#75715e"># that&#39;s why we test k == 0 here</span>
+            <span style="color:#66d9ef">if</span> k:
+                remainder <span style="color:#f92672">%=</span> k
+            <span style="color:#66d9ef">if</span> remainder <span style="color:#f92672">in</span> lookup:
+                <span style="color:#75715e"># if a remainder value exists in lookup, it means we have a subarray whose sum</span>
+                <span style="color:#75715e"># is a multiple of k</span>
+                j <span style="color:#f92672">=</span> lookup[remainder]
+                <span style="color:#75715e"># but if j = i+1, it means that subarray is a single element array</span>
+                <span style="color:#66d9ef">if</span> i <span style="color:#f92672">-</span> j <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
+                    <span style="color:#66d9ef">return</span> True
+            <span style="color:#66d9ef">else</span>:
+                lookup[remainder] <span style="color:#f92672">=</span> i
 
-        # we init lookup with {0:-1} because we want to disregard the first element if
-        # it is a multiple of k
-        lookup = {0: -1}
-        for i, num in enumerate(nums):
-            remainder += num
-            # k=0 is a valid input, but we cannot devide a number with 0
-            # that's why we test k == 0 here
-            if k:
-                remainder %= k
-            if remainder in lookup:
-                # if a remainder value exists in lookup, it means we have a subarray whose sum
-                # is a multiple of k
-                j = lookup[remainder]
-                # but if j = i+1, it means that subarray is a single element array
-                if i - j &gt; 1:
-                    return True
-            else:
-                lookup[remainder] = i
-
-        return False
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
-Note You are not suppose to use the library&amp;rsquo;s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort." />
+Note You are not suppose to use the library&amp;rsquo;s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2] Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort." />
   <meta name="keywords" content="leetcode python " />
   
   
@@ -27,14 +27,14 @@ Note You are not suppose to use the library&amp;rsquo;s sort function for this p
     <meta name="twitter:title" content="Sort Colors" />
     <meta name="twitter:description" content="Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
-Note You are not suppose to use the library&amp;rsquo;s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort." />
+Note You are not suppose to use the library&amp;rsquo;s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2] Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/sort-colors/" />
@@ -192,59 +192,46 @@ Note You are not suppose to use the library&amp;rsquo;s sort function for this p
         <h5>Last updated: November 7, 2018</h5>
       
       <hr />
-      
-
-<p>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.</p>
-
+      <p>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.</p>
 <p>Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.</p>
-
-<h3 id="note-you-are-not-suppose-to-use-the-library-s-sort-function-for-this-problem">Note You are not suppose to use the library&rsquo;s sort function for this problem.</h3>
-
+<h3 id="note-you-are-not-suppose-to-use-the-librarys-sort-function-for-this-problem">Note You are not suppose to use the library&rsquo;s sort function for this problem.</h3>
 <h3 id="example">Example</h3>
-
 <pre><code>Input: [2,0,2,1,1,0]
 Output: [0,0,1,1,2,2]
-</code></pre>
-
-<h3 id="follow-up">Follow-up</h3>
-
+</code></pre><h3 id="follow-up">Follow-up</h3>
 <ol>
 <li>A rather straight forward solution is a two-pass algorithm using counting sort.
 First, iterate the array counting number of 0&rsquo;s, 1&rsquo;s, and 2&rsquo;s, then overwrite array with total number of 0&rsquo;s, then 1&rsquo;s and followed by 2&rsquo;s.</li>
-
-<li><p>Could you come up with a one-pass algorithm using only constant space?</p>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution(object):
-def sortColors(self, nums):
-    &quot;&quot;&quot;
-    :type nums: List[int]
-    :rtype: void Do not return anything, modify nums in-place instead.
-    &quot;&quot;&quot;
-    if len(nums) == 0 and nums == None:
-        return
-
-    def swap(nums, i, j):
-        temp = nums[i]
-        nums[i] = nums[j]
-        nums[j] = temp
-
-    left, index, right = 0, 0, len(nums) - 1
-
-    while index &lt;= right:
-        if nums[index] == 0:
-            swap(nums, index, left)
-            index += 1
-            left += 1
-        elif nums[index] == 1:
-            index += 1
-        else:
-            swap(nums, index, right)
-            right -= 1
-</code></pre></li>
+<li>Could you come up with a one-pass algorithm using only constant space?</li>
 </ol>
+<h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sortColors</span>(self, nums):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :rtype: void Do not return anything, modify nums in-place instead.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> len(nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> nums <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span>
 
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swap</span>(nums, i, j):
+            temp <span style="color:#f92672">=</span> nums[i]
+            nums[i] <span style="color:#f92672">=</span> nums[j]
+            nums[j] <span style="color:#f92672">=</span> temp
+
+        left, index, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, len(nums) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+
+        <span style="color:#66d9ef">while</span> index <span style="color:#f92672">&lt;=</span> right:
+            <span style="color:#66d9ef">if</span> nums[index] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                swap(nums, index, left)
+                index <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">elif</span> nums[index] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+                index <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                swap(nums, index, right)
+                right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

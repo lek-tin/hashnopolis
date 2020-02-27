@@ -17,8 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
-You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
-Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot; Output: 3 Explanation: horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&amp;gt; rose (remove &#39;r&#39;) rose -&amp;gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot; Output: 5 Explanation: intention -&amp;gt; inention (remove &#39;t&#39;) inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&amp;gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1." />
+You have the following 3 operations permitted on a word:
+ Insert a character Delete a character Replace a character  Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot; Output: 3 Explanation: horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&amp;gt; rose (remove &#39;r&#39;) rose -&amp;gt; ros (remove &#39;e&#39;) Example 2: Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot; Output: 5 Explanation: intention -&amp;gt; inention (remove &#39;t&#39;) inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&amp;gt; execution (insert &#39;u&#39;) Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1." />
   <meta name="keywords" content="leetcode dynamic-programming " />
   
   
@@ -26,15 +26,15 @@ Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;q
     
     <meta name="twitter:title" content="Edit Distance" />
     <meta name="twitter:description" content="Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
-You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
-Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot; Output: 3 Explanation: horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&amp;gt; rose (remove &#39;r&#39;) rose -&amp;gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot; Output: 5 Explanation: intention -&amp;gt; inention (remove &#39;t&#39;) inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&amp;gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1." />
+You have the following 3 operations permitted on a word:
+ Insert a character Delete a character Replace a character  Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot; Output: 3 Explanation: horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&amp;gt; rose (remove &#39;r&#39;) rose -&amp;gt; ros (remove &#39;e&#39;) Example 2: Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot; Output: 5 Explanation: intention -&amp;gt; inention (remove &#39;t&#39;) inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&amp;gt; execution (insert &#39;u&#39;) Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/edit-distance/" />
@@ -192,27 +192,21 @@ Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;q
         <h5>Last updated: January 17, 2019</h5>
       
       <hr />
-      
-
-<p>Given two words <em>word1</em> and <em>word2</em>, find the minimum number of operations required to convert <em>word1</em> to <em>word2</em>.</p>
-
-<p>You have the following 3 operations permitted on a word:
-1. Insert a character
-2. Delete a character
-3. Replace a character</p>
-
+      <p>Given two words <em>word1</em> and <em>word2</em>, find the minimum number of operations required to convert <em>word1</em> to <em>word2</em>.</p>
+<p>You have the following 3 operations permitted on a word:</p>
+<ol>
+<li>Insert a character</li>
+<li>Delete a character</li>
+<li>Replace a character</li>
+</ol>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: word1 = &quot;horse&quot;, word2 = &quot;ros&quot;
 Output: 3
 Explanation:
 horse -&gt; rorse (replace 'h' with 'r')
 rorse -&gt; rose (remove 'r')
 rose -&gt; ros (remove 'e')
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: word1 = &quot;intention&quot;, word2 = &quot;execution&quot;
 Output: 5
 Explanation:
@@ -221,43 +215,39 @@ inention -&gt; enention (replace 'i' with 'e')
 enention -&gt; exention (replace 'n' with 'x')
 exention -&gt; exection (replace 'n' with 'c')
 exection -&gt; execution (insert 'u')
-</code></pre>
+</code></pre><h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">minDistance</span><span style="color:#f92672">(</span>String word1<span style="color:#f92672">,</span> String word2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>word1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> word2 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>word1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> word2<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>word2<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> word1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
 
-<h3 id="solution">Solution:</h3>
+        <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> c1 <span style="color:#f92672">=</span> word1<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> c2 <span style="color:#f92672">=</span> word2<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> dp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>c2<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">+</span>1<span style="color:#f92672">][</span>c1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">+</span>1<span style="color:#f92672">];</span>
 
-<pre><code class="language-java">class Solution {
-    public int minDistance(String word1, String word2) {
-        if (word1 == null || word2 == null) return -1;
-        if (word1.length() == 0) return word2.length();
-        if (word2.length() == 0) return word1.length();
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> c1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            dp<span style="color:#f92672">[</span>0<span style="color:#f92672">][</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        char[] c1 = word1.toCharArray();
-        char[] c2 = word2.toCharArray();
-        int[][] dp = new int[c2.length+1][c1.length+1];
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> c2<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        for (int i = 1; i &lt;= c1.length; i++) {
-            dp[0][i] = i;
-        }
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> c2<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> c1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>c1<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> c2<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                    dp<span style="color:#f92672">[</span>i<span style="color:#f92672">+</span>1<span style="color:#f92672">][</span>j<span style="color:#f92672">+</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">];</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    dp<span style="color:#f92672">[</span>i<span style="color:#f92672">+</span>1<span style="color:#f92672">][</span>j<span style="color:#f92672">+</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 1 <span style="color:#f92672">+</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">+</span>1<span style="color:#f92672">],</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">+</span>1<span style="color:#f92672">][</span>j<span style="color:#f92672">]),</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]);</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        for (int i = 1; i &lt;= c2.length; i++) {
-            dp[i][0] = i;
-        }
-
-        for (int i = 0; i &lt; c2.length; i++) {
-            for (int j = 0; j &lt; c1.length; j++) {
-                if (c1[j] == c2[i]) {
-                    dp[i+1][j+1] = dp[i][j];
-                } else {
-                    dp[i+1][j+1] = 1 + Math.min(Math.min(dp[i][j+1], dp[i+1][j]), dp[i][j]);
-                }
-            }
-        }
-
-        return dp[c2.length][c1.length];
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> dp<span style="color:#f92672">[</span>c2<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">][</span>c1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">];</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -19,7 +19,7 @@
   <meta name="description" content="Implement int sqrt(int x).
 Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
 Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
-Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842&amp;hellip;, and since the decimal part is truncated, 2 is returned." />
+Example 1 Input: 4 Output: 2 Example 2 Input: 8 Output: 2 Explanation: The square root of 8 is 2.82842&amp;hellip;, and since the decimal part is truncated, 2 is returned." />
   <meta name="keywords" content="leetcode binary-search " />
   
   
@@ -29,14 +29,14 @@ Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The squ
     <meta name="twitter:description" content="Implement int sqrt(int x).
 Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
 Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
-Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842&amp;hellip;, and since the decimal part is truncated, 2 is returned." />
+Example 1 Input: 4 Output: 2 Example 2 Input: 8 Output: 2 Explanation: The square root of 8 is 2.82842&amp;hellip;, and since the decimal part is truncated, 2 is returned." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/sqrtx/" />
@@ -194,45 +194,31 @@ Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The squ
         <h5>Last updated: September 19, 2019</h5>
       
       <hr />
-      
-
-<p>Implement int <code>sqrt(int x)</code>.</p>
-
+      <p>Implement int <code>sqrt(int x)</code>.</p>
 <p>Compute and return the square root of <code>x</code>, where x is guaranteed to be a <strong>non-negative</strong> integer.</p>
-
 <p>Since the return type is an <em>integer</em>, the decimal digits are truncated and only the integer part of the result is returned.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: 4
 Output: 2
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 8
 Output: 2
-</code></pre>
-
-<p>Explanation: The square root of 8 is 2.82842&hellip;, and since the decimal part is truncated, 2 is returned.</p>
-
+</code></pre><p>Explanation: The square root of 8 is 2.82842&hellip;, and since the decimal part is truncated, 2 is returned.</p>
 <h3 id="solution">Solution</h3>
-
-<pre><code class="language-python"># log(x)
-class Solution:
-    def mySqrt(self, x: int) -&gt; int:
-        left, right = 1, x
-        while left &lt;= right:
-            mid = left + (right-left)//2
-            if mid &gt; x/mid:
-                right = mid - 1
-            else:
-                left = mid + 1
-        # left == right or left &gt; right
-        # since we need to floor the result, we return right
-        return right
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># log(x)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mySqrt</span>(self, x: int) <span style="color:#f92672">-&gt;</span> int:
+        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, x
+        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
+            mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right<span style="color:#f92672">-</span>left)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">if</span> mid <span style="color:#f92672">&gt;</span> x<span style="color:#f92672">/</span>mid:
+                right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#75715e"># left == right or left &gt; right</span>
+        <span style="color:#75715e"># since we need to floor the result, we return right</span>
+        <span style="color:#66d9ef">return</span> right
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

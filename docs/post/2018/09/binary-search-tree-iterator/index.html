@@ -34,7 +34,7 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/binary-search-tree-iterator/" />
@@ -192,53 +192,44 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
         <h5>Last updated: September 9, 2018</h5>
       
       <hr />
-      
-
-<p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.</p>
-
+      <p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.</p>
 <p>Calling <code>next()</code> will return the next smallest number in the BST.</p>
-
-<h3 id="note-next-and-hasnext-should-run-in-average-o-1-time-and-uses-o-h-memory-where-h-is-the-height-of-the-tree">Note: <code>next()</code> and <code>hasNext()</code> should run in average <code>O(1)</code> time and uses <code>O(h)</code> memory, where h is the height of the tree.</h3>
-
+<h3 id="note-next-and-hasnext-should-run-in-average-o1-time-and-uses-oh-memory-where-h-is-the-height-of-the-tree">Note: <code>next()</code> and <code>hasNext()</code> should run in average <code>O(1)</code> time and uses <code>O(h)</code> memory, where h is the height of the tree.</h3>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node</span>
+<span style="color:#75715e"># class TreeNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<pre><code class="language-python"># Definition for a binary tree node
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BSTIterator</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self, root):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type root: TreeNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>stack <span style="color:#f92672">=</span> []
+        self<span style="color:#f92672">.</span>build(root)
+        <span style="color:#66d9ef">print</span>(self<span style="color:#f92672">.</span>stack)
 
-class BSTIterator(object):
-    def __init__(self, root):
-        &quot;&quot;&quot;
-        :type root: TreeNode
-        &quot;&quot;&quot;
-        self.stack = []
-        self.build(root)
-        print(self.stack)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build</span>(self, root):
+        <span style="color:#66d9ef">while</span> root:
+            self<span style="color:#f92672">.</span>stack<span style="color:#f92672">.</span>append(root)
+            root <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span>left
 
-    def build(self, root):
-        while root:
-            self.stack.append(root)
-            root = root.left
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hasNext</span>(self):
+        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>stack) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>
 
-    def hasNext(self):
-        return len(self.stack) &gt; 0
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">next</span>(self):
+        node <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>stack<span style="color:#f92672">.</span>pop()
+        <span style="color:#66d9ef">if</span> node<span style="color:#f92672">.</span>right:
+            self<span style="color:#f92672">.</span>build(node<span style="color:#f92672">.</span>right)
+        <span style="color:#66d9ef">return</span> node<span style="color:#f92672">.</span>val
 
-    def next(self):
-        node = self.stack.pop()
-        if node.right:
-            self.build(node.right)
-        return node.val
-
-# Your BSTIterator will be called like this:
-# i, v = BSTIterator(root), []
-# while i.hasNext(): v.append(i.next())
-</code></pre>
-
-<h3 id="explanation">Explanation</h3>
-
+<span style="color:#75715e"># Your BSTIterator will be called like this:</span>
+<span style="color:#75715e"># i, v = BSTIterator(root), []</span>
+<span style="color:#75715e"># while i.hasNext(): v.append(i.next())</span>
+</code></pre></div><h3 id="explanation">Explanation</h3>
 <p>left &lt; root &lt; right, if there is no right subtree, the next element is the stack top.</p>
 
   </div>

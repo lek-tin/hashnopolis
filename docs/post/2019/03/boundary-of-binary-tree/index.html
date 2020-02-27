@@ -32,7 +32,7 @@ Left boundary is defined as the path from root to the left-most node. Right boun
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/boundary-of-binary-tree/" />
@@ -192,18 +192,11 @@ Left boundary is defined as the path from root to the left-most node. Right boun
         <h5>Last updated: March 10, 2019</h5>
       
       <hr />
-      
-
-<p>Given a binary tree, return the values of its boundary in <strong>anti-clockwise</strong> direction starting from root. Boundary includes <strong>left boundary</strong>, leaves, and right boundary in order without duplicate nodes.</p>
-
+      <p>Given a binary tree, return the values of its boundary in <strong>anti-clockwise</strong> direction starting from root. Boundary includes <strong>left boundary</strong>, leaves, and right boundary in order without duplicate nodes.</p>
 <p><strong>Left boundary</strong> is defined as the path from root to the <strong>left-most</strong> node. Right boundary is defined as the path from root to the <strong>right-most</strong> node. If the root doesn&rsquo;t have left subtree or right subtree, then the root itself is <strong>left boundary</strong> or right boundary. Note this definition only applies to the input binary tree, and not applies to any subtrees.</p>
-
 <p>The <strong>left-most</strong> node is defined as a leaf node you could reach when you always firstly travel to the left subtree if exists. If not, travel to the right subtree. Repeat until you reach a leaf node.</p>
-
 <p>The <strong>right-most</strong> node is also defined by the same way with left and right exchanged.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input:
   1
    \
@@ -218,10 +211,7 @@ The root doesn't have left subtree, so the root itself is left boundary.
 The leaves are node 3 and 4.
 The right boundary are node 1,2,4. Note the anti-clockwise direction means you should output reversed right boundary.
 So order them in anti-clockwise without duplicates and we have [1,3,4,2].
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input:
     ____1_____
    /          \
@@ -238,71 +228,66 @@ The left boundary are node 1,2,4. (4 is the left-most node according to definiti
 The leaves are node 4,7,8,9,10.
 The right boundary are node 1,3,6,10. (10 is the right-most node).
 So order them in anti-clockwise without duplicate nodes we have [1,2,4,7,8,9,10,6,3].
-</code></pre>
+</code></pre><h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List <span style="color:#f92672">&lt;</span> Integer <span style="color:#f92672">&gt;</span> boundaryOfBinaryTree<span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
 
-<h3 id="solution">Solution:</h3>
+        result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+        leftBoundary<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+        leafBoundary<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+        leafBoundary<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+        rightBoundary<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
-    public List &lt; Integer &gt; boundaryOfBinaryTree(TreeNode root) {
-        List&lt;Integer&gt; result = new ArrayList&lt;&gt;();
-        if(root == null) return result;
+        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-        result.add(root.val);
-        leftBoundary(root.left, result);
-        leafBoundary(root.left, result);
-        leafBoundary(root.right, result);
-        rightBoundary(root.right, result);
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">leftBoundary</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">// top -&gt; down
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// Add current node fisrt
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">!=</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">!=</span><span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+            result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// still on outer left boundary
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+            leftBoundary<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// Finally try inner node
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">else</span>
+            leftBoundary<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-        return result;
-    }
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">rightBoundary</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result<span style="color:#f92672">){</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">// bottom -&gt; up
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// Still on outer right boundary
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+            rightBoundary<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">else</span>
+            rightBoundary<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-    private void leftBoundary(TreeNode node, List&lt;Integer&gt; result) {
-        if(node == null) return;
-        // top -&gt; down
-        // Add current node fisrt
-        if(node.left!=null || node.right!=null)
-            result.add(node.val);
-        // still on outer left boundary
-        if(node.left != null)
-            leftBoundary(node.left, result);
-        // Finally try inner node
-        else
-            leftBoundary(node.right, result);
-    }
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">leafBoundary</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> result<span style="color:#f92672">){</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">// add current leave
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// keep searching leaves
+</span><span style="color:#75715e"></span>        leafBoundary<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+        leafBoundary<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> result<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-    private void rightBoundary(TreeNode node, List&lt;Integer&gt; result){
-        if(node == null) return;
-        // bottom -&gt; up
-        // Still on outer right boundary
-        if(node.right != null)
-            rightBoundary(node.right, result);
-        else
-            rightBoundary(node.left, result);
-        if(node.left != null || node.right != null) result.add(node.val);
-    }
-
-    private void leafBoundary(TreeNode node, List&lt;Integer&gt; result){
-        if(node == null) return;
-        // add current leave
-        if(node.left == null &amp;&amp; node.right == null) result.add(node.val);
-        // keep searching leaves
-        leafBoundary(node.left, result);
-        leafBoundary(node.right, result);
-    }
-
-}
-</code></pre>
-
-<p><strong>hint:</strong> <a href="https://leetcode.com/problems/boundary-of-binary-tree/solution/">https://leetcode.com/problems/boundary-of-binary-tree/solution/</a></p>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>hint:</strong> <a href="https://leetcode.com/problems/boundary-of-binary-tree/solution/">https://leetcode.com/problems/boundary-of-binary-tree/solution/</a></p>
 
   </div>
 

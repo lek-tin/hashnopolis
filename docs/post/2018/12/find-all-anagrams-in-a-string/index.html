@@ -16,7 +16,7 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given a string s and a non-empty string p, find all the start indices of p&amp;rsquo;s anagrams in s.
+  <meta name="description" content="Given a string s and a non-empty string p, find all the start indices of p&#39;s anagrams in s.
 Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
 The order of output does not matter.
 Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Output: [0, 6] Explanation: The substring with start index = 0 is &amp;quot;cba&amp;quot;, which is an anagram of &amp;quot;abc&amp;quot;." />
@@ -26,7 +26,7 @@ Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Ou
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Find All Anagrams in a String" />
-    <meta name="twitter:description" content="Given a string s and a non-empty string p, find all the start indices of p&amp;rsquo;s anagrams in s.
+    <meta name="twitter:description" content="Given a string s and a non-empty string p, find all the start indices of p&#39;s anagrams in s.
 Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
 The order of output does not matter.
 Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Output: [0, 6] Explanation: The substring with start index = 0 is &amp;quot;cba&amp;quot;, which is an anagram of &amp;quot;abc&amp;quot;." />
@@ -36,7 +36,7 @@ Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Ou
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/12/find-all-anagrams-in-a-string/" />
@@ -196,16 +196,10 @@ Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Ou
         <h5>Last updated: October 12, 2019</h5>
       
       <hr />
-      
-
-<p>Given a string <code>s</code> and a <strong>non-empty</strong> string <code>p</code>, find all the start indices of <code>p</code>&rsquo;s anagrams in <code>s</code>.</p>
-
+      <p>Given a string <code>s</code> and a <strong>non-empty</strong> string <code>p</code>, find all the start indices of <code>p</code>'s anagrams in <code>s</code>.</p>
 <p>Strings consists of lowercase English letters only and the length of both strings <code>s</code> and <code>p</code> will not be larger than 20,100.</p>
-
 <p>The order of output does not matter.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input:
 s: &quot;cbaebabacd&quot; p: &quot;abc&quot;
 
@@ -215,10 +209,7 @@ Output:
 Explanation:
 The substring with start index = 0 is &quot;cba&quot;, which is an anagram of &quot;abc&quot;.
 The substring with start index = 6 is &quot;bac&quot;, which is an anagram of &quot;abc&quot;.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input:
 s: &quot;abab&quot; p: &quot;ab&quot;
 
@@ -229,37 +220,32 @@ Explanation:
 The substring with start index = 0 is &quot;ab&quot;, which is an anagram of &quot;ab&quot;.
 The substring with start index = 1 is &quot;ba&quot;, which is an anagram of &quot;ab&quot;.
 The substring with start index = 2 is &quot;ab&quot;, which is an anagram of &quot;ab&quot;.
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
+</code></pre><h3 id="solution">Solution</h3>
 <p>Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
 
-<pre><code class="language-python">from collections import Counter
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findAnagrams</span>(self, s: str, target: str) <span style="color:#f92672">-&gt;</span> List[int]:
+        res <span style="color:#f92672">=</span> []
+        counter_target <span style="color:#f92672">=</span> Counter(target)
+        counter_cur <span style="color:#f92672">=</span> Counter(s[:len(target)])
 
-class Solution:
-    def findAnagrams(self, s: str, target: str) -&gt; List[int]:
-        res = []
-        counter_target = Counter(target)
-        counter_cur = Counter(s[:len(target)])
+        <span style="color:#66d9ef">if</span> counter_cur <span style="color:#f92672">==</span> counter_target:
+            res<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)
 
-        if counter_cur == counter_target:
-            res.append(0)
+        <span style="color:#66d9ef">for</span> id <span style="color:#f92672">in</span> range(len(target), len(s)):
+            startChar <span style="color:#f92672">=</span> s[id <span style="color:#f92672">-</span> len(target)]
+            endChar <span style="color:#f92672">=</span> s[id]
+            counter_cur[endChar] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            counter_cur[startChar] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> counter_cur[startChar] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#66d9ef">del</span> counter_cur[startChar]  <span style="color:#75715e"># required for comparison</span>
+            <span style="color:#66d9ef">if</span> counter_cur <span style="color:#f92672">==</span> counter_target:
+                <span style="color:#75715e"># id is the ending index, find the starting</span>
+                res<span style="color:#f92672">.</span>append(id <span style="color:#f92672">-</span> len(target) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
 
-        for id in range(len(target), len(s)):
-            startChar = s[id - len(target)]
-            endChar = s[id]
-            counter_cur[endChar] += 1
-            counter_cur[startChar] -= 1
-            if counter_cur[startChar] == 0:
-                del counter_cur[startChar]  # required for comparison
-            if counter_cur == counter_target:
-                # id is the ending index, find the starting
-                res.append(id - len(target) + 1)
-
-        return res
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

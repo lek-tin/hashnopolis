@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 For example:
- 1 -&amp;gt; A 2 -&amp;gt; B 3 -&amp;gt; C ... 26 -&amp;gt; Z 27 -&amp;gt; AA 28 -&amp;gt; AB ...  Example 1 Input: 1 Output: &amp;quot;A&amp;quot;  Example 2 Input: 28 Output: &amp;quot;AB&amp;quot;  Example 3 Input: 701 Output: &amp;quot;ZY&amp;quot;  Solution class Solution: def convertToTitle(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: str &amp;quot;&amp;quot;&amp;quot; digit = 1 res = &amp;quot;&amp;quot; while n &amp;gt; 0: # Because we start from A." />
+ 1 -&amp;gt; A 2 -&amp;gt; B 3 -&amp;gt; C ... 26 -&amp;gt; Z 27 -&amp;gt; AA 28 -&amp;gt; AB ... Example 1 Input: 1 Output: &amp;quot;A&amp;quot; Example 2 Input: 28 Output: &amp;quot;AB&amp;quot; Example 3 Input: 701 Output: &amp;quot;ZY&amp;quot; Solution class Solution: def convertToTitle(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: str &amp;#34;&amp;#34;&amp;#34; digit = 1 res = &amp;#34;&amp;#34; while n &amp;gt; 0: # Because we start from A." />
   <meta name="keywords" content="leetcode modulus " />
   
   
@@ -27,14 +27,14 @@ For example:
     <meta name="twitter:title" content="Excel Sheet Column Title" />
     <meta name="twitter:description" content="Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 For example:
- 1 -&amp;gt; A 2 -&amp;gt; B 3 -&amp;gt; C ... 26 -&amp;gt; Z 27 -&amp;gt; AA 28 -&amp;gt; AB ...  Example 1 Input: 1 Output: &amp;quot;A&amp;quot;  Example 2 Input: 28 Output: &amp;quot;AB&amp;quot;  Example 3 Input: 701 Output: &amp;quot;ZY&amp;quot;  Solution class Solution: def convertToTitle(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: str &amp;quot;&amp;quot;&amp;quot; digit = 1 res = &amp;quot;&amp;quot; while n &amp;gt; 0: # Because we start from A." />
+ 1 -&amp;gt; A 2 -&amp;gt; B 3 -&amp;gt; C ... 26 -&amp;gt; Z 27 -&amp;gt; AA 28 -&amp;gt; AB ... Example 1 Input: 1 Output: &amp;quot;A&amp;quot; Example 2 Input: 28 Output: &amp;quot;AB&amp;quot; Example 3 Input: 701 Output: &amp;quot;ZY&amp;quot; Solution class Solution: def convertToTitle(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: str &amp;#34;&amp;#34;&amp;#34; digit = 1 res = &amp;#34;&amp;#34; while n &amp;gt; 0: # Because we start from A." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/excel-sheet-column-title/" />
@@ -192,12 +192,8 @@ For example:
         <h5>Last updated: November 8, 2018</h5>
       
       <hr />
-      
-
-<p>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</p>
-
+      <p>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</p>
 <p>For example:</p>
-
 <pre><code>    1 -&gt; A
     2 -&gt; B
     3 -&gt; C
@@ -206,44 +202,31 @@ For example:
     27 -&gt; AA
     28 -&gt; AB
     ...
-</code></pre>
-
-<h3 id="example-1">Example 1</h3>
-
+</code></pre><h3 id="example-1">Example 1</h3>
 <pre><code>Input: 1
 Output: &quot;A&quot;
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 28
 Output: &quot;AB&quot;
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: 701
 Output: &quot;ZY&quot;
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution:
-    def convertToTitle(self, n):
-        &quot;&quot;&quot;
-        :type n: int
-        :rtype: str
-        &quot;&quot;&quot;
-        digit = 1
-        res = &quot;&quot;
-        while n &gt; 0:
-            # Because we start from A. We minus n by 1 to offer the index.
-            n -= 1
-            res = chr(ord(&quot;A&quot;) + n % 26) + res
-            n //= 26
-        return res
-</code></pre>
-
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">convertToTitle</span>(self, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        digit <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+        <span style="color:#66d9ef">while</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#75715e"># Because we start from A. We minus n by 1 to offer the index.</span>
+            n <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            res <span style="color:#f92672">=</span> chr(ord(<span style="color:#e6db74">&#34;A&#34;</span>) <span style="color:#f92672">+</span> n <span style="color:#f92672">%</span> <span style="color:#ae81ff">26</span>) <span style="color:#f92672">+</span> res
+            n <span style="color:#f92672">//=</span> <span style="color:#ae81ff">26</span>
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -34,7 +34,7 @@ We want to transform this BST into a circular doubly linked list. Each node in a
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/12/convert-binary-search-tree-to-sorted-doubly-linked-list/" />
@@ -194,74 +194,60 @@ We want to transform this BST into a circular doubly linked list. Each node in a
         <h5>Last updated: October 12, 2019</h5>
       
       <hr />
-      
-
-<p>Convert a BST to a sorted circular doubly-linked list in-place. Think of the left and right pointers as synonymous to the previous and next pointers in a doubly-linked list.</p>
-
+      <p>Convert a BST to a sorted circular doubly-linked list in-place. Think of the left and right pointers as synonymous to the previous and next pointers in a doubly-linked list.</p>
 <p>Let&rsquo;s take the following BST as an example, it may help you understand the problem better:</p>
-
-<p><img src="/img/post/binary-search-tree.png" alt="binary-search-tree" /></p>
-
+<p><img src="/img/post/binary-search-tree.png" alt="binary-search-tree"></p>
 <p>We want to transform this BST into a circular doubly linked list. Each node in a doubly linked list has a predecessor and successor. For a circular doubly linked list, the predecessor of the first element is the last element, and the successor of the last element is the first element.</p>
-
 <p>The figure below shows the circular doubly linked list for the BST above. The &ldquo;head&rdquo; symbol means the node it points to is the smallest element of the linked list.</p>
-
-<p><img src="/img/post/converted-double-linked-list.png" alt="converted-double-linked-list" /></p>
-
+<p><img src="/img/post/converted-double-linked-list.png" alt="converted-double-linked-list"></p>
 <p>Specifically, we want to do the transformation in place. After the transformation, the left pointer of the tree node should point to its predecessor, and the right pointer should point to its successor. We should return the pointer to the first element of the linked list.</p>
-
 <p>The figure below shows the transformed BST. The solid line indicates the successor relationship, while the dashed line means the predecessor relationship.</p>
-
-<p><img src="/img/post/double-linked-list.png" alt="double-linked-list" /></p>
-
+<p><img src="/img/post/double-linked-list.png" alt="double-linked-list"></p>
 <h3 id="solution">Solution</h3>
-
 <p>python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"># Definition for a Node.
+</span><span style="color:#e6db74">class Node:
+</span><span style="color:#e6db74">    def __init__(self, val, left, right):
+</span><span style="color:#e6db74">        self.val = val
+</span><span style="color:#e6db74">        self.left = left
+</span><span style="color:#e6db74">        self.right = right
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">treeToDoublyList</span>(self, root: <span style="color:#e6db74">&#39;Node&#39;</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#39;Node&#39;</span>:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> None
+        head, end <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>convert(root)
+        head<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> end
+        end<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> head
+        <span style="color:#66d9ef">print</span>(head<span style="color:#f92672">.</span>val)
+        <span style="color:#66d9ef">return</span> head
 
-<pre><code class="language-python">&quot;&quot;&quot;
-# Definition for a Node.
-class Node:
-    def __init__(self, val, left, right):
-        self.val = val
-        self.left = left
-        self.right = right
-&quot;&quot;&quot;
-class Solution:
-    def treeToDoublyList(self, root: 'Node') -&gt; 'Node':
-        if not root:
-            return None
-        head, end = self.convert(root)
-        head.left = end
-        end.right = head
-        print(head.val)
-        return head
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">convert</span>(self, root):
+        pair <span style="color:#f92672">=</span> [None, None]
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> pair
 
-    def convert(self, root):
-        pair = [None, None]
-        if not root:
-            return pair
+        leftHead, leftTail <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>convert(root<span style="color:#f92672">.</span>left)
+        root<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> leftTail
+        <span style="color:#66d9ef">if</span> leftTail:
+            leftTail<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> root
+        <span style="color:#66d9ef">if</span> leftHead:
+            pair[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> leftHead
+        <span style="color:#66d9ef">else</span>:
+            pair[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> root
 
-        leftHead, leftTail = self.convert(root.left)
-        root.left = leftTail
-        if leftTail:
-            leftTail.right = root
-        if leftHead:
-            pair[0] = leftHead
-        else:
-            pair[0] = root
+        rightHead, rightTail <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>convert(root<span style="color:#f92672">.</span>right)
+        root<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> rightHead
+        <span style="color:#66d9ef">if</span> rightHead:
+            rightHead<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> root
+        <span style="color:#66d9ef">if</span> rightTail:
+            pair[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> rightTail
+        <span style="color:#66d9ef">else</span>:
+            pair[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> root
 
-        rightHead, rightTail = self.convert(root.right)
-        root.right = rightHead
-        if rightHead:
-            rightHead.left = root
-        if rightTail:
-            pair[1] = rightTail
-        else:
-            pair[1] = root
-
-        return pair
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> pair
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -34,7 +34,7 @@ Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]" />
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/lowest-common-ancestor-of-a-binary-search-tree/" />
@@ -196,14 +196,9 @@ Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]" />
         <h5>Last updated: November 1, 2018</h5>
       
       <hr />
-      
-
-<p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</p>
-
+      <p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</p>
 <p>According to <a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor">the definition of LCA</a> on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow <strong>a node to be a descendant of itself</strong>).”</p>
-
 <p>Given binary search tree:  root = [6,2,8,0,4,7,9,null,null,3,5]</p>
-
 <pre><code>        _______6______
        /              \
     ___2__          ___8__
@@ -211,100 +206,69 @@ Given binary search tree: root = [6,2,8,0,4,7,9,null,null,3,5]" />
    0      _4       7       9
          /  \
          3   5
-</code></pre>
-
-<h3 id="example-1">Example 1</h3>
-
+</code></pre><h3 id="example-1">Example 1</h3>
 <pre><code>Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
 Output: 6
 Explanation: The LCA of nodes 2 and 8 is 6.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
 Output: 2
 Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself 
              according to the LCA definition.
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <ul>
 <li>All of the nodes&rsquo; values will be unique.</li>
-
-<li><p>p and q are different and both values will exist in the BST.</p>
-
-<h3 id="solution">Solution</h3>
-
-<p>```python</p>
-
-<h1 id="definition-for-a-binary-tree-node">Definition for a binary tree node.</h1>
-
-<h1 id="class-treenode-object">class TreeNode(object):</h1>
-
-<h1 id="def-init-self-x">def <strong>init</strong>(self, x):</h1>
-
-<h1 id="self-val-x">self.val = x</h1>
-
-<h1 id="self-left-none">self.left = None</h1>
-
-<h1 id="self-right-none">self.right = None</h1></li>
+<li>p and q are different and both values will exist in the BST.</li>
 </ul>
+<h3 id="solution">Solution</h3>
+<p>Recursion
+Time complexity: <code>O(n)</code><br>
+Space complexity: <code>O(n)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<p>class Solution(object):
-    def lowestCommonAncestor(self, root, p, q):
-        &ldquo;&rdquo;&rdquo;
-        :type root: TreeNode
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: TreeNode
-        &ldquo;&rdquo;&rdquo;
-        # Edge/Condition
-        if not root:
-            return None
-        if root == p or root == q:
-            return root</p>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lowestCommonAncestor</span>(self, root: <span style="color:#e6db74">&#39;TreeNode&#39;</span>, p: <span style="color:#e6db74">&#39;TreeNode&#39;</span>, q: <span style="color:#e6db74">&#39;TreeNode&#39;</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#39;TreeNode&#39;</span>:
+        parentVal <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span>val
+        pVal, qVal <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span>val, q<span style="color:#f92672">.</span>val
 
-<pre><code>    # Divide
-    left = self.lowestCommonAncestor(root.left, p, q)
-    right = self.lowestCommonAncestor(root.right, p, q)
+        <span style="color:#66d9ef">if</span> pVal <span style="color:#f92672">&gt;</span> parentVal <span style="color:#f92672">and</span> qVal <span style="color:#f92672">&gt;</span> parentVal:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>lowestCommonAncestor(root<span style="color:#f92672">.</span>right, p, q)
+        <span style="color:#66d9ef">elif</span> pVal <span style="color:#f92672">&lt;</span> parentVal <span style="color:#f92672">and</span> qVal <span style="color:#f92672">&lt;</span> parentVal:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>lowestCommonAncestor(root<span style="color:#f92672">.</span>left, p, q)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> root
+</code></pre></div><p>DFS using stack
+Time complexity: <code>O(n)</code><br>
+Space complexity: <code>O(n)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-    # Conquer
-    if left and right:
-        return root
-    if not left:
-        return right
-    if not right:
-        return left
-</code></pre>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lowestCommonAncestor</span>(self, root: <span style="color:#e6db74">&#39;TreeNode&#39;</span>, p: <span style="color:#e6db74">&#39;TreeNode&#39;</span>, q: <span style="color:#e6db74">&#39;TreeNode&#39;</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#39;TreeNode&#39;</span>:
+        pVal, qVal <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span>val, q<span style="color:#f92672">.</span>val
 
-<pre><code>```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        // base condition
-        if (root == null) return null;
+        stack <span style="color:#f92672">=</span> [root]
 
-        if (root.val &lt; Math.min(p.val, q.val)) {
-            return lowestCommonAncestor(root.right, p, q);
-        } else if (root.val &gt; Math.max(p.val, q.val)) {
-            return lowestCommonAncestor(root.left, p, q);
-        } else {
-            return root;
-        }
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">while</span> stack:
+            node <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span>pop()
+            <span style="color:#66d9ef">if</span> node:
+                parentVal <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span>val
+                <span style="color:#66d9ef">if</span> pVal <span style="color:#f92672">&gt;</span> parentVal <span style="color:#f92672">and</span> qVal <span style="color:#f92672">&gt;</span> parentVal:
+                    stack<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>right)
+                <span style="color:#66d9ef">elif</span> pVal <span style="color:#f92672">&lt;</span> parentVal <span style="color:#f92672">and</span> qVal <span style="color:#f92672">&lt;</span> parentVal:
+                    stack<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>left)
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#66d9ef">return</span> node
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

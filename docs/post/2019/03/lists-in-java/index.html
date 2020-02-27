@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content=" List interface: The List interface specifies two remove methods:
-List&amp;lt;Integer&amp;gt; list = new List&amp;lt;&amp;gt;(); // Remove the element at index 4 remove(int index): list.remove(4); // Remove the first occurrence of the object 4 remove(Object o): list.remove(new Integer(4));  Linked List:    Pros Cons     Can insert or remove anywhere in the list without shifting elements Not sortable   Insert: O(1) Elements are not stored in contiguous memory addresses   Remove: O(1) Find: O(n), as must traverse to find an element    " />
+  <meta name="description" content="List interface: The List interface specifies two remove methods:
+List&amp;lt;Integer&amp;gt; list = new List&amp;lt;&amp;gt;(); // Remove the element at index 4 remove(int index): list.remove(4); // Remove the first occurrence of the object 4 remove(Object o): list.remove(new Integer(4)); Linked List:    Pros Cons     Can insert or remove anywhere in the list without shifting elements Not sortable   Insert: O(1) Elements are not stored in contiguous memory addresses   Remove: O(1) Find: O(n), as must traverse to find an element    " />
   <meta name="keywords" content="list " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Lists in Java" />
-    <meta name="twitter:description" content=" List interface: The List interface specifies two remove methods:
-List&amp;lt;Integer&amp;gt; list = new List&amp;lt;&amp;gt;(); // Remove the element at index 4 remove(int index): list.remove(4); // Remove the first occurrence of the object 4 remove(Object o): list.remove(new Integer(4));  Linked List:    Pros Cons     Can insert or remove anywhere in the list without shifting elements Not sortable   Insert: O(1) Elements are not stored in contiguous memory addresses   Remove: O(1) Find: O(n), as must traverse to find an element    " />
+    <meta name="twitter:description" content="List interface: The List interface specifies two remove methods:
+List&amp;lt;Integer&amp;gt; list = new List&amp;lt;&amp;gt;(); // Remove the element at index 4 remove(int index): list.remove(4); // Remove the first occurrence of the object 4 remove(Object o): list.remove(new Integer(4)); Linked List:    Pros Cons     Can insert or remove anywhere in the list without shifting elements Not sortable   Insert: O(1) Elements are not stored in contiguous memory addresses   Remove: O(1) Find: O(n), as must traverse to find an element    " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/lists-in-java/" />
@@ -188,21 +188,14 @@ List&amp;lt;Integer&amp;gt; list = new List&amp;lt;&amp;gt;(); // Remove the ele
         <h5>Last updated: March 27, 2019</h5>
       
       <hr />
-      
-
-<h3 id="list-interface">List interface:</h3>
-
+      <h3 id="list-interface">List interface:</h3>
 <p>The List interface specifies two remove methods:</p>
-
-<pre><code class="language-java">List&lt;Integer&gt; list = new List&lt;&gt;();
-// Remove the element at index 4
-remove(int index): list.remove(4);
-// Remove the first occurrence of the object 4
-remove(Object o): list.remove(new Integer(4));
-</code></pre>
-
-<h3 id="linked-list">Linked List:</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> List<span style="color:#f92672">&lt;&gt;();</span>
+<span style="color:#75715e">// Remove the element at index 4
+</span><span style="color:#75715e"></span>remove<span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">):</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>4<span style="color:#f92672">);</span>
+<span style="color:#75715e">// Remove the first occurrence of the object 4
+</span><span style="color:#75715e"></span>remove<span style="color:#f92672">(</span>Object o<span style="color:#f92672">):</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">(</span>4<span style="color:#f92672">));</span>
+</code></pre></div><h3 id="linked-list">Linked List:</h3>
 <table>
 <thead>
 <tr>
@@ -210,21 +203,18 @@ remove(Object o): list.remove(new Integer(4));
 <th>Cons</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Can insert or remove anywhere in the list without shifting elements</td>
 <td>Not sortable</td>
 </tr>
-
 <tr>
 <td>Insert: O(1)</td>
 <td>Elements are not stored in contiguous memory addresses</td>
 </tr>
-
 <tr>
 <td>Remove: O(1)</td>
-<td>Find: O(n), as must traverse to find an element</td>
+<td>Find: <code>O(n)</code>, as must traverse to find an element</td>
 </tr>
 </tbody>
 </table>

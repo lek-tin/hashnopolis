@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It&amp;rsquo;s guaranteed that there is only one subtree with maximum average.
 Example Given a binary tree:
- 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11.  Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this." />
+ 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11. Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this.sum = sum; this." />
   <meta name="keywords" content="leetcode binary-tree subtree " />
   
   
@@ -27,14 +27,14 @@ Example Given a binary tree:
     <meta name="twitter:title" content="Subtree With Maximum Average" />
     <meta name="twitter:description" content="Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It&amp;rsquo;s guaranteed that there is only one subtree with maximum average.
 Example Given a binary tree:
- 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11.  Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this." />
+ 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11. Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this.sum = sum; this." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/" />
@@ -194,14 +194,9 @@ Example Given a binary tree:
         <h5>Last updated: March 27, 2019</h5>
       
       <hr />
-      
-
-<p>Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It&rsquo;s guaranteed that there is only one subtree with maximum average.</p>
-
+      <p>Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It&rsquo;s guaranteed that there is only one subtree with maximum average.</p>
 <h3 id="example">Example</h3>
-
 <p>Given a binary tree:</p>
-
 <pre><code>        1
     /      \
   -5       11
@@ -209,57 +204,53 @@ Example Given a binary tree:
 1    2   4   -2
 
 return the node 11.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ResultType</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> sum<span style="color:#f92672">,</span> size<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ResultType</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> sum<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> size<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> sum<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span> <span style="color:#f92672">=</span> size<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
 
-<h3 id="solution">Solution</h3>
+    <span style="color:#66d9ef">private</span> TreeNode subtree <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> ResultType subtreeResult <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 
-<pre><code class="language-java">public class Solution {
-    private class ResultType {
-        public int sum, size;
-        public ResultType(int sum, int size) {
-            this.sum = sum;
-            this.size = size;
-        }
-    }
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * @param root the root of binary tree
+</span><span style="color:#75715e">     * @return the root of the maximum average of subtree
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> TreeNode <span style="color:#a6e22e">findSubtree</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        helper<span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> subtree<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    private TreeNode subtree = null;
-    private ResultType subtreeResult = null;
-
-    /**
-     * @param root the root of binary tree
-     * @return the root of the maximum average of subtree
-     */
-    public TreeNode findSubtree(TreeNode root) {
-        helper(root);
-        return subtree;
-    }
-
-    private ResultType helper(TreeNode root) {
-        if (root == null) {
-            return new ResultType(0, 0);
-        }
-        // Divide and conquer
-        ResultType left = helper(root.left);
-        ResultType right = helper(root.right);
-        // construct the result using left subtree, current node and right subtree.
-        ResultType result = new ResultType(
-            left.sum + right.sum + root.val,
-            left.size + right.size + 1
-        );
-        // Compare every substree's median with subtreeResult
-        if (subtree == null ||
-            (subtreeResult.sum / subtreeResult.size) &lt; (result.sum / result.size)
-        ) {
-            subtree = root;
-            subtreeResult = result;
-        }
-        // Return current result, rather than subtreeResult, because subtreeResult is global
-        // subtreeResult is returned in the main function findSubtree
-        return result;
-    }
-}
-</code></pre>
-
+    <span style="color:#66d9ef">private</span> ResultType <span style="color:#a6e22e">helper</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ResultType<span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// Divide and conquer
+</span><span style="color:#75715e"></span>        ResultType left <span style="color:#f92672">=</span> helper<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+        ResultType right <span style="color:#f92672">=</span> helper<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// construct the result using left subtree, current node and right subtree.
+</span><span style="color:#75715e"></span>        ResultType result <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ResultType<span style="color:#f92672">(</span>
+            left<span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> right<span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">,</span>
+            left<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span> <span style="color:#f92672">+</span> right<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span> <span style="color:#f92672">+</span> 1
+        <span style="color:#f92672">);</span>
+        <span style="color:#75715e">// Compare every substree&#39;s median with subtreeResult
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>subtree <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span>
+            <span style="color:#f92672">(</span>subtreeResult<span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span> <span style="color:#f92672">/</span> subtreeResult<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> <span style="color:#f92672">(</span>result<span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span> <span style="color:#f92672">/</span> result<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            subtree <span style="color:#f92672">=</span> root<span style="color:#f92672">;</span>
+            subtreeResult <span style="color:#f92672">=</span> result<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// Return current result, rather than subtreeResult, because subtreeResult is global
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// subtreeResult is returned in the main function findSubtree
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

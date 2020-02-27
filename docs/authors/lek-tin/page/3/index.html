@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
@@ -176,38 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/kth-smallest-element-in-a-sorted-matrix/">Kth Smallest Element in a Sorted Matrix</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/11/word-ladder-ii/">Word Ladder Ii</a></h2>
 
-      <p>Given a n x n matrix where each of the rows and columns are sorted in ascending order, find the kth smallest element in the matrix.
-Note that it is the kth smallest element in the sorted order, not the kth distinct element.
-Example: matrix = [ [ 1, 5, 9], [10, 11, 13], [12, 13, 15] ], k = 8, return 13.  Note:  You may assume k is always valid, 1 ≤ k ≤ n2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/subtree-of-another-tree/">Subtree of Another Tree</a></h2>
-
-      <p>Given two non-empty binary trees s and t, check whether tree t has exactly the same structure and node values with a subtree of s. A subtree of s is a tree consists of a node in s and all of this node’s descendants. The tree s could also be considered as a subtree of itself.
-Example 1: Given tree s:
- 3 / \ 4 5 / \ 1 2  Given tree t:</p>
+      <p>Given two words (beginWord and endWord), and a dictionary’s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
+ Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</p>
 
       <p class="meta">
         
@@ -230,10 +202,11 @@ Example 1: Given tree s:
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/campus-bikes/">Campus Bikes</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/">Longest Valid Parentheses</a></h2>
 
-      <p>On a campus represented as a 2D grid, there are N workers and M bikes, with N &lt;= M. Each worker and bike is a 2D coordinate on this grid.
-Our goal is to assign a bike to each worker. Among the available bikes and workers, we choose the (worker, bike) pair with the shortest Manhattan distance between each other, and assign the bike to that worker. (If there are multiple (worker, bike) pairs with the same shortest Manhattan distance, we choose the pair with the smallest worker index; if there are multiple ways to do that, we choose the pair with the smallest bike index).</p>
+      <p>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
+Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parentheses substring is &#34;()&#34; Example 2: Input: &#34;)()())&#34; Output: 4 Explanation: The longest valid parentheses substring is &#34;()()&#34; Solution Dynamic programming
+// Time: `O(n)` // Space: `O(n)` public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</p>
 
       <p class="meta">
         
@@ -256,11 +229,13 @@ Our goal is to assign a bike to each worker. Among the available bikes and worke
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/path-sum/">Path Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/11/path-sum-ii/">Path Sum II</a></h2>
 
-      <p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+      <p>Given a binary tree and a sum, find all root-to-leaf paths where each path’s sum equals the given sum.
 Note: A leaf is a node with no children.
-Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1 return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22.</p>
+Example: Given the below binary tree and sum = 22,
+ 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 Return:
+[ [5,4,11,2], [5,8,4,5] ] Solution # Definition for a binary tree node.</p>
 
       <p class="meta">
         
@@ -283,10 +258,12 @@ Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/continuous-subarray-sum/">Continuous Subarray Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/11/best-time-to-buy-and-sell-stock-iii/">Best Time to Buy and Sell Stock III</a></h2>
 
-      <p>Given a list of non-negative numbers and a target integer k, write a function to check if the array has a continuous subarray of size at least 2 that sums up to a multiple of k, that is, sums up to n*k where n is also an integer.
-Example 1: Input: [23, 2, 4, 6, 7], k=6 Output: True Explanation: Because [2, 4] is a continuous subarray of size 2 and sums up to 6.</p>
+      <p>Say you have an array for which the ithelement is the price of a given stock on day i.
+Design an algorithm to find the maximum profit. You may complete at most two transactions.
+Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
+Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</p>
 
       <p class="meta">
         
@@ -309,66 +286,13 @@ Example 1: Input: [23, 2, 4, 6, 7], k=6 Output: True Explanation: Because [2, 4]
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/convert-sorted-list-to-binary-search-tree/">Convert Sorted List to Binary Search Tree</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/11/longest-substring-without-repeating-characters/">Longest Substring Without Repeating Characters</a></h2>
 
-      <p>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
-For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
-Example: Given the sorted linked list: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5  Solution python</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/read-n-characters-given-read4-ii-call-multiple-times/">Read N Characters Given Read4 II Call Multiple Times</a></h2>
-
-      <p>Given a file and assume that you can only read the file using a given method read4, implement a method read to read n characters. Your method read may be called multiple times.
-Method read4: The API read4 reads 4 consecutive characters from the file, then writes those characters into the buffer array buf.
-The return value is the number of actual characters read.
-Note that read4() has its own file pointer, much like FILE *fpin C.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/strobogrammatic-number-ii/">Strobogrammatic Number II</a></h2>
-
-      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
-Find all strobogrammatic numbers that are of length = n.
-Example: Input: n = 2 Output: [&#34;11&#34;,&#34;69&#34;,&#34;88&#34;,&#34;96&#34;]  Solution # Time: O(n^2 * 5^(n/2)) # Space: O(n) class Solution: def findStrobogrammatic(self, n: int) -&gt; List[str]: stroboPairs = { &#34;0&#34;: &#34;0&#34;, &#34;1&#34;: &#34;1&#34;, &#34;6&#34;: &#34;9&#34;, &#34;8&#34;: &#34;8&#34;, &#34;9&#34;: &#34;6&#34; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&#34;&#34;] if curr == 1: return list(&#34;018&#34;) prev = self.</p>
+      <p>Given a string, find the length of the longest substring without repeating characters.
+*### Example 1
+Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3. *### Example 2
+Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1. *### Example 3
+Input: &#34;pwwkew&#34; Output: 3 Explanation: The answer is &#34;wke&#34;, with the length of 3. Note that the answer must be a substring, &#34;pwke&#34; is a subsequence and not a substring.</p>
 
       <p class="meta">
         
@@ -391,11 +315,11 @@ Example: Input: n = 2 Output: [&#34;11&#34;,&#34;69&#34;,&#34;88&#34;,&#34;96&#3
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/strobogrammatic-number/">Strobogrammatic Number</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/11/min-cost-climbing-stairs/">Min Cost Climbing Stairs</a></h2>
 
-      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
-Write a function to determine if a number is strobogrammatic. The number is represented as a string.
-Example 1: Input: &#34;69&#34; Output: true  Example 2: Input: &#34;88&#34; Output: true  Example 3: Input: &#34;962&#34; Output: false  Solution class Solution: def isStrobogrammatic(self, num: str) -&gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2&#43;1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</p>
+      <p>On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+Once you pay the cost, you can either climb one or two steps. You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.
+Example 1: Input: cost = [10, 15, 20] Output: 15 Explanation: Cheapest is start on cost[1], pay that cost and go to the top.</p>
 
       <p class="meta">
         
@@ -418,11 +342,66 @@ Example 1: Input: &#34;69&#34; Output: true  Example 2: Input: &#34;88&#34; Outp
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/island-perimeter/">Island Perimeter</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2019/11/reorder-data-in-log-files/">Reorder Data in Log Files</a></h2>
 
-      <p>You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
-Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
-The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island). One cell is a square with side length 1.</p>
+      <p>You have an array of logs. Each log is a space delimited string of words.
+For each log, the first word in each log is an alphanumeric identifier. Then, either:
+Each word after the identifier will consist only of lowercase letters, or; Each word after the identifier will consist only of digits. We will call these two varieties of logs letter-logs and digit-logs. It is guaranteed that each log has at least one word after its identifier.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/before-and-after-puzzle/">Before and After Puzzle</a></h2>
+
+      <p>Given a list of phrases, generate a list of Before and After puzzles.
+A phrase is a string that consists of lowercase English letters and spaces only. No space appears in the start or the end of a phrase. There are no consecutive spaces in a phrase.
+Before and After puzzles are phrases that are formed by merging two phrases where the last word of the first phrase is the same as the first word of the second phrase.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/maximum-product-of-three-numbers/">Maximum Product of Three Numbers</a></h2>
+
+      <p>Given an integer array, find three numbers whose product is maximum and output the maximum product.
+Example 1:
+Input: [1,2,3] Output: 6 Example 2:
+Input: [1,2,3,4] Output: 24 Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won’t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; min_1, min_2 = float(&#34;inf&#34;), float(&#34;inf&#34;) max_1, max_2, max_3 = float(&#34;-inf&#34;), float(&#34;-inf&#34;), float(&#34;-inf&#34;) for num in nums: if num &lt; min_1: min_2 = min_1 min_1 = num elif num &lt; min_2: min_2 = num if num &gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &gt; max_2: max_3 = max_2 max_2 = num elif num &gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3) </p>
 
       <p class="meta">
         
@@ -435,6 +414,33 @@ The island doesn’t have “lakes” (water inside that isn’t connected to th
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/10/prefix-postfix-conversion/">Prefix Postfix Conversion</a></h2>
+
+      <p>Prefix : An expression is called the prefix expression if the operator appears in the expression before the operands. Simply of the form (operator operand1 operand2). Example : *&#43;AB-CD (Infix : (A&#43;B) * (C-D) )
+Postfix: An expression is called the postfix expression if the operator appears in the expression after the operands. Simply of the form (operand1 operand2 operator). Example : AB&#43;CD-* (Infix : (A&#43;B * (C-D) )
+Given a Prefix expression, convert it into a Postfix expression.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

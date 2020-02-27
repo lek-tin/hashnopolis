@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Write a program to find the node at which the intersection of two singly linked lists begins.
 For example, the following two linked lists:
-A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3 begin to intersect at node c1.
 Note If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns." />
   <meta name="keywords" content="leetcode linked-list " />
   
@@ -28,7 +28,7 @@ Note If the two linked lists have no intersection at all, return null. The linke
     <meta name="twitter:title" content="Intersection of Two Linked Lists" />
     <meta name="twitter:description" content="Write a program to find the node at which the intersection of two singly linked lists begins.
 For example, the following two linked lists:
-A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3 begin to intersect at node c1.
 Note If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
@@ -36,7 +36,7 @@ Note If the two linked lists have no intersection at all, return null. The linke
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/intersection-of-two-linked-lists/" />
@@ -194,108 +194,95 @@ Note If the two linked lists have no intersection at all, return null. The linke
         <h5>Last updated: October 10, 2019</h5>
       
       <hr />
-      
-
-<p>Write a program to find the node at which the intersection of two singly linked lists begins.</p>
-
+      <p>Write a program to find the node at which the intersection of two singly linked lists begins.</p>
 <p>For example, the following two linked lists:</p>
-
 <pre><code>A:         a1 → a2
                    ↘
                      c1 → c2 → c3
                    ↗
 B:    b1 → b2 → b3
-</code></pre>
-
-<p>begin to intersect at node c1.</p>
-
+</code></pre><p>begin to intersect at node c1.</p>
 <h3 id="note">Note</h3>
-
 <p>If the two linked lists have no intersection at all, return null.
 The linked lists must retain their original structure after the function returns.
 You may assume there are no cycles anywhere in the entire linked structure.
 Your code should preferably run in <code>O(n)</code> time and use only <code>O(1)</code> memory.
 Credits:
 Special thanks to @stellari for adding this problem and creating all test cases.</p>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
+<span style="color:#75715e">#      A:   x steps</span>
+<span style="color:#75715e">#                   ↘</span>
+<span style="color:#75715e">#                     common steps</span>
+<span style="color:#75715e">#                   ↗            ↓</span>
+<span style="color:#75715e">#           y steps ← ← ← ← ← ← ↙</span>
+<span style="color:#75715e">#      --------------------------------</span>
+<span style="color:#75715e">#           x steps ← ← ← ← ← ← ↖</span>
+<span style="color:#75715e">#                   ↘            ↑</span>
+<span style="color:#75715e">#                     common steps</span>
+<span style="color:#75715e">#                   ↗</span>
+<span style="color:#75715e">#      B:   y steps</span>
+<span style="color:#75715e"># Total step for A and B are the same</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getIntersectionNode</span>(self, headA, headB):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type head1, head1: ListNode
+</span><span style="color:#e6db74">        :rtype: ListNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> headA <span style="color:#f92672">==</span> None <span style="color:#f92672">or</span> headB <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> None
 
-<pre><code class="language-python"># Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-#      A:   x steps
-#                   ↘
-#                     common steps
-#                   ↗            ↓
-#           y steps ← ← ← ← ← ← ↙
-#      --------------------------------
-#           x steps ← ← ← ← ← ← ↖
-#                   ↘            ↑
-#                     common steps
-#                   ↗
-#      B:   y steps
-# Total step for A and B are the same
-class Solution(object):
-    def getIntersectionNode(self, headA, headB):
-        &quot;&quot;&quot;
-        :type head1, head1: ListNode
-        :rtype: ListNode
-        &quot;&quot;&quot;
-        if headA == None or headB == None:
-            return None
+        a <span style="color:#f92672">=</span> headA
+        b <span style="color:#f92672">=</span> headB
 
-        a = headA
-        b = headB
+        <span style="color:#66d9ef">while</span> a <span style="color:#f92672">!=</span> b:
+            <span style="color:#66d9ef">if</span> a <span style="color:#f92672">!=</span> None <span style="color:#f92672">and</span> b <span style="color:#f92672">!=</span> None:
+                <span style="color:#66d9ef">print</span>(a<span style="color:#f92672">.</span>val, b<span style="color:#f92672">.</span>val)
+            a <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>next <span style="color:#66d9ef">if</span> a <span style="color:#f92672">!=</span> None <span style="color:#66d9ef">else</span> headB
+            b <span style="color:#f92672">=</span> b<span style="color:#f92672">.</span>next <span style="color:#66d9ef">if</span> b <span style="color:#f92672">!=</span> None <span style="color:#66d9ef">else</span> headA
 
-        while a != b:
-            if a != None and b != None:
-                print(a.val, b.val)
-            a = a.next if a != None else headB
-            b = b.next if b != None else headA
+        <span style="color:#66d9ef">return</span> a
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for singly-linked list.
+</span><span style="color:#75715e"> * public class ListNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     ListNode next;
+</span><span style="color:#75715e"> *     ListNode(int x) {
+</span><span style="color:#75715e"> *         val = x;
+</span><span style="color:#75715e"> *         next = null;
+</span><span style="color:#75715e"> *     }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> ListNode <span style="color:#a6e22e">getIntersectionNode</span><span style="color:#f92672">(</span>ListNode headA<span style="color:#f92672">,</span> ListNode headB<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>headA <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> headB <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        ListNode a <span style="color:#f92672">=</span> headA<span style="color:#f92672">;</span>
+        ListNode b <span style="color:#f92672">=</span> headB<span style="color:#f92672">;</span>
 
-        return a
-</code></pre>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">!=</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                a <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                a <span style="color:#f92672">=</span> headB<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        if (headA == null || headB == null) {
-            return null;
-        }
-        ListNode a = headA;
-        ListNode b = headB;
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>b <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                b <span style="color:#f92672">=</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                b <span style="color:#f92672">=</span> headA<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        while (a != b) {
-            if (a != null) {
-                a = a.next;
-            } else {
-                a = headB;
-            }
-
-            if (b != null) {
-                b = b.next;
-            } else {
-                b = headA;
-            }
-        }
-
-        return a;
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> a<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

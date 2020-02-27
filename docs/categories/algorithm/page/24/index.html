@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/categories/algorithm/" />
@@ -176,39 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-preorder-traversal/">Binary Tree Preorder Traversal</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list/">Remove Duplicates From Sorted List</a></h2>
 
-      <p>Given a binary tree, return the preorder traversal of its nodes’ values.
-Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; if root is None: return [] return [root.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-postorder-traversal/">Binary Tree Postorder Traversal</a></h2>
-
-      <p>Given a binary tree, return the postorder traversal of its nodes’ values.
-Example Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1]  Follow-up Recursive solution is trivial, could you do it iteratively?
-Solution Recursive👇
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def postorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; def traverse(node): if node == None: return [] return traverse(node.</p>
+      <p>Given a sorted linked list, delete all duplicates such that each element appear only once.
+Example 1 Input: 1-&gt;1-&gt;2 Output: 1-&gt;2 Example 2 Input: 1-&gt;1-&gt;2-&gt;3-&gt;3 Output: 1-&gt;2-&gt;3 Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr = head while curr != None and curr.next != None: if curr.</p>
 
       <p class="meta">
         
@@ -231,12 +202,10 @@ Solution Recursive👇
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-paths/">Binary Tree Paths</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/power-of-two/">Power of Two</a></h2>
 
-      <p>Given a binary tree, return all root-to-leaf paths.
-Note: A leaf is a node with no children.
-Example Input: 1 / \ 2 3 \ 5 Output: [&#34;1-&gt;2-&gt;5&#34;, &#34;1-&gt;3&#34;]  Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[str] &#34;&#34;&#34; res = [] def traverse(root, path): if root == None: return path &#43;= str(root.</p>
+      <p>Given an integer, write a function to determine if it is a power of two.
+Example 1 Input: 1 Output: true Explanation: 2**0 = 1 Example 2 Input: 16 Output: true Explanation: 2**4 = 16 Example 3 Input: 218 Output: false Solution class Solution: def isPowerOfTwo(self, n): &#34;&#34;&#34; :type n: int :rtype: bool &#34;&#34;&#34; if n == 0: return False if n &amp; (n - 1) == 0: return True return False </p>
 
       <p class="meta">
         
@@ -259,39 +228,12 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/plus-one/">Plus One</a></h2>
 
-      <p>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).
-Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7  return its level order traversal as:
-[ [3], [9,20], [15,7] ]  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal-ii/">Binary Tree Level Order Traversal II</a></h2>
-
-      <p>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).
-For example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7  return its bottom-up level order traversal as:
-[ [15,7], [9,20], [3] ]  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</p>
+      <p>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
+You may assume the integer does not contain any leading zero, except the number 0 itself.
+Example 1 Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</p>
 
       <p class="meta">
         
@@ -314,13 +256,10 @@ For example: Given binary tree [3,9,20,null,null,15,7],
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/combination-sum-iii/">Combination Sum III</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/swap-nodes-in-pairs/">Swap Nodes in Pairs</a></h2>
 
-      <p>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
-Note:
-All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
-Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
-Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution: def combinationSum3(self, k, n): &#34;&#34;&#34; :type k: int :type n: int :rtype: List[List[int]] &#34;&#34;&#34; self.</p>
+      <p>Given a linked list, swap every two adjacent nodes and return its head.
+Example Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3. Note  Your algorithm should use only constant extra space. You may not modify the values in the list’s nodes, only nodes itself may be changed.  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; # https://www.</p>
 
       <p class="meta">
         
@@ -343,12 +282,12 @@ Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/combination-sum/">Combination Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/unique-paths/">Unique Paths</a></h2>
 
-      <p>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
-The same repeated number may be chosen from candidates unlimited number of times.
-Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ]  Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</p>
+      <p>A robot is located at the top-left corner of a m x n grid (marked ‘Start’ in the diagram below).
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked ‘Finish’ in the diagram below).
+How many possible unique paths are there?
+Above is a 7 x 3 grid. How many possible unique paths are there?</p>
 
       <p class="meta">
         
@@ -371,67 +310,120 @@ Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/combinations/">Combinations</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/valid-anagram/">Valid Anagram</a></h2>
 
-      <p>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/combine-two-tables/">Combine Two Tables</a></h2>
-
-      <p>Table: Person
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | PersonId | int | | FirstName | varchar | | LastName | varchar | &#43;-------------&#43;---------&#43; PersonId is the primary key column for this table.  Table: Address
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | &#43;-------------&#43;---------&#43; AddressId is the primary key column for this table.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/contains-duplicate/">Contains Duplicate</a></h2>
-
-      <p> Given an array of integers, find if the array contains any duplicates.
-Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+      <p>Given two strings s and t , write a function to determine if t is an anagram of s.
 Example 1:
-Input: [1,2,3,1] Output: true  Example 2:
-Input: [1,2,3,4] Output: false  Example 3:
-Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution class Solution: def containsDuplicate(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: bool &#34;&#34;&#34; sortedNums = sorted(nums) for i in range(1, len(nums)): if sortedNums[i] == sortedNums[i-1]: return True return False  </p>
+Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; Output: true Example 2:
+Input: s = &#34;rat&#34;, t = &#34;car&#34; Output: false Note: You may assume the string contains only lowercase alphabets.
+Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
+Solution: class Solution: def isAnagram(self, s, t): &#34;&#34;&#34; :type s: str :type t: str :rtype: bool &#34;&#34;&#34; primeNums = { &#34;a&#34;: 2, &#34;b&#34;: 3, &#34;c&#34;: 5, &#34;d&#34;: 7, &#34;e&#34;: 11, &#34;f&#34;: 13, &#34;g&#34;: 17, &#34;h&#34;: 19, &#34;i&#34;: 23, &#34;j&#34;: 29, &#34;k&#34;: 31, &#34;m&#34;: 37, &#34;l&#34;: 41, &#34;n&#34;: 43, &#34;o&#34;: 47, &#34;p&#34;: 53, &#34;q&#34;: 59, &#34;r&#34;: 61, &#34;s&#34;: 67, &#34;t&#34;: 71, &#34;u&#34;: 73, &#34;v&#34;: 79, &#34;w&#34;: 83, &#34;x&#34;: 89, &#34;y&#34;: 97, &#34;z&#34;: 101 } val_1 = 0 val_2 = 0 list_1 = list(s) list_2 = list(t) &#34;&#34;&#34; Continue only if the two lists are of the same length&#34;&#34;&#34; if(len(list_1) == len(list_2)): for i in range(len(list_1)): val_1 &#43;= primeNums[list_1[i]] val_2 &#43;= primeNums[list_2[i]] if (val_1 == val_2): return True return False </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/ugly-number/">Ugly Number</a></h2>
+
+      <p>Write a program to check whether a given number is an ugly number.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
+Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3 Example 2 Input: 8 Output: true Explanation: 8 = 2 × 2 × 2 Example 3 Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7. Note  1 is typically treated as an ugly number.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/subsets/">Subsets</a></h2>
+
+      <p>Given a set of distinct integers, nums, return all possible subsets (the power set).
+Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsets(self, nums: List[int]) -&gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/roman-to-integer/">Roman to Integer</a></h2>
+
+      <p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as II in Roman numeral, just two one’s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/single-number-iii/">Single Number III</a></h2>
+
+      <p>Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
+For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].
+Note:  The order of the result is not important. So in the above example, [5, 3] is also correct. Your algorithm should run in linear runtime complexity.</p>
 
       <p class="meta">
         

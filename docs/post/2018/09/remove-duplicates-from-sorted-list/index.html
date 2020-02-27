@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a sorted linked list, delete all duplicates such that each element appear only once.
-Example 1 Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2  Example 2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr = head while curr != None and curr." />
+Example 1 Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2 Example 2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3 Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: ListNode &amp;#34;&amp;#34;&amp;#34; curr = head while curr != None and curr.next != None: if curr." />
   <meta name="keywords" content="leetcode linked-list " />
   
   
@@ -25,14 +25,14 @@ Example 1 Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2  Example 2 Input: 1-&
     
     <meta name="twitter:title" content="Remove Duplicates From Sorted List" />
     <meta name="twitter:description" content="Given a sorted linked list, delete all duplicates such that each element appear only once.
-Example 1 Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2  Example 2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &amp;quot;&amp;quot;&amp;quot; :type head: ListNode :rtype: ListNode &amp;quot;&amp;quot;&amp;quot; curr = head while curr != None and curr." />
+Example 1 Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2 Example 2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3 Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: ListNode &amp;#34;&amp;#34;&amp;#34; curr = head while curr != None and curr.next != None: if curr." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list/" />
@@ -190,45 +190,34 @@ Example 1 Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2  Example 2 Input: 1-&
         <h5>Last updated: September 16, 2018</h5>
       
       <hr />
-      
-
-<p>Given a sorted linked list, delete all duplicates such that each element appear only once.</p>
-
+      <p>Given a sorted linked list, delete all duplicates such that each element appear only once.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: 1-&gt;1-&gt;2
 Output: 1-&gt;2
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 1-&gt;1-&gt;2-&gt;3-&gt;3
 Output: 1-&gt;2-&gt;3
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
 
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python"># Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution(object):
-    def deleteDuplicates(self, head):
-        &quot;&quot;&quot;
-        :type head: ListNode
-        :rtype: ListNode
-        &quot;&quot;&quot;
-        curr = head
-        while curr != None and curr.next != None:
-            if curr.val == curr.next.val:
-                curr.next = curr.next.next
-            else:
-                curr = curr.next
-        return head
-</code></pre>
-
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">deleteDuplicates</span>(self, head):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type head: ListNode
+</span><span style="color:#e6db74">        :rtype: ListNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        curr <span style="color:#f92672">=</span> head
+        <span style="color:#66d9ef">while</span> curr <span style="color:#f92672">!=</span> None <span style="color:#f92672">and</span> curr<span style="color:#f92672">.</span>next <span style="color:#f92672">!=</span> None:
+            <span style="color:#66d9ef">if</span> curr<span style="color:#f92672">.</span>val <span style="color:#f92672">==</span> curr<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>val:
+                curr<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+            <span style="color:#66d9ef">else</span>:
+                curr <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">return</span> head
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

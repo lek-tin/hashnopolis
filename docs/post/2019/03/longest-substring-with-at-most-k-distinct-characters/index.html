@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3.  Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s." />
+Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2. Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s." />
   <meta name="keywords" content="leetcode hashmap substring sliding-window " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T 
     
     <meta name="twitter:title" content="Longest Substring With at Most K Distinct Characters" />
     <meta name="twitter:description" content="Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3.  Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2.  Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s." />
+Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2. Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/" />
@@ -194,62 +194,51 @@ Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T 
         <h5>Last updated: March 14, 2019</h5>
       
       <hr />
-      
-
-<p>Given a string, find the length of the longest substring <em>T</em> that contains at most <em>k</em> distinct characters.</p>
-
+      <p>Given a string, find the length of the longest substring <em>T</em> that contains at most <em>k</em> distinct characters.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: s = &quot;eceba&quot;, k = 2
 Output: 3
 Explanation: T is &quot;ece&quot; which its length is 3.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: s = &quot;aa&quot;, k = 1
 Output: 2
 Explanation: T is &quot;aa&quot; which its length is 2.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lengthOfLongestSubstringKDistinct</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Map<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> countMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-<h3 id="solution">Solution</h3>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">// character at the right pointer
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+            countMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>c<span style="color:#f92672">,</span> countMap<span style="color:#f92672">.</span><span style="color:#a6e22e">getOrDefault</span><span style="color:#f92672">(</span>c<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+            <span style="color:#75715e">// make sure map size is valid, no need to check left pointer less than s.length()
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// distinct count needs to be &lt;= k
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">/*
+</span><span style="color:#75715e">            *  k = 3, left = 0
+</span><span style="color:#75715e">            *  {1, 1, 1, 3, 4, 5}
+</span><span style="color:#75715e">            */</span>
+            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>countMap<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#75715e">// Removes the leftmost character
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">char</span> leftChar <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>left<span style="color:#f92672">);</span>
+                countMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>leftChar<span style="color:#f92672">,</span> countMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>leftChar<span style="color:#f92672">)</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+                <span style="color:#75715e">// If leftChar is no longer one of the distinct numbers, remove it.
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>countMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>leftChar<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    countMap<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>leftChar<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+                <span style="color:#75715e">// Leftbound moves right by 1 step.
+</span><span style="color:#75715e"></span>                left<span style="color:#f92672">++;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#75715e">// Compare previous max = {1, 1, 1, 3, 4}.length and {3, 4, 5}.length
+</span><span style="color:#75715e"></span>            max <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>max<span style="color:#f92672">,</span> i <span style="color:#f92672">-</span> left <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> max<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">class Solution {
-    public int lengthOfLongestSubstringKDistinct(String s, int k) {
-        Map&lt;Character, Integer&gt; countMap = new HashMap&lt;&gt;();
-        int left = 0;
-        int max = 0;
-
-        for(int i = 0; i &lt; s.length(); i++) {
-            // character at the right pointer
-            char c = s.charAt(i);
-            countMap.put(c, countMap.getOrDefault(c, 0) + 1);
-            // make sure map size is valid, no need to check left pointer less than s.length()
-            // distinct count needs to be &lt;= k
-            /*
-            *  k = 3, left = 0
-            *  {1, 1, 1, 3, 4, 5}
-            */
-            while (countMap.size() &gt; k) {
-                // Removes the leftmost character
-                char leftChar = s.charAt(left);
-                countMap.put(leftChar, countMap.get(leftChar) - 1);
-                // If leftChar is no longer one of the distinct numbers, remove it.
-                if (countMap.get(leftChar) == 0) {
-                    countMap.remove(leftChar);
-                }
-                // Leftbound moves right by 1 step.
-                left++;
-            }
-            // Compare previous max = {1, 1, 1, 3, 4}.length and {3, 4, 5}.length
-            max = Math.max(max, i - left + 1);
-        }
-        return max;
-    }
-
-}
-</code></pre>
-
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

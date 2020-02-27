@@ -18,7 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
 The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
-Now consider if some obstacles are added to the grids. How many unique paths would there be?" />
+Now consider if some obstacles are added to the grids. How many unique paths would there be?
+An obstacle and empty space is marked as 1 and 0 respectively in the grid." />
   <meta name="keywords" content="leetcode java dynamic-programming " />
   
   
@@ -27,14 +28,15 @@ Now consider if some obstacles are added to the grids. How many unique paths wou
     <meta name="twitter:title" content="Unique Paths II" />
     <meta name="twitter:description" content="A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
 The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
-Now consider if some obstacles are added to the grids. How many unique paths would there be?" />
+Now consider if some obstacles are added to the grids. How many unique paths would there be?
+An obstacle and empty space is marked as 1 and 0 respectively in the grid." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/unique-paths-ii/" />
@@ -194,26 +196,16 @@ Now consider if some obstacles are added to the grids. How many unique paths wou
         <h5>Last updated: March 2, 2019</h5>
       
       <hr />
-      
-
-<p>A robot is located at the top-left corner of a <code>m x n</code> grid (marked &lsquo;Start&rsquo; in the diagram below).</p>
-
+      <p>A robot is located at the top-left corner of a <code>m x n</code> grid (marked &lsquo;Start&rsquo; in the diagram below).</p>
 <p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &lsquo;Finish&rsquo; in the diagram below).</p>
-
 <p>Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
-
-<p><img src="https://leetcode.com/static/images/problemset/robot_maze.png" alt="unique paths" title="Unique paths" /></p>
-
+<p><img src="https://leetcode.com/static/images/problemset/robot_maze.png" alt="unique paths" title="Unique paths"></p>
 <p>An obstacle and empty space is marked as <code>1</code> and <code>0</code> respectively in the grid.</p>
-
 <h3 id="note">Note:</h3>
-
 <ul>
 <li>m and n will be at most 100.</li>
 </ul>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input:
 [
   [0,0,0],
@@ -226,73 +218,67 @@ There is one obstacle in the middle of the 3x3 grid above.
 There are two ways to reach the bottom-right corner:
 1. Right -&gt; Right -&gt; Down -&gt; Down
 2. Down -&gt; Down -&gt; Right -&gt; Right
-</code></pre>
+</code></pre><h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: O(m*n)</span>
+<span style="color:#75715e"># Space: `O(n)`</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">uniquePathsWithObstacles</span>(self, obstacleGrid: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+        m <span style="color:#f92672">=</span> len(obstacleGrid)
+        n <span style="color:#f92672">=</span> len(obstacleGrid[<span style="color:#ae81ff">0</span>])
+        <span style="color:#66d9ef">if</span> m <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<h3 id="solution">Solution:</h3>
+        dp <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(m)]
 
-<pre><code class="language-python"># Time: O(m*n)
-# Space: O(n)
-class Solution:
-    def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -&gt; int:
-        m = len(obstacleGrid)
-        n = len(obstacleGrid[0])
-        if m == 0 or n == 0:
-            return 0
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(m):
+            <span style="color:#66d9ef">if</span> obstacleGrid[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>:
+                dp[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:p
+                <span style="color:#66d9ef">break</span>
 
-        dp = [[0 for i in range(n)] for j in range(m)]
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+            <span style="color:#66d9ef">if</span> obstacleGrid[<span style="color:#ae81ff">0</span>][i] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>:
+                dp[<span style="color:#ae81ff">0</span>][i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">break</span>
 
-        for i in range(m):
-            if obstacleGrid[i][0] != 1:
-                dp[i][0] = 1
-            else:p
-                break
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, m):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n):
+                <span style="color:#66d9ef">if</span> obstacleGrid[i][j] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+                    dp[i][j] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+                <span style="color:#66d9ef">else</span>:
+                    dp[i][j] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j] <span style="color:#f92672">+</span> dp[i][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
 
-        for i in range(n):
-            if obstacleGrid[0][i] != 1:
-                dp[0][i] = 1
-            else:
-                break
+        <span style="color:#66d9ef">if</span> dp[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2147483647</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> dp[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Time: O(m*n)
+</span><span style="color:#75715e">// Space: `O(n)`
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">uniquePathsWithObstacles</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> obstacleGrid<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>obstacleGrid <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> obstacleGrid<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0 <span style="color:#f92672">||</span> obstacleGrid<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        for i in range(1, m):
-            for j in range(1, n):
-                if obstacleGrid[i][j] == 1:
-                    dp[i][j] = 0
-                else:
-                    dp[i][j] = dp[i-1][j] + dp[i][j-1]
+        <span style="color:#66d9ef">int</span> rows <span style="color:#f92672">=</span> obstacleGrid<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> cols <span style="color:#f92672">=</span> obstacleGrid<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>cols<span style="color:#f92672">];</span>
+        res<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
 
-        if dp[-1][-1] &gt; 2147483647:
-            return -1
-        else:
-            return dp[-1][-1]
-</code></pre>
-
-<pre><code class="language-java">// Time: O(m*n)
-// Space: O(n)
-class Solution {
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        if (obstacleGrid == null || obstacleGrid.length == 0 || obstacleGrid[0].length == 0) {
-            return 0;
-        }
-
-        int rows = obstacleGrid.length;
-        int cols = obstacleGrid[0].length;
-        int[] res = new int[cols];
-        res[0] = 1;
-
-        for (int i = 0; i &lt; rows; i++) {
-            for (int j = 0; j &lt; cols; j++) {
-                if (obstacleGrid[i][j] == 1) {
-                    res[j] = 0;
-                } else if (j &gt; 0) {
-                    res[j] += res[j-1];
-                }
-            }
-        }
-        return res[cols-1];
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> rows<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> cols<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>obstacleGrid<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    res<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    res<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> res<span style="color:#f92672">[</span>j<span style="color:#f92672">-</span>1<span style="color:#f92672">];</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">[</span>cols<span style="color:#f92672">-</span>1<span style="color:#f92672">];</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

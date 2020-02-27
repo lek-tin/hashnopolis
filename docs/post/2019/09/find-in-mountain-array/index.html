@@ -17,7 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="(This problem is an interactive problem.)
-You may recall that an array A is a mountain array if and only if: 1. A.length &amp;gt;= 3 2. There exists some i with 0 &amp;lt; i &amp;lt; A.length - 1 such that: * A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] * A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr." />
+You may recall that an array A is a mountain array if and only if:
+ A.length &amp;gt;= 3 There exists some i with 0 &amp;lt; i &amp;lt; A.length - 1 such that:  A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target." />
   <meta name="keywords" content="leetcode binary-search " />
   
   
@@ -25,14 +26,15 @@ You may recall that an array A is a mountain array if and only if: 1. A.length &
     
     <meta name="twitter:title" content="Find in Mountain Array" />
     <meta name="twitter:description" content="(This problem is an interactive problem.)
-You may recall that an array A is a mountain array if and only if: 1. A.length &amp;gt;= 3 2. There exists some i with 0 &amp;lt; i &amp;lt; A.length - 1 such that: * A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] * A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr." />
+You may recall that an array A is a mountain array if and only if:
+ A.length &amp;gt;= 3 There exists some i with 0 &amp;lt; i &amp;lt; A.length - 1 such that:  A[0] &amp;lt; A[1] &amp;lt; ... A[i-1] &amp;lt; A[i] A[i] &amp;gt; A[i&#43;1] &amp;gt; ... &amp;gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/find-in-mountain-array/" />
@@ -190,104 +192,96 @@ You may recall that an array A is a mountain array if and only if: 1. A.length &
         <h5>Last updated: September 23, 2019</h5>
       
       <hr />
-      
-
-<p>(This problem is an interactive problem.)</p>
-
-<p>You may recall that an array A is a mountain array if and only if:
-1. A.length &gt;= 3
-2. There exists some <code>i</code> with <code>0 &lt; i &lt; A.length - 1</code> such that:
-    * <code>A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i]</code>
-    * <code>A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]</code>
-Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target.  If such an index doesn&rsquo;t exist, return -1.</p>
-
-<p><strong>You can&rsquo;t access the mountain array directly.</strong>  You may only access the array using a <code>MountainArray</code> interface:
-1. <code>MountainArray.get(k)</code> returns the element of the array at index <code>k</code> (0-indexed).
-2. <code>MountainArray.length()</code> returns the length of the array.
-Submissions making more than 100 calls to MountainArray.get will be judged Wrong Answer.  Also, any solutions that attempt to circumvent the judge will result in disqualification.</p>
-
+      <p>(This problem is an interactive problem.)</p>
+<p>You may recall that an array A is a mountain array if and only if:</p>
+<ol>
+<li>A.length &gt;= 3</li>
+<li>There exists some <code>i</code> with <code>0 &lt; i &lt; A.length - 1</code> such that:
+<ul>
+<li><code>A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i]</code></li>
+<li><code>A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]</code>
+Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target.  If such an index doesn&rsquo;t exist, return -1.</li>
+</ul>
+</li>
+</ol>
+<p><strong>You can&rsquo;t access the mountain array directly.</strong>  You may only access the array using a <code>MountainArray</code> interface:</p>
+<ol>
+<li><code>MountainArray.get(k)</code> returns the element of the array at index <code>k</code> (0-indexed).</li>
+<li><code>MountainArray.length()</code> returns the length of the array.
+Submissions making more than 100 calls to MountainArray.get will be judged Wrong Answer.  Also, any solutions that attempt to circumvent the judge will result in disqualification.</li>
+</ol>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: array = [1,2,3,4,5,3,1], target = 3
 Output: 2
 Explanation: 3 exists in the array, at index=2 and index=5. Return the minimum index, which is 2.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: array = [0,1,2,4,2,1], target = 3
 Output: -1
 Explanation: 3 does not exist in the array, so we return -1.
-</code></pre>
-
-<h3 id="constraints">Constraints:</h3>
-
+</code></pre><h3 id="constraints">Constraints:</h3>
 <ol>
 <li>13 &lt;= mountain_arr.length() &lt;= 100001</li>
 <li><code>0 &lt;= target &lt;= 10^91</code></li>
 <li><code>0 &lt;= mountain_arr.get(index) &lt;= 10^9</code></li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># &#34;&#34;&#34;</span>
+<span style="color:#75715e"># This is MountainArray&#39;s API interface.</span>
+<span style="color:#75715e"># You should not implement it, or speculate about its implementation</span>
+<span style="color:#75715e"># &#34;&#34;&#34;</span>
+<span style="color:#75715e">#class MountainArray:</span>
+<span style="color:#75715e">#    def get(self, index: int) -&gt; int:</span>
+<span style="color:#75715e">#    def length(self) -&gt; int:</span>
 
-<pre><code class="language-python"># &quot;&quot;&quot;
-# This is MountainArray's API interface.
-# You should not implement it, or speculate about its implementation
-# &quot;&quot;&quot;
-#class MountainArray:
-#    def get(self, index: int) -&gt; int:
-#    def length(self) -&gt; int:
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findInMountainArray</span>(self, target: int, mountain_arr: <span style="color:#e6db74">&#39;MountainArray&#39;</span>) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> mountain_arr:
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-class Solution:
-    def findInMountainArray(self, target: int, mountain_arr: 'MountainArray') -&gt; int:
-        if not mountain_arr:
-            return -1
+        peak <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>findPeakIndex(mountain_arr)
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;peak:&#34;</span>, mountain_arr<span style="color:#f92672">.</span>get(peak))
+        start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, peak
+        <span style="color:#75715e"># left: uphill</span>
+        <span style="color:#66d9ef">while</span> start<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> end:
+            mid <span style="color:#f92672">=</span> start <span style="color:#f92672">+</span> (end<span style="color:#f92672">-</span>start)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">if</span> mountain_arr<span style="color:#f92672">.</span>get(mid) <span style="color:#f92672">&lt;</span> target:
+                start <span style="color:#f92672">=</span> mid
+            <span style="color:#66d9ef">else</span>:
+                end <span style="color:#f92672">=</span> mid
+        <span style="color:#75715e"># print(mountain_arr.get(start), mountain_arr.get(end))</span>
+        <span style="color:#66d9ef">if</span> mountain_arr<span style="color:#f92672">.</span>get(start) <span style="color:#f92672">==</span> target:
+            <span style="color:#66d9ef">return</span> start
+        <span style="color:#66d9ef">elif</span> mountain_arr<span style="color:#f92672">.</span>get(end) <span style="color:#f92672">==</span> target:
+            <span style="color:#66d9ef">return</span> end
 
-        peak = self.findPeakIndex(mountain_arr)
-        print(&quot;peak:&quot;, mountain_arr.get(peak))
-        start, end = 0, peak
-        # left: uphill
-        while start+1 &lt; end:
-            mid = start + (end-start)//2
-            if mountain_arr.get(mid) &lt; target:
-                start = mid
-            else:
-                end = mid
-        # print(mountain_arr.get(start), mountain_arr.get(end))
-        if mountain_arr.get(start) == target:
-            return start
-        elif mountain_arr.get(end) == target:
-            return end
+        start, end <span style="color:#f92672">=</span> peak, mountain_arr<span style="color:#f92672">.</span>length()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#75715e"># left: uphill</span>
+        <span style="color:#66d9ef">while</span> start<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> end:
+            mid <span style="color:#f92672">=</span> start <span style="color:#f92672">+</span> (end<span style="color:#f92672">-</span>start)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">if</span> mountain_arr<span style="color:#f92672">.</span>get(mid) <span style="color:#f92672">&lt;</span> target:
+                end <span style="color:#f92672">=</span> mid
+            <span style="color:#66d9ef">else</span>:
+                start <span style="color:#f92672">=</span> mid
+        <span style="color:#75715e"># print(mountain_arr.get(start), mountain_arr.get(end))</span>
+        <span style="color:#66d9ef">if</span> mountain_arr<span style="color:#f92672">.</span>get(end) <span style="color:#f92672">==</span> target:
+            <span style="color:#66d9ef">return</span> end
+        <span style="color:#66d9ef">elif</span> mountain_arr<span style="color:#f92672">.</span>get(start) <span style="color:#f92672">==</span> target:
+            <span style="color:#66d9ef">return</span> start
+        <span style="color:#75715e"># not found</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-        start, end = peak, mountain_arr.length()-1
-        # left: uphill
-        while start+1 &lt; end:
-            mid = start + (end-start)//2
-            if mountain_arr.get(mid) &lt; target:
-                end = mid
-            else:
-                start = mid
-        # print(mountain_arr.get(start), mountain_arr.get(end))
-        if mountain_arr.get(end) == target:
-            return end
-        elif mountain_arr.get(start) == target:
-            return start
-        # not found
-        return -1
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findPeakIndex</span>(self, arr):
+        start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, arr<span style="color:#f92672">.</span>length()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-    def findPeakIndex(self, arr):
-        start, end = 0, arr.length()-1
-
-        while start+1&lt;end:
-            mid = start+(end-start)//2
-            if arr.get(mid-1) &gt; arr.get(mid):
-                end = mid
-            elif arr.get(mid+1) &gt; arr.get(mid):
-                start = mid
-            else:
-                return mid
-</code></pre>
-
+        <span style="color:#66d9ef">while</span> start<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">&lt;</span>end:
+            mid <span style="color:#f92672">=</span> start<span style="color:#f92672">+</span>(end<span style="color:#f92672">-</span>start)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">if</span> arr<span style="color:#f92672">.</span>get(mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">&gt;</span> arr<span style="color:#f92672">.</span>get(mid):
+                end <span style="color:#f92672">=</span> mid
+            <span style="color:#66d9ef">elif</span> arr<span style="color:#f92672">.</span>get(mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">&gt;</span> arr<span style="color:#f92672">.</span>get(mid):
+                start <span style="color:#f92672">=</span> mid
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">return</span> mid
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -32,7 +32,7 @@ You may assume that the version strings are non-empty and contain only digits an
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/compare-version-numbers/" />
@@ -190,64 +190,49 @@ You may assume that the version strings are non-empty and contain only digits an
         <h5>Last updated: October 16, 2018</h5>
       
       <hr />
-      
-
-<p>Compare two version numbers <code>version1</code> and <code>version2</code>.
+      <p>Compare two version numbers <code>version1</code> and <code>version2</code>.
 If <code>version1</code> &gt; <code>version2</code> return <code>1</code>; if <code>version1</code> &lt; <code>version2</code> return <code>-1</code>;otherwise return <code>0</code>.</p>
-
 <p>You may assume that the version strings are non-empty and contain only digits and the . character.
 The . character does not represent a decimal point and is used to separate number sequences.
 For instance, <code>2.5</code> is not &ldquo;two and a half&rdquo; or &ldquo;half way to version three&rdquo;, it is the fifth second-level revision of the second first-level revision.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: version1 = &quot;0.1&quot;, version2 = &quot;1.1&quot;
 Output: -1
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: version1 = &quot;1.0.1&quot;, version2 = &quot;1&quot;
 Output: 1
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: version1 = &quot;7.5.2.4&quot;, version2 = &quot;7.5.3&quot;
 Output: -1
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compareVersion</span>(self, version1, version2):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type version1: str
+</span><span style="color:#e6db74">        :type version2: str
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> version1 <span style="color:#f92672">==</span> version2:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<h3 id="solution">Solution</h3>
+        arr1 <span style="color:#f92672">=</span> version1<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;.&#34;</span>)
+        arr2 <span style="color:#f92672">=</span> version2<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;.&#34;</span>)
+        res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 
-<pre><code class="language-python">class Solution:
-    def compareVersion(self, version1, version2):
-        &quot;&quot;&quot;
-        :type version1: str
-        :type version2: str
-        :rtype: int
-        &quot;&quot;&quot;
-        if version1 == version2:
-            return 0
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(max(len(arr1), len(arr2))):
+            num1 <span style="color:#f92672">=</span> int(arr1[i]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&lt;</span> len(arr1) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+            num2 <span style="color:#f92672">=</span> int(arr2[i]) <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&lt;</span> len(arr2) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
 
-        arr1 = version1.split(&quot;.&quot;)
-        arr2 = version2.split(&quot;.&quot;)
-        res = 0
+            <span style="color:#66d9ef">if</span> num1 <span style="color:#f92672">&gt;</span> num2:
+                res <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">elif</span> num1 <span style="color:#f92672">&lt;</span> num2:
+                res <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-        for i in range(max(len(arr1), len(arr2))):
-            num1 = int(arr1[i]) if i &lt; len(arr1) else 0
-            num2 = int(arr2[i]) if i &lt; len(arr2) else 0
+            <span style="color:#66d9ef">if</span> res <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#66d9ef">return</span> res
 
-            if num1 &gt; num2:
-                res = 1
-            elif num1 &lt; num2:
-                res = -1
-
-            if res != 0:
-                return res
-
-        return
-</code></pre>
-
+        <span style="color:#66d9ef">return</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content=" Given an integer, write a function to determine if it is a power of two.
-Example 1 Input: 1 Output: true Explanation: 2**0 = 1  Example 2 Input: 16 Output: true Explanation: 2**4 = 16  Example 3 Input: 218 Output: false  Solution class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: bool &amp;quot;&amp;quot;&amp;quot; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False  " />
+  <meta name="description" content="Given an integer, write a function to determine if it is a power of two.
+Example 1 Input: 1 Output: true Explanation: 2**0 = 1 Example 2 Input: 16 Output: true Explanation: 2**4 = 16 Example 3 Input: 218 Output: false Solution class Solution: def isPowerOfTwo(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: bool &amp;#34;&amp;#34;&amp;#34; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False " />
   <meta name="keywords" content="leetcode bit-operation " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Power of Two" />
-    <meta name="twitter:description" content=" Given an integer, write a function to determine if it is a power of two.
-Example 1 Input: 1 Output: true Explanation: 2**0 = 1  Example 2 Input: 16 Output: true Explanation: 2**4 = 16  Example 3 Input: 218 Output: false  Solution class Solution: def isPowerOfTwo(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: bool &amp;quot;&amp;quot;&amp;quot; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False  " />
+    <meta name="twitter:description" content="Given an integer, write a function to determine if it is a power of two.
+Example 1 Input: 1 Output: true Explanation: 2**0 = 1 Example 2 Input: 16 Output: true Explanation: 2**4 = 16 Example 3 Input: 218 Output: false Solution class Solution: def isPowerOfTwo(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: bool &amp;#34;&amp;#34;&amp;#34; if n == 0: return False if n &amp;amp; (n - 1) == 0: return True return False " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/power-of-two/" />
@@ -190,45 +190,31 @@ Example 1 Input: 1 Output: true Explanation: 2**0 = 1  Example 2 Input: 16 Outpu
         <h5>Last updated: September 15, 2018</h5>
       
       <hr />
-      
-
-<p>Given an integer, write a function to determine if it is a power of two.</p>
-
+      <p>Given an integer, write a function to determine if it is a power of two.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: 1
 Output: true 
 Explanation: 2**0 = 1
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 16
 Output: true
 Explanation: 2**4 = 16
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: 218
 Output: false
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution:
-    def isPowerOfTwo(self, n):
-        &quot;&quot;&quot;
-        :type n: int
-        :rtype: bool
-        &quot;&quot;&quot;
-        if n == 0:
-            return False
-        if n &amp; (n - 1) == 0:
-            return True
-        return False
-</code></pre>
-
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPowerOfTwo</span>(self, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> False
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&amp;</span> (n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

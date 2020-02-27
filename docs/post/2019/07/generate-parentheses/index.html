@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 For example, given n = 3, a solution set is:
-[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ]  Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans." />
+[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ] Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; ans = [] self.dfs(ans, &amp;#39;&amp;#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans." />
   <meta name="keywords" content="leetcode python dfs backtracking " />
   
   
@@ -27,14 +27,14 @@ For example, given n = 3, a solution set is:
     <meta name="twitter:title" content="Generate Parentheses" />
     <meta name="twitter:description" content="Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 For example, given n = 3, a solution set is:
-[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ]  Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans." />
+[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ] Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; ans = [] self.dfs(ans, &amp;#39;&amp;#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/07/generate-parentheses/" />
@@ -196,12 +196,8 @@ For example, given n = 3, a solution set is:
         <h5>Last updated: July 22, 2019</h5>
       
       <hr />
-      
-
-<p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</p>
-
+      <p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</p>
 <p>For example, given <code>n = 3</code>, a solution set is:</p>
-
 <pre><code>[
   &quot;((()))&quot;,
   &quot;(()())&quot;,
@@ -209,32 +205,28 @@ For example, given n = 3, a solution set is:
   &quot;()(())&quot;,
   &quot;()()()&quot;
 ]
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generateParenthesis</span>(self, n: int) <span style="color:#f92672">-&gt;</span> List[str]:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: List[str]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        ans <span style="color:#f92672">=</span> []
+        self<span style="color:#f92672">.</span>dfs(ans, <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, n)
+        <span style="color:#66d9ef">return</span> ans
 
-<h3 id="solution">Solution</h3>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(self, ans, S, left, right, n):
+        <span style="color:#66d9ef">if</span> len(S) <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> n:
+            ans<span style="color:#f92672">.</span>append(S)
+            <span style="color:#66d9ef">return</span>
 
-<pre><code class="language-python">class Solution:
-    def generateParenthesis(self, n: int) -&gt; List[str]:
-        &quot;&quot;&quot;
-        :type n: int
-        :rtype: List[str]
-        &quot;&quot;&quot;
-        ans = []
-        self.dfs(ans, '', 0, 0, n)
-        return ans
+        <span style="color:#66d9ef">if</span> left <span style="color:#f92672">&lt;</span> n:
+            self<span style="color:#f92672">.</span>dfs(ans, S<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;(&#39;</span>, left<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, right, n)
 
-    def dfs(self, ans, S, left, right, n):
-        if len(S) == 2 * n:
-            ans.append(S)
-            return
-
-        if left &lt; n:
-            self.dfs(ans, S+'(', left+1, right, n)
-
-        if right &lt; left:
-            self.dfs(ans, S+')', left, right+1, n)
-</code></pre>
-
+        <span style="color:#66d9ef">if</span> right <span style="color:#f92672">&lt;</span> left:
+            self<span style="color:#f92672">.</span>dfs(ans, S<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;)&#39;</span>, left, right<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, n)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

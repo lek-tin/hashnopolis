@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Hashnopolis</title>
+    <title>python on Hashnopolis</title>
     <link>http://www.hashnopolis.com/tags/python/</link>
-    <description>Recent content in Python on Hashnopolis</description>
+    <description>Recent content in python on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
@@ -18,9 +18,9 @@
       <pubDate>Tue, 10 Sep 2019 12:01:01 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/</guid>
-      <description> Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+      <description>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
-Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: o(n) class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num+1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l += 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right += 1 l += 1 # Update longest longest = max(longest, l) return longest  </description>
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4. Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num+1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l += 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right += 1 l += 1 # Update longest longest = max(longest, l) return longest </description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@ Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecu
       <guid>http://www.hashnopolis.com/post/2019/08/climbing-stairs/</guid>
       <description>You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</description>
+Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanatio
       <description>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ]  ###Example 2:</description>
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@ Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: 
       <guid>http://www.hashnopolis.com/post/2019/07/generate-parentheses/</guid>
       <description>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 For example, given n = 3, a solution set is:
-[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ]  Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</description>
+[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ] Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; ans = [] self.dfs(ans, &amp;#39;&amp;#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</description>
     </item>
     
     <item>
@@ -64,9 +64,9 @@ For example, given n = 3, a solution set is:
       
       <guid>http://www.hashnopolis.com/post/2019/01/longest-common-prefix/</guid>
       <description>Write a function to find the longest common prefix string amongst an array of strings.
-If there is no common prefix, return an empty string &amp;ldquo;&amp;rdquo;.
-Example 1 Input: [&amp;quot;flower&amp;quot;,&amp;quot;flow&amp;quot;,&amp;quot;flight&amp;quot;] Output: &amp;quot;fl&amp;quot;  Example 2 Input: [&amp;quot;dog&amp;quot;,&amp;quot;racecar&amp;quot;,&amp;quot;car&amp;quot;] Output: &amp;quot;&amp;quot; Explanation: There is no common prefix among the input strings.  Note All given inputs are in lowercase letters a-z.
-Note # Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: str &amp;quot;&amp;quot;&amp;quot; if not strs or len(strs) == 0: return &amp;quot;&amp;quot; res = strs[0] for s in strs: # string.</description>
+If there is no common prefix, return an empty string &amp;ldquo;&amp;quot;.
+Example 1 Input: [&amp;quot;flower&amp;quot;,&amp;quot;flow&amp;quot;,&amp;quot;flight&amp;quot;] Output: &amp;quot;fl&amp;quot; Example 2 Input: [&amp;quot;dog&amp;quot;,&amp;quot;racecar&amp;quot;,&amp;quot;car&amp;quot;] Output: &amp;quot;&amp;quot; Explanation: There is no common prefix among the input strings. Note All given inputs are in lowercase letters a-z.
+Note # Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &amp;#34;&amp;#34;&amp;#34; :type strs: List[str] :rtype: str &amp;#34;&amp;#34;&amp;#34; if not strs or len(strs) == 0: return &amp;#34;&amp;#34; res = strs[0] for s in strs: # string.</description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@ Now you want to find out who the celebrity is or verify that there is not one. T
       <pubDate>Tue, 13 Nov 2018 22:05:44 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/arrays-in-python/</guid>
-      <description>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1]  Clone a list newArr = oldArr[:]</description>
+      <description>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1] Clone a list newArr = oldArr[:]</description>
     </item>
     
     <item>
@@ -106,7 +106,7 @@ Now you want to find out who the celebrity is or verify that there is not one. T
       
       <guid>http://www.hashnopolis.com/post/2018/11/integer-to-english-words/</guid>
       <description>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
-Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Example 2 Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot;  Example 3 Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot;  Example 4 Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot;  Solution class Solution: def __init__(self): self.</description>
+Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot; Example 2 Input: 12345 Output: &amp;quot;Twelve Thousand Three Hundred Forty Five&amp;quot; Example 3 Input: 1234567 Output: &amp;quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&amp;quot; Example 4 Input: 1234567891 Output: &amp;quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&amp;quot; Solution class Solution: def __init__(self): self.</description>
     </item>
     
     <item>
@@ -118,7 +118,7 @@ Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot;  Examp
       <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution import sys INT_MAX = sys.</description>
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import sys INT_MAX = sys.</description>
     </item>
     
     <item>
@@ -129,7 +129,7 @@ Note Your algorithm should run in O(n) time complexity and O(1) space complexity
       <guid>http://www.hashnopolis.com/post/2018/11/simplify-path/</guid>
       <description>Given an absolute path for a file (Unix-style), simplify it.
 For example, path = &amp;quot;/home/&amp;quot;, =&amp;gt; &amp;quot;/home&amp;quot; path = &amp;quot;/a/./b/../../c/&amp;quot;, =&amp;gt; &amp;quot;/c&amp;quot; path = &amp;quot;/a/../../b/../c//.//&amp;quot;, =&amp;gt; &amp;quot;/c&amp;quot; path = &amp;quot;/a//b////c/d//././/..&amp;quot;, =&amp;gt; &amp;quot;/a/b/c&amp;quot;
-In a UNIX-style file system, a period (&amp;lsquo;.&amp;rsquo;) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (&amp;ldquo;..&amp;rdquo;) moves up a directory, so it cancels out whatever the last directory was.</description>
+In a UNIX-style file system, a period (&#39;.&#39;) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (&amp;quot;..&amp;quot;) moves up a directory, so it cancels out whatever the last directory was.</description>
     </item>
     
     <item>
@@ -140,7 +140,7 @@ In a UNIX-style file system, a period (&amp;lsquo;.&amp;rsquo;) refers to the cu
       <guid>http://www.hashnopolis.com/post/2018/11/sort-colors/</guid>
       <description>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
-Note You are not suppose to use the library&amp;rsquo;s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2]  Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort.</description>
+Note You are not suppose to use the library&amp;rsquo;s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2] Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort.</description>
     </item>
     
     <item>
@@ -153,25 +153,14 @@ Note You are not suppose to use the library&amp;rsquo;s sort function for this p
     </item>
     
     <item>
-      <title>Product of Array Except Self</title>
-      <link>http://www.hashnopolis.com/post/2018/11/product-of-array-except-self/</link>
-      <pubDate>Sat, 03 Nov 2018 16:41:47 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/11/product-of-array-except-self/</guid>
-      <description>Given an array of n integers where n &amp;gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
-Solve it without division and in O(n).
-For example, given [1,2,3,4], return [24,12,8,6].
-Follow-up Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.</description>
-    </item>
-    
-    <item>
       <title>Count and Say</title>
       <link>http://www.hashnopolis.com/post/2018/11/count-and-say/</link>
       <pubDate>Sat, 03 Nov 2018 16:07:54 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/count-and-say/</guid>
       <description>The count-and-say sequence is the sequence of integers with the first five terms as following:
- 1 11 21 1211 111221 1 is read off as &amp;quot;one 1&amp;quot; or 11. 11 is read off as &amp;quot;two 1s&amp;quot; or 21. 21 is read off as &amp;quot;one 2, then one 1&amp;quot; or 1211.  Given an integer n where 1 ≤ n ≤ 30, generate the nth term of the count-and-say sequence.</description>
+ 1 11 21 1211 111221 1 is read off as &amp;quot;one 1&amp;quot; or 11. 11 is read off as &amp;quot;two 1s&amp;quot; or 21. 21 is read off as &amp;quot;one 2, then one 1&amp;quot; or 1211.  Given an integer n where 1 ≤ n ≤ 30, generate the nthterm of the count-and-say sequence.
+Note: Each term of the sequence of integers will be represented as a string.</description>
     </item>
     
     <item>
@@ -182,7 +171,7 @@ Follow-up Could you solve it with constant space complexity? (Note: The output a
       <guid>http://www.hashnopolis.com/post/2018/11/implement-strstr/</guid>
       <description>Implement strstr().
 Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
-Example 1 Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Output: 2  Example 2 Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1  Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
+Example 1 Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Output: 2 Example 2 Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1 Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
 For the purpose of this problem, we will return 0 when needle is an empty string.</description>
     </item>
     
@@ -194,7 +183,7 @@ For the purpose of this problem, we will return 0 when needle is an empty string
       <guid>http://www.hashnopolis.com/post/2018/10/h-index/</guid>
       <description>Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher&amp;rsquo;s h-index.
 According to the definition of h-index on Wikipedia: &amp;ldquo;A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.&amp;rdquo;
-Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.</description>
+Example Input: citations = [3,0,6,1,5] Output: 3 Explanation [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.</description>
     </item>
     
     <item>
@@ -204,7 +193,7 @@ Example Input: citations = [3,0,6,1,5] Output: 3  Explanation [3,0,6,1,5] means 
       
       <guid>http://www.hashnopolis.com/post/2018/10/integer-to-roman/</guid>
       <description>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.</description>
+Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.</description>
     </item>
     
     <item>
@@ -234,7 +223,7 @@ A happy number is a number defined by the following process: Starting with any p
       
       <guid>http://www.hashnopolis.com/post/2018/10/multiply-strings/</guid>
       <description>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
-Example 1 Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Output: &amp;quot;6&amp;quot;  Example 2 Input: num1 = &amp;quot;123&amp;quot;, num2 = &amp;quot;456&amp;quot; Output: &amp;quot;56088&amp;quot;  Note  The length of both num1 and num2 is &amp;lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself.</description>
+Example 1 Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Output: &amp;quot;6&amp;quot; Example 2 Input: num1 = &amp;quot;123&amp;quot;, num2 = &amp;quot;456&amp;quot; Output: &amp;quot;56088&amp;quot; Note  The length of both num1 and num2 is &amp;lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself.</description>
     </item>
     
     <item>
@@ -254,7 +243,7 @@ You may assume that the version strings are non-empty and contain only digits an
       
       <guid>http://www.hashnopolis.com/post/2018/10/subsets-ii/</guid>
       <description>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution # Time: o(2^n) # Space: o(n) class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
     </item>
     
     <item>
@@ -278,7 +267,7 @@ Credits: Special thanks to @jianchao.li.fighter for adding this problem and crea
       <guid>http://www.hashnopolis.com/post/2018/09/ugly-number/</guid>
       <description>Write a program to check whether a given number is an ugly number.
 Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2 Input: 8 Output: true Explanation: 8 = 2 × 2 × 2  Example 3 Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7.</description>
+Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3 Example 2 Input: 8 Output: true Explanation: 8 = 2 × 2 × 2 Example 3 Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7. Note  1 is typically treated as an ugly number.</description>
     </item>
     
     <item>
@@ -290,8 +279,8 @@ Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3  Example 2 Input: 8 Outp
       <description>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
 Note:
 All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
-Input: k = 3, n = 7 Output: [[1,2,4]]  Example 2:
-Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution: def combinationSum3(self, k, n): &amp;quot;&amp;quot;&amp;quot; :type k: int :type n: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; self.</description>
+Input: k = 3, n = 7 Output: [[1,2,4]] Example 2:
+Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]] Solution class Solution: def combinationSum3(self, k, n): &amp;#34;&amp;#34;&amp;#34; :type k: int :type n: int :rtype: List[List[int]] &amp;#34;&amp;#34;&amp;#34; self.</description>
     </item>
     
     <item>
@@ -303,7 +292,7 @@ Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]]  Solution class Solution
       <description>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 The same repeated number may be chosen from candidates unlimited number of times.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ]  Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ]  Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&amp;gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</description>
+Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ] Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&amp;gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</description>
     </item>
     
     <item>
@@ -313,7 +302,7 @@ Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [
       
       <guid>http://www.hashnopolis.com/post/2018/09/combinations/</guid>
       <description>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution class Solution: def combine(self, n, k): &amp;quot;&amp;quot;&amp;quot; :type n: int :type k: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] nums = list(range(1, n+1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans.</description>
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n, k): &amp;#34;&amp;#34;&amp;#34; :type n: int :type k: int :rtype: List[List[int]] &amp;#34;&amp;#34;&amp;#34; res = [] nums = list(range(1, n+1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans.</description>
     </item>
     
     <item>
@@ -323,7 +312,7 @@ Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], 
       
       <guid>http://www.hashnopolis.com/post/2018/09/combine-two-tables/</guid>
       <description>Table: Person
-+-------------+---------+ | Column Name | Type | +-------------+---------+ | PersonId | int | | FirstName | varchar | | LastName | varchar | +-------------+---------+ PersonId is the primary key column for this table.  Table: Address
++-------------+---------+ | Column Name | Type | +-------------+---------+ | PersonId | int | | FirstName | varchar | | LastName | varchar | +-------------+---------+ PersonId is the primary key column for this table. Table: Address
 +-------------+---------+ | Column Name | Type | +-------------+---------+ | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | +-------------+---------+ AddressId is the primary key column for this table.</description>
     </item>
     
@@ -347,7 +336,7 @@ Example 1 Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) a
       <guid>http://www.hashnopolis.com/post/2018/08/57.-insert-interval/</guid>
       <description>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
 You may assume that the intervals were initially sorted according to their start times.
-Example 1 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]  Example 2 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</description>
+Example 1 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]] Example 2 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10]. Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</description>
     </item>
     
     <item>
@@ -360,8 +349,8 @@ Example 1 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[
 (i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
 You are given a target value to search. If found in the array return true, otherwise return false.
 Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</description>
+Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true Example 2:
+Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</description>
     </item>
     
   </channel>

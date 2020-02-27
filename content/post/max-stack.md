@@ -90,7 +90,7 @@ class MaxStack {
 Idea 2: double linked list + treeMap
 ```java
 // Time: O(logN) for all operations except peek which is O(1)
-// Space: O(N)
+// Space: `O(n)`
 class MaxStack {
     TreeMap<Integer, List<Node>> map;
     DoubleLinkedList dll;

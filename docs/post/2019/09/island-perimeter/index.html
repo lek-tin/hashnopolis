@@ -34,7 +34,7 @@ The island doesn&amp;rsquo;t have &amp;ldquo;lakes&amp;rdquo; (water inside that
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/island-perimeter/" />
@@ -192,16 +192,10 @@ The island doesn&amp;rsquo;t have &amp;ldquo;lakes&amp;rdquo; (water inside that
         <h5>Last updated: September 27, 2019</h5>
       
       <hr />
-      
-
-<p>You are given a map in form of a two-dimensional integer grid where <code>1</code> represents land and <code>0</code> represents water.</p>
-
+      <p>You are given a map in form of a two-dimensional integer grid where <code>1</code> represents land and <code>0</code> represents water.</p>
 <p>Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).</p>
-
 <p>The island doesn&rsquo;t have &ldquo;lakes&rdquo; (water inside that isn&rsquo;t connected to the water around the island). One cell is a square with side length 1. The grid is rectangular, width and height don&rsquo;t exceed 100. Determine the perimeter of the island.</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Input:
 [
   [0,1,0,0],
@@ -211,35 +205,29 @@ The island doesn&amp;rsquo;t have &amp;ldquo;lakes&amp;rdquo; (water inside that
 ]
 
 Output: 16
-</code></pre>
-
-<h3 id="explanation">Explanation:</h3>
-
+</code></pre><h3 id="explanation">Explanation:</h3>
 <p>The perimeter is the 16 yellow stripes in the image below:
-<img src="/img/post/island-perimeter-example.png" alt="Island Perimeter Example" /></p>
-
+<img src="/img/post/island-perimeter-example.png" alt="Island Perimeter Example"></p>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">islandPerimeter</span>(self, grid: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> grid <span style="color:#f92672">or</span> len(grid) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> len(grid[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        row, col, perimeter <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+        directions <span style="color:#f92672">=</span> set([ (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) ])
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(grid)):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(grid[<span style="color:#ae81ff">0</span>])):
+                <span style="color:#66d9ef">if</span> grid[i][j] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+                    <span style="color:#66d9ef">for</span> dir <span style="color:#f92672">in</span> directions:
+                        perimeter <span style="color:#f92672">+=</span> self<span style="color:#f92672">.</span>search(i<span style="color:#f92672">+</span>dir[<span style="color:#ae81ff">0</span>], j<span style="color:#f92672">+</span>dir[<span style="color:#ae81ff">1</span>], grid)
+        <span style="color:#66d9ef">return</span> perimeter
 
-<pre><code class="language-python">class Solution:
-    def islandPerimeter(self, grid: List[List[int]]) -&gt; int:
-        if not grid or len(grid) == 0 or len(grid[0]) == 0:
-            return 0
-        row, col, perimeter = 0, 0, 0
-        directions = set([ (1, 0), (-1, 0), (0, 1), (0, -1) ])
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
-                if grid[i][j] == 1:
-                    for dir in directions:
-                        perimeter += self.search(i+dir[0], j+dir[1], grid)
-        return perimeter
-
-    def search(self, row, col, grid):
-        if row &lt; 0 or row &gt;= len(grid) or col &lt; 0 or col &gt;= len(grid[0]) or grid[row][col] == 0:
-            return 1
-        elif grid[row][col] == 1:
-            return 0
-</code></pre>
-
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, row, col, grid):
+        <span style="color:#66d9ef">if</span> row <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> row <span style="color:#f92672">&gt;=</span> len(grid) <span style="color:#f92672">or</span> col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> col <span style="color:#f92672">&gt;=</span> len(grid[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">or</span> grid[row][col] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">elif</span> grid[row][col] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

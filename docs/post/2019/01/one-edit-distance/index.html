@@ -17,8 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given two strings s and t, determine if they are both one edit distance apart.
-Note There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t
-Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t." />
+Note There are 3 possiblities to satisify one edit distance apart:
+ Insert a character into s to get t Delete a character from s to get t Replace a character of s to get t  Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t." />
   <meta name="keywords" content="leetcode string two-pointers " />
   
   
@@ -26,15 +26,15 @@ Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output:
     
     <meta name="twitter:title" content="One Edit Distance" />
     <meta name="twitter:description" content="Given two strings s and t, determine if they are both one edit distance apart.
-Note There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t
-Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t." />
+Note There are 3 possiblities to satisify one edit distance apart:
+ Insert a character into s to get t Delete a character from s to get t Replace a character of s to get t  Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output: true Explanation: We can insert &#39;c&#39; into s to get t." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/one-edit-distance/" />
@@ -194,85 +194,71 @@ Example 1 Input: s = &amp;quot;ab&amp;quot;, t = &amp;quot;acb&amp;quot; Output:
         <h5>Last updated: January 16, 2019</h5>
       
       <hr />
-      
-
-<p>Given two strings s and t, determine if they are both one edit distance apart.</p>
-
+      <p>Given two strings s and t, determine if they are both one edit distance apart.</p>
 <h3 id="note">Note</h3>
-
-<p>There are 3 possiblities to satisify one edit distance apart:
-1. Insert a character into s to get t
-2. Delete a character from s to get t
-3. Replace a character of s to get t</p>
-
+<p>There are 3 possiblities to satisify one edit distance apart:</p>
+<ol>
+<li>Insert a character into s to get t</li>
+<li>Delete a character from s to get t</li>
+<li>Replace a character of s to get t</li>
+</ol>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: s = &quot;ab&quot;, t = &quot;acb&quot;
 Output: true
 Explanation: We can insert 'c' into s to get t.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: s = &quot;cab&quot;, t = &quot;ad&quot;
 Output: false
 Explanation: We cannot get t from s by only one step.
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: s = &quot;1203&quot;, t = &quot;1213&quot;
 Output: true
 Explanation: We can replace '0' with '1' to get t.
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution(object):
-    def isOneEditDistance(self, s1, s2):
-        &quot;&quot;&quot;
-        :type s: str
-        :type t: str
-        :rtype: bool
-        &quot;&quot;&quot;
-        if len(s1) == len(s2):
-            return self.one_edit_replace(s1, s2)
-        elif len(s1) + 1 == len(s2):
-            return self.one_edit_insert(s1, s2)
-        elif len(s1) - 1 == len(s2):
-            return self.one_edit_insert(s2, s1)
-        # Greater than 1 in length
-        return False
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isOneEditDistance</span>(self, s1, s2):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type s: str
+</span><span style="color:#e6db74">        :type t: str
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> len(s1) <span style="color:#f92672">==</span> len(s2):
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>one_edit_replace(s1, s2)
+        <span style="color:#66d9ef">elif</span> len(s1) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> len(s2):
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>one_edit_insert(s1, s2)
+        <span style="color:#66d9ef">elif</span> len(s1) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> len(s2):
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>one_edit_insert(s2, s1)
+        <span style="color:#75715e"># Greater than 1 in length</span>
+        <span style="color:#66d9ef">return</span> False
 
 
-    def one_edit_replace(self, s1, s2):
-        edited = False
-        i = 0
-        while i &lt; len(s1):
-            if s1[i] != s2[i]:
-                if edited:
-                    return False
-                edited = True
-            i += 1
-        return edited
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">one_edit_replace</span>(self, s1, s2):
+        edited <span style="color:#f92672">=</span> False
+        i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s1):
+            <span style="color:#66d9ef">if</span> s1[i] <span style="color:#f92672">!=</span> s2[i]:
+                <span style="color:#66d9ef">if</span> edited:
+                    <span style="color:#66d9ef">return</span> False
+                edited <span style="color:#f92672">=</span> True
+            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> edited
 
 
-    def one_edit_insert(self, s1, s2):
-        edited = False
-        i, j = 0, 0
-        while i &lt; len(s1) and j &lt; len(s2):
-            if s1[i] != s2[j]:
-                if edited:
-                    return False
-                edited = True
-                j += 1
-            else:
-                i += 1
-                j += 1
-        # (&quot;ab&quot;, &quot;abc&quot;) or (&quot;acd&quot;, &quot;abcd&quot;)
-        return True
-</code></pre>
-
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">one_edit_insert</span>(self, s1, s2):
+        edited <span style="color:#f92672">=</span> False
+        i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s1) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(s2):
+            <span style="color:#66d9ef">if</span> s1[i] <span style="color:#f92672">!=</span> s2[j]:
+                <span style="color:#66d9ef">if</span> edited:
+                    <span style="color:#66d9ef">return</span> False
+                edited <span style="color:#f92672">=</span> True
+                j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#75715e"># (&#34;ab&#34;, &#34;abc&#34;) or (&#34;acd&#34;, &#34;abcd&#34;)</span>
+        <span style="color:#66d9ef">return</span> True
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

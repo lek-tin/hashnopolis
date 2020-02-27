@@ -16,21 +16,21 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content=" Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&amp;lt;Integer&amp;gt; cache = new LinkedList&amp;lt;&amp;gt;(); int count = 0; for (int i = 0; i &amp;lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  " />
+  <meta name="description" content="Solution public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&amp;lt;Integer&amp;gt; cache = new LinkedList&amp;lt;&amp;gt;(); int count = 0; for (int i = 0; i &amp;lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } } " />
   <meta name="keywords" content="leetcode lru-cache " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="LRU Cache Miss Count" />
-    <meta name="twitter:description" content=" Solution: public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&amp;lt;Integer&amp;gt; cache = new LinkedList&amp;lt;&amp;gt;(); int count = 0; for (int i = 0; i &amp;lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } }  " />
+    <meta name="twitter:description" content="Solution public class CacheMiss { public int missCount(int[] array, int size) { if (array == null) return 0; List&amp;lt;Integer&amp;gt; cache = new LinkedList&amp;lt;&amp;gt;(); int count = 0; for (int i = 0; i &amp;lt; array.length; i&#43;&#43;) { if (cache.contains(array[i])) { cache.remove(new Integer(array[i])); } else { count&#43;&#43;; if (size == cache.size()) cache.remove(0); } cache.add(array[i]); } return count; } } " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/lru-cache-miss-count/" />
@@ -188,30 +188,26 @@
         <h5>Last updated: March 26, 2019</h5>
       
       <hr />
-      
-
-<h3 id="solution">Solution:</h3>
-
-<pre><code class="language-java">public class CacheMiss {
-    public int missCount(int[] array, int size) {
-        if (array == null) return 0;
-        List&lt;Integer&gt; cache = new LinkedList&lt;&gt;();
-        int count = 0;
-        for (int i = 0; i &lt; array.length; i++) {
-            if (cache.contains(array[i])) {
-                cache.remove(new Integer(array[i]));
-            } else {
-                count++;
-                if (size == cache.size())
-                    cache.remove(0);
-            }
-            cache.add(array[i]);
-        }
-        return count;
-    }
-}
-</code></pre>
-
+      <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CacheMiss</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">missCount</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> size<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>array <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> cache <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cache<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>array<span style="color:#f92672">[</span>i<span style="color:#f92672">]))</span> <span style="color:#f92672">{</span>
+                cache<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">(</span>array<span style="color:#f92672">[</span>i<span style="color:#f92672">]));</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                count<span style="color:#f92672">++;</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>size <span style="color:#f92672">==</span> cache<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">())</span>
+                    cache<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+            cache<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>array<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> count<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

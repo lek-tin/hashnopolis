@@ -17,8 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given two arrays, write a function to compute their intersection.
-Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
-Solution Use binary search when one of the lists is very long and the other is short
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2] Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4] Note  Each element in the result must be unique. The result can be in any order.  Solution Use binary search when one of the lists is very long and the other is short
 class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: if len(nums1) &amp;lt; len(nums2): return self." />
   <meta name="keywords" content="leetcode array hashset " />
   
@@ -27,8 +26,7 @@ class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp
     
     <meta name="twitter:title" content="Intersection of Two Arrays" />
     <meta name="twitter:description" content="Given two arrays, write a function to compute their intersection.
-Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
-Solution Use binary search when one of the lists is very long and the other is short
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2] Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4] Note  Each element in the result must be unique. The result can be in any order.  Solution Use binary search when one of the lists is very long and the other is short
 class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: if len(nums1) &amp;lt; len(nums2): return self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
@@ -36,7 +34,7 @@ class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/" />
@@ -196,120 +194,100 @@ class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp
         <h5>Last updated: November 28, 2018</h5>
       
       <hr />
-      
-
-<p>Given two arrays, write a function to compute their intersection.</p>
-
+      <p>Given two arrays, write a function to compute their intersection.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: nums1 = [1,2,2,1], nums2 = [2,2]
 Output: [2]
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [9,4]
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <ul>
 <li>Each element in the result must be unique.</li>
-
-<li><p>The result can be in any order.</p>
-
-<h3 id="solution">Solution</h3>
-
-<p>Use binary search when one of the lists is very long and the other is short</p>
-
-<pre><code class="language-python">class Solution:
-def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
-    if len(nums1) &lt; len(nums2):
-        return self.intersection(nums2, nums1)
-
-    nums1.sort()
-    res = []
-
-    for target in set(nums2):
-        left, right = 0, len(nums1)-1
-        while left &lt;= right:
-            mid = left + (right-left)//2
-            if nums1[mid] == target:
-                res.append(target)
-                break
-            elif nums1[mid] &lt; target:
-                left = mid + 1
-            else:
-                right = mid - 1
-
-    return res
-</code></pre>
-
-<p>Use <code>hashset</code></p>
-
-<pre><code class="language-python">class Solution:
-def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]:
-    lookup = {}
-    res = set()
-    for num in nums1:
-        lookup[num] = 1
-
-    for num in nums2:
-        if num in lookup:
-            res.add(num)
-
-    return res
-</code></pre>
-
-<pre><code class="language-java">class Solution {
-public int[] intersection(int[] nums1, int[] nums2) {
-
-    if (nums1.length &lt; nums2.length) {
-        return intersection(nums2, nums1);
-    }
-
-    List&lt;Integer&gt; intersection = new ArrayList&lt;&gt;();
-    HashMap&lt;Integer, Integer&gt; map1 = new HashMap&lt;&gt;();
-    HashMap&lt;Integer, Integer&gt; map2 = new HashMap&lt;&gt;();
-
-    for (int num: nums1) {
-        if (map1.get(num) == null) {
-            map1.put(num, 1);
-        } else {
-            map1.put(num, map1.get(num)+1);
-        }
-    }
-
-    for (int num: nums2) {
-        if (map2.get(num) == null) {
-            map2.put(num, 1);
-        } else {
-            map2.put(num, map2.get(num)+1);
-        }
-    }
-
-    for (Map.Entry&lt;Integer, Integer&gt; entry: map1.entrySet()) {
-        int numOfElements1 = entry.getValue();
-        int numOfElements2 = map2.get(entry.getKey()) == null ? 0 : map2.get(entry.getKey());
-
-        if (Math.min(numOfElements1, numOfElements2) &gt; 0) {
-            intersection.add(entry.getKey());
-        }
-
-    }
-
-    int[] res = new int[intersection.size()];
-    for (int i = 0; i &lt; intersection.size(); i++) {
-        res[i] = intersection.get(i);
-    }
-
-    return res;
-}
-}
-</code></pre></li>
+<li>The result can be in any order.</li>
 </ul>
+<h3 id="solution">Solution</h3>
+<p>Use binary search when one of the lists is very long and the other is short</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">intersection</span>(self, nums1: List[int], nums2: List[int]) <span style="color:#f92672">-&gt;</span> List[int]:
+        <span style="color:#66d9ef">if</span> len(nums1) <span style="color:#f92672">&lt;</span> len(nums2):
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>intersection(nums2, nums1)
 
+        nums1<span style="color:#f92672">.</span>sort()
+        res <span style="color:#f92672">=</span> []
+
+        <span style="color:#66d9ef">for</span> target <span style="color:#f92672">in</span> set(nums2):
+            left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(nums1)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
+                mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right<span style="color:#f92672">-</span>left)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+                <span style="color:#66d9ef">if</span> nums1[mid] <span style="color:#f92672">==</span> target:
+                    res<span style="color:#f92672">.</span>append(target)
+                    <span style="color:#66d9ef">break</span>
+                <span style="color:#66d9ef">elif</span> nums1[mid] <span style="color:#f92672">&lt;</span> target:
+                    left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">else</span>:
+                    right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div><p>Use <code>hashset</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">intersection</span>(self, nums1: List[int], nums2: List[int]) <span style="color:#f92672">-&gt;</span> List[int]:
+        lookup <span style="color:#f92672">=</span> {}
+        res <span style="color:#f92672">=</span> set()
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> nums1:
+            lookup[num] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> nums2:
+            <span style="color:#66d9ef">if</span> num <span style="color:#f92672">in</span> lookup:
+                res<span style="color:#f92672">.</span>add(num)
+
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">intersection</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums1<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> nums2<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> intersection<span style="color:#f92672">(</span>nums2<span style="color:#f92672">,</span> nums1<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> intersection <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        HashMap<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> map1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+        HashMap<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> map2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> num<span style="color:#f92672">:</span> nums1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>map1<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>num<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                map1<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> 1<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                map1<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> map1<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>num<span style="color:#f92672">)+</span>1<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> num<span style="color:#f92672">:</span> nums2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>map2<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>num<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                map2<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> 1<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                map2<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> map2<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>num<span style="color:#f92672">)+</span>1<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> entry<span style="color:#f92672">:</span> map1<span style="color:#f92672">.</span><span style="color:#a6e22e">entrySet</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> numOfElements1 <span style="color:#f92672">=</span> entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">();</span>
+            <span style="color:#66d9ef">int</span> numOfElements2 <span style="color:#f92672">=</span> map2<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">())</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">?</span> 0 <span style="color:#f92672">:</span> map2<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">());</span>
+
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>numOfElements1<span style="color:#f92672">,</span> numOfElements2<span style="color:#f92672">)</span> <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                intersection<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">());</span>
+            <span style="color:#f92672">}</span>
+
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>intersection<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()];</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> intersection<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            res<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> intersection<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

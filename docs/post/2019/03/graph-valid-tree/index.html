@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given n nodes labeled from 0 to n-1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
 ###Example 1:
-Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true  Example 2: Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false  ###Note: you can assume that no duplicate edges will appear in edges." />
+Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true Example 2: Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false ###Note: you can assume that no duplicate edges will appear in edges." />
   <meta name="keywords" content="leetcode graph " />
   
   
@@ -27,14 +27,14 @@ Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true  Example 2: 
     <meta name="twitter:title" content="Graph Valid Tree" />
     <meta name="twitter:description" content="Given n nodes labeled from 0 to n-1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
 ###Example 1:
-Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true  Example 2: Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false  ###Note: you can assume that no duplicate edges will appear in edges." />
+Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true Example 2: Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false ###Note: you can assume that no duplicate edges will appear in edges." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/graph-valid-tree/" />
@@ -192,72 +192,57 @@ Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true  Example 2: 
         <h5>Last updated: March 6, 2019</h5>
       
       <hr />
-      
-
-<p>Given <code>n</code> nodes labeled from <code>0</code> to <code>n-1</code> and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.</p>
-
+      <p>Given <code>n</code> nodes labeled from <code>0</code> to <code>n-1</code> and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.</p>
 <p>###Example 1:</p>
-
 <pre><code>Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]]
 Output: true
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]]
 Output: false
-</code></pre>
-
-<p>###Note:
+</code></pre><p>###Note:
 you can assume that no duplicate edges will appear in edges. Since all edges are undirected, <code>[0,1]</code> is the same as <code>[1,0]</code> and thus will not appear together in edges.</p>
-
 <h3 id="solution">Solution</h3>
-
 <p>A valid tree has (n - 1) edges and all vertices are connected. depth first search:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">validTree</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> edges<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> graph <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        HashSet<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> visited <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;();</span>
 
-<pre><code class="language-java">class Solution {
-    public boolean validTree(int n, int[][] edges) {
-        List&lt;List&lt;Integer&gt;&gt; graph = new ArrayList&lt;&gt;();
-        HashSet&lt;Integer&gt; visited = new HashSet&lt;&gt;();
+        <span style="color:#75715e">// Create a list to store each vertice&#39;s neighbors
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            graph<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;());</span>
+        <span style="color:#f92672">}</span>
 
-        // Create a list to store each vertice's neighbors
-        for (int i =0; i &lt; n; i++) {
-            graph.add(new ArrayList&lt;&gt;());
-        }
+        <span style="color:#75715e">// add each vertice&#39;s neighbors to itself. Both ways 1 &lt;=&gt; 2
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> edges<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            graph<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>edges<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>edges<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]);</span>
+            graph<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>edges<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>edges<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]);</span>
+        <span style="color:#f92672">}</span>
 
-        // add each vertice's neighbors to itself. Both ways 1 &lt;=&gt; 2
-        for (int i = 0; i &lt; edges.length; i++) {
-            graph.get(edges[i][0]).add(edges[i][1]);
-            graph.get(edges[i][1]).add(edges[i][0]);
-        }
+        <span style="color:#75715e">// n nodes labeled from 0 to n-1
+</span><span style="color:#75715e"></span>        visited<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
 
-        // n nodes labeled from 0 to n-1
-        visited.add(0);
+        <span style="color:#66d9ef">boolean</span> res <span style="color:#f92672">=</span> dfs<span style="color:#f92672">(</span>graph<span style="color:#f92672">,</span> visited<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>res <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">!=</span> visited<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">())</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-        boolean res = dfs(graph, visited, 0, -1);
-        if (res == false) return false;
-        if (n != visited.size()) return false;
-        return true;
-    }
-
-    private boolean dfs(List&lt;List&lt;Integer&gt;&gt; graph, HashSet&lt;Integer&gt; visited, int node, int parent) {
-        List&lt;Integer&gt; neighbors = graph.get(node);
-        for (int n: neighbors) {
-            if (n == parent) continue;
-            // A loop detected -&gt; not a valid tree -&gt; exit
-            if (visited.contains(n)) return false;
-            visited.add(n);
-            boolean res = dfs(graph, visited, n, node);
-            if (res == false) return false;
-        }
-        return true;
-    }
-}
-</code></pre>
-
-<p>Union-find
-```java</p>
-
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">dfs</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> graph<span style="color:#f92672">,</span> HashSet<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> visited<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> node<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> parent<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> neighbors <span style="color:#f92672">=</span> graph<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>node<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">:</span> neighbors<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">==</span> parent<span style="color:#f92672">)</span> <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
+            <span style="color:#75715e">// A loop detected -&gt; not a valid tree -&gt; exit
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>visited<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>n<span style="color:#f92672">))</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+            visited<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>n<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">boolean</span> res <span style="color:#f92672">=</span> dfs<span style="color:#f92672">(</span>graph<span style="color:#f92672">,</span> visited<span style="color:#f92672">,</span> n<span style="color:#f92672">,</span> node<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>res <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Union-find</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"></code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

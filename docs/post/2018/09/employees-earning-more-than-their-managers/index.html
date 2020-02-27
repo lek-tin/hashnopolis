@@ -16,21 +16,21 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="# SQL Schema: Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int) Truncate table Employee insert into Employee (Id, Name, Salary, ManagerId) values (&#39;1&#39;, &#39;Joe&#39;, &#39;70000&#39;, &#39;3&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;2&#39;, &#39;Henry&#39;, &#39;80000&#39;, &#39;4&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;3&#39;, &#39;Sam&#39;, &#39;60000&#39;, &#39;None&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;4&#39;, &#39;Max&#39;, &#39;90000&#39;, &#39;None&#39;)  The Employee table holds all employees including their managers." />
+  <meta name="description" content="# SQL Schema: Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int) Truncate table Employee insert into Employee (Id, Name, Salary, ManagerId) values (&#39;1&#39;, &#39;Joe&#39;, &#39;70000&#39;, &#39;3&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;2&#39;, &#39;Henry&#39;, &#39;80000&#39;, &#39;4&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;3&#39;, &#39;Sam&#39;, &#39;60000&#39;, &#39;None&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;4&#39;, &#39;Max&#39;, &#39;90000&#39;, &#39;None&#39;) The Employee table holds all employees including their managers." />
   <meta name="keywords" content="leetcode sql " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Employees Earning More Than Their Managers" />
-    <meta name="twitter:description" content="# SQL Schema: Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int) Truncate table Employee insert into Employee (Id, Name, Salary, ManagerId) values (&#39;1&#39;, &#39;Joe&#39;, &#39;70000&#39;, &#39;3&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;2&#39;, &#39;Henry&#39;, &#39;80000&#39;, &#39;4&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;3&#39;, &#39;Sam&#39;, &#39;60000&#39;, &#39;None&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;4&#39;, &#39;Max&#39;, &#39;90000&#39;, &#39;None&#39;)  The Employee table holds all employees including their managers." />
+    <meta name="twitter:description" content="# SQL Schema: Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int) Truncate table Employee insert into Employee (Id, Name, Salary, ManagerId) values (&#39;1&#39;, &#39;Joe&#39;, &#39;70000&#39;, &#39;3&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;2&#39;, &#39;Henry&#39;, &#39;80000&#39;, &#39;4&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;3&#39;, &#39;Sam&#39;, &#39;60000&#39;, &#39;None&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;4&#39;, &#39;Max&#39;, &#39;90000&#39;, &#39;None&#39;) The Employee table holds all employees including their managers." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/" />
@@ -188,19 +188,14 @@
         <h5>Last updated: September 12, 2018</h5>
       
       <hr />
-      
-
-<pre><code># SQL Schema:   
+      <pre><code># SQL Schema:   
 Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int)
 Truncate table Employee
 insert into Employee (Id, Name, Salary, ManagerId) values ('1', 'Joe', '70000', '3')
 insert into Employee (Id, Name, Salary, ManagerId) values ('2', 'Henry', '80000', '4')
 insert into Employee (Id, Name, Salary, ManagerId) values ('3', 'Sam', '60000', 'None')
 insert into Employee (Id, Name, Salary, ManagerId) values ('4', 'Max', '90000', 'None')
-</code></pre>
-
-<p>The <code>Employee</code> table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.</p>
-
+</code></pre><p>The <code>Employee</code> table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.</p>
 <pre><code>+----+-------+--------+-----------+
 | Id | Name  | Salary | ManagerId |
 +----+-------+--------+-----------+
@@ -209,42 +204,31 @@ insert into Employee (Id, Name, Salary, ManagerId) values ('4', 'Max', '90000', 
 | 3  | Sam   | 60000  | NULL      |
 | 4  | Max   | 90000  | NULL      |
 +----+-------+--------+-----------+
-</code></pre>
-
-<p>Given the <code>Employee</code> table, write a SQL query that finds out employees who earn more than their managers. For the above table, Joe is the only employee who earns more than his manager.</p>
-
+</code></pre><p>Given the <code>Employee</code> table, write a SQL query that finds out employees who earn more than their managers. For the above table, Joe is the only employee who earns more than his manager.</p>
 <pre><code>+----------+
 | Employee |
 +----------+
 | Joe      |
 +----------+
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
+</code></pre><h3 id="solution">Solution</h3>
 <p><code>WHERE</code>:</p>
-
-<pre><code class="language-sql">SELECT
-    *
-FROM
-    Employee AS a,
-    Employee AS b
-WHERE
-    a.ManagerId = b.Id
-        AND a.Salary &gt; b.Salary
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+    <span style="color:#f92672">*</span>
+<span style="color:#66d9ef">FROM</span>
+    Employee <span style="color:#66d9ef">AS</span> a,
+    Employee <span style="color:#66d9ef">AS</span> b
+<span style="color:#66d9ef">WHERE</span>
+    a.ManagerId <span style="color:#f92672">=</span> b.Id
+        <span style="color:#66d9ef">AND</span> a.Salary <span style="color:#f92672">&gt;</span> b.Salary
 ;
-</code></pre>
-
-<p><code>JOIN</code> - more efficient:</p>
-
-<pre><code class="language-sql">SELECT
-     a.NAME AS Employee
-FROM Employee AS a JOIN Employee AS b
-     ON a.ManagerId = b.Id
-     AND a.Salary &gt; b.Salary
+</code></pre></div><p><code>JOIN</code> - more efficient:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+     a.NAME <span style="color:#66d9ef">AS</span> Employee
+<span style="color:#66d9ef">FROM</span> Employee <span style="color:#66d9ef">AS</span> a <span style="color:#66d9ef">JOIN</span> Employee <span style="color:#66d9ef">AS</span> b
+     <span style="color:#66d9ef">ON</span> a.ManagerId <span style="color:#f92672">=</span> b.Id
+     <span style="color:#66d9ef">AND</span> a.Salary <span style="color:#f92672">&gt;</span> b.Salary
 ;
-</code></pre>
-
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

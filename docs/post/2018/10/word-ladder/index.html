@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 1. Only one letter can be changed at a time. 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
-Note  Return 0 if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
+  <meta name="description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
+ Only one letter can be changed at a time. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note  Return 0 if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
   <meta name="keywords" content="leetcode bfs bidirectional-bfs bidirectional-search " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Word Ladder" />
-    <meta name="twitter:description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: 1. Only one letter can be changed at a time. 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
-Note  Return 0 if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
+    <meta name="twitter:description" content="Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
+ Only one letter can be changed at a time. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note  Return 0 if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/word-ladder/" />
@@ -194,139 +194,124 @@ Note  Return 0 if there is no such transformation sequence. All words have the s
         <h5>Last updated: November 30, 2019</h5>
       
       <hr />
-      
-
-<p>Given two words (beginWord and endWord), and a dictionary&rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
-1. Only one letter can be changed at a time.
-2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.</p>
-
+      <p>Given two words (beginWord and endWord), and a dictionary&rsquo;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that:</p>
+<ol>
+<li>Only one letter can be changed at a time.</li>
+<li>Each transformed word must exist in the word list. Note that beginWord is not a transformed word.</li>
+</ol>
 <h3 id="note">Note</h3>
-
 <ul>
 <li>Return 0 if there is no such transformation sequence.</li>
 <li>All words have the same length.</li>
 <li>All words contain only lowercase alphabetic characters.</li>
 <li>You may assume no duplicates in the word list.</li>
-
-<li><p>You may assume beginWord and endWord are non-empty and are not the same.</p>
-
-<h3 id="example-1">Example 1</h3>
-
-<p>```
-Input:
-beginWord = &ldquo;hit&rdquo;,
-endWord = &ldquo;cog&rdquo;,
-wordList = [&ldquo;hot&rdquo;,&ldquo;dot&rdquo;,&ldquo;dog&rdquo;,&ldquo;lot&rdquo;,&ldquo;log&rdquo;,&ldquo;cog&rdquo;]</p></li>
+<li>You may assume beginWord and endWord are non-empty and are not the same.</li>
 </ul>
+<h3 id="example-1">Example 1</h3>
+<pre><code>Input:
+beginWord = &quot;hit&quot;,
+endWord = &quot;cog&quot;,
+wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;,&quot;cog&quot;]
 
-<p>Output: 5</p>
+Output: 5
+</code></pre><p><strong>Explanation</strong> As one shortest transformation is &ldquo;hit&rdquo; -&gt; &ldquo;hot&rdquo; -&gt; &ldquo;dot&rdquo; -&gt; &ldquo;dog&rdquo; -&gt; &ldquo;cog&rdquo;,
+return its length 5.</p>
+<h3 id="example-2">Example 2</h3>
+<pre><code>Input:
+beginWord = &quot;hit&quot;
+endWord = &quot;cog&quot;
+wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;]
 
-<pre><code>**Explanation** As one shortest transformation is &quot;hit&quot; -&gt; &quot;hot&quot; -&gt; &quot;dot&quot; -&gt; &quot;dog&quot; -&gt; &quot;cog&quot;,
-return its length 5.
-### Example 2
-</code></pre>
+Output: 0
+</code></pre><p><strong>Explanation</strong> The endWord &ldquo;cog&rdquo; is not in wordList, therefore no possible transformation.</p>
+<h3 id="solution">Solution</h3>
+<p>BFS</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># time: o(26^(L/2)), L is the length of the word</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ladderLength</span>(self, beginWord, endWord, wordList):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type beginWord: str
+</span><span style="color:#e6db74">        :type endWord: str
+</span><span style="color:#e6db74">        :type wordList: List[str]
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        wordDict <span style="color:#f92672">=</span> set(wordList)
+        startQ <span style="color:#f92672">=</span> set()
+        endQ <span style="color:#f92672">=</span> set()
+        visited <span style="color:#f92672">=</span> set()
 
-<p>Input:
-beginWord = &ldquo;hit&rdquo;
-endWord = &ldquo;cog&rdquo;
-wordList = [&ldquo;hot&rdquo;,&ldquo;dot&rdquo;,&ldquo;dog&rdquo;,&ldquo;lot&rdquo;,&ldquo;log&rdquo;]</p>
+        <span style="color:#66d9ef">if</span> endWord <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> wordDict:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<p>Output: 0</p>
+        startQ<span style="color:#f92672">.</span>add(beginWord)
+        endQ<span style="color:#f92672">.</span>add(endWord)
+        length <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+        <span style="color:#66d9ef">while</span> len(startQ) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+            neighbours <span style="color:#f92672">=</span> set()
+            <span style="color:#66d9ef">for</span> node <span style="color:#f92672">in</span> startQ:
+                <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(node)):
+                    char_arr <span style="color:#f92672">=</span> list(node)
+                    exclude <span style="color:#f92672">=</span> ord(node[i])
+                    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(ord(<span style="color:#e6db74">&#39;a&#39;</span>), ord(<span style="color:#e6db74">&#39;z&#39;</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+                        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> exclude:
+                            <span style="color:#66d9ef">continue</span>
 
-<pre><code>**Explanation** The endWord &quot;cog&quot; is not in wordList, therefore no possible transformation.
-### Solution
-BFS
-```python
-# time: o(26^(L/2)), L is the length of the word
-class Solution:
-    def ladderLength(self, beginWord, endWord, wordList):
-        &quot;&quot;&quot;
-        :type beginWord: str
-        :type endWord: str
-        :type wordList: List[str]
-        :rtype: int
-        &quot;&quot;&quot;
-        wordDict = set(wordList)
-        startQ = set()
-        endQ = set()
-        visited = set()
+                        char_arr[i] <span style="color:#f92672">=</span> chr(j)
+                        transformedWord <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(char_arr)
 
-        if endWord not in wordDict:
-            return 0
+                        <span style="color:#66d9ef">if</span> transformedWord <span style="color:#f92672">in</span> endQ:
+                            <span style="color:#66d9ef">return</span> length
 
-        startQ.add(beginWord)
-        endQ.add(endWord)
-        length = 2
-        while len(startQ) != 0:
-            neighbours = set()
-            for node in startQ:
-                for i in range(0,len(node)):
-                    char_arr = list(node)
-                    exclude = ord(node[i])
-                    for j in range(ord('a'), ord('z')+1):
-                        if j == exclude:
-                            continue
+                        <span style="color:#66d9ef">if</span> transformedWord <span style="color:#f92672">in</span> wordDict <span style="color:#f92672">and</span> transformedWord <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
+                            visited<span style="color:#f92672">.</span>add(transformedWord)
+                            neighbours<span style="color:#f92672">.</span>add(transformedWord)
 
-                        char_arr[i] = chr(j)
-                        transformedWord = ''.join(char_arr)
+            <span style="color:#66d9ef">if</span> len(endQ) <span style="color:#f92672">&lt;</span> len(neighbours):
+                startQ <span style="color:#f92672">=</span> endQ
+                endQ <span style="color:#f92672">=</span> neighbours
+            <span style="color:#66d9ef">else</span>:
+                startQ <span style="color:#f92672">=</span> neighbours
+            length <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-                        if transformedWord in endQ:
-                            return length
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</code></pre></div><p>BFS 2</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ladderLength</span>(self, beginWord: str, endWord: str, wordList: List[str]) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> endWord <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> wordList:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-                        if transformedWord in wordDict and transformedWord not in visited:
-                            visited.add(transformedWord)
-                            neighbours.add(transformedWord)
+        wordList <span style="color:#f92672">=</span> set(wordList)
+        visited <span style="color:#f92672">=</span> set([beginWord])
+        queue <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>deque([beginWord])
 
-            if len(endQ) &lt; len(neighbours):
-                startQ = endQ
-                endQ = neighbours
-            else:
-                startQ = neighbours
-            length += 1
+        distance <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span> queue:
+            distance <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(queue)):
+                word <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>popleft()
+                <span style="color:#66d9ef">if</span> word <span style="color:#f92672">==</span> endWord:
+                    <span style="color:#66d9ef">return</span> distance
 
-        return 0
-</code></pre>
+                <span style="color:#66d9ef">for</span> next_word <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>get_next_words(word):
+                    <span style="color:#66d9ef">if</span> next_word <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> wordList <span style="color:#f92672">or</span> next_word <span style="color:#f92672">in</span> visited:
+                        <span style="color:#66d9ef">continue</span>
+                    queue<span style="color:#f92672">.</span>append(next_word)
+                    visited<span style="color:#f92672">.</span>add(next_word)
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<p>BFS 2</p>
-
-<pre><code class="language-python">class Solution:
-    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -&gt; int:
-        if endWord not in wordList:
-            return 0
-
-        wordList = set(wordList)
-        visited = set([beginWord])
-        queue = collections.deque([beginWord])
-
-        distance = 0
-        while queue:
-            distance += 1
-            for i in range(len(queue)):
-                word = queue.popleft()
-                if word == endWord:
-                    return distance
-
-                for next_word in self.get_next_words(word):
-                    if next_word not in wordList or next_word in visited:
-                        continue
-                    queue.append(next_word)
-                    visited.add(next_word)
-        return 0
-
-    # O(26 * L^2)
-    # L is the length of word
-    def get_next_words(self, word):
-        words = []
-        # hot: &quot;h&quot; -&gt; &quot;o&quot; -&gt; &quot;t&quot;
-        for i in range(len(word)):
-            # replace each letter with 25 other letters
-            for char in 'abcdefghijklmnopqrstuvwxyz':
-                if word[i] != char:
-                    tempWord = word[:i] + char + word[i + 1:]
-                    words.append(tempWord)
-        return words
-</code></pre>
-
+    <span style="color:#75715e"># O(26 * L^2)</span>
+    <span style="color:#75715e"># L is the length of word</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next_words</span>(self, word):
+        words <span style="color:#f92672">=</span> []
+        <span style="color:#75715e"># hot: &#34;h&#34; -&gt; &#34;o&#34; -&gt; &#34;t&#34;</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(word)):
+            <span style="color:#75715e"># replace each letter with 25 other letters</span>
+            <span style="color:#66d9ef">for</span> char <span style="color:#f92672">in</span> <span style="color:#e6db74">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>:
+                <span style="color:#66d9ef">if</span> word[i] <span style="color:#f92672">!=</span> char:
+                    tempWord <span style="color:#f92672">=</span> word[:i] <span style="color:#f92672">+</span> char <span style="color:#f92672">+</span> word[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:]
+                    words<span style="color:#f92672">.</span>append(tempWord)
+        <span style="color:#66d9ef">return</span> words
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>
