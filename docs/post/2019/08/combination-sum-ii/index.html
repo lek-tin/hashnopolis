@@ -19,7 +19,7 @@
   <meta name="description" content="Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ]  ###Example 2:" />
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:" />
   <meta name="keywords" content="leetcode python dfs recursion " />
   
   
@@ -29,14 +29,14 @@ Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: 
     <meta name="twitter:description" content="Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ]  ###Example 2:" />
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/combination-sum-ii/" />
@@ -198,19 +198,12 @@ Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: 
         <h5>Last updated: August 6, 2019</h5>
       
       <hr />
-      
-
-<p>Given a collection of candidate numbers (<code>candidates</code>) and a target number (<code>target</code>), find all unique combinations in <code>candidates</code> where the candidate numbers sums to <code>target</code>.</p>
-
+      <p>Given a collection of candidate numbers (<code>candidates</code>) and a target number (<code>target</code>), find all unique combinations in <code>candidates</code> where the candidate numbers sums to <code>target</code>.</p>
 <p>Each number in <code>candidates</code> may only be used once in the combination.</p>
-
 <h3 id="note">Note</h3>
-
 <p>All numbers (including <code>target</code>) will be positive integers.
 The solution set must not contain duplicate combinations.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: candidates = [10,1,2,7,6,1,5], target = 8,
 A solution set is:
 [
@@ -219,63 +212,55 @@ A solution set is:
   [2, 6],
   [1, 1, 6]
 ]
-</code></pre>
-
-<p>###Example 2:</p>
-
+</code></pre><p>###Example 2:</p>
 <pre><code>Input: candidates = [2,5,2,1,2], target = 5,
 A solution set is:
 [
   [1,2,2],
   [5]
 ]
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
+</code></pre><h3 id="solution">Solution</h3>
 <p>This problem is equivalent to <a href="https://leetcode.com/problems/subsets-ii/">Subsets II</a> because unique combinations means all subsets with no duplicate combinators.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">combinationSum2</span>(self, candidates: List[int], target: int) <span style="color:#f92672">-&gt;</span> List[List[int]]:
+        <span style="color:#75715e"># Equivalent to subsets</span>
+        results <span style="color:#f92672">=</span> []
+        combination <span style="color:#f92672">=</span> []
+        <span style="color:#75715e"># Edge cases</span>
+        <span style="color:#66d9ef">if</span> candidates <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> results
+        <span style="color:#66d9ef">if</span> len(candidates) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            results<span style="color:#f92672">.</span>append([])
+            <span style="color:#66d9ef">return</span> results
+        <span style="color:#75715e"># Sort candidates in ascending order</span>
+        candidates<span style="color:#f92672">.</span>sort()
+        <span style="color:#75715e"># Start DFS</span>
+        self<span style="color:#f92672">.</span>dfs(<span style="color:#ae81ff">0</span>, combination, target, results, candidates)
+        <span style="color:#66d9ef">return</span> results
 
-<pre><code class="language-python">class Solution:
-    def combinationSum2(self, candidates: List[int], target: int) -&gt; List[List[int]]:
-        # Equivalent to subsets
-        results = []
-        combination = []
-        # Edge cases
-        if candidates == None:
-            return results
-        if len(candidates) == 0:
-            results.append([])
-            return results
-        # Sort candidates in ascending order
-        candidates.sort()
-        # Start DFS
-        self.dfs(0, combination, target, results, candidates)
-        return results
-
-    def dfs(self, startIndex, combination, target, results, candidates):
-        # Recursion exit condition met
-        # Combination with a sum equal to target is found
-        if target == 0:
-            results.append(combination[:])
-            return
-        # If startIndex is out of bound, this loop will do nothing.
-        for i in range(startIndex, len(candidates)):
-            # Avoid duplicate combinator
-            # For example, candidates = [1,1,1,2,...]
-            # We would only choose [1,1,1], [_,1,1], [_,_,1]
-            if i != 0 and i &gt; startIndex and candidates[i] == candidates[i-1]:
-                continue
-            # Since candidates is in ascending order, if the current number at i is already bigger than target, there is no need to continue. Abort the searching.
-            if target &lt; candidates[i]:
-                break
-            ## Choose current number at i
-            combination.append(candidates[i])
-            ## Deduct current number at i from target and go one level deeper
-            self.dfs(i+1, combination, target - candidates[i], results, candidates)
-            ## Choose current number at i
-            combination.pop()
-</code></pre>
-
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(self, startIndex, combination, target, results, candidates):
+        <span style="color:#75715e"># Recursion exit condition met</span>
+        <span style="color:#75715e"># Combination with a sum equal to target is found</span>
+        <span style="color:#66d9ef">if</span> target <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            results<span style="color:#f92672">.</span>append(combination[:])
+            <span style="color:#66d9ef">return</span>
+        <span style="color:#75715e"># If startIndex is out of bound, this loop will do nothing.</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(startIndex, len(candidates)):
+            <span style="color:#75715e"># Avoid duplicate combinator</span>
+            <span style="color:#75715e"># For example, candidates = [1,1,1,2,...]</span>
+            <span style="color:#75715e"># We would only choose [1,1,1], [_,1,1], [_,_,1]</span>
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> i <span style="color:#f92672">&gt;</span> startIndex <span style="color:#f92672">and</span> candidates[i] <span style="color:#f92672">==</span> candidates[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+                <span style="color:#66d9ef">continue</span>
+            <span style="color:#75715e"># Since candidates is in ascending order, if the current number at i is already bigger than target, there is no need to continue. Abort the searching.</span>
+            <span style="color:#66d9ef">if</span> target <span style="color:#f92672">&lt;</span> candidates[i]:
+                <span style="color:#66d9ef">break</span>
+            <span style="color:#75715e">## Choose current number at i</span>
+            combination<span style="color:#f92672">.</span>append(candidates[i])
+            <span style="color:#75715e">## Deduct current number at i from target and go one level deeper</span>
+            self<span style="color:#f92672">.</span>dfs(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, combination, target <span style="color:#f92672">-</span> candidates[i], results, candidates)
+            <span style="color:#75715e">## Choose current number at i</span>
+            combination<span style="color:#f92672">.</span>pop()
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -32,7 +32,7 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/merge-two-binary-trees/" />
@@ -192,14 +192,9 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
         <h5>Last updated: October 25, 2018</h5>
       
       <hr />
-      
-
-<p>Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.</p>
-
+      <p>Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.</p>
 <p>You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: 
 	Tree 1                     Tree 2                  
           1                         2                             
@@ -214,29 +209,24 @@ Merged tree:
 	   4   5
 	  / \   \ 
 	 5   4   7
-</code></pre>
-
-<h3 id="note-the-merging-process-must-start-from-the-root-nodes-of-both-trees">Note The merging process must start from the root nodes of both trees.</h3>
-
+</code></pre><h3 id="note-the-merging-process-must-start-from-the-root-nodes-of-both-trees">Note The merging process must start from the root nodes of both trees.</h3>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mergeTrees</span>(self, t1, t2):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type t1: TreeNode
+</span><span style="color:#e6db74">        :type t2: TreeNode
+</span><span style="color:#e6db74">        :rtype: TreeNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> t1 <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> t2
+        <span style="color:#66d9ef">if</span> t2 <span style="color:#f92672">!=</span> None:
+            t1<span style="color:#f92672">.</span>val <span style="color:#f92672">+=</span> t2<span style="color:#f92672">.</span>val
+            t1<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>mergeTrees(t1<span style="color:#f92672">.</span>left, t2<span style="color:#f92672">.</span>left)
+            t1<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>mergeTrees(t1<span style="color:#f92672">.</span>right, t2<span style="color:#f92672">.</span>right)
 
-<pre><code class="language-python">class Solution:
-    def mergeTrees(self, t1, t2):
-        &quot;&quot;&quot;
-        :type t1: TreeNode
-        :type t2: TreeNode
-        :rtype: TreeNode
-        &quot;&quot;&quot;
-        if t1 == None:
-            return t2
-        if t2 != None:
-            t1.val += t2.val
-            t1.left = self.mergeTrees(t1.left, t2.left)
-            t1.right = self.mergeTrees(t1.right, t2.right)
-
-        return t1
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> t1
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -18,8 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a positive integer num, write a function which returns True if num is a perfect square else False.
 Note: Do not use any built-in library function such as sqrt.
-Example 1: Input: 16 Output: true  Example 2: Input: 14 Output: false  Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid &#43; 1 else: right = mid - 1 return False  Binary search version 2" />
+Example 1: Input: 16 Output: true Example 2: Input: 14 Output: false Solution Binary search version 1
+class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2" />
   <meta name="keywords" content="leetcode binary-search newton-method math " />
   
   
@@ -28,15 +28,15 @@ class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1:
     <meta name="twitter:title" content="Valid Perfect Square" />
     <meta name="twitter:description" content="Given a positive integer num, write a function which returns True if num is a perfect square else False.
 Note: Do not use any built-in library function such as sqrt.
-Example 1: Input: 16 Output: true  Example 2: Input: 14 Output: false  Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid &#43; 1 else: right = mid - 1 return False  Binary search version 2" />
+Example 1: Input: 16 Output: true Example 2: Input: 14 Output: false Solution Binary search version 1
+class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/valid-perfect-square/" />
@@ -198,91 +198,71 @@ class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1:
         <h5>Last updated: February 19, 2020</h5>
       
       <hr />
-      
-
-<p>Given a positive integer num, write a function which returns <code>True</code> if num is a perfect square else <code>False</code>.</p>
-
+      <p>Given a positive integer num, write a function which returns <code>True</code> if num is a perfect square else <code>False</code>.</p>
 <h3 id="note">Note:</h3>
-
 <p>Do not use any built-in library function such as sqrt.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: 16
 Output: true
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: 14
 Output: false
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
+</code></pre><h3 id="solution">Solution</h3>
 <p>Binary search version 1</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPerfectSquare</span>(self, num: int) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> num <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> True
 
-<pre><code class="language-python">class Solution:
-    def isPerfectSquare(self, num: int) -&gt; bool:
-        if num == 1:
-            return True
+        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, num
 
-        left, right = 0, num
+        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
+            mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right<span style="color:#f92672">-</span>left)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+            t <span style="color:#f92672">=</span> mid<span style="color:#f92672">*</span>mid
+            <span style="color:#66d9ef">if</span> t <span style="color:#f92672">==</span> num:
+                <span style="color:#66d9ef">return</span> True
+            <span style="color:#66d9ef">if</span> t <span style="color:#f92672">&lt;</span> num:
+                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
 
-        while left &lt;= right:
-            mid = left + (right-left)//2
-            t = mid*mid
-            if t == num:
-                return True
-            if t &lt; num:
-                left = mid + 1
-            else:
-                right = mid - 1
-
-        return False
-</code></pre>
-
-<p>Binary search version 2<br />
-Time: <code>O(logN)</code><br />
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div><p>Binary search version 2<br>
+Time: <code>O(logN)</code><br>
 Space: <code>O(1)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPerfectSquare</span>(self, num: int) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> num <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> True
 
-<pre><code class="language-python">class Solution:
-    def isPerfectSquare(self, num: int) -&gt; bool:
-        if num == 1:
-            return True
+        factor <span style="color:#f92672">=</span> num <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+        <span style="color:#66d9ef">while</span> factor<span style="color:#f92672">*</span>factor <span style="color:#f92672">&gt;</span> num:
+            factor <span style="color:#f92672">//=</span> <span style="color:#ae81ff">2</span>
 
-        factor = num // 2
-        while factor*factor &gt; num:
-            factor //= 2
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(factor, factor<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> i<span style="color:#f92672">*</span>i <span style="color:#f92672">==</span> num:
+                <span style="color:#66d9ef">return</span> True
 
-        for i in range(factor, factor*2+1):
-            if i*i == num:
-                return True
-
-        return False
-</code></pre>
-
-<p>Newton&rsquo;s method
-Time: <code>O(logN)</code><br />
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div><p>Newton&rsquo;s method
+Time: <code>O(logN)</code><br>
 Space: <code>O(1)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPerfectSquare</span>(self, num: int) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> num <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> True
 
-<pre><code class="language-python">class Solution:
-    def isPerfectSquare(self, num: int) -&gt; bool:
-        if num == 1:
-            return True
+        <span style="color:#75715e"># newton&#39;s method</span>
+        <span style="color:#75715e"># f(x) = x^2 - num = 0</span>
+        <span style="color:#75715e"># x_next = x - f(x) / f&#39;(x)</span>
+        <span style="color:#75715e"># f(x) = x^2 -num, f&#39;(x) = 2x</span>
+        <span style="color:#75715e"># x_next = (x + num/x) / 2</span>
+        x <span style="color:#f92672">=</span> num <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+        <span style="color:#66d9ef">while</span> x<span style="color:#f92672">*</span>x <span style="color:#f92672">&gt;</span> num:
+            x <span style="color:#f92672">=</span> (x <span style="color:#f92672">+</span> num<span style="color:#f92672">//</span>x) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
 
-        # newton's method
-        # f(x) = x^2 - num = 0
-        # x_next = x - f(x) / f'(x)
-        # f(x) = x^2 -num, f'(x) = 2x
-        # x_next = (x + num/x) / 2
-        x = num // 2
-        while x*x &gt; num:
-            x = (x + num//x) // 2
-
-        return x*x == num
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> x<span style="color:#f92672">*</span>x <span style="color:#f92672">==</span> num
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

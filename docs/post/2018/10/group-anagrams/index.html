@@ -17,8 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array of strings, group anagrams together.
-Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Note  All inputs will be in lowercase. The order of your output does not matter.
-Solution class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: List[List[str]] &amp;quot;&amp;quot;&amp;quot; primeNums = { &amp;quot;a&amp;quot;: 2, &amp;quot;b&amp;quot;: 3, &amp;quot;c&amp;quot;: 5, &amp;quot;d&amp;quot;: 7, &amp;quot;e&amp;quot;: 11, &amp;quot;f&amp;quot;: 13, &amp;quot;g&amp;quot;: 17, &amp;quot;h&amp;quot;: 19, &amp;quot;i&amp;quot;: 23, &amp;quot;j&amp;quot;: 29, &amp;quot;k&amp;quot;: 31, &amp;quot;m&amp;quot;: 37, &amp;quot;l&amp;quot;: 41, &amp;quot;n&amp;quot;: 43, &amp;quot;o&amp;quot;: 47, &amp;quot;p&amp;quot;: 53, &amp;quot;q&amp;quot;: 59, &amp;quot;r&amp;quot;: 61, &amp;quot;s&amp;quot;: 67, &amp;quot;t&amp;quot;: 71, &amp;quot;u&amp;quot;: 73, &amp;quot;v&amp;quot;: 79, &amp;quot;w&amp;quot;: 83, &amp;quot;x&amp;quot;: 89, &amp;quot;y&amp;quot;: 97, &amp;quot;z&amp;quot;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
+Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ] Note  All inputs will be in lowercase. The order of your output does not matter.  Solution class Solution(object): def groupAnagrams(self, strs): &amp;#34;&amp;#34;&amp;#34; :type strs: List[str] :rtype: List[List[str]] &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
   <meta name="keywords" content="leetcode anagrams dictionary " />
   
   
@@ -26,15 +25,14 @@ Solution class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;q
     
     <meta name="twitter:title" content="Group Anagrams" />
     <meta name="twitter:description" content="Given an array of strings, group anagrams together.
-Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Note  All inputs will be in lowercase. The order of your output does not matter.
-Solution class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;quot;&amp;quot; :type strs: List[str] :rtype: List[List[str]] &amp;quot;&amp;quot;&amp;quot; primeNums = { &amp;quot;a&amp;quot;: 2, &amp;quot;b&amp;quot;: 3, &amp;quot;c&amp;quot;: 5, &amp;quot;d&amp;quot;: 7, &amp;quot;e&amp;quot;: 11, &amp;quot;f&amp;quot;: 13, &amp;quot;g&amp;quot;: 17, &amp;quot;h&amp;quot;: 19, &amp;quot;i&amp;quot;: 23, &amp;quot;j&amp;quot;: 29, &amp;quot;k&amp;quot;: 31, &amp;quot;m&amp;quot;: 37, &amp;quot;l&amp;quot;: 41, &amp;quot;n&amp;quot;: 43, &amp;quot;o&amp;quot;: 47, &amp;quot;p&amp;quot;: 53, &amp;quot;q&amp;quot;: 59, &amp;quot;r&amp;quot;: 61, &amp;quot;s&amp;quot;: 67, &amp;quot;t&amp;quot;: 71, &amp;quot;u&amp;quot;: 73, &amp;quot;v&amp;quot;: 79, &amp;quot;w&amp;quot;: 83, &amp;quot;x&amp;quot;: 89, &amp;quot;y&amp;quot;: 97, &amp;quot;z&amp;quot;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
+Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ] Note  All inputs will be in lowercase. The order of your output does not matter.  Solution class Solution(object): def groupAnagrams(self, strs): &amp;#34;&amp;#34;&amp;#34; :type strs: List[str] :rtype: List[List[str]] &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/group-anagrams/" />
@@ -194,12 +192,8 @@ Solution class Solution(object): def groupAnagrams(self, strs): &amp;quot;&amp;q
         <h5>Last updated: October 22, 2018</h5>
       
       <hr />
-      
-
-<p>Given an array of strings, group anagrams together.</p>
-
+      <p>Given an array of strings, group anagrams together.</p>
 <h3 id="example">Example</h3>
-
 <pre><code>Input: [&quot;eat&quot;, &quot;tea&quot;, &quot;tan&quot;, &quot;ate&quot;, &quot;nat&quot;, &quot;bat&quot;],
 Output:
 [
@@ -207,71 +201,64 @@ Output:
     [&quot;nat&quot;,&quot;tan&quot;],
     [&quot;bat&quot;]
 ]
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <ul>
 <li>All inputs will be in lowercase.</li>
-
-<li><p>The order of your output does not matter.</p>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution(object):
-def groupAnagrams(self, strs):
-    &quot;&quot;&quot;
-    :type strs: List[str]
-    :rtype: List[List[str]]
-    &quot;&quot;&quot;
-    primeNums = {
-        &quot;a&quot;: 2,
-        &quot;b&quot;: 3,
-        &quot;c&quot;: 5,
-        &quot;d&quot;: 7,
-        &quot;e&quot;: 11,
-        &quot;f&quot;: 13,
-        &quot;g&quot;: 17,
-        &quot;h&quot;: 19,
-        &quot;i&quot;: 23,
-        &quot;j&quot;: 29,
-        &quot;k&quot;: 31,
-        &quot;m&quot;: 37,
-        &quot;l&quot;: 41,
-        &quot;n&quot;: 43,
-        &quot;o&quot;: 47,
-        &quot;p&quot;: 53,
-        &quot;q&quot;: 59,
-        &quot;r&quot;: 61,
-        &quot;s&quot;: 67,
-        &quot;t&quot;: 71,
-        &quot;u&quot;: 73,
-        &quot;v&quot;: 79,
-        &quot;w&quot;: 83,
-        &quot;x&quot;: 89,
-        &quot;y&quot;: 97,
-        &quot;z&quot;: 101
-    }
-
-    def encode(string):
-        res = 1
-        for s in list(string):
-            res *= primeNums[s]
-        return res
-
-    anagrams = {}
-
-    for string in strs:
-        code = encode(string)
-        if anagrams.get(code, None) is None:
-            anagrams[code] = [string]
-        else:
-            anagrams.get(code).append(string)
-    print(anagrams)
-    return list(anagrams.values())
-</code></pre></li>
+<li>The order of your output does not matter.</li>
 </ul>
+<h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(self, strs):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type strs: List[str]
+</span><span style="color:#e6db74">        :rtype: List[List[str]]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        primeNums <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#34;a&#34;</span>: <span style="color:#ae81ff">2</span>,
+            <span style="color:#e6db74">&#34;b&#34;</span>: <span style="color:#ae81ff">3</span>,
+            <span style="color:#e6db74">&#34;c&#34;</span>: <span style="color:#ae81ff">5</span>,
+            <span style="color:#e6db74">&#34;d&#34;</span>: <span style="color:#ae81ff">7</span>,
+            <span style="color:#e6db74">&#34;e&#34;</span>: <span style="color:#ae81ff">11</span>,
+            <span style="color:#e6db74">&#34;f&#34;</span>: <span style="color:#ae81ff">13</span>,
+            <span style="color:#e6db74">&#34;g&#34;</span>: <span style="color:#ae81ff">17</span>,
+            <span style="color:#e6db74">&#34;h&#34;</span>: <span style="color:#ae81ff">19</span>,
+            <span style="color:#e6db74">&#34;i&#34;</span>: <span style="color:#ae81ff">23</span>,
+            <span style="color:#e6db74">&#34;j&#34;</span>: <span style="color:#ae81ff">29</span>,
+            <span style="color:#e6db74">&#34;k&#34;</span>: <span style="color:#ae81ff">31</span>,
+            <span style="color:#e6db74">&#34;m&#34;</span>: <span style="color:#ae81ff">37</span>,
+            <span style="color:#e6db74">&#34;l&#34;</span>: <span style="color:#ae81ff">41</span>,
+            <span style="color:#e6db74">&#34;n&#34;</span>: <span style="color:#ae81ff">43</span>,
+            <span style="color:#e6db74">&#34;o&#34;</span>: <span style="color:#ae81ff">47</span>,
+            <span style="color:#e6db74">&#34;p&#34;</span>: <span style="color:#ae81ff">53</span>,
+            <span style="color:#e6db74">&#34;q&#34;</span>: <span style="color:#ae81ff">59</span>,
+            <span style="color:#e6db74">&#34;r&#34;</span>: <span style="color:#ae81ff">61</span>,
+            <span style="color:#e6db74">&#34;s&#34;</span>: <span style="color:#ae81ff">67</span>,
+            <span style="color:#e6db74">&#34;t&#34;</span>: <span style="color:#ae81ff">71</span>,
+            <span style="color:#e6db74">&#34;u&#34;</span>: <span style="color:#ae81ff">73</span>,
+            <span style="color:#e6db74">&#34;v&#34;</span>: <span style="color:#ae81ff">79</span>,
+            <span style="color:#e6db74">&#34;w&#34;</span>: <span style="color:#ae81ff">83</span>,
+            <span style="color:#e6db74">&#34;x&#34;</span>: <span style="color:#ae81ff">89</span>,
+            <span style="color:#e6db74">&#34;y&#34;</span>: <span style="color:#ae81ff">97</span>,
+            <span style="color:#e6db74">&#34;z&#34;</span>: <span style="color:#ae81ff">101</span>
+        }
 
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">encode</span>(string):
+            res <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> list(string):
+                res <span style="color:#f92672">*=</span> primeNums[s]
+            <span style="color:#66d9ef">return</span> res
+
+        anagrams <span style="color:#f92672">=</span> {}
+
+        <span style="color:#66d9ef">for</span> string <span style="color:#f92672">in</span> strs:
+            code <span style="color:#f92672">=</span> encode(string)
+            <span style="color:#66d9ef">if</span> anagrams<span style="color:#f92672">.</span>get(code, None) <span style="color:#f92672">is</span> None:
+                anagrams[code] <span style="color:#f92672">=</span> [string]
+            <span style="color:#66d9ef">else</span>:
+                anagrams<span style="color:#f92672">.</span>get(code)<span style="color:#f92672">.</span>append(string)
+        <span style="color:#66d9ef">print</span>(anagrams)
+        <span style="color:#66d9ef">return</span> list(anagrams<span style="color:#f92672">.</span>values())
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

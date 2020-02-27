@@ -34,7 +34,7 @@ The string can contain additional characters after those that form the integral 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/string-to-integer-atoi/" />
@@ -196,106 +196,80 @@ The string can contain additional characters after those that form the integral 
         <h5>Last updated: January 24, 2019</h5>
       
       <hr />
-      
-
-<p>Implement <code>atoi</code> which converts a string to an integer.</p>
-
+      <p>Implement <code>atoi</code> which converts a string to an integer.</p>
 <p>The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.</p>
-
 <p>The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.</p>
-
 <p>If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.</p>
-
 <p>If no valid conversion could be performed, a zero value is returned.</p>
-
 <p>Note:</p>
-
-<p>Only the space character &lsquo; &rsquo; is considered as whitespace character.
+<p>Only the space character ' ' is considered as whitespace character.
 Assume we are dealing with an environment which could only store integers within the <code>32-bit</code> signed integer range: <code>[−231,  231 − 1]</code>. If the numerical value is out of the range of representable values, <code>INT_MAX (231 − 1)</code> or <code>INT_MIN (−231)</code> is returned.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: &quot;42&quot;
 Output: 42
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: &quot;   -42&quot;
 Output: -42
 Explanation: The first non-whitespace character is '-', which is the minus sign.
 Then take as many numerical digits as possible, which gets 42.
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: &quot;4193 with words&quot;
 Output: 4193
 Explanation: Conversion stops at digit '3' as the next character is not a numerical digit.
-</code></pre>
-
-<h3 id="example-4">Example 4</h3>
-
+</code></pre><h3 id="example-4">Example 4</h3>
 <pre><code>Input: &quot;words and 987&quot;
 Output: 0
 Explanation: The first non-whitespace character is 'w', which is not a numerical  digit or a +/- sign. Therefore no valid conversion could be performed.
-</code></pre>
-
-<h3 id="example-5">Example 5</h3>
-
+</code></pre><h3 id="example-5">Example 5</h3>
 <pre><code>Input: &quot;-91283472332&quot;
 Output: -2147483648
 Explanation: The number &quot;-91283472332&quot; is out of the range of a 32-bit signed integer. Thefore INT_MIN (−231) is returned.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">myAtoi</span>(self, str):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type str: str
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        str <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span>strip()
+        <span style="color:#66d9ef">if</span> str <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<h3 id="solution">Solution</h3>
+        INT_MIN <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2147483648</span>
+        INT_MAX <span style="color:#f92672">=</span> <span style="color:#ae81ff">2147483647</span>
+        cur <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        isNegative <span style="color:#f92672">=</span> False
 
-<pre><code class="language-python">class Solution:
-    def myAtoi(self, str):
-        &quot;&quot;&quot;
-        :type str: str
-        :rtype: int
-        &quot;&quot;&quot;
-        str = str.strip()
-        if str == &quot;&quot;:
-            return 0
+        <span style="color:#66d9ef">while</span> cur<span style="color:#f92672">&lt;</span>len(str) <span style="color:#f92672">and</span> str[cur]<span style="color:#f92672">==</span><span style="color:#e6db74">&#39; &#39;</span>:
+            cur <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-        INT_MIN = -2147483648
-        INT_MAX = 2147483647
-        cur = 0
-        isNegative = False
+        <span style="color:#66d9ef">if</span> len(str) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">if</span> str[cur] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;-&#39;</span>:
+            isNegative <span style="color:#f92672">=</span> True
+            cur <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">elif</span> str[cur] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;+&#39;</span>:
+            isNegative <span style="color:#f92672">=</span> False
+            cur <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-        while cur&lt;len(str) and str[cur]==' ':
-            cur += 1
+        solution <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(cur, len(str)):
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> str[i]<span style="color:#f92672">.</span>isdigit():
+                <span style="color:#66d9ef">break</span>
+            <span style="color:#66d9ef">else</span>:
+                solution <span style="color:#f92672">*=</span> <span style="color:#ae81ff">10</span>
+                solution <span style="color:#f92672">+=</span> int(str[i])
 
-        if len(str) == 0:
-            return 0
-        if str[cur] == '-':
-            isNegative = True
-            cur += 1
-        elif str[cur] == '+':
-            isNegative = False
-            cur += 1
+        <span style="color:#66d9ef">if</span> isNegative:
+            solution <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> solution
 
-        solution = 0
-        for i in range(cur, len(str)):
-            if not str[i].isdigit():
-                break
-            else:
-                solution *= 10
-                solution += int(str[i])
+        <span style="color:#66d9ef">if</span> solution <span style="color:#f92672">&lt;</span> INT_MIN:
+            <span style="color:#66d9ef">return</span> INT_MIN
+        <span style="color:#66d9ef">elif</span> solution <span style="color:#f92672">&gt;</span> INT_MAX:
+            <span style="color:#66d9ef">return</span> INT_MAX
 
-        if isNegative:
-            solution = -1 * solution
-
-        if solution &lt; INT_MIN:
-            return INT_MIN
-        elif solution &gt; INT_MAX:
-            return INT_MAX
-
-        return solution
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> solution
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

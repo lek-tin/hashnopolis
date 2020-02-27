@@ -19,7 +19,7 @@
   <meta name="description" content="Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution import sys INT_MAX = sys." />
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import sys INT_MAX = sys." />
   <meta name="keywords" content="leetcode python two-pointers " />
   
   
@@ -29,14 +29,14 @@ Note Your algorithm should run in O(n) time complexity and O(1) space complexity
     <meta name="twitter:description" content="Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution import sys INT_MAX = sys." />
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import sys INT_MAX = sys." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/increasing-triplet-subsequence/" />
@@ -196,52 +196,38 @@ Note Your algorithm should run in O(n) time complexity and O(1) space complexity
         <h5>Last updated: September 15, 2019</h5>
       
       <hr />
-      
-
-<p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.</p>
-
+      <p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.</p>
 <p>Formally the function should:</p>
-
 <p>Return true if there exists <code>i, j, k</code>
 such that <code>arr[i] &lt; arr[j] &lt; arr[k]</code> given <code>0 ≤ i &lt; j &lt; k ≤ n-1</code> else return false.</p>
-
-<h3 id="note-your-algorithm-should-run-in-o-n-time-complexity-and-o-1-space-complexity">Note Your algorithm should run in <code>O(n)</code> time complexity and <code>O(1)</code> space complexity.</h3>
-
+<h3 id="note-your-algorithm-should-run-in-on-time-complexity-and-o1-space-complexity">Note Your algorithm should run in <code>O(n)</code> time complexity and <code>O(1)</code> space complexity.</h3>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: [1,2,3,4,5]
 Output: true
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: [5,4,3,2,1]
 Output: false
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
+INT_MAX <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>maxsize
 
-<h3 id="solution">Solution</h3>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">increasingTriplet</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> nums <span style="color:#f92672">or</span> len(nums) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>:
+            <span style="color:#66d9ef">return</span> False
+        <span style="color:#75715e"># min_1 &lt; min_2</span>
+        min_1, min_2 <span style="color:#f92672">=</span> INT_MAX<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, INT_MAX
+        <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> nums:
+            <span style="color:#75715e"># use = to skip duplicate value, for example, [1,1,1,1,1,1,1,1,1,1]</span>
+            <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> min_1:
+                min_1 <span style="color:#f92672">=</span> n
+            <span style="color:#66d9ef">elif</span> n <span style="color:#f92672">&lt;=</span> min_2:
+                min_2 <span style="color:#f92672">=</span> n
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">return</span> True
 
-<pre><code class="language-python">import sys
-INT_MAX = sys.maxsize
-
-class Solution:
-    def increasingTriplet(self, nums: List[int]) -&gt; bool:
-        if not nums or len(nums) &lt; 3:
-            return False
-        # min_1 &lt; min_2
-        min_1, min_2 = INT_MAX-1, INT_MAX
-        for n in nums:
-            # use = to skip duplicate value, for example, [1,1,1,1,1,1,1,1,1,1]
-            if n &lt;= min_1:
-                min_1 = n
-            elif n &lt;= min_2:
-                min_2 = n
-            else:
-                return True
-
-        return False
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

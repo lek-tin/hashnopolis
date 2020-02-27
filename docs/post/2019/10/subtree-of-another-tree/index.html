@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given two non-empty binary trees s and t, check whether tree t has exactly the same structure and node values with a subtree of s. A subtree of s is a tree consists of a node in s and all of this node&amp;rsquo;s descendants. The tree s could also be considered as a subtree of itself.
 Example 1: Given tree s:
- 3 / \ 4 5 / \ 1 2  Given tree t:" />
+ 3 / \ 4 5 / \ 1 2 Given tree t:" />
   <meta name="keywords" content="leetcode tree " />
   
   
@@ -27,14 +27,14 @@ Example 1: Given tree s:
     <meta name="twitter:title" content="Subtree of Another Tree" />
     <meta name="twitter:description" content="Given two non-empty binary trees s and t, check whether tree t has exactly the same structure and node values with a subtree of s. A subtree of s is a tree consists of a node in s and all of this node&amp;rsquo;s descendants. The tree s could also be considered as a subtree of itself.
 Example 1: Given tree s:
- 3 / \ 4 5 / \ 1 2  Given tree t:" />
+ 3 / \ 4 5 / \ 1 2 Given tree t:" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/subtree-of-another-tree/" />
@@ -192,34 +192,21 @@ Example 1: Given tree s:
         <h5>Last updated: October 15, 2019</h5>
       
       <hr />
-      
-
-<p>Given two non-empty binary trees s and t, check whether tree <code>t</code> has exactly the same structure and node values with a subtree of <code>s</code>. A subtree of <code>s</code> is a tree consists of a node in <code>s</code> and all of this node&rsquo;s descendants. The tree <code>s</code> could also be considered as a subtree of itself.</p>
-
+      <p>Given two non-empty binary trees s and t, check whether tree <code>t</code> has exactly the same structure and node values with a subtree of <code>s</code>. A subtree of <code>s</code> is a tree consists of a node in <code>s</code> and all of this node&rsquo;s descendants. The tree <code>s</code> could also be considered as a subtree of itself.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <p>Given tree <code>s</code>:</p>
-
 <pre><code>     3
     / \
    4   5
   / \
  1   2
-</code></pre>
-
-<p>Given tree <code>t</code>:</p>
-
+</code></pre><p>Given tree <code>t</code>:</p>
 <pre><code>   4 
   / \
  1   2
-</code></pre>
-
-<p>Return <code>true</code>, because <code>t</code> has the same structure and node values with a subtree of <code>s</code>.</p>
-
+</code></pre><p>Return <code>true</code>, because <code>t</code> has the same structure and node values with a subtree of <code>s</code>.</p>
 <h3 id="example-2">Example 2:</h3>
-
 <p>Given tree <code>s</code>:</p>
-
 <pre><code>     3
     / \
    4   5
@@ -227,54 +214,46 @@ Example 1: Given tree s:
  1   2
     /
    0
-</code></pre>
-
-<p>Given tree <code>t</code>:</p>
-
+</code></pre><p>Given tree <code>t</code>:</p>
 <pre><code>   4
   / \
  1   2
-</code></pre>
-
-<p>Return <code>false</code>.</p>
-
+</code></pre><p>Return <code>false</code>.</p>
 <h2 id="solution">Solution</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isSubtree</span>(self, s: TreeNode, t: TreeNode) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>dfs(s, t)
 
-class Solution:
-    def isSubtree(self, s: TreeNode, t: TreeNode) -&gt; bool:
-        return self.dfs(s, t)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(self, root1, root2):
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root1:
+            <span style="color:#66d9ef">return</span> False
 
-    def dfs(self, root1, root2):
-        if not root1:
-            return False
+        <span style="color:#66d9ef">if</span> root1<span style="color:#f92672">.</span>val <span style="color:#f92672">==</span> root2<span style="color:#f92672">.</span>val:
+            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>checkSameTree(root1, root2):
+                <span style="color:#66d9ef">return</span> True
 
-        if root1.val == root2.val:
-            if self.checkSameTree(root1, root2):
-                return True
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>dfs(root1<span style="color:#f92672">.</span>left, root2) <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>dfs(root1<span style="color:#f92672">.</span>right, root2)
 
-        return self.dfs(root1.left, root2) or self.dfs(root1.right, root2)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">checkSameTree</span>(self, root1, root2):
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root1 <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> root2:
+            <span style="color:#66d9ef">return</span> True
 
-    def checkSameTree(self, root1, root2):
-        if not root1 and not root2:
-            return True
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root1 <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> root2:
+            <span style="color:#66d9ef">return</span> False
 
-        if not root1 or not root2:
-            return False
+        <span style="color:#66d9ef">if</span> root1<span style="color:#f92672">.</span>val <span style="color:#f92672">!=</span> root2<span style="color:#f92672">.</span>val:
+            <span style="color:#66d9ef">return</span> False
 
-        if root1.val != root2.val:
-            return False
-
-        return self.checkSameTree(root1.left, root2.left) and \
-                self.checkSameTree(root1.right, root2.right)
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>checkSameTree(root1<span style="color:#f92672">.</span>left, root2<span style="color:#f92672">.</span>left) <span style="color:#f92672">and</span> \
+                self<span style="color:#f92672">.</span>checkSameTree(root1<span style="color:#f92672">.</span>right, root2<span style="color:#f92672">.</span>right)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

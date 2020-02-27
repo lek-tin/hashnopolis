@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/two-pointers/" />
@@ -179,8 +179,8 @@
       <h2><a href="http://www.hashnopolis.com/post/2019/08/reverse-linked-list/">Reverse Linked List</a></h2>
 
       <p>Reverse a singly linked list.
-Example: Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
-Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; NULL // prev cur after while (cur !</p>
+Example: Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; NULL  // prev cur after  while (cur !</p>
 
       <p class="meta">
         
@@ -207,7 +207,7 @@ Solution: /** * Definition for singly-linked list. * public class ListNode { * i
 
       <p>Given an array nums of n integers, find two integers in nums such that the sum is closest to a given number, target.
 Return the difference between the sum of the two integers and the target.
-Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 &#43; 1) = 1).  Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;&amp; nums.</p>
+Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum difference is 1. (4 - (2 &#43; 1) = 1). Challenge: Do it in O(nlogn) time complexity. Solution public class Solution { /* * @param nums: an integer array * @param target: An integer * @return: the difference between the sum and the target */ public int twoSumClosest(int[] nums, int target) { if (nums == null &amp;&amp; nums.</p>
 
       <p class="meta">
         
@@ -233,7 +233,7 @@ Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum differenc
       <h2><a href="http://www.hashnopolis.com/post/2019/03/minimum-window-substring/">Minimum Window Substring</a></h2>
 
       <p>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
-Example: Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; Output: &#34;BANC&#34;  Note:  If there is no such window in S that covers all characters in T, return the empty string “”. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</p>
+Example: Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; Output: &#34;BANC&#34; Note:  If there is no such window in S that covers all characters in T, return the empty string “&#34;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</p>
 
       <p class="meta">
         
@@ -259,7 +259,7 @@ Example: Input: S = &#34;ADOBECODEBANC&#34;, T = &#34;ABC&#34; Output: &#34;BANC
       <h2><a href="http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/">Longest Substring With at Most Two Distinct Characters</a></h2>
 
       <p>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
-Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; which its length is 3.  Example 2: Input: &#34;ccaabbb&#34; Output: 5 Explanation: t is &#34;aabbb&#34; which its length is 5.  Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&lt;Character, Integer&gt; countMap = new HashMap&lt;Character, Integer&gt;(); int left = 0; int max = 0; for (int i = 0; i &lt; s.</p>
+Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; which its length is 3. Example 2: Input: &#34;ccaabbb&#34; Output: 5 Explanation: t is &#34;aabbb&#34; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&lt;Character, Integer&gt; countMap = new HashMap&lt;Character, Integer&gt;(); int left = 0; int max = 0; for (int i = 0; i &lt; s.</p>
 
       <p class="meta">
         
@@ -286,7 +286,7 @@ Example 1: Input: &#34;eceba&#34; Output: 3 Explanation: t is &#34;ece&#34; whic
 
       <p>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
-Example: Input: [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6  Solution: class Solution { public int trap(int[] height) { int n = height.</p>
+Example: Input: [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6 Solution: class Solution { public int trap(int[] height) { int n = height.</p>
 
       <p class="meta">
         
@@ -338,8 +338,8 @@ Note: You may not slant the container and n is at least 2. The above vertical li
       <h2><a href="http://www.hashnopolis.com/post/2019/01/one-edit-distance/">One Edit Distance</a></h2>
 
       <p>Given two strings s and t, determine if they are both one edit distance apart.
-Note There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t
-Example 1 Input: s = &#34;ab&#34;, t = &#34;acb&#34; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</p>
+Note There are 3 possiblities to satisify one edit distance apart:
+ Insert a character into s to get t Delete a character from s to get t Replace a character of s to get t  Example 1 Input: s = &#34;ab&#34;, t = &#34;acb&#34; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</p>
 
       <p class="meta">
         
@@ -367,7 +367,7 @@ Example 1 Input: s = &#34;ab&#34;, t = &#34;acb&#34; Output: true Explanation: W
       <p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &lt; arr[j] &lt; arr[k] given 0 ≤ i &lt; j &lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true  Example 2 Input: [5,4,3,2,1] Output: false  Solution import sys INT_MAX = sys.</p>
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import sys INT_MAX = sys.</p>
 
       <p class="meta">
         
@@ -392,7 +392,7 @@ Note Your algorithm should run in O(n) time complexity and O(1) space complexity
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/move-zeroes/">Move Zeroes</a></h2>
 
-      <p>Given an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements.
+      <p>Given an array nums, write a function to move all 0&#39;s to the end of it while maintaining the relative order of the non-zero elements.
 For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
 Note: You must do this in-place without making a copy of the array. Minimize the total number of operations.
 Credit Special thanks to @jianchao.</p>
@@ -421,7 +421,7 @@ Credit Special thanks to @jianchao.</p>
       <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
 
       <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5 Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4 Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
 Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)</p>
 
       <p class="meta">

@@ -18,8 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a binary tree, determine if it is height-balanced.
 For this problem, a height-balanced binary tree is defined as:
-&amp;gt; a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
-Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7 Return true.  Example 2: Given the following tree [1,2,2,3,3,null,null,4,4]: 1 / \ 2 2 / \ 3 3 / \ 4 4 Return false." />
+ a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+ Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7 Return true. Example 2: Given the following tree [1,2,2,3,3,null,null,4,4]: 1 / \ 2 2 / \ 3 3 / \ 4 4 Return false." />
   <meta name="keywords" content="leetcode binary-tree " />
   
   
@@ -28,15 +28,15 @@ Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7
     <meta name="twitter:title" content="Balanced Binary Tree" />
     <meta name="twitter:description" content="Given a binary tree, determine if it is height-balanced.
 For this problem, a height-balanced binary tree is defined as:
-&amp;gt; a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
-Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7 Return true.  Example 2: Given the following tree [1,2,2,3,3,null,null,4,4]: 1 / \ 2 2 / \ 3 3 / \ 4 4 Return false." />
+ a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+ Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7 Return true. Example 2: Given the following tree [1,2,2,3,3,null,null,4,4]: 1 / \ 2 2 / \ 3 3 / \ 4 4 Return false." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/02/balanced-binary-tree/" />
@@ -194,15 +194,12 @@ Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7
         <h5>Last updated: February 15, 2020</h5>
       
       <hr />
-      
-
-<p>Given a binary tree, determine if it is height-balanced.</p>
-
-<p>For this problem, a height-balanced binary tree is defined as:<br />
-&gt; a binary tree in which the left and right subtrees of every node differ in height by no more than <code>1</code>.</p>
-
+      <p>Given a binary tree, determine if it is height-balanced.</p>
+<p>For this problem, a height-balanced binary tree is defined as:</p>
+<blockquote>
+<p>a binary tree in which the left and right subtrees of every node differ in height by no more than <code>1</code>.</p>
+</blockquote>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Given the following tree [3,9,20,null,null,15,7]:
 
     3
@@ -211,10 +208,7 @@ Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7
     /  \
    15   7
 Return true.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Given the following tree [1,2,2,3,3,null,null,4,4]:
 
        1
@@ -225,70 +219,62 @@ Return true.
   / \
  4   4
 Return false.
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
+</code></pre><h3 id="solution">Solution</h3>
 <p>Top-down recursion
 Time complexity: O(nlogn). We can calculate this using <code>T(h) = T(h−1) + T(h−2) + 1</code>, height denoted as <code>h</code>.
 Space complexity: <code>O(n)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isBalanced</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> True
 
-class Solution:
-    def isBalanced(self, root: TreeNode) -&gt; bool:
-        if not root:
-            return True
+        lh <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>getHeight(root<span style="color:#f92672">.</span>left)
+        rh <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>getHeight(root<span style="color:#f92672">.</span>right)
 
-        lh = self.getHeight(root.left)
-        rh = self.getHeight(root.right)
+        <span style="color:#66d9ef">if</span> abs(lh<span style="color:#f92672">-</span>rh) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>isBalanced(root<span style="color:#f92672">.</span>left) <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>isBalanced(root<span style="color:#f92672">.</span>right):
+            <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">return</span> False
 
-        if abs(lh-rh) &lt;= 1 and self.isBalanced(root.left) and self.isBalanced(root.right):
-            return True
-        return False
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getHeight</span>(self, root):
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-    def getHeight(self, root):
-        if not root:
-            return 0
-
-        return max(self.getHeight(root.left), self.getHeight(root.right)) + 1
-</code></pre>
-
-<p>Bottom-up recurssion
+        <span style="color:#66d9ef">return</span> max(self<span style="color:#f92672">.</span>getHeight(root<span style="color:#f92672">.</span>left), self<span style="color:#f92672">.</span>getHeight(root<span style="color:#f92672">.</span>right)) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</code></pre></div><p>Bottom-up recurssion
 Time complexity: <code>O(n)</code>.
 Space complexity: <code>O(n)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isBalanced</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>traverse(root)[<span style="color:#ae81ff">0</span>]
 
-class Solution:
-    def isBalanced(self, root: TreeNode) -&gt; bool:
-        return self.traverse(root)[0]
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">traverse</span>(self, root):
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> True, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-    def traverse(self, root):
-        if not root:
-            return True, -1
+        isLeftTreeBalanced, leftHeight <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>traverse(root<span style="color:#f92672">.</span>left)
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isLeftTreeBalanced:
+            <span style="color:#66d9ef">return</span> False, <span style="color:#ae81ff">0</span>
 
-        isLeftTreeBalanced, leftHeight = self.traverse(root.left)
-        if not isLeftTreeBalanced:
-            return False, 0
+        isRightTreeBalanced, rightHeight <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>traverse(root<span style="color:#f92672">.</span>right)
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> isRightTreeBalanced:
+            <span style="color:#66d9ef">return</span> False, <span style="color:#ae81ff">0</span>
 
-        isRightTreeBalanced, rightHeight = self.traverse(root.right)
-        if not isRightTreeBalanced:
-            return False, 0
-
-        return abs(leftHeight-rightHeight)&lt;=1, max(leftHeight, rightHeight)+1
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> abs(leftHeight<span style="color:#f92672">-</span>rightHeight)<span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">1</span>, max(leftHeight, rightHeight)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

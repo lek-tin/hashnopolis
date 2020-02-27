@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/dfs/" />
@@ -180,7 +180,7 @@
 
       <p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 For example, given n = 3, a solution set is:
-[ &#34;((()))&#34;, &#34;(()())&#34;, &#34;(())()&#34;, &#34;()(())&#34;, &#34;()()()&#34; ]  Solution class Solution: def generateParenthesis(self, n: int) -&gt; List[str]: &#34;&#34;&#34; :type n: int :rtype: List[str] &#34;&#34;&#34; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</p>
+[ &#34;((()))&#34;, &#34;(()())&#34;, &#34;(())()&#34;, &#34;()(())&#34;, &#34;()()()&#34; ] Solution class Solution: def generateParenthesis(self, n: int) -&gt; List[str]: &#34;&#34;&#34; :type n: int :rtype: List[str] &#34;&#34;&#34; ans = [] self.dfs(ans, &#39;&#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</p>
 
       <p class="meta">
         
@@ -258,7 +258,7 @@ Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of 
       <h2><a href="http://www.hashnopolis.com/post/2019/03/number-of-connected-components-in-an-undirected-graph/">Number of Connected Components in an Undirected Graph</a></h2>
 
       <p>Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.
-Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2  Example 2: Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1  Note: You can assume that no duplicate edges will appear in edges.</p>
+Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2 Example 2: Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1 Note: You can assume that no duplicate edges will appear in edges.</p>
 
       <p class="meta">
         
@@ -312,8 +312,7 @@ Example 1 Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 cou
       <h2><a href="http://www.hashnopolis.com/post/2018/11/word-break-ii/">Word Break II</a></h2>
 
       <p>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
-Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.
-Example 1 Input: s = &#34;catsanddog&#34; wordDict = [&#34;cat&#34;, &#34;cats&#34;, &#34;and&#34;, &#34;sand&#34;, &#34;dog&#34;] Output: [ &#34;cats and dog&#34;, &#34;cat sand dog&#34; ]  Example 2 Input: s = &#34;pineapplepenapple&#34; wordDict = [&#34;apple&#34;, &#34;pen&#34;, &#34;applepen&#34;, &#34;pine&#34;, &#34;pineapple&#34;] Output: [ &#34;pine apple pen apple&#34;, &#34;pineapple pen apple&#34;, &#34;pine applepen apple&#34; ] Explanation: Note that you are allowed to reuse a dictionary word.</p>
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.  Example 1 Input: s = &#34;catsanddog&#34; wordDict = [&#34;cat&#34;, &#34;cats&#34;, &#34;and&#34;, &#34;sand&#34;, &#34;dog&#34;] Output: [ &#34;cats and dog&#34;, &#34;cat sand dog&#34; ] Example 2 Input: s = &#34;pineapplepenapple&#34; wordDict = [&#34;apple&#34;, &#34;pen&#34;, &#34;applepen&#34;, &#34;pine&#34;, &#34;pineapple&#34;] Output: [ &#34;pine apple pen apple&#34;, &#34;pineapple pen apple&#34;, &#34;pine applepen apple&#34; ] Explanation: Note that you are allowed to reuse a dictionary word.</p>
 
       <p class="meta">
         
@@ -340,9 +339,9 @@ Example 1 Input: s = &#34;catsanddog&#34; wordDict = [&#34;cat&#34;, &#34;cats&#
 
       <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
 Note The input string may contain letters other than the parentheses ( and ). *### Example 1
-Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;]  *### Example 2
-Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;]  *### Example 3
-Input: &#34;)(&#34; Output: [&#34;&#34;]  *### Solution
+Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;] *### Example 2
+Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;] *### Example 3
+Input: &#34;)(&#34; Output: [&#34;&#34;] *### Solution
 # Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &#34;&#34;&#34; :type s: str :rtype: List[str] &#34;&#34;&#34; res = [] self.</p>
 
       <p class="meta">
@@ -369,8 +368,9 @@ Input: &#34;)(&#34; Output: [&#34;&#34;]  *### Solution
       <h2><a href="http://www.hashnopolis.com/post/2018/11/add-and-search-word-data-structure-design/">Add and Search Word Data Structure Design</a></h2>
 
       <p>Design a data structure that supports the following two operations:
-void addWord(word) bool search(word)  search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.
-Example addWord(&#34;bad&#34;) addWord(&#34;dad&#34;) addWord(&#34;mad&#34;) search(&#34;pad&#34;) -&gt; false search(&#34;bad&#34;) -&gt; true search(&#34;.ad&#34;) -&gt; true search(&#34;b..&#34;) -&gt; true  Note You may assume that all words are consist of lowercase letters a-z.</p>
+void addWord(word) bool search(word) search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.
+Example addWord(&#34;bad&#34;) addWord(&#34;dad&#34;) addWord(&#34;mad&#34;) search(&#34;pad&#34;) -&gt; false search(&#34;bad&#34;) -&gt; true search(&#34;.ad&#34;) -&gt; true search(&#34;b..&#34;) -&gt; true Note You may assume that all words are consist of lowercase letters a-z.
+Solution </p>
 
       <p class="meta">
         

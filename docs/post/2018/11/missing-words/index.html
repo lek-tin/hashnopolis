@@ -30,7 +30,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/missing-words/" />
@@ -188,58 +188,46 @@
         <h5>Last updated: November 6, 2018</h5>
       
       <hr />
-      
-
-<p>Julia and Samantha are playing with strings. Julia has a string S, and Samantha has a string T which is a subsequence of string S. They are trying to find out what words are missing in <code>T</code>.
+      <p>Julia and Samantha are playing with strings. Julia has a string S, and Samantha has a string T which is a subsequence of string S. They are trying to find out what words are missing in <code>T</code>.
 Help Julia and Samantha to solve the problem. List all the missing words in <code>T</code>, such that inserting them at the appropriate positions in <code>T</code>, in the same order, results in the string <code>S</code>.
 Constraints
 <code>1 &lt;= |T| &lt;= |S| &lt;= 106</code>, where <code>|X|</code> denotes the length of string <code>X</code>.
 The length of each word will be less than <code>15</code>.</p>
-
 <h3 id="function-parameter">Function Parameter</h3>
-
 <p>You are given a function missingWords that takes the strings <code>S</code> and <code>T</code> as its arguments. Your solution should return an array of the missing words.</p>
-
 <p>Sample Input:</p>
-
 <pre><code>I am using hackerrank to improve programming
 am hackerrank to improve
-</code></pre>
-
-<p>Sample Output:</p>
-
+</code></pre><p>Sample Output:</p>
 <pre><code>I
 using
 programming
-</code></pre>
-
-<p>Explanation:<br />
-Missing words are:<br />
-1. I
-2. using
-3. programming</p>
-
+</code></pre><p>Explanation:<br>
+Missing words are:</p>
+<ol>
+<li>I</li>
+<li>using</li>
+<li>programming</li>
+</ol>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">missingWords</span>(s, t):
+  missing <span style="color:#f92672">=</span> []
+  a <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34; &#34;</span>)
+  b <span style="color:#f92672">=</span> t<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34; &#34;</span>)
+  j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(a)):
+    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">&gt;=</span> len(b):
+      missing<span style="color:#f92672">.</span>append(a[i])
+    <span style="color:#66d9ef">elif</span> a[i] <span style="color:#f92672">!=</span> b[j]:
+      missing<span style="color:#f92672">.</span>append(a[i])
+    <span style="color:#66d9ef">else</span>:
+      j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">print</span>(missing)
+  <span style="color:#66d9ef">return</span> missing
 
-<pre><code class="language-python">def missingWords(s, t):
-  missing = []
-  a = s.split(&quot; &quot;)
-  b = t.split(&quot; &quot;)
-  j = 0
-  for i in range(len(a)):
-    if j &gt;= len(b):
-      missing.append(a[i])
-    elif a[i] != b[j]:
-      missing.append(a[i])
-    else:
-      j += 1
-  print(missing)
-  return missing
-
-missingWords(&quot;I am using hackerrank to improve programming&quot;, &quot;am hackerrank to improve&quot;)
-# Output: ['I', 'using', 'programming']
-</code></pre>
-
+missingWords(<span style="color:#e6db74">&#34;I am using hackerrank to improve programming&#34;</span>, <span style="color:#e6db74">&#34;am hackerrank to improve&#34;</span>)
+<span style="color:#75715e"># Output: [&#39;I&#39;, &#39;using&#39;, &#39;programming&#39;]</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

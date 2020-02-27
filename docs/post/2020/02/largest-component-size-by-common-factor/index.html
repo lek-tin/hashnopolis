@@ -17,9 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a non-empty array of unique positive integers A, consider the following graph:
-1. There are A.length nodes, labelled A[0] to A[A.length - 1]; 2. There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.
-Return the size of the largest connected component in the graph.
-Example 1: Input: [4,6,15,35] Output: 4  Example 2: Input: [20,50,9,63] Output: 2  Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8  Note:  1 &amp;lt;= A." />
+ There are A.length nodes, labelled A[0] to A[A.length - 1]; There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.  Return the size of the largest connected component in the graph.
+Example 1: Input: [4,6,15,35] Output: 4 Example 2: Input: [20,50,9,63] Output: 2 Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8 Note:  1 &amp;lt;= A." />
   <meta name="keywords" content="leetcode graph union-find " />
   
   
@@ -27,16 +26,15 @@ Example 1: Input: [4,6,15,35] Output: 4  Example 2: Input: [20,50,9,63] Output: 
     
     <meta name="twitter:title" content="Largest Component Size by Common Factor" />
     <meta name="twitter:description" content="Given a non-empty array of unique positive integers A, consider the following graph:
-1. There are A.length nodes, labelled A[0] to A[A.length - 1]; 2. There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.
-Return the size of the largest connected component in the graph.
-Example 1: Input: [4,6,15,35] Output: 4  Example 2: Input: [20,50,9,63] Output: 2  Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8  Note:  1 &amp;lt;= A." />
+ There are A.length nodes, labelled A[0] to A[A.length - 1]; There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.  Return the size of the largest connected component in the graph.
+Example 1: Input: [4,6,15,35] Output: 4 Example 2: Input: [20,50,9,63] Output: 2 Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8 Note:  1 &amp;lt;= A." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/02/largest-component-size-by-common-factor/" />
@@ -196,99 +194,82 @@ Example 1: Input: [4,6,15,35] Output: 4  Example 2: Input: [20,50,9,63] Output: 
         <h5>Last updated: February 11, 2020</h5>
       
       <hr />
-      
-
-<p>Given a <strong>non-empty</strong> array of unique positive integers <code>A</code>, consider the following graph:<br />
-1. There are <code>A.length</code> nodes, labelled <code>A[0]</code> to <code>A[A.length - 1]</code>;
-2. There is an edge between <code>A[i]</code> and <code>A[j]</code> if and only if <code>A[i]</code> and <code>A[j]</code> share a common factor greater than <code>1</code>.</p>
-
+      <p>Given a <strong>non-empty</strong> array of unique positive integers <code>A</code>, consider the following graph:</p>
+<ol>
+<li>There are <code>A.length</code> nodes, labelled <code>A[0]</code> to <code>A[A.length - 1]</code>;</li>
+<li>There is an edge between <code>A[i]</code> and <code>A[j]</code> if and only if <code>A[i]</code> and <code>A[j]</code> share a common factor greater than <code>1</code>.</li>
+</ol>
 <p>Return the size of the largest connected component in the graph.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: [4,6,15,35]
 Output: 4
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: [20,50,9,63]
 Output: 2
-</code></pre>
-
-<h3 id="example-3">Example 3:</h3>
-
+</code></pre><h3 id="example-3">Example 3:</h3>
 <pre><code>
 Input: [2,3,6,7,4,12,21,39]
 Output: 8
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>1 &lt;= A.length &lt;= 20000</code></li>
 <li><code>1 &lt;= A[i] &lt;= 100000</code></li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
 
-<pre><code class="language-python">from collections import Counter
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UnionFind</span>:
+    <span style="color:#66d9ef">def</span> __init__(self, _arrSize):
+        self<span style="color:#f92672">.</span>arr <span style="color:#f92672">=</span> [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(_arrSize)]
 
-class UnionFind:
-    def __init__(self, _arrSize):
-        self.arr = [i for i in range(_arrSize)]
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find</span>(self, i):
+        <span style="color:#75715e"># skip &#34;a&#34; looking for &#34;a&#34;</span>
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>arr[i] <span style="color:#f92672">!=</span> i:
+            self<span style="color:#f92672">.</span>arr[i] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(self<span style="color:#f92672">.</span>arr[i])
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>arr[i]
 
-    def find(self, i):
-        # skip &quot;a&quot; looking for &quot;a&quot;
-        if self.arr[i] != i:
-            self.arr[i] = self.find(self.arr[i])
-        return self.arr[i]
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">union</span>(self, a, b):
+        <span style="color:#75715e"># a and b need to be union&#39;ed</span>
+        a_root <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(a)
+        b_root <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find(b)
+        <span style="color:#75715e"># set a as the root</span>
+        self<span style="color:#f92672">.</span>arr[a_root] <span style="color:#f92672">=</span> b_root
 
-    def union(self, a, b):
-        # a and b need to be union'ed
-        a_root = self.find(a)
-        b_root = self.find(b)
-        # set a as the root
-        self.arr[a_root] = b_root
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">largestComponentSize</span>(self, A: List[int]) <span style="color:#f92672">-&gt;</span> int:
+        fullFactors <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> A:
+            factors <span style="color:#f92672">=</span> []
+            tempFactor <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">while</span> tempFactor <span style="color:#f92672">*</span> tempFactor <span style="color:#f92672">&lt;=</span> num:
+                <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> tempFactor <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                    <span style="color:#66d9ef">while</span> num <span style="color:#f92672">%</span> tempFactor <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                        num <span style="color:#f92672">/=</span> tempFactor
+                    factors<span style="color:#f92672">.</span>append(tempFactor)
+                tempFactor <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> factors:
+                factors<span style="color:#f92672">.</span>append(num)
+            fullFactors<span style="color:#f92672">.</span>append(factors)
 
-class Solution:
-    def largestComponentSize(self, A: List[int]) -&gt; int:
-        fullFactors = []
-        for num in A:
-            factors = []
-            tempFactor = 2
-            while tempFactor * tempFactor &lt;= num:
-                if num % tempFactor == 0:
-                    while num % tempFactor == 0:
-                        num /= tempFactor
-                    factors.append(tempFactor)
-                tempFactor += 1
-            if num &gt; 1 or not factors:
-                factors.append(num)
-            fullFactors.append(factors)
+        <span style="color:#75715e"># Input: [20,50,100,9,63,21,49]</span>
+        <span style="color:#75715e"># factors: [[2, 5.0], [2, 5], [2, 5], [3], [3, 7.0], [3, 7.0], [7]]</span>
+        <span style="color:#75715e"># primes are guaranteed to be sorted</span>
+        primes <span style="color:#f92672">=</span> list({p <span style="color:#66d9ef">for</span> factors <span style="color:#f92672">in</span> fullFactors <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> factors})
+        <span style="color:#75715e"># map each prime to its index</span>
+        prime_to_index <span style="color:#f92672">=</span> {p: i <span style="color:#66d9ef">for</span> i, p <span style="color:#f92672">in</span> enumerate(primes)} <span style="color:#75715e"># {2: 0, 3: 1, 5.0: 2, 7.0: 3}</span>
 
-        # Input: [20,50,100,9,63,21,49]
-        # factors: [[2, 5.0], [2, 5], [2, 5], [3], [3, 7.0], [3, 7.0], [7]]
-        # primes are guaranteed to be sorted
-        primes = list({p for factors in fullFactors for p in factors})
-        # map each prime to its index
-        prime_to_index = {p: i for i, p in enumerate(primes)} # {2: 0, 3: 1, 5.0: 2, 7.0: 3}
+        unionFind <span style="color:#f92672">=</span> UnionFind(len(primes))
 
-        unionFind = UnionFind(len(primes))
-
-        for factors in fullFactors:
-            for f in factors:
-                unionFind.union(prime_to_index[factors[0]], prime_to_index[f])
-        # Counter will count how many times each value in an array appears.
-        tempMap = [unionFind.find(prime_to_index[factors[0]]) for factors in fullFactors] # [2, 2, 2, 3, 3, 3, 3]
-        counter = Counter(tempMap) # Counter({3: 4, 2: 3})
-        return max(counter.values())
-</code></pre>
-
-<h3 id="illustration">Illustration:</h3>
-
-<p><img src="/img/post/largest-component-size-by-common-factor-1.jpg" alt="largest component size by common factor 1" />
-<img src="/img/post/largest-component-size-by-common-factor-2.jpg" alt="largest component size by common factor 2" /></p>
+        <span style="color:#66d9ef">for</span> factors <span style="color:#f92672">in</span> fullFactors:
+            <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> factors:
+                unionFind<span style="color:#f92672">.</span>union(prime_to_index[factors[<span style="color:#ae81ff">0</span>]], prime_to_index[f])
+        <span style="color:#75715e"># Counter will count how many times each value in an array appears.</span>
+        tempMap <span style="color:#f92672">=</span> [unionFind<span style="color:#f92672">.</span>find(prime_to_index[factors[<span style="color:#ae81ff">0</span>]]) <span style="color:#66d9ef">for</span> factors <span style="color:#f92672">in</span> fullFactors] <span style="color:#75715e"># [2, 2, 2, 3, 3, 3, 3]</span>
+        counter <span style="color:#f92672">=</span> Counter(tempMap) <span style="color:#75715e"># Counter({3: 4, 2: 3})</span>
+        <span style="color:#66d9ef">return</span> max(counter<span style="color:#f92672">.</span>values())
+</code></pre></div><h3 id="illustration">Illustration:</h3>
+<p><img src="/img/post/largest-component-size-by-common-factor-1.jpg" alt="largest component size by common factor 1">
+<img src="/img/post/largest-component-size-by-common-factor-2.jpg" alt="largest component size by common factor 2"></p>
 
   </div>
 

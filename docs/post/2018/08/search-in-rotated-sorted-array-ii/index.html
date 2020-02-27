@@ -20,8 +20,8 @@
 (i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
 You are given a target value to search. If found in the array return true, otherwise return false.
 Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates." />
+Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true Example 2:
+Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates." />
   <meta name="keywords" content="leetcode binary-search python array logn " />
   
   
@@ -32,15 +32,15 @@ Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a fo
 (i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
 You are given a target value to search. If found in the array return true, otherwise return false.
 Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true  Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates." />
+Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true Example 2:
+Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/" />
@@ -204,76 +204,60 @@ Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false  Follow-up  This is a fo
         <h5>Last updated: September 22, 2019</h5>
       
       <hr />
-      
-
-<p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
-
+      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
 <p>(i.e., <code>[0,0,1,2,2,5,6]</code> might become <code>[2,5,6,0,0,1,2]</code>).</p>
-
 <p>You are given a target value to search. If found in the array return <code>true</code>, otherwise return <code>false</code>.</p>
-
 <p>Example 1:</p>
-
 <pre><code>Input: nums = [2,5,6,0,0,1,2], target = 0
 Output: true
-</code></pre>
-
-<p>Example 2:</p>
-
+</code></pre><p>Example 2:</p>
 <pre><code>Input: nums = [2,5,6,0,0,1,2], target = 3
 Output: false
-</code></pre>
-
-<h3 id="follow-up">Follow-up</h3>
-
+</code></pre><h3 id="follow-up">Follow-up</h3>
 <ul>
 <li>This is a follow up problem to <a href="https://leetcode.com/problems/search-in-rotated-sorted-array/description/">Search in Rotated Sorted Array</a>, where nums may contain duplicates.</li>
 <li>Would this affect the run-time complexity? How and why?</li>
 </ul>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, nums: List[int], target: int) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#75715e"># Time: average is O(logN), worst is o(n)</span>
+        <span style="color:#75715e"># Space: O(1)</span>
+        <span style="color:#66d9ef">if</span> nums <span style="color:#f92672">==</span> None <span style="color:#f92672">or</span> len(nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(nums) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python">class Solution:
-    def search(self, nums: List[int], target: int) -&gt; bool:
-        # Time: average is O(logN), worst is o(n)
-        # Space: O(1)
-        if nums == None or len(nums) == 0:
-            return 0
-        start, end = 0, len(nums) - 1
+        <span style="color:#66d9ef">while</span> start <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> end:
+            <span style="color:#66d9ef">print</span>(start, end)
+            mid <span style="color:#f92672">=</span> start <span style="color:#f92672">+</span> (end <span style="color:#f92672">-</span> start)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">if</span> nums[mid] <span style="color:#f92672">==</span> target:
+                <span style="color:#66d9ef">return</span> True
+            <span style="color:#75715e"># Skip duplicate numbers</span>
+            <span style="color:#66d9ef">if</span> nums[start] <span style="color:#f92672">==</span> nums[mid]:
+                start <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">if</span> nums[start] <span style="color:#f92672">&lt;=</span> nums[mid]:
+                    <span style="color:#75715e"># Case 1</span>
+                    <span style="color:#66d9ef">if</span> nums[start] <span style="color:#f92672">&lt;=</span> target <span style="color:#f92672">and</span> target <span style="color:#f92672">&lt;=</span> nums[mid]:
+                        end <span style="color:#f92672">=</span> mid
+                    <span style="color:#75715e"># Case 2</span>
+                    <span style="color:#66d9ef">else</span>:
+                        start <span style="color:#f92672">=</span> mid
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#75715e"># Case 3</span>
+                    <span style="color:#66d9ef">if</span> nums[mid] <span style="color:#f92672">&lt;=</span> target <span style="color:#f92672">and</span> target <span style="color:#f92672">&lt;=</span> nums[end]:
+                        start <span style="color:#f92672">=</span> mid
+                    <span style="color:#75715e"># Case 4</span>
+                    <span style="color:#66d9ef">else</span>:
+                        end <span style="color:#f92672">=</span> mid
 
-        while start + 1 &lt; end:
-            print(start, end)
-            mid = start + (end - start)//2
-            if nums[mid] == target:
-                return True
-            # Skip duplicate numbers
-            if nums[start] == nums[mid]:
-                start += 1
-            else:
-                if nums[start] &lt;= nums[mid]:
-                    # Case 1
-                    if nums[start] &lt;= target and target &lt;= nums[mid]:
-                        end = mid
-                    # Case 2
-                    else:
-                        start = mid
-                else:
-                    # Case 3
-                    if nums[mid] &lt;= target and target &lt;= nums[end]:
-                        start = mid
-                    # Case 4
-                    else:
-                        end = mid
-
-        if nums[start] == target:
-            return True
-        if nums[end] == target:
-            return True
-        return False
-</code></pre>
-
-<p>4 scenarios when searching
-<img src="/img/post/search-in-rotated-sorted-array.jpg" alt="Search in Rotated Sorted Array" /></p>
+        <span style="color:#66d9ef">if</span> nums[start] <span style="color:#f92672">==</span> target:
+            <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">if</span> nums[end] <span style="color:#f92672">==</span> target:
+            <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div><p>4 scenarios when searching
+<img src="/img/post/search-in-rotated-sorted-array.jpg" alt="Search in Rotated Sorted Array"></p>
 
   </div>
 

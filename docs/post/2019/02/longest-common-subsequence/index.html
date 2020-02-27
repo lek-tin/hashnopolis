@@ -32,7 +32,7 @@ Optimal Substructure: Let the input sequences be X[0..m-1] and Y[0..n-1] of leng
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/02/longest-common-subsequence/" />
@@ -192,56 +192,46 @@ Optimal Substructure: Let the input sequences be X[0..m-1] and Y[0..n-1] of leng
         <h5>Last updated: February 15, 2019</h5>
       
       <hr />
-      
-
-<p>The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). It differs from the longest common substring problem: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.</p>
-
+      <p>The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). It differs from the longest common substring problem: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.</p>
 <h3 id="optimal-substructure">Optimal Substructure:</h3>
-
 <p>Let the input sequences be <code>X[0..m-1] and Y[0..n-1]</code> of lengths m and n respectively. And let <code>L(X[0..m-1], Y[0..n-1])</code> be the length of LCS of the two sequences <code>X</code> and <code>Y</code>. Following is the recursive definition of <code>L(X[0..m-1], Y[0..n-1])</code>.</p>
-
 <p>If last characters of both sequences match (or <code>X[m-1] == Y[n-1]</code>) then
 <code>L(X[0..m-1], Y[0..n-1]) = 1 + L(X[0..m-2], Y[0..n-2])</code></p>
-
 <p>If last characters of both sequences do not match (or X[m-1] != Y[n-1]) then
 <code>L(X[0..m-1], Y[0..n-1]) = MAX ( L(X[0..m-2], Y[0..n-1]), L(X[0..m-1], Y[0..n-2]) )</code></p>
-
 <p>Examples:
 Consider the input strings “MASOQB” and “OQNXAYB”. Last characters match for the strings. So length of LCS can be written as:
 <code>L(“MASOQB”, “OQNXAYB”) = 1 + L(“MASOQ”, “OQNXAY”)</code></p>
-
 <h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LongestCommonSubsequence</span>
+<span style="color:#f92672">{</span>
+  <span style="color:#75715e">/* Returns length of LCS for X[0..m-1], Y[0..n-1] */</span>
+  <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lcs</span><span style="color:#f92672">(</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> X<span style="color:#f92672">,</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> Y<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> m<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n <span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// Size = m + 1, n + 1.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> L<span style="color:#f92672">[][]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>m<span style="color:#f92672">+</span>1<span style="color:#f92672">][</span>n<span style="color:#f92672">+</span>1<span style="color:#f92672">];</span>
 
-<pre><code class="language-java">public class LongestCommonSubsequence
-{
-  /* Returns length of LCS for X[0..m-1], Y[0..n-1] */
-  int lcs( char[] X, char[] Y, int m, int n )
-  {
-    // Size = m + 1, n + 1.
-    int L[][] = new int[m+1][n+1];
-
-    /* Following steps build L[m+1][n+1] in bottom up fashion. Note
-    ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1]
-    */
-    for (int i=0; i&lt;=m; i++)
-    {
-      for (int j=0; j&lt;=n; j++)
-      {
-        if (i == 0 || j == 0)
-            // Initialise L[0][0] = 0
-            L[i][j] = 0;
-        else if (X[i-1] == Y[j-1])
-            // L[1][1] = L[0][0] + 1 = 0 + 1 = 1
-            L[i][j] = L[i-1][j-1] + 1;
-        else
-            L[i][j] = max(L[i-1][j], L[i][j-1]);
-      }
-    }
-  return L[m][n];
-  }
-}
-</code></pre>
-
+    <span style="color:#75715e">/* Following steps build L[m+1][n+1] in bottom up fashion. Note
+</span><span style="color:#75715e">    ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1]
+</span><span style="color:#75715e">    */</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;=</span>m<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>
+    <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> j<span style="color:#f92672">&lt;=</span>n<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span>
+      <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">==</span> 0 <span style="color:#f92672">||</span> j <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+            <span style="color:#75715e">// Initialise L[0][0] = 0
+</span><span style="color:#75715e"></span>            L<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>X<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> Y<span style="color:#f92672">[</span>j<span style="color:#f92672">-</span>1<span style="color:#f92672">])</span>
+            <span style="color:#75715e">// L[1][1] = L[0][0] + 1 = 0 + 1 = 1
+</span><span style="color:#75715e"></span>            L<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> L<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>j<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">else</span>
+            L<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> max<span style="color:#f92672">(</span>L<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>j<span style="color:#f92672">],</span> L<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">-</span>1<span style="color:#f92672">]);</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+  <span style="color:#66d9ef">return</span> L<span style="color:#f92672">[</span>m<span style="color:#f92672">][</span>n<span style="color:#f92672">];</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

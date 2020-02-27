@@ -32,7 +32,7 @@ Note: You may not slant the container and n is at least 2. The above vertical li
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/container-with-most-water/" />
@@ -192,51 +192,41 @@ Note: You may not slant the container and n is at least 2. The above vertical li
         <h5>Last updated: January 26, 2019</h5>
       
       <hr />
-      
-
-<p>Given <code>n</code> non-negative integers <em>a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>n</sub></em> , where each represents a point at coordinate <em>(i, a<sub>i</sub>)</em>. n vertical lines are drawn such that the two endpoints of line <code>i</code> is at <em>(i, a<sub>i</sub>)</em> and <em>(i, 0)</em>. Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>
-
+      <p>Given <code>n</code> non-negative integers <em>a<!-- raw HTML omitted -->1<!-- raw HTML omitted -->, a<!-- raw HTML omitted -->2<!-- raw HTML omitted -->, &hellip;, a<!-- raw HTML omitted -->n<!-- raw HTML omitted --></em> , where each represents a point at coordinate <em>(i, a<!-- raw HTML omitted -->i<!-- raw HTML omitted -->)</em>. n vertical lines are drawn such that the two endpoints of line <code>i</code> is at <em>(i, a<!-- raw HTML omitted -->i<!-- raw HTML omitted -->)</em> and <em>(i, 0)</em>. Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>
 <h3 id="note-you-may-not-slant-the-container-and-n-is-at-least-2">Note: You may not slant the container and n is at least <code>2</code>.</h3>
-
-<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg" alt="Fig: Container With Most Water" />
+<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg" alt="Fig: Container With Most Water">
 The above vertical lines are represented by array <code>[1,8,6,2,5,4,8,3,7]</code>. In this case, the max area of water (blue section) the container can contain is <code>49</code>.</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Input: [1,8,6,2,5,4,8,3,7]
 Output: 49
-</code></pre>
+</code></pre><h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxArea</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> heights<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> maxVol <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-<h3 id="solution">Solution:</h3>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>heights<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> maxVol<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">class Solution {
-    public int maxArea(int[] heights) {
-        int maxVol = 0;
+        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> heights<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
 
-        if (heights.length &lt; 2) {
-            return maxVol;
-        }
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">&lt;</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> leftHeight <span style="color:#f92672">=</span> heights<span style="color:#f92672">[</span>left<span style="color:#f92672">];</span>
+            <span style="color:#66d9ef">int</span> rightHeight <span style="color:#f92672">=</span> heights<span style="color:#f92672">[</span>right<span style="color:#f92672">];</span>
+            <span style="color:#66d9ef">int</span> newVol <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>right <span style="color:#f92672">-</span> left<span style="color:#f92672">)</span> <span style="color:#f92672">*</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>rightHeight<span style="color:#f92672">,</span> leftHeight<span style="color:#f92672">);</span>
+            maxVol <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>maxVol<span style="color:#f92672">,</span> newVol<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>leftHeight <span style="color:#f92672">&lt;</span> rightHeight<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                left<span style="color:#f92672">++;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                right<span style="color:#f92672">--;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        int left = 0;
-        int right = heights.length - 1;
-
-        while (left &lt; right) {
-            int leftHeight = heights[left];
-            int rightHeight = heights[right];
-            int newVol = (right - left) * Math.min(rightHeight, leftHeight);
-            maxVol = Math.max(maxVol, newVol);
-            if (leftHeight &lt; rightHeight) {
-                left++;
-            } else {
-                right--;
-            }
-        }
-
-        return maxVol;
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> maxVol<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

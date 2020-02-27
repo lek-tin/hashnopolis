@@ -18,8 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a binary tree, return all root-to-leaf paths.
 Note: A leaf is a node with no children.
-Example Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;]  Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] def traverse(root, path): if root == None: return path &#43;= str(root." />
+Example Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;] Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &amp;#34;&amp;#34;&amp;#34; :type root: TreeNode :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; res = [] def traverse(root, path): if root == None: return path &#43;= str(root." />
   <meta name="keywords" content="leetcode binary-tree " />
   
   
@@ -28,15 +28,15 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
     <meta name="twitter:title" content="Binary Tree Paths" />
     <meta name="twitter:description" content="Given a binary tree, return all root-to-leaf paths.
 Note: A leaf is a node with no children.
-Example Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;]  Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] def traverse(root, path): if root == None: return path &#43;= str(root." />
+Example Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;] Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &amp;#34;&amp;#34;&amp;#34; :type root: TreeNode :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; res = [] def traverse(root, path): if root == None: return path &#43;= str(root." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/binary-tree-paths/" />
@@ -194,14 +194,9 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
         <h5>Last updated: September 13, 2018</h5>
       
       <hr />
-      
-
-<p>Given a binary tree, return all root-to-leaf paths.</p>
-
+      <p>Given a binary tree, return all root-to-leaf paths.</p>
 <p>Note: A leaf is a node with no children.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>Input:
 
    1
@@ -211,44 +206,39 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
   5
 
 Output: [&quot;1-&gt;2-&gt;5&quot;, &quot;1-&gt;3&quot;]
-</code></pre>
-
-<p>Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3</p>
-
+</code></pre><p>Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3</p>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution:
-    def binaryTreePaths(self, root):
-        &quot;&quot;&quot;
-        :type root: TreeNode
-        :rtype: List[str]
-        &quot;&quot;&quot;
-        res = []
-        def traverse(root, path):
-            if root == None:
-                return
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">binaryTreePaths</span>(self, root):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type root: TreeNode
+</span><span style="color:#e6db74">        :rtype: List[str]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        res <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">traverse</span>(root, path):
+            <span style="color:#66d9ef">if</span> root <span style="color:#f92672">==</span> None:
+                <span style="color:#66d9ef">return</span>
             
-            path += str(root.val) + &quot;-&gt;&quot;
+            path <span style="color:#f92672">+=</span> str(root<span style="color:#f92672">.</span>val) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&gt;&#34;</span>
         
-            if root.left == None and root.right == None:
-                res.append(&quot;&quot;.join(path[:-2]))
-                return
-            else:
-                traverse(root.left, list(path))
-                traverse(root.right, list(path))
+            <span style="color:#66d9ef">if</span> root<span style="color:#f92672">.</span>left <span style="color:#f92672">==</span> None <span style="color:#f92672">and</span> root<span style="color:#f92672">.</span>right <span style="color:#f92672">==</span> None:
+                res<span style="color:#f92672">.</span>append(<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(path[:<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>]))
+                <span style="color:#66d9ef">return</span>
+            <span style="color:#66d9ef">else</span>:
+                traverse(root<span style="color:#f92672">.</span>left, list(path))
+                traverse(root<span style="color:#f92672">.</span>right, list(path))
             
-        traverse(root, &quot;&quot;)
-        return res
+        traverse(root, <span style="color:#e6db74">&#34;&#34;</span>)
+        <span style="color:#66d9ef">return</span> res
             
-</code></pre>
-
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

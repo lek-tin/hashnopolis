@@ -16,25 +16,25 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content=" Given integers n and k, find the lexicographically k-th smallest integer in the range from 1 to n.
+  <meta name="description" content="Given integers n and k, find the lexicographically k-th smallest integer in the range from 1 to n.
 Note: 1 ≤ k ≤ n ≤ 10^9.
-Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10.  Solution class Solution: def findKthNumber(self, n: int, k: int) -&amp;gt; int: if n &amp;lt; k or k &amp;lt; 1: return 0 if n &amp;lt; 10: return k curr = 1 k -= 1 while k &amp;gt; 0: leap, prev, next = 0, curr, curr&#43;1 while prev &amp;lt;= n: # update leap leap &#43;= min(n&#43;1, next) - prev prev *= 10 next *= 10 if leap &amp;lt;= k: curr &#43;= 1 print(leap, &amp;quot;&amp;lt;= k; curr =&amp;quot;, curr) k -= leap else: curr *= 10 print(leap, &amp;quot;&amp;gt; k; curr =&amp;quot;, curr) k -= 1 return curr # Input: n=1300, k=50 # order: [1,10,100,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,101,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,102,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,103,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,104,1040,1041,1042] # Output: # 412 &amp;gt; k; curr = 10 # 111 &amp;gt; k; curr = 100 # 11 &amp;lt;= k; curr = 101 # 11 &amp;lt;= k; curr = 102 # 11 &amp;lt;= k; curr = 103 # 11 &amp;lt;= k; curr = 104 # 11 &amp;gt; k; curr = 1040 # 1 &amp;lt;= k; curr = 1041 # 1 &amp;lt;= k; curr = 1042  " />
+Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10. Solution class Solution: def findKthNumber(self, n: int, k: int) -&amp;gt; int: if n &amp;lt; k or k &amp;lt; 1: return 0 if n &amp;lt; 10: return k curr = 1 k -= 1 while k &amp;gt; 0: leap, prev, next = 0, curr, curr&#43;1 while prev &amp;lt;= n: # update leap leap &#43;= min(n&#43;1, next) - prev prev *= 10 next *= 10 if leap &amp;lt;= k: curr &#43;= 1 print(leap, &amp;#34;&amp;lt;= k; curr =&amp;#34;, curr) k -= leap else: curr *= 10 print(leap, &amp;#34;&amp;gt; k; curr =&amp;#34;, curr) k -= 1 return curr # Input: n=1300, k=50 # order: [1,10,100,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,101,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,102,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,103,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,104,1040,1041,1042] # Output: # 412 &amp;gt; k; curr = 10 # 111 &amp;gt; k; curr = 100 # 11 &amp;lt;= k; curr = 101 # 11 &amp;lt;= k; curr = 102 # 11 &amp;lt;= k; curr = 103 # 11 &amp;lt;= k; curr = 104 # 11 &amp;gt; k; curr = 1040 # 1 &amp;lt;= k; curr = 1041 # 1 &amp;lt;= k; curr = 1042 " />
   <meta name="keywords" content="leetcode trie " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="K Th Smallest in Lexicographical Order" />
-    <meta name="twitter:description" content=" Given integers n and k, find the lexicographically k-th smallest integer in the range from 1 to n.
+    <meta name="twitter:description" content="Given integers n and k, find the lexicographically k-th smallest integer in the range from 1 to n.
 Note: 1 ≤ k ≤ n ≤ 10^9.
-Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10.  Solution class Solution: def findKthNumber(self, n: int, k: int) -&amp;gt; int: if n &amp;lt; k or k &amp;lt; 1: return 0 if n &amp;lt; 10: return k curr = 1 k -= 1 while k &amp;gt; 0: leap, prev, next = 0, curr, curr&#43;1 while prev &amp;lt;= n: # update leap leap &#43;= min(n&#43;1, next) - prev prev *= 10 next *= 10 if leap &amp;lt;= k: curr &#43;= 1 print(leap, &amp;quot;&amp;lt;= k; curr =&amp;quot;, curr) k -= leap else: curr *= 10 print(leap, &amp;quot;&amp;gt; k; curr =&amp;quot;, curr) k -= 1 return curr # Input: n=1300, k=50 # order: [1,10,100,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,101,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,102,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,103,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,104,1040,1041,1042] # Output: # 412 &amp;gt; k; curr = 10 # 111 &amp;gt; k; curr = 100 # 11 &amp;lt;= k; curr = 101 # 11 &amp;lt;= k; curr = 102 # 11 &amp;lt;= k; curr = 103 # 11 &amp;lt;= k; curr = 104 # 11 &amp;gt; k; curr = 1040 # 1 &amp;lt;= k; curr = 1041 # 1 &amp;lt;= k; curr = 1042  " />
+Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10. Solution class Solution: def findKthNumber(self, n: int, k: int) -&amp;gt; int: if n &amp;lt; k or k &amp;lt; 1: return 0 if n &amp;lt; 10: return k curr = 1 k -= 1 while k &amp;gt; 0: leap, prev, next = 0, curr, curr&#43;1 while prev &amp;lt;= n: # update leap leap &#43;= min(n&#43;1, next) - prev prev *= 10 next *= 10 if leap &amp;lt;= k: curr &#43;= 1 print(leap, &amp;#34;&amp;lt;= k; curr =&amp;#34;, curr) k -= leap else: curr *= 10 print(leap, &amp;#34;&amp;gt; k; curr =&amp;#34;, curr) k -= 1 return curr # Input: n=1300, k=50 # order: [1,10,100,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,101,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,102,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,103,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,104,1040,1041,1042] # Output: # 412 &amp;gt; k; curr = 10 # 111 &amp;gt; k; curr = 100 # 11 &amp;lt;= k; curr = 101 # 11 &amp;lt;= k; curr = 102 # 11 &amp;lt;= k; curr = 103 # 11 &amp;lt;= k; curr = 104 # 11 &amp;gt; k; curr = 1040 # 1 &amp;lt;= k; curr = 1041 # 1 &amp;lt;= k; curr = 1042 " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/02/k-th-smallest-in-lexicographical-order/" />
@@ -192,14 +192,9 @@ Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [
         <h5>Last updated: February 13, 2020</h5>
       
       <hr />
-      
-
-<p>Given integers <code>n</code> and <code>k</code>, find the lexicographically k-th smallest integer in the range from <code>1</code> to <code>n</code>.</p>
-
+      <p>Given integers <code>n</code> and <code>k</code>, find the lexicographically k-th smallest integer in the range from <code>1</code> to <code>n</code>.</p>
 <p><strong>Note</strong>: <code>1 ≤ k ≤ n ≤ 10^9</code>.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>Input:
 n: 13   k: 2
 
@@ -208,52 +203,48 @@ Output:
 
 Explanation:
 The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findKthNumber</span>(self, n: int, k: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;</span> k <span style="color:#f92672">or</span> k <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<h3 id="solution">Solution</h3>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>:
+            <span style="color:#66d9ef">return</span> k
 
-<pre><code class="language-python">class Solution:
-    def findKthNumber(self, n: int, k: int) -&gt; int:
-        if n &lt; k or k &lt; 1:
-            return 0
+        curr <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        k <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">while</span> k <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+            leap, prev, next <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, curr, curr<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">while</span> prev <span style="color:#f92672">&lt;=</span> n:
+                <span style="color:#75715e"># update leap</span>
+                leap <span style="color:#f92672">+=</span> min(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, next) <span style="color:#f92672">-</span> prev
+                prev <span style="color:#f92672">*=</span> <span style="color:#ae81ff">10</span>
+                next <span style="color:#f92672">*=</span> <span style="color:#ae81ff">10</span>
 
-        if n &lt; 10:
-            return k
+            <span style="color:#66d9ef">if</span> leap <span style="color:#f92672">&lt;=</span> k:
+                curr <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">print</span>(leap, <span style="color:#e6db74">&#34;&lt;= k; curr =&#34;</span>, curr)
+                k <span style="color:#f92672">-=</span> leap
+            <span style="color:#66d9ef">else</span>:
+                curr <span style="color:#f92672">*=</span> <span style="color:#ae81ff">10</span>
+                <span style="color:#66d9ef">print</span>(leap, <span style="color:#e6db74">&#34;&gt; k; curr =&#34;</span>, curr)
+                k <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
 
-        curr = 1
-        k -= 1
-        while k &gt; 0:
-            leap, prev, next = 0, curr, curr+1
-            while prev &lt;= n:
-                # update leap
-                leap += min(n+1, next) - prev
-                prev *= 10
-                next *= 10
-
-            if leap &lt;= k:
-                curr += 1
-                print(leap, &quot;&lt;= k; curr =&quot;, curr)
-                k -= leap
-            else:
-                curr *= 10
-                print(leap, &quot;&gt; k; curr =&quot;, curr)
-                k -= 1
-
-        return curr
-# Input: n=1300, k=50
-# order: [1,10,100,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,101,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,102,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,103,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,104,1040,1041,1042]
-# Output:
-# 412 &gt; k; curr = 10
-# 111 &gt; k; curr = 100
-# 11 &lt;= k; curr = 101
-# 11 &lt;= k; curr = 102
-# 11 &lt;= k; curr = 103
-# 11 &lt;= k; curr = 104
-# 11 &gt; k; curr = 1040
-# 1 &lt;= k; curr = 1041
-# 1 &lt;= k; curr = 1042
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> curr
+<span style="color:#75715e"># Input: n=1300, k=50</span>
+<span style="color:#75715e"># order: [1,10,100,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,101,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,102,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,103,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,104,1040,1041,1042]</span>
+<span style="color:#75715e"># Output:</span>
+<span style="color:#75715e"># 412 &gt; k; curr = 10</span>
+<span style="color:#75715e"># 111 &gt; k; curr = 100</span>
+<span style="color:#75715e"># 11 &lt;= k; curr = 101</span>
+<span style="color:#75715e"># 11 &lt;= k; curr = 102</span>
+<span style="color:#75715e"># 11 &lt;= k; curr = 103</span>
+<span style="color:#75715e"># 11 &lt;= k; curr = 104</span>
+<span style="color:#75715e"># 11 &gt; k; curr = 1040</span>
+<span style="color:#75715e"># 1 &lt;= k; curr = 1041</span>
+<span style="color:#75715e"># 1 &lt;= k; curr = 1042</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

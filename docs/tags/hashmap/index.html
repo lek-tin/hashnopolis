@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/hashmap/" />
@@ -180,8 +180,8 @@
 
       <p>Given a string, find the length of the longest substring without repeating characters.
 *### Example 1
-Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3.  *### Example 2
-Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1.  *### Example 3
+Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3. *### Example 2
+Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1. *### Example 3
 Input: &#34;pwwkew&#34; Output: 3 Explanation: The answer is &#34;wke&#34;, with the length of 3. Note that the answer must be a substring, &#34;pwke&#34; is a subsequence and not a substring.</p>
 
       <p class="meta">
@@ -261,8 +261,8 @@ Example 1: Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hla
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/subarray-sum-equals-k/">Subarray Sum Equals K</a></h2>
 
-      <p> Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1: Input:nums = [1,1,1], k = 2 Output: 2  Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count  </p>
+      <p>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+Example 1: Input:nums = [1,1,1], k = 2 Output: 2 Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count </p>
 
       <p class="meta">
         
@@ -314,9 +314,9 @@ These lists A and B may contain duplicates. If there are multiple answers, outpu
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/super-ugly-number/">Super Ugly Number</a></h2>
 
-      <p>Write a program to find the nth super ugly number.
+      <p>Write a program to find the nthsuper ugly number.
 Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
-Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4.  Note:  1 is a super ugly number for any given primes.</p>
+Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4. Note:  1 is a super ugly number for any given primes. The given numbers in primes are in ascending order.</p>
 
       <p class="meta">
         
@@ -341,9 +341,9 @@ Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
 
-      <p> Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
-Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest  </p>
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4. Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest </p>
 
       <p class="meta">
         
@@ -370,7 +370,7 @@ Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecu
 
       <p>Design and implement a TwoSum class. It should support the following operations: add and find.
 add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
-Example 1: add(1); add(3); add(5); find(4) -&gt; true find(7) -&gt; false  Example 2: add(3); add(1); add(2); find(3) -&gt; true find(6) -&gt; false  Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
+Example 1: add(1); add(3); add(5); find(4) -&gt; true find(7) -&gt; false Example 2: add(3); add(1); add(2); find(3) -&gt; true find(6) -&gt; false Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
 
       <p class="meta">
         
@@ -397,7 +397,7 @@ Example 1: add(1); add(3); add(5); find(4) -&gt; true find(7) -&gt; false  Examp
 
       <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1]. Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
 
       <p class="meta">
         

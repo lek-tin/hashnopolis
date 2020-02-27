@@ -19,7 +19,7 @@
   <meta name="description" content="Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 Find all the elements that appear twice in this array.
 Could you do it without extra space and in O(n) runtime?
-Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3]  Solution # Time: O(n) # Space: O(1) class Solution: def findDuplicates(self, nums: List[int]) -&amp;gt; List[int]: &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; result = [] for i in nums: if nums[abs(i)-1] &amp;lt; 0: result." />
+Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3] Solution # Time: O(n) # Space: O(1) class Solution: def findDuplicates(self, nums: List[int]) -&amp;gt; List[int]: &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; result = [] for i in nums: if nums[abs(i)-1] &amp;lt; 0: result." />
   <meta name="keywords" content="leetcode array " />
   
   
@@ -29,14 +29,14 @@ Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3]  Solution # Time: O(n) # Space: 
     <meta name="twitter:description" content="Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 Find all the elements that appear twice in this array.
 Could you do it without extra space and in O(n) runtime?
-Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3]  Solution # Time: O(n) # Space: O(1) class Solution: def findDuplicates(self, nums: List[int]) -&amp;gt; List[int]: &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; result = [] for i in nums: if nums[abs(i)-1] &amp;lt; 0: result." />
+Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3] Solution # Time: O(n) # Space: O(1) class Solution: def findDuplicates(self, nums: List[int]) -&amp;gt; List[int]: &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; result = [] for i in nums: if nums[abs(i)-1] &amp;lt; 0: result." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/02/find-all-duplicates-in-an-array/" />
@@ -194,43 +194,33 @@ Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3]  Solution # Time: O(n) # Space: 
         <h5>Last updated: February 11, 2020</h5>
       
       <hr />
-      
-
-<p>Given an array of integers, <code>1 ≤ a[i] ≤ n (n = size of array)</code>, some elements appear <strong>twice</strong> and others appear <strong>once</strong>.</p>
-
+      <p>Given an array of integers, <code>1 ≤ a[i] ≤ n (n = size of array)</code>, some elements appear <strong>twice</strong> and others appear <strong>once</strong>.</p>
 <p>Find all the elements that appear <strong>twice</strong> in this array.</p>
-
 <p>Could you do it without extra space and in <code>O(n)</code> runtime?</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Input:
 [4,3,2,7,8,2,3,1]
 
 Output:
 [2,3]
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time:  O(n)</span>
+<span style="color:#75715e"># Space: O(1)</span>
 
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python"># Time:  O(n)
-# Space: O(1)
-
-class Solution:
-    def findDuplicates(self, nums: List[int]) -&gt; List[int]:
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: List[int]
-        &quot;&quot;&quot;
-        result = []
-        for i in nums:
-            if nums[abs(i)-1] &lt; 0:
-                result.append(abs(i))
-            else:
-                nums[abs(i)-1] *= -1
-        return result
-</code></pre>
-
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findDuplicates</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> List[int]:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :rtype: List[int]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        result <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> nums:
+            <span style="color:#66d9ef">if</span> nums[abs(i)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+                result<span style="color:#f92672">.</span>append(abs(i))
+            <span style="color:#66d9ef">else</span>:
+                nums[abs(i)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> result
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -34,7 +34,7 @@ Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 sub
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/" />
@@ -194,51 +194,40 @@ Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 sub
         <h5>Last updated: September 10, 2019</h5>
       
       <hr />
-      
-
-<p>Your are given an array of positive integers <code>nums</code>.</p>
-
+      <p>Your are given an array of positive integers <code>nums</code>.</p>
 <p>Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than <code>k</code>.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: nums = [10, 5, 2, 6], k = 100
 Output: 8
 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6].
 Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
-<ol>
+</code></pre><h3 id="note">Note:</h3>
+<ol start="3">
 <li><code>0 &lt; nums.length &lt;= 50000</code>.</li>
 <li><code>0 &lt; nums[i] &lt; 1000</code>.</li>
 <li><code>0 &lt;= k &lt; 10^6</code>.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numSubarrayProductLessThanK</span>(self, nums: List[int], k: int) <span style="color:#f92672">-&gt;</span> int:
+        n <span style="color:#f92672">=</span> len(nums)
 
-<pre><code class="language-python">class Solution:
-    def numSubarrayProductLessThanK(self, nums: List[int], k: int) -&gt; int:
-        n = len(nums)
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> k <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-        if n &lt; 0 or k &lt;= 1:
-            return 0
+        res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        product <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
 
-        res = 0
-        left = 0
-        product = 1
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+            product <span style="color:#f92672">*=</span> nums[i]
+            <span style="color:#66d9ef">while</span> product <span style="color:#f92672">&gt;=</span> k:
+                product <span style="color:#f92672">/=</span> nums[left]
+                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            res <span style="color:#f92672">+=</span> i <span style="color:#f92672">-</span> left <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
 
-        for i in range(n):
-            product *= nums[i]
-            while product &gt;= k:
-                product /= nums[left]
-                left += 1
-            res += i - left + 1
-
-        return res
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

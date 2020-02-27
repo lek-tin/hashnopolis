@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
 For example, given the following triangle
-[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11).  Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle." />
+[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11). Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle." />
   <meta name="keywords" content="leetcode dynamic-programming " />
   
   
@@ -27,14 +27,14 @@ For example, given the following triangle
     <meta name="twitter:title" content="Triangle" />
     <meta name="twitter:description" content="Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
 For example, given the following triangle
-[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11).  Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle." />
+[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11). Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/triangle/" />
@@ -192,12 +192,8 @@ For example, given the following triangle
         <h5>Last updated: September 4, 2019</h5>
       
       <hr />
-      
-
-<p>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.</p>
-
+      <p>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.</p>
 <p>For example, given the following triangle</p>
-
 <pre><code>[
      [2],
     [3,4],
@@ -205,83 +201,70 @@ For example, given the following triangle
   [4,1,8,3]
 ]
 The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li>Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
-
 <p>top-down:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumTotal</span>(self, triangle: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+        n <span style="color:#f92672">=</span> len(triangle)
 
-<pre><code class="language-python">class Solution:
-    def minimumTotal(self, triangle: List[List[int]]) -&gt; int:
-        n = len(triangle)
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-        if n == 0:
-            return 0
+        sums <span style="color:#f92672">=</span> [ [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
 
-        sums = [ [0 for _ in range(n)] for _ in range(n)]
+        sums[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> triangle[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]
 
-        sums[0][0] = triangle[0][0]
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n):
+            sums[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> sums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> triangle[i][<span style="color:#ae81ff">0</span>]
+            sums[i][i] <span style="color:#f92672">=</span> sums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> triangle[i][i]
 
-        for i in range(1, n):
-            sums[i][0] = sums[i-1][0] + triangle[i][0]
-            sums[i][i] = sums[i-1][i-1] + triangle[i][i]
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, i):
+                sums[i][j] <span style="color:#f92672">=</span> min(sums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], sums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]) <span style="color:#f92672">+</span> triangle[i][j]
 
-        for i in range(1, n):
-            for j in range(1, i):
-                sums[i][j] = min(sums[i-1][j-1], sums[i-1][j]) + triangle[i][j]
+        <span style="color:#66d9ef">return</span> min(sums[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+</code></pre></div><p>Bottom-up</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumTotal</span>(self, triangle: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+        n <span style="color:#f92672">=</span> len(triangle)
 
-        return min(sums[-1])
-</code></pre>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<p>Bottom-up</p>
+        sums <span style="color:#f92672">=</span> [ [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
 
-<pre><code class="language-python">class Solution:
-    def minimumTotal(self, triangle: List[List[int]]) -&gt; int:
-        n = len(triangle)
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+            sums[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][i] <span style="color:#f92672">=</span> triangle[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][i]
 
-        if n == 0:
-            return 0
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+                sums[i][j] <span style="color:#f92672">=</span> min(sums[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>], sums[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][j]) <span style="color:#f92672">+</span> triangle[i][j]
 
-        sums = [ [0 for _ in range(n)] for _ in range(n)]
+        <span style="color:#66d9ef">return</span> sums[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]
+</code></pre></div><p>DFS with memoization</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minimumTotal</span>(self, triangle: List[List[int]]) <span style="color:#f92672">-&gt;</span> int:
+        n <span style="color:#f92672">=</span> len(triangle)
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        sums <span style="color:#f92672">=</span> [ [None <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>search(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, sums, triangle)
 
-        for i in range(n):
-            sums[-1][i] = triangle[-1][i]
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, i, j, sums, triangle):
+        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&gt;=</span> len(triangle):
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-        for i in range(n-2, -1, -1):
-            for j in range(0, i+1):
-                sums[i][j] = min(sums[i+1][j+1], sums[i+1][j]) + triangle[i][j]
+        <span style="color:#66d9ef">if</span> sums[i][j] <span style="color:#f92672">!=</span> None:
+            <span style="color:#66d9ef">return</span> sums[i][j]
 
-        return sums[0][0]
-</code></pre>
+        sums[i][j] <span style="color:#f92672">=</span> min(self<span style="color:#f92672">.</span>search(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, j, sums, triangle), self<span style="color:#f92672">.</span>search(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, sums, triangle)) <span style="color:#f92672">+</span> triangle[i][j]
 
-<p>DFS with memoization</p>
-
-<pre><code class="language-python">class Solution:
-    def minimumTotal(self, triangle: List[List[int]]) -&gt; int:
-        n = len(triangle)
-        if n == 0:
-            return 0
-        sums = [ [None for _ in range(n)] for _ in range(n)]
-        return self.search(0, 0, sums, triangle)
-
-    def search(self, i, j, sums, triangle):
-        if i &gt;= len(triangle):
-            return 0
-
-        if sums[i][j] != None:
-            return sums[i][j]
-
-        sums[i][j] = min(self.search(i+1, j, sums, triangle), self.search(i+1, j+1, sums, triangle)) + triangle[i][j]
-
-        return sums[i][j]
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> sums[i][j]
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

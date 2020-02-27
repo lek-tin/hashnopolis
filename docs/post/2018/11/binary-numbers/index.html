@@ -19,7 +19,7 @@
   <meta name="description" content="For a 8-bit number, there are two ways to represent number:
 unsigned values 0 to 255
 signed values range from -128 (-2^8 = 10000000) to 127 (2^8 - 1)
-signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00000000 signed 127 = 01111111 signed 127 &#43; (-127) = 10000001 &#43; 01111111 = 0  If a number is assigned with value that is too big for it to hold, overflowing would happen, 2^32 = 4,294,967,296 is the largest unsigned 32 bit value." />
+signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00000000 signed 127 = 01111111 signed 127 &#43; (-127) = 10000001 &#43; 01111111 = 0 If a number is assigned with value that is too big for it to hold, overflowing would happen, 2^32 = 4,294,967,296 is the largest unsigned 32 bit value." />
   <meta name="keywords" content="binary-number number-representation " />
   
   
@@ -29,14 +29,14 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
     <meta name="twitter:description" content="For a 8-bit number, there are two ways to represent number:
 unsigned values 0 to 255
 signed values range from -128 (-2^8 = 10000000) to 127 (2^8 - 1)
-signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00000000 signed 127 = 01111111 signed 127 &#43; (-127) = 10000001 &#43; 01111111 = 0  If a number is assigned with value that is too big for it to hold, overflowing would happen, 2^32 = 4,294,967,296 is the largest unsigned 32 bit value." />
+signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00000000 signed 127 = 01111111 signed 127 &#43; (-127) = 10000001 &#43; 01111111 = 0 If a number is assigned with value that is too big for it to hold, overflowing would happen, 2^32 = 4,294,967,296 is the largest unsigned 32 bit value." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/binary-numbers/" />
@@ -194,23 +194,18 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
         <h5>Last updated: November 18, 2018</h5>
       
       <hr />
-      <p>For a 8-bit number, there are two ways to represent number:<br />
-<code>unsigned</code> values <code>0</code> to <code>255</code><br />
+      <p>For a 8-bit number, there are two ways to represent number:<br>
+<code>unsigned</code> values <code>0</code> to <code>255</code><br>
 <code>signed</code> values range from <code>-128 (-2^8 = 10000000)</code> to <code>127 (2^8 - 1)</code></p>
-
-<pre><code class="language-cpp">signed -128 = 10000000
-signed -127 = 10000001
-signed -1 = 11111111
-signed 0 = 00000000
-signed 127 = 01111111
-signed 127 + (-127) = 10000001 + 01111111 = 0
-</code></pre>
-
-<p>If a number is assigned with value that is too big for it to hold, overflowing would happen,
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">signed</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">128</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000000</span>
+<span style="color:#66d9ef">signed</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">127</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000001</span>
+<span style="color:#66d9ef">signed</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">11111111</span>
+<span style="color:#66d9ef">signed</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">00000000</span>
+<span style="color:#66d9ef">signed</span> <span style="color:#ae81ff">127</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">01111111</span>
+<span style="color:#66d9ef">signed</span> <span style="color:#ae81ff">127</span> <span style="color:#f92672">+</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">127</span>) <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000001</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">01111111</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</code></pre></div><p>If a number is assigned with value that is too big for it to hold, overflowing would happen,
 <code>2^32 = 4,294,967,296</code> is the largest unsigned 32 bit value. He&rsquo;s however using signed values, their maximum is 2^31-1 = 2,147,483,647, when you exceed that with for example 10,000,000,000, then it will go to the smallest possible value (-2^31) and count on from there.</p>
-
 <p>This is what happens:</p>
-
 <p>0 -&gt; 2^31-1 (10,000,000,000 - 2^31-1 = 7,852,516,353 remaining) =&gt; overflow
 -2^31 -&gt; 2^31-1 (7,852,516,353 - (2^31-1 + 2^31) = 3,557,549,056 remaining) =&gt; overflow
 -2^31 -&gt; 1410065408 (3,557,549,056 - (2^31 + 1410065408) = 0 remaining)</p>

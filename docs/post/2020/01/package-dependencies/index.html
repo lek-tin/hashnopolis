@@ -16,21 +16,21 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content=" Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;quot;Have cycle in dependency graph.&amp;quot;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add)  " />
+  <meta name="description" content="Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add) " />
   <meta name="keywords" content="leetcode dfs " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Package Dependencies" />
-    <meta name="twitter:description" content=" Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;quot;Have cycle in dependency graph.&amp;quot;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add)  " />
+    <meta name="twitter:description" content="Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add) " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/01/package-dependencies/" />
@@ -188,35 +188,31 @@
         <h5>Last updated: January 2, 2020</h5>
       
       <hr />
-      
+      <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">package_dependencies</span>(dependencies):
+  result <span style="color:#f92672">=</span> []
+  visiting <span style="color:#f92672">=</span> set([])
+  visited <span style="color:#f92672">=</span> set([])
 
-<h3 id="solution">Solution</h3>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(node):
+    <span style="color:#66d9ef">if</span> node <span style="color:#f92672">in</span> visited:
+      <span style="color:#66d9ef">return</span>
 
-<pre><code class="language-python">def package_dependencies(dependencies):
-  result = []
-  visiting = set([])
-  visited = set([])
+    visiting<span style="color:#f92672">.</span>add(node)
 
-  def dfs(node):
-    if node in visited:
-      return
-
-    visiting.add(node)
-
-    for dependency in node.dependencies:
-      if dependency in visiting:
-        raise Exception(&quot;Have cycle in dependency graph.&quot;)
-      if dependency not in visited:
+    <span style="color:#66d9ef">for</span> dependency <span style="color:#f92672">in</span> node<span style="color:#f92672">.</span>dependencies:
+      <span style="color:#66d9ef">if</span> dependency <span style="color:#f92672">in</span> visiting:
+        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#34;Have cycle in dependency graph.&#34;</span>)
+      <span style="color:#66d9ef">if</span> dependency <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
         dfs(dependency)
 
-  for node in dependencies:
+  <span style="color:#66d9ef">for</span> node <span style="color:#f92672">in</span> dependencies:
     dfs(node)
 
-  visiting.remove(node)
-  visited.add(node)
-  result.add(add)
-</code></pre>
-
+  visiting<span style="color:#f92672">.</span>remove(node)
+  visited<span style="color:#f92672">.</span>add(node)
+  result<span style="color:#f92672">.</span>add(add)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

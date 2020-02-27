@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a binary tree, return the vertical order traversal of its nodes&amp;rsquo; values. (ie, from top to bottom, column by column).
 If two nodes are in the same row and column, the order should be from left to right.
-Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ]  Solution # https://www." />
+Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ] Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ] Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ] Solution # https://www." />
   <meta name="keywords" content="leetcode binary-tree " />
   
   
@@ -27,14 +27,14 @@ Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9]
     <meta name="twitter:title" content="Binary Tree Vertical Order Traversal" />
     <meta name="twitter:description" content="Given a binary tree, return the vertical order traversal of its nodes&amp;rsquo; values. (ie, from top to bottom, column by column).
 If two nodes are in the same row and column, the order should be from left to right.
-Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ]  Solution # https://www." />
+Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ] Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ] Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ] Solution # https://www." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/" />
@@ -192,14 +192,9 @@ Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9]
         <h5>Last updated: December 30, 2018</h5>
       
       <hr />
-      
-
-<p>Given a binary tree, return the vertical order traversal of its nodes&rsquo; values. (ie, from top to bottom, column by column).</p>
-
+      <p>Given a binary tree, return the vertical order traversal of its nodes&rsquo; values. (ie, from top to bottom, column by column).</p>
 <p>If two nodes are in the same row and column, the order should be from <strong>left to right.</strong></p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: [3,9,20,null,null,15,7]
 
    3
@@ -218,10 +213,7 @@ Output:
   [20],
   [7]
 ]
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: [3,9,8,4,0,1,7]
 
      3
@@ -241,10 +233,7 @@ Output:
   [8],
   [7]
 ]
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0's right child is 2 and 1's left child is 5)
 
      3
@@ -267,110 +256,104 @@ Output:
   [8,2],
   [7]
 ]
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># https://www.youtube.com/watch?v=PQKkr036wRc</span>
+<span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<h3 id="solution">Solution</h3>
+<span style="color:#75715e">#        root: 0</span>
+<span style="color:#75715e">#       /       \</span>
+<span style="color:#75715e">#    left: -1  right: 1</span>
 
-<pre><code class="language-python"># https://www.youtube.com/watch?v=PQKkr036wRc
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">verticalOrder</span>(self, root):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type root: TreeNode
+</span><span style="color:#e6db74">        :rtype: List[List[int]]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        solution <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> solution
 
-#        root: 0
-#       /       \
-#    left: -1  right: 1
+        colMap <span style="color:#f92672">=</span> {}
 
-class Solution(object):
-    def verticalOrder(self, root):
-        &quot;&quot;&quot;
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        &quot;&quot;&quot;
-        solution = []
-        if not root:
-            return solution
+        queue <span style="color:#f92672">=</span> [(root, <span style="color:#ae81ff">0</span>)]
+        <span style="color:#66d9ef">while</span> queue:
+            curr, col <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)
 
-        colMap = {}
+            <span style="color:#66d9ef">if</span> col <span style="color:#f92672">in</span> colMap:
+                colMap[col]<span style="color:#f92672">.</span>append(curr<span style="color:#f92672">.</span>val)
+            <span style="color:#66d9ef">else</span>:
+                colMap[col] <span style="color:#f92672">=</span> [curr<span style="color:#f92672">.</span>val]
 
-        queue = [(root, 0)]
-        while queue:
-            curr, col = queue.pop(0)
+            <span style="color:#66d9ef">if</span> curr<span style="color:#f92672">.</span>left:
+                queue<span style="color:#f92672">.</span>append((curr<span style="color:#f92672">.</span>left, col <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>))
+            <span style="color:#66d9ef">if</span> curr<span style="color:#f92672">.</span>right:
+                queue<span style="color:#f92672">.</span>append((curr<span style="color:#f92672">.</span>right, col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>))
 
-            if col in colMap:
-                colMap[col].append(curr.val)
-            else:
-                colMap[col] = [curr.val]
+        <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> sorted(colMap):
+            solution<span style="color:#f92672">.</span>append(colMap[col])
 
-            if curr.left:
-                queue.append((curr.left, col - 1))
-            if curr.right:
-                queue.append((curr.right, col + 1))
+        <span style="color:#66d9ef">return</span> solution
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-        for col in sorted(colMap):
-            solution.append(colMap[col])
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">verticalOrder</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-        return solution
-</code></pre>
+        List<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    private int max = 0;
-    private int min = 0;
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+        <span style="color:#75715e">// Initialise the res array
+</span><span style="color:#75715e"></span>        helper<span style="color:#f92672">(</span>root<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> min<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;=</span> max<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            res<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;());</span>
+        <span style="color:#f92672">}</span>
 
-    public List&lt;List&lt;Integer&gt;&gt; verticalOrder(TreeNode root) {
+        Queue<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
+        Queue<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> index <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">&lt;&gt;();</span>
 
-        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        index<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(-</span>min<span style="color:#f92672">);</span>
+        queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>queue<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            TreeNode curr <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">();</span>
+            <span style="color:#66d9ef">int</span> col <span style="color:#f92672">=</span> index<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">();</span>
+            res<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>col<span style="color:#f92672">).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>curr<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>curr<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>curr<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+                index<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>col <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>curr<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>curr<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+                index<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>col <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        if (root == null) return res;
-        // Initialise the res array
-        helper(root, 0);
-        for (int i = min; i&lt;= max; i++) {
-            res.add(new ArrayList&lt;&gt;());
-        }
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-        Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;();
-        Queue&lt;Integer&gt; index = new LinkedList&lt;&gt;();
-
-        index.offer(-min);
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            TreeNode curr = queue.poll();
-            int col = index.poll();
-            res.get(col).add(curr.val);
-            if (curr.left != null) {
-                queue.offer(curr.left);
-                index.offer(col - 1);
-            }
-            if (curr.right != null) {
-                queue.offer(curr.right);
-                index.offer(col + 1);
-            }
-        }
-
-        return res;
-    }
-
-    public void helper(TreeNode node, int col) {
-        if (node == null) return;
-        min = Math.min(min, col);
-        max = Math.max(max, col);
-        helper(node.left, col - 1);
-        helper(node.right, col + 1);
-    }
-}
-</code></pre>
-
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">helper</span><span style="color:#f92672">(</span>TreeNode node<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> col<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        min <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>min<span style="color:#f92672">,</span> col<span style="color:#f92672">);</span>
+        max <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>max<span style="color:#f92672">,</span> col<span style="color:#f92672">);</span>
+        helper<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> col <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+        helper<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> col <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

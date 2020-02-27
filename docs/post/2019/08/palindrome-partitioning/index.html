@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a string s, partition s such that every substring of the partition is a palindrome.
 Return all possible palindrome partitioning of s.
-Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;] ]  Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&amp;gt;&#39;b&#39;-&amp;gt;&#39;aa&#39;-&amp;gt;&#39;e&#39;-&amp;gt;&#39;q&#39;-&amp;gt;&#39;w&#39;-&amp;gt;&#39;d&#39;-&amp;gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self." />
+Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;] ] Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &amp;#39;ababaaeqwds&amp;#39;, one possible call stack will look like &amp;#39;aba&amp;#39;-&amp;gt;&amp;#39;b&amp;#39;-&amp;gt;&amp;#39;aa&amp;#39;-&amp;gt;&amp;#39;e&amp;#39;-&amp;gt;&amp;#39;q&amp;#39;-&amp;gt;&amp;#39;w&amp;#39;-&amp;gt;&amp;#39;d&amp;#39;-&amp;gt;&amp;#39;s&amp;#39;: n space class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self." />
   <meta name="keywords" content="leetcode dfs " />
   
   
@@ -27,14 +27,14 @@ Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;qu
     <meta name="twitter:title" content="Palindrome Partitioning" />
     <meta name="twitter:description" content="Given a string s, partition s such that every substring of the partition is a palindrome.
 Return all possible palindrome partitioning of s.
-Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;] ]  Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&amp;gt;&#39;b&#39;-&amp;gt;&#39;aa&#39;-&amp;gt;&#39;e&#39;-&amp;gt;&#39;q&#39;-&amp;gt;&#39;w&#39;-&amp;gt;&#39;d&#39;-&amp;gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self." />
+Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;] ] Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &amp;#39;ababaaeqwds&amp;#39;, one possible call stack will look like &amp;#39;aba&amp;#39;-&amp;gt;&amp;#39;b&amp;#39;-&amp;gt;&amp;#39;aa&amp;#39;-&amp;gt;&amp;#39;e&amp;#39;-&amp;gt;&amp;#39;q&amp;#39;-&amp;gt;&amp;#39;w&amp;#39;-&amp;gt;&amp;#39;d&amp;#39;-&amp;gt;&amp;#39;s&amp;#39;: n space class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/palindrome-partitioning/" />
@@ -192,58 +192,49 @@ Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;qu
         <h5>Last updated: August 7, 2019</h5>
       
       <hr />
-      
-
-<p>Given a string <code>s</code>, partition <code>s</code> such that every substring of the partition is a palindrome.</p>
-
+      <p>Given a string <code>s</code>, partition <code>s</code> such that every substring of the partition is a palindrome.</p>
 <p>Return all possible palindrome partitioning of <code>s</code>.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>Input: &quot;aab&quot;
 Output:
 [
   [&quot;aa&quot;,&quot;b&quot;],
   [&quot;a&quot;,&quot;a&quot;,&quot;b&quot;]
 ]
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: O(n*2^n)</span>
+<span style="color:#75715e"># Space: `O(n)`. At any time, only one call stack will be in progress</span>
+<span style="color:#75715e"># For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&gt;&#39;b&#39;-&gt;&#39;aa&#39;-&gt;&#39;e&#39;-&gt;&#39;q&#39;-&gt;&#39;w&#39;-&gt;&#39;d&#39;-&gt;&#39;s&#39;: n space</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(self, s: str) <span style="color:#f92672">-&gt;</span> List[List[str]]:
+        <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> s <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> []
 
-<h3 id="solution">Solution</h3>
+        results <span style="color:#f92672">=</span> []
+        temp <span style="color:#f92672">=</span> []
+        self<span style="color:#f92672">.</span>search(<span style="color:#ae81ff">0</span>, s, temp, results)
+        <span style="color:#66d9ef">return</span> results
 
-<pre><code class="language-python"># Time: O(n*2^n)
-# Space: `O(n)`. At any time, only one call stack will be in progress
-# For example, in put 'ababaaeqwds', one possible call stack will look like 'aba'-&gt;'b'-&gt;'aa'-&gt;'e'-&gt;'q'-&gt;'w'-&gt;'d'-&gt;'s': n space
-class Solution:
-    def partition(self, s: str) -&gt; List[List[str]]:
-        if len(s) == 0 or s == None:
-            return []
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, startIndex, s, temp, results):
+        <span style="color:#66d9ef">if</span> startIndex <span style="color:#f92672">==</span> len(s):
+            results<span style="color:#f92672">.</span>append(temp[:])
+            <span style="color:#66d9ef">return</span>
 
-        results = []
-        temp = []
-        self.search(0, s, temp, results)
-        return results
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(startIndex, len(s)):
+            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>isPalindrome(s, startIndex, i):
+                candidateStr <span style="color:#f92672">=</span> str(s[startIndex:i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+                temp<span style="color:#f92672">.</span>append(candidateStr)
+                self<span style="color:#f92672">.</span>search(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, s, temp, results)
+                temp<span style="color:#f92672">.</span>pop()
 
-    def search(self, startIndex, s, temp, results):
-        if startIndex == len(s):
-            results.append(temp[:])
-            return
-
-        for i in range(startIndex, len(s)):
-            if self.isPalindrome(s, startIndex, i):
-                candidateStr = str(s[startIndex:i+1])
-                temp.append(candidateStr)
-                self.search(i+1, s, temp, results)
-                temp.pop()
-
-    def isPalindrome(self, s, start, end):
-        while start &lt; end:
-            if s[start] != s[end]:
-                return False
-            start += 1
-            end -= 1
-        return True
-</code></pre>
-
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, s, start, end):
+        <span style="color:#66d9ef">while</span> start <span style="color:#f92672">&lt;</span> end:
+            <span style="color:#66d9ef">if</span> s[start] <span style="color:#f92672">!=</span> s[end]:
+                <span style="color:#66d9ef">return</span> False
+            start <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            end <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> True
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recursion on Hashnopolis</title>
+    <title>recursion on Hashnopolis</title>
     <link>http://www.hashnopolis.com/tags/recursion/</link>
-    <description>Recent content in Recursion on Hashnopolis</description>
+    <description>Recent content in recursion on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
@@ -21,7 +21,7 @@
       <description>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ]  ###Example 2:</description>
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@ Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: 
       
       <guid>http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/</guid>
       <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</description>
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution Bottom-up solution:</description>
     </item>
     
     <item>
@@ -40,9 +40,7 @@ Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increas
       <pubDate>Sun, 11 Nov 2018 12:40:25 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/powx-n/</guid>
-      <description>Example 1 Input: 2.00000, 10 Output: 1024.00000  Example 2 Input: 2.10000, 3 Output: 9.26100  Example 3 Input: 2.00000, -2 Output: 0.25000  Explanation 2-2 = 1&amp;frasl;22 = 1&amp;frasl;4 = 0.25 Note  -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]
-Solution ```python
-Time: o(logN) Space: O(n) class Solution: def myPow(self, x, n): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type x: float :type n: int :rtype: float &amp;ldquo;&amp;rdquo;&amp;rdquo; if n &amp;gt; 0: return self.</description>
+      <description>Example 1 Input: 2.00000, 10 Output: 1024.00000 Example 2 Input: 2.10000, 3 Output: 9.26100 Example 3 Input: 2.00000, -2 Output: 0.25000 Explanation 2-2 = 1/22 = 1/4 = 0.25 Note  -100.0 &amp;lt; x &amp;lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]  Solution # Time: o(logN) # Space: `O(n)` class Solution: def myPow(self, x, n): &amp;#34;&amp;#34;&amp;#34; :type x: float :type n: int :rtype: float &amp;#34;&amp;#34;&amp;#34; if n &amp;gt; 0: return self.</description>
     </item>
     
     <item>
@@ -65,7 +63,7 @@ Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]
       <guid>http://www.hashnopolis.com/post/2018/10/decode-ways/</guid>
       <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
 &amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
-Example 1 Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).  Example 2 Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
+Example 1 Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12). Example 2 Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
     </item>
     
   </channel>

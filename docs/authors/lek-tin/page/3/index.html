@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
@@ -176,10 +176,36 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/11/word-ladder-ii/">Word Ladder Ii</a></h2>
+
+      <p>Given two words (beginWord and endWord), and a dictionary’s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
+ Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/">Longest Valid Parentheses</a></h2>
 
       <p>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
-Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parentheses substring is &#34;()&#34;  Example 2: Input: &#34;)()())&#34; Output: 4 Explanation: The longest valid parentheses substring is &#34;()()&#34;  Solution Dynamic programming
+Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parentheses substring is &#34;()&#34; Example 2: Input: &#34;)()())&#34; Output: 4 Explanation: The longest valid parentheses substring is &#34;()()&#34; Solution Dynamic programming
 // Time: `O(n)` // Space: `O(n)` public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</p>
 
       <p class="meta">
@@ -208,8 +234,8 @@ Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parenth
       <p>Given a binary tree and a sum, find all root-to-leaf paths where each path’s sum equals the given sum.
 Note: A leaf is a node with no children.
 Example: Given the below binary tree and sum = 22,
- 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1  Return:
-[ [5,4,11,2], [5,8,4,5] ]  Solution # Definition for a binary tree node.</p>
+ 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 Return:
+[ [5,4,11,2], [5,8,4,5] ] Solution # Definition for a binary tree node.</p>
 
       <p class="meta">
         
@@ -234,7 +260,7 @@ Example: Given the below binary tree and sum = 22,
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/11/best-time-to-buy-and-sell-stock-iii/">Best Time to Buy and Sell Stock III</a></h2>
 
-      <p>Say you have an array for which the ith element is the price of a given stock on day i.
+      <p>Say you have an array for which the ithelement is the price of a given stock on day i.
 Design an algorithm to find the maximum profit. You may complete at most two transactions.
 Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
 Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</p>
@@ -264,8 +290,8 @@ Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price =
 
       <p>Given a string, find the length of the longest substring without repeating characters.
 *### Example 1
-Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3.  *### Example 2
-Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1.  *### Example 3
+Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3. *### Example 2
+Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1. *### Example 3
 Input: &#34;pwwkew&#34; Output: 3 Explanation: The answer is &#34;wke&#34;, with the length of 3. Note that the answer must be a substring, &#34;pwke&#34; is a subsequence and not a substring.</p>
 
       <p class="meta">
@@ -372,10 +398,10 @@ Before and After puzzles are phrases that are formed by merging two phrases wher
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/10/maximum-product-of-three-numbers/">Maximum Product of Three Numbers</a></h2>
 
-      <p> Given an integer array, find three numbers whose product is maximum and output the maximum product.
+      <p>Given an integer array, find three numbers whose product is maximum and output the maximum product.
 Example 1:
-Input: [1,2,3] Output: 6  Example 2:
-Input: [1,2,3,4] Output: 24  Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won’t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; min_1, min_2 = float(&#34;inf&#34;), float(&#34;inf&#34;) max_1, max_2, max_3 = float(&#34;-inf&#34;), float(&#34;-inf&#34;), float(&#34;-inf&#34;) for num in nums: if num &lt; min_1: min_2 = min_1 min_1 = num elif num &lt; min_2: min_2 = num if num &gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &gt; max_2: max_3 = max_2 max_2 = num elif num &gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3)  </p>
+Input: [1,2,3] Output: 6 Example 2:
+Input: [1,2,3,4] Output: 24 Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won’t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; min_1, min_2 = float(&#34;inf&#34;), float(&#34;inf&#34;) max_1, max_2, max_3 = float(&#34;-inf&#34;), float(&#34;-inf&#34;), float(&#34;-inf&#34;) for num in nums: if num &lt; min_1: min_2 = min_1 min_1 = num elif num &lt; min_2: min_2 = num if num &gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &gt; max_2: max_3 = max_2 max_2 = num elif num &gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3) </p>
 
       <p class="meta">
         
@@ -401,34 +427,8 @@ Input: [1,2,3,4] Output: 24  Note:  The length of the given array will be in ran
       <h2><a href="http://www.hashnopolis.com/post/2019/10/prefix-postfix-conversion/">Prefix Postfix Conversion</a></h2>
 
       <p>Prefix : An expression is called the prefix expression if the operator appears in the expression before the operands. Simply of the form (operator operand1 operand2). Example : *&#43;AB-CD (Infix : (A&#43;B) * (C-D) )
-Postfix: An expression is called the postfix expression if the operator appears in the expression after the operands. Simply of the form (operand1 operand2 operator). Example : AB&#43;CD-* (Infix : (A&#43;B * (C-D) )</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/maximum-value-array-m-range-increment-operations/">Maximum Value Array M Range Increment Operations</a></h2>
-
-      <p>Consider an array of size n with all initial values as 0, we need to perform following m range increment operations.
-increment(a, b, k) : Increment values from a to b by k. After m operations, we need to calculate the maximum of the values in the array.
-Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2, b = 3, k = 100 Output : 200 Explanation: Initially array = {0, 0, 0, 0, 0} After first operation: array = {100, 100, 0, 0, 0} After second operation: array = {100, 200, 100, 100, 100} After third operation: array = {100, 200, 200, 200, 100} Maximum element after m operations is 200.</p>
+Postfix: An expression is called the postfix expression if the operator appears in the expression after the operands. Simply of the form (operand1 operand2 operator). Example : AB&#43;CD-* (Infix : (A&#43;B * (C-D) )
+Given a Prefix expression, convert it into a Postfix expression.</p>
 
       <p class="meta">
         

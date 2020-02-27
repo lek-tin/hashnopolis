@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self." />
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1]. Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :type target: int :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self." />
   <meta name="keywords" content="leetcode hashmap two-pointers " />
   
   
@@ -27,14 +27,14 @@ Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] =
     <meta name="twitter:title" content="Two Sum" />
     <meta name="twitter:description" content="Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type target: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res  # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self." />
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1]. Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :type target: int :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; res = [-1, -1] if nums == None or len(nums) &amp;lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/two-sum/" />
@@ -194,78 +194,67 @@ Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] =
         <h5>Last updated: August 19, 2019</h5>
       
       <hr />
-      
-
-<p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
-
+      <p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
 <p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the same element twice.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># time: `O(n)`</span>
+<span style="color:#75715e"># space: `O(n)`</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">twoSum</span>(self, nums, target):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :type target: int
+</span><span style="color:#e6db74">        :rtype: List[int]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        res <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">if</span> nums <span style="color:#f92672">==</span> None <span style="color:#f92672">or</span> len(nums) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>:
+            <span style="color:#66d9ef">return</span> res
 
-<h3 id="solution">Solution</h3>
+        solutionMap <span style="color:#f92672">=</span> {}
+        <span style="color:#66d9ef">for</span> pos <span style="color:#f92672">in</span> range(len(nums) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">-</span> nums[pos]) <span style="color:#f92672">in</span> solutionMap:
+                res[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> solutionMap[target <span style="color:#f92672">-</span> nums[pos]]
+                res[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> pos
+                <span style="color:#66d9ef">break</span>
+            solutionMap[nums[pos]] <span style="color:#f92672">=</span> pos
 
-<pre><code class="language-python"># time: `O(n)`
-# space: `O(n)`
-class Solution:
-    def twoSum(self, nums, target):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        &quot;&quot;&quot;
-        res = [-1, -1]
-        if nums == None or len(nums) &lt; 2:
-            return res
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># time: o(nlogn)</span>
+<span style="color:#75715e"># space: o(1)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Pair</span>:
+    <span style="color:#66d9ef">def</span> __init__(self, index, val):
+        self<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> index
+        self<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> val
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getIndex</span>(self):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>index
 
-        solutionMap = {}
-        for pos in range(len(nums) - 1):
-            if (target - nums[pos]) in solutionMap:
-                res[0] = solutionMap[target - nums[pos]]
-                res[1] = pos
-                break
-            solutionMap[nums[pos]] = pos
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">twoSum</span>(self, nums: List[int], target: int) <span style="color:#f92672">-&gt;</span> List[int]:
+        pairs <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> i, num <span style="color:#f92672">in</span> enumerate(nums):
+            nums[i] <span style="color:#f92672">=</span> Pair(i, num)
 
-        return res
-</code></pre>
+        nums<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> pair: pair<span style="color:#f92672">.</span>val)
 
-<pre><code class="language-python"># time: o(nlogn)
-# space: o(1)
-class Pair:
-    def __init__(self, index, val):
-        self.index = index
-        self.val = val
-    def getIndex(self):
-        return self.index
+        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -&gt; List[int]:
-        pairs = []
-        for i, num in enumerate(nums):
-            nums[i] = Pair(i, num)
+        <span style="color:#66d9ef">for</span> pair <span style="color:#f92672">in</span> nums:
+            <span style="color:#66d9ef">print</span>(pair<span style="color:#f92672">.</span>index, pair<span style="color:#f92672">.</span>val)
 
-        nums.sort(key=lambda pair: pair.val)
-
-        left, right = 0, len(nums)-1
-
-        for pair in nums:
-            print(pair.index, pair.val)
-
-        while left &lt; right:
-            temp = nums[left].val + nums[right].val
-            if temp == target:
-                return [nums[left].index, nums[right].index]
-            elif temp &lt; target:
-                left += 1
-            else:
-                right -= 1
-</code></pre>
-
+        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+            temp <span style="color:#f92672">=</span> nums[left]<span style="color:#f92672">.</span>val <span style="color:#f92672">+</span> nums[right]<span style="color:#f92672">.</span>val
+            <span style="color:#66d9ef">if</span> temp <span style="color:#f92672">==</span> target:
+                <span style="color:#66d9ef">return</span> [nums[left]<span style="color:#f92672">.</span>index, nums[right]<span style="color:#f92672">.</span>index]
+            <span style="color:#66d9ef">elif</span> temp <span style="color:#f92672">&lt;</span> target:
+                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

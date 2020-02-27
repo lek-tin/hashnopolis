@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
@@ -176,10 +176,36 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
+
+      <p>Given an unsorted array of integers, find the length of longest increasing subsequence.
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution Bottom-up solution:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/">Longest Continuous Increasing Subsequence</a></h2>
 
       <p>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
-Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2 Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</p>
+Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4. Example 2 Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</p>
 
       <p class="meta">
         
@@ -204,7 +230,7 @@ Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous incre
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/12/find-all-anagrams-in-a-string/">Find All Anagrams in a String</a></h2>
 
-      <p>Given a string s and a non-empty string p, find all the start indices of p’s anagrams in s.
+      <p>Given a string s and a non-empty string p, find all the start indices of p&#39;s anagrams in s.
 Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
 The order of output does not matter.
 Example 1 Input: s: &#34;cbaebabacd&#34; p: &#34;abc&#34; Output: [0, 6] Explanation: The substring with start index = 0 is &#34;cba&#34;, which is an anagram of &#34;abc&#34;.</p>
@@ -261,7 +287,7 @@ Example 1 Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 cou
       <h2><a href="http://www.hashnopolis.com/post/2018/12/alien-dictionary/">Alien Dictionary</a></h2>
 
       <p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1 Input: [ &#34;wrt&#34;, &#34;wrf&#34;, &#34;er&#34;, &#34;ett&#34;, &#34;rftt&#34; ] Output: &#34;wertf&#34;  Example 2 Input: [ &#34;z&#34;, &#34;x&#34; ] Output: &#34;zx&#34;  Example 3 Input: [ &#34;z&#34;, &#34;x&#34;, &#34;z&#34; ] Output: &#34;&#34;  Explanation The order is invalid, so return “”.</p>
+Example 1 Input: [ &#34;wrt&#34;, &#34;wrf&#34;, &#34;er&#34;, &#34;ett&#34;, &#34;rftt&#34; ] Output: &#34;wertf&#34; Example 2 Input: [ &#34;z&#34;, &#34;x&#34; ] Output: &#34;zx&#34; Example 3 Input: [ &#34;z&#34;, &#34;x&#34;, &#34;z&#34; ] Output: &#34;&#34; Explanation The order is invalid, so return “&#34;.</p>
 
       <p class="meta">
         
@@ -314,8 +340,7 @@ Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(num
       <h2><a href="http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/">Intersection of Two Arrays</a></h2>
 
       <p>Given two arrays, write a function to compute their intersection.
-Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2]  Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4]  Note  Each element in the result must be unique. The result can be in any order.
-Solution Use binary search when one of the lists is very long and the other is short
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2] Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4] Note  Each element in the result must be unique. The result can be in any order.  Solution Use binary search when one of the lists is very long and the other is short
 class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]: if len(nums1) &lt; len(nums2): return self.</p>
 
       <p class="meta">
@@ -342,8 +367,7 @@ class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&gt;
       <h2><a href="http://www.hashnopolis.com/post/2018/11/word-break-ii/">Word Break II</a></h2>
 
       <p>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
-Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.
-Example 1 Input: s = &#34;catsanddog&#34; wordDict = [&#34;cat&#34;, &#34;cats&#34;, &#34;and&#34;, &#34;sand&#34;, &#34;dog&#34;] Output: [ &#34;cats and dog&#34;, &#34;cat sand dog&#34; ]  Example 2 Input: s = &#34;pineapplepenapple&#34; wordDict = [&#34;apple&#34;, &#34;pen&#34;, &#34;applepen&#34;, &#34;pine&#34;, &#34;pineapple&#34;] Output: [ &#34;pine apple pen apple&#34;, &#34;pineapple pen apple&#34;, &#34;pine applepen apple&#34; ] Explanation: Note that you are allowed to reuse a dictionary word.</p>
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.  Example 1 Input: s = &#34;catsanddog&#34; wordDict = [&#34;cat&#34;, &#34;cats&#34;, &#34;and&#34;, &#34;sand&#34;, &#34;dog&#34;] Output: [ &#34;cats and dog&#34;, &#34;cat sand dog&#34; ] Example 2 Input: s = &#34;pineapplepenapple&#34; wordDict = [&#34;apple&#34;, &#34;pen&#34;, &#34;applepen&#34;, &#34;pine&#34;, &#34;pineapple&#34;] Output: [ &#34;pine apple pen apple&#34;, &#34;pineapple pen apple&#34;, &#34;pine applepen apple&#34; ] Explanation: Note that you are allowed to reuse a dictionary word.</p>
 
       <p class="meta">
         
@@ -370,7 +394,7 @@ Example 1 Input: s = &#34;catsanddog&#34; wordDict = [&#34;cat&#34;, &#34;cats&#
 
       <p>Install manually Step 1: Download the source package from the oracle repository. If your computer is 64-bit, download the x64 version; if it is 32-bit, download the x86 version.
 Step 2: Extract from the compressed file and move the package folder to /usr/java. rememeber to run these commands as sudo is not the root user.
-mv downloads-folder/jdk-&lt;version&gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk-&lt;version&gt;-linux-xxx.tar.gz rm jdk-&lt;version&gt;-linux-xxx.tar.gz  Step 3: Add the java path to the ~/.</p>
+mv downloads-folder/jdk-&lt;version&gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk-&lt;version&gt;-linux-xxx.tar.gz rm jdk-&lt;version&gt;-linux-xxx.tar.gz Step 3: Add the java path to the ~/.</p>
 
       <p class="meta">
         
@@ -397,7 +421,7 @@ mv downloads-folder/jdk-&lt;version&gt;-linux-xxx.tar.gz /usr/java tar -xvzf jdk
 
       <p>The API: int read4(char *buf) reads 4 characters at a time from a file.
 The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
+By using the read4 API, implement the function int read(char *buf, int n) that reads n characters from the file.
 Example 1 Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: The actual number of characters read is 3, which is &#34;abc&#34;.</p>
 
       <p class="meta">
@@ -411,32 +435,6 @@ Example 1 Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: T
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/cpp-data-types/">CPP Data Types</a></h2>
-
-      <p>https://stackoverflow.com/questions/2550345/whats-the-difference-between-unsigned-long-long-int-in-c-c
-   Type Typical Bit Width Typical Range     char 1byte -127 to 127 or 0 to 255   unsigned char 1byte 0 to 255   signed char 1byte -127 to 127   int 4bytes -2147483648 to 2147483647   unsigned int 4bytes 0 to 4294967295   signed int 4bytes -2147483648 to 2147483647   short int 2bytes -32768 to 32767   unsigned short int Range 0 to 65,535   signed short int Range -32768 to 32767   long int 4bytes -2,147,483,648 to 2,147,483,647   signed long int 4bytes same as long int   unsigned long int 4bytes 0 to 4,294,967,295   float 4bytes &#43;/- 3.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/data-types" ><strong>"data-types"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

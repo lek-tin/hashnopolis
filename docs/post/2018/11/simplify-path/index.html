@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given an absolute path for a file (Unix-style), simplify it.
 For example, path = &amp;quot;/home/&amp;quot;, =&amp;gt; &amp;quot;/home&amp;quot; path = &amp;quot;/a/./b/../../c/&amp;quot;, =&amp;gt; &amp;quot;/c&amp;quot; path = &amp;quot;/a/../../b/../c//.//&amp;quot;, =&amp;gt; &amp;quot;/c&amp;quot; path = &amp;quot;/a//b////c/d//././/..&amp;quot;, =&amp;gt; &amp;quot;/a/b/c&amp;quot;
-In a UNIX-style file system, a period (&amp;lsquo;.&amp;rsquo;) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (&amp;ldquo;..&amp;rdquo;) moves up a directory, so it cancels out whatever the last directory was." />
+In a UNIX-style file system, a period (&#39;.&#39;) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (&amp;quot;..&amp;quot;) moves up a directory, so it cancels out whatever the last directory was." />
   <meta name="keywords" content="leetcode python " />
   
   
@@ -27,14 +27,14 @@ In a UNIX-style file system, a period (&amp;lsquo;.&amp;rsquo;) refers to the cu
     <meta name="twitter:title" content="Simplify Path" />
     <meta name="twitter:description" content="Given an absolute path for a file (Unix-style), simplify it.
 For example, path = &amp;quot;/home/&amp;quot;, =&amp;gt; &amp;quot;/home&amp;quot; path = &amp;quot;/a/./b/../../c/&amp;quot;, =&amp;gt; &amp;quot;/c&amp;quot; path = &amp;quot;/a/../../b/../c//.//&amp;quot;, =&amp;gt; &amp;quot;/c&amp;quot; path = &amp;quot;/a//b////c/d//././/..&amp;quot;, =&amp;gt; &amp;quot;/a/b/c&amp;quot;
-In a UNIX-style file system, a period (&amp;lsquo;.&amp;rsquo;) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (&amp;ldquo;..&amp;rdquo;) moves up a directory, so it cancels out whatever the last directory was." />
+In a UNIX-style file system, a period (&#39;.&#39;) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (&amp;quot;..&amp;quot;) moves up a directory, so it cancels out whatever the last directory was." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/simplify-path/" />
@@ -192,45 +192,36 @@ In a UNIX-style file system, a period (&amp;lsquo;.&amp;rsquo;) refers to the cu
         <h5>Last updated: November 8, 2018</h5>
       
       <hr />
-      
-
-<p>Given an absolute path for a file (Unix-style), simplify it.</p>
-
+      <p>Given an absolute path for a file (Unix-style), simplify it.</p>
 <p>For example,
 <strong>path</strong> = <code>&quot;/home/&quot;</code>, =&gt; <code>&quot;/home&quot;</code>
 <strong>path</strong> = <code>&quot;/a/./b/../../c/&quot;</code>, =&gt; <code>&quot;/c&quot;</code>
 <strong>path</strong> = <code>&quot;/a/../../b/../c//.//&quot;</code>, =&gt; <code>&quot;/c&quot;</code>
 <strong>path</strong> = <code>&quot;/a//b////c/d//././/..&quot;</code>, =&gt; <code>&quot;/a/b/c&quot;</code></p>
-
-<p>In a UNIX-style file system, a period (&lsquo;.&rsquo;) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (&ldquo;..&rdquo;) moves up a directory, so it cancels out whatever the last directory was. For more information, <a href="https://en.wikipedia.org/wiki/Path_(computing)#Unix_style">look here:</a></p>
-
+<p>In a UNIX-style file system, a period ('.') refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (&quot;..&quot;) moves up a directory, so it cancels out whatever the last directory was. For more information, <a href="https://en.wikipedia.org/wiki/Path_(computing)#Unix_style">look here:</a></p>
 <p><strong>Corner Cases:</strong></p>
-
 <p>Did you consider the case where path = <code>&quot;/../&quot;</code>?
 In this case, you should return <code>&quot;/&quot;</code>.
 Another corner case is the path might contain multiple slashes <code>'/'</code> together, such as <code>&quot;/home//foo/&quot;</code>.
 In this case, you should ignore redundant slashes and return <code>&quot;/home/foo&quot;</code>.</p>
-
 <h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution:
-    def simplifyPath(self, path):
-        &quot;&quot;&quot;
-        :type path: str
-        :rtype: str
-        &quot;&quot;&quot;
-        parts = path.split(&quot;/&quot;)
-        res = []
-        for part in parts:
-            print(part)
-            if part != &quot;.&quot; and part != &quot;..&quot; and part != &quot;&quot;:
-                res.append(part)
-            if part == &quot;..&quot;:
-                if len(res) &gt; 0:
-                    del res[-1]
-        return &quot;/&quot; + &quot;/&quot;.join(res)
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">simplifyPath</span>(self, path):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type path: str
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        parts <span style="color:#f92672">=</span> path<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;/&#34;</span>)
+        res <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> part <span style="color:#f92672">in</span> parts:
+            <span style="color:#66d9ef">print</span>(part)
+            <span style="color:#66d9ef">if</span> part <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;.&#34;</span> <span style="color:#f92672">and</span> part <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;..&#34;</span> <span style="color:#f92672">and</span> part <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span>:
+                res<span style="color:#f92672">.</span>append(part)
+            <span style="color:#66d9ef">if</span> part <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;..&#34;</span>:
+                <span style="color:#66d9ef">if</span> len(res) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+                    <span style="color:#66d9ef">del</span> res[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">.</span>join(res)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -19,7 +19,7 @@
   <meta name="description" content="Given two positive integers x and y, an integer is powerful if it is equal to x^i &#43; y^j for some integers i &amp;gt;= 0 and j &amp;gt;= 0.
 Return a list of all powerful integers that have value less than or equal to bound.
 You may return the answer in any order. In your answer, each value should occur at most once.
-Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2  Example 2: Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14]  Note:  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i &#43; y^j can&amp;rsquo;t be less than or equal to the bound." />
+Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2 Example 2: Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note:  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i &#43; y^j can&amp;rsquo;t be less than or equal to the bound." />
   <meta name="keywords" content="leetcode math " />
   
   
@@ -29,14 +29,14 @@ Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation:
     <meta name="twitter:description" content="Given two positive integers x and y, an integer is powerful if it is equal to x^i &#43; y^j for some integers i &amp;gt;= 0 and j &amp;gt;= 0.
 Return a list of all powerful integers that have value less than or equal to bound.
 You may return the answer in any order. In your answer, each value should occur at most once.
-Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2  Example 2: Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14]  Note:  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i &#43; y^j can&amp;rsquo;t be less than or equal to the bound." />
+Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2 Example 2: Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note:  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i &#43; y^j can&amp;rsquo;t be less than or equal to the bound." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/02/powerful-integers/" />
@@ -194,16 +194,10 @@ Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation:
         <h5>Last updated: February 14, 2020</h5>
       
       <hr />
-      
-
-<p>Given two positive integers <code>x</code> and <code>y</code>, an integer is powerful if it is equal to <code>x^i</code> + <code>y^j</code> for some integers <code>i &gt;= 0</code> and <code>j &gt;= 0</code>.</p>
-
+      <p>Given two positive integers <code>x</code> and <code>y</code>, an integer is powerful if it is equal to <code>x^i</code> + <code>y^j</code> for some integers <code>i &gt;= 0</code> and <code>j &gt;= 0</code>.</p>
 <p>Return a list of all powerful integers that have value less than or equal to bound.</p>
-
 <p>You may return the answer in any order.  In your answer, each value should occur at most once.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: x = 2, y = 3, bound = 10
 Output: [2,3,4,5,7,9,10]
 Explanation: 
@@ -214,47 +208,35 @@ Explanation:
 7 = 2^2 + 3^1
 9 = 2^3 + 3^0
 10 = 2^0 + 3^2
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: x = 3, y = 5, bound = 15
 Output: [2,4,6,8,10,14]
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>1 &lt;= x &lt;= 100</code></li>
 <li><code>1 &lt;= y &lt;= 100</code></li>
 <li><code>0 &lt;= bound &lt;= 10^6</code></li>
 </ol>
-
 <h3 id="hint">Hint</h3>
-
-<p>If <code>x^i &gt; bound</code>, the sum <code>x^i + y^j</code> can&rsquo;t be less than or equal to the bound. Similarly for <code>y^j</code>.<br />
+<p>If <code>x^i &gt; bound</code>, the sum <code>x^i + y^j</code> can&rsquo;t be less than or equal to the bound. Similarly for <code>y^j</code>.<br>
 Thus, we only have to check for <code>0 &lt;= i, j &lt;= log_x(bound) &lt; 20</code>. We can use a HashSet to store all the different values.</p>
-
 <h3 id="solution">Solution</h3>
-
 <p>time: <code>O(log bound)</code>
 space: <code>O(log bound)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">powerfulIntegers</span>(self, x: int, y: int, bound: int) <span style="color:#f92672">-&gt;</span> List[int]:
+        answers <span style="color:#f92672">=</span> set()
 
-<pre><code class="language-python">class Solution:
-    def powerfulIntegers(self, x: int, y: int, bound: int) -&gt; List[int]:
-        answers = set()
+        <span style="color:#75715e"># 2^19 &lt; bound &lt; 2^20</span>
+        <span style="color:#75715e"># only from 0 to 19</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">20</span>):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">20</span>):
+                v <span style="color:#f92672">=</span> x<span style="color:#f92672">**</span>i <span style="color:#f92672">+</span> y<span style="color:#f92672">**</span>j
+                <span style="color:#66d9ef">if</span> v <span style="color:#f92672">&lt;=</span> bound:
+                    answers<span style="color:#f92672">.</span>add(v)
 
-        # 2^19 &lt; bound &lt; 2^20
-        # only from 0 to 19
-        for i in range(20):
-            for j in range(20):
-                v = x**i + y**j
-                if v &lt;= bound:
-                    answers.add(v)
-
-        return list(answers)
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> list(answers)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

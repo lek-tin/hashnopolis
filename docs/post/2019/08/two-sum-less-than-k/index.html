@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array A of integers and integer K, return the maximum S such that there exists i &amp;lt; j with A[i] &#43; A[j] = S and S &amp;lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60.  Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15." />
+Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60. Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15." />
   <meta name="keywords" content="leetcode two-pointers " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We
     
     <meta name="twitter:title" content="Two Sum Less Than K" />
     <meta name="twitter:description" content="Given an array A of integers and integer K, return the maximum S such that there exists i &amp;lt; j with A[i] &#43; A[j] = S and S &amp;lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60.  Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15." />
+Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60. Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/two-sum-less-than-k/" />
@@ -190,57 +190,41 @@ Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We
         <h5>Last updated: August 22, 2019</h5>
       
       <hr />
-      
-
-<p>Given an array <code>A</code> of integers and integer <code>K</code>, return the maximum S such that there exists <code>i &lt; j</code> with <code>A[i] + A[j] = S</code> and <code>S &lt; K</code>. If no <code>i</code>, <code>j</code> exist satisfying this equation, return <code>-1</code>.</p>
-
+      <p>Given an array <code>A</code> of integers and integer <code>K</code>, return the maximum S such that there exists <code>i &lt; j</code> with <code>A[i] + A[j] = S</code> and <code>S &lt; K</code>. If no <code>i</code>, <code>j</code> exist satisfying this equation, return <code>-1</code>.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: A = [34,23,1,24,75,33,54,8], K = 60
 Output: 58
 Explanation:
 We can use 34 and 24 to sum 58 which is less than 60.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: A = [10,20,30], K = 15
 Output: -1
 Explanation:
 In this case it's not possible to get a pair sum less that 15.
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>1 &lt;= A.length &lt;= 100</code></li>
 <li><code>1 &lt;= A[i] &lt;= 1000</code></li>
-
-<li><p><code>1 &lt;= K &lt;= 2000</code></p>
-
-<h3 id="solution">Solution</h3>
-
-<p>```python
-class Solution:
-def twoSumLessThanK(self, A: List[int], K: int) -&gt; int:
-    A.sort()
-    left, right = 0 , len(A)-1
-    result = -1</p>
-
-<pre><code>while left &lt; right:
-    temp = A[left] + A[right]
-    if K &lt;= temp:
-        right -= 1
-    else:
-        result = max(result, temp)
-        left += 1
-
-return result
-</code></pre></li>
+<li><code>1 &lt;= K &lt;= 2000</code></li>
 </ol>
+<h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">twoSumLessThanK</span>(self, A: List[int], K: int) <span style="color:#f92672">-&gt;</span> int:
+        A<span style="color:#f92672">.</span>sort()
+        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> , len(A)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        result <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-<p>```</p>
+        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+            temp <span style="color:#f92672">=</span> A[left] <span style="color:#f92672">+</span> A[right]
+            <span style="color:#66d9ef">if</span> K <span style="color:#f92672">&lt;=</span> temp:
+                right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                result <span style="color:#f92672">=</span> max(result, temp)
+                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
+        <span style="color:#66d9ef">return</span> result
+
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

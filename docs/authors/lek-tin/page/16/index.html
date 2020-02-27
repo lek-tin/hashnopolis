@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
@@ -176,11 +176,39 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-common-prefix/">Longest Common Prefix</a></h2>
+
+      <p>Write a function to find the longest common prefix string amongst an array of strings.
+If there is no common prefix, return an empty string “&#34;.
+Example 1 Input: [&#34;flower&#34;,&#34;flow&#34;,&#34;flight&#34;] Output: &#34;fl&#34; Example 2 Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explanation: There is no common prefix among the input strings. Note All given inputs are in lowercase letters a-z.
+Note # Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: str &#34;&#34;&#34; if not strs or len(strs) == 0: return &#34;&#34; res = strs[0] for s in strs: # string.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/01/longest-palindromic-substring/">Longest Palindromic Substring</a></h2>
 
       <p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
-Example 1 Input: &#34;babad&#34; Output: &#34;bab&#34; Note: &#34;aba&#34; is also a valid answer.  Example 2 Input: &#34;cbbd&#34; Output: &#34;bb&#34;  Solution Dynamic Programming
-# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &#34;&#34;&#34; :type s: str :rtype: str &#34;&#34;&#34; str_len = len(s) if str_len == 0: return &#34;&#34; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len]  # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</p>
+Example 1 Input: &#34;babad&#34; Output: &#34;bab&#34; Note: &#34;aba&#34; is also a valid answer. Example 2 Input: &#34;cbbd&#34; Output: &#34;bb&#34; Solution Dynamic Programming
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &#34;&#34;&#34; :type s: str :rtype: str &#34;&#34;&#34; str_len = len(s) if str_len == 0: return &#34;&#34; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i &#43; 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len &#43; 1): for i in range(str_len - length &#43; 1): j = i &#43; (length - 1) if s[i] == s[j] and memo[i&#43;1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start &#43; max_len] # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</p>
 
       <p class="meta">
         
@@ -232,11 +260,7 @@ Example Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/01/nvidia-cuda-architecture/">Nvidia Cuda Architecture</a></h2>
 
-      <p>Fundamental concepts/components in the CUDA architecture:  thread:
- core/kernel:
- Block: a collection of parallel threads.
- Grid: a collection of parallel thread blocks.
- warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as “warps” in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs.</p>
+      <p>Fundamental concepts/components in the CUDA architecture:  thread: core/kernel: Block: a collection of parallel threads. Grid: a collection of parallel thread blocks. warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as “warps” in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs. Streaming Multiprocessor has a Shared Memory.</p>
 
       <p class="meta">
         
@@ -262,8 +286,8 @@ Example Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -
       <h2><a href="http://www.hashnopolis.com/post/2019/01/edit-distance/">Edit Distance</a></h2>
 
       <p>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
-You have the following 3 operations permitted on a word: 1. Insert a character 2. Delete a character 3. Replace a character
-Example 1: Input: word1 = &#34;horse&#34;, word2 = &#34;ros&#34; Output: 3 Explanation: horse -&gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&gt; rose (remove &#39;r&#39;) rose -&gt; ros (remove &#39;e&#39;)  Example 2: Input: word1 = &#34;intention&#34;, word2 = &#34;execution&#34; Output: 5 Explanation: intention -&gt; inention (remove &#39;t&#39;) inention -&gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&gt; execution (insert &#39;u&#39;)  Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</p>
+You have the following 3 operations permitted on a word:
+ Insert a character Delete a character Replace a character  Example 1: Input: word1 = &#34;horse&#34;, word2 = &#34;ros&#34; Output: 3 Explanation: horse -&gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&gt; rose (remove &#39;r&#39;) rose -&gt; ros (remove &#39;e&#39;) Example 2: Input: word1 = &#34;intention&#34;, word2 = &#34;execution&#34; Output: 5 Explanation: intention -&gt; inention (remove &#39;t&#39;) inention -&gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&gt; execution (insert &#39;u&#39;) Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</p>
 
       <p class="meta">
         
@@ -289,7 +313,8 @@ Example 1: Input: word1 = &#34;horse&#34;, word2 = &#34;ros&#34; Output: 3 Expla
       <h2><a href="http://www.hashnopolis.com/post/2019/01/reverse-integer/">Reverse Integer</a></h2>
 
       <p>Given a 32-bit signed integer, reverse digits of an integer.
-Example 1 Input: 123 Output: 321  Example 2 Input: -123 Output: -321  Example 3 Input: 120 Output: 21  Note Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
+Example 1 Input: 123 Output: 321 Example 2 Input: -123 Output: -321 Example 3 Input: 120 Output: 21 Note Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+Solution class Solution(object): def reverse(self, x): &#34;&#34;&#34; :type x: int :rtype: int &#34;&#34;&#34; if x == &#34;&#34; or x == None: return x res = &#34;&#34; if x &gt; 0 else &#34;-&#34; string = str(abs(x)) for i in range(len(string)-1, -1, -1): res &#43;= string[i] res = int(res) if res &lt; -2**31 or res &gt;= 2**31: return 0 return int(res) class Solution(object): def reverse(self, x): &#34;&#34;&#34; :type x: int :rtype: int &#34;&#34;&#34; res = 0 isNegative = x &lt; 0 x = abs(x) while x !</p>
 
       <p class="meta">
         
@@ -315,8 +340,8 @@ Example 1 Input: 123 Output: 321  Example 2 Input: -123 Output: -321  Example 3 
       <h2><a href="http://www.hashnopolis.com/post/2019/01/one-edit-distance/">One Edit Distance</a></h2>
 
       <p>Given two strings s and t, determine if they are both one edit distance apart.
-Note There are 3 possiblities to satisify one edit distance apart: 1. Insert a character into s to get t 2. Delete a character from s to get t 3. Replace a character of s to get t
-Example 1 Input: s = &#34;ab&#34;, t = &#34;acb&#34; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</p>
+Note There are 3 possiblities to satisify one edit distance apart:
+ Insert a character into s to get t Delete a character from s to get t Replace a character of s to get t  Example 1 Input: s = &#34;ab&#34;, t = &#34;acb&#34; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</p>
 
       <p class="meta">
         
@@ -369,7 +394,7 @@ For corner elements, we need to consider only one neighbor for comparison. There
 
       <p>Given a binary tree, return the vertical order traversal of its nodes’ values. (ie, from top to bottom, column by column).
 If two nodes are in the same row and column, the order should be from left to right.
-Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ]  Solution # https://www.</p>
+Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ] Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ] Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ] Solution # https://www.</p>
 
       <p class="meta">
         
@@ -397,32 +422,6 @@ Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9]
       <p>Convert a BST to a sorted circular doubly-linked list in-place. Think of the left and right pointers as synonymous to the previous and next pointers in a doubly-linked list.
 Let’s take the following BST as an example, it may help you understand the problem better:
 We want to transform this BST into a circular doubly linked list. Each node in a doubly linked list has a predecessor and successor. For a circular doubly linked list, the predecessor of the first element is the last element, and the successor of the last element is the first element.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
-
-      <p>Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?</p>
 
       <p class="meta">
         

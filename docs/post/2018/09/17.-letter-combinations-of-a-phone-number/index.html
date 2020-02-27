@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
-Example Input: &amp;quot;23&amp;quot; Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].  Note Although the above answer is in lexicographical order, your answer could be in any order you want." />
+Example Input: &amp;quot;23&amp;quot; Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;]. Note Although the above answer is in lexicographical order, your answer could be in any order you want." />
   <meta name="keywords" content="leetcode dfs " />
   
   
@@ -27,14 +27,14 @@ Example Input: &amp;quot;23&amp;quot; Output: [&amp;quot;ad&amp;quot;, &amp;quot
     <meta name="twitter:title" content="17. Letter Combinations of a Phone Number" />
     <meta name="twitter:description" content="Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
-Example Input: &amp;quot;23&amp;quot; Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].  Note Although the above answer is in lexicographical order, your answer could be in any order you want." />
+Example Input: &amp;quot;23&amp;quot; Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;]. Note Although the above answer is in lexicographical order, your answer could be in any order you want." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/" />
@@ -192,61 +192,48 @@ Example Input: &amp;quot;23&amp;quot; Output: [&amp;quot;ad&amp;quot;, &amp;quot
         <h5>Last updated: September 3, 2018</h5>
       
       <hr />
-      
-
-<p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent.</p>
-
+      <p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent.</p>
 <p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>
-
-<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" alt="alt text" title="Logo Title Text 1" /></p>
-
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" alt="alt text" title="Logo Title Text 1"></p>
 <h3 id="example">Example</h3>
-
 <pre><code>Input: &quot;23&quot;
 Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <p>Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
-
 <h3 id="solutions">Solutions</h3>
-
 <p>DFS:</p>
-
-<pre><code class="language-python"># Time - O(n * 4^n)
-# Space - O(n * 4^n), max 4 possible chars per digit so O(4^n) strings each of length n
-class Solution:
-    def letterCombinations(self, digits: str) -&gt; List[str]:
-        if len(digits) == 0:
-            return []
-        if digits == None:
-            return []
-        lookup = {
-            '2': ['a', 'b', 'c'],
-            '3': ['d', 'e', 'f'],
-            '4': ['g', 'h', 'i'],
-            '5': ['j', 'k', 'l'],
-            '6': ['m', 'n', 'o'],
-            '7': ['p', 'q', 'r', 's'],
-            '8': ['t', 'u', 'v'],
-            '9': ['w', 'x', 'y' , 'z']
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time - O(n * 4^n)</span>
+<span style="color:#75715e"># Space - O(n * 4^n), max 4 possible chars per digit so O(4^n) strings each of length n</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">letterCombinations</span>(self, digits: str) <span style="color:#f92672">-&gt;</span> List[str]:
+        <span style="color:#66d9ef">if</span> len(digits) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> []
+        <span style="color:#66d9ef">if</span> digits <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> []
+        lookup <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#39;2&#39;</span>: [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>],
+            <span style="color:#e6db74">&#39;3&#39;</span>: [<span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>],
+            <span style="color:#e6db74">&#39;4&#39;</span>: [<span style="color:#e6db74">&#39;g&#39;</span>, <span style="color:#e6db74">&#39;h&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>],
+            <span style="color:#e6db74">&#39;5&#39;</span>: [<span style="color:#e6db74">&#39;j&#39;</span>, <span style="color:#e6db74">&#39;k&#39;</span>, <span style="color:#e6db74">&#39;l&#39;</span>],
+            <span style="color:#e6db74">&#39;6&#39;</span>: [<span style="color:#e6db74">&#39;m&#39;</span>, <span style="color:#e6db74">&#39;n&#39;</span>, <span style="color:#e6db74">&#39;o&#39;</span>],
+            <span style="color:#e6db74">&#39;7&#39;</span>: [<span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39;q&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;s&#39;</span>],
+            <span style="color:#e6db74">&#39;8&#39;</span>: [<span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>, <span style="color:#e6db74">&#39;v&#39;</span>],
+            <span style="color:#e6db74">&#39;9&#39;</span>: [<span style="color:#e6db74">&#39;w&#39;</span>, <span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span> , <span style="color:#e6db74">&#39;z&#39;</span>]
         }
-        results = []
-        s = ''
-        self.match(0, s, digits, lookup, results)
-        return results
+        results <span style="color:#f92672">=</span> []
+        s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+        self<span style="color:#f92672">.</span>match(<span style="color:#ae81ff">0</span>, s, digits, lookup, results)
+        <span style="color:#66d9ef">return</span> results
 
-    def match(self, index, s, digits, lookup, results):
-        if (index == len(digits)):
-            results.append(s)
-            return
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">match</span>(self, index, s, digits, lookup, results):
+        <span style="color:#66d9ef">if</span> (index <span style="color:#f92672">==</span> len(digits)):
+            results<span style="color:#f92672">.</span>append(s)
+            <span style="color:#66d9ef">return</span>
 
-        for char in lookup.get(digits[index]):
-            # Only pass a copy of s
-            self.match(index+1, s+char, digits, lookup, results)
-</code></pre>
-
+        <span style="color:#66d9ef">for</span> char <span style="color:#f92672">in</span> lookup<span style="color:#f92672">.</span>get(digits[index]):
+            <span style="color:#75715e"># Only pass a copy of s</span>
+            self<span style="color:#f92672">.</span>match(index<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, s<span style="color:#f92672">+</span>char, digits, lookup, results)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

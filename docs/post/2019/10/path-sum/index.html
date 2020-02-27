@@ -34,7 +34,7 @@ Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/path-sum/" />
@@ -192,16 +192,10 @@ Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \
         <h5>Last updated: October 12, 2019</h5>
       
       <hr />
-      
-
-<p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>
-
+      <p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>
 <h3 id="note">Note:</h3>
-
 <p>A leaf is a node with no children.</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Given the below binary tree and sum = 22,
 
       5
@@ -212,34 +206,29 @@ Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \
  /  \      \
 7    2      1
 return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22.
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
+</code></pre><h3 id="solution">Solution</h3>
 <p>python DFS</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hasPathSum</span>(self, root: TreeNode, sum: int) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>helper(root, <span style="color:#ae81ff">0</span>, sum)
 
-class Solution:
-    def hasPathSum(self, root: TreeNode, sum: int) -&gt; bool:
-        return self.helper(root, 0, sum)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">helper</span>(self, root, currSum, targetSum):
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> False
 
-    def helper(self, root, currSum, targetSum):
-        if not root:
-            return False
+        currSum <span style="color:#f92672">+=</span> root<span style="color:#f92672">.</span>val
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root<span style="color:#f92672">.</span>left <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> root<span style="color:#f92672">.</span>right:
+            <span style="color:#66d9ef">return</span> currSum <span style="color:#f92672">==</span> targetSum
 
-        currSum += root.val
-        if not root.left and not root.right:
-            return currSum == targetSum
-
-        return self.helper(root.left, currSum, targetSum) or self.helper(root.right, currSum, targetSum)
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>helper(root<span style="color:#f92672">.</span>left, currSum, targetSum) <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>helper(root<span style="color:#f92672">.</span>right, currSum, targetSum)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

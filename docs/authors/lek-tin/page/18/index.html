@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/cpp-data-types/">CPP Data Types</a></h2>
+
+      <p>https://stackoverflow.com/questions/2550345/whats-the-difference-between-unsigned-long-long-int-in-c-c
+   Type Typical Bit Width Typical Range     char 1byte -127 to 127 or 0 to 255   unsigned char 1byte 0 to 255   signed char 1byte -127 to 127   int 4bytes -2147483648 to 2147483647   unsigned int 4bytes 0 to 4294967295   signed int 4bytes -2147483648 to 2147483647   short int 2bytes -32768 to 32767   unsigned short int Range 0 to 65,535   signed short int Range -32768 to 32767   long int 4bytes -2,147,483,648 to 2,147,483,647   signed long int 4bytes same as long int   unsigned long int 4bytes 0 to 4,294,967,295   float 4bytes &#43;/- 3.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/data-types" ><strong>"data-types"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/find-the-celebrity/">Find the Celebrity</a></h2>
 
       <p>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
@@ -207,7 +233,7 @@ Now you want to find out who the celebrity is or verify that there is not one. T
       <p>For a 8-bit number, there are two ways to represent number:
 unsigned values 0 to 255
 signed values range from -128 (-2^8 = 10000000) to 127 (2^8 - 1)
-signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00000000 signed 127 = 01111111 signed 127 &#43; (-127) = 10000001 &#43; 01111111 = 0  If a number is assigned with value that is too big for it to hold, overflowing would happen, 2^32 = 4,294,967,296 is the largest unsigned 32 bit value.</p>
+signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00000000 signed 127 = 01111111 signed 127 &#43; (-127) = 10000001 &#43; 01111111 = 0 If a number is assigned with value that is too big for it to hold, overflowing would happen, 2^32 = 4,294,967,296 is the largest unsigned 32 bit value.</p>
 
       <p class="meta">
         
@@ -232,7 +258,7 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/arrays-in-python/">Arrays in Python</a></h2>
 
-      <p>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1]  Clone a list newArr = oldArr[:]</p>
+      <p>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1] Clone a list newArr = oldArr[:]</p>
 
       <p class="meta">
         
@@ -259,7 +285,7 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
 
       <p>Given a nested list of integers, implement an iterator to flatten it.
 Each element is either an integer, or a list – whose elements may also be integers or other lists.
-Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
+Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`. Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
 
       <p class="meta">
         
@@ -312,9 +338,9 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 
       <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
 Note The input string may contain letters other than the parentheses ( and ). *### Example 1
-Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;]  *### Example 2
-Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;]  *### Example 3
-Input: &#34;)(&#34; Output: [&#34;&#34;]  *### Solution
+Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;] *### Example 2
+Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;] *### Example 3
+Input: &#34;)(&#34; Output: [&#34;&#34;] *### Solution
 # Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &#34;&#34;&#34; :type s: str :rtype: List[str] &#34;&#34;&#34; res = [] self.</p>
 
       <p class="meta">
@@ -392,8 +418,8 @@ Design the encode and decode methods for the TinyURL service. There is no restri
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/meeting-rooms-ii/">Meeting Rooms II</a></h2>
 
-      <p>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required.
-Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2 Input: [[7,10],[2,4]] Output: 1  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: int &#34;&#34;&#34; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</p>
+      <p>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si&lt; ei), find the minimum number of conference rooms required.
+Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2 Example 2 Input: [[7,10],[2,4]] Output: 1 Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: int &#34;&#34;&#34; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</p>
 
       <p class="meta">
         
@@ -406,32 +432,6 @@ Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2 Input: [[7,10],
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/lru-cache/">LRU Cache</a></h2>
-
-      <p>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
-get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
       </p>
   </div>
 

@@ -36,7 +36,7 @@ Example 1 Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 cou
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/12/course-schedule/" />
@@ -198,117 +198,96 @@ Example 1 Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 cou
         <h5>Last updated: December 9, 2018</h5>
       
       <hr />
-      
-
-<p>There are a total of n courses you have to take, labeled from <code>0</code> to <code>n-1</code>.</p>
-
+      <p>There are a total of n courses you have to take, labeled from <code>0</code> to <code>n-1</code>.</p>
 <p>Some courses may have prerequisites, for example to take course <code>0</code> you have to first take course <code>1</code>, which is expressed as a pair: <code>[0,1]</code></p>
-
 <p>Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: 2, [[1,0]]
 Output: true
 Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 2, [[1,0],[0,1]]
 Output: false
 Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <ol>
 <li>The input prerequisites is a graph represented by <strong>a list of edges</strong>, not adjacency matrices. Read more about how a graph is represented.</li>
-
-<li><p>You may assume that there are no duplicate edges in the input prerequisites.</p>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python"># time: O(Vertices + Edges)
-# space: `O(n)`
-class Solution:
-# @param {integer} numCourses
-# @param {integer[][]} prerequisites
-# @return {boolean}
-def canFinish(self, numCourses, prerequisites):
-    degrees = [0] * numCourses
-    children = [[] for x in range(numCourses)]
-    for pair in prerequisites:
-        after = pair[0]
-        before = pair[1]
-        # count how many time each course is regarded as a dependency
-        degrees[after] += 1
-        # append new child to the children list based on dependency as a key
-        children[before].append(after)
-    print(children)
-    courses = set(range(numCourses))
-
-    canTake = True
-    while canTake and len(courses):
-        canTake = False
-        stack = []
-        for course in courses:
-            # course is a dependency itself
-            if degrees[course] == 0:
-                # check all dependencies of &quot;course&quot;
-                # This is different from the traditional DFS algo, because here we are finding all
-                for child in children[course]:
-                    # decrease the count for dependecies for child by 1
-                    degrees[child] -= 1
-                stack.append(course)
-                canTake = True
-            # if none of the courses is a dependency, the if branch above is never executed. Therefore, canTake will remain False.
-        for course in stack:
-            courses.remove(course)
-    # if courses is an empty list, it means the student can take all of the courses.
-    return len(courses) == 0
-</code></pre>
-
-<p>```cpp
-class Solution {
-public:
-bool canFinish(int numCourses, vector<pair<int, int>&gt;&amp; prerequisites) {
-    graph = vector<vector<int>&gt;(numCourses);</p>
-
-<pre><code>for (const auto&amp; p: prerequisites)
-    graph[p.second].push_back(p.first);
-
-vector&lt;int&gt; v(numCourses, 0);
-
-for (int i = 0; i &lt; numCourses; ++i)
-    if(dfs(i, v)) return false;
-
-return true;
-</code></pre>
-
-<p>}</p></li>
+<li>You may assume that there are no duplicate edges in the input prerequisites.</li>
 </ol>
+<h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># time: O(Vertices + Edges)</span>
+<span style="color:#75715e"># space: `O(n)`</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#75715e"># @param {integer} numCourses</span>
+    <span style="color:#75715e"># @param {integer[][]} prerequisites</span>
+    <span style="color:#75715e"># @return {boolean}</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">canFinish</span>(self, numCourses, prerequisites):
+        degrees <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> numCourses
+        children <span style="color:#f92672">=</span> [[] <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(numCourses)]
+        <span style="color:#66d9ef">for</span> pair <span style="color:#f92672">in</span> prerequisites:
+            after <span style="color:#f92672">=</span> pair[<span style="color:#ae81ff">0</span>]
+            before <span style="color:#f92672">=</span> pair[<span style="color:#ae81ff">1</span>]
+            <span style="color:#75715e"># count how many time each course is regarded as a dependency</span>
+            degrees[after] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#75715e"># append new child to the children list based on dependency as a key</span>
+            children[before]<span style="color:#f92672">.</span>append(after)
+        <span style="color:#66d9ef">print</span>(children)
+        courses <span style="color:#f92672">=</span> set(range(numCourses))
 
-<p>private:
-    vector<vector<int>&gt; graph;
-    bool dfs(int cur, vector<int>&amp; v) {
-        if(v[cur] == 1) return true;
-        if(v[cur] == 2) return false;</p>
+        canTake <span style="color:#f92672">=</span> True
+        <span style="color:#66d9ef">while</span> canTake <span style="color:#f92672">and</span> len(courses):
+            canTake <span style="color:#f92672">=</span> False
+            stack <span style="color:#f92672">=</span> []
+            <span style="color:#66d9ef">for</span> course <span style="color:#f92672">in</span> courses:
+                <span style="color:#75715e"># course is a dependency itself</span>
+                <span style="color:#66d9ef">if</span> degrees[course] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                    <span style="color:#75715e"># check all dependencies of &#34;course&#34;</span>
+                    <span style="color:#75715e"># This is different from the traditional DFS algo, because here we are finding all</span>
+                    <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> children[course]:
+                        <span style="color:#75715e"># decrease the count for dependecies for child by 1</span>
+                        degrees[child] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+                    stack<span style="color:#f92672">.</span>append(course)
+                    canTake <span style="color:#f92672">=</span> True
+                <span style="color:#75715e"># if none of the courses is a dependency, the if branch above is never executed. Therefore, canTake will remain False.</span>
+            <span style="color:#66d9ef">for</span> course <span style="color:#f92672">in</span> stack:
+                courses<span style="color:#f92672">.</span>remove(course)
+        <span style="color:#75715e"># if courses is an empty list, it means the student can take all of the courses.</span>
+        <span style="color:#66d9ef">return</span> len(courses) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">bool</span> canFinish(<span style="color:#66d9ef">int</span> numCourses, vector<span style="color:#f92672">&lt;</span>pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> prerequisites) {
+        graph <span style="color:#f92672">=</span> vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span>(numCourses);
 
-<pre><code>    v[cur] = 1;
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> p: prerequisites)
+            graph[p.second].push_back(p.first);
 
-    for (const int t: graph[cur])
-        if(dfs(t, v)) return true;
+        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> v(numCourses, <span style="color:#ae81ff">0</span>);
 
-    v[cur] = 2;
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> numCourses; <span style="color:#f92672">++</span>i)
+            <span style="color:#66d9ef">if</span>(dfs(i, v)) <span style="color:#66d9ef">return</span> false;
 
-    return false;
-}
-</code></pre>
+        <span style="color:#66d9ef">return</span> true;
 
-<p>};
-```</p>
+    }
 
+<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+    vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> graph;
+    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#66d9ef">int</span> cur, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> v) {
+        <span style="color:#66d9ef">if</span>(v[cur] <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> true;
+        <span style="color:#66d9ef">if</span>(v[cur] <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">return</span> false;
+
+        v[cur] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> t: graph[cur])
+            <span style="color:#66d9ef">if</span>(dfs(t, v)) <span style="color:#66d9ef">return</span> true;
+
+        v[cur] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+
+        <span style="color:#66d9ef">return</span> false;
+    }
+
+};
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

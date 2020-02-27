@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a nested list of integers, implement an iterator to flatten it.
 Each element is either an integer, or a list &amp;ndash; whose elements may also be integers or other lists.
-Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`." />
+Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`. Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`." />
   <meta name="keywords" content="leetcode iterator " />
   
   
@@ -27,14 +27,14 @@ Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling nex
     <meta name="twitter:title" content="Flatten Nested List Iterator" />
     <meta name="twitter:description" content="Given a nested list of integers, implement an iterator to flatten it.
 Each element is either an integer, or a list &amp;ndash; whose elements may also be integers or other lists.
-Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`." />
+Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`. Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/" />
@@ -192,88 +192,76 @@ Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling nex
         <h5>Last updated: November 13, 2018</h5>
       
       <hr />
-      
-
-<p>Given a nested list of integers, implement an iterator to flatten it.</p>
-
+      <p>Given a nested list of integers, implement an iterator to flatten it.</p>
 <p>Each element is either an integer, or a list &ndash; whose elements may also be integers or other lists.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: [[1,1],2,[1,1]]
 Output: [1,1,2,1,1]
 Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: [1,[4,[6]]]
 Output: [1,4,6]
 Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># &#34;&#34;&#34;</span>
+<span style="color:#75715e"># This is the interface that allows for creating nested lists.</span>
+<span style="color:#75715e"># You should not implement it, or speculate about its implementation</span>
+<span style="color:#75715e"># &#34;&#34;&#34;</span>
+<span style="color:#75715e">#class NestedInteger(object):</span>
+<span style="color:#75715e">#    def isInteger(self):</span>
+<span style="color:#75715e">#        &#34;&#34;&#34;</span>
+<span style="color:#75715e">#        @return True if this NestedInteger holds a single integer, rather than a nested list.</span>
+<span style="color:#75715e">#        :rtype bool</span>
+<span style="color:#75715e">#        &#34;&#34;&#34;</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#    def getInteger(self):</span>
+<span style="color:#75715e">#        &#34;&#34;&#34;</span>
+<span style="color:#75715e">#        @return the single integer that this NestedInteger holds, if it holds a single integer</span>
+<span style="color:#75715e">#        Return None if this NestedInteger holds a nested list</span>
+<span style="color:#75715e">#        :rtype int</span>
+<span style="color:#75715e">#        &#34;&#34;&#34;</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#    def getList(self):</span>
+<span style="color:#75715e">#        &#34;&#34;&#34;</span>
+<span style="color:#75715e">#        @return the nested list that this NestedInteger holds, if it holds a nested list</span>
+<span style="color:#75715e">#        Return None if this NestedInteger holds a single integer</span>
+<span style="color:#75715e">#        :rtype List[NestedInteger]</span>
+<span style="color:#75715e">#        &#34;&#34;&#34;</span>
 
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python"># &quot;&quot;&quot;
-# This is the interface that allows for creating nested lists.
-# You should not implement it, or speculate about its implementation
-# &quot;&quot;&quot;
-#class NestedInteger(object):
-#    def isInteger(self):
-#        &quot;&quot;&quot;
-#        @return True if this NestedInteger holds a single integer, rather than a nested list.
-#        :rtype bool
-#        &quot;&quot;&quot;
-#
-#    def getInteger(self):
-#        &quot;&quot;&quot;
-#        @return the single integer that this NestedInteger holds, if it holds a single integer
-#        Return None if this NestedInteger holds a nested list
-#        :rtype int
-#        &quot;&quot;&quot;
-#
-#    def getList(self):
-#        &quot;&quot;&quot;
-#        @return the nested list that this NestedInteger holds, if it holds a nested list
-#        Return None if this NestedInteger holds a single integer
-#        :rtype List[NestedInteger]
-#        &quot;&quot;&quot;
-
-class NestedIterator(object):
-    def __init__(self, nestedList):
-        &quot;&quot;&quot;
-        Initialize your data structure here.
-        :type nestedList: List[NestedInteger]
-        &quot;&quot;&quot;
-        arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        print(arr[::-1])
-        self.flat = []
-        def flatten(nested):
-            for n in nested:
-                if n.isInteger():
-                    self.flat.append(n.getInteger())
-                else:
-                    flatten(n.getList())
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NestedIterator</span>(object):
+    <span style="color:#66d9ef">def</span> __init__(self, nestedList):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Initialize your data structure here.
+</span><span style="color:#e6db74">        :type nestedList: List[NestedInteger]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+        <span style="color:#66d9ef">print</span>(arr[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+        self<span style="color:#f92672">.</span>flat <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">flatten</span>(nested):
+            <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> nested:
+                <span style="color:#66d9ef">if</span> n<span style="color:#f92672">.</span>isInteger():
+                    self<span style="color:#f92672">.</span>flat<span style="color:#f92672">.</span>append(n<span style="color:#f92672">.</span>getInteger())
+                <span style="color:#66d9ef">else</span>:
+                    flatten(n<span style="color:#f92672">.</span>getList())
         flatten(nestedList)
-        self.flat = self.flat[::-1]
+        self<span style="color:#f92672">.</span>flat <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>flat[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
 
-    def next(self):
-        &quot;&quot;&quot;
-        :rtype: int
-        &quot;&quot;&quot;
-        return self.flat.pop()
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">next</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>flat<span style="color:#f92672">.</span>pop()
 
-    def hasNext(self):
-        &quot;&quot;&quot;
-        :rtype: bool
-        &quot;&quot;&quot;
-        return bool(self.flat)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hasNext</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> bool(self<span style="color:#f92672">.</span>flat)
 
-# Your NestedIterator object will be instantiated and called as such:
-# i, v = NestedIterator(nestedList), []
-# while i.hasNext(): v.append(i.next())
-</code></pre>
-
+<span style="color:#75715e"># Your NestedIterator object will be instantiated and called as such:</span>
+<span style="color:#75715e"># i, v = NestedIterator(nestedList), []</span>
+<span style="color:#75715e"># while i.hasNext(): v.append(i.next())</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

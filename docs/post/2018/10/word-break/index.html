@@ -17,8 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
-Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.
-Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;." />
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.  Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;." />
   <meta name="keywords" content="leetcode dynamic-programming bfs " />
   
   
@@ -26,15 +25,14 @@ Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&am
     
     <meta name="twitter:title" content="Word Break" />
     <meta name="twitter:description" content="Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
-Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.
-Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;." />
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.  Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/word-break/" />
@@ -194,100 +192,76 @@ Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&am
         <h5>Last updated: October 10, 2018</h5>
       
       <hr />
-      
-
-<p>Given a <strong>non-empty</strong> string s and a dictionary wordDict containing a list of <strong>non-empty</strong> words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.</p>
-
+      <p>Given a <strong>non-empty</strong> string s and a dictionary wordDict containing a list of <strong>non-empty</strong> words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.</p>
 <h3 id="note">Note</h3>
-
 <ul>
 <li>The same word in the dictionary may be reused multiple times in the segmentation.</li>
-
-<li><p>You may assume the dictionary does not contain duplicate words.</p>
-
+<li>You may assume the dictionary does not contain duplicate words.</li>
+</ul>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: s = &quot;leetcode&quot;, wordDict = [&quot;leet&quot;, &quot;code&quot;]
 Output: true
 Explanation: Return true because &quot;leetcode&quot; can be segmented as &quot;leet code&quot;.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: s = &quot;applepenapple&quot;, wordDict = [&quot;apple&quot;, &quot;pen&quot;]
 Output: true
 Explanation: Return true because &quot;applepenapple&quot; can be segmented as &quot;apple pen apple&quot;.
-</code></pre>
-
-<p>Note that you are allowed to reuse a dictionary word.</p>
-
+</code></pre><p>Note that you are allowed to reuse a dictionary word.</p>
 <h3 id="example-3">Example 3</h3>
-
 <pre><code>Input: s = &quot;catsandog&quot;, wordDict = [&quot;cats&quot;, &quot;dog&quot;, &quot;sand&quot;, &quot;and&quot;, &quot;cat&quot;]
 Output: false
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
+</code></pre><h3 id="solution">Solution</h3>
 <p>Dynamic programming</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wordBreak</span>(self, s: str, wordDict: List[str]) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> wordDict:
+            <span style="color:#66d9ef">return</span> False
 
-<pre><code class="language-python">class Solution:
-def wordBreak(self, s: str, wordDict: List[str]) -&gt; bool:
-    if not wordDict:
-        return False
+        n <span style="color:#f92672">=</span> len(s)
+        flags <span style="color:#f92672">=</span> [True] <span style="color:#f92672">+</span> [False] <span style="color:#f92672">*</span> n
+        <span style="color:#75715e"># leetcode</span>
+        <span style="color:#75715e"># [&#34;leet&#34;, &#34;code&#34;]</span>
+        <span style="color:#75715e"># flags[0] = flags[4] = flags[8] = True</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i):
+                substring <span style="color:#f92672">=</span> s[j:i]
+                <span style="color:#66d9ef">print</span>(substring)
+                <span style="color:#66d9ef">if</span> flags[j] <span style="color:#f92672">and</span> substring <span style="color:#f92672">in</span> wordDict:
+                    <span style="color:#75715e"># i will be the end index of a new break word</span>
+                    <span style="color:#66d9ef">print</span>(j, i)
+                    flags[i] <span style="color:#f92672">=</span> True
+                    <span style="color:#66d9ef">break</span>
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;-------&#34;</span>)
 
-    n = len(s)
-    flags = [True] + [False] * n
-    # leetcode
-    # [&quot;leet&quot;, &quot;code&quot;]
-    # flags[0] = flags[4] = flags[8] = True
-    for i in range(1, n+1):
-        for j in range(i):
-            substring = s[j:i]
-            print(substring)
-            if flags[j] and substring in wordDict:
-                # i will be the end index of a new break word
-                print(j, i)
-                flags[i] = True
-                break
-        print(&quot;-------&quot;)
+        <span style="color:#66d9ef">return</span> flags[n]
+</code></pre></div><p>BFS</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
 
-    return flags[n]
-</code></pre>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wordBreak</span>(self, s: str, wordDict: List[str]) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> wordDict:
+            <span style="color:#66d9ef">return</span> False
 
-<p>BFS
-```python
-from collections import deque</p></li>
-</ul>
+        n <span style="color:#f92672">=</span> len(s)
+        visited <span style="color:#f92672">=</span> [False <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)]
+        q <span style="color:#f92672">=</span> deque([])
+        q<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)
 
-<p>class Solution:
-    def wordBreak(self, s: str, wordDict: List[str]) -&gt; bool:
-        if not wordDict:
-            return False</p>
-
-<pre><code>    n = len(s)
-    visited = [False for i in range(n)]
-    q = deque([])
-    q.append(0)
-
-    while len(q) &gt; 0:
-        start = q.popleft()
-        if not visited[start]:
-            for end in range(start+1, n+1):
-                substring = s[start:end]
-                if substring in wordDict:
-                    q.append(end)
-                    # reach the end, return True
-                    if end == n:
-                        return True
-            # mark start as visited
-            visited[start] = True
-    # Not found
-    return False
-</code></pre>
-
-<p>```</p>
-
+        <span style="color:#66d9ef">while</span> len(q) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+            start <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> visited[start]:
+                <span style="color:#66d9ef">for</span> end <span style="color:#f92672">in</span> range(start<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+                    substring <span style="color:#f92672">=</span> s[start:end]
+                    <span style="color:#66d9ef">if</span> substring <span style="color:#f92672">in</span> wordDict:
+                        q<span style="color:#f92672">.</span>append(end)
+                        <span style="color:#75715e"># reach the end, return True</span>
+                        <span style="color:#66d9ef">if</span> end <span style="color:#f92672">==</span> n:
+                            <span style="color:#66d9ef">return</span> True
+                <span style="color:#75715e"># mark start as visited</span>
+                visited[start] <span style="color:#f92672">=</span> True
+        <span style="color:#75715e"># Not found</span>
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

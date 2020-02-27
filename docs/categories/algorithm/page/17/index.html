@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/categories/algorithm/" />
@@ -176,6 +176,34 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/">Read N Characters Given Read4</a></h2>
+
+      <p>The API: int read4(char *buf) reads 4 characters at a time from a file.
+The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
+By using the read4 API, implement the function int read(char *buf, int n) that reads n characters from the file.
+Example 1 Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: The actual number of characters read is 3, which is &#34;abc&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/find-the-celebrity/">Find the Celebrity</a></h2>
 
       <p>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
@@ -206,7 +234,7 @@ Now you want to find out who the celebrity is or verify that there is not one. T
 
       <p>Given a nested list of integers, implement an iterator to flatten it.
 Each element is either an integer, or a list – whose elements may also be integers or other lists.
-Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`.  Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
+Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`. Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
 
       <p class="meta">
         
@@ -259,9 +287,9 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
 
       <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
 Note The input string may contain letters other than the parentheses ( and ). *### Example 1
-Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;]  *### Example 2
-Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;]  *### Example 3
-Input: &#34;)(&#34; Output: [&#34;&#34;]  *### Solution
+Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;] *### Example 2
+Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;] *### Example 3
+Input: &#34;)(&#34; Output: [&#34;&#34;] *### Solution
 # Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &#34;&#34;&#34; :type s: str :rtype: List[str] &#34;&#34;&#34; res = [] self.</p>
 
       <p class="meta">
@@ -339,8 +367,8 @@ Design the encode and decode methods for the TinyURL service. There is no restri
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/11/meeting-rooms-ii/">Meeting Rooms II</a></h2>
 
-      <p>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of conference rooms required.
-Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2 Input: [[7,10],[2,4]] Output: 1  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: int &#34;&#34;&#34; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</p>
+      <p>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si&lt; ei), find the minimum number of conference rooms required.
+Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2 Example 2 Input: [[7,10],[2,4]] Output: 1 Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &#34;&#34;&#34; :type intervals: List[Interval] :rtype: int &#34;&#34;&#34; starts, ends = [], [] length = len(intervals) for i in range(length): starts.</p>
 
       <p class="meta">
         
@@ -392,7 +420,7 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
       <h2><a href="http://www.hashnopolis.com/post/2018/11/integer-to-english-words/">Integer to English Words</a></h2>
 
       <p>Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.
-Example 1 Input: 123 Output: &#34;One Hundred Twenty Three&#34;  Example 2 Input: 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34;  Example 3 Input: 1234567 Output: &#34;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&#34;  Example 4 Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&#34;  Solution class Solution: def __init__(self): self.</p>
+Example 1 Input: 123 Output: &#34;One Hundred Twenty Three&#34; Example 2 Input: 12345 Output: &#34;Twelve Thousand Three Hundred Forty Five&#34; Example 3 Input: 1234567 Output: &#34;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&#34; Example 4 Input: 1234567891 Output: &#34;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&#34; Solution class Solution: def __init__(self): self.</p>
 
       <p class="meta">
         
@@ -405,33 +433,6 @@ Example 1 Input: 123 Output: &#34;One Hundred Twenty Three&#34;  Example 2 Input
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/powx-n/">PowX N</a></h2>
-
-      <p>Example 1 Input: 2.00000, 10 Output: 1024.00000  Example 2 Input: 2.10000, 3 Output: 9.26100  Example 3 Input: 2.00000, -2 Output: 0.25000  Explanation 2-2 = 1⁄22 = 1⁄4 = 0.25 Note  -100.0 &lt; x &lt; 100.0 n is a 32-bit signed integer, within the range [−231, 231 − 1]
-Solution ```python
-Time: o(logN) Space: O(n) class Solution: def myPow(self, x, n): “”” :type x: float :type n: int :rtype: float “”” if n &gt; 0: return self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

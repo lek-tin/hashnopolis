@@ -19,8 +19,8 @@
   <meta name="description" content="Given preorder and inorder traversal of a tree, construct the binary tree.
 Note: You may assume that duplicates do not exist in the tree.
 For example, given:
-preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder." />
+preorder = [3,9,20,15,7] inorder = [9,3,15,20,7] Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7 Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder." />
   <meta name="keywords" content="leetcode binary-tree " />
   
   
@@ -30,15 +30,15 @@ preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tr
     <meta name="twitter:description" content="Given preorder and inorder traversal of a tree, construct the binary tree.
 Note: You may assume that duplicates do not exist in the tree.
 For example, given:
-preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder." />
+preorder = [3,9,20,15,7] inorder = [9,3,15,20,7] Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7 Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/construct-binary-tree-from-preorder-and-inorder-traversal/" />
@@ -196,103 +196,86 @@ preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tr
         <h5>Last updated: August 24, 2019</h5>
       
       <hr />
-      
-
-<p>Given preorder and inorder traversal of a tree, construct the binary tree.</p>
-
+      <p>Given preorder and inorder traversal of a tree, construct the binary tree.</p>
 <h3 id="note">Note:</h3>
-
 <p>You may assume that duplicates do not exist in the tree.</p>
-
 <p>For example, given:</p>
-
 <pre><code>preorder = [3,9,20,15,7]
 inorder = [9,3,15,20,7]
-</code></pre>
-
-<p>Return the following binary tree:</p>
-
+</code></pre><p>Return the following binary tree:</p>
 <pre><code>    3
    / \
   9  20
     /  \
    15   7
-</code></pre>
-
-<h3 id="hint">Hint</h3>
-
-<p><img src="/img/post/construct-binary-tree-from-preorder-and-inorder-traversal.jpg" alt="construct-binary-tree-from-preorder-and-inorder-traversal" /></p>
-
+</code></pre><h3 id="hint">Hint</h3>
+<p><img src="/img/post/construct-binary-tree-from-preorder-and-inorder-traversal.jpg" alt="construct-binary-tree-from-preorder-and-inorder-traversal"></p>
 <h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> TreeNode <span style="color:#a6e22e">buildTree</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> preorder<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> inorder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> helper<span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> inorder<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">,</span> preorder<span style="color:#f92672">,</span> inorder<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
-        return helper(0, 0, inorder.length - 1, preorder, inorder);
-    }
+    <span style="color:#66d9ef">public</span> TreeNode <span style="color:#a6e22e">helper</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> preStart<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> inStart<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> inEnd<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> preorder<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> inorder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>preStart <span style="color:#f92672">&gt;</span> preorder<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1 <span style="color:#f92672">||</span> inStart <span style="color:#f92672">&gt;</span> inEnd<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        TreeNode root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeNode<span style="color:#f92672">(</span>preorder<span style="color:#f92672">[</span>preStart<span style="color:#f92672">]);</span>
+        <span style="color:#75715e">// Index of current root in inorder
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> inIndex <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> inStart<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> inEnd<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>inorder<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                inIndex <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span> helper<span style="color:#f92672">(</span>preStart <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> inStart<span style="color:#f92672">,</span> inIndex <span style="color:#f92672">-</span> 1<span style="color:#f92672">,</span> preorder<span style="color:#f92672">,</span> inorder<span style="color:#f92672">);</span>
+        root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span> helper<span style="color:#f92672">(</span>preStart <span style="color:#f92672">+</span> inIndex <span style="color:#f92672">-</span> inStart <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> inIndex <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> inEnd<span style="color:#f92672">,</span> preorder<span style="color:#f92672">,</span> inorder<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> root<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-    public TreeNode helper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
-        if (preStart &gt; preorder.length - 1 || inStart &gt; inEnd) {
-            return null;
-        }
-        TreeNode root = new TreeNode(preorder[preStart]);
-        // Index of current root in inorder
-        int inIndex = 0;
-        for (int i = inStart; i &lt;= inEnd; i++) {
-            if (inorder[i] == root.val) {
-                inIndex = i;
-            }
-        }
-        root.left = helper(preStart + 1, inStart, inIndex - 1, preorder, inorder);
-        root.right = helper(preStart + inIndex - inStart + 1, inIndex + 1, inEnd, preorder, inorder);
-        return root;
-    }
-}
-</code></pre>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">buildTree</span>(self, preorder: List[int], inorder: List[int]) <span style="color:#f92672">-&gt;</span> TreeNode:
+        <span style="color:#66d9ef">if</span> len(preorder) <span style="color:#f92672">!=</span> len(inorder):
+            <span style="color:#66d9ef">return</span> None
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>traverse(preorder, <span style="color:#ae81ff">0</span>, len(preorder)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, inorder, <span style="color:#ae81ff">0</span>, len(inorder)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
 
-class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -&gt; TreeNode:
-        if len(preorder) != len(inorder):
-            return None
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findPosition</span>(self, nodeArr, start, end, target):
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(start, end<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> nodeArr[i] <span style="color:#f92672">==</span> target:
+                <span style="color:#66d9ef">return</span> i
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-        return self.traverse(preorder, 0, len(preorder)-1, inorder, 0, len(inorder)-1)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">traverse</span>(self, preOrder, preStart, preEnd, inOrder, inStart, inEnd):
+        <span style="color:#66d9ef">if</span> preStart <span style="color:#f92672">&gt;</span> preEnd:
+            <span style="color:#66d9ef">return</span> None
 
-    def findPosition(self, nodeArr, start, end, target):
-        for i in range(start, end+1):
-            if nodeArr[i] == target:
-                return i
-        return -1
+        root <span style="color:#f92672">=</span> TreeNode(preOrder[preStart])
 
-    def traverse(self, preOrder, preStart, preEnd, inOrder, inStart, inEnd):
-        if preStart &gt; preEnd:
-            return None
+        root_pos_inorder <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>findPosition(inOrder, inStart, inEnd, root<span style="color:#f92672">.</span>val)
 
-        root = TreeNode(preOrder[preStart])
+        root<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>traverse(preOrder, preStart<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, preStart <span style="color:#f92672">+</span> (root_pos_inorder <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> inStart <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>), inOrder, inStart, root_pos_inorder<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
 
-        root_pos_inorder = self.findPosition(inOrder, inStart, inEnd, root.val)
+        root<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>traverse(preOrder, preEnd <span style="color:#f92672">-</span> (inEnd <span style="color:#f92672">-</span> root_pos_inorder)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, preEnd, inOrder, root_pos_inorder<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, inEnd)
 
-        root.left = self.traverse(preOrder, preStart+1, preStart + (root_pos_inorder - 1 - inStart + 1), inOrder, inStart, root_pos_inorder-1)
-
-        root.right = self.traverse(preOrder, preEnd - (inEnd - root_pos_inorder)+1, preEnd, inOrder, root_pos_inorder+1, inEnd)
-
-        return root
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> root
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

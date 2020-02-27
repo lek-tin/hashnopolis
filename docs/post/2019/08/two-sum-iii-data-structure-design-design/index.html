@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Design and implement a TwoSum class. It should support the following operations: add and find.
 add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
-Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false  Example 2: add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false  Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &amp;quot;&amp;quot;&amp;quot; Initialize your data structure here." />
+Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false Example 2: add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &amp;#34;&amp;#34;&amp;#34; Initialize your data structure here." />
   <meta name="keywords" content="leetcode hashmap data-structure " />
   
   
@@ -27,14 +27,14 @@ Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; fals
     <meta name="twitter:title" content="Two Sum Iii Data Structure Design Design" />
     <meta name="twitter:description" content="Design and implement a TwoSum class. It should support the following operations: add and find.
 add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
-Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false  Example 2: add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false  Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &amp;quot;&amp;quot;&amp;quot; Initialize your data structure here." />
+Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false Example 2: add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &amp;#34;&amp;#34;&amp;#34; Initialize your data structure here." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/two-sum-iii-data-structure-design-design/" />
@@ -194,68 +194,56 @@ Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; fals
         <h5>Last updated: August 20, 2019</h5>
       
       <hr />
-      
-
-<p>Design and implement a TwoSum class. It should support the following operations: <code>add</code> and <code>find</code>.</p>
-
+      <p>Design and implement a TwoSum class. It should support the following operations: <code>add</code> and <code>find</code>.</p>
 <p>add - Add the number to an internal data structure.
 <code>find</code> - Find if there exists any pair of numbers which sum is equal to the value.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>add(1); add(3); add(5);
 find(4) -&gt; true
 find(7) -&gt; false
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>add(3); add(1); add(2);
 find(3) -&gt; true
 find(6) -&gt; false
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: add is o(1), find is o(n)</span>
+<span style="color:#75715e"># Space: `O(n)`</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TwoSum</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Initialize your data structure here.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>nums <span style="color:#f92672">=</span> {}
 
-<h3 id="solution">Solution</h3>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(self, number: int) <span style="color:#f92672">-&gt;</span> None:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Add the number to an internal data structure..
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">try</span>:
+            self<span style="color:#f92672">.</span>nums[number] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">except</span>:
+            self<span style="color:#f92672">.</span>nums[number] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python"># Time: add is o(1), find is o(n)
-# Space: `O(n)`
-class TwoSum:
-    def __init__(self):
-        &quot;&quot;&quot;
-        Initialize your data structure here.
-        &quot;&quot;&quot;
-        self.nums = {}
-
-    def add(self, number: int) -&gt; None:
-        &quot;&quot;&quot;
-        Add the number to an internal data structure..
-        &quot;&quot;&quot;
-        try:
-            self.nums[number] += 1
-        except:
-            self.nums[number] = 1
-
-    def find(self, value: int) -&gt; bool:
-        &quot;&quot;&quot;
-        Find if there exists any pair of numbers which sum is equal to the value.
-        &quot;&quot;&quot;
-        for num in self.nums:
-            if value - num in self.nums:
-                # Edge case
-                # [&quot;TwoSum&quot;,&quot;add&quot;,&quot;find&quot;]
-                # [[],[0],[0]]
-                if value-num == num and self.nums[num]==1:
-                    continue
-                return True
-        return False
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find</span>(self, value: int) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Find if there exists any pair of numbers which sum is equal to the value.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>nums:
+            <span style="color:#66d9ef">if</span> value <span style="color:#f92672">-</span> num <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>nums:
+                <span style="color:#75715e"># Edge case</span>
+                <span style="color:#75715e"># [&#34;TwoSum&#34;,&#34;add&#34;,&#34;find&#34;]</span>
+                <span style="color:#75715e"># [[],[0],[0]]</span>
+                <span style="color:#66d9ef">if</span> value<span style="color:#f92672">-</span>num <span style="color:#f92672">==</span> num <span style="color:#f92672">and</span> self<span style="color:#f92672">.</span>nums[num]<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>:
+                    <span style="color:#66d9ef">continue</span>
+                <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">return</span> False
 
 
-# Your TwoSum object will be instantiated and called as such:
-# obj = TwoSum()
-# obj.add(number)
-# param_2 = obj.find(value)
-</code></pre>
-
+<span style="color:#75715e"># Your TwoSum object will be instantiated and called as such:</span>
+<span style="color:#75715e"># obj = TwoSum()</span>
+<span style="color:#75715e"># obj.add(number)</span>
+<span style="color:#75715e"># param_2 = obj.find(value)</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

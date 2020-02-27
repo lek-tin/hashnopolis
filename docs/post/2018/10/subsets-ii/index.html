@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results." />
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results." />
   <meta name="keywords" content="leetcode python dfs backtracking " />
   
   
@@ -25,14 +25,14 @@ Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2
     
     <meta name="twitter:title" content="Subsets Ii" />
     <meta name="twitter:description" content="Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ]  Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results." />
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/subsets-ii/" />
@@ -194,14 +194,9 @@ Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2
         <h5>Last updated: October 8, 2018</h5>
       
       <hr />
-      
-
-<p>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).</p>
-
+      <p>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).</p>
 <h3 id="note-the-solution-set-must-not-contain-duplicate-subsets">Note The solution set must not contain duplicate subsets.</h3>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Input: [1,2,2]
 Output:
 [
@@ -212,51 +207,45 @@ Output:
   [1,2],
   []
 ]
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: o(2^n)</span>
+<span style="color:#75715e"># Space: `O(n)`</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">subsetsWithDup</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> List[List[int]]:
+        results <span style="color:#f92672">=</span> []
+        subset <span style="color:#f92672">=</span> []
+        <span style="color:#75715e"># Edge case 1</span>
+        <span style="color:#66d9ef">if</span> nums <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> results
+        <span style="color:#75715e"># Edge case 2</span>
+        <span style="color:#66d9ef">if</span> len(nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            results<span style="color:#f92672">.</span>append([])
+            <span style="color:#66d9ef">return</span> results
+        <span style="color:#75715e"># Sort nums in ascending order</span>
+        nums<span style="color:#f92672">.</span>sort()
+        <span style="color:#75715e"># start recursion</span>
+        self<span style="color:#f92672">.</span>dfs(<span style="color:#ae81ff">0</span>, subset, nums, results)
+        <span style="color:#66d9ef">return</span> results
 
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python"># Time: o(2^n)
-# Space: `O(n)`
-class Solution:
-    def subsetsWithDup(self, nums: List[int]) -&gt; List[List[int]]:
-        results = []
-        subset = []
-        # Edge case 1
-        if nums == None:
-            return results
-        # Edge case 2
-        if len(nums) == 0:
-            results.append([])
-            return results
-        # Sort nums in ascending order
-        nums.sort()
-        # start recursion
-        self.dfs(0, subset, nums, results)
-        return results
-
-    def dfs(self, startIndex, subset, nums, results):
-        # Recursion exit condition met
-        # add a copy of the current subset
-        results.append(subset[:])
-        # Entering the next recursion level
-        for i in range(startIndex, len(nums)):
-            # Skip duplicate
-            if (i&gt;=0 and i != startIndex and nums[i] == nums[i-1]):
-                continue
-            # add a new number to the current subset
-            # [1] -&gt; [1,2]
-            subset.append(nums[i])
-            # find all subsets to append to [1,2]
-            self.dfs(i+1, subset, nums, results)
-            # backtrack by removing 2 from subset: [1,2].
-            subset.pop()
-</code></pre>
-
-<p>Iterations shown in:<br />
-<img src="/img/post/subsets-backtracking.jpg" alt="Subsets backtracking solution iterations" />
-```</p>
-
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(self, startIndex, subset, nums, results):
+        <span style="color:#75715e"># Recursion exit condition met</span>
+        <span style="color:#75715e"># add a copy of the current subset</span>
+        results<span style="color:#f92672">.</span>append(subset[:])
+        <span style="color:#75715e"># Entering the next recursion level</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(startIndex, len(nums)):
+            <span style="color:#75715e"># Skip duplicate</span>
+            <span style="color:#66d9ef">if</span> (i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> i <span style="color:#f92672">!=</span> startIndex <span style="color:#f92672">and</span> nums[i] <span style="color:#f92672">==</span> nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
+                <span style="color:#66d9ef">continue</span>
+            <span style="color:#75715e"># add a new number to the current subset</span>
+            <span style="color:#75715e"># [1] -&gt; [1,2]</span>
+            subset<span style="color:#f92672">.</span>append(nums[i])
+            <span style="color:#75715e"># find all subsets to append to [1,2]</span>
+            self<span style="color:#f92672">.</span>dfs(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, subset, nums, results)
+            <span style="color:#75715e"># backtrack by removing 2 from subset: [1,2].</span>
+            subset<span style="color:#f92672">.</span>pop()
+</code></pre></div><p>Iterations shown in:<br>
+<img src="/img/post/subsets-backtracking.jpg" alt="Subsets backtracking solution iterations"></p>
+<pre><code></code></pre>
   </div>
 
   <div id="disqus_thread"></div>

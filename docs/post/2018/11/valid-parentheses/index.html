@@ -16,27 +16,27 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given a string containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.
+  <meta name="description" content="Given a string containing just the characters &amp;lsquo;(&#39;, &amp;lsquo;)&#39;, &amp;lsquo;{&#39;, &amp;lsquo;}&#39;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&#39;, determine if the input string is valid.
 An input string is valid if:
 Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
-Example 1: Input: &amp;quot;()&amp;quot; Output: true  Example 2: Input: &amp;quot;()[]{}&amp;quot; Output: true  Example 3: Input: &amp;quot;(]&amp;quot; Output: false  Example 4: Input: &amp;quot;([)]&amp;quot; Output: false  Example 5: Input: &amp;quot;{[]}&amp;quot; Output: true  Solution: class Solution { public boolean isValid(String s) { HashMap&amp;lt;Character, Character&amp;gt; charMap = new HashMap&amp;lt;&amp;gt;(); charMap." />
+Example 1: Input: &amp;quot;()&amp;quot; Output: true Example 2: Input: &amp;quot;()[]{}&amp;quot; Output: true Example 3: Input: &amp;quot;(]&amp;quot; Output: false Example 4: Input: &amp;quot;([)]&amp;quot; Output: false Example 5: Input: &amp;quot;{[]}&amp;quot; Output: true Solution: class Solution { public boolean isValid(String s) { HashMap&amp;lt;Character, Character&amp;gt; charMap = new HashMap&amp;lt;&amp;gt;(); charMap." />
   <meta name="keywords" content="leetcode stack " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Valid Parentheses" />
-    <meta name="twitter:description" content="Given a string containing just the characters &amp;lsquo;(&amp;rsquo;, &amp;lsquo;)&amp;rsquo;, &amp;lsquo;{&amp;rsquo;, &amp;lsquo;}&amp;rsquo;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&amp;rsquo;, determine if the input string is valid.
+    <meta name="twitter:description" content="Given a string containing just the characters &amp;lsquo;(&#39;, &amp;lsquo;)&#39;, &amp;lsquo;{&#39;, &amp;lsquo;}&#39;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&#39;, determine if the input string is valid.
 An input string is valid if:
 Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
-Example 1: Input: &amp;quot;()&amp;quot; Output: true  Example 2: Input: &amp;quot;()[]{}&amp;quot; Output: true  Example 3: Input: &amp;quot;(]&amp;quot; Output: false  Example 4: Input: &amp;quot;([)]&amp;quot; Output: false  Example 5: Input: &amp;quot;{[]}&amp;quot; Output: true  Solution: class Solution { public boolean isValid(String s) { HashMap&amp;lt;Character, Character&amp;gt; charMap = new HashMap&amp;lt;&amp;gt;(); charMap." />
+Example 1: Input: &amp;quot;()&amp;quot; Output: true Example 2: Input: &amp;quot;()[]{}&amp;quot; Output: true Example 3: Input: &amp;quot;(]&amp;quot; Output: false Example 4: Input: &amp;quot;([)]&amp;quot; Output: false Example 5: Input: &amp;quot;{[]}&amp;quot; Output: true Solution: class Solution { public boolean isValid(String s) { HashMap&amp;lt;Character, Character&amp;gt; charMap = new HashMap&amp;lt;&amp;gt;(); charMap." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/valid-parentheses/" />
@@ -194,98 +194,74 @@ Example 1: Input: &amp;quot;()&amp;quot; Output: true  Example 2: Input: &amp;qu
         <h5>Last updated: November 2, 2018</h5>
       
       <hr />
-      
-
-<p>Given a string containing just the characters &lsquo;(&rsquo;, &lsquo;)&rsquo;, &lsquo;{&rsquo;, &lsquo;}&rsquo;, &lsquo;[&rsquo; and &lsquo;]&rsquo;, determine if the input string is valid.</p>
-
+      <p>Given a string containing just the characters &lsquo;(', &lsquo;)', &lsquo;{', &lsquo;}', &lsquo;[&rsquo; and &lsquo;]', determine if the input string is valid.</p>
 <p>An input string is valid if:</p>
-
 <p>Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
 Note that an empty string is also considered valid.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: &quot;()&quot;
 Output: true
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: &quot;()[]{}&quot;
 Output: true
-</code></pre>
-
-<h3 id="example-3">Example 3:</h3>
-
+</code></pre><h3 id="example-3">Example 3:</h3>
 <pre><code>Input: &quot;(]&quot;
 Output: false
-</code></pre>
-
-<h3 id="example-4">Example 4:</h3>
-
+</code></pre><h3 id="example-4">Example 4:</h3>
 <pre><code>Input: &quot;([)]&quot;
 Output: false
-</code></pre>
-
-<h3 id="example-5">Example 5:</h3>
-
+</code></pre><h3 id="example-5">Example 5:</h3>
 <pre><code>Input: &quot;{[]}&quot;
 Output: true
-</code></pre>
+</code></pre><h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isValid</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-<h3 id="solution">Solution:</h3>
+        HashMap<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">,</span> Character<span style="color:#f92672">&gt;</span> charMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+        charMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;)&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;(&#39;</span><span style="color:#f92672">);</span>
+        charMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;]&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;[&#39;</span><span style="color:#f92672">);</span>
+        charMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;{&#39;</span><span style="color:#f92672">);</span>
+        Stack<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;();</span>
 
-<pre><code class="language-java">class Solution {
-    public boolean isValid(String s) {
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
 
-        HashMap&lt;Character, Character&gt; charMap = new HashMap&lt;&gt;();
-        charMap.put(')', '(');
-        charMap.put(']', '[');
-        charMap.put('}', '{');
-        Stack&lt;Character&gt; stack = new Stack&lt;Character&gt;();
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>charMap<span style="color:#f92672">.</span><span style="color:#a6e22e">containsValue</span><span style="color:#f92672">(</span>c<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>c<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>charMap<span style="color:#f92672">.</span><span style="color:#a6e22e">containsKey</span><span style="color:#f92672">(</span>c<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">||</span> charMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> <span style="color:#f92672">!=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">())</span>
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        for (int i = 0; i &lt; s.length(); i++) {
-            char c = s.charAt(i);
-
-            if (charMap.containsValue(c)) {
-                stack.push(c);
-            } else if (charMap.containsKey(c)) {
-                if (stack.isEmpty() || charMap.get(c) != stack.pop())
-                    return false;
-            } else {
-                return false;
-            }
+        <span style="color:#66d9ef">return</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isValid</span>(self, s):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type s: str
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        stack <span style="color:#f92672">=</span> []
+        dict <span style="color:#f92672">=</span> {
+            <span style="color:#e6db74">&#34;]&#34;</span>: <span style="color:#e6db74">&#34;[&#34;</span>,
+            <span style="color:#e6db74">&#34;}&#34;</span>: <span style="color:#e6db74">&#34;{&#34;</span>,
+            <span style="color:#e6db74">&#34;)&#34;</span>: <span style="color:#e6db74">&#34;(&#34;</span>
         }
-
-        return stack.isEmpty();
-    }
-}
-</code></pre>
-
-<pre><code class="language-python">class Solution:
-    def isValid(self, s):
-        &quot;&quot;&quot;
-        :type s: str
-        :rtype: bool
-        &quot;&quot;&quot;
-        stack = []
-        dict = {
-            &quot;]&quot;: &quot;[&quot;,
-            &quot;}&quot;: &quot;{&quot;,
-            &quot;)&quot;: &quot;(&quot;
-        }
-        for char in s:
-            if char in dict.values():
-                stack.append(char)
-            elif char in dict.keys():
-                if stack == [] or dict[char] != stack.pop():
-                    return False
-            else:
-                return False
-        return stack == []
-</code></pre>
-
+        <span style="color:#66d9ef">for</span> char <span style="color:#f92672">in</span> s:
+            <span style="color:#66d9ef">if</span> char <span style="color:#f92672">in</span> dict<span style="color:#f92672">.</span>values():
+                stack<span style="color:#f92672">.</span>append(char)
+            <span style="color:#66d9ef">elif</span> char <span style="color:#f92672">in</span> dict<span style="color:#f92672">.</span>keys():
+                <span style="color:#66d9ef">if</span> stack <span style="color:#f92672">==</span> [] <span style="color:#f92672">or</span> dict[char] <span style="color:#f92672">!=</span> stack<span style="color:#f92672">.</span>pop():
+                    <span style="color:#66d9ef">return</span> False
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">return</span> False
+        <span style="color:#66d9ef">return</span> stack <span style="color:#f92672">==</span> []
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

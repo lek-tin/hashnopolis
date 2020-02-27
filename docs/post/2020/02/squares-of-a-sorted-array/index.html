@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content=" Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
-Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100]  Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121]  Note:  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i &#43;= 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr &#43;= 1 return result  " />
+  <meta name="description" content="Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
+Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note:  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i &#43;= 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr &#43;= 1 return result " />
   <meta name="keywords" content="leetcode two-pointers array " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Squares of a Sorted Array" />
-    <meta name="twitter:description" content=" Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
-Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100]  Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121]  Note:  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i &#43;= 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr &#43;= 1 return result  " />
+    <meta name="twitter:description" content="Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
+Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note:  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i &#43;= 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr &#43;= 1 return result " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/02/squares-of-a-sorted-array/" />
@@ -192,50 +192,37 @@ Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100]  Example 2: Input: [-7,-
         <h5>Last updated: February 10, 2020</h5>
       
       <hr />
-      
-
-<p>Given an array of integers <code>A</code> sorted in <strong>non-decreasing</strong> order, return an array of the squares of each number, also in sorted <strong>non-decreasing</strong> order.</p>
-
+      <p>Given an array of integers <code>A</code> sorted in <strong>non-decreasing</strong> order, return an array of the squares of each number, also in sorted <strong>non-decreasing</strong> order.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: [-4,-1,0,3,10]
 Output: [0,1,9,16,100]
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: [-7,-3,2,3,11]
 Output: [4,9,9,49,121]
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>1 &lt;= A.length &lt;= 10000</code></li>
 <li><code>-10000 &lt;= A[i] &lt;= 10000</code></li>
 <li><code>A</code> is sorted in non-decreasing order.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sortedSquares</span>(self, A: List[int]) <span style="color:#f92672">-&gt;</span> List[int]:
+        result <span style="color:#f92672">=</span> A[:]
+        leftPtr, rightPtr <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(A)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 
-<pre><code class="language-python">class Solution:
-    def sortedSquares(self, A: List[int]) -&gt; List[int]:
-        result = A[:]
-        leftPtr, rightPtr = 0, len(A)-1
-        i = 0
+        <span style="color:#66d9ef">while</span> leftPtr <span style="color:#f92672">&lt;=</span> rightPtr:
+            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> abs(A[leftPtr]) <span style="color:#f92672">&lt;=</span> abs(A[rightPtr]):
+                result[<span style="color:#f92672">-</span>i] <span style="color:#f92672">=</span>  A[rightPtr] <span style="color:#f92672">*</span> A[rightPtr]
+                rightPtr <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                result[<span style="color:#f92672">-</span>i] <span style="color:#f92672">=</span> A[leftPtr] <span style="color:#f92672">*</span> A[leftPtr]
+                leftPtr <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-        while leftPtr &lt;= rightPtr:
-            i += 1
-            if abs(A[leftPtr]) &lt;= abs(A[rightPtr]):
-                result[-i] =  A[rightPtr] * A[rightPtr]
-                rightPtr -= 1
-            else:
-                result[-i] = A[leftPtr] * A[leftPtr]
-                leftPtr += 1
-
-        return result
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> result
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

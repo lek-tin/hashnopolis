@@ -17,8 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Reverse a singly linked list.
-Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
-Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL // prev cur after while (cur !" />
+Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL  // prev cur after  while (cur !" />
   <meta name="keywords" content="leetcode linked-list iterative two-pointers " />
   
   
@@ -26,15 +26,15 @@ Solution: /** * Definition for singly-linked list. * public class ListNode { * i
     
     <meta name="twitter:title" content="Reverse Linked List" />
     <meta name="twitter:description" content="Reverse a singly linked list.
-Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL  Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
-Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL // prev cur after while (cur !" />
+Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL  // prev cur after  while (cur !" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/reverse-linked-list/" />
@@ -196,72 +196,60 @@ Solution: /** * Definition for singly-linked list. * public class ListNode { * i
         <h5>Last updated: August 10, 2019</h5>
       
       <hr />
-      
-
-<p>Reverse a singly linked list.</p>
-
+      <p>Reverse a singly linked list.</p>
 <h3 id="example">Example:</h3>
-
 <pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
 Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL
-</code></pre>
-
-<h3 id="follow-up">Follow up:</h3>
-
+</code></pre><h3 id="follow-up">Follow up:</h3>
 <p>A linked list can be reversed either iteratively or recursively. Could you implement both?</p>
-
 <h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for singly-linked list.
+</span><span style="color:#75715e"> * public class ListNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     ListNode next;
+</span><span style="color:#75715e"> *     ListNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> ListNode <span style="color:#a6e22e">reverseList</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        ListNode cur <span style="color:#f92672">=</span> head<span style="color:#f92672">,</span> prev <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> after <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode<span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// null   1  -&gt;  2  -&gt; 3 -&gt; 4 -&gt; 5 -&gt; NULL
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// prev  cur   after
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>cur <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            after <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            cur<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> prev<span style="color:#f92672">;</span>
+            prev <span style="color:#f92672">=</span> cur<span style="color:#f92672">;</span>
+            <span style="color:#75715e">// for the last node, after will be null, therefore after this step,
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// the while loop will terminate, and we return prev instead of cur,
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// as it is null at this point.
+</span><span style="color:#75715e"></span>            cur <span style="color:#f92672">=</span> after<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        head <span style="color:#f92672">=</span> prev<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> head<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
+<span style="color:#75715e">#     null    1  ----  2  ----  3  ----  4  ----  5</span>
+<span style="color:#75715e">#     prev   curr     after</span>
+<span style="color:#75715e">#            prev     curr    after</span>
+<span style="color:#75715e"># https://www.youtube.com/watch?v=D7y_hoT_YZI</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseList</span>(self, head: ListNode) <span style="color:#f92672">-&gt;</span> ListNode:
+        prev <span style="color:#f92672">=</span> None
 
-<pre><code class="language-java">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public ListNode reverseList(ListNode head) {
-        ListNode cur = head, prev = null, after = new ListNode(0);
-        // null   1  -&gt;  2  -&gt; 3 -&gt; 4 -&gt; 5 -&gt; NULL
-        // prev  cur   after
-        while (cur != null) {
-            after = cur.next;
-            cur.next = prev;
-            prev = cur;
-            // for the last node, after will be null, therefore after this step,
-            // the while loop will terminate, and we return prev instead of cur,
-            // as it is null at this point.
-            cur = after;
-        }
-        head = prev;
-        return head;
-    }
-}
-</code></pre>
+        <span style="color:#66d9ef">while</span> head <span style="color:#f92672">!=</span> None:
+            temp <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
+            head<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> prev
+            prev <span style="color:#f92672">=</span> head
+            head <span style="color:#f92672">=</span> temp
 
-<pre><code class="language-python"># Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-#     null    1  ----  2  ----  3  ----  4  ----  5
-#     prev   curr     after
-#            prev     curr    after
-# https://www.youtube.com/watch?v=D7y_hoT_YZI
-class Solution:
-    def reverseList(self, head: ListNode) -&gt; ListNode:
-        prev = None
-
-        while head != None:
-            temp = head.next
-            head.next = prev
-            prev = head
-            head = temp
-
-        return prev
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> prev
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

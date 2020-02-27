@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
-Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5]  Example 2: Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7]  Solution: class Solution { public List&amp;lt;Integer&amp;gt; spiralOrder(int[][] matrix) { if (matrix == null || matrix." />
+Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5] Example 2: Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7] Solution: class Solution { public List&amp;lt;Integer&amp;gt; spiralOrder(int[][] matrix) { if (matrix == null || matrix." />
   <meta name="keywords" content="leetcode matrix " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8
     
     <meta name="twitter:title" content="Spiral Matrix" />
     <meta name="twitter:description" content="Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
-Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5]  Example 2: Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7]  Solution: class Solution { public List&amp;lt;Integer&amp;gt; spiralOrder(int[][] matrix) { if (matrix == null || matrix." />
+Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5] Example 2: Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7] Solution: class Solution { public List&amp;lt;Integer&amp;gt; spiralOrder(int[][] matrix) { if (matrix == null || matrix." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/02/spiral-matrix/" />
@@ -190,12 +190,8 @@ Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8
         <h5>Last updated: February 17, 2019</h5>
       
       <hr />
-      
-
-<p>Given a matrix of <code>m x n</code> elements <code>(m rows, n columns)</code>, return all elements of the matrix in spiral order.</p>
-
+      <p>Given a matrix of <code>m x n</code> elements <code>(m rows, n columns)</code>, return all elements of the matrix in spiral order.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input:
 [
  [ 1, 2, 3 ],
@@ -203,10 +199,7 @@ Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8
  [ 7, 8, 9 ]
 ]
 Output: [1,2,3,6,9,8,7,4,5]
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input:
 [
   [1, 2, 3, 4],
@@ -214,72 +207,68 @@ Output: [1,2,3,6,9,8,7,4,5]
   [9,10,11,12]
 ]
 Output: [1,2,3,4,8,12,11,10,9,5,6,7]
-</code></pre>
+</code></pre><h3 id="solution">Solution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">spiralOrder</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> matrix<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-<h3 id="solution">Solution:</h3>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>matrix <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> matrix<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0 <span style="color:#f92672">||</span> matrix<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">class Solution {
-    public List&lt;Integer&gt; spiralOrder(int[][] matrix) {
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> matrix<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> top <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> bottom <span style="color:#f92672">=</span> matrix<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+        String dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&gt;&#34;</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> <span style="color:#75715e">// column
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> <span style="color:#75715e">// row
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">||</span> top <span style="color:#f92672">&gt;</span> bottom<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
 
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-            return new ArrayList&lt;&gt;();
-        }
+            res<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>matrix<span style="color:#f92672">[</span>y<span style="color:#f92672">][</span>x<span style="color:#f92672">]);</span>
 
-        List&lt;Integer&gt; res = new ArrayList&lt;&gt;();
-        int left = 0;
-        int right = matrix[0].length - 1;
-        int top = 0;
-        int bottom = matrix.length - 1;
-        String dir = &quot;&gt;&quot;;
-        int x = 0; // column
-        int y = 0; // row
-        while (true) {
-            if (left &gt; right || top &gt; bottom) {
-                break;
-            }
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>dir <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&gt;&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">==</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;v&#34;</span><span style="color:#f92672">;</span>
+                    top<span style="color:#f92672">++;</span>
+                    y<span style="color:#f92672">++;</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    x<span style="color:#f92672">++;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>dir <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;v&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>y <span style="color:#f92672">==</span> bottom<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;&#34;</span><span style="color:#f92672">;</span>
+                    right<span style="color:#f92672">--;</span>
+                    x<span style="color:#f92672">--;</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    y<span style="color:#f92672">++;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>dir <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&lt;&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">==</span> left<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;^&#34;</span><span style="color:#f92672">;</span>
+                    y<span style="color:#f92672">--;</span>
+                    bottom<span style="color:#f92672">--;</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    x<span style="color:#f92672">--;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>dir <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;^&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>y <span style="color:#f92672">==</span> top<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&gt;&#34;</span><span style="color:#f92672">;</span>
+                    left<span style="color:#f92672">++;</span>
+                    x<span style="color:#f92672">++;</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    y<span style="color:#f92672">--;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-            res.add(matrix[y][x]);
-
-            if (dir == &quot;&gt;&quot;) {
-                if (x == right) {
-                    dir = &quot;v&quot;;
-                    top++;
-                    y++;
-                } else {
-                    x++;
-                }
-            } else if (dir == &quot;v&quot;) {
-                if (y == bottom) {
-                    dir = &quot;&lt;&quot;;
-                    right--;
-                    x--;
-                } else {
-                    y++;
-                }
-            } else if(dir == &quot;&lt;&quot;) {
-                if (x == left) {
-                    dir = &quot;^&quot;;
-                    y--;
-                    bottom--;
-                } else {
-                    x--;
-                }
-            } else if (dir == &quot;^&quot;) {
-                if (y == top) {
-                    dir = &quot;&gt;&quot;;
-                    left++;
-                    x++;
-                } else {
-                    y--;
-                }
-            }
-        }
-
-        return res;
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

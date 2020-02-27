@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
 For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
-Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5  Solution # Definition for a binary tree node." />
+Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5 Solution # Definition for a binary tree node." />
   <meta name="keywords" content="leetcode bst " />
   
   
@@ -27,14 +27,14 @@ Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,
     <meta name="twitter:title" content="Convert Sorted Array to Binary Search Tree" />
     <meta name="twitter:description" content="Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
 For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
-Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5  Solution # Definition for a binary tree node." />
+Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5 Solution # Definition for a binary tree node." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/convert-sorted-array-to-binary-search-tree/" />
@@ -192,14 +192,9 @@ Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,
         <h5>Last updated: September 14, 2018</h5>
       
       <hr />
-      
-
-<p>Given an array where elements are sorted in ascending order, convert it to a height balanced BST.</p>
-
+      <p>Given an array where elements are sorted in ascending order, convert it to a height balanced BST.</p>
 <p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>Given the sorted array: [-10,-3,0,5,9],
 
 One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:
@@ -209,35 +204,31 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
    -3   9
    /   /
  -10  5
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<h3 id="solution">Solution</h3>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sortedArrayToBST</span>(self, nums):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :rtype: TreeNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> nums:
+            <span style="color:#66d9ef">return</span> None
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+        middle  <span style="color:#f92672">=</span> len(nums)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+        new_node <span style="color:#f92672">=</span> TreeNode(nums[middle])
 
-class Solution:
-    def sortedArrayToBST(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: TreeNode
-        &quot;&quot;&quot;
-        if not nums:
-            return None
-
-        middle  = len(nums)//2
-        new_node = TreeNode(nums[middle])
-
-        new_node.left = self.sortedArrayToBST(nums[:middle])
-        new_node.right = self.sortedArrayToBST(nums[middle+1:])
+        new_node<span style="color:#f92672">.</span>left <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>sortedArrayToBST(nums[:middle])
+        new_node<span style="color:#f92672">.</span>right <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>sortedArrayToBST(nums[middle<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:])
         
-        return new_node
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> new_node
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

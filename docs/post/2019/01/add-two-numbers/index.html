@@ -34,7 +34,7 @@ Example Input: (2 -&amp;gt; 4 -&amp;gt; 3) &#43; (5 -&amp;gt; 6 -&amp;gt; 4) Out
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/add-two-numbers/" />
@@ -192,60 +192,51 @@ Example Input: (2 -&amp;gt; 4 -&amp;gt; 3) &#43; (5 -&amp;gt; 6 -&amp;gt; 4) Out
         <h5>Last updated: January 21, 2019</h5>
       
       <hr />
-      
-
-<p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-
+      <p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
 <p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
 Output: 7 -&gt; 0 -&gt; 8
 Explanation: 342 + 465 = 807.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
+<span style="color:#75715e"># Time: `O(n)`</span>
+<span style="color:#75715e"># Space: O(1)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">addTwoNumbers</span>(self, l1, l2):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type l1: ListNode
+</span><span style="color:#e6db74">        :type l2: ListNode
+</span><span style="color:#e6db74">        :rtype: ListNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        c1 <span style="color:#f92672">=</span> l1
+        c2 <span style="color:#f92672">=</span> l2
+        head <span style="color:#f92672">=</span> ListNode(<span style="color:#ae81ff">0</span>)
+        dummy <span style="color:#f92672">=</span> head
+        sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span> c1 <span style="color:#f92672">!=</span> None <span style="color:#f92672">or</span> c2 <span style="color:#f92672">!=</span> None:
+            sum <span style="color:#f92672">//=</span> <span style="color:#ae81ff">10</span>
+            <span style="color:#66d9ef">print</span>(sum)
+            <span style="color:#66d9ef">if</span> c1 <span style="color:#f92672">!=</span> None:
+                sum <span style="color:#f92672">+=</span> c1<span style="color:#f92672">.</span>val
+                c1 <span style="color:#f92672">=</span> c1<span style="color:#f92672">.</span>next
 
-<h3 id="solution">Solution</h3>
+            <span style="color:#66d9ef">if</span> c2 <span style="color:#f92672">!=</span> None:
+                sum <span style="color:#f92672">+=</span> c2<span style="color:#f92672">.</span>val
+                c2 <span style="color:#f92672">=</span> c2<span style="color:#f92672">.</span>next
 
-<pre><code class="language-python"># Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-# Time: `O(n)`
-# Space: O(1)
-class Solution(object):
-    def addTwoNumbers(self, l1, l2):
-        &quot;&quot;&quot;
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-        &quot;&quot;&quot;
-        c1 = l1
-        c2 = l2
-        head = ListNode(0)
-        dummy = head
-        sum = 0
-        while c1 != None or c2 != None:
-            sum //= 10
-            print(sum)
-            if c1 != None:
-                sum += c1.val
-                c1 = c1.next
+            dummy<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> ListNode(sum <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>)
+            dummy <span style="color:#f92672">=</span> dummy<span style="color:#f92672">.</span>next
 
-            if c2 != None:
-                sum += c2.val
-                c2 = c2.next
+        <span style="color:#66d9ef">if</span> sum<span style="color:#f92672">//</span><span style="color:#ae81ff">10</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            dummy<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> ListNode(<span style="color:#ae81ff">1</span>)
 
-            dummy.next = ListNode(sum % 10)
-            dummy = dummy.next
-
-        if sum//10 == 1:
-            dummy.next = ListNode(1)
-
-        return head.next
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> head<span style="color:#f92672">.</span>next
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

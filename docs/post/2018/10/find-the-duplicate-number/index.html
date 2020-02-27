@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array nums containing n &#43; 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
-Example 1 Input: [1,3,4,2,2] Output: 2  Example 2 Input: [3,1,3,4,2] Output: 3  Note You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space." />
+Example 1 Input: [1,3,4,2,2] Output: 2 Example 2 Input: [3,1,3,4,2] Output: 3 Note You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space." />
   <meta name="keywords" content="leetcode duplicate " />
   
   
@@ -25,14 +25,14 @@ Example 1 Input: [1,3,4,2,2] Output: 2  Example 2 Input: [3,1,3,4,2] Output: 3  
     
     <meta name="twitter:title" content="Find the Duplicate Number" />
     <meta name="twitter:description" content="Given an array nums containing n &#43; 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
-Example 1 Input: [1,3,4,2,2] Output: 2  Example 2 Input: [3,1,3,4,2] Output: 3  Note You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space." />
+Example 1 Input: [1,3,4,2,2] Output: 2 Example 2 Input: [3,1,3,4,2] Output: 3 Note You must not modify the array (assume the array is read only). You must use only constant, O(1) extra space." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/find-the-duplicate-number/" />
@@ -190,53 +190,35 @@ Example 1 Input: [1,3,4,2,2] Output: 2  Example 2 Input: [3,1,3,4,2] Output: 3  
         <h5>Last updated: October 27, 2018</h5>
       
       <hr />
-      
-
-<p>Given an array nums containing <code>n + 1</code> integers where each integer is between <code>1</code> and <code>n</code> (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.</p>
-
+      <p>Given an array nums containing <code>n + 1</code> integers where each integer is between <code>1</code> and <code>n</code> (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: [1,3,4,2,2]
 Output: 2
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: [3,1,3,4,2]
 Output: 3
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <p>You <strong>must not</strong> modify the array (assume the array is read only).
 You <strong>must</strong> use only constant, <code>O(1)</code> extra space.
 Your runtime complexity should be less than <code>O(n2)</code>.
 There is only one duplicate number in the array, but it could be repeated more than once.</p>
-
 <h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution:
-    def findDuplicate(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: int
-        &quot;&quot;&quot;
-        newNums = list(nums)
-        newNums.sort()
-        print(nums)
-        for i in range(1, len(newNums)):
-            if newNums[i] == newNums[i-1]:
-                return newNums[i]
-</code></pre>
-
-<h3 id="complexity-analysis">Complexity Analysis</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findDuplicate</span>(self, nums):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        newNums <span style="color:#f92672">=</span> list(nums)
+        newNums<span style="color:#f92672">.</span>sort()
+        <span style="color:#66d9ef">print</span>(nums)
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(newNums)):
+            <span style="color:#66d9ef">if</span> newNums[i] <span style="color:#f92672">==</span> newNums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+                <span style="color:#66d9ef">return</span> newNums[i]
+</code></pre></div><h3 id="complexity-analysis">Complexity Analysis</h3>
 <p>Time complexity : <code>O(nlgn)</code></p>
-
 <p>The <code>sort</code> invocation costs <code>O(nlgn)</code> time in Python and Java, so it dominates the subsequent linear scan.</p>
-
 <p>Space complexity : <code>O(1)</code> (or <code>O(n)</code>)</p>
-
 <p>Here, we sort <code>nums</code> in place, so the memory footprint is constant. If we cannot modify the input array, then we must allocate linear space for a copy of <code>nums</code> and sort that instead.</p>
 
   </div>

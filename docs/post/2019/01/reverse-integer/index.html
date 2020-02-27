@@ -17,7 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a 32-bit signed integer, reverse digits of an integer.
-Example 1 Input: 123 Output: 321  Example 2 Input: -123 Output: -321  Example 3 Input: 120 Output: 21  Note Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows." />
+Example 1 Input: 123 Output: 321 Example 2 Input: -123 Output: -321 Example 3 Input: 120 Output: 21 Note Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+Solution class Solution(object): def reverse(self, x): &amp;#34;&amp;#34;&amp;#34; :type x: int :rtype: int &amp;#34;&amp;#34;&amp;#34; if x == &amp;#34;&amp;#34; or x == None: return x res = &amp;#34;&amp;#34; if x &amp;gt; 0 else &amp;#34;-&amp;#34; string = str(abs(x)) for i in range(len(string)-1, -1, -1): res &#43;= string[i] res = int(res) if res &amp;lt; -2**31 or res &amp;gt;= 2**31: return 0 return int(res) class Solution(object): def reverse(self, x): &amp;#34;&amp;#34;&amp;#34; :type x: int :rtype: int &amp;#34;&amp;#34;&amp;#34; res = 0 isNegative = x &amp;lt; 0 x = abs(x) while x !" />
   <meta name="keywords" content="leetcode integer modulo " />
   
   
@@ -25,14 +26,15 @@ Example 1 Input: 123 Output: 321  Example 2 Input: -123 Output: -321  Example 3 
     
     <meta name="twitter:title" content="Reverse Integer" />
     <meta name="twitter:description" content="Given a 32-bit signed integer, reverse digits of an integer.
-Example 1 Input: 123 Output: 321  Example 2 Input: -123 Output: -321  Example 3 Input: 120 Output: 21  Note Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows." />
+Example 1 Input: 123 Output: 321 Example 2 Input: -123 Output: -321 Example 3 Input: 120 Output: 21 Note Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+Solution class Solution(object): def reverse(self, x): &amp;#34;&amp;#34;&amp;#34; :type x: int :rtype: int &amp;#34;&amp;#34;&amp;#34; if x == &amp;#34;&amp;#34; or x == None: return x res = &amp;#34;&amp;#34; if x &amp;gt; 0 else &amp;#34;-&amp;#34; string = str(abs(x)) for i in range(len(string)-1, -1, -1): res &#43;= string[i] res = int(res) if res &amp;lt; -2**31 or res &amp;gt;= 2**31: return 0 return int(res) class Solution(object): def reverse(self, x): &amp;#34;&amp;#34;&amp;#34; :type x: int :rtype: int &amp;#34;&amp;#34;&amp;#34; res = 0 isNegative = x &amp;lt; 0 x = abs(x) while x !" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/01/reverse-integer/" />
@@ -192,82 +194,64 @@ Example 1 Input: 123 Output: 321  Example 2 Input: -123 Output: -321  Example 3 
         <h5>Last updated: January 16, 2019</h5>
       
       <hr />
-      
-
-<p>Given a 32-bit signed integer, reverse digits of an integer.</p>
-
+      <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: 123
 Output: 321
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: -123
 Output: -321
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: 120
 Output: 21
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <p>Assume we are dealing with an environment which could only store integers within the <code>32-bit</code> signed integer range: <code>[−231,  231 − 1]</code>. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverse</span>(self, x):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type x: int
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> x <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">or</span> x <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> x
 
-<pre><code class="language-python">class Solution(object):
-    def reverse(self, x):
-        &quot;&quot;&quot;
-        :type x: int
-        :rtype: int
-        &quot;&quot;&quot;
-        if x == &quot;&quot; or x == None:
-            return x
+        res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;-&#34;</span>
+        string <span style="color:#f92672">=</span> str(abs(x))
 
-        res = &quot;&quot; if x &gt; 0 else &quot;-&quot;
-        string = str(abs(x))
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(string)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            res <span style="color:#f92672">+=</span> string[i]
 
-        for i in range(len(string)-1, -1, -1):
-            res += string[i]
+        res <span style="color:#f92672">=</span> int(res)
 
-        res = int(res)
+        <span style="color:#66d9ef">if</span> res <span style="color:#f92672">&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span><span style="color:#ae81ff">31</span> <span style="color:#f92672">or</span> res <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span><span style="color:#ae81ff">31</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-        if res &lt; -2**31 or res &gt;= 2**31:
-            return 0
+        <span style="color:#66d9ef">return</span> int(res)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverse</span>(self, x):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type x: int
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        isNegative <span style="color:#f92672">=</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>
+        x <span style="color:#f92672">=</span> abs(x)
 
-        return int(res)
-</code></pre>
+        <span style="color:#66d9ef">while</span> x <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+            tail <span style="color:#f92672">=</span> x <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>
+            res <span style="color:#f92672">=</span> res <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> tail
 
-<pre><code class="language-python">class Solution(object):
-    def reverse(self, x):
-        &quot;&quot;&quot;
-        :type x: int
-        :rtype: int
-        &quot;&quot;&quot;
-        res = 0
-        isNegative = x &lt; 0
-        x = abs(x)
+            x <span style="color:#f92672">=</span> x <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>
 
-        while x != 0:
-            tail = x % 10
-            res = res * 10 + tail
+        <span style="color:#66d9ef">if</span> isNegative:
+            res <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>res
+        <span style="color:#75715e"># Handles overflow</span>
+        <span style="color:#66d9ef">if</span> res <span style="color:#f92672">&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">**</span><span style="color:#ae81ff">31</span> <span style="color:#f92672">or</span> res <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span><span style="color:#ae81ff">31</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-            x = x / 10
-
-        if isNegative:
-            res = -res
-        # Handles overflow
-        if res &lt; -2**31 or res &gt;= 2**31:
-            return 0
-
-        return res
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

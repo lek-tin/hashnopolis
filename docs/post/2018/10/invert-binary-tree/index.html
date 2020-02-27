@@ -17,9 +17,9 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Invert a binary tree.
- 4 / \ 2 7 / \ / \ 1 3 6 9  to
- 4 / \ 7 2 / \ / \ 9 6 3 1  Thoughts What if a node is NULL? A NULL has no children, so how to iterate deeper into the tree?
-// Attempt // class Solution { // public: void swapNodes(*leftNode, *rightNode) { *temp = *leftNode; *leftNode = *rightNode; *rightNode = temp; return; } TreeNode* invertTree(TreeNode* root) { if (root == NULL) return invertTree(root-&amp;gt;left, ) } };  Solution:" />
+ 4 / \ 2 7 / \ / \ 1 3 6 9 to
+ 4 / \ 7 2 / \ / \ 9 6 3 1 Thoughts What if a node is NULL? A NULL has no children, so how to iterate deeper into the tree?
+// Attempt // class Solution { // public:  void swapNodes(*leftNode, *rightNode) { *temp = *leftNode; *leftNode = *rightNode; *rightNode = temp; return; } TreeNode* invertTree(TreeNode* root) { if (root == NULL) return invertTree(root-&amp;gt;left, ) } }; Solution:" />
   <meta name="keywords" content="leetcode binary-tree " />
   
   
@@ -27,16 +27,16 @@
     
     <meta name="twitter:title" content="Invert Binary Tree" />
     <meta name="twitter:description" content="Invert a binary tree.
- 4 / \ 2 7 / \ / \ 1 3 6 9  to
- 4 / \ 7 2 / \ / \ 9 6 3 1  Thoughts What if a node is NULL? A NULL has no children, so how to iterate deeper into the tree?
-// Attempt // class Solution { // public: void swapNodes(*leftNode, *rightNode) { *temp = *leftNode; *leftNode = *rightNode; *rightNode = temp; return; } TreeNode* invertTree(TreeNode* root) { if (root == NULL) return invertTree(root-&amp;gt;left, ) } };  Solution:" />
+ 4 / \ 2 7 / \ / \ 1 3 6 9 to
+ 4 / \ 7 2 / \ / \ 9 6 3 1 Thoughts What if a node is NULL? A NULL has no children, so how to iterate deeper into the tree?
+// Attempt // class Solution { // public:  void swapNodes(*leftNode, *rightNode) { *temp = *leftNode; *leftNode = *rightNode; *rightNode = temp; return; } TreeNode* invertTree(TreeNode* root) { if (root == NULL) return invertTree(root-&amp;gt;left, ) } }; Solution:" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/invert-binary-tree/" />
@@ -194,69 +194,55 @@
         <h5>Last updated: October 26, 2018</h5>
       
       <hr />
-      
-
-<p>Invert a binary tree.</p>
-
+      <p>Invert a binary tree.</p>
 <pre><code>         4
        /   \
       2     7
      / \   / \
     1   3 6   9
-</code></pre>
-
-<p>to</p>
-
+</code></pre><p>to</p>
 <pre><code>         4
        /   \
       7     2
      / \   / \
     9   6 3   1
-</code></pre>
-
-<h2 id="thoughts">Thoughts</h2>
-
+</code></pre><h2 id="thoughts">Thoughts</h2>
 <p>What if a node is NULL? A NULL has no children, so how to iterate deeper into the tree?</p>
-
-<pre><code class="language-c++">// Attempt
-// class Solution {
-// public:
-    
-     void swapNodes(*leftNode, *rightNode) {
-         *temp = *leftNode;
-         *leftNode = *rightNode;
-         *rightNode = temp;
-         return;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// Attempt
+</span><span style="color:#75715e">// class Solution {
+</span><span style="color:#75715e">// public:
+</span><span style="color:#75715e"></span>    
+     <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swapNodes</span>(<span style="color:#f92672">*</span>leftNode, <span style="color:#f92672">*</span>rightNode) {
+         <span style="color:#f92672">*</span>temp <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>leftNode;
+         <span style="color:#f92672">*</span>leftNode <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>rightNode;
+         <span style="color:#f92672">*</span>rightNode <span style="color:#f92672">=</span> temp;
+         <span style="color:#66d9ef">return</span>;
      }
     
-     TreeNode* invertTree(TreeNode* root) {
-         if (root == NULL) 
-             return
-         invertTree(root-&gt;left, )
+     TreeNode<span style="color:#f92672">*</span> <span style="color:#a6e22e">invertTree</span>(TreeNode<span style="color:#f92672">*</span> root) {
+         <span style="color:#66d9ef">if</span> (root <span style="color:#f92672">==</span> NULL) 
+             <span style="color:#66d9ef">return</span>
+         invertTree(root<span style="color:#f92672">-&gt;</span>left, )
      }
  };
-</code></pre>
-
-<p>Solution:</p>
-
-<pre><code class="language-c++">class Solution {
-public:
-    TreeNode* invertTree(TreeNode* root) {
-        if(!root || (!root-&gt;left &amp;&amp; !root-&gt;right)) return root;
-        invertTree(root-&gt;left);
-        invertTree(root-&gt;right);
-        swap(&amp;root-&gt;left, &amp;root-&gt;right);
-        return root;
+</code></pre></div><p>Solution:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    TreeNode<span style="color:#f92672">*</span> invertTree(TreeNode<span style="color:#f92672">*</span> root) {
+        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>root <span style="color:#f92672">||</span> (<span style="color:#f92672">!</span>root<span style="color:#f92672">-&gt;</span>left <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>root<span style="color:#f92672">-&gt;</span>right)) <span style="color:#66d9ef">return</span> root;
+        invertTree(root<span style="color:#f92672">-&gt;</span>left);
+        invertTree(root<span style="color:#f92672">-&gt;</span>right);
+        swap(<span style="color:#f92672">&amp;</span>root<span style="color:#f92672">-&gt;</span>left, <span style="color:#f92672">&amp;</span>root<span style="color:#f92672">-&gt;</span>right);
+        <span style="color:#66d9ef">return</span> root;
     }
 
-    void swap(TreeNode** l, TreeNode** r) {
-        TreeNode* t = *l;
-        *l = *r;
-        *r = t;
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swap</span>(TreeNode<span style="color:#f92672">**</span> l, TreeNode<span style="color:#f92672">**</span> r) {
+        TreeNode<span style="color:#f92672">*</span> t <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>l;
+        <span style="color:#f92672">*</span>l <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>r;
+        <span style="color:#f92672">*</span>r <span style="color:#f92672">=</span> t;
     }
 };
-</code></pre>
-
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

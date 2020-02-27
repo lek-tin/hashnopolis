@@ -16,25 +16,25 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content=" Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+  <meta name="description" content="Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
-Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest  " />
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4. Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest " />
   <meta name="keywords" content="leetcode python union-find hashmap " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Longest Consecutive Sequence" />
-    <meta name="twitter:description" content=" Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+    <meta name="twitter:description" content="Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 Your algorithm should run in O(n) complexity.
-Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.  Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest  " />
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4. Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&amp;gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&amp;gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/" />
@@ -196,56 +196,47 @@ Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecu
         <h5>Last updated: September 10, 2019</h5>
       
       <hr />
-      
-
-<p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.</p>
-
+      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.</p>
 <p>Your algorithm should run in <code>O(n)</code> complexity.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>Input: [100, 4, 200, 1, 3, 2]
 Output: 4
 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: `O(n)`</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">longestConsecutive</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#75715e"># Count occurence of nums</span>
+        mapping <span style="color:#f92672">=</span> {}
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> nums:
+            mapping[num] <span style="color:#f92672">=</span> True
+        <span style="color:#75715e"># init longest length</span>
+        longest <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#75715e"># iterate over nums</span>
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> nums:
+            <span style="color:#66d9ef">if</span> num <span style="color:#f92672">in</span> mapping:
+                <span style="color:#75715e"># num exists in mapping =&gt; init l = 1</span>
+                l <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#75715e"># num was counted, so we delete num</span>
+                <span style="color:#66d9ef">del</span> mapping[num]
+                left, right <span style="color:#f92672">=</span> num<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, num<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+                <span style="color:#75715e"># Move left</span>
+                <span style="color:#66d9ef">while</span> left <span style="color:#f92672">in</span> mapping:
+                    <span style="color:#75715e"># left was counted, so we delete left</span>
+                    <span style="color:#66d9ef">del</span> mapping[left]
+                    left <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+                    l <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#75715e"># Move right</span>
+                <span style="color:#66d9ef">while</span> right <span style="color:#f92672">in</span> mapping:
+                    <span style="color:#75715e"># right was counted, so we delete right</span>
+                    <span style="color:#66d9ef">del</span> mapping[right]
+                    right <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                    l <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#75715e"># Update longest</span>
+                longest <span style="color:#f92672">=</span> max(longest, l)
 
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python"># Time: `O(n)`
-class Solution:
-    def longestConsecutive(self, nums: List[int]) -&gt; int:
-        # Count occurence of nums
-        mapping = {}
-        for num in nums:
-            mapping[num] = True
-        # init longest length
-        longest = 0
-        # iterate over nums
-        for num in nums:
-            if num in mapping:
-                # num exists in mapping =&gt; init l = 1
-                l = 1
-                # num was counted, so we delete num
-                del mapping[num]
-                left, right = num-1, num+1
-                # Move left
-                while left in mapping:
-                    # left was counted, so we delete left
-                    del mapping[left]
-                    left -= 1
-                    l += 1
-                # Move right
-                while right in mapping:
-                    # right was counted, so we delete right
-                    del mapping[right]
-                    right += 1
-                    l += 1
-                # Update longest
-                longest = max(longest, l)
-
-        return longest
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> longest
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/dfs/" />
@@ -205,7 +205,7 @@ The graph is given in the following form: graph[i] is a list of indexes j for wh
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2020/01/package-dependencies/">Package Dependencies</a></h2>
 
-      <p> Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&#34;Have cycle in dependency graph.&#34;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add)  </p>
+      <p>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&#34;Have cycle in dependency graph.&#34;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add) </p>
 
       <p class="meta">
         
@@ -230,8 +230,8 @@ The graph is given in the following form: graph[i] is a list of indexes j for wh
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/11/word-ladder-ii/">Word Ladder Ii</a></h2>
 
-      <p>Given two words (beginWord and endWord), and a dictionary’s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that: 1. Only one letter can be changed at a time 2. Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
-Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</p>
+      <p>Given two words (beginWord and endWord), and a dictionary’s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
+ Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</p>
 
       <p class="meta">
         
@@ -259,8 +259,8 @@ Note:  Return an empty list if there is no such transformation sequence. All wor
       <p>Given a binary tree and a sum, find all root-to-leaf paths where each path’s sum equals the given sum.
 Note: A leaf is a node with no children.
 Example: Given the below binary tree and sum = 22,
- 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1  Return:
-[ [5,4,11,2], [5,8,4,5] ]  Solution # Definition for a binary tree node.</p>
+ 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 Return:
+[ [5,4,11,2], [5,8,4,5] ] Solution # Definition for a binary tree node.</p>
 
       <p class="meta">
         
@@ -314,7 +314,7 @@ Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \
 
       <p>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
 For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
-Example: Given the sorted linked list: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5  Solution python</p>
+Example: Given the sorted linked list: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5 Solution python</p>
 
       <p class="meta">
         
@@ -341,7 +341,7 @@ Example: Given the sorted linked list: [-10,-3,0,5,9], One possible answer is: [
 
       <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
 Find all strobogrammatic numbers that are of length = n.
-Example: Input: n = 2 Output: [&#34;11&#34;,&#34;69&#34;,&#34;88&#34;,&#34;96&#34;]  Solution # Time: O(n^2 * 5^(n/2)) # Space: `O(n)` class Solution: def findStrobogrammatic(self, n: int) -&gt; List[str]: stroboPairs = { &#34;0&#34;: &#34;0&#34;, &#34;1&#34;: &#34;1&#34;, &#34;6&#34;: &#34;9&#34;, &#34;8&#34;: &#34;8&#34;, &#34;9&#34;: &#34;6&#34; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&#34;&#34;] if curr == 1: return list(&#34;018&#34;) prev = self.</p>
+Example: Input: n = 2 Output: [&#34;11&#34;,&#34;69&#34;,&#34;88&#34;,&#34;96&#34;] Solution # Time: O(n^2 * 5^(n/2)) # Space: `O(n)` class Solution: def findStrobogrammatic(self, n: int) -&gt; List[str]: stroboPairs = { &#34;0&#34;: &#34;0&#34;, &#34;1&#34;: &#34;1&#34;, &#34;6&#34;: &#34;9&#34;, &#34;8&#34;: &#34;8&#34;, &#34;9&#34;: &#34;6&#34; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&#34;&#34;] if curr == 1: return list(&#34;018&#34;) prev = self.</p>
 
       <p class="meta">
         
@@ -394,7 +394,7 @@ Example: Input: {&#34;$id&#34;:&#34;1&#34;,&#34;neighbors&#34;:[{&#34;$id&#34;:&
 
       <p>Given a string s, partition s such that every substring of the partition is a palindrome.
 Return all possible palindrome partitioning of s.
-Example Input: &#34;aab&#34; Output: [ [&#34;aa&#34;,&#34;b&#34;], [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;] ]  Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&gt;&#39;b&#39;-&gt;&#39;aa&#39;-&gt;&#39;e&#39;-&gt;&#39;q&#39;-&gt;&#39;w&#39;-&gt;&#39;d&#39;-&gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</p>
+Example Input: &#34;aab&#34; Output: [ [&#34;aa&#34;,&#34;b&#34;], [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;] ] Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&gt;&#39;b&#39;-&gt;&#39;aa&#39;-&gt;&#39;e&#39;-&gt;&#39;q&#39;-&gt;&#39;w&#39;-&gt;&#39;d&#39;-&gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</p>
 
       <p class="meta">
         
@@ -422,7 +422,7 @@ Example Input: &#34;aab&#34; Output: [ [&#34;aa&#34;,&#34;b&#34;], [&#34;a&#34;,
       <p>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ]  ###Example 2:</p>
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</p>
 
       <p class="meta">
         

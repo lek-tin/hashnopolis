@@ -20,8 +20,8 @@
 The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 2.  Solution: Recursion
-/** * Definition for a binary tree node." />
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 2. Solution: Recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int minDepth(TreeNode root) { if (root == null) return 0; int left = minDepth(root." />
   <meta name="keywords" content="leetcode java binary-tree depth-first-search " />
   
   
@@ -32,15 +32,15 @@ Example: Given binary tree [3,9,20,null,null,15,7],
 The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 2.  Solution: Recursion
-/** * Definition for a binary tree node." />
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 2. Solution: Recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int minDepth(TreeNode root) { if (root == null) return 0; int left = minDepth(root." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/02/minimum-depth-of-binary-tree/" />
@@ -202,107 +202,89 @@ Example: Given binary tree [3,9,20,null,null,15,7],
         <h5>Last updated: February 12, 2019</h5>
       
       <hr />
-      
-
-<p>Given a binary tree, find its minimum depth.</p>
-
+      <p>Given a binary tree, find its minimum depth.</p>
 <p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
-
 <p>Note: A leaf is a node with no children.</p>
-
 <h3 id="example">Example:</h3>
-
 <p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
-
 <pre><code>    3
    / \
   9  20
     /  \
    15   7
 return its minimum depth = 2.
-</code></pre>
-
-<h3 id="solution">Solution:</h3>
-
+</code></pre><h3 id="solution">Solution:</h3>
 <p>Recursion</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">minDepth</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> minDepth<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> minDepth<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">==</span> 0 <span style="color:#f92672">||</span> right <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">?</span> left <span style="color:#f92672">+</span> right <span style="color:#f92672">+</span> 1 <span style="color:#f92672">:</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>left<span style="color:#f92672">,</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    public int minDepth(TreeNode root) {
-        if (root == null) return 0;
-        int left = minDepth(root.left);
-        int right = minDepth(root.right);
-        return (left == 0 || right == 0) ? left + right + 1 : Math.min(left, right) + 1;
-    }
+<span style="color:#f92672">}</span>
+</code></pre></div><p>DFS using stack</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-}
-</code></pre>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minDepth</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> int:
+        stack <span style="color:#f92672">=</span> []
 
-<p>DFS using stack</p>
+        <span style="color:#66d9ef">if</span> root:
+            stack<span style="color:#f92672">.</span>append((root, <span style="color:#ae81ff">1</span>))
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+        minDepth <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>inf
+        <span style="color:#66d9ef">while</span> stack:
+            root, currDepth <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span>pop()
+            <span style="color:#66d9ef">if</span> root:
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root<span style="color:#f92672">.</span>left <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> root<span style="color:#f92672">.</span>right:
+                    minDepth <span style="color:#f92672">=</span> min(minDepth, currDepth)
+                stack<span style="color:#f92672">.</span>append((root<span style="color:#f92672">.</span>left, currDepth<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+                stack<span style="color:#f92672">.</span>append((root<span style="color:#f92672">.</span>right, currDepth<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
 
-class Solution:
-    def minDepth(self, root: TreeNode) -&gt; int:
-        stack = []
+        <span style="color:#66d9ef">return</span> minDepth <span style="color:#66d9ef">if</span> minDepth <span style="color:#f92672">!=</span> math<span style="color:#f92672">.</span>inf <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+</code></pre></div><p>BFS using queue</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
+<span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-        if root:
-            stack.append((root, 1))
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minDepth</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> int:
+        queue <span style="color:#f92672">=</span> deque([])
 
-        minDepth = math.inf
-        while stack:
-            root, currDepth = stack.pop()
-            if root:
-                if not root.left and not root.right:
-                    minDepth = min(minDepth, currDepth)
-                stack.append((root.left, currDepth+1))
-                stack.append((root.right, currDepth+1))
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-        return minDepth if minDepth != math.inf else 0
-</code></pre>
+        queue<span style="color:#f92672">.</span>append((root, <span style="color:#ae81ff">1</span>))
 
-<p>BFS using queue</p>
-
-<pre><code class="language-python">from collections import deque
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution:
-    def minDepth(self, root: TreeNode) -&gt; int:
-        queue = deque([])
-
-        if not root:
-            return 0
-
-        queue.append((root, 1))
-
-        while deque:
-            root, currDepth = queue.popleft()
-            if root:
-                if not root.left and not root.right:
-                    return currDepth
-                queue.append((root.left, currDepth+1))
-                queue.append((root.right, currDepth+1))
-</code></pre>
-
+        <span style="color:#66d9ef">while</span> deque:
+            root, currDepth <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>popleft()
+            <span style="color:#66d9ef">if</span> root:
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root<span style="color:#f92672">.</span>left <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> root<span style="color:#f92672">.</span>right:
+                    <span style="color:#66d9ef">return</span> currDepth
+                queue<span style="color:#f92672">.</span>append((root<span style="color:#f92672">.</span>left, currDepth<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+                queue<span style="color:#f92672">.</span>append((root<span style="color:#f92672">.</span>right, currDepth<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

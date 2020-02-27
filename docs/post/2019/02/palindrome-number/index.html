@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
-Example 1: Input: 121 Output: true  Example 2: Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.  Example 3: Input: 10 Output: false Explanation: Reads 01 from right to left. Therefore it is not a palindrome." />
+Example 1: Input: 121 Output: true Example 2: Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome. Example 3: Input: 10 Output: false Explanation: Reads 01 from right to left. Therefore it is not a palindrome." />
   <meta name="keywords" content="leetcode palindrome-number " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: 121 Output: true  Example 2: Input: -121 Output: false Explana
     
     <meta name="twitter:title" content="Palindrome Number" />
     <meta name="twitter:description" content="Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
-Example 1: Input: 121 Output: true  Example 2: Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.  Example 3: Input: 10 Output: false Explanation: Reads 01 from right to left. Therefore it is not a palindrome." />
+Example 1: Input: 121 Output: true Example 2: Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome. Example 3: Input: 10 Output: false Explanation: Reads 01 from right to left. Therefore it is not a palindrome." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/02/palindrome-number/" />
@@ -190,76 +190,56 @@ Example 1: Input: 121 Output: true  Example 2: Input: -121 Output: false Explana
         <h5>Last updated: February 17, 2019</h5>
       
       <hr />
-      
-
-<p>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.</p>
-
+      <p>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: 121
 Output: true
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: -121
 Output: false
 Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
-</code></pre>
-
-<h3 id="example-3">Example 3:</h3>
-
+</code></pre><h3 id="example-3">Example 3:</h3>
 <pre><code>Input: 10
 Output: false
 Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
-</code></pre>
-
-<h3 id="follow-up">Follow up:</h3>
-
+</code></pre><h3 id="follow-up">Follow up:</h3>
 <p>Could you solve it without converting the integer to a string?</p>
-
 <h3 id="solution">Solution:</h3>
-
 <p>Convert the number to string</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPalindrome</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        String num <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>x<span style="color:#f92672">);</span>
 
-<pre><code class="language-java">class Solution {
-    public boolean isPalindrome(int x) {
-        String num = Integer.toString(x);
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> num<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>num<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">!=</span> num<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>num<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1 <span style="color:#f92672">-</span> i<span style="color:#f92672">))</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        for (int i = 0; i &lt; num.length() / 2; i++) {
-            if (num.charAt(i) != num.charAt(num.length() - 1 - i)) return false;
-        }
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Iterate over each digit and then reconstruct the new number.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPalindrome</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        return true;
-    }
-}
-</code></pre>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&lt;</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-<p>Iterate over each digit and then reconstruct the new number.</p>
+        <span style="color:#66d9ef">int</span> oldNum <span style="color:#f92672">=</span> x<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> newNum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">class Solution {
-    public boolean isPalindrome(int x) {
-        if (x &lt; 0) {
-          return false;
-        }
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          newNum <span style="color:#f92672">=</span> newNum <span style="color:#f92672">*</span> 10 <span style="color:#f92672">+</span> x <span style="color:#f92672">%</span> 10<span style="color:#f92672">;</span>
+          x <span style="color:#f92672">=</span> x <span style="color:#f92672">/</span> 10<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        if (x &lt; 10) {
-          return true;
-        }
-
-        int oldNum = x;
-        int newNum = 0;
-
-        while (x &gt; 0) {
-          newNum = newNum * 10 + x % 10;
-          x = x / 10;
-        }
-
-        return oldNum == newNum ? true : false;
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> oldNum <span style="color:#f92672">==</span> newNum <span style="color:#f92672">?</span> <span style="color:#66d9ef">true</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

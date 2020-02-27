@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II." />
+Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II." />
   <meta name="keywords" content="leetcode python " />
   
   
@@ -25,14 +25,14 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written a
     
     <meta name="twitter:title" content="Integer to Roman" />
     <meta name="twitter:description" content="Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II." />
+Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as II in Roman numeral, just two one&amp;rsquo;s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/integer-to-roman/" />
@@ -190,10 +190,7 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000  For example, two is written a
         <h5>Last updated: October 26, 2018</h5>
       
       <hr />
-      
-
-<p>Roman numerals are represented by seven different symbols: <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>
-
+      <p>Roman numerals are represented by seven different symbols: <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>
 <pre><code>Symbol       Value
 I             1
 V             5
@@ -202,79 +199,57 @@ L             50
 C             100
 D             500
 M             1000
-</code></pre>
-
-<p>For example, two is written as <code>II</code> in Roman numeral, just two one&rsquo;s added together. Twelve is written as, <code>XII</code>, which is simply <code>X + II</code>. The number twenty seven is written as XXVII, which is <code>XX + V + II</code>.</p>
-
+</code></pre><p>For example, two is written as <code>II</code> in Roman numeral, just two one&rsquo;s added together. Twelve is written as, <code>XII</code>, which is simply <code>X + II</code>. The number twenty seven is written as XXVII, which is <code>XX + V + II</code>.</p>
 <p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:</p>
-
 <p><code>I</code> can be placed before <code>V (5)</code> and <code>X (10)</code> to make <code>4 and 9</code>.
 <code>X</code> can be placed before <code>L (50)</code> and <code>C (100)</code> to make <code>40 and 90</code>.
 <code>C</code> can be placed before <code>D (500)</code> and <code>M (1000)</code> to make <code>400 and 900</code>.
 Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from <code>1</code> to <code>3999</code>.</p>
-
 <p>Example 1:</p>
-
 <pre><code>Input: 3
 Output: &quot;III&quot;
-</code></pre>
-
-<p>Example 2:</p>
-
+</code></pre><p>Example 2:</p>
 <pre><code>Input: 4
 Output: &quot;IV&quot;
-</code></pre>
-
-<p>Example 3:</p>
-
+</code></pre><p>Example 3:</p>
 <pre><code>Input: 9
 Output: &quot;IX&quot;
-</code></pre>
-
-<p>Example 4:</p>
-
+</code></pre><p>Example 4:</p>
 <pre><code>Input: 58
 Output: &quot;LVIII&quot;
 Explanation: C = 100, L = 50, XXX = 30 and III = 3.
-</code></pre>
-
-<p>Example 5:</p>
-
+</code></pre><p>Example 5:</p>
 <pre><code>Input: 1994
 Output: &quot;MCMXCIV&quot;
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution(object):
-    def intToRoman(self, num):
-        &quot;&quot;&quot;
-        :type num: int
-        :rtype: str
-        &quot;&quot;&quot;
-        # s = &quot;&quot;
-        # while (num &gt; 10):
-        #     if (num &gt; 1000):
-        #         num = 1000
-        #         s = &quot;M&quot; * 
-        s = &quot;M&quot; * (num // 1000)
-        print(s)
-        s += &quot;CM&quot; if num % 1000 &gt;= 900 else &quot;D&quot; *((num % 1000) // 500)
-        print(s)
-        s += &quot;CD&quot; if num % 500 &gt;= 400 and s[-2:] != &quot;CM&quot; else &quot;C&quot; * ((num % 500) // 100)  if num % 500 &lt; 400 else &quot;&quot;
-        print(s)
-        s += &quot;XC&quot; if num % 100 &gt;= 90 else &quot;L&quot; * ((num % 100) // 50)
-        print(s)
-        s += &quot;XL&quot; if num % 50 &gt;= 40 and s[-2:] != &quot;XC&quot; else &quot;X&quot; * ((num % 50) // 10)  if num % 50 &lt; 40 else &quot;&quot;
-        print(s)
-        s += &quot;IX&quot; if num % 10 &gt;= 9 else &quot;V&quot; * ((num % 10) // 5)
-        print(s)
-        s += &quot;IV&quot; if num % 5 &gt;= 4 and s[-2:] != &quot;IX&quot; else &quot;I&quot; * ((num % 5) // 1) if num % 5 &lt; 4 else &quot;&quot;
-        print(s)
-        return s
-</code></pre>
-
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">intToRoman</span>(self, num):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type num: int
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e"># s = &#34;&#34;</span>
+        <span style="color:#75715e"># while (num &gt; 10):</span>
+        <span style="color:#75715e">#     if (num &gt; 1000):</span>
+        <span style="color:#75715e">#         num = 1000</span>
+        <span style="color:#75715e">#         s = &#34;M&#34; * </span>
+        s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;M&#34;</span> <span style="color:#f92672">*</span> (num <span style="color:#f92672">//</span> <span style="color:#ae81ff">1000</span>)
+        <span style="color:#66d9ef">print</span>(s)
+        s <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;CM&#34;</span> <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">1000</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">900</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;D&#34;</span> <span style="color:#f92672">*</span>((num <span style="color:#f92672">%</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">//</span> <span style="color:#ae81ff">500</span>)
+        <span style="color:#66d9ef">print</span>(s)
+        s <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;CD&#34;</span> <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">500</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">and</span> s[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>:] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;CM&#34;</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#f92672">*</span> ((num <span style="color:#f92672">%</span> <span style="color:#ae81ff">500</span>) <span style="color:#f92672">//</span> <span style="color:#ae81ff">100</span>)  <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">500</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">400</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;&#34;</span>
+        <span style="color:#66d9ef">print</span>(s)
+        s <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;XC&#34;</span> <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;L&#34;</span> <span style="color:#f92672">*</span> ((num <span style="color:#f92672">%</span> <span style="color:#ae81ff">100</span>) <span style="color:#f92672">//</span> <span style="color:#ae81ff">50</span>)
+        <span style="color:#66d9ef">print</span>(s)
+        s <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;XL&#34;</span> <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">50</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">40</span> <span style="color:#f92672">and</span> s[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>:] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;XC&#34;</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;X&#34;</span> <span style="color:#f92672">*</span> ((num <span style="color:#f92672">%</span> <span style="color:#ae81ff">50</span>) <span style="color:#f92672">//</span> <span style="color:#ae81ff">10</span>)  <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">50</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">40</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;&#34;</span>
+        <span style="color:#66d9ef">print</span>(s)
+        s <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;IX&#34;</span> <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">9</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;V&#34;</span> <span style="color:#f92672">*</span> ((num <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>) <span style="color:#f92672">//</span> <span style="color:#ae81ff">5</span>)
+        <span style="color:#66d9ef">print</span>(s)
+        s <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;IV&#34;</span> <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">and</span> s[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>:] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;IX&#34;</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;I&#34;</span> <span style="color:#f92672">*</span> ((num <span style="color:#f92672">%</span> <span style="color:#ae81ff">5</span>) <span style="color:#f92672">//</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">if</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;&#34;</span>
+        <span style="color:#66d9ef">print</span>(s)
+        <span style="color:#66d9ef">return</span> s
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

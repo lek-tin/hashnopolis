@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/categories/algorithm/" />
@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/10/house-robber/">House Robber</a></h2>
+
+      <p>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/10/happy-number/">Happy Number</a></h2>
 
       <p>Write an algorithm to determine if a number is “happy”.
@@ -205,7 +231,7 @@ A happy number is a number defined by the following process: Starting with any p
       <h2><a href="http://www.hashnopolis.com/post/2018/10/merge-two-sorted-lists/">Merge Two Sorted Lists</a></h2>
 
       <p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-Example: Input: 1-&gt;2-&gt;4, 1-&gt;3-&gt;4 Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) return l2; if (l2 == null) return l1; ListNode dummy = new ListNode(0); ListNode temp = dummy; while (l1 !</p>
+Example: Input: 1-&gt;2-&gt;4, 1-&gt;3-&gt;4 Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4 Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) return l2; if (l2 == null) return l1; ListNode dummy = new ListNode(0); ListNode temp = dummy; while (l1 !</p>
 
       <p class="meta">
         
@@ -257,7 +283,7 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
       <h2><a href="http://www.hashnopolis.com/post/2018/10/multiply-strings/">Multiply Strings</a></h2>
 
       <p>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
-Example 1 Input: num1 = &#34;2&#34;, num2 = &#34;3&#34; Output: &#34;6&#34;  Example 2 Input: num1 = &#34;123&#34;, num2 = &#34;456&#34; Output: &#34;56088&#34;  Note  The length of both num1 and num2 is &lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself.</p>
+Example 1 Input: num1 = &#34;2&#34;, num2 = &#34;3&#34; Output: &#34;6&#34; Example 2 Input: num1 = &#34;123&#34;, num2 = &#34;456&#34; Output: &#34;56088&#34; Note  The length of both num1 and num2 is &lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself.</p>
 
       <p class="meta">
         
@@ -283,8 +309,7 @@ Example 1 Input: num1 = &#34;2&#34;, num2 = &#34;3&#34; Output: &#34;6&#34;  Exa
       <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/">Kth Smallest Element in a BST</a></h2>
 
       <p>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
-Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1 Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2 ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
-### Follow-up What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</p>
+Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements. Example 1 Input: root = [3,1,4,null,2], k = 1 Output: 1 Example 2 Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3 ``` ### Follow-up What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</p>
 
       <p class="meta">
         
@@ -310,7 +335,7 @@ Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Ex
       <h2><a href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/">Kth Largest Element in an Array</a></h2>
 
       <p>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5 Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4 Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
 Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)</p>
 
       <p class="meta">
@@ -337,8 +362,7 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
       <h2><a href="http://www.hashnopolis.com/post/2018/10/group-anagrams/">Group Anagrams</a></h2>
 
       <p>Given an array of strings, group anagrams together.
-Example Input: [&#34;eat&#34;, &#34;tea&#34;, &#34;tan&#34;, &#34;ate&#34;, &#34;nat&#34;, &#34;bat&#34;], Output: [ [&#34;ate&#34;,&#34;eat&#34;,&#34;tea&#34;], [&#34;nat&#34;,&#34;tan&#34;], [&#34;bat&#34;] ]  Note  All inputs will be in lowercase. The order of your output does not matter.
-Solution class Solution(object): def groupAnagrams(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: List[List[str]] &#34;&#34;&#34; primeNums = { &#34;a&#34;: 2, &#34;b&#34;: 3, &#34;c&#34;: 5, &#34;d&#34;: 7, &#34;e&#34;: 11, &#34;f&#34;: 13, &#34;g&#34;: 17, &#34;h&#34;: 19, &#34;i&#34;: 23, &#34;j&#34;: 29, &#34;k&#34;: 31, &#34;m&#34;: 37, &#34;l&#34;: 41, &#34;n&#34;: 43, &#34;o&#34;: 47, &#34;p&#34;: 53, &#34;q&#34;: 59, &#34;r&#34;: 61, &#34;s&#34;: 67, &#34;t&#34;: 71, &#34;u&#34;: 73, &#34;v&#34;: 79, &#34;w&#34;: 83, &#34;x&#34;: 89, &#34;y&#34;: 97, &#34;z&#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</p>
+Example Input: [&#34;eat&#34;, &#34;tea&#34;, &#34;tan&#34;, &#34;ate&#34;, &#34;nat&#34;, &#34;bat&#34;], Output: [ [&#34;ate&#34;,&#34;eat&#34;,&#34;tea&#34;], [&#34;nat&#34;,&#34;tan&#34;], [&#34;bat&#34;] ] Note  All inputs will be in lowercase. The order of your output does not matter.  Solution class Solution(object): def groupAnagrams(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: List[List[str]] &#34;&#34;&#34; primeNums = { &#34;a&#34;: 2, &#34;b&#34;: 3, &#34;c&#34;: 5, &#34;d&#34;: 7, &#34;e&#34;: 11, &#34;f&#34;: 13, &#34;g&#34;: 17, &#34;h&#34;: 19, &#34;i&#34;: 23, &#34;j&#34;: 29, &#34;k&#34;: 31, &#34;m&#34;: 37, &#34;l&#34;: 41, &#34;n&#34;: 43, &#34;o&#34;: 47, &#34;p&#34;: 53, &#34;q&#34;: 59, &#34;r&#34;: 61, &#34;s&#34;: 67, &#34;t&#34;: 71, &#34;u&#34;: 73, &#34;v&#34;: 79, &#34;w&#34;: 83, &#34;x&#34;: 89, &#34;y&#34;: 97, &#34;z&#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</p>
 
       <p class="meta">
         
@@ -394,32 +418,6 @@ Observation: Solution: /** * Definition for singly-linked list. * class ListNode
       <p>Given a linked list, determine if it has a cycle in it.
 Follow-up Can you solve it without using extra space?
 Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: bool &#34;&#34;&#34; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/compare-version-numbers/">Compare Version Numbers</a></h2>
-
-      <p>Compare two version numbers version1 and version2. If version1 &gt; version2 return 1; if version1 &lt; version2 return -1;otherwise return 0.
-You may assume that the version strings are non-empty and contain only digits and the . character. The . character does not represent a decimal point and is used to separate number sequences. For instance, 2.5 is not “two and a half” or “half way to version three”, it is the fifth second-level revision of the second first-level revision.</p>
 
       <p class="meta">
         

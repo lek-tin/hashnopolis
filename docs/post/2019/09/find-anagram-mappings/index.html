@@ -34,7 +34,7 @@ These lists A and B may contain duplicates. If there are multiple answers, outpu
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/find-anagram-mappings/" />
@@ -192,51 +192,36 @@ These lists A and B may contain duplicates. If there are multiple answers, outpu
         <h5>Last updated: September 17, 2019</h5>
       
       <hr />
-      
-
-<p>Given two lists <code>A</code> and <code>B</code>, and <code>B</code> is an anagram of <code>A</code>. <code>B</code> is an anagram of <code>A</code> means <code>B</code> is made by randomizing the order of the elements in <code>A</code>.</p>
-
+      <p>Given two lists <code>A</code> and <code>B</code>, and <code>B</code> is an anagram of <code>A</code>. <code>B</code> is an anagram of <code>A</code> means <code>B</code> is made by randomizing the order of the elements in <code>A</code>.</p>
 <p>We want to find an index mapping P, from <code>A</code> to B. <code>A</code> mapping <code>P[i] = j</code> means the ith element in <code>A</code> appears in <code>B</code> at index j.</p>
-
 <p>These lists <code>A</code> and <code>B</code> may contain duplicates. If there are multiple answers, output any of them.</p>
-
 <p>For example, given</p>
-
 <pre><code>A = [12, 28, 46, 32, 50]
 B = [50, 12, 32, 46, 28]
-</code></pre>
-
-<p>We should return</p>
-
+</code></pre><p>We should return</p>
 <pre><code>[1, 4, 3, 2, 0]
 as P[0] = 1 because the 0th element of A appears at B[1], and P[1] = 4 because the 1st element of A appears at B[4], and so on.
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>A, B</code> have equal lengths in range <code>[1, 100]</code>.</li>
 <li><code>A[i], B[i]</code> are integers in range <code>[0, 10^5]</code>.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">anagramMappings</span>(self, A: List[int], B: List[int]) <span style="color:#f92672">-&gt;</span> List[int]:
+        n <span style="color:#f92672">=</span> len(A)
 
-<pre><code class="language-python">class Solution:
-    def anagramMappings(self, A: List[int], B: List[int]) -&gt; List[int]:
-        n = len(A)
+        dict_B <span style="color:#f92672">=</span> {}
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
+            num <span style="color:#f92672">=</span> B[i]
+            dict_B[num] <span style="color:#f92672">=</span> i
 
-        dict_B = {}
-        for i in range(n):
-            num = B[i]
-            dict_B[num] = i
+        P <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> A:
+            P<span style="color:#f92672">.</span>append(dict_B[num])
 
-        P = []
-        for num in A:
-            P.append(dict_B[num])
-
-        return P
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> P
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

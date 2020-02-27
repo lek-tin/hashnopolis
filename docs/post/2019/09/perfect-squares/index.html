@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content=" Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
-Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 &#43; 4 &#43; 4.  Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 &#43; 9.  Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n&#43;1)] for i in range(1, n&#43;1): for j in range(1, n&#43;1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]&#43;1) return count[n]  " />
+  <meta name="description" content="Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 &#43; 4 &#43; 4. Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 &#43; 9. Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n&#43;1)] for i in range(1, n&#43;1): for j in range(1, n&#43;1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]&#43;1) return count[n] " />
   <meta name="keywords" content="leetcode dynamic-programming " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Perfect Squares" />
-    <meta name="twitter:description" content=" Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
-Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 &#43; 4 &#43; 4.  Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 &#43; 9.  Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n&#43;1)] for i in range(1, n&#43;1): for j in range(1, n&#43;1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]&#43;1) return count[n]  " />
+    <meta name="twitter:description" content="Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 &#43; 4 &#43; 4. Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 &#43; 9. Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n&#43;1)] for i in range(1, n&#43;1): for j in range(1, n&#43;1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]&#43;1) return count[n] " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/perfect-squares/" />
@@ -190,49 +190,38 @@ Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 &#43; 4 &#43; 4.  Example
         <h5>Last updated: September 14, 2019</h5>
       
       <hr />
-      
-
-<p>Given a positive integer n, find the least number of perfect square numbers (for example, <code>1, 4, 9, 16, ...</code>) which sum to <code>n</code>.</p>
-
+      <p>Given a positive integer n, find the least number of perfect square numbers (for example, <code>1, 4, 9, 16, ...</code>) which sum to <code>n</code>.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: n = 12
 Output: 3 
 Explanation: 12 = 4 + 4 + 4.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: n = 13
 Output: 2
 Explanation: 13 = 4 + 9.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys
+MAX_INT <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>maxsize
 
-<h3 id="solution">Solution</h3>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numSquares</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<pre><code class="language-python">import sys
-MAX_INT = sys.maxsize
+        count <span style="color:#f92672">=</span> [MAX_INT <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
 
-class Solution:
-    def numSquares(self, n: int) -&gt; int:
-        if n == 0:
-            return 0
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+                <span style="color:#66d9ef">if</span> j<span style="color:#f92672">*</span>j <span style="color:#f92672">&gt;</span> n:
+                    <span style="color:#66d9ef">break</span>
+                <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> j<span style="color:#f92672">*</span>j:
+                    count[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#75715e"># j = 0, i - j*j = i, therefore we skip j=0</span>
+                    count[i] <span style="color:#f92672">=</span> min(count[i], count[i<span style="color:#f92672">-</span>j<span style="color:#f92672">*</span>j]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
 
-        count = [MAX_INT for _ in range(n+1)]
-
-        for i in range(1, n+1):
-            for j in range(1, n+1):
-                if j*j &gt; n:
-                    break
-                if i == j*j:
-                    count[i] = 1
-                else:
-                    # j = 0, i - j*j = i, therefore we skip j=0
-                    count[i] = min(count[i], count[i-j*j]+1)
-
-        return count[n]
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> count[n]
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

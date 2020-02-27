@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a positive integer N, how many ways can we write it as a sum of consecutive positive integers?
-Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 &#43; 3  Example 2: Input: 9 Output: 3 Explanation: 9 = 9 = 4 &#43; 5 = 2 &#43; 3 &#43; 4  Example 3: Input: 15 Output: 4 Explanation: 15 = 15 = 8 &#43; 7 = 4 &#43; 5 &#43; 6 = 1 &#43; 2 &#43; 3 &#43; 4 &#43; 5  Note  1 &amp;lt;= N &amp;lt;= 10 ^ 9." />
+Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 &#43; 3 Example 2: Input: 9 Output: 3 Explanation: 9 = 9 = 4 &#43; 5 = 2 &#43; 3 &#43; 4 Example 3: Input: 15 Output: 4 Explanation: 15 = 15 = 8 &#43; 7 = 4 &#43; 5 &#43; 6 = 1 &#43; 2 &#43; 3 &#43; 4 &#43; 5 Note  1 &amp;lt;= N &amp;lt;= 10 ^ 9." />
   <meta name="keywords" content="leetcode math " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 &#43; 3  Example 2: Input: 
     
     <meta name="twitter:title" content="Consecutive Numbers Sum" />
     <meta name="twitter:description" content="Given a positive integer N, how many ways can we write it as a sum of consecutive positive integers?
-Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 &#43; 3  Example 2: Input: 9 Output: 3 Explanation: 9 = 9 = 4 &#43; 5 = 2 &#43; 3 &#43; 4  Example 3: Input: 15 Output: 4 Explanation: 15 = 15 = 8 &#43; 7 = 4 &#43; 5 &#43; 6 = 1 &#43; 2 &#43; 3 &#43; 4 &#43; 5  Note  1 &amp;lt;= N &amp;lt;= 10 ^ 9." />
+Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 &#43; 3 Example 2: Input: 9 Output: 3 Explanation: 9 = 9 = 4 &#43; 5 = 2 &#43; 3 &#43; 4 Example 3: Input: 15 Output: 4 Explanation: 15 = 15 = 8 &#43; 7 = 4 &#43; 5 &#43; 6 = 1 &#43; 2 &#43; 3 &#43; 4 &#43; 5 Note  1 &amp;lt;= N &amp;lt;= 10 ^ 9." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/10/consecutive-numbers-sum/" />
@@ -190,56 +190,39 @@ Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 &#43; 3  Example 2: Input: 
         <h5>Last updated: October 19, 2019</h5>
       
       <hr />
-      
-
-<p>Given a positive integer <code>N</code>, how many ways can we write it as a sum of consecutive positive integers?</p>
-
+      <p>Given a positive integer <code>N</code>, how many ways can we write it as a sum of consecutive positive integers?</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: 5
 Output: 2
 Explanation: 5 = 5 = 2 + 3
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: 9
 Output: 3
 Explanation: 9 = 9 = 4 + 5 = 2 + 3 + 4
-</code></pre>
-
-<h3 id="example-3">Example 3:</h3>
-
+</code></pre><h3 id="example-3">Example 3:</h3>
 <pre><code>Input: 15
 Output: 4
 Explanation: 15 = 15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <ol>
 <li><code>1 &lt;= N &lt;= 10 ^ 9</code>.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
-
 <p>Python</p>
-
-<pre><code class="language-python">class Solution(object):
-    def consecutiveNumbersSum(self, N):
-        # 1 + 2 + 3 + ... + k = k(k+1)/2
-        # 2N = k(2x + k + 1)
-        ans = 0
-        k = 1
-        while k*k &lt;= 2*N:
-            if 2*N % k == 0:
-                y = 2 * N / k - k - 1
-                if y % 2 == 0 and y &gt;= 0:
-                    ans += 1
-            k += 1
-        return ans
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">consecutiveNumbersSum</span>(self, N):
+        <span style="color:#75715e"># 1 + 2 + 3 + ... + k = k(k+1)/2</span>
+        <span style="color:#75715e"># 2N = k(2x + k + 1)</span>
+        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        k <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">while</span> k<span style="color:#f92672">*</span>k <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>N:
+            <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>N <span style="color:#f92672">%</span> k <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                y <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> N <span style="color:#f92672">/</span> k <span style="color:#f92672">-</span> k <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">if</span> y <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> y <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+                    ans <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            k <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> ans
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -34,7 +34,7 @@ The maze is represented by a binary 2D array." />
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/the-maze/" />
@@ -192,14 +192,10 @@ The maze is represented by a binary 2D array." />
         <h5>Last updated: November 9, 2019</h5>
       
       <hr />
-      
-
-<p>There is a <strong>ball</strong> in a maze with empty spaces and walls. The ball can go through empty spaces by rolling <strong>up</strong>, <strong>down</strong>, <strong>left</strong> or <strong>right</strong>, but it won&rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.<br />
-Given the ball&rsquo;s <strong>start position</strong>, the <strong>destination</strong> and the <strong>maze</strong>, determine whether the ball could stop at the destination.<br />
+      <p>There is a <strong>ball</strong> in a maze with empty spaces and walls. The ball can go through empty spaces by rolling <strong>up</strong>, <strong>down</strong>, <strong>left</strong> or <strong>right</strong>, but it won&rsquo;t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.<br>
+Given the ball&rsquo;s <strong>start position</strong>, the <strong>destination</strong> and the <strong>maze</strong>, determine whether the ball could stop at the destination.<br>
 The maze is represented by a binary 2D array. 1 means the wall and 0 means the empty space. You may assume that the borders of the maze are all walls. The start and destination coordinates are represented by row and column indexes.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input 1: a maze represented by a 2D array
 
 0 0 1 0 0
@@ -214,12 +210,8 @@ Input 3: destination coordinate (rowDest, colDest) = (4, 4)
 Output: true
 
 Explanation: One possible way is : left -&gt; down -&gt; left -&gt; down -&gt; right -&gt; down -&gt; right.
-</code></pre>
-
-<p><img src="https://assets.leetcode.com/uploads/2018/10/12/maze_1_example_1.png" alt="the maze example 1" /></p>
-
+</code></pre><p><img src="https://assets.leetcode.com/uploads/2018/10/12/maze_1_example_1.png" alt="the maze example 1"></p>
 <h3 id="example-2">Example 2:</h3>
-
 <pre><code>Input 1: a maze represented by a 2D array
 
 0 0 1 0 0
@@ -234,55 +226,48 @@ Input 3: destination coordinate (rowDest, colDest) = (3, 2)
 Output: false
 
 Explanation: There is no way for the ball to stop at the destination.
-</code></pre>
-
-<p><img src="https://assets.leetcode.com/uploads/2018/10/13/maze_1_example_2.png" alt="the maze example 2" /></p>
-
+</code></pre><p><img src="https://assets.leetcode.com/uploads/2018/10/13/maze_1_example_2.png" alt="the maze example 2"></p>
 <h3 id="note">Note:</h3>
-
 <ol>
 <li>There is only one ball and one destination in the maze.</li>
 <li>Both the ball and the destination exist on an empty space, and they will not be at the same position initially.</li>
 <li>The given maze does not contain border (like the red rectangle in the example pictures), but you could assume the border of the maze are all walls.</li>
 <li>The maze contains at least 2 empty spaces, and both the width and height of the maze won&rsquo;t exceed <code>100</code>.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
 
-<pre><code class="language-python">from collections import deque
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hasPath</span>(self, maze: List[List[int]], start: List[int], destination: List[int]) <span style="color:#f92672">-&gt;</span> bool:
+        n <span style="color:#f92672">=</span> len(maze)
+        m <span style="color:#f92672">=</span> len(maze[<span style="color:#ae81ff">0</span>])
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> maze <span style="color:#f92672">or</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> m <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> False
 
-class Solution:
-    def hasPath(self, maze: List[List[int]], start: List[int], destination: List[int]) -&gt; bool:
-        n = len(maze)
-        m = len(maze[0])
-        if not maze or n == 0 or m == 0:
-            return False
+        directions <span style="color:#f92672">=</span> set([ (<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>), (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>) ])
+        visited <span style="color:#f92672">=</span> [ [False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(m)] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+        q <span style="color:#f92672">=</span> deque([])
+        visited[start[<span style="color:#ae81ff">0</span>]][start[<span style="color:#ae81ff">1</span>]] <span style="color:#f92672">=</span> True
+        q<span style="color:#f92672">.</span>append(start)
 
-        directions = set([ (0,1), (0,-1), (1,0), (-1,0) ])
-        visited = [ [False for _ in range(m)] for _ in range(n)]
-        q = deque([])
-        visited[start[0]][start[1]] = True
-        q.append(start)
+        <span style="color:#66d9ef">while</span> len(q) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+            row, col <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+            <span style="color:#66d9ef">if</span> row <span style="color:#f92672">==</span> destination[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">and</span> col <span style="color:#f92672">==</span> destination[<span style="color:#ae81ff">1</span>]:
+                <span style="color:#66d9ef">return</span> True
+            <span style="color:#66d9ef">for</span> dir <span style="color:#f92672">in</span> directions:
+                y, x <span style="color:#f92672">=</span> row, col
+                <span style="color:#66d9ef">while</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> y <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> x <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">and</span> maze[y][x] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                    y <span style="color:#f92672">+=</span> dir[<span style="color:#ae81ff">0</span>]
+                    x <span style="color:#f92672">+=</span> dir[<span style="color:#ae81ff">1</span>]
+                y <span style="color:#f92672">-=</span> dir[<span style="color:#ae81ff">0</span>]
+                x <span style="color:#f92672">-=</span> dir[<span style="color:#ae81ff">1</span>]
+                <span style="color:#75715e"># only need to check whether the stop point has been visited - not the points along the way, because a point can be visited multiple times as a along-the-path point</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> visited[y][x]:
+                    visited[y][x] <span style="color:#f92672">=</span> True
+                    q<span style="color:#f92672">.</span>append([y, x])
 
-        while len(q) &gt; 0:
-            row, col = q.popleft()
-            if row == destination[0] and col == destination[1]:
-                return True
-            for dir in directions:
-                y, x = row, col
-                while 0 &lt;= y &lt; n and 0 &lt;= x &lt; m and maze[y][x] == 0:
-                    y += dir[0]
-                    x += dir[1]
-                y -= dir[0]
-                x -= dir[1]
-                # only need to check whether the stop point has been visited - not the points along the way, because a point can be visited multiple times as a along-the-path point
-                if not visited[y][x]:
-                    visited[y][x] = True
-                    q.append([y, x])
-
-        return False
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

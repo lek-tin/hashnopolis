@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Computer Architecture on Hashnopolis</title>
+    <title>computer-architecture on Hashnopolis</title>
     <link>http://www.hashnopolis.com/categories/computer-architecture/</link>
-    <description>Recent content in Computer Architecture on Hashnopolis</description>
+    <description>Recent content in computer-architecture on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
@@ -18,11 +18,7 @@
       <pubDate>Fri, 18 Jan 2019 22:38:09 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2019/01/nvidia-cuda-architecture/</guid>
-      <description>Fundamental concepts/components in the CUDA architecture:  thread:
- core/kernel:
- Block: a collection of parallel threads.
- Grid: a collection of parallel thread blocks.
- warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as &amp;ldquo;warps&amp;rdquo; in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs.</description>
+      <description>Fundamental concepts/components in the CUDA architecture:  thread: core/kernel: Block: a collection of parallel threads. Grid: a collection of parallel thread blocks. warp: a set of threads (commonly 32) that get executed simultaneously. Thread blocks are executed as smaller groups of threads known as &amp;ldquo;warps&amp;rdquo; in sequence. streaming multiprocessor: the number of blocks per grid is limited by SM. Waprs are scheduled to execute in SMs. Streaming Multiprocessor has a Shared Memory.</description>
     </item>
     
   </channel>

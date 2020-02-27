@@ -18,10 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Implement FreqStack, a class which simulates the operation of a stack-like data structure.
 FreqStack has two functions:
-1. push(int x), which pushes an integer x onto the stack.
-2. pop(), which removes and returns the most frequent element in the stack.
-3. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.
-Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six ." />
+ push(int x), which pushes an integer x onto the stack. pop(), which removes and returns the most frequent element in the stack. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.  Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six ." />
   <meta name="keywords" content="leetcode hashmap stack " />
   
   
@@ -30,17 +27,14 @@ Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;q
     <meta name="twitter:title" content="Maximum Frequency Stack" />
     <meta name="twitter:description" content="Implement FreqStack, a class which simulates the operation of a stack-like data structure.
 FreqStack has two functions:
-1. push(int x), which pushes an integer x onto the stack.
-2. pop(), which removes and returns the most frequent element in the stack.
-3. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.
-Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six ." />
+ push(int x), which pushes an integer x onto the stack. pop(), which removes and returns the most frequent element in the stack. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.  Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six ." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/maximum-frequency-stack/" />
@@ -200,17 +194,14 @@ Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;q
         <h5>Last updated: March 12, 2019</h5>
       
       <hr />
-      
-
-<p>Implement <code>FreqStack</code>, a class which simulates the operation of a stack-like data structure.</p>
-
-<p><code>FreqStack</code> has two functions:<br />
-1. <code>push(int x)</code>, which pushes an integer <code>x</code> onto the stack.<br />
-2. <code>pop()</code>, which removes and returns the most frequent element in the stack.<br />
-3. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.</p>
-
+      <p>Implement <code>FreqStack</code>, a class which simulates the operation of a stack-like data structure.</p>
+<p><code>FreqStack</code> has two functions:</p>
+<ol>
+<li><code>push(int x)</code>, which pushes an integer <code>x</code> onto the stack.</li>
+<li><code>pop()</code>, which removes and returns the most frequent element in the stack.</li>
+<li>If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.</li>
+</ol>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: 
 [&quot;FreqStack&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;pop&quot;,&quot;pop&quot;,&quot;pop&quot;,&quot;pop&quot;],
 [[],[5],[7],[5],[7],[4],[5],[],[],[],[]]
@@ -229,10 +220,7 @@ The stack becomes [5,7,4].
 
 pop() -&gt; returns 4.
 The stack becomes [5,7].
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li>Calls to <code>FreqStack.push(int x)</code> will be such that <code>0 &lt;= x &lt;= 10^9</code>.</li>
 <li>It is guaranteed that <code>FreqStack.pop()</code> won&rsquo;t be called if the stack has zero elements.</li>
@@ -240,49 +228,46 @@ The stack becomes [5,7].
 <li>The total number of <code>FreqStack.pop</code> calls will not exceed <code>10000</code> in a single test case.</li>
 <li>The total number of <code>FreqStack.push</code> and <code>FreqStack.pop</code> calls will not exceed <code>150000</code> across all test cases.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FreqStack</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// num -&gt; frequencies
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> HashMap<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> freq <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+    <span style="color:#75715e">// frequency -&gt; stack of nums
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> HashMap<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Stack<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;&gt;</span> map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> maxFreq <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">class FreqStack {
-    // num -&gt; frequencies
-    private HashMap&lt;Integer, Integer&gt; freq = new HashMap&lt;&gt;();
-    // frequency -&gt; stack of nums
-    private HashMap&lt;Integer, Stack&lt;Integer&gt;&gt; map = new HashMap&lt;&gt;();
-    private int maxFreq = 0;
+    <span style="color:#75715e">// push[5, 7, 5, 7, 5, 7, 4]
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// map  {
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   1: 5, 7, 4
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   2: 5, 7
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   3: 5, 7
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// keys in map are consecutive
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">push</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> f <span style="color:#f92672">=</span> freq<span style="color:#f92672">.</span><span style="color:#a6e22e">getOrDefault</span><span style="color:#f92672">(</span>x<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+        freq<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>x<span style="color:#f92672">,</span> f<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>f <span style="color:#f92672">&gt;</span> maxFreq<span style="color:#f92672">)</span> maxFreq <span style="color:#f92672">=</span> f<span style="color:#f92672">;</span>
 
-    // push[5, 7, 5, 7, 5, 7, 4]
-    // map  {
-    //   1: 5, 7, 4
-    //   2: 5, 7
-    //   3: 5, 7
-    // }
-    // keys in map are consecutive
-    public void push(int x) {
-        int f = freq.getOrDefault(x, 0) + 1;
-        freq.put(x, f);
-        if (f &gt; maxFreq) maxFreq = f;
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">containsKey</span><span style="color:#f92672">(</span>f<span style="color:#f92672">))</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>f<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;());</span>
+        map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>f<span style="color:#f92672">).</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>x<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-        if (!map.containsKey(f)) map.put(f, new Stack&lt;Integer&gt;());
-        map.get(f).add(x);
-    }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pop</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>maxFreq<span style="color:#f92672">).</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+        freq<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>i<span style="color:#f92672">,</span> maxFreq<span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
 
-    public int pop() {
-        int i = map.get(maxFreq).pop();
-        freq.put(i, maxFreq-1);
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>maxFreq<span style="color:#f92672">).</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> maxFreq<span style="color:#f92672">--;</span>
+        <span style="color:#66d9ef">return</span> i<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-        if (map.get(maxFreq).size() == 0) maxFreq--;
-        return i;
-    }
-}
-
-/**
- * Your FreqStack object will be instantiated and called as such:
- * FreqStack obj = new FreqStack();
- * obj.push(x);
- * int param_2 = obj.pop();
- */
-</code></pre>
-
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Your FreqStack object will be instantiated and called as such:
+</span><span style="color:#75715e"> * FreqStack obj = new FreqStack();
+</span><span style="color:#75715e"> * obj.push(x);
+</span><span style="color:#75715e"> * int param_2 = obj.pop();
+</span><span style="color:#75715e"> */</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

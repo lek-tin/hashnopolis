@@ -32,7 +32,7 @@ Design the encode and decode methods for the TinyURL service. There is no restri
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/encode-and-decode-tinyurl/" />
@@ -194,50 +194,41 @@ Design the encode and decode methods for the TinyURL service. There is no restri
         <h5>Last updated: November 11, 2018</h5>
       
       <hr />
-      
-
-<h3 id="note-this-is-a-companion-problem-to-the-system-design-problem-design-tinyurl">Note This is a companion problem to the <code>System Design</code> problem: <code>Design TinyURL</code>.</h3>
-
+      <h3 id="note-this-is-a-companion-problem-to-the-system-design-problem-design-tinyurl">Note This is a companion problem to the <code>System Design</code> problem: <code>Design TinyURL</code>.</h3>
 <p>TinyURL is a URL shortening service where you enter a URL such as <code>https://leetcode.com/problems/design-tinyurl</code> and it returns a short URL such as <code>http://tinyurl.com/4e9iAk</code>.</p>
-
 <p>Design the <code>encode</code> and <code>decode</code> methods for the TinyURL service. There is no restriction on how your <code>encode/decode</code> algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.</p>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Codec</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>encodeVal <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        self<span style="color:#f92672">.</span>map <span style="color:#f92672">=</span> {}
 
-<pre><code class="language-python">class Codec:
-    def __init__(self):
-        self.encodeVal = 0
-        self.map = {}
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">encode</span>(self, longUrl):
+        <span style="color:#e6db74">&#34;&#34;&#34;Encodes a URL to a shortened URL.
+</span><span style="color:#e6db74">        :type longUrl: str
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>encodeVal <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        encodedUrl <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://tinyurl.com/&#34;</span> <span style="color:#f92672">+</span> str(self<span style="color:#f92672">.</span>encodeVal)
+        self<span style="color:#f92672">.</span>map[encodedUrl] <span style="color:#f92672">=</span> longUrl
 
-    def encode(self, longUrl):
-        &quot;&quot;&quot;Encodes a URL to a shortened URL.
-        :type longUrl: str
-        :rtype: str
-        &quot;&quot;&quot;
-        self.encodeVal += 1
-        encodedUrl = &quot;http://tinyurl.com/&quot; + str(self.encodeVal)
-        self.map[encodedUrl] = longUrl
-
-        return encodedUrl
+        <span style="color:#66d9ef">return</span> encodedUrl
 
 
-    def decode(self, shortUrl):
-        &quot;&quot;&quot;Decodes a shortened URL to its original URL.
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decode</span>(self, shortUrl):
+        <span style="color:#e6db74">&#34;&#34;&#34;Decodes a shortened URL to its original URL.
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">        :type shortUrl: str
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> shortUrl <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>map:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>map[shortUrl]
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
 
-        :type shortUrl: str
-        :rtype: str
-        &quot;&quot;&quot;
-        if shortUrl in self.map:
-            return self.map[shortUrl]
-        return &quot;&quot;
-
-# Your Codec object will be instantiated and called as such:
-# codec = Codec()
-# codec.decode(codec.encode(url))
-</code></pre>
-
-<h3 id="think-beyond">Think beyond</h3>
-
+<span style="color:#75715e"># Your Codec object will be instantiated and called as such:</span>
+<span style="color:#75715e"># codec = Codec()</span>
+<span style="color:#75715e"># codec.decode(codec.encode(url))</span>
+</code></pre></div><h3 id="think-beyond">Think beyond</h3>
 <p>Python uses dynamic memory allocation so you don&rsquo;t specify the size of an object. It will use as little or as much as you need. Any name can be assigned any object at run time, that object can be dynamically generated (e.g. a complete file read as a string). The limit of the number of urls can be stored in the class regarding our problem is the machine&rsquo;s memory on which the programme is running.</p>
 
   </div>

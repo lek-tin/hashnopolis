@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &amp;lt; ei), find the minimum number of conference rooms required.
-Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2 Input: [[7,10],[2,4]] Output: 1  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: int &amp;quot;&amp;quot;&amp;quot; starts, ends = [], [] length = len(intervals) for i in range(length): starts." />
+  <meta name="description" content="Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si&amp;lt; ei), find the minimum number of conference rooms required.
+Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2 Example 2 Input: [[7,10],[2,4]] Output: 1 Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &amp;#34;&amp;#34;&amp;#34; :type intervals: List[Interval] :rtype: int &amp;#34;&amp;#34;&amp;#34; starts, ends = [], [] length = len(intervals) for i in range(length): starts." />
   <meta name="keywords" content="leetcode two-posinter greedy-algorithm " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Meeting Rooms II" />
-    <meta name="twitter:description" content="Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &amp;lt; ei), find the minimum number of conference rooms required.
-Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2 Input: [[7,10],[2,4]] Output: 1  Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &amp;quot;&amp;quot;&amp;quot; :type intervals: List[Interval] :rtype: int &amp;quot;&amp;quot;&amp;quot; starts, ends = [], [] length = len(intervals) for i in range(length): starts." />
+    <meta name="twitter:description" content="Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si&amp;lt; ei), find the minimum number of conference rooms required.
+Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2 Example 2 Input: [[7,10],[2,4]] Output: 1 Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.start = s # self.end = e # |____| |_______| # |_______| |____| # Number of meeting rooms: 2 class Solution(object): def minMeetingRooms(self, intervals): &amp;#34;&amp;#34;&amp;#34; :type intervals: List[Interval] :rtype: int &amp;#34;&amp;#34;&amp;#34; starts, ends = [], [] length = len(intervals) for i in range(length): starts." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/meeting-rooms-ii/" />
@@ -192,57 +192,46 @@ Example 1 Input: [[0, 30],[5, 10],[15, 20]] Output: 2  Example 2 Input: [[7,10],
         <h5>Last updated: November 11, 2018</h5>
       
       <hr />
-      
-
-<p>Given an array of meeting time intervals consisting of start and end times <code>[[s1,e1],[s2,e2],...]</code> (s<sub>i</sub> &lt; e<sub>i</sub>), find the minimum number of conference rooms required.</p>
-
+      <p>Given an array of meeting time intervals consisting of start and end times <code>[[s1,e1],[s2,e2],...]</code> (s<!-- raw HTML omitted -->i<!-- raw HTML omitted --> &lt; e<!-- raw HTML omitted -->i<!-- raw HTML omitted -->), find the minimum number of conference rooms required.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: [[0, 30],[5, 10],[15, 20]]
 Output: 2
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: [[7,10],[2,4]]
 Output: 1
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for an interval.</span>
+<span style="color:#75715e"># class Interval:</span>
+<span style="color:#75715e">#     def __init__(self, s=0, e=0):</span>
+<span style="color:#75715e">#         self.start = s</span>
+<span style="color:#75715e">#         self.end = e</span>
+<span style="color:#75715e">#         |____|    |_______|</span>
+<span style="color:#75715e">#            |_______|   |____|</span>
+<span style="color:#75715e">#           Number of meeting rooms: 2</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minMeetingRooms</span>(self, intervals):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type intervals: List[Interval]
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        starts, ends <span style="color:#f92672">=</span> [], []
+        length <span style="color:#f92672">=</span> len(intervals)
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(length):
+            starts<span style="color:#f92672">.</span>append(intervals[i]<span style="color:#f92672">.</span>start)
+            ends<span style="color:#f92672">.</span>append(intervals[i]<span style="color:#f92672">.</span>end)
 
-<h3 id="solution">Solution</h3>
+        starts<span style="color:#f92672">.</span>sort()
+        ends<span style="color:#f92672">.</span>sort()
 
-<pre><code class="language-python"># Definition for an interval.
-# class Interval:
-#     def __init__(self, s=0, e=0):
-#         self.start = s
-#         self.end = e
-#         |____|    |_______|
-#            |_______|   |____|
-#           Number of meeting rooms: 2
-class Solution(object):
-    def minMeetingRooms(self, intervals):
-        &quot;&quot;&quot;
-        :type intervals: List[Interval]
-        :rtype: int
-        &quot;&quot;&quot;
-        starts, ends = [], []
-        length = len(intervals)
-        for i in range(length):
-            starts.append(intervals[i].start)
-            ends.append(intervals[i].end)
-
-        starts.sort()
-        ends.sort()
-
-        total = 0
-        end = 0
-        for i in range(length):
-            if starts[i] &lt; ends[end]:
-                total += 1
-            else:
-                end += 1
-        return total
-</code></pre>
-
+        total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(length):
+            <span style="color:#66d9ef">if</span> starts[i] <span style="color:#f92672">&lt;</span> ends[end]:
+                total <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                end <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> total
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

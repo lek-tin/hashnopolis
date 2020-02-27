@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
-Example 1 Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Output: &amp;quot;6&amp;quot;  Example 2 Input: num1 = &amp;quot;123&amp;quot;, num2 = &amp;quot;456&amp;quot; Output: &amp;quot;56088&amp;quot;  Note  The length of both num1 and num2 is &amp;lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself." />
+Example 1 Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Output: &amp;quot;6&amp;quot; Example 2 Input: num1 = &amp;quot;123&amp;quot;, num2 = &amp;quot;456&amp;quot; Output: &amp;quot;56088&amp;quot; Note  The length of both num1 and num2 is &amp;lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself." />
   <meta name="keywords" content="leetcode python " />
   
   
@@ -25,14 +25,14 @@ Example 1 Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Outp
     
     <meta name="twitter:title" content="Multiply Strings" />
     <meta name="twitter:description" content="Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
-Example 1 Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Output: &amp;quot;6&amp;quot;  Example 2 Input: num1 = &amp;quot;123&amp;quot;, num2 = &amp;quot;456&amp;quot; Output: &amp;quot;56088&amp;quot;  Note  The length of both num1 and num2 is &amp;lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself." />
+Example 1 Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Output: &amp;quot;6&amp;quot; Example 2 Input: num1 = &amp;quot;123&amp;quot;, num2 = &amp;quot;456&amp;quot; Output: &amp;quot;56088&amp;quot; Note  The length of both num1 and num2 is &amp;lt; 110. Both num1 and num2 contain only digits 0-9. Both num1 and num2 do not contain any leading zero, except the number 0 itself." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/multiply-strings/" />
@@ -190,68 +190,50 @@ Example 1 Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Outp
         <h5>Last updated: October 25, 2018</h5>
       
       <hr />
-      
-
-<p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p>
-
+      <p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: num1 = &quot;2&quot;, num2 = &quot;3&quot;
 Output: &quot;6&quot;
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: num1 = &quot;123&quot;, num2 = &quot;456&quot;
 Output: &quot;56088&quot;
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <ul>
 <li>The length of both <code>num1</code> and <code>num2</code> is &lt; 110.</li>
 <li>Both <code>num1</code> and <code>num2</code> contain only digits 0-9.</li>
 <li>Both <code>num1</code> and <code>num2</code> do not contain any leading zero, except the number 0 itself.</li>
-
-<li><p>You <strong>must not use any built-in BigInteger library</strong> or <strong>convert the inputs to integer</strong> directly.</p>
-
-<h3 id="solution">Solution</h3>
-
-<p>#1</p>
-
-<pre><code class="language-python">class Solution:
-def multiply(self, num1, num2):
-    &quot;&quot;&quot;
-    :type num1: str
-    :type num2: str
-    :rtype: str
-    &quot;&quot;&quot;
-    if not num1 or not num2:
-        return &quot;0&quot;
-    if num1 == '0' or num2 == '0':
-        return &quot;0&quot;
-
-    product = 0
-
-    num1Len = len(num1)
-    num2Len = len(num2)
-    print(num1Len, num2Len)
-    for i in range(num1Len):
-        num_1 = ord(num1[num1Len-1-i]) - ord('0')
-        for j in range(num2Len):
-            num_2 = ord(num2[num2Len-1-j]) - ord('0')
-            product = product + (num_1 * 10**i * num_2 * 10**j)
-    return str(product)
-</code></pre>
-
-<p>#2: second method
-no * operation. Create an array with the correct length and calculate each item, iteratively.</p>
-
-<pre><code>👇
-[x, x, x, x, x, x]
-</code></pre></li>
+<li>You <strong>must not use any built-in BigInteger library</strong> or <strong>convert the inputs to integer</strong> directly.</li>
 </ul>
+<h3 id="solution">Solution</h3>
+<p>#1</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">multiply</span>(self, num1, num2):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type num1: str
+</span><span style="color:#e6db74">        :type num2: str
+</span><span style="color:#e6db74">        :rtype: str
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> num1 <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> num2:
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;0&#34;</span>
+        <span style="color:#66d9ef">if</span> num1 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">or</span> num2 <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;0&#39;</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;0&#34;</span>
 
+        product <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+        num1Len <span style="color:#f92672">=</span> len(num1)
+        num2Len <span style="color:#f92672">=</span> len(num2)
+        <span style="color:#66d9ef">print</span>(num1Len, num2Len)
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(num1Len):
+            num_1 <span style="color:#f92672">=</span> ord(num1[num1Len<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>i]) <span style="color:#f92672">-</span> ord(<span style="color:#e6db74">&#39;0&#39;</span>)
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(num2Len):
+                num_2 <span style="color:#f92672">=</span> ord(num2[num2Len<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>j]) <span style="color:#f92672">-</span> ord(<span style="color:#e6db74">&#39;0&#39;</span>)
+                product <span style="color:#f92672">=</span> product <span style="color:#f92672">+</span> (num_1 <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">**</span>i <span style="color:#f92672">*</span> num_2 <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">**</span>j)
+        <span style="color:#66d9ef">return</span> str(product)
+</code></pre></div><p>#2: second method
+no * operation. Create an array with the correct length and calculate each item, iteratively.</p>
+<pre><code>   👇
+[x, x, x, x, x, x]
+</code></pre>
   </div>
 
   <div id="disqus_thread"></div>

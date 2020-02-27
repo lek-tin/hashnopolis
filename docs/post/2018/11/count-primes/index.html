@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Count the number of prime numbers less than a non-negative number, n.
-Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count &#43;= 1 return count  Cleaner version" />
+Example Input: 10 Output: 4 Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: int &amp;#34;&amp;#34;&amp;#34; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count &#43;= 1 return count Cleaner version" />
   <meta name="keywords" content="leetcode sieve-of-eratosthenes prime-number hashmap " />
   
   
@@ -25,14 +25,14 @@ Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10,
     
     <meta name="twitter:title" content="Count Primes" />
     <meta name="twitter:description" content="Count the number of prime numbers less than a non-negative number, n.
-Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count &#43;= 1 return count  Cleaner version" />
+Example Input: 10 Output: 4 Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: int &amp;#34;&amp;#34;&amp;#34; if n &amp;lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &amp;lt; len(marked)-1: count &#43;= 1 return count Cleaner version" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/count-primes/" />
@@ -194,63 +194,51 @@ Example Input: 10 Output: 4  Explanation There are 4 prime numbers less than 10,
         <h5>Last updated: November 9, 2018</h5>
       
       <hr />
-      
-
-<p>Count the number of prime numbers less than a <em>non-negative</em> number, <code>n</code>.</p>
-
+      <p>Count the number of prime numbers less than a <em>non-negative</em> number, <code>n</code>.</p>
 <h3 id="example">Example</h3>
-
 <pre><code>Input: 10
 Output: 4
-</code></pre>
-
-<h3 id="explanation-there-are-4-prime-numbers-less-than-10-they-are-2-3-5-7">Explanation There are <code>4</code> prime numbers less than <code>10</code>, they are <code>2, 3, 5, 7</code>.</h3>
-
+</code></pre><h3 id="explanation-there-are-4-prime-numbers-less-than-10-they-are-2-3-5-7">Explanation There are <code>4</code> prime numbers less than <code>10</code>, they are <code>2, 3, 5, 7</code>.</h3>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">countPrimes</span>(self, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        marked <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> (n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(int(n<span style="color:#f92672">**</span><span style="color:#ae81ff">0.5</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> marked[i] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>:
+                prime <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
+                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(prime<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, prime):
+                    marked[j] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> c, k <span style="color:#f92672">in</span> enumerate(marked):
+            <span style="color:#75715e"># We are counting numbers less than n, hence len(marked)-1</span>
+            <span style="color:#66d9ef">if</span> k <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">&lt;</span> len(marked)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+                count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> count
+</code></pre></div><p>Cleaner version</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">countPrimes</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<pre><code class="language-python">class Solution:
-    def countPrimes(self, n):
-        &quot;&quot;&quot;
-        :type n: int
-        :rtype: int
-        &quot;&quot;&quot;
-        if n &lt;= 2:
-            return 0
-        marked = [0] * (n-1)
-        for i in range(int(n**0.5)+1):
-            if marked[i] != 1:
-                prime = i + 2
-                for j in range(prime**2-2, n-1, prime):
-                    marked[j] = 1
-        count = 0
-        for c, k in enumerate(marked):
-            # We are counting numbers less than n, hence len(marked)-1
-            if k == 0 and c &lt; len(marked)-1:
-                count += 1
-        return count
-</code></pre>
+        primes <span style="color:#f92672">=</span> [True <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n)]
+        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>, n):
+            <span style="color:#66d9ef">if</span> primes[i]:
+                <span style="color:#66d9ef">print</span>(i)
+                count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>, n):
+                    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">*</span> i <span style="color:#f92672">&gt;=</span> n:
+                        <span style="color:#66d9ef">break</span>
+                    primes[i<span style="color:#f92672">*</span>j] <span style="color:#f92672">=</span> False
 
-<p>Cleaner version</p>
-
-<pre><code class="language-python">class Solution:
-    def countPrimes(self, n: int) -&gt; int:
-        if n &lt;= 1:
-            return 0
-
-        primes = [True for _ in range(n)]
-        count = 0
-        for i in range(2, n):
-            if primes[i]:
-                print(i)
-                count += 1
-                for j in range(2, n):
-                    if j * i &gt;= n:
-                        break
-                    primes[i*j] = False
-
-        return count
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> count
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

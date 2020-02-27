@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 Note: For the purpose of this problem, we define empty string as valid palindrome.
-Example 1 Input: &amp;quot;A man, a plan, a canal: Panama&amp;quot; Output: true  Example 2 Input: &amp;quot;race a car&amp;quot; Output: false  Solution class Solution: def isPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: bool &amp;quot;&amp;quot;&amp;quot; if not s: return True head = 0 tail = len(s) - 1 while head &amp;lt;= tail: cHead, cTail = s[head], s[tail] if not cHead." />
+Example 1 Input: &amp;quot;A man, a plan, a canal: Panama&amp;quot; Output: true Example 2 Input: &amp;quot;race a car&amp;quot; Output: false Solution class Solution: def isPalindrome(self, s): &amp;#34;&amp;#34;&amp;#34; :type s: str :rtype: bool &amp;#34;&amp;#34;&amp;#34; if not s: return True head = 0 tail = len(s) - 1 while head &amp;lt;= tail: cHead, cTail = s[head], s[tail] if not cHead." />
   <meta name="keywords" content="leetcode palindrome " />
   
   
@@ -27,14 +27,14 @@ Example 1 Input: &amp;quot;A man, a plan, a canal: Panama&amp;quot; Output: true
     <meta name="twitter:title" content="Valid Palindrome" />
     <meta name="twitter:description" content="Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 Note: For the purpose of this problem, we define empty string as valid palindrome.
-Example 1 Input: &amp;quot;A man, a plan, a canal: Panama&amp;quot; Output: true  Example 2 Input: &amp;quot;race a car&amp;quot; Output: false  Solution class Solution: def isPalindrome(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: bool &amp;quot;&amp;quot;&amp;quot; if not s: return True head = 0 tail = len(s) - 1 while head &amp;lt;= tail: cHead, cTail = s[head], s[tail] if not cHead." />
+Example 1 Input: &amp;quot;A man, a plan, a canal: Panama&amp;quot; Output: true Example 2 Input: &amp;quot;race a car&amp;quot; Output: false Solution class Solution: def isPalindrome(self, s): &amp;#34;&amp;#34;&amp;#34; :type s: str :rtype: bool &amp;#34;&amp;#34;&amp;#34; if not s: return True head = 0 tail = len(s) - 1 while head &amp;lt;= tail: cHead, cTail = s[head], s[tail] if not cHead." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/valid-palindrome/" />
@@ -192,52 +192,40 @@ Example 1 Input: &amp;quot;A man, a plan, a canal: Panama&amp;quot; Output: true
         <h5>Last updated: November 1, 2018</h5>
       
       <hr />
-      
-
-<p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</p>
-
+      <p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</p>
 <p>Note: For the purpose of this problem, we define empty string as valid palindrome.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: &quot;A man, a plan, a canal: Panama&quot;
 Output: true
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: &quot;race a car&quot;
 Output: false
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, s):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type s: str
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> s:
+            <span style="color:#66d9ef">return</span> True
 
-<h3 id="solution">Solution</h3>
+        head <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        tail <span style="color:#f92672">=</span> len(s) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python">class Solution:
-    def isPalindrome(self, s):
-        &quot;&quot;&quot;
-        :type s: str
-        :rtype: bool
-        &quot;&quot;&quot;
-        if not s:
-            return True
-
-        head = 0
-        tail = len(s) - 1
-
-        while head &lt;= tail:
-            cHead, cTail = s[head], s[tail]
-            if not cHead.isalpha() and not cHead.isdigit():
-                head += 1
-            elif not cTail.isalpha() and not cTail.isdigit():
-                tail -= 1
-            elif cHead.upper() != cTail.upper():
-                return False
-            else:
-                head += 1
-                tail -= 1
-        return True
-</code></pre>
-
+        <span style="color:#66d9ef">while</span> head <span style="color:#f92672">&lt;=</span> tail:
+            cHead, cTail <span style="color:#f92672">=</span> s[head], s[tail]
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> cHead<span style="color:#f92672">.</span>isalpha() <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> cHead<span style="color:#f92672">.</span>isdigit():
+                head <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">elif</span> <span style="color:#f92672">not</span> cTail<span style="color:#f92672">.</span>isalpha() <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> cTail<span style="color:#f92672">.</span>isdigit():
+                tail <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">elif</span> cHead<span style="color:#f92672">.</span>upper() <span style="color:#f92672">!=</span> cTail<span style="color:#f92672">.</span>upper():
+                <span style="color:#66d9ef">return</span> False
+            <span style="color:#66d9ef">else</span>:
+                head <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                tail <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> True
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

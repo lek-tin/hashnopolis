@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stream on Hashnopolis</title>
+    <title>stream on Hashnopolis</title>
     <link>http://www.hashnopolis.com/tags/stream/</link>
-    <description>Recent content in Stream on Hashnopolis</description>
+    <description>Recent content in stream on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
@@ -21,7 +21,7 @@
       <description>Given a file and assume that you can only read the file using a given method read4, implement a method read to read n characters. Your method read may be called multiple times.
 Method read4: The API read4 reads 4 consecutive characters from the file, then writes those characters into the buffer array buf.
 The return value is the number of actual characters read.
-Note that read4() has its own file pointer, much like FILE *fpin C.</description>
+Note that read4() has its own file pointer, much like FILE *fp in C.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ Your KthLargest class will have a constructor which accepts an integer k and an 
       <guid>http://www.hashnopolis.com/post/2018/11/read-n-characters-given-read4/</guid>
       <description>The API: int read4(char *buf) reads 4 characters at a time from a file.
 The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n)that reads n characters from the file.
+By using the read4 API, implement the function int read(char *buf, int n) that reads n characters from the file.
 Example 1 Input: buf = &amp;quot;abc&amp;quot;, n = 4 Output: &amp;quot;abc&amp;quot; Explanation: The actual number of characters read is 3, which is &amp;quot;abc&amp;quot;.</description>
     </item>
     

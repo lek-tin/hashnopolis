@@ -18,9 +18,10 @@
   <meta name="author" content="" />
   <meta name="description" content="Given two strings s and t , write a function to determine if t is an anagram of s.
 Example 1:
-Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true  Example 2:
-Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false  Note: You may assume the string contains only lowercase alphabets.
-Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?" />
+Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true Example 2:
+Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note: You may assume the string contains only lowercase alphabets.
+Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
+Solution: class Solution: def isAnagram(self, s, t): &amp;#34;&amp;#34;&amp;#34; :type s: str :type t: str :rtype: bool &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } val_1 = 0 val_2 = 0 list_1 = list(s) list_2 = list(t) &amp;#34;&amp;#34;&amp;#34; Continue only if the two lists are of the same length&amp;#34;&amp;#34;&amp;#34; if(len(list_1) == len(list_2)): for i in range(len(list_1)): val_1 &#43;= primeNums[list_1[i]] val_2 &#43;= primeNums[list_2[i]] if (val_1 == val_2): return True return False " />
   <meta name="keywords" content="leetcode hashmap " />
   
   
@@ -29,16 +30,17 @@ Follow-up What if the inputs contain unicode characters? How would you adapt you
     <meta name="twitter:title" content="Valid Anagram" />
     <meta name="twitter:description" content="Given two strings s and t , write a function to determine if t is an anagram of s.
 Example 1:
-Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true  Example 2:
-Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false  Note: You may assume the string contains only lowercase alphabets.
-Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?" />
+Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true Example 2:
+Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note: You may assume the string contains only lowercase alphabets.
+Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
+Solution: class Solution: def isAnagram(self, s, t): &amp;#34;&amp;#34;&amp;#34; :type s: str :type t: str :rtype: bool &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } val_1 = 0 val_2 = 0 list_1 = list(s) list_2 = list(t) &amp;#34;&amp;#34;&amp;#34; Continue only if the two lists are of the same length&amp;#34;&amp;#34;&amp;#34; if(len(list_1) == len(list_2)): for i in range(len(list_1)): val_1 &#43;= primeNums[list_1[i]] val_2 &#43;= primeNums[list_2[i]] if (val_1 == val_2): return True return False " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/valid-anagram/" />
@@ -196,81 +198,66 @@ Follow-up What if the inputs contain unicode characters? How would you adapt you
         <h5>Last updated: September 15, 2018</h5>
       
       <hr />
-      
-
-<p>Given two strings s and t , write a function to determine if t is an anagram of s.</p>
-
+      <p>Given two strings s and t , write a function to determine if t is an anagram of s.</p>
 <p>Example 1:</p>
-
 <pre><code>Input: s = &quot;anagram&quot;, t = &quot;nagaram&quot;
 Output: true
-</code></pre>
-
-<p>Example 2:</p>
-
+</code></pre><p>Example 2:</p>
 <pre><code>Input: s = &quot;rat&quot;, t = &quot;car&quot;
 Output: false
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <p>You may assume the string contains only lowercase alphabets.</p>
-
 <h3 id="follow-up">Follow-up</h3>
-
 <p>What if the inputs contain unicode characters? How would you adapt your solution to such case?</p>
-
 <h3 id="solution">Solution:</h3>
-
-<pre><code class="language-python">class Solution:
-    def isAnagram(self, s, t):
-        &quot;&quot;&quot;
-        :type s: str
-        :type t: str
-        :rtype: bool
-        &quot;&quot;&quot;
-        primeNums = {
-          &quot;a&quot;: 2,
-          &quot;b&quot;: 3,
-          &quot;c&quot;: 5,
-          &quot;d&quot;: 7,
-          &quot;e&quot;: 11,
-          &quot;f&quot;: 13,
-          &quot;g&quot;: 17,
-          &quot;h&quot;: 19,
-          &quot;i&quot;: 23,
-          &quot;j&quot;: 29,
-          &quot;k&quot;: 31,
-          &quot;m&quot;: 37,
-          &quot;l&quot;: 41,
-          &quot;n&quot;: 43,
-          &quot;o&quot;: 47,
-          &quot;p&quot;: 53,
-          &quot;q&quot;: 59,
-          &quot;r&quot;: 61,
-          &quot;s&quot;: 67,
-          &quot;t&quot;: 71,
-          &quot;u&quot;: 73,
-          &quot;v&quot;: 79,
-          &quot;w&quot;: 83,
-          &quot;x&quot;: 89,
-          &quot;y&quot;: 97,
-          &quot;z&quot;: 101
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isAnagram</span>(self, s, t):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type s: str
+</span><span style="color:#e6db74">        :type t: str
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        primeNums <span style="color:#f92672">=</span> {
+          <span style="color:#e6db74">&#34;a&#34;</span>: <span style="color:#ae81ff">2</span>,
+          <span style="color:#e6db74">&#34;b&#34;</span>: <span style="color:#ae81ff">3</span>,
+          <span style="color:#e6db74">&#34;c&#34;</span>: <span style="color:#ae81ff">5</span>,
+          <span style="color:#e6db74">&#34;d&#34;</span>: <span style="color:#ae81ff">7</span>,
+          <span style="color:#e6db74">&#34;e&#34;</span>: <span style="color:#ae81ff">11</span>,
+          <span style="color:#e6db74">&#34;f&#34;</span>: <span style="color:#ae81ff">13</span>,
+          <span style="color:#e6db74">&#34;g&#34;</span>: <span style="color:#ae81ff">17</span>,
+          <span style="color:#e6db74">&#34;h&#34;</span>: <span style="color:#ae81ff">19</span>,
+          <span style="color:#e6db74">&#34;i&#34;</span>: <span style="color:#ae81ff">23</span>,
+          <span style="color:#e6db74">&#34;j&#34;</span>: <span style="color:#ae81ff">29</span>,
+          <span style="color:#e6db74">&#34;k&#34;</span>: <span style="color:#ae81ff">31</span>,
+          <span style="color:#e6db74">&#34;m&#34;</span>: <span style="color:#ae81ff">37</span>,
+          <span style="color:#e6db74">&#34;l&#34;</span>: <span style="color:#ae81ff">41</span>,
+          <span style="color:#e6db74">&#34;n&#34;</span>: <span style="color:#ae81ff">43</span>,
+          <span style="color:#e6db74">&#34;o&#34;</span>: <span style="color:#ae81ff">47</span>,
+          <span style="color:#e6db74">&#34;p&#34;</span>: <span style="color:#ae81ff">53</span>,
+          <span style="color:#e6db74">&#34;q&#34;</span>: <span style="color:#ae81ff">59</span>,
+          <span style="color:#e6db74">&#34;r&#34;</span>: <span style="color:#ae81ff">61</span>,
+          <span style="color:#e6db74">&#34;s&#34;</span>: <span style="color:#ae81ff">67</span>,
+          <span style="color:#e6db74">&#34;t&#34;</span>: <span style="color:#ae81ff">71</span>,
+          <span style="color:#e6db74">&#34;u&#34;</span>: <span style="color:#ae81ff">73</span>,
+          <span style="color:#e6db74">&#34;v&#34;</span>: <span style="color:#ae81ff">79</span>,
+          <span style="color:#e6db74">&#34;w&#34;</span>: <span style="color:#ae81ff">83</span>,
+          <span style="color:#e6db74">&#34;x&#34;</span>: <span style="color:#ae81ff">89</span>,
+          <span style="color:#e6db74">&#34;y&#34;</span>: <span style="color:#ae81ff">97</span>,
+          <span style="color:#e6db74">&#34;z&#34;</span>: <span style="color:#ae81ff">101</span>
         }
-        val_1 = 0
-        val_2 = 0
-        list_1 = list(s)
-        list_2 = list(t)
-        &quot;&quot;&quot; Continue only if the two lists are of the same length&quot;&quot;&quot;
-        if(len(list_1) == len(list_2)):
-            for i in range(len(list_1)):
-                val_1 += primeNums[list_1[i]]
-                val_2 += primeNums[list_2[i]]
-            if (val_1 == val_2):
-                return True
-        return False
-</code></pre>
-
+        val_1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        val_2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        list_1 <span style="color:#f92672">=</span> list(s)
+        list_2 <span style="color:#f92672">=</span> list(t)
+        <span style="color:#e6db74">&#34;&#34;&#34; Continue only if the two lists are of the same length&#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span>(len(list_1) <span style="color:#f92672">==</span> len(list_2)):
+            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(list_1)):
+                val_1 <span style="color:#f92672">+=</span> primeNums[list_1[i]]
+                val_2 <span style="color:#f92672">+=</span> primeNums[list_2[i]]
+            <span style="color:#66d9ef">if</span> (val_1 <span style="color:#f92672">==</span> val_2):
+                <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

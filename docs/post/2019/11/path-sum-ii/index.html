@@ -19,8 +19,8 @@
   <meta name="description" content="Given a binary tree and a sum, find all root-to-leaf paths where each path&amp;rsquo;s sum equals the given sum.
 Note: A leaf is a node with no children.
 Example: Given the below binary tree and sum = 22,
- 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1  Return:
-[ [5,4,11,2], [5,8,4,5] ]  Solution # Definition for a binary tree node." />
+ 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 Return:
+[ [5,4,11,2], [5,8,4,5] ] Solution # Definition for a binary tree node." />
   <meta name="keywords" content="leetcode dfs " />
   
   
@@ -30,15 +30,15 @@ Example: Given the below binary tree and sum = 22,
     <meta name="twitter:description" content="Given a binary tree and a sum, find all root-to-leaf paths where each path&amp;rsquo;s sum equals the given sum.
 Note: A leaf is a node with no children.
 Example: Given the below binary tree and sum = 22,
- 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1  Return:
-[ [5,4,11,2], [5,8,4,5] ]  Solution # Definition for a binary tree node." />
+ 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 Return:
+[ [5,4,11,2], [5,8,4,5] ] Solution # Definition for a binary tree node." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/11/path-sum-ii/" />
@@ -196,16 +196,10 @@ Example: Given the below binary tree and sum = 22,
         <h5>Last updated: November 30, 2019</h5>
       
       <hr />
-      
-
-<p>Given a binary tree and a sum, find all <strong>root-to-leaf</strong> paths where each path&rsquo;s sum equals the given sum.</p>
-
+      <p>Given a binary tree and a sum, find all <strong>root-to-leaf</strong> paths where each path&rsquo;s sum equals the given sum.</p>
 <p><strong>Note:</strong> A leaf is a node with no children.</p>
-
 <h3 id="example">Example:</h3>
-
 <p>Given the below binary tree and <code>sum = 22</code>,</p>
-
 <pre><code>      5
      / \
     4   8
@@ -213,51 +207,44 @@ Example: Given the below binary tree and sum = 22,
   11  13  4
  /  \    / \
 7    2  5   1
-</code></pre>
-
-<p>Return:</p>
-
+</code></pre><p>Return:</p>
 <pre><code>[
    [5,4,11,2],
    [5,8,4,5]
 ]
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<h3 id="solution">Solution</h3>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    results <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pathSum</span>(self, root: TreeNode, sum: int) <span style="color:#f92672">-&gt;</span> List[List[int]]:
+        self<span style="color:#f92672">.</span>dfs(root, <span style="color:#ae81ff">0</span>, sum, [])
+        <span style="color:#75715e"># return the global results</span>
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>results
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(self, root, partial, sum, result):
+        <span style="color:#75715e"># root is null, return</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span>
+        <span style="color:#75715e"># Update partial and result</span>
+        partial <span style="color:#f92672">+=</span> root<span style="color:#f92672">.</span>val
+        newResult <span style="color:#f92672">=</span> list(result<span style="color:#f92672">+</span>[root<span style="color:#f92672">.</span>val])
 
-class Solution:
-    results = []
-    def pathSum(self, root: TreeNode, sum: int) -&gt; List[List[int]]:
-        self.dfs(root, 0, sum, [])
-        # return the global results
-        return self.results
-
-    def dfs(self, root, partial, sum, result):
-        # root is null, return
-        if not root:
-            return
-        # Update partial and result
-        partial += root.val
-        newResult = list(result+[root.val])
-
-        # sum found
-        if partial == sum and root.left is None and root.right is None:
-            self.results.append(newResult)
-        # go to left child node if it exists
-        if root.left:
-            self.dfs(root.left, partial, sum, newResult)
-        # go to right child node if it exists
-        if root.right:
-            self.dfs(root.right, partial, sum, newResult)
-</code></pre>
-
+        <span style="color:#75715e"># sum found</span>
+        <span style="color:#66d9ef">if</span> partial <span style="color:#f92672">==</span> sum <span style="color:#f92672">and</span> root<span style="color:#f92672">.</span>left <span style="color:#f92672">is</span> None <span style="color:#f92672">and</span> root<span style="color:#f92672">.</span>right <span style="color:#f92672">is</span> None:
+            self<span style="color:#f92672">.</span>results<span style="color:#f92672">.</span>append(newResult)
+        <span style="color:#75715e"># go to left child node if it exists</span>
+        <span style="color:#66d9ef">if</span> root<span style="color:#f92672">.</span>left:
+            self<span style="color:#f92672">.</span>dfs(root<span style="color:#f92672">.</span>left, partial, sum, newResult)
+        <span style="color:#75715e"># go to right child node if it exists</span>
+        <span style="color:#66d9ef">if</span> root<span style="color:#f92672">.</span>right:
+            self<span style="color:#f92672">.</span>dfs(root<span style="color:#f92672">.</span>right, partial, sum, newResult)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

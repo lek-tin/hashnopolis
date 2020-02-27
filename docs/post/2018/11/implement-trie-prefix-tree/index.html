@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Implement a trie with insert, search, and startsWith methods.
-Example Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true  Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
+Example Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
 Solution Python
 class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _ in range(26)] self." />
   <meta name="keywords" content="leetcode trie " />
@@ -27,7 +27,7 @@ class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _
     
     <meta name="twitter:title" content="Implement Trie Prefix Tree" />
     <meta name="twitter:description" content="Implement a trie with insert, search, and startsWith methods.
-Example Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true  Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
+Example Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
 Solution Python
 class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _ in range(26)] self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
@@ -36,7 +36,7 @@ class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/" />
@@ -194,12 +194,8 @@ class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _
         <h5>Last updated: October 13, 2019</h5>
       
       <hr />
-      
-
-<p>Implement a trie with <code>insert</code>, <code>search</code>, and <code>startsWith</code> methods.</p>
-
+      <p>Implement a trie with <code>insert</code>, <code>search</code>, and <code>startsWith</code> methods.</p>
 <h3 id="example">Example</h3>
-
 <pre><code>Trie trie = new Trie();
 
 trie.insert(&quot;apple&quot;);
@@ -208,144 +204,135 @@ trie.search(&quot;app&quot;);     // returns false
 trie.startsWith(&quot;app&quot;); // returns true
 trie.insert(&quot;app&quot;);
 trie.search(&quot;app&quot;);     // returns true
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <p>You may assume that all inputs are consist of lowercase letters a-z.
 All inputs are guaranteed to be non-empty strings.</p>
-
 <h3 id="solution">Solution</h3>
-
 <p>Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>isEnd <span style="color:#f92672">=</span> False
+        self<span style="color:#f92672">.</span>chars <span style="color:#f92672">=</span> [False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>)]
+        self<span style="color:#f92672">.</span>children <span style="color:#f92672">=</span> [None <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>)]
 
-<pre><code class="language-python">class TrieNode:
-    def __init__(self):
-        self.isEnd = False
-        self.chars = [False for _ in range(26)]
-        self.children = [None for _ in range(26)]
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Trie</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Initialize your data structure here.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>head <span style="color:#f92672">=</span> TrieNode()
 
-class Trie:
-    def __init__(self):
-        &quot;&quot;&quot;
-        Initialize your data structure here.
-        &quot;&quot;&quot;
-        self.head = TrieNode()
-
-    def insert(self, word: str) -&gt; None:
-        &quot;&quot;&quot;
-        Inserts a word into the trie.
-        &quot;&quot;&quot;
-        curr = self.head
-        for i, letter in enumerate(word):
-            index = ord(letter)-ord(&quot;a&quot;)
-            if not curr.chars[index]:
-                curr.chars[index] = True
-                curr.children[index] = TrieNode()
-            curr = curr.children[index]
-        curr.isEnd = True
-
-
-    def search(self, word: str) -&gt; bool:
-        &quot;&quot;&quot;
-        Returns if the word is in the trie.
-        &quot;&quot;&quot;
-        curr = self.head
-        for i, letter in enumerate(word):
-            index = ord(letter)-ord(&quot;a&quot;)
-            if not curr.chars[index]:
-                return False
-            curr = curr.children[index]
-
-        return True if curr.isEnd else False
-
-    def startsWith(self, prefix: str) -&gt; bool:
-        &quot;&quot;&quot;
-        Returns if there is any word in the trie that starts with the given prefix.
-        &quot;&quot;&quot;
-        curr = self.head
-        curr = self.head
-        for i, letter in enumerate(prefix):
-            index = ord(letter)-ord(&quot;a&quot;)
-            if not curr.chars[index]:
-                return False
-            curr = curr.children[index]
-        return True
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(self, word: str) <span style="color:#f92672">-&gt;</span> None:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Inserts a word into the trie.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        curr <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>head
+        <span style="color:#66d9ef">for</span> i, letter <span style="color:#f92672">in</span> enumerate(word):
+            index <span style="color:#f92672">=</span> ord(letter)<span style="color:#f92672">-</span>ord(<span style="color:#e6db74">&#34;a&#34;</span>)
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> curr<span style="color:#f92672">.</span>chars[index]:
+                curr<span style="color:#f92672">.</span>chars[index] <span style="color:#f92672">=</span> True
+                curr<span style="color:#f92672">.</span>children[index] <span style="color:#f92672">=</span> TrieNode()
+            curr <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>children[index]
+        curr<span style="color:#f92672">.</span>isEnd <span style="color:#f92672">=</span> True
 
 
-# Your Trie object will be instantiated and called as such:
-# obj = Trie()
-# obj.insert(word)
-# param_2 = obj.search(word)
-# param_3 = obj.startsWith(prefix)
-</code></pre>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, word: str) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Returns if the word is in the trie.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        curr <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>head
+        <span style="color:#66d9ef">for</span> i, letter <span style="color:#f92672">in</span> enumerate(word):
+            index <span style="color:#f92672">=</span> ord(letter)<span style="color:#f92672">-</span>ord(<span style="color:#e6db74">&#34;a&#34;</span>)
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> curr<span style="color:#f92672">.</span>chars[index]:
+                <span style="color:#66d9ef">return</span> False
+            curr <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>children[index]
 
-<pre><code class="language-python"># o(n)
-class TrieNode():
-    def __init__(self):
-        self.children = {}
-        self.isWholeWord = False
+        <span style="color:#66d9ef">return</span> True <span style="color:#66d9ef">if</span> curr<span style="color:#f92672">.</span>isEnd <span style="color:#66d9ef">else</span> False
 
-class Trie:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">startsWith</span>(self, prefix: str) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Returns if there is any word in the trie that starts with the given prefix.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        curr <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>head
+        curr <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>head
+        <span style="color:#66d9ef">for</span> i, letter <span style="color:#f92672">in</span> enumerate(prefix):
+            index <span style="color:#f92672">=</span> ord(letter)<span style="color:#f92672">-</span>ord(<span style="color:#e6db74">&#34;a&#34;</span>)
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> curr<span style="color:#f92672">.</span>chars[index]:
+                <span style="color:#66d9ef">return</span> False
+            curr <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>children[index]
+        <span style="color:#66d9ef">return</span> True
 
-    def __init__(self):
-        &quot;&quot;&quot;
-        Initialize your data structure here.
-        &quot;&quot;&quot;
-        self.root = TrieNode()
 
-    def insert(self, word):
-        &quot;&quot;&quot;
-        Inserts a word into the trie.
-        :type word: str
-        :rtype: void
-        &quot;&quot;&quot;
-        r = self.root
-        for w in word:
-            if w not in r.children:
-                # go down one level along the path
-                r.children[w] = TrieNode()
-            r = r.children[w]
-        r.isWholeWord = True
+<span style="color:#75715e"># Your Trie object will be instantiated and called as such:</span>
+<span style="color:#75715e"># obj = Trie()</span>
+<span style="color:#75715e"># obj.insert(word)</span>
+<span style="color:#75715e"># param_2 = obj.search(word)</span>
+<span style="color:#75715e"># param_3 = obj.startsWith(prefix)</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># o(n)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span>():
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>children <span style="color:#f92672">=</span> {}
+        self<span style="color:#f92672">.</span>isWholeWord <span style="color:#f92672">=</span> False
 
-    def search(self, word):
-        &quot;&quot;&quot;
-        Returns if the word is in the trie.
-        :type word: str
-        :rtype: bool
-        &quot;&quot;&quot;
-        r = self.root
-        for w in word:
-            if w in r.children:
-                # go down one level along the path
-                r = r.children[w]
-            else:
-                return False
-        # has to match the last leaf
-        return r.isWholeWord
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Trie</span>:
 
-    def startsWith(self, prefix):
-        &quot;&quot;&quot;
-        Returns if there is any word in the trie that starts with the given prefix.
-        :type prefix: str
-        :rtype: bool
-        &quot;&quot;&quot;
-        r = self.root
-        for w in prefix:
-            if w in r.children:
-                r = r.children[w]
-            else:
-                return False
-        # Doesn't need to match the last leaf
-        return True
+    <span style="color:#66d9ef">def</span> __init__(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Initialize your data structure here.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>root <span style="color:#f92672">=</span> TrieNode()
 
-# Your Trie object will be instantiated and called as such:
-# obj = Trie()
-# obj.insert(word)
-# param_2 = obj.search(word)
-# param_3 = obj.startsWith(prefix)
-</code></pre>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(self, word):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Inserts a word into the trie.
+</span><span style="color:#e6db74">        :type word: str
+</span><span style="color:#e6db74">        :rtype: void
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        r <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>root
+        <span style="color:#66d9ef">for</span> w <span style="color:#f92672">in</span> word:
+            <span style="color:#66d9ef">if</span> w <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> r<span style="color:#f92672">.</span>children:
+                <span style="color:#75715e"># go down one level along the path</span>
+                r<span style="color:#f92672">.</span>children[w] <span style="color:#f92672">=</span> TrieNode()
+            r <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>children[w]
+        r<span style="color:#f92672">.</span>isWholeWord <span style="color:#f92672">=</span> True
 
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, word):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Returns if the word is in the trie.
+</span><span style="color:#e6db74">        :type word: str
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        r <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>root
+        <span style="color:#66d9ef">for</span> w <span style="color:#f92672">in</span> word:
+            <span style="color:#66d9ef">if</span> w <span style="color:#f92672">in</span> r<span style="color:#f92672">.</span>children:
+                <span style="color:#75715e"># go down one level along the path</span>
+                r <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>children[w]
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">return</span> False
+        <span style="color:#75715e"># has to match the last leaf</span>
+        <span style="color:#66d9ef">return</span> r<span style="color:#f92672">.</span>isWholeWord
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">startsWith</span>(self, prefix):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Returns if there is any word in the trie that starts with the given prefix.
+</span><span style="color:#e6db74">        :type prefix: str
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        r <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>root
+        <span style="color:#66d9ef">for</span> w <span style="color:#f92672">in</span> prefix:
+            <span style="color:#66d9ef">if</span> w <span style="color:#f92672">in</span> r<span style="color:#f92672">.</span>children:
+                r <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>children[w]
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">return</span> False
+        <span style="color:#75715e"># Doesn&#39;t need to match the last leaf</span>
+        <span style="color:#66d9ef">return</span> True
+
+<span style="color:#75715e"># Your Trie object will be instantiated and called as such:</span>
+<span style="color:#75715e"># obj = Trie()</span>
+<span style="color:#75715e"># obj.insert(word)</span>
+<span style="color:#75715e"># param_2 = obj.search(word)</span>
+<span style="color:#75715e"># param_3 = obj.startsWith(prefix)</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

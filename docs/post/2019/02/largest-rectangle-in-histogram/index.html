@@ -19,7 +19,7 @@
   <meta name="description" content="Given n non-negative integers representing the histogram&amp;rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
 Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
 The largest rectangle is shown in the shaded area, which has area = 10 unit.
-Example: Input: [2,1,5,6,2,3] Output: 10  Solution: Push height into the stack in ascending order." />
+Example: Input: [2,1,5,6,2,3] Output: 10 Solution: Push height into the stack in ascending order. When we encounter a height that is shorter than te top of the stack, we start to calculate area by popping heights out of the stack." />
   <meta name="keywords" content="leetcode stack java " />
   
   
@@ -29,14 +29,14 @@ Example: Input: [2,1,5,6,2,3] Output: 10  Solution: Push height into the stack i
     <meta name="twitter:description" content="Given n non-negative integers representing the histogram&amp;rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
 Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
 The largest rectangle is shown in the shaded area, which has area = 10 unit.
-Example: Input: [2,1,5,6,2,3] Output: 10  Solution: Push height into the stack in ascending order." />
+Example: Input: [2,1,5,6,2,3] Output: 10 Solution: Push height into the stack in ascending order. When we encounter a height that is shorter than te top of the stack, we start to calculate area by popping heights out of the stack." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/02/largest-rectangle-in-histogram/" />
@@ -196,50 +196,39 @@ Example: Input: [2,1,5,6,2,3] Output: 10  Solution: Push height into the stack i
         <h5>Last updated: February 25, 2019</h5>
       
       <hr />
-      
-
-<p>Given n non-negative integers representing the histogram&rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p>
-
-<p><img src="https://assets.leetcode.com/uploads/2018/10/12/histogram.png" alt="question" /><br />
+      <p>Given n non-negative integers representing the histogram&rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p>
+<p><img src="https://assets.leetcode.com/uploads/2018/10/12/histogram.png" alt="question"><br>
 Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].</p>
-
-<p><img src="https://assets.leetcode.com/uploads/2018/10/12/histogram_area.png" alt="solution" /><br />
+<p><img src="https://assets.leetcode.com/uploads/2018/10/12/histogram_area.png" alt="solution"><br>
 The largest rectangle is shown in the shaded area, which has area = 10 unit.</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Input: [2,1,5,6,2,3]
 Output: 10
-</code></pre>
-
-<h3 id="solution">Solution:</h3>
-
+</code></pre><h3 id="solution">Solution:</h3>
 <p>Push height into the stack in ascending order. When we encounter a height that is shorter than te top of the stack, we start to calculate area by popping heights out of the stack.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">largestRectangleArea</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> heights<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>heights <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> heights<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">class Solution {
-    public int largestRectangleArea(int[] heights) {
-        if (heights == null || heights.length == 0) return 0;
+        Stack<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> stack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;();</span>
+        <span style="color:#66d9ef">int</span> maxArea <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-        Stack&lt;Integer&gt; stack = new Stack&lt;Integer&gt;();
-        int maxArea = 0;
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> heights<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> h  <span style="color:#f92672">=</span> i <span style="color:#f92672">==</span> heights<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">?</span> 0 <span style="color:#f92672">:</span> heights<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">&amp;&amp;</span> h <span style="color:#f92672">&lt;</span> heights<span style="color:#f92672">[</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">()])</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">int</span> height <span style="color:#f92672">=</span> heights<span style="color:#f92672">[</span>stack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">()];</span>
+                <span style="color:#66d9ef">int</span> start <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">?</span> <span style="color:#f92672">-</span>1 <span style="color:#f92672">:</span> stack<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">();</span>
+                <span style="color:#66d9ef">int</span> area <span style="color:#f92672">=</span> height <span style="color:#f92672">*</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> start <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+                maxArea <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>maxArea<span style="color:#f92672">,</span> area<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
 
-        for (int i = 0; i &lt;= heights.length; i++) {
-            int h  = i == heights.length ? 0 : heights[i];
-            while (!stack.isEmpty() &amp;&amp; h &lt; heights[stack.peek()]) {
-                int height = heights[stack.pop()];
-                int start = stack.isEmpty() ? -1 : stack.peek();
-                int area = height * (i - start - 1);
-                maxArea = Math.max(maxArea, area);
-            }
+            stack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
 
-            stack.push(i);
-        }
-
-        return maxArea;
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> maxArea<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

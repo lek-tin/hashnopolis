@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a 2D board and a list of words from the dictionary, find all words in the board.
 Each word must be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
-Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&amp;quot;oath&amp;quot;,&amp;quot;pea&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;rain&amp;quot;] Output: [&amp;quot;eat&amp;quot;,&amp;quot;oath&amp;quot;]  Note:  All inputs are consist of lowercase letters a-z." />
+Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&amp;quot;oath&amp;quot;,&amp;quot;pea&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;rain&amp;quot;] Output: [&amp;quot;eat&amp;quot;,&amp;quot;oath&amp;quot;] Note:  All inputs are consist of lowercase letters a-z." />
   <meta name="keywords" content="leetcode bfs " />
   
   
@@ -27,14 +27,14 @@ Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#
     <meta name="twitter:title" content="Word Search II" />
     <meta name="twitter:description" content="Given a 2D board and a list of words from the dictionary, find all words in the board.
 Each word must be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
-Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&amp;quot;oath&amp;quot;,&amp;quot;pea&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;rain&amp;quot;] Output: [&amp;quot;eat&amp;quot;,&amp;quot;oath&amp;quot;]  Note:  All inputs are consist of lowercase letters a-z." />
+Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&amp;quot;oath&amp;quot;,&amp;quot;pea&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;rain&amp;quot;] Output: [&amp;quot;eat&amp;quot;,&amp;quot;oath&amp;quot;] Note:  All inputs are consist of lowercase letters a-z." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/04/word-search-ii/" />
@@ -192,14 +192,9 @@ Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#
         <h5>Last updated: April 8, 2019</h5>
       
       <hr />
-      
-
-<p>Given a 2D board and a list of words from the dictionary, find all words in the board.</p>
-
+      <p>Given a 2D board and a list of words from the dictionary, find all words in the board.</p>
 <p>Each word must be constructed from letters of sequentially adjacent cell, where &ldquo;adjacent&rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Input:
 board = [
   ['o','a','a','n'],
@@ -210,75 +205,69 @@ board = [
 words = [&quot;oath&quot;,&quot;pea&quot;,&quot;eat&quot;,&quot;rain&quot;]
 
 Output: [&quot;eat&quot;,&quot;oath&quot;]
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li>All inputs are consist of lowercase letters <code>a-z</code>.</li>
 <li>The values of <code>words</code> are distinct.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time:  O(m * n * l)</span>
+<span style="color:#75715e"># Space: O(l)</span>
 
-<pre><code class="language-python"># Time:  O(m * n * l)
-# Space: O(l)
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TrieNode</span>(object):
+    <span style="color:#75715e"># Initialize your data structure here.</span>
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>isString <span style="color:#f92672">=</span> False
+        self<span style="color:#f92672">.</span>children <span style="color:#f92672">=</span> {}
 
-class TrieNode(object):
-    # Initialize your data structure here.
-    def __init__(self):
-        self.isString = False
-        self.children = {}
+    <span style="color:#75715e"># Inserts a word into the trie.</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert</span>(self, word):
+        cur <span style="color:#f92672">=</span> self
+        <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> word:
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> c <span style="color:#f92672">in</span> cur<span style="color:#f92672">.</span>children:
+                cur<span style="color:#f92672">.</span>children[c] <span style="color:#f92672">=</span> TrieNode()
+            cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>children[c]
+        cur<span style="color:#f92672">.</span>isString <span style="color:#f92672">=</span> True
 
-    # Inserts a word into the trie.
-    def insert(self, word):
-        cur = self
-        for c in word:
-            if not c in cur.children:
-                cur.children[c] = TrieNode()
-            cur = cur.children[c]
-        cur.isString = True
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findWords</span>(self, board: List[List[str]], words: List[str]) <span style="color:#f92672">-&gt;</span> List[str]:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type board: List[List[str]]
+</span><span style="color:#e6db74">        :type words: List[str]
+</span><span style="color:#e6db74">        :rtype: List[str]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        visited <span style="color:#f92672">=</span> [[False <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(board[<span style="color:#ae81ff">0</span>]))] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(board))]
+        result <span style="color:#f92672">=</span> {}
+        trie <span style="color:#f92672">=</span> TrieNode()
+        <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+            trie<span style="color:#f92672">.</span>insert(word)
 
-class Solution:
-    def findWords(self, board: List[List[str]], words: List[str]) -&gt; List[str]:
-        &quot;&quot;&quot;
-        :type board: List[List[str]]
-        :type words: List[str]
-        :rtype: List[str]
-        &quot;&quot;&quot;
-        visited = [[False for j in range(len(board[0]))] for i in range(len(board))]
-        result = {}
-        trie = TrieNode()
-        for word in words:
-            trie.insert(word)
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(board)):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(board[<span style="color:#ae81ff">0</span>])):
+                self<span style="color:#f92672">.</span>findBFS(board, trie, <span style="color:#ae81ff">0</span>, i, j, visited, [], result)
 
-        for i in range(len(board)):
-            for j in range(len(board[0])):
-                self.findBFS(board, trie, 0, i, j, visited, [], result)
+        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">.</span>keys()
 
-        return result.keys()
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findBFS</span>(self, board, trie, cur, i, j, visited, cur_word, result):
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> trie <span style="color:#f92672">or</span> i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> i <span style="color:#f92672">&gt;=</span> len(board) <span style="color:#f92672">or</span> j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> j <span style="color:#f92672">&gt;=</span> len(board[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">or</span> visited[i][j]:
+            <span style="color:#66d9ef">return</span>
 
-    def findBFS(self, board, trie, cur, i, j, visited, cur_word, result):
-        if not trie or i &lt; 0 or i &gt;= len(board) or j &lt; 0 or j &gt;= len(board[0]) or visited[i][j]:
-            return
+        <span style="color:#66d9ef">if</span> board[i][j] <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> trie<span style="color:#f92672">.</span>children:
+            <span style="color:#66d9ef">return</span>
 
-        if board[i][j] not in trie.children:
-            return
+        cur_word<span style="color:#f92672">.</span>append(board[i][j])
+        next_node <span style="color:#f92672">=</span> trie<span style="color:#f92672">.</span>children[board[i][j]]
+        <span style="color:#66d9ef">if</span> next_node<span style="color:#f92672">.</span>isString:
+            result[<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(cur_word)] <span style="color:#f92672">=</span> True
 
-        cur_word.append(board[i][j])
-        next_node = trie.children[board[i][j]]
-        if next_node.isString:
-            result[&quot;&quot;.join(cur_word)] = True
-
-        visited[i][j] = True
-        self.findBFS(board, next_node, cur + 1, i + 1, j, visited, cur_word, result)
-        self.findBFS(board, next_node, cur + 1, i - 1, j, visited, cur_word, result)
-        self.findBFS(board, next_node, cur + 1, i, j + 1, visited, cur_word, result)
-        self.findBFS(board, next_node, cur + 1, i, j - 1, visited, cur_word, result)
-        visited[i][j] = False
-        cur_word.pop()
-</code></pre>
-
+        visited[i][j] <span style="color:#f92672">=</span> True
+        self<span style="color:#f92672">.</span>findBFS(board, next_node, cur <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, j, visited, cur_word, result)
+        self<span style="color:#f92672">.</span>findBFS(board, next_node, cur <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, j, visited, cur_word, result)
+        self<span style="color:#f92672">.</span>findBFS(board, next_node, cur <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, i, j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, visited, cur_word, result)
+        self<span style="color:#f92672">.</span>findBFS(board, next_node, cur <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, i, j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, visited, cur_word, result)
+        visited[i][j] <span style="color:#f92672">=</span> False
+        cur_word<span style="color:#f92672">.</span>pop()
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

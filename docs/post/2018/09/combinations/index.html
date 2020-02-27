@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution class Solution: def combine(self, n, k): &amp;quot;&amp;quot;&amp;quot; :type n: int :type k: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans." />
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n, k): &amp;#34;&amp;#34;&amp;#34; :type n: int :type k: int :rtype: List[List[int]] &amp;#34;&amp;#34;&amp;#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans." />
   <meta name="keywords" content="leetcode python " />
   
   
@@ -25,14 +25,14 @@ Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], 
     
     <meta name="twitter:title" content="Combinations" />
     <meta name="twitter:description" content="Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ]  Solution class Solution: def combine(self, n, k): &amp;quot;&amp;quot;&amp;quot; :type n: int :type k: int :rtype: List[List[int]] &amp;quot;&amp;quot;&amp;quot; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans." />
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n, k): &amp;#34;&amp;#34;&amp;#34; :type n: int :type k: int :rtype: List[List[int]] &amp;#34;&amp;#34;&amp;#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/combinations/" />
@@ -190,12 +190,8 @@ Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], 
         <h5>Last updated: September 10, 2018</h5>
       
       <hr />
-      
-
-<p>Given two integers <code>n</code> and <code>k</code>, return all possible combinations of k numbers out of <code>1 ... n</code>.</p>
-
+      <p>Given two integers <code>n</code> and <code>k</code>, return all possible combinations of k numbers out of <code>1 ... n</code>.</p>
 <h3 id="example">Example</h3>
-
 <pre><code>Input: n = 4, k = 2
 Output:
 [
@@ -206,38 +202,34 @@ Output:
   [1,3],
   [1,4],
 ]
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution:
-    def combine(self, n, k):
-        &quot;&quot;&quot;
-        :type n: int
-        :type k: int
-        :rtype: List[List[int]]
-        &quot;&quot;&quot;
-        res = []
-        nums = list(range(1, n+1))
-        def iterate(index, tempAns):
-            ans = list(tempAns)
-            if len(ans) &gt; k:
-                return
-            if index &lt; n:
-                ans.append(index+1)
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">combine</span>(self, n, k):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :type k: int
+</span><span style="color:#e6db74">        :rtype: List[List[int]]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        res <span style="color:#f92672">=</span> []
+        nums <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">1</span>, n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">iterate</span>(index, tempAns):
+            ans <span style="color:#f92672">=</span> list(tempAns)
+            <span style="color:#66d9ef">if</span> len(ans) <span style="color:#f92672">&gt;</span> k:
+                <span style="color:#66d9ef">return</span>
+            <span style="color:#66d9ef">if</span> index <span style="color:#f92672">&lt;</span> n:
+                ans<span style="color:#f92672">.</span>append(index<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
             
-            print(ans)
-            if len(ans) == k:
-                res.append(ans)
-                return
-            for j in range(index+1, n):
+            <span style="color:#66d9ef">print</span>(ans)
+            <span style="color:#66d9ef">if</span> len(ans) <span style="color:#f92672">==</span> k:
+                res<span style="color:#f92672">.</span>append(ans)
+                <span style="color:#66d9ef">return</span>
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(index<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, n):
                 iterate(j, ans)
-        for i in range(n-k+1):
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n<span style="color:#f92672">-</span>k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
             iterate(i, [])
             
-        return res
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

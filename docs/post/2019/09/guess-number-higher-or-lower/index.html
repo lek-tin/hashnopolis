@@ -38,7 +38,7 @@ You call a pre-defined API guess(int num) which returns 3 possible results (-1, 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower/" />
@@ -196,55 +196,42 @@ You call a pre-defined API guess(int num) which returns 3 possible results (-1, 
         <h5>Last updated: September 19, 2019</h5>
       
       <hr />
-      
-
-<p>We are playing the Guess Game. The game is as follows:</p>
-
+      <p>We are playing the Guess Game. The game is as follows:</p>
 <p>I pick a number from <code>1 to n</code>. You have to guess which number I picked.</p>
-
 <p>Every time you guess wrong, I&rsquo;ll tell you whether the number is higher or lower.</p>
-
 <p>You call a pre-defined API guess(int num) which returns <code>3</code> possible results <code>(-1, 1, or 0)</code>:</p>
-
 <pre><code>-1 : My number is lower
  1 : My number is higher
  0 : Congrats! You got it!
-</code></pre>
-
-<h3 id="example">Example :</h3>
-
+</code></pre><h3 id="example-">Example :</h3>
 <pre><code>Input: n = 10, pick = 6
 Output: 6
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># The guess API is already defined for you.</span>
+<span style="color:#75715e"># @param num, your guess</span>
+<span style="color:#75715e"># @return -1 if my number is lower, 1 if my number is higher, otherwise return 0</span>
+<span style="color:#75715e"># def guess(num):</span>
 
-<h3 id="solution">Solution</h3>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">guessNumber</span>(self, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python"># The guess API is already defined for you.
-# @param num, your guess
-# @return -1 if my number is lower, 1 if my number is higher, otherwise return 0
-# def guess(num):
-
-class Solution(object):
-    def guessNumber(self, n):
-        &quot;&quot;&quot;
-        :type n: int
-        :rtype: int
-        &quot;&quot;&quot;
-        if n &lt;= 1:
-            return 1
-
-        l, h = 1, n
-        while l &lt;= h:
-            mid = l + (h-l)//2
-            print(mid)
-            if guess(mid) == 1:
-                l = mid + 1
-            elif guess(mid) == -1:
-                h = mid - 1
-            else:
-                return mid
-</code></pre>
-
+        l, h <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, n
+        <span style="color:#66d9ef">while</span> l <span style="color:#f92672">&lt;=</span> h:
+            mid <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> (h<span style="color:#f92672">-</span>l)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">print</span>(mid)
+            <span style="color:#66d9ef">if</span> guess(mid) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+                l <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">elif</span> guess(mid) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+                h <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">return</span> mid
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a sorted integer array without duplicates, return the summary of its ranges.
-Example 1 Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.  Example 2 Input: [0,2,3,4,6,8,9] Output: [&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.  Solution class Solution: def summaryRanges(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i&#43;1] == nums[i] &#43; 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1]." />
+Example 1 Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range. Example 2 Input: [0,2,3,4,6,8,9] Output: [&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range. Solution class Solution: def summaryRanges(self, nums): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i&#43;1] == nums[i] &#43; 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1]." />
   <meta name="keywords" content="leetcode " />
   
   
@@ -25,14 +25,14 @@ Example 1 Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quo
     
     <meta name="twitter:title" content="Summary Ranges" />
     <meta name="twitter:description" content="Given a sorted integer array without duplicates, return the summary of its ranges.
-Example 1 Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.  Example 2 Input: [0,2,3,4,6,8,9] Output: [&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.  Solution class Solution: def summaryRanges(self, nums): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i&#43;1] == nums[i] &#43; 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1]." />
+Example 1 Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quot;4-&amp;gt;5&amp;quot;,&amp;quot;7&amp;quot;] Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range. Example 2 Input: [0,2,3,4,6,8,9] Output: [&amp;quot;0&amp;quot;,&amp;quot;2-&amp;gt;4&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;8-&amp;gt;9&amp;quot;] Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range. Solution class Solution: def summaryRanges(self, nums): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; if not nums: return [] ranges = [str(nums[0])] for i in range(len(nums)-1): if nums[i&#43;1] == nums[i] &#43; 1: print(ranges) ranges[len(ranges)-1] = ranges[len(ranges)-1]." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/summary-ranges/" />
@@ -188,46 +188,35 @@ Example 1 Input: [0,1,2,4,5,7] Output: [&amp;quot;0-&amp;gt;2&amp;quot;,&amp;quo
         <h5>Last updated: October 31, 2018</h5>
       
       <hr />
-      
-
-<p>Given a sorted integer array without duplicates, return the summary of its ranges.</p>
-
+      <p>Given a sorted integer array without duplicates, return the summary of its ranges.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input:  [0,1,2,4,5,7]
 Output: [&quot;0-&gt;2&quot;,&quot;4-&gt;5&quot;,&quot;7&quot;]
 Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input:  [0,2,3,4,6,8,9]
 Output: [&quot;0&quot;,&quot;2-&gt;4&quot;,&quot;6&quot;,&quot;8-&gt;9&quot;]
 Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">summaryRanges</span>(self, nums):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :rtype: List[str]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> nums:
+            <span style="color:#66d9ef">return</span> []
 
-<h3 id="solution">Solution</h3>
+        ranges <span style="color:#f92672">=</span> [str(nums[<span style="color:#ae81ff">0</span>])]
 
-<pre><code class="language-python">class Solution:
-    def summaryRanges(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :rtype: List[str]
-        &quot;&quot;&quot;
-        if not nums:
-            return []
-
-        ranges = [str(nums[0])]
-
-        for i in range(len(nums)-1):
-            if nums[i+1] == nums[i] + 1:
-                print(ranges)
-                ranges[len(ranges)-1] = ranges[len(ranges)-1].split(&quot;-&gt;&quot;)[0] + &quot;-&gt;&quot; + str(nums[i+1])
-            else:
-                ranges.append(str(nums[i+1]))
-        return ranges
-</code></pre>
-
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> nums[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> nums[i] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:
+                <span style="color:#66d9ef">print</span>(ranges)
+                ranges[len(ranges)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> ranges[len(ranges)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;-&gt;&#34;</span>)[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&gt;&#34;</span> <span style="color:#f92672">+</span> str(nums[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+            <span style="color:#66d9ef">else</span>:
+                ranges<span style="color:#f92672">.</span>append(str(nums[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]))
+        <span style="color:#66d9ef">return</span> ranges
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

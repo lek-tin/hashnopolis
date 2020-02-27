@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/categories/algorithm/" />
@@ -176,6 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/09/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
+
+      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+Your algorithm should run in O(n) complexity.
+Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4. Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/">Subarray Product Less Than K</a></h2>
 
       <p>Your are given an array of positive integers nums.
@@ -260,7 +287,7 @@ Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray 
       <h2><a href="http://www.hashnopolis.com/post/2019/09/coin-change/">Coin Change</a></h2>
 
       <p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1  Example 2: Input: coins = [2], amount = 3 Output: -1  Note: You may assume that you have an infinite number of each kind of coin.</p>
+Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1 Example 2: Input: coins = [2], amount = 3 Output: -1 Note: You may assume that you have an infinite number of each kind of coin.</p>
 
       <p class="meta">
         
@@ -285,8 +312,8 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/">Maximum Product Subarray</a></h2>
 
-      <p> Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
-Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.  Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray.  Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res  </p>
+      <p>Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6. Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray. Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res </p>
 
       <p class="meta">
         
@@ -313,7 +340,7 @@ Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest produc
 
       <p>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
 For example, given the following triangle
-[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11).  Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</p>
+[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11). Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</p>
 
       <p class="meta">
         
@@ -365,7 +392,7 @@ The knight has an initial health point represented by a positive integer. If at 
       <h2><a href="http://www.hashnopolis.com/post/2019/09/minimum-path-sum/">Minimum Path Sum</a></h2>
 
       <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7  Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution: def minPathSum(self, grid): &#34;&#34;&#34; :type grid: List[List[int]] :rtype: int &#34;&#34;&#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</p>
+Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution: def minPathSum(self, grid): &#34;&#34;&#34; :type grid: List[List[int]] :rtype: int &#34;&#34;&#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</p>
 
       <p class="meta">
         
@@ -393,34 +420,7 @@ Note You can only move either down or right at any point in time. Example Input:
       <p>Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
 Si % Sj = 0 or Sj % Si = 0.
 If there are multiple solutions, return any subset is fine.
-Example 1: Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok)  Example 2: Input: [1,2,4,8] Output: [1,2,4,8]  Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&gt; List[int]: if not nums or len(nums) == 0: return [] nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/climbing-stairs/">Climbing Stairs</a></h2>
-
-      <p>You are climbing a stair case. It takes n steps to reach to the top.
-Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</p>
+Example 1: Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok) Example 2: Input: [1,2,4,8] Output: [1,2,4,8] Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&gt; List[int]: if not nums or len(nums) == 0: return [] nums.</p>
 
       <p class="meta">
         

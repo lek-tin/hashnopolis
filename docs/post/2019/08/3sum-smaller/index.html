@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &amp;lt;= i &amp;lt; j &amp;lt; k &amp;lt; n that satisfy the condition nums[i] &#43; nums[j] &#43; nums[k] &amp;lt; target.
-Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3]  Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&amp;gt; int: res = 0 if not nums: return res nums." />
+Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3] Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&amp;gt; int: res = 0 if not nums: return res nums." />
   <meta name="keywords" content="leetcode " />
   
   
@@ -25,14 +25,14 @@ Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because
     
     <meta name="twitter:title" content="3sum Smaller" />
     <meta name="twitter:description" content="Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &amp;lt;= i &amp;lt; j &amp;lt; k &amp;lt; n that satisfy the condition nums[i] &#43; nums[j] &#43; nums[k] &amp;lt; target.
-Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3]  Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&amp;gt; int: res = 0 if not nums: return res nums." />
+Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3] Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&amp;gt; int: res = 0 if not nums: return res nums." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/3sum-smaller/" />
@@ -188,45 +188,37 @@ Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because
         <h5>Last updated: August 22, 2019</h5>
       
       <hr />
-      
-
-<p>Given an array of <code>n</code> integers nums and a target, find the number of index triplets <code>i</code>, <code>j</code>, <code>k</code> with <code>0 &lt;= i &lt; j &lt; k &lt; n</code> that satisfy the condition <code>nums[i] + nums[j] + nums[k] &lt; target</code>.</p>
-
+      <p>Given an array of <code>n</code> integers nums and a target, find the number of index triplets <code>i</code>, <code>j</code>, <code>k</code> with <code>0 &lt;= i &lt; j &lt; k &lt; n</code> that satisfy the condition <code>nums[i] + nums[j] + nums[k] &lt; target</code>.</p>
 <h3 id="example">Example:</h3>
-
 <pre><code>Input: nums = [-2,0,1,3], and target = 2
 Output: 2 
 Explanation: Because there are two triplets which sums are less than 2:
              [-2,0,1]
              [-2,0,3]
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">threeSumSmaller</span>(self, nums: List[int], target: int) <span style="color:#f92672">-&gt;</span> int:
+        res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> nums:
+            <span style="color:#66d9ef">return</span> res
 
-<h3 id="solution">Solution</h3>
+        nums<span style="color:#f92672">.</span>sort()
+        <span style="color:#75715e"># No need to skip duplicates</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>):
+            num <span style="color:#f92672">=</span> nums[i]
+            left <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+            right <span style="color:#f92672">=</span> len(nums) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+                <span style="color:#66d9ef">if</span> num <span style="color:#f92672">+</span> nums[left] <span style="color:#f92672">+</span> nums[right] <span style="color:#f92672">&lt;</span> target:
+                    <span style="color:#75715e"># No need to loop from left+1 -&gt; right, simple count them all in</span>
+                    res <span style="color:#f92672">+=</span> right <span style="color:#f92672">-</span> left
+                    left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                    <span style="color:#75715e"># not need to right--</span>
+                <span style="color:#66d9ef">else</span>:
+                    right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python">class Solution:
-    def threeSumSmaller(self, nums: List[int], target: int) -&gt; int:
-        res = 0
-        if not nums:
-            return res
-
-        nums.sort()
-        # No need to skip duplicates
-        for i in range(0, len(nums)-2):
-            num = nums[i]
-            left = i + 1
-            right = len(nums) - 1
-            while left &lt; right:
-                if num + nums[left] + nums[right] &lt; target:
-                    # No need to loop from left+1 -&gt; right, simple count them all in
-                    res += right - left
-                    left += 1
-                    # not need to right--
-                else:
-                    right -= 1
-
-        return res
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> res
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

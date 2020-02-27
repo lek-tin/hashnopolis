@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top." />
+Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top." />
   <meta name="keywords" content="leetcode python " />
   
   
@@ -27,14 +27,14 @@ Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanatio
     <meta name="twitter:title" content="Climbing Stairs" />
     <meta name="twitter:description" content="You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps  Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top." />
+Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/climbing-stairs/" />
@@ -192,72 +192,56 @@ Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanatio
         <h5>Last updated: August 28, 2019</h5>
       
       <hr />
-      
-
-<p>You are climbing a stair case. It takes n steps to reach to the top.</p>
-
+      <p>You are climbing a stair case. It takes n steps to reach to the top.</p>
 <p>Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?</p>
-
 <h3 id="note-given-n-will-be-a-positive-integer">Note Given n will be a positive integer.</h3>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: 2
 Output: 2
 Explanation: There are two ways to climb to the top.
 1. 1 step + 1 step
 2. 2 steps
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 3
 Output: 3
 Explanation: There are three ways to climb to the top.
 1. 1 step + 1 step + 1 step
 2. 1 step + 2 steps
 3. 2 steps + 1 step
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">climbStairs</span>(self, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e"># The result is observes Fibonacci sequence</span>
+        s1, s2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> s1
+        <span style="color:#66d9ef">elif</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>:
+            <span style="color:#66d9ef">return</span> s2
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">while</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>:
+                s1, s2 <span style="color:#f92672">=</span> s2, s1<span style="color:#f92672">+</span>s2
+                n <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> s2
+</code></pre></div><p>or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">climbStairs</span>(self, n: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2</span>
 
-<h3 id="solution">Solution</h3>
+        dp <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> n
+        dp[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        dp[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>, n):
+            dp[i] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>]
 
-<pre><code class="language-python">class Solution:
-    def climbStairs(self, n):
-        &quot;&quot;&quot;
-        :type n: int
-        :rtype: int
-        &quot;&quot;&quot;
-        # The result is observes Fibonacci sequence
-        s1, s2 = 1, 2
-        if n == 1:
-            return s1
-        elif n == 2:
-            return s2
-        else:
-            while n &gt; 2:
-                s1, s2 = s2, s1+s2
-                n -= 1
-        return s2
-</code></pre>
-
-<p>or</p>
-
-<pre><code class="language-python">class Solution:
-    def climbStairs(self, n: int) -&gt; int:
-        if n == 1:
-            return 1
-        if n == 2:
-            return 2
-
-        dp = [1] * n
-        dp[0] = 1
-        dp[1] = 2
-        for i in range(2, n):
-            dp[i] = dp[i-1] + dp[i-2]
-
-        return dp[n-1]
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> dp[n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

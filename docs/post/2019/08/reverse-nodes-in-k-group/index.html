@@ -36,7 +36,7 @@ For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5" />
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/reverse-nodes-in-k-group/" />
@@ -194,144 +194,115 @@ For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5" />
         <h5>Last updated: August 11, 2019</h5>
       
       <hr />
-      
-
-<p>Given a linked list, reverse the nodes of a linked list <code>k</code> at a time and return its modified list.</p>
-
+      <p>Given a linked list, reverse the nodes of a linked list <code>k</code> at a time and return its modified list.</p>
 <p><code>k</code> is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of <code>k</code> then left-out nodes in the end should remain as it is.</p>
-
 <h3 id="example">Example</h3>
-
-<p>Given this linked list: <code>1-&gt;2-&gt;3-&gt;4-&gt;5</code><br />
-For <code>k = 2</code>, you should return: <code>2-&gt;1-&gt;4-&gt;3-&gt;5</code><br />
+<p>Given this linked list: <code>1-&gt;2-&gt;3-&gt;4-&gt;5</code><br>
+For <code>k = 2</code>, you should return: <code>2-&gt;1-&gt;4-&gt;3-&gt;5</code><br>
 For <code>k = 3</code>, you should return: <code>3-&gt;2-&gt;1-&gt;4-&gt;5</code></p>
-
 <h3 id="note">Note</h3>
-
 <ul>
 <li>Only constant extra memory is allowed.</li>
-
-<li><p>You may not alter the values in the list&rsquo;s nodes, only nodes itself may be changed.</p>
-
-<h3 id="solution">Solution</h3>
-
-<p>```python</p>
-
-<h1 id="definition-for-singly-linked-list">Definition for singly-linked list.</h1>
-
-<h1 id="class-listnode-object">class ListNode(object):</h1>
-
-<h1 id="def-init-self-x">def <strong>init</strong>(self, x):</h1>
-
-<h1 id="self-val-x">self.val = x</h1>
-
-<h1 id="self-next-none">self.next = None</h1></li>
+<li>You may not alter the values in the list&rsquo;s nodes, only nodes itself may be changed.</li>
 </ul>
+<h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
 
-<h1 id="k-3-next">k = 3,                       next</h1>
+<span style="color:#75715e">#   k = 3,                       next</span>
+<span style="color:#75715e">#  dummy --&gt;[1 ----&gt; 2 -------&gt; 3]  -------&gt; 4 ---------&gt; 5 --&gt; Null</span>
+<span style="color:#75715e">#   prev   tail    curr   nextNode         last</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#  dummy --&gt;[2 ----&gt; 1 -------&gt; 3]  -------&gt; 4 ---------&gt; 5 --&gt; Null</span>
+<span style="color:#75715e">#                              curr</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#  dummy --&gt;[3 ----&gt; 2 -------&gt; 1]  -------&gt; 4 ---------&gt; 5 --&gt; Null</span>
+<span style="color:#75715e">#                              tail        curr/last</span>
+<span style="color:#75715e">#                                          new prev</span>
 
-<h1 id="dummy-1-2-3-4-5-null">dummy &ndash;&gt;[1 &mdash;-&gt; 2 &mdash;&mdash;-&gt; 3]  &mdash;&mdash;-&gt; 4 &mdash;&mdash;&mdash;&gt; 5 &ndash;&gt; Null</h1>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseKGroup</span>(self, head, k):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type head: ListNode
+</span><span style="color:#e6db74">        :type k: int
+</span><span style="color:#e6db74">        :rtype: ListNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> head <span style="color:#f92672">is</span> None:
+            <span style="color:#66d9ef">return</span> None
+        dummy <span style="color:#f92672">=</span> ListNode(<span style="color:#ae81ff">0</span>)
+        dummy<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> head
+        prev <span style="color:#f92672">=</span> dummy
+        <span style="color:#66d9ef">while</span> prev <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> None:
+            prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>reverse(prev, k)
+        <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">.</span>next
 
-<h1 id="prev-tail-curr-nextnode-last">prev   tail    curr   nextNode         last</h1>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverse</span>(self, prev, k):
+        last <span style="color:#f92672">=</span> prev
+        <span style="color:#75715e"># k+1 steps, in our case, k = 1, last = node(4)</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            last <span style="color:#f92672">=</span> last<span style="color:#f92672">.</span>next
+            <span style="color:#75715e"># last is None which means we have reached the end, and at the same time, the stack length is &lt; k, so we don&#39;t need to reverse the stack</span>
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> k <span style="color:#f92672">and</span> last <span style="color:#f92672">==</span> None:
+                <span style="color:#66d9ef">return</span> None
+        tail <span style="color:#f92672">=</span> prev<span style="color:#f92672">.</span>next
+        curr <span style="color:#f92672">=</span> prev<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">while</span> curr <span style="color:#f92672">!=</span> last:
+            nextNode <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>next
+            curr<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> prev<span style="color:#f92672">.</span>next
+            prev<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> curr
+            tail<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> nextNode
+            curr <span style="color:#f92672">=</span> nextNode
+        <span style="color:#75715e"># when curr == last, stack has been reversed completely</span>
+        <span style="color:#75715e"># after the first iteration, tail is node(1), which is the prev for the next k-long stack</span>
+        <span style="color:#66d9ef">return</span> tail
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
 
-<p>#</p>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseKGroup</span>(self, head: ListNode, k: int) <span style="color:#f92672">-&gt;</span> ListNode:
+            dummy <span style="color:#f92672">=</span> ListNode(<span style="color:#ae81ff">0</span>)
+            dummy<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> head
+            head <span style="color:#f92672">=</span> dummy
+            <span style="color:#66d9ef">while</span> True:
+                head <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>reverse(head, k)
+                <span style="color:#66d9ef">if</span> head <span style="color:#f92672">==</span> None:
+                    <span style="color:#66d9ef">break</span>
+            <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">.</span>next
 
-<h1 id="dummy-2-1-3-4-5-null">dummy &ndash;&gt;[2 &mdash;-&gt; 1 &mdash;&mdash;-&gt; 3]  &mdash;&mdash;-&gt; 4 &mdash;&mdash;&mdash;&gt; 5 &ndash;&gt; Null</h1>
-
-<h1 id="curr">curr</h1>
-
-<p>#</p>
-
-<h1 id="dummy-3-2-1-4-5-null">dummy &ndash;&gt;[3 &mdash;-&gt; 2 &mdash;&mdash;-&gt; 1]  &mdash;&mdash;-&gt; 4 &mdash;&mdash;&mdash;&gt; 5 &ndash;&gt; Null</h1>
-
-<h1 id="tail-curr-last">tail        curr/last</h1>
-
-<h1 id="new-prev">new prev</h1>
-
-<p>class Solution(object):
-    def reverseKGroup(self, head, k):
-        &ldquo;&rdquo;&rdquo;
-        :type head: ListNode
-        :type k: int
-        :rtype: ListNode
-        &ldquo;&rdquo;&rdquo;
-        if head is None:
-            return None
-        dummy = ListNode(0)
-        dummy.next = head
-        prev = dummy
-        while prev is not None:
-            prev = self.reverse(prev, k)
-        return dummy.next</p>
-
-<pre><code>def reverse(self, prev, k):
-    last = prev
-    # k+1 steps, in our case, k = 1, last = node(4)
-    for i in range(k+1):
-        last = last.next
-        # last is None which means we have reached the end, and at the same time, the stack length is &lt; k, so we don't need to reverse the stack
-        if i != k and last == None:
-            return None
-    tail = prev.next
-    curr = prev.next.next
-    while curr != last:
-        nextNode = curr.next
-        curr.next = prev.next
-        prev.next = curr
-        tail.next = nextNode
-        curr = nextNode
-    # when curr == last, stack has been reversed completely
-    # after the first iteration, tail is node(1), which is the prev for the next k-long stack
-    return tail
-</code></pre>
-
-<pre><code>```python
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution:
-    def reverseKGroup(self, head: ListNode, k: int) -&gt; ListNode:
-            dummy = ListNode(0)
-            dummy.next = head
-            head = dummy
-            while True:
-                head = self.reverse(head, k)
-                if head == None:
-                    break
-            return dummy.next
-
-    # head -&gt; [Node1 -&gt; Node2 -&gt; ... -&gt; NodeK] -&gt; NodeKPlus
-    def reverse(self, head, k):
-        # kth node
-        nodeK = head
-        for i in range(k):
-            # Always check validity of nodeK
-            if nodeK == None:
-                return None
-            nodeK = nodeK.next
-        # Always check validity of nodeK
-        if nodeK == None:
-            return None
-        # Get (k+1)th node
-        node1 = head.next
-        nodeKPlus = nodeK.next
-        # Reverse the [Node1 ... NodeK]
-        prev = None
-        curr = node1
-        while curr != nodeKPlus:
-            temp = curr.next
-            curr.next = prev
-            prev = curr
-            curr = temp
-        # connecting two sides
-        head.next = nodeK
-        node1.next = nodeKPlus
-        return node1
-</code></pre>
-
+    <span style="color:#75715e"># head -&gt; [Node1 -&gt; Node2 -&gt; ... -&gt; NodeK] -&gt; NodeKPlus</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverse</span>(self, head, k):
+        <span style="color:#75715e"># kth node</span>
+        nodeK <span style="color:#f92672">=</span> head
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(k):
+            <span style="color:#75715e"># Always check validity of nodeK</span>
+            <span style="color:#66d9ef">if</span> nodeK <span style="color:#f92672">==</span> None:
+                <span style="color:#66d9ef">return</span> None
+            nodeK <span style="color:#f92672">=</span> nodeK<span style="color:#f92672">.</span>next
+        <span style="color:#75715e"># Always check validity of nodeK</span>
+        <span style="color:#66d9ef">if</span> nodeK <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> None
+        <span style="color:#75715e"># Get (k+1)th node</span>
+        node1 <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
+        nodeKPlus <span style="color:#f92672">=</span> nodeK<span style="color:#f92672">.</span>next
+        <span style="color:#75715e"># Reverse the [Node1 ... NodeK]</span>
+        prev <span style="color:#f92672">=</span> None
+        curr <span style="color:#f92672">=</span> node1
+        <span style="color:#66d9ef">while</span> curr <span style="color:#f92672">!=</span> nodeKPlus:
+            temp <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>next
+            curr<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> prev
+            prev <span style="color:#f92672">=</span> curr
+            curr <span style="color:#f92672">=</span> temp
+        <span style="color:#75715e"># connecting two sides</span>
+        head<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> nodeK
+        node1<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> nodeKPlus
+        <span style="color:#66d9ef">return</span> node1
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

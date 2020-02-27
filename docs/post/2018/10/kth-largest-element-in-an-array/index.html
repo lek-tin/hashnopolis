@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5 Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4 Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
 Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)" />
   <meta name="keywords" content="leetcode quick-select two-pointers " />
   
@@ -26,7 +26,7 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
     
     <meta name="twitter:title" content="Kth Largest Element in an Array" />
     <meta name="twitter:description" content="Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5  Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4  Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5 Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4 Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
 Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n&#43;kLogk)" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
@@ -34,7 +34,7 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/kth-largest-element-in-an-array/" />
@@ -194,68 +194,54 @@ Solution: Average time complexity: O(n) if we don’t need the sorted output, ot
         <h5>Last updated: October 24, 2018</h5>
       
       <hr />
-      
-
-<p>Find the <code>kth</code> largest element in an unsorted array. Note that it is the <code>kth</code> largest element in the sorted order, not the <code>kth</code> distinct element.</p>
-
+      <p>Find the <code>kth</code> largest element in an unsorted array. Note that it is the <code>kth</code> largest element in the sorted order, not the <code>kth</code> distinct element.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: [3,2,1,5,6,4] and k = 2
 Output: 5
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: [3,2,3,1,2,4,5,5,6] and k = 4
 Output: 4
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <p>You may assume <code>k</code> is always valid, <code>1 ≤ k ≤ array's length</code>.</p>
-
 <h3 id="solution">Solution:</h3>
-
-<p>Average time complexity: <code>O(n)</code> if we don’t need the sorted output, otherwise <code>O(n+kLogk)</code><br />
-<code>T(n) = T(n/2) + n = n + n/2 + n/4 + ... = n * (1 + 1/2 + 1/4 + ...)</code><br />
+<p>Average time complexity: <code>O(n)</code> if we don’t need the sorted output, otherwise <code>O(n+kLogk)</code><br>
+<code>T(n) = T(n/2) + n = n + n/2 + n/4 + ... = n * (1 + 1/2 + 1/4 + ...)</code><br>
 Thisa sum of geometric series, which is equal to 2. Therefore the sum is <code>2n</code>. So the complexity is <code>O(n)</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findKthLargest</span>(self, nums: List[int], k: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> nums <span style="color:#f92672">or</span> k <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> k <span style="color:#f92672">&gt;</span> len(nums):
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python">class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -&gt; int:
-        if not nums or k &lt;= 0 or k &gt; len(nums):
-            return -1
+        pos, start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">while</span> True:
+            pos <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>partition(nums, start, end)
+            <span style="color:#66d9ef">if</span> pos<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> k:
+                <span style="color:#66d9ef">return</span> nums[pos]
+            <span style="color:#66d9ef">elif</span> pos<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&gt;</span> k:
+                end <span style="color:#f92672">=</span> pos<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                start <span style="color:#f92672">=</span> pos<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
 
-        pos, start, end = 0, 0, len(nums)-1
-        while True:
-            pos = self.partition(nums, start, end)
-            if pos+1 == k:
-                return nums[pos]
-            elif pos+1 &gt; k:
-                end = pos-1
-            else:
-                start = pos+1
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(self, nums, start, end):
+        pivot <span style="color:#f92672">=</span> start
+        start <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">while</span> start <span style="color:#f92672">&lt;=</span> end:
+            <span style="color:#66d9ef">if</span> nums[start] <span style="color:#f92672">&lt;</span> nums[pivot] <span style="color:#f92672">and</span> nums[end] <span style="color:#f92672">&gt;</span> nums[pivot]:
+                self<span style="color:#f92672">.</span>swap(nums, start, end)
+                start <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                end <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> nums[start] <span style="color:#f92672">&gt;=</span> nums[pivot]:
+                start <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> nums[end] <span style="color:#f92672">&lt;=</span> nums[pivot]:
+                end <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        self<span style="color:#f92672">.</span>swap(nums, pivot, end)
+        <span style="color:#66d9ef">return</span> end
 
-    def partition(self, nums, start, end):
-        pivot = start
-        start += 1
-        while start &lt;= end:
-            if nums[start] &lt; nums[pivot] and nums[end] &gt; nums[pivot]:
-                self.swap(nums, start, end)
-                start += 1
-                end -= 1
-            if nums[start] &gt;= nums[pivot]:
-                start += 1
-            if nums[end] &lt;= nums[pivot]:
-                end -= 1
-        self.swap(nums, pivot, end)
-        return end
-
-    def swap(self, nums, i, j):
-        temp = nums[i]
-        nums[i] = nums[j]
-        nums[j] = temp
-</code></pre>
-
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swap</span>(self, nums, i, j):
+        temp <span style="color:#f92672">=</span> nums[i]
+        nums[i] <span style="color:#f92672">=</span> nums[j]
+        nums[j] <span style="color:#f92672">=</span> temp
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/linked-list/" />
@@ -180,7 +180,7 @@
 
       <p>Write a program to find the node at which the intersection of two singly linked lists begins.
 For example, the following two linked lists:
-A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3  begin to intersect at node c1.
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3 begin to intersect at node c1.
 Note If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</p>
 
       <p class="meta">
@@ -209,7 +209,7 @@ Note If the two linked lists have no intersection at all, return null. The linke
       <p>Reverse a linked list from position m to n. Do it in one-pass.
 Note: 1 ≤ m ≤ n ≤ length of list.
 Example:
-Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL  Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy.</p>
+Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy.</p>
 
       <p class="meta">
         
@@ -235,7 +235,7 @@ Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 Output: 1-&gt;4-&gt;3-&g
       <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-linked-list-elements/">Remove Linked List Elements</a></h2>
 
       <p>Remove all elements from a linked list of integers that have value val.
-Example Input: 1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6 Output: 1-&gt;2-&gt;3-&gt;4-&gt;5  Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &#34;&#34;&#34; :type head: ListNode :type val: int :rtype: ListNode &#34;&#34;&#34; pre = ListNode(0) pre.next = head pos = pre while pos.</p>
+Example Input: 1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6 Output: 1-&gt;2-&gt;3-&gt;4-&gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &#34;&#34;&#34; :type head: ListNode :type val: int :rtype: ListNode &#34;&#34;&#34; pre = ListNode(0) pre.next = head pos = pre while pos.next != None: if pos.</p>
 
       <p class="meta">
         
@@ -261,7 +261,7 @@ Example Input: 1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6 Output: 1-&gt;2-&g
       <h2><a href="http://www.hashnopolis.com/post/2018/09/remove-duplicates-from-sorted-list/">Remove Duplicates From Sorted List</a></h2>
 
       <p>Given a sorted linked list, delete all duplicates such that each element appear only once.
-Example 1 Input: 1-&gt;1-&gt;2 Output: 1-&gt;2  Example 2 Input: 1-&gt;1-&gt;2-&gt;3-&gt;3 Output: 1-&gt;2-&gt;3  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr = head while curr != None and curr.</p>
+Example 1 Input: 1-&gt;1-&gt;2 Output: 1-&gt;2 Example 2 Input: 1-&gt;1-&gt;2-&gt;3-&gt;3 Output: 1-&gt;2-&gt;3 Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr = head while curr != None and curr.next != None: if curr.</p>
 
       <p class="meta">
         
@@ -314,9 +314,9 @@ Solution # Definition for singly-linked list. # class ListNode(object): # def __
       <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></h2>
 
       <p>Given a linked list, remove the n-th node from the end of list and return its head.
-Example Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.  Note Given n will always be valid.
+Example Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5. Note Given n will always be valid.
 Follow-up Could you do this in one pass?
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</p>
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.</p>
 
       <p class="meta">
         

@@ -34,7 +34,7 @@ Each word after the identifier will consist only of lowercase letters, or; Each 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/11/reorder-data-in-log-files/" />
@@ -194,94 +194,76 @@ Each word after the identifier will consist only of lowercase letters, or; Each 
         <h5>Last updated: November 8, 2019</h5>
       
       <hr />
-      
-
-<p>You have an array of <code>logs</code>.  Each log is a space delimited string of words.</p>
-
+      <p>You have an array of <code>logs</code>.  Each log is a space delimited string of words.</p>
 <p>For each log, the first word in each log is an <strong>alphanumeric identifier</strong>.  Then, either:</p>
-
 <p>Each word after the identifier will consist only of lowercase letters, or;
 Each word after the <strong>identifier</strong> will consist only of digits.
 We will call these two varieties of logs <strong>letter-logs</strong> and <strong>digit-logs</strong>.  It is guaranteed that each log has at least one word after its identifier.</p>
-
 <p>Reorder the logs so that all of the <strong>letter-logs</strong> come before any <strong>digit-log</strong>.  The <strong>letter-logs</strong> are ordered lexicographically ignoring identifier, with the identifier used in case of ties.  The <strong>digit-logs</strong> should be put in their original order.</p>
-
 <p>Return the final order of the logs.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: [&quot;a1 9 2 3 1&quot;,&quot;g1 act car&quot;,&quot;zo4 4 7&quot;,&quot;ab1 off key dog&quot;,&quot;a8 act zoo&quot;]
 Output: [&quot;g1 act car&quot;,&quot;a8 act zoo&quot;,&quot;ab1 off key dog&quot;,&quot;a1 9 2 3 1&quot;,&quot;zo4 4 7&quot;]
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>0 &lt;= logs.length &lt;= 1001</code></li>
 <li><code>3 &lt;= logs[i].length &lt;= 100</code></li>
 <li><code>logs[i]</code> is guaranteed to have an identifier, and a word after the identifier.</li>
 </ol>
-
 <h3 id="solution">Solution:</h3>
-
 <p>Java comparator</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
 
-<pre><code class="language-java">class Solution {
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">logComparator</span> <span style="color:#66d9ef">implements</span> Comparator<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+        <span style="color:#a6e22e">@Override</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span><span style="color:#f92672">(</span>String a<span style="color:#f92672">,</span> String b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> index_a <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">indexOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">int</span> index_b <span style="color:#f92672">=</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">indexOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">char</span> char_a <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>index_a<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">char</span> char_b <span style="color:#f92672">=</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>index_b<span style="color:#f92672">);</span>
+            <span style="color:#75715e">// If both are char, compare by substirng
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>isDigit<span style="color:#f92672">(</span>char_a<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>isDigit<span style="color:#f92672">(</span>char_b<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>index_a<span style="color:#f92672">).</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>b<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>index_b<span style="color:#f92672">));</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#75715e">// char should appear before digit, return negative value;
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>isDigit<span style="color:#f92672">(</span>char_a<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> isDigit<span style="color:#f92672">(</span>char_b<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#75715e">// char should be brought forward, return positive value;
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isDigit<span style="color:#f92672">(</span>char_a<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>isDigit<span style="color:#f92672">(</span>char_b<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#75715e">// If both are digits, remain order
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
 
-    private class logComparator implements Comparator&lt;String&gt; {
-        @Override
-        public int compare(String a, String b) {
-            int index_a = a.indexOf(&quot; &quot;) + 1;
-            int index_b = b.indexOf(&quot; &quot;) + 1;
-            char char_a = a.charAt(index_a);
-            char char_b = b.charAt(index_b);
-            // If both are char, compare by substirng
-            if (!isDigit(char_a) &amp;&amp; !isDigit(char_b)) {
-                return a.substring(index_a).compareTo(b.substring(index_b));
-            }
-            // char should appear before digit, return negative value;
-            if (!isDigit(char_a) &amp;&amp; isDigit(char_b)) {
-                return -1;
-            }
-            // char should be brought forward, return positive value;
-            if (isDigit(char_a) &amp;&amp; !isDigit(char_b)) {
-                return 1;
-            }
-            // If both are digits, remain order
-            return 0;
-        }
-    }
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isDigit</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> ch<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>ch <span style="color:#f92672">&gt;=</span> <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">&amp;&amp;</span> ch <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;9&#39;</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    private boolean isDigit(char ch) {
-      if(ch &gt;= '0' &amp;&amp; ch &lt;= '9') return true;
-      else return false;
-    }
+    <span style="color:#66d9ef">public</span> String<span style="color:#f92672">[]</span> <span style="color:#a6e22e">reorderLogFiles</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> logs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        logComparator LC <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> logComparator<span style="color:#f92672">();</span>
+        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>logs<span style="color:#f92672">,</span> LC<span style="color:#f92672">);</span>
 
-    public String[] reorderLogFiles(String[] logs) {
-        logComparator LC = new logComparator();
-        Arrays.sort(logs, LC);
+        <span style="color:#66d9ef">return</span> logs<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Python:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reorderLogFiles</span>(self, logs):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type logs: List[str]
+</span><span style="color:#e6db74">        :rtype: List[str]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">f</span>(log):
+            i, content <span style="color:#f92672">=</span> log<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#ae81ff">1</span>)
+            <span style="color:#66d9ef">return</span> (<span style="color:#ae81ff">0</span>, content, i) <span style="color:#66d9ef">if</span> content[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>isalpha() <span style="color:#66d9ef">else</span> (<span style="color:#ae81ff">1</span>,)
 
-        return logs;
-    }
-}
-</code></pre>
-
-<p>Python:</p>
-
-<pre><code class="language-python">class Solution(object):
-    def reorderLogFiles(self, logs):
-        &quot;&quot;&quot;
-        :type logs: List[str]
-        :rtype: List[str]
-        &quot;&quot;&quot;
-        def f(log):
-            i, content = log.split(&quot; &quot;, 1)
-            return (0, content, i) if content[0].isalpha() else (1,)
-
-        logs.sort(key=f)
-        return logs
-</code></pre>
-
+        logs<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span>f)
+        <span style="color:#66d9ef">return</span> logs
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

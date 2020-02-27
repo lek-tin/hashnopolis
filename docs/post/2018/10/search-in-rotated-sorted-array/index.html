@@ -21,7 +21,7 @@
 You are given a target value to search. If found in the array return its index, otherwise return -1.
 You may assume no duplicate exists in the array.
 Your algorithm&amp;rsquo;s runtime complexity must be in the order of O(log n).
-Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1  Solution class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start &#43; 1) &amp;lt; end: mid = start &#43; (end - start) // 2 if nums[mid] == target: return mid # &amp;lt; because there are no duplicate numbers." />
+Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4 Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1 Solution class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start &#43; 1) &amp;lt; end: mid = start &#43; (end - start) // 2 if nums[mid] == target: return mid # &amp;lt; because there are no duplicate numbers." />
   <meta name="keywords" content="leetcode binary-search " />
   
   
@@ -33,14 +33,14 @@ Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2 Input: 
 You are given a target value to search. If found in the array return its index, otherwise return -1.
 You may assume no duplicate exists in the array.
 Your algorithm&amp;rsquo;s runtime complexity must be in the order of O(log n).
-Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1  Solution class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start &#43; 1) &amp;lt; end: mid = start &#43; (end - start) // 2 if nums[mid] == target: return mid # &amp;lt; because there are no duplicate numbers." />
+Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4 Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1 Solution class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start &#43; 1) &amp;lt; end: mid = start &#43; (end - start) // 2 if nums[mid] == target: return mid # &amp;lt; because there are no duplicate numbers." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/search-in-rotated-sorted-array/" />
@@ -198,68 +198,52 @@ Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4  Example 2 Input: 
         <h5>Last updated: September 22, 2019</h5>
       
       <hr />
-      
-
-<p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
-
+      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
 <p>(i.e., <code>[0,1,2,4,5,6,7]</code> might become <code>[4,5,6,7,0,1,2]</code>).</p>
-
 <p>You are given a target value to search. If found in the array return its index, otherwise return <code>-1</code>.</p>
-
 <p>You may assume no duplicate exists in the array.</p>
-
 <p>Your algorithm&rsquo;s runtime complexity must be in the order of <code>O(log n)</code>.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: nums = [4,5,6,7,0,1,2], target = 0
 Output: 4
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: nums = [4,5,6,7,0,1,2], target = 3
 Output: -1
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, nums: List[int], target: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> nums <span style="color:#f92672">==</span> None <span style="color:#f92672">or</span> len(nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-<h3 id="solution">Solution</h3>
+        start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(nums) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">while</span> (start <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;</span> end:
+            mid <span style="color:#f92672">=</span> start <span style="color:#f92672">+</span> (end <span style="color:#f92672">-</span> start) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">if</span> nums[mid] <span style="color:#f92672">==</span> target:
+                <span style="color:#66d9ef">return</span> mid
+            <span style="color:#75715e"># &lt; because there are no duplicate numbers.</span>
+            <span style="color:#66d9ef">if</span> nums[start] <span style="color:#f92672">&lt;</span> nums[mid]:
+                <span style="color:#75715e"># case 1</span>
+                <span style="color:#66d9ef">if</span> nums[start] <span style="color:#f92672">&lt;=</span> target <span style="color:#f92672">and</span> target <span style="color:#f92672">&lt;=</span> nums[mid]:
+                    end <span style="color:#f92672">=</span> mid
+                <span style="color:#75715e"># case 2</span>
+                <span style="color:#66d9ef">else</span>:
+                    start <span style="color:#f92672">=</span> mid
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#75715e"># case 3</span>
+                <span style="color:#66d9ef">if</span> nums[mid] <span style="color:#f92672">&lt;=</span> target <span style="color:#f92672">and</span> target <span style="color:#f92672">&lt;=</span> nums[end]:
+                    start <span style="color:#f92672">=</span> mid
+                <span style="color:#75715e"># case 4</span>
+                <span style="color:#66d9ef">else</span>:
+                    end <span style="color:#f92672">=</span> mid
 
-<pre><code class="language-python">class Solution:
-    def search(self, nums: List[int], target: int) -&gt; int:
-        if nums == None or len(nums) == 0:
-            return -1
+        <span style="color:#66d9ef">if</span> nums[start] <span style="color:#f92672">==</span> target:
+            <span style="color:#66d9ef">return</span> start
+        <span style="color:#66d9ef">if</span> nums[end] <span style="color:#f92672">==</span> target:
+            <span style="color:#66d9ef">return</span> end
 
-        start, end = 0, len(nums) - 1
-        while (start + 1) &lt; end:
-            mid = start + (end - start) // 2
-            if nums[mid] == target:
-                return mid
-            # &lt; because there are no duplicate numbers.
-            if nums[start] &lt; nums[mid]:
-                # case 1
-                if nums[start] &lt;= target and target &lt;= nums[mid]:
-                    end = mid
-                # case 2
-                else:
-                    start = mid
-            else:
-                # case 3
-                if nums[mid] &lt;= target and target &lt;= nums[end]:
-                    start = mid
-                # case 4
-                else:
-                    end = mid
-
-        if nums[start] == target:
-            return start
-        if nums[end] == target:
-            return end
-
-        return -1
-</code></pre>
-
-<p>4 scenarios when searching
-<img src="/img/post/search-in-rotated-sorted-array.jpg" alt="Search in Rotated Sorted Array" /></p>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>4 scenarios when searching
+<img src="/img/post/search-in-rotated-sorted-array.jpg" alt="Search in Rotated Sorted Array"></p>
 
   </div>
 

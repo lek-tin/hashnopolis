@@ -18,7 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 Note The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m &#43; n) to hold additional elements from nums2.
-Example Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3" />
+Example Input: nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3
+Output: `[1,2,2,3,5,6]` Solution # Time: o(m&#43;n) # Space: o(1) class Solution: def merge(self, nums1, m, nums2, n): &amp;#34;&amp;#34;&amp;#34; :type nums1: List[int] :type m: int :type nums2: List[int] :type n: int :rtype: void Do not return anything, modify nums1 in-place instead." />
   <meta name="keywords" content="leetcode " />
   
   
@@ -27,14 +28,15 @@ Example Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3" />
     <meta name="twitter:title" content="Merge Sorted Array" />
     <meta name="twitter:description" content="Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 Note The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m &#43; n) to hold additional elements from nums2.
-Example Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3" />
+Example Input: nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3
+Output: `[1,2,2,3,5,6]` Solution # Time: o(m&#43;n) # Space: o(1) class Solution: def merge(self, nums1, m, nums2, n): &amp;#34;&amp;#34;&amp;#34; :type nums1: List[int] :type m: int :type nums2: List[int] :type n: int :rtype: void Do not return anything, modify nums1 in-place instead." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/merge-sorted-array/" />
@@ -190,56 +192,43 @@ Example Input:  nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3" />
         <h5>Last updated: October 8, 2018</h5>
       
       <hr />
-      
-
-<p>Given two sorted integer arrays <code>nums1</code> and <code>nums2</code>, merge <code>nums2</code> into <code>nums1</code> as one sorted array.</p>
-
+      <p>Given two sorted integer arrays <code>nums1</code> and <code>nums2</code>, merge <code>nums2</code> into <code>nums1</code> as one sorted array.</p>
 <h3 id="note">Note</h3>
-
 <p>The number of elements initialized in nums1 and nums2 are m and n respectively.
 You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>Input:
-</code></pre>
-
-<p>nums1 = [1,2,3,0,0,0], m = 3
+</code></pre><p>nums1 = [1,2,3,0,0,0], m = 3
 nums2 = [2,5,6],       n = 3</p>
-
 <pre><code>Output: `[1,2,2,3,5,6]`
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python"># Time: o(m+n)
-# Space: o(1)
-class Solution:
-    def merge(self, nums1, m, nums2, n):
-        &quot;&quot;&quot;
-        :type nums1: List[int]
-        :type m: int
-        :type nums2: List[int]
-        :type n: int
-        :rtype: void Do not return anything, modify nums1 in-place instead.
-        &quot;&quot;&quot;
-        i, j, k = m-1, n-1, m+n-1
-        while i &gt;= 0 and j &gt;= 0:
-            if nums1[i] &gt;= nums2[j]:
-                nums1[k] = nums1[i]
-                i -= 1
-            else:
-                nums1[k] = nums2[j]
-                j -= 1
-            k -= 1
-        # nums1 holds the result
-        # For example, if nums1 = [7, 8, 9], nums2=[1, 2], when nums1 has been iterated completely(i&lt;0), j needs to keep iterating till it reaches 0 index.
-        while j &gt;= 0:
-            nums1[k] = nums2[j]
-            k -= 1
-            j -= 1
-</code></pre>
-
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: o(m+n)</span>
+<span style="color:#75715e"># Space: o(1)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge</span>(self, nums1, m, nums2, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums1: List[int]
+</span><span style="color:#e6db74">        :type m: int
+</span><span style="color:#e6db74">        :type nums2: List[int]
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: void Do not return anything, modify nums1 in-place instead.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        i, j, k <span style="color:#f92672">=</span> m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, m<span style="color:#f92672">+</span>n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">if</span> nums1[i] <span style="color:#f92672">&gt;=</span> nums2[j]:
+                nums1[k] <span style="color:#f92672">=</span> nums1[i]
+                i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                nums1[k] <span style="color:#f92672">=</span> nums2[j]
+                j <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            k <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#75715e"># nums1 holds the result</span>
+        <span style="color:#75715e"># For example, if nums1 = [7, 8, 9], nums2=[1, 2], when nums1 has been iterated completely(i&lt;0), j needs to keep iterating till it reaches 0 index.</span>
+        <span style="color:#66d9ef">while</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+            nums1[k] <span style="color:#f92672">=</span> nums2[j]
+            k <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            j <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -18,7 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a string s of &#39;(&#39; , &#39;)&#39; and lowercase English characters.
 Your task is to remove the minimum number of parentheses ( &#39;(&#39; or &#39;)&#39;, in any positions ) so that the resulting parentheses string is valid and return any valid string.
-Formally, a parentheses string is valid if and only if: 1. It is the empty string, contains only lowercase characters, or 2. It can be written as AB (A concatenated with B), where A and B are valid strings, or 3." />
+Formally, a parentheses string is valid if and only if:
+ It is the empty string, contains only lowercase characters, or It can be written as AB (A concatenated with B), where A and B are valid strings, or It can be written as (A), where A is a valid string." />
   <meta name="keywords" content="leetcode stack " />
   
   
@@ -27,14 +28,15 @@ Formally, a parentheses string is valid if and only if: 1. It is the empty strin
     <meta name="twitter:title" content="Minimum Remove to Make Valid Parentheses" />
     <meta name="twitter:description" content="Given a string s of &#39;(&#39; , &#39;)&#39; and lowercase English characters.
 Your task is to remove the minimum number of parentheses ( &#39;(&#39; or &#39;)&#39;, in any positions ) so that the resulting parentheses string is valid and return any valid string.
-Formally, a parentheses string is valid if and only if: 1. It is the empty string, contains only lowercase characters, or 2. It can be written as AB (A concatenated with B), where A and B are valid strings, or 3." />
+Formally, a parentheses string is valid if and only if:
+ It is the empty string, contains only lowercase characters, or It can be written as AB (A concatenated with B), where A and B are valid strings, or It can be written as (A), where A is a valid string." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/01/minimum-remove-to-make-valid-parentheses/" />
@@ -192,77 +194,58 @@ Formally, a parentheses string is valid if and only if: 1. It is the empty strin
         <h5>Last updated: January 23, 2020</h5>
       
       <hr />
-      
-
-<p>Given a string s of <code>'('</code> , <code>')'</code> and lowercase English characters.</p>
-
+      <p>Given a string s of <code>'('</code> , <code>')'</code> and lowercase English characters.</p>
 <p>Your task is to remove the minimum number of parentheses ( <code>'('</code> or <code>')'</code>, in any positions ) so that the resulting parentheses string is valid and return any valid string.</p>
-
-<p>Formally, a parentheses string is valid if and only if:
-1. It is the empty string, contains only lowercase characters, or
-2. It can be written as AB (A concatenated with B), where A and B are valid strings, or
-3. It can be written as (A), where A is a valid string.</p>
-
+<p>Formally, a parentheses string is valid if and only if:</p>
+<ol>
+<li>It is the empty string, contains only lowercase characters, or</li>
+<li>It can be written as AB (A concatenated with B), where A and B are valid strings, or</li>
+<li>It can be written as (A), where A is a valid string.</li>
+</ol>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: s = &quot;lee(t(c)o)de)&quot;
 Output: &quot;lee(t(c)o)de&quot;
 Explanation: &quot;lee(t(co)de)&quot; , &quot;lee(t(c)ode)&quot; would also be accepted.
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: s = &quot;a)b(c)d&quot;
 Output: &quot;ab(c)d&quot;
-</code></pre>
-
-<h3 id="example-3">Example 3:</h3>
-
+</code></pre><h3 id="example-3">Example 3:</h3>
 <pre><code>Input: s = &quot;))((&quot;
 Output: &quot;&quot;
 Explanation: An empty string is also valid.
-</code></pre>
-
-<h3 id="example-4">Example 4:</h3>
-
+</code></pre><h3 id="example-4">Example 4:</h3>
 <pre><code>Input: s = &quot;(a(b(c)d)&quot;
 Output: &quot;a(b(c)d)&quot;
-</code></pre>
-
-<h3 id="constraints">Constraints:</h3>
-
+</code></pre><h3 id="constraints">Constraints:</h3>
 <ol>
 <li><code>1 &lt;= s.length &lt;= 10^5</code></li>
 <li><code>s[i]</code> is one of  <code>'('</code> , <code>')'</code> and lowercase English letters.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minRemoveToMakeValid</span>(self, s: str) <span style="color:#f92672">-&gt;</span> str:
+        stack <span style="color:#f92672">=</span> []
+        indices <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> i, char <span style="color:#f92672">in</span> enumerate(s):
+            <span style="color:#66d9ef">if</span> char <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;(&#39;</span> <span style="color:#f92672">and</span> char <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;)&#39;</span>:
+                <span style="color:#66d9ef">continue</span>
+            <span style="color:#66d9ef">elif</span> char <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span>:
+                stack<span style="color:#f92672">.</span>append(i)
+            <span style="color:#66d9ef">elif</span> stack:
+                stack<span style="color:#f92672">.</span>pop()
+            <span style="color:#66d9ef">else</span>:
+                indices<span style="color:#f92672">.</span>append(i)
 
-<pre><code class="language-python">class Solution:
-    def minRemoveToMakeValid(self, s: str) -&gt; str:
-        stack = []
-        indices = []
-        for i, char in enumerate(s):
-            if char != '(' and char != ')':
-                continue
-            elif char == '(':
-                stack.append(i)
-            elif stack:
-                stack.pop()
-            else:
-                indices.append(i)
+        indices <span style="color:#f92672">+=</span> stack
 
-        indices += stack
+        newStr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
 
-        newStr = &quot;&quot;
+        <span style="color:#66d9ef">for</span> i, char <span style="color:#f92672">in</span> enumerate(s):
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> indices:
+                newStr <span style="color:#f92672">+=</span> char
 
-        for i, char in enumerate(s):
-            if i not in indices:
-                newStr += char
-
-        return newStr
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> newStr
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

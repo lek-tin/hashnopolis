@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Binary Tree on Hashnopolis</title>
+    <title>binary-tree on Hashnopolis</title>
     <link>http://www.hashnopolis.com/tags/binary-tree/</link>
-    <description>Recent content in Binary Tree on Hashnopolis</description>
+    <description>Recent content in binary-tree on Hashnopolis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
@@ -20,8 +20,8 @@
       <guid>http://www.hashnopolis.com/post/2020/02/balanced-binary-tree/</guid>
       <description>Given a binary tree, determine if it is height-balanced.
 For this problem, a height-balanced binary tree is defined as:
-&amp;gt; a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
-Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7 Return true.  Example 2: Given the following tree [1,2,2,3,3,null,null,4,4]: 1 / \ 2 2 / \ 3 3 / \ 4 4 Return false.</description>
+ a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+ Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7 Return true. Example 2: Given the following tree [1,2,2,3,3,null,null,4,4]: 1 / \ 2 2 / \ 3 3 / \ 4 4 Return false.</description>
     </item>
     
     <item>
@@ -43,8 +43,8 @@ Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7
       <description>Given preorder and inorder traversal of a tree, construct the binary tree.
 Note: You may assume that duplicates do not exist in the tree.
 For example, given:
-preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tree:
- 3 / \ 9 20 / \ 15 7  Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</description>
+preorder = [3,9,20,15,7] inorder = [9,3,15,20,7] Return the following binary tree:
+ 3 / \ 9 20 / \ 15 7 Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</description>
     </item>
     
     <item>
@@ -54,8 +54,8 @@ preorder = [3,9,20,15,7] inorder = [9,3,15,20,7]  Return the following binary tr
       
       <guid>http://www.hashnopolis.com/post/2019/08/binary-tree-inorder-traversal/</guid>
       <description>Given a binary tree, return the inorder traversal of its nodes&amp;rsquo; values.
-Example: Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Follow-up the Recursive solution is trivial, could you do it iteratively?
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; &amp;quot;&amp;quot;&amp;quot;Check root == None to reduce time on checking&amp;quot;&amp;quot;&amp;quot; if root == None: return [] stack = [] result = [] current = root while (current!</description>
+Example: Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2] Follow-up the Recursive solution is trivial, could you do it iteratively?
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &amp;#34;&amp;#34;&amp;#34; :type root: TreeNode :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; &amp;#34;&amp;#34;&amp;#34;Check root == None to reduce time on checking&amp;#34;&amp;#34;&amp;#34; if root == None: return [] stack = [] result = [] current = root while (current!</description>
     </item>
     
     <item>
@@ -66,7 +66,7 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
       <guid>http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/</guid>
       <description>Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It&amp;rsquo;s guaranteed that there is only one subtree with maximum average.
 Example Given a binary tree:
- 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11.  Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this.</description>
+ 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11. Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this.sum = sum; this.</description>
     </item>
     
     <item>
@@ -86,7 +86,7 @@ Solution public class Subtree { public boolean isSubTree(TreeNode T1, TreeNode T
       
       <guid>http://www.hashnopolis.com/post/2019/03/minimum-path-sum-in-binary-tree/</guid>
       <description>Given a Binary Tree, find the minimum sum path from a leaf to root. For example, in the following tree, there are three leaf to root paths 8-&amp;gt;-2-&amp;gt;10, -4-&amp;gt;-2-&amp;gt;10 and 7-&amp;gt;10. The sums of these three paths are 16, 4 and 17 respectively. The minimum of them is 17 and the path for minimum is -4-&amp;gt;-2-&amp;gt;10.
- 10 / \ -2 7 / \ 8 -4  Solution public class PathSum { public int Solution(TreeNode root) { if (root == null) return 0; if (root.</description>
+ 10 / \ -2 7 / \ 8 -4 Solution public class PathSum { public int Solution(TreeNode root) { if (root == null) return 0; if (root.</description>
     </item>
     
     <item>
@@ -115,7 +115,8 @@ Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of 
       <pubDate>Thu, 21 Feb 2019 20:56:55 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2019/02/house-robber-iii/</guid>
-      <description>The thief has found himself a new place for his thievery again. There is only one entrance to this area, called the &amp;ldquo;root.&amp;rdquo; Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that &amp;ldquo;all houses in this place forms a binary tree&amp;rdquo;. It will automatically contact the police if two directly-linked houses were broken into on the same night.</description>
+      <description>The thief has found himself a new place for his thievery again. There is only one entrance to this area, called the &amp;ldquo;root.&amp;rdquo; Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that &amp;ldquo;all houses in this place forms a binary tree&amp;rdquo;. It will automatically contact the police if two directly-linked houses were broken into on the same night.
+Determine the maximum amount of money the thief can rob tonight without alerting the police.</description>
     </item>
     
     <item>
@@ -128,8 +129,8 @@ Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of 
 The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 3.  Solution: recursion
-/** * Definition for a binary tree node.</description>
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 3. Solution: recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int maxDepth(TreeNode root) { if (root == null) return 0; int left = maxDepth(root.</description>
     </item>
     
     <item>
@@ -142,8 +143,8 @@ Example: Given binary tree [3,9,20,null,null,15,7],
 The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 2.  Solution: Recursion
-/** * Definition for a binary tree node.</description>
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 2. Solution: Recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int minDepth(TreeNode root) { if (root == null) return 0; int left = minDepth(root.</description>
     </item>
     
     <item>
@@ -154,8 +155,8 @@ Example: Given binary tree [3,9,20,null,null,15,7],
       <guid>http://www.hashnopolis.com/post/2019/01/binary-tree-zigzag-level-order-traversal/</guid>
       <description>Given a binary tree, return the zigzag level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, then right to left for the next level and alternate between).
 Example Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7  return its zigzag level order traversal as:
-[ [3], [20,9], [15,7] ]  Solution: # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
+ 3 / \ 9 20 / \ 15 7 return its zigzag level order traversal as:
+[ [3], [20,9], [15,7] ] Solution: # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
     </item>
     
     <item>
@@ -166,7 +167,7 @@ Example Given binary tree [3,9,20,null,null,15,7],
       <guid>http://www.hashnopolis.com/post/2018/12/binary-tree-vertical-order-traversal/</guid>
       <description>Given a binary tree, return the vertical order traversal of its nodes&amp;rsquo; values. (ie, from top to bottom, column by column).
 If two nodes are in the same row and column, the order should be from left to right.
-Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ]  Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ]  Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ]  Solution # https://www.</description>
+Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ] Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ] Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ] Solution # https://www.</description>
     </item>
     
     <item>
@@ -198,9 +199,9 @@ Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]
       
       <guid>http://www.hashnopolis.com/post/2018/10/invert-binary-tree/</guid>
       <description>Invert a binary tree.
- 4 / \ 2 7 / \ / \ 1 3 6 9  to
- 4 / \ 7 2 / \ / \ 9 6 3 1  Thoughts What if a node is NULL? A NULL has no children, so how to iterate deeper into the tree?
-// Attempt // class Solution { // public: void swapNodes(*leftNode, *rightNode) { *temp = *leftNode; *leftNode = *rightNode; *rightNode = temp; return; } TreeNode* invertTree(TreeNode* root) { if (root == NULL) return invertTree(root-&amp;gt;left, ) } };  Solution:</description>
+ 4 / \ 2 7 / \ / \ 1 3 6 9 to
+ 4 / \ 7 2 / \ / \ 9 6 3 1 Thoughts What if a node is NULL? A NULL has no children, so how to iterate deeper into the tree?
+// Attempt // class Solution { // public:  void swapNodes(*leftNode, *rightNode) { *temp = *leftNode; *leftNode = *rightNode; *rightNode = temp; return; } TreeNode* invertTree(TreeNode* root) { if (root == NULL) return invertTree(root-&amp;gt;left, ) } }; Solution:</description>
     </item>
     
     <item>
@@ -220,8 +221,7 @@ You need to merge them into a new binary tree. The merge rule is that if two nod
       
       <guid>http://www.hashnopolis.com/post/2018/10/kth-smallest-element-in-a-bst/</guid>
       <description>Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
-Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Example 1 Input: root = [3,1,4,null,2], k = 1 Output: 1  Example 2 ```` Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
-### Follow-up What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</description>
+Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements. Example 1 Input: root = [3,1,4,null,2], k = 1 Output: 1 Example 2 Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3 ``` ### Follow-up What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?</description>
     </item>
     
     <item>
@@ -232,7 +232,7 @@ Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements.  Ex
       <guid>http://www.hashnopolis.com/post/2018/10/binary-tree-maximum-path-sum/</guid>
       <description>Given a non-empty binary tree, find the maximum path sum.
 For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
-Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6  Example 2 Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42  Solution # Definition for a binary tree node.</description>
+Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6 Example 2 Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42 Solution # Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -243,8 +243,10 @@ Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6  Example 2 Input: [-10,9,20,null,nu
       <guid>http://www.hashnopolis.com/post/2018/09/symmetric-tree/</guid>
       <description>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
 For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
- 1 / \ 2 2 / \ / \ 3 4 4 3  But the following [1,2,2,null,3,null,3] is not:
- 1 / \ 2 2 \ \ 3 3  Note Bonus points if you could solve it both recursively and iteratively.</description>
+ 1 / \ 2 2 / \ / \ 3 4 4 3 But the following [1,2,2,null,3,null,3] is not:
+ 1 / \ 2 2 \ \ 3 3 Note Bonus points if you could solve it both recursively and iteratively.
+Solution Resursive:
+# Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -256,8 +258,9 @@ For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
       <description>Given two binary trees, write a function to check if they are the same or not.
 Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
 Example 1:
-Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true  Example 2:
-Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:</description>
+Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true Example 2:
+Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false Example 3:
+Input: 1 1 / \ / \ 2 1 1 2 [1,2,1], [1,1,2] Output: false Solution # Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -267,9 +270,7 @@ Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:</description>
       
       <guid>http://www.hashnopolis.com/post/2018/09/swap-nodes-in-pairs/</guid>
       <description>Given a linked list, swap every two adjacent nodes and return its head.
-Example Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.  Note  Your algorithm should use only constant extra space. You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.
-Solution ```python
-Definition for singly-linked list. class ListNode(object): def init(self, x): self.val = x self.next = None  class Solution(object): def swapPairs(self, head): &amp;ldquo;&amp;rdquo;&amp;rdquo; :type head: ListNode :rtype: ListNode &amp;ldquo;&amp;rdquo;&amp;rdquo; # https://www.</description>
+Example Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3. Note  Your algorithm should use only constant extra space. You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: ListNode &amp;#34;&amp;#34;&amp;#34; # https://www.</description>
     </item>
     
     <item>
@@ -279,7 +280,7 @@ Definition for singly-linked list. class ListNode(object): def init(self, x): se
       
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-right-side-view/</guid>
       <description>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
-Example Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &amp;lt;--- / \ 2 3 &amp;lt;--- \ \ 5 4 &amp;lt;---  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
+Example Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &amp;lt;--- / \ 2 3 &amp;lt;--- \ \ 5 4 &amp;lt;--- Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
     </item>
     
     <item>
@@ -290,7 +291,7 @@ Example Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &amp;lt;--
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-preorder-traversal/</guid>
       <description>Given a binary tree, return the preorder traversal of its nodes&amp;rsquo; values.
 Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; if root is None: return [] return [root.</description>
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3] Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &amp;#34;&amp;#34;&amp;#34; :type root: TreeNode :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; if root is None: return [] return [root.</description>
     </item>
     
     <item>
@@ -300,9 +301,9 @@ Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow-up Recursive solution is t
       
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-postorder-traversal/</guid>
       <description>Given a binary tree, return the postorder traversal of its nodes&amp;rsquo; values.
-Example Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1]  Follow-up Recursive solution is trivial, could you do it iteratively?
+Example Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1] Follow-up Recursive solution is trivial, could you do it iteratively?
 Solution Recursive👇
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def postorderTraversal(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; def traverse(node): if node == None: return [] return traverse(node.</description>
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def postorderTraversal(self, root): &amp;#34;&amp;#34;&amp;#34; :type root: TreeNode :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; def traverse(node): if node == None: return [] return traverse(node.</description>
     </item>
     
     <item>
@@ -313,8 +314,8 @@ Solution Recursive👇
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-paths/</guid>
       <description>Given a binary tree, return all root-to-leaf paths.
 Note: A leaf is a node with no children.
-Example Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;]  Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] def traverse(root, path): if root == None: return path += str(root.</description>
+Example Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;] Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &amp;#34;&amp;#34;&amp;#34; :type root: TreeNode :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; res = [] def traverse(root, path): if root == None: return path += str(root.</description>
     </item>
     
     <item>
@@ -324,8 +325,8 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
       
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal/</guid>
       <description>Given a binary tree, return the level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level).
-Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7  return its level order traversal as:
-[ [3], [9,20], [15,7] ]  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
+Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7 return its level order traversal as:
+[ [3], [9,20], [15,7] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
     </item>
     
     <item>
@@ -336,8 +337,8 @@ Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7  return
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal-ii/</guid>
       <description>Given a binary tree, return the bottom-up level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level from leaf to root).
 For example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7  return its bottom-up level order traversal as:
-[ [15,7], [9,20], [3] ]  Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
+ 3 / \ 9 20 / \ 15 7 return its bottom-up level order traversal as:
+[ [15,7], [9,20], [3] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
     </item>
     
     <item>

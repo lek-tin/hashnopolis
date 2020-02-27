@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/02/print-binary-tree/" />
@@ -190,20 +190,15 @@
         <h5>Last updated: February 15, 2020</h5>
       
       <hr />
-      
-
-<p>Print a binary tree in an <code>m*n</code> <strong>2D</strong> string array following these rules:</p>
-
+      <p>Print a binary tree in an <code>m*n</code> <strong>2D</strong> string array following these rules:</p>
 <ol>
 <li>The row number m should be equal to the height of the given binary tree.</li>
 <li>The column number n should always be an odd number.</li>
 <li>The root node&rsquo;s value (in string format) should be put in the exactly middle of the first row it can be put. The column and the row where the root node belongs will separate the rest space into two parts <strong>(left-bottom part and right-bottom part)</strong>. You should print the left subtree in the left-bottom part and print the right subtree in the right-bottom part. The left-bottom part and the right-bottom part should have the same size. Even if one subtree is none while the other is not, you don&rsquo;t need to print anything for the none subtree but still need to leave the space as large as that for the other subtree. However, if two subtrees are none, then you don&rsquo;t need to leave space for both of them.</li>
-<li>Each unused space should contain an empty string &ldquo;&rdquo;.</li>
+<li>Each unused space should contain an empty string &ldquo;&quot;.</li>
 <li>Print the subtrees following the same rules.</li>
 </ol>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input:
      1
     /
@@ -211,10 +206,7 @@
 Output:
 [[&quot;&quot;, &quot;1&quot;, &quot;&quot;],
  [&quot;2&quot;, &quot;&quot;, &quot;&quot;]]
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input:
      1
     / \
@@ -225,10 +217,7 @@ Output:
 [[&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;1&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;],
  [&quot;&quot;, &quot;2&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;3&quot;, &quot;&quot;],
  [&quot;&quot;, &quot;&quot;, &quot;4&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;]]
-</code></pre>
-
-<h3 id="example-3">Example 3:</h3>
-
+</code></pre><h3 id="example-3">Example 3:</h3>
 <pre><code>Input:
       1
      / \
@@ -243,42 +232,37 @@ Output:
  [&quot;&quot;,  &quot;&quot;,  &quot;&quot;, &quot;2&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;,  &quot;&quot;,  &quot;&quot;,  &quot;&quot;,  &quot;5&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;]
  [&quot;&quot;,  &quot;3&quot;, &quot;&quot;, &quot;&quot;,  &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;,  &quot;&quot;,  &quot;&quot;,  &quot;&quot;,  &quot;&quot;,  &quot;&quot;, &quot;&quot;, &quot;&quot;]
  [&quot;4&quot;, &quot;&quot;,  &quot;&quot;, &quot;&quot;,  &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;,  &quot;&quot;,  &quot;&quot;,  &quot;&quot;,  &quot;&quot;,  &quot;&quot;, &quot;&quot;, &quot;&quot;]]
-</code></pre>
-
-<p><strong>Note:</strong> The height of binary tree is in the range of [1, 10].</p>
-
+</code></pre><p><strong>Note:</strong> The height of binary tree is in the range of [1, 10].</p>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printTree</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> List[List[str]]:
+        height <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>getHeight(root)
+        res <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>height <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(height)]
+        answer <span style="color:#f92672">=</span> []
+        self<span style="color:#f92672">.</span>fill(res, root, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, len(res[<span style="color:#ae81ff">0</span>]))
+        <span style="color:#66d9ef">for</span> arr <span style="color:#f92672">in</span> res:
+            answer<span style="color:#f92672">.</span>append(arr)
+        <span style="color:#66d9ef">return</span> answer
 
-class Solution:
-    def printTree(self, root: TreeNode) -&gt; List[List[str]]:
-        height = self.getHeight(root)
-        res = [[&quot;&quot; for j in range(2**height - 1)] for i in range(height)]
-        answer = []
-        self.fill(res, root, 0, 0, len(res[0]))
-        for arr in res:
-            answer.append(arr)
-        return answer
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getHeight</span>(self, root):
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> max(self<span style="color:#f92672">.</span>getHeight(root<span style="color:#f92672">.</span>left), self<span style="color:#f92672">.</span>getHeight(root<span style="color:#f92672">.</span>right))
 
-    def getHeight(self, root):
-        if not root:
-            return 0
-        return 1 + max(self.getHeight(root.left), self.getHeight(root.right))
-
-    def fill(self, res, root, i, l, r):
-        if not root:
-            return
-        res[i][(l+r)//2] = str(root.val)
-        self.fill(res, root.left, i+1, l, (l+r)//2)
-        self.fill(res, root.right, i+1, (l+r+1)//2, r)
-</code></pre>
-
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fill</span>(self, res, root, i, l, r):
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span>
+        res[i][(l<span style="color:#f92672">+</span>r)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> str(root<span style="color:#f92672">.</span>val)
+        self<span style="color:#f92672">.</span>fill(res, root<span style="color:#f92672">.</span>left, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, l, (l<span style="color:#f92672">+</span>r)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>)
+        self<span style="color:#f92672">.</span>fill(res, root<span style="color:#f92672">.</span>right, i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, (l<span style="color:#f92672">+</span>r<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>, r)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

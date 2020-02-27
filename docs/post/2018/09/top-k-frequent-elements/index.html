@@ -19,7 +19,7 @@
   <meta name="description" content="Given a non-empty array of integers, return the k most frequent elements.
 For example, Given [1,1,1,2,2,3] and k = 2, return [1,2].
 Note You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm&amp;rsquo;s time complexity must be better than O(n log n), where n is the array&amp;rsquo;s size.
-Solution class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type k: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; freqMap = dict() for num in nums: if freqMap." />
+Solution class Solution: def topKFrequent(self, nums, k): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :type k: int :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; freqMap = dict() for num in nums: if freqMap." />
   <meta name="keywords" content="leetcode hashmap " />
   
   
@@ -29,14 +29,14 @@ Solution class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&a
     <meta name="twitter:description" content="Given a non-empty array of integers, return the k most frequent elements.
 For example, Given [1,1,1,2,2,3] and k = 2, return [1,2].
 Note You may assume k is always valid, 1 ≤ k ≤ number of unique elements. Your algorithm&amp;rsquo;s time complexity must be better than O(n log n), where n is the array&amp;rsquo;s size.
-Solution class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&amp;quot; :type nums: List[int] :type k: int :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; freqMap = dict() for num in nums: if freqMap." />
+Solution class Solution: def topKFrequent(self, nums, k): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :type k: int :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; freqMap = dict() for num in nums: if freqMap." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/top-k-frequent-elements/" />
@@ -194,75 +194,63 @@ Solution class Solution: def topKFrequent(self, nums, k): &amp;quot;&amp;quot;&a
         <h5>Last updated: September 16, 2018</h5>
       
       <hr />
-      
-
-<p>Given a non-empty array of integers, return the <code>k</code> most frequent elements.</p>
-
+      <p>Given a non-empty array of integers, return the <code>k</code> most frequent elements.</p>
 <p>For example,
 Given <code>[1,1,1,2,2,3]</code> and <code>k = 2</code>, return <code>[1,2]</code>.</p>
-
 <h3 id="note">Note</h3>
-
 <p>You may assume k is always valid, <code>1 ≤ k ≤ number</code> of unique elements.
 Your algorithm&rsquo;s time complexity <strong>must be better</strong> than <code>O(n log n)</code>, where <code>n</code> is the array&rsquo;s size.</p>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">topKFrequent</span>(self, nums, k):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :type k: int
+</span><span style="color:#e6db74">        :rtype: List[int]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        freqMap <span style="color:#f92672">=</span> dict()
+        <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> nums:
+            <span style="color:#66d9ef">if</span> freqMap<span style="color:#f92672">.</span>get(num) <span style="color:#f92672">==</span> None:
+                freqMap[num] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                freqMap[num] <span style="color:#f92672">=</span> freqMap<span style="color:#f92672">.</span>get(num) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+        bucket <span style="color:#f92672">=</span> []
+        topKCounts <span style="color:#f92672">=</span> sorted(list(freqMap<span style="color:#f92672">.</span>values()), reverse<span style="color:#f92672">=</span>True)[:k]
 
-<pre><code class="language-python">class Solution:
-    def topKFrequent(self, nums, k):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :type k: int
-        :rtype: List[int]
-        &quot;&quot;&quot;
-        freqMap = dict()
-        for num in nums:
-            if freqMap.get(num) == None:
-                freqMap[num] = 1
-            else:
-                freqMap[num] = freqMap.get(num) + 1
-        bucket = []
-        topKCounts = sorted(list(freqMap.values()), reverse=True)[:k]
+        <span style="color:#66d9ef">print</span>(topKCounts)
+        <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> freqMap<span style="color:#f92672">.</span>items():
+            <span style="color:#66d9ef">if</span> value <span style="color:#f92672">in</span> topKCounts:
+                bucket<span style="color:#f92672">.</span>append(key)
+        <span style="color:#66d9ef">return</span> bucket
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">topKFrequent</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        HashMap<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> freqMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+        ArrayList res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
 
-        print(topKCounts)
-        for key, value in freqMap.items():
-            if value in topKCounts:
-                bucket.append(key)
-        return bucket
-</code></pre>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> num <span style="color:#f92672">:</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> f <span style="color:#f92672">=</span> freqMap<span style="color:#f92672">.</span><span style="color:#a6e22e">getOrDefault</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+            freqMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>num<span style="color:#f92672">,</span> f<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// Frequency is at least one, so we use [1: nums.length] to store count for each num
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;[]</span> buckets <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">[</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">];</span>
 
-<pre><code class="language-java">class Solution {
-    public List&lt;Integer&gt; topKFrequent(int[] nums, int k) {
-        HashMap&lt;Integer, Integer&gt; freqMap = new HashMap&lt;&gt;();
-        ArrayList res = new ArrayList&lt;&gt;();
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> key<span style="color:#f92672">:</span> freqMap<span style="color:#f92672">.</span><span style="color:#a6e22e">keySet</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> freq <span style="color:#f92672">=</span> freqMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>buckets<span style="color:#f92672">[</span>freq<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                buckets<span style="color:#f92672">[</span>freq<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+            <span style="color:#f92672">}</span>
+            buckets<span style="color:#f92672">[</span>freq<span style="color:#f92672">].</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
 
-        for (int num : nums) {
-            int f = freqMap.getOrDefault(num, 0) + 1;
-            freqMap.put(num, f);
-        }
-        // Frequency is at least one, so we use [1: nums.length] to store count for each num
-        List&lt;Integer&gt;[] buckets = new ArrayList[nums.length + 1];
-
-        for (int key: freqMap.keySet()) {
-            int freq = freqMap.get(key);
-            if (buckets[freq] == null) {
-                buckets[freq] = new ArrayList&lt;&gt;();
-            }
-            buckets[freq].add(key);
-        }
-
-        for (int i = buckets.length - 1; i &gt;= 0 &amp;&amp; res.size() &lt; k; i--) {
-            if (buckets[i] != null)
-                // No two elements have the same frequency.
-                res.addAll(buckets[i]);
-        }
-        return res;
-    }
-}
-</code></pre>
-
-<h3 id="going-further">Going further</h3>
-
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> buckets<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> res<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&lt;</span> k<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>buckets<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+                <span style="color:#75715e">// No two elements have the same frequency.
+</span><span style="color:#75715e"></span>                res<span style="color:#f92672">.</span><span style="color:#a6e22e">addAll</span><span style="color:#f92672">(</span>buckets<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="going-further">Going further</h3>
 <p><code>topKCounts = quickSelected(...)</code> can improve the time complexity from <code>O(NlogN)</code> to <code>O(N)</code></p>
 
   </div>

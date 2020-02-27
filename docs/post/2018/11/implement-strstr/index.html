@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Implement strstr().
 Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
-Example 1 Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Output: 2  Example 2 Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1  Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
+Example 1 Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Output: 2 Example 2 Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1 Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
 For the purpose of this problem, we will return 0 when needle is an empty string." />
   <meta name="keywords" content="leetcode python rabin-karp pattern-matching " />
   
@@ -28,7 +28,7 @@ For the purpose of this problem, we will return 0 when needle is an empty string
     <meta name="twitter:title" content="Implement Strstr" />
     <meta name="twitter:description" content="Implement strstr().
 Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
-Example 1 Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Output: 2  Example 2 Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1  Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
+Example 1 Input: haystack = &amp;quot;hello&amp;quot;, needle = &amp;quot;ll&amp;quot; Output: 2 Example 2 Input: haystack = &amp;quot;aaaaa&amp;quot;, needle = &amp;quot;bba&amp;quot; Output: -1 Clarification What should we return when needle is an empty string? This is a great question to ask during an interview.
 For the purpose of this problem, we will return 0 when needle is an empty string." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
@@ -36,7 +36,7 @@ For the purpose of this problem, we will return 0 when needle is an empty string
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/implement-strstr/" />
@@ -198,103 +198,85 @@ For the purpose of this problem, we will return 0 when needle is an empty string
         <h5>Last updated: November 3, 2018</h5>
       
       <hr />
-      
-
-<p>Implement <a href="http://www.cplusplus.com/reference/cstring/strstr/">strstr()</a>.</p>
-
+      <p>Implement <a href="http://www.cplusplus.com/reference/cstring/strstr/">strstr()</a>.</p>
 <p>Return the index of the first occurrence of needle in haystack, or <code>-1</code> if needle is not part of haystack.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input: haystack = &quot;hello&quot;, needle = &quot;ll&quot;
 Output: 2
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: haystack = &quot;aaaaa&quot;, needle = &quot;bba&quot;
 Output: -1
-</code></pre>
-
-<h3 id="clarification">Clarification</h3>
-
+</code></pre><h3 id="clarification">Clarification</h3>
 <p>What should we return when <code>needle</code> is an empty string? This is a great question to ask during an interview.</p>
-
-<p>For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C&rsquo;s <img src="http://www.cplusplus.com/reference/cstring/strstr/" alt="strstr()" /> and Java&rsquo;s <img src="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)" alt="indexOf()" />.</p>
-
+<p>For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C&rsquo;s <img src="http://www.cplusplus.com/reference/cstring/strstr/" alt="strstr()"> and Java&rsquo;s <img src="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)" alt="indexOf()">.</p>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">strStr</span>(self, haystack, needle):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type haystack: str
+</span><span style="color:#e6db74">        :type needle: str
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e"># Edge case: if needle is empty</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> needle:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
-<pre><code class="language-python">class Solution:
-    def strStr(self, haystack, needle):
-        &quot;&quot;&quot;
-        :type haystack: str
-        :type needle: str
-        :rtype: int
-        &quot;&quot;&quot;
-        # Edge case: if needle is empty
-        if not needle:
-            return 0
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(haystack)):
+            <span style="color:#66d9ef">if</span> haystack[i: i<span style="color:#f92672">+</span>len(needle)] <span style="color:#f92672">==</span> needle:
+                <span style="color:#66d9ef">return</span>  i
 
-        for i in range(len(haystack)):
-            if haystack[i: i+len(needle)] == needle:
-                return  i
-
-        return -1
-</code></pre>
-
-<p>Rabin-Karp algorithm</p>
-
-<pre><code class="language-python">class Solution:
-    def strStr(self, haystack: str, needle: str) -&gt; int:
-        if not needle:
-            return 0
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>Rabin-Karp algorithm</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">strStr</span>(self, haystack: str, needle: str) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> needle:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
         
-        if not haystack or len(haystack) &lt; len(needle):
-            return -1
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> haystack <span style="color:#f92672">or</span> len(haystack) <span style="color:#f92672">&lt;</span> len(needle):
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-        M = len(needle)
-        N = len(haystack)
-        base = 512   # the number of characters in the input alphabet
-        q = 997  # a big prime number
-        p = 0    # hash value for needle
-        t = 0    # hash value for haystack
-        h = 1    # d^(M-1)
+        M <span style="color:#f92672">=</span> len(needle)
+        N <span style="color:#f92672">=</span> len(haystack)
+        base <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span>   <span style="color:#75715e"># the number of characters in the input alphabet</span>
+        q <span style="color:#f92672">=</span> <span style="color:#ae81ff">997</span>  <span style="color:#75715e"># a big prime number</span>
+        p <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># hash value for needle</span>
+        t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># hash value for haystack</span>
+        h <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>    <span style="color:#75715e"># d^(M-1)</span>
 
-        # The value of h would be &quot;pow(d, M-1)%q&quot;
-        for i in range(1, M):
-            h = (h*base)
+        <span style="color:#75715e"># The value of h would be &#34;pow(d, M-1)%q&#34;</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, M):
+            h <span style="color:#f92672">=</span> (h<span style="color:#f92672">*</span>base)
 
-        # Calculate the hash value of needle and first window
-        # of text
-        for i in range(M):
-            p = (base*p + ord(needle[i]))%q
-            t = (base*t + ord(haystack[i]))%q
+        <span style="color:#75715e"># Calculate the hash value of needle and first window</span>
+        <span style="color:#75715e"># of text</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(M):
+            p <span style="color:#f92672">=</span> (base<span style="color:#f92672">*</span>p <span style="color:#f92672">+</span> ord(needle[i]))<span style="color:#f92672">%</span>q
+            t <span style="color:#f92672">=</span> (base<span style="color:#f92672">*</span>t <span style="color:#f92672">+</span> ord(haystack[i]))<span style="color:#f92672">%</span>q
 
-        # Slide the needle over text one by one
-        for i in range(N-M+1):
-            # Check the hash values of current window of text and
-            # needle if the hash values match then only check
-            # for characters on by one
-            if p == t:
-                # Check for characters one by one, if any character doesn't match, break the current ith iter
-                if haystack[i:i+M] != needle:
-                    break
-                else:
-                    # if p == t and needle[0...M-1] = haystack[i, i+1, ...i+M-1] 
-                    return i
+        <span style="color:#75715e"># Slide the needle over text one by one</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N<span style="color:#f92672">-</span>M<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#75715e"># Check the hash values of current window of text and</span>
+            <span style="color:#75715e"># needle if the hash values match then only check</span>
+            <span style="color:#75715e"># for characters on by one</span>
+            <span style="color:#66d9ef">if</span> p <span style="color:#f92672">==</span> t:
+                <span style="color:#75715e"># Check for characters one by one, if any character doesn&#39;t match, break the current ith iter</span>
+                <span style="color:#66d9ef">if</span> haystack[i:i<span style="color:#f92672">+</span>M] <span style="color:#f92672">!=</span> needle:
+                    <span style="color:#66d9ef">break</span>
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#75715e"># if p == t and needle[0...M-1] = haystack[i, i+1, ...i+M-1] </span>
+                    <span style="color:#66d9ef">return</span> i
 
-            # Calculate hash value for next window of text: Remove
-            # leading digit, add trailing digit
-            if i &lt; N-M:
-                t = ( (t - ord(haystack[i])*h) * base + ord(haystack[i+M]) ) % q
+            <span style="color:#75715e"># Calculate hash value for next window of text: Remove</span>
+            <span style="color:#75715e"># leading digit, add trailing digit</span>
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">-</span>M:
+                t <span style="color:#f92672">=</span> ( (t <span style="color:#f92672">-</span> ord(haystack[i])<span style="color:#f92672">*</span>h) <span style="color:#f92672">*</span> base <span style="color:#f92672">+</span> ord(haystack[i<span style="color:#f92672">+</span>M]) ) <span style="color:#f92672">%</span> q
 
-                # We might get negative values of t, converting it to positive
-                if t &lt; 0:
-                    t = t+q
+                <span style="color:#75715e"># We might get negative values of t, converting it to positive</span>
+                <span style="color:#66d9ef">if</span> t <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+                    t <span style="color:#f92672">=</span> t<span style="color:#f92672">+</span>q
 
-        return -1
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

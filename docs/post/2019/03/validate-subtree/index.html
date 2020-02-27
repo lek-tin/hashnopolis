@@ -32,7 +32,7 @@ Solution public class Subtree { public boolean isSubTree(TreeNode T1, TreeNode T
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/validate-subtree/" />
@@ -190,30 +190,25 @@ Solution public class Subtree { public boolean isSubTree(TreeNode T1, TreeNode T
         <h5>Last updated: March 27, 2019</h5>
       
       <hr />
-      
-
-<p>Given two trees, <code>T1</code> and <code>T2</code>, write an function to test whether <code>T2</code> is a subtree of <code>T1</code>.</p>
-
+      <p>Given two trees, <code>T1</code> and <code>T2</code>, write an function to test whether <code>T2</code> is a subtree of <code>T1</code>.</p>
 <h3 id="solution">Solution</h3>
-
-<pre><code class="language-java">public class Subtree {
-    public boolean isSubTree(TreeNode T1, TreeNode T2) {
-        if (T2 == null) return true;
-        if (T1 == null) return false;
-        return (isSameTree(T1,T2) || isSubTree(T1.left, T2) || isSubTree(T1.right, T2));
-    }
-    public boolean isSameTree(TreeNode T1, TreeNode T2) {
-        if (T1 == null &amp;&amp; T2 == null)
-            return true;
-        if (T1 == null || T2 == null)
-            return false;
-        if (T1.val != T2.val)
-            return false;
-        return (isSameTree(T1.left, T2.left) &amp;&amp; isSameTree(T1.right, T2.right));
-    }
-}
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Subtree</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isSubTree</span><span style="color:#f92672">(</span>TreeNode T1<span style="color:#f92672">,</span> TreeNode T2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>T2 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>T1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>isSameTree<span style="color:#f92672">(</span>T1<span style="color:#f92672">,</span>T2<span style="color:#f92672">)</span> <span style="color:#f92672">||</span> isSubTree<span style="color:#f92672">(</span>T1<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> T2<span style="color:#f92672">)</span> <span style="color:#f92672">||</span> isSubTree<span style="color:#f92672">(</span>T1<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> T2<span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isSameTree</span><span style="color:#f92672">(</span>TreeNode T1<span style="color:#f92672">,</span> TreeNode T2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>T1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> T2 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>T1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> T2 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>T1<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span> <span style="color:#f92672">!=</span> T2<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">)</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>isSameTree<span style="color:#f92672">(</span>T1<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> T2<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> isSameTree<span style="color:#f92672">(</span>T1<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> T2<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

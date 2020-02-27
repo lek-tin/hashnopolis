@@ -36,7 +36,7 @@ Example 1 Given nums = [3,2,2,3], val = 3, Your function should return length = 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/remove-element/" />
@@ -194,25 +194,16 @@ Example 1 Given nums = [3,2,2,3], val = 3, Your function should return length = 
         <h5>Last updated: September 16, 2018</h5>
       
       <hr />
-      
-
-<p>Given an array nums and a value val, remove all instances of that value in-place and return the new length.</p>
-
+      <p>Given an array nums and a value val, remove all instances of that value in-place and return the new length.</p>
 <p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array</strong> in-place with O(1) extra memory.</p>
-
 <p>The order of elements can be changed. It doesn&rsquo;t matter what you leave beyond the new length.</p>
-
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Given nums = [3,2,2,3], val = 3,
 
 Your function should return length = 2, with the first two elements of nums being 2.
 
 It doesn't matter what you leave beyond the returned length.
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Given nums = [0,1,2,2,3,0,4,2], val = 2,
 
 Your function should return length = 5, with the first five elements of nums containing 0, 1, 3, 0, and 4.
@@ -220,16 +211,10 @@ Your function should return length = 5, with the first five elements of nums con
 Note that the order of those five elements can be arbitrary.
 
 It doesn't matter what values are set beyond the returned length.
-</code></pre>
-
-<h3 id="clarification">Clarification</h3>
-
+</code></pre><h3 id="clarification">Clarification</h3>
 <p>Confused why the returned value is an integer but your answer is an array?</p>
-
 <p>Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.</p>
-
 <p>Internally you can think of this:</p>
-
 <pre><code>// nums is passed in by reference. (i.e., without making a copy)
 int len = removeElement(nums, val);
 
@@ -238,27 +223,23 @@ int len = removeElement(nums, val);
 for (int i = 0; i &lt; len; i++) {
     print(nums[i]);
 }
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution:
-    def removeElement(self, nums, val):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        :type val: int
-        :rtype: int
-        &quot;&quot;&quot;
-        pos = 0
-        if nums == None or len(nums) == 0:
-            return pos
-        for i in range(len(nums)):
-            if nums[i] != val:
-                nums[pos] = nums[i]
-                pos += 1
-        return pos
-</code></pre>
-
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">removeElement</span>(self, nums, val):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :type val: int
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        pos <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">if</span> nums <span style="color:#f92672">==</span> None <span style="color:#f92672">or</span> len(nums) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> pos
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(nums)):
+            <span style="color:#66d9ef">if</span> nums[i] <span style="color:#f92672">!=</span> val:
+                nums[pos] <span style="color:#f92672">=</span> nums[i]
+                pos <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> pos
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

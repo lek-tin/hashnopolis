@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) &amp;ndash; Push element x onto stack. - pop() &amp;ndash; Removes the element on top of the stack. - top() &amp;ndash; Get the top element. - getMin() &amp;ndash; Retrieve the minimum element in the stack.
-Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; Returns -3. minStack.pop(); minStack.top(); --&amp;gt; Returns 0." />
+  <meta name="description" content="Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+ push(x) &amp;ndash; Push element x onto stack. pop() &amp;ndash; Removes the element on top of the stack. top() &amp;ndash; Get the top element. getMin() &amp;ndash; Retrieve the minimum element in the stack.  Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; Returns -3. minStack.pop(); minStack.top(); --&amp;gt; Returns 0. minStack.getMin(); --&amp;gt; Returns -2." />
   <meta name="keywords" content="leetcode stack " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Min Stack" />
-    <meta name="twitter:description" content="Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. - push(x) &amp;ndash; Push element x onto stack. - pop() &amp;ndash; Removes the element on top of the stack. - top() &amp;ndash; Get the top element. - getMin() &amp;ndash; Retrieve the minimum element in the stack.
-Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; Returns -3. minStack.pop(); minStack.top(); --&amp;gt; Returns 0." />
+    <meta name="twitter:description" content="Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+ push(x) &amp;ndash; Push element x onto stack. pop() &amp;ndash; Removes the element on top of the stack. top() &amp;ndash; Get the top element. getMin() &amp;ndash; Retrieve the minimum element in the stack.  Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&amp;gt; Returns -3. minStack.pop(); minStack.top(); --&amp;gt; Returns 0. minStack.getMin(); --&amp;gt; Returns -2." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/min-stack/" />
@@ -190,16 +190,14 @@ Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0);
         <h5>Last updated: October 14, 2018</h5>
       
       <hr />
-      
-
-<p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
-- push(x) &ndash; Push element x onto stack.
-- pop() &ndash; Removes the element on top of the stack.
-- top() &ndash; Get the top element.
-- getMin() &ndash; Retrieve the minimum element in the stack.</p>
-
+      <p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.</p>
+<ul>
+<li>push(x) &ndash; Push element x onto stack.</li>
+<li>pop() &ndash; Removes the element on top of the stack.</li>
+<li>top() &ndash; Get the top element.</li>
+<li>getMin() &ndash; Retrieve the minimum element in the stack.</li>
+</ul>
 <h3 id="example">Example</h3>
-
 <pre><code>MinStack minStack = new MinStack();
 minStack.push(-2);
 minStack.push(0);
@@ -208,57 +206,53 @@ minStack.getMin();   --&gt; Returns -3.
 minStack.pop();
 minStack.top();      --&gt; Returns 0.
 minStack.getMin();   --&gt; Returns -2.
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MinStack</span>:
 
-<h3 id="solution">Solution</h3>
+    <span style="color:#66d9ef">def</span> __init__(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        initialize your data structure here.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>stack <span style="color:#f92672">=</span> []
+        self<span style="color:#f92672">.</span>minStack <span style="color:#f92672">=</span> []
 
-<pre><code class="language-python">class MinStack:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">push</span>(self, x):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type x: int
+</span><span style="color:#e6db74">        :rtype: void
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>stack<span style="color:#f92672">.</span>append(x)
+        <span style="color:#66d9ef">if</span> len(self<span style="color:#f92672">.</span>minStack) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>minStack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;=</span> x:
+            self<span style="color:#f92672">.</span>minStack<span style="color:#f92672">.</span>append(x)
 
-    def __init__(self):
-        &quot;&quot;&quot;
-        initialize your data structure here.
-        &quot;&quot;&quot;
-        self.stack = []
-        self.minStack = []
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pop</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :rtype: void
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        pop <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>stack<span style="color:#f92672">.</span>pop()
+        <span style="color:#66d9ef">if</span> pop <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>minStack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+            self<span style="color:#f92672">.</span>minStack<span style="color:#f92672">.</span>pop()
 
-    def push(self, x):
-        &quot;&quot;&quot;
-        :type x: int
-        :rtype: void
-        &quot;&quot;&quot;
-        self.stack.append(x)
-        if len(self.minStack) == 0 or self.minStack[-1] &gt;= x:
-            self.minStack.append(x)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">top</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>stack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
 
-    def pop(self):
-        &quot;&quot;&quot;
-        :rtype: void
-        &quot;&quot;&quot;
-        pop = self.stack.pop()
-        if pop == self.minStack[-1]:
-            self.minStack.pop()
-
-    def top(self):
-        &quot;&quot;&quot;
-        :rtype: int
-        &quot;&quot;&quot;
-        return self.stack[-1]
-
-    def getMin(self):
-        &quot;&quot;&quot;
-        :rtype: int
-        &quot;&quot;&quot;
-        return self.minStack[-1]
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getMin</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>minStack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
 
 
-# Your MinStack object will be instantiated and called as such:
-# obj = MinStack()
-# obj.push(x)
-# obj.pop()
-# param_3 = obj.top()
-# param_4 = obj.getMin()
-</code></pre>
-
+<span style="color:#75715e"># Your MinStack object will be instantiated and called as such:</span>
+<span style="color:#75715e"># obj = MinStack()</span>
+<span style="color:#75715e"># obj.push(x)</span>
+<span style="color:#75715e"># obj.pop()</span>
+<span style="color:#75715e"># param_3 = obj.top()</span>
+<span style="color:#75715e"># param_4 = obj.getMin()</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

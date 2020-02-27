@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/binary-search/" />
@@ -179,7 +179,8 @@
       <h2><a href="http://www.hashnopolis.com/post/2019/09/find-in-mountain-array/">Find in Mountain Array</a></h2>
 
       <p>(This problem is an interactive problem.)
-You may recall that an array A is a mountain array if and only if: 1. A.length &gt;= 3 2. There exists some i with 0 &lt; i &lt; A.length - 1 such that: * A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] * A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.</p>
+You may recall that an array A is a mountain array if and only if:
+ A.length &gt;= 3 There exists some i with 0 &lt; i &lt; A.length - 1 such that:  A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target.</p>
 
       <p class="meta">
         
@@ -204,8 +205,8 @@ You may recall that an array A is a mountain array if and only if: 1. A.length &
   <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/09/peak-index-in-a-mountain-array/">Peak Index in a Mountain Array</a></h2>
 
-      <p>Let’s call an array A a mountain if the following properties hold: 1. A.length &gt;= 3 2. There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1]
-Given an array that is definitely a mountain, return any i such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; .</p>
+      <p>Let’s call an array A a mountain if the following properties hold:
+ A.length &gt;= 3 There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1]  Given an array that is definitely a mountain, return any i such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.</p>
 
       <p class="meta">
         
@@ -231,7 +232,7 @@ Given an array that is definitely a mountain, return any i such that A[0] &lt; A
       <h2><a href="http://www.hashnopolis.com/post/2019/09/sum-of-square-numbers/">Sum of Square Numbers</a></h2>
 
       <p>Given a non-negative integer c, your task is to decide whether there’re two integers a and b such that a2 &#43; b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5  Example 2: Input: 3 Output: False  Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False  Without sqrt function</p>
+Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function</p>
 
       <p class="meta">
         
@@ -258,8 +259,8 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5  Example 2: 
 
       <p>Given a positive integer num, write a function which returns True if num is a perfect square else False.
 Note: Do not use any built-in library function such as sqrt.
-Example 1: Input: 16 Output: true  Example 2: Input: 14 Output: false  Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: return True left, right = 0, num while left &lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &lt; num: left = mid &#43; 1 else: right = mid - 1 return False  Binary search version 2</p>
+Example 1: Input: 16 Output: true Example 2: Input: 14 Output: false Solution Binary search version 1
+class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: return True left, right = 0, num while left &lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2</p>
 
       <p class="meta">
         
@@ -342,8 +343,7 @@ Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum num
       <h2><a href="http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/">Search a 2d Matrix Ii</a></h2>
 
       <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
-- Integers in each row are sorted in ascending from left to right. - Integers in each column are sorted in ascending from top to bottom.
-Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ]  Given target = 5, return true.</p>
+ Integers in each row are sorted in ascending from left to right. Integers in each column are sorted in ascending from top to bottom.  Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ] Given target = 5, return true.</p>
 
       <p class="meta">
         
@@ -369,7 +369,7 @@ Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], 
       <h2><a href="http://www.hashnopolis.com/post/2019/03/find-k-closest-elements/">Find K Closest Elements</a></h2>
 
       <p>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4]  Example 2: Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4]  Note:  The value k is positive and will always be smaller than the length of the sorted array.</p>
+Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4] Example 2: Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4] Note:  The value k is positive and will always be smaller than the length of the sorted array.</p>
 
       <p class="meta">
         
@@ -423,7 +423,7 @@ For corner elements, we need to consider only one neighbor for comparison. There
       <p>Implement int sqrt(int x).
 Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
 Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
-Example 1 Input: 4 Output: 2  Example 2 Input: 8 Output: 2  Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned.</p>
+Example 1 Input: 4 Output: 2 Example 2 Input: 8 Output: 2 Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned.</p>
 
       <p class="meta">
         

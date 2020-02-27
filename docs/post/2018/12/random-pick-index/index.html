@@ -34,7 +34,7 @@ Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(num
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/12/random-pick-index/" />
@@ -192,16 +192,10 @@ Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(num
         <h5>Last updated: December 1, 2018</h5>
       
       <hr />
-      
-
-<p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.</p>
-
+      <p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.</p>
 <h3 id="note">Note</h3>
-
 <p>The array size can be very large. Solution that uses too much extra space will not pass the judge.</p>
-
 <h3 id="example">Example</h3>
-
 <pre><code>int[] nums = new int[] {1,2,3,3,3};
 Solution solution = new Solution(nums);
 
@@ -210,38 +204,34 @@ solution.pick(3);
 
 // pick(1) should return 0. Since in the array only nums[0] is equal to 1.
 solution.pick(1);
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> random
 
-<h3 id="solution">Solution</h3>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
 
-<pre><code class="language-python">import random
+    <span style="color:#66d9ef">def</span> __init__(self, nums):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        self<span style="color:#f92672">.</span>nums <span style="color:#f92672">=</span> nums
 
-class Solution:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pick</span>(self, target):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type target: int
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        count, res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">for</span> i, n <span style="color:#f92672">in</span> enumerate(self<span style="color:#f92672">.</span>nums):
+            <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">!=</span> target): <span style="color:#66d9ef">continue</span>
+            count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> (random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>) <span style="color:#f92672">%</span> count <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>): res <span style="color:#f92672">=</span> i
 
-    def __init__(self, nums):
-        &quot;&quot;&quot;
-        :type nums: List[int]
-        &quot;&quot;&quot;
-        self.nums = nums
+        <span style="color:#66d9ef">return</span> res
 
-    def pick(self, target):
-        &quot;&quot;&quot;
-        :type target: int
-        :rtype: int
-        &quot;&quot;&quot;
-        count, res = 0, -1
-        for i, n in enumerate(self.nums):
-            if (n != target): continue
-            count += 1
-            if (random.randint(0, 100) % count == 0): res = i
-
-        return res
-
-# Your Solution object will be instantiated and called as such:
-# obj = Solution(nums)
-# param_1 = obj.pick(target)
-</code></pre>
-
+<span style="color:#75715e"># Your Solution object will be instantiated and called as such:</span>
+<span style="color:#75715e"># obj = Solution(nums)</span>
+<span style="color:#75715e"># param_1 = obj.pick(target)</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

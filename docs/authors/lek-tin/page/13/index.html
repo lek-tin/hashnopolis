@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/03/serialize-and-deserialize-bst/">Serialize and Deserialize BST</a></h2>
+
+      <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+Design an algorithm to serialize and deserialize a binary search tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary search tree can be serialized to a string and this string can be deserialized to the original tree structure.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/03/diameter-of-binary-tree/">Diameter of Binary Tree</a></h2>
 
       <p>Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
@@ -231,7 +257,7 @@ Your KthLargest class will have a constructor which accepts an integer k and an 
       <h2><a href="http://www.hashnopolis.com/post/2019/03/sliding-window-maximum/">Sliding Window Maximum</a></h2>
 
       <p>Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
-Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7  Note: You may assume k is always valid, 1 ≤ k ≤ input array’s size for non-empty array.</p>
+Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7 Note: You may assume k is always valid, 1 ≤ k ≤ input array’s size for non-empty array.</p>
 
       <p class="meta">
         
@@ -284,7 +310,8 @@ Each day, whether the cell is occupied or vacant changes according to the follow
       <h2><a href="http://www.hashnopolis.com/post/2019/03/most-common-word/">Most Common Word</a></h2>
 
       <p>Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words. It is guaranteed there is at least one word that isn’t banned, and that the answer is unique.
-Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase.</p>
+Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase.
+Example: Input: paragraph = &#34;Bob hit a ball, the hit BALL flew far after it was hit.</p>
 
       <p class="meta">
         
@@ -335,7 +362,7 @@ Words in the list of banned words are given in lowercase, and free of punctuatio
       <h2><a href="http://www.hashnopolis.com/post/2019/03/number-of-connected-components-in-an-undirected-graph/">Number of Connected Components in an Undirected Graph</a></h2>
 
       <p>Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.
-Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2  Example 2: Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1  Note: You can assume that no duplicate edges will appear in edges.</p>
+Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2 Example 2: Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1 Note: You can assume that no duplicate edges will appear in edges.</p>
 
       <p class="meta">
         
@@ -362,7 +389,7 @@ Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 O
 
       <p>Given n nodes labeled from 0 to n-1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
 ###Example 1:
-Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true  Example 2: Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false  ###Note: you can assume that no duplicate edges will appear in edges.</p>
+Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true Example 2: Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false ###Note: you can assume that no duplicate edges will appear in edges.</p>
 
       <p class="meta">
         
@@ -403,32 +430,6 @@ Example 1: Input: points = [[1,3],[-2,2]], K = 1 Output: [[-2,2]] Explanation: T
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/meeting-room/">Meeting Room</a></h2>
-
-      <p>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), determine if a person could attend all meetings.
-Example 1: Input: [[0,30],[5,10],[15,20]] Output: false  Example 2: Input: [[7,10],[2,4]] Output: true  Solution /** * Definition for an interval. * public class Interval { * int start; * int end; * Interval() { start = 0; end = 0; } * Interval(int s, int e) { start = s; end = e; } * } */ class Solution { public boolean canAttendMeetings(Interval[] intervals) { Arrays.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

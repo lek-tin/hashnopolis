@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot;  Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot;  Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot;  Explanation The order is invalid, so return &amp;ldquo;&amp;rdquo;." />
+Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot; Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot; Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot; Explanation The order is invalid, so return &amp;ldquo;&amp;quot;." />
   <meta name="keywords" content="leetcode java topological-sort " />
   
   
@@ -25,14 +25,14 @@ Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;e
     
     <meta name="twitter:title" content="Alien Dictionary" />
     <meta name="twitter:description" content="There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot;  Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot;  Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot;  Explanation The order is invalid, so return &amp;ldquo;&amp;rdquo;." />
+Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot; Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot; Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot; Explanation The order is invalid, so return &amp;ldquo;&amp;quot;." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/12/alien-dictionary/" />
@@ -192,12 +192,8 @@ Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;e
         <h5>Last updated: December 8, 2018</h5>
       
       <hr />
-      
-
-<p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of <strong>non-empty</strong> words from the dictionary, where <strong>words are sorted lexicographically by the rules of this new language</strong>. Derive the order of letters in this language.</p>
-
+      <p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of <strong>non-empty</strong> words from the dictionary, where <strong>words are sorted lexicographically by the rules of this new language</strong>. Derive the order of letters in this language.</p>
 <h3 id="example-1">Example 1</h3>
-
 <pre><code>Input:
 [
   &quot;wrt&quot;,
@@ -208,10 +204,7 @@ Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;e
 ]
 
 Output: &quot;wertf&quot;
-</code></pre>
-
-<h3 id="example-2">Example 2</h3>
-
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input:
 [
   &quot;z&quot;,
@@ -219,10 +212,7 @@ Output: &quot;wertf&quot;
 ]
 
 Output: &quot;zx&quot;
-</code></pre>
-
-<h3 id="example-3">Example 3</h3>
-
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input:
 [
   &quot;z&quot;,
@@ -231,94 +221,87 @@ Output: &quot;zx&quot;
 ]
 
 Output: &quot;&quot;
-</code></pre>
-
-<h3 id="explanation-the-order-is-invalid-so-return">Explanation The order is invalid, so return &ldquo;&rdquo;.</h3>
-
+</code></pre><h3 id="explanation-the-order-is-invalid-so-return-">Explanation The order is invalid, so return &ldquo;&quot;.</h3>
 <h3 id="note">Note</h3>
-
 <ol>
 <li>You may assume all letters are in lowercase.</li>
 <li>You may assume that if a is a prefix of b, then a must appear before b in the given dictionary.</li>
 <li>If the order is invalid, return an empty string.</li>
 <li>There may be multiple valid order of letters, return any one of them is fine.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">alienOrder</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> words<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// construct the graph
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// -1: unvisited
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// List of 26 linked lists
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;[]</span> graph <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> List<span style="color:#f92672">[</span>26<span style="color:#f92672">];</span>
+        <span style="color:#75715e">// how many incoming connection to any vertex
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> indegree <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>26<span style="color:#f92672">];</span>
+        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">fill</span><span style="color:#f92672">(</span>indegree<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// Mark all the letters as 0
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 0: visited
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String word<span style="color:#f92672">:</span> words<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> c<span style="color:#f92672">:</span> word<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+                indegree<span style="color:#f92672">[</span>c <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">class Solution {
-    public String alienOrder(String[] words) {
-        // construct the graph
-        // -1: unvisited
-        // List of 26 linked lists
-        List&lt;Character&gt;[] graph = new List[26];
-        // how many incoming connection to any vertex
-        int[] indegree = new int[26];
-        Arrays.fill(indegree, -1);
-        // Mark all the letters as 0
-        // 0: visited
-        for (String word: words) {
-            for (char c: word.toCharArray()) {
-                indegree[c - 'a'] = 0;
-            }
-        }
+        <span style="color:#75715e">// Iterate each row
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> words<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">// Iterate each char in each row
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> words<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> words<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#75715e">// from: char above, to: char below
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">char</span> from <span style="color:#f92672">=</span> words<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">].</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">char</span> to <span style="color:#f92672">=</span> words<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
+                <span style="color:#75715e">// from &gt; ...
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">//   to &gt; ...
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>from <span style="color:#f92672">!=</span> to<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#75715e">// entry from is empty
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>graph<span style="color:#f92672">[</span>from <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        graph<span style="color:#f92672">[</span>from <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
+                    <span style="color:#f92672">}</span>
+                    <span style="color:#75715e">// add new lower ordered element to entry from
+</span><span style="color:#75715e"></span>                    graph<span style="color:#f92672">[</span>from <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">].</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>to<span style="color:#f92672">);</span>
+                    indegree<span style="color:#f92672">[</span>to <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]++;</span>
+                    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        // Iterate each row
-        for (int i = 1; i &lt; words.length; i++) {
-            // Iterate each char in each row
-            for (int j = 0; j &lt; words[i - 1].length() &amp;&amp; j &lt; words[i].length(); j++) {
-                // from: char above, to: char below
-                char from = words[i - 1].charAt(j);
-                char to = words[i].charAt(j);
-                // from &gt; ...
-                //   to &gt; ...
-                if (from != to) {
-                    // entry from is empty
-                    if (graph[from - 'a'] == null) {
-                        graph[from - 'a'] = new LinkedList();
-                    }
-                    // add new lower ordered element to entry from
-                    graph[from - 'a'].add(to);
-                    indegree[to - 'a']++;
-                    break;
-                }
-            }
-        }
-
-        // topology sort
-        StringBuilder sb = new StringBuilder();
-        Queue&lt;Character&gt; queue = new LinkedList();
-        for (char c = 'a'; c &lt;= 'z'; c++) {
-            // Iterate each visited entry
-            if (indegree[c - 'a'] == 0) {
-                queue.offer(c);
-            }
-        }
-        int count = 0;
-        // Count the total number of letters appeared
-        for (int i: indegree) {
-            count += i != -1 ? 1 : 0;
-        }
-        while (!queue.isEmpty()) {
-            char c = queue.poll();
-            sb.append(c);
-            count--;
-            if (graph[c - 'a'] == null) {
-                continue;
-            }
-            for (char neighbour: graph[c - 'a']) {
-                indegree[neighbour - 'a']--;
-                if (indegree[neighbour - 'a'] == 0) {
-                    queue.offer(neighbour);
-                }
-            }
-        }
-        // if count == 0, means a valid order is possible, thud return the order.
-        return count == 0 ? sb.toString() : &quot;&quot;;
-    }
-}
-</code></pre>
-
+        <span style="color:#75715e">// topology sort
+</span><span style="color:#75715e"></span>        StringBuilder sb <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span>
+        Queue<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> queue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">;</span> c <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;z&#39;</span><span style="color:#f92672">;</span> c<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">// Iterate each visited entry
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>indegree<span style="color:#f92672">[</span>c <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>c<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#75715e">// Count the total number of letters appeared
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">:</span> indegree<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            count <span style="color:#f92672">+=</span> i <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1 <span style="color:#f92672">?</span> 1 <span style="color:#f92672">:</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>queue<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">();</span>
+            sb<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>c<span style="color:#f92672">);</span>
+            count<span style="color:#f92672">--;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>graph<span style="color:#f92672">[</span>c <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> neighbour<span style="color:#f92672">:</span> graph<span style="color:#f92672">[</span>c <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                indegree<span style="color:#f92672">[</span>neighbour <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]--;</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>indegree<span style="color:#f92672">[</span>neighbour <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    queue<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>neighbour<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// if count == 0, means a valid order is possible, thud return the order.
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> count <span style="color:#f92672">==</span> 0 <span style="color:#f92672">?</span> sb<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

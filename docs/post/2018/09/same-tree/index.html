@@ -19,8 +19,9 @@
   <meta name="description" content="Given two binary trees, write a function to check if they are the same or not.
 Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
 Example 1:
-Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true  Example 2:
-Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:" />
+Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true Example 2:
+Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false Example 3:
+Input: 1 1 / \ / \ 2 1 1 2 [1,2,1], [1,1,2] Output: false Solution # Definition for a binary tree node." />
   <meta name="keywords" content="leetcode binary-tree " />
   
   
@@ -30,15 +31,16 @@ Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:" />
     <meta name="twitter:description" content="Given two binary trees, write a function to check if they are the same or not.
 Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
 Example 1:
-Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true  Example 2:
-Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:" />
+Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true Example 2:
+Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false Example 3:
+Input: 1 1 / \ / \ 2 1 1 2 [1,2,1], [1,1,2] Output: false Solution # Definition for a binary tree node." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/same-tree/" />
@@ -196,14 +198,9 @@ Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:" />
         <h5>Last updated: September 16, 2018</h5>
       
       <hr />
-      
-
-<p>Given two binary trees, write a function to check if they are the same or not.</p>
-
+      <p>Given two binary trees, write a function to check if they are the same or not.</p>
 <p>Two binary trees are considered the same if they are structurally identical and the nodes have the same value.</p>
-
 <p>Example 1:</p>
-
 <pre><code>Input:     1         1
           / \       / \
          2   3     2   3
@@ -211,10 +208,7 @@ Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false  Example 3:" />
         [1,2,3],   [1,2,3]
 
 Output: true
-</code></pre>
-
-<p>Example 2:</p>
-
+</code></pre><p>Example 2:</p>
 <pre><code>Input:     1         1
           /           \
          2             2
@@ -222,10 +216,7 @@ Output: true
         [1,2],     [1,null,2]
 
 Output: false
-</code></pre>
-
-<p>Example 3:</p>
-
+</code></pre><p>Example 3:</p>
 <pre><code>Input:     1         1
           / \       / \
          2   1     1   2
@@ -233,38 +224,34 @@ Output: false
         [1,2,1],   [1,1,2]
 
 Output: false
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution:
-    def isSameTree(self, p, q):
-        &quot;&quot;&quot;
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: bool
-        &quot;&quot;&quot;
-        def compareNodes(a, b):
-            if (a == None and b == None):
-                return True
-            &quot;&quot;&quot;One of the nodes is None, and the other is a valid node&quot;&quot;&quot;
-            elif ((a and not b) or (not a and b)):
-                return False
-            else:
-                if (a.val == b.val):
-                    return compareNodes(a.left, b.left) and compareNodes(a.right, b.right)
-                else:
-                    return False
-        return compareNodes(p, q)
-</code></pre>
-
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isSameTree</span>(self, p, q):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type p: TreeNode
+</span><span style="color:#e6db74">        :type q: TreeNode
+</span><span style="color:#e6db74">        :rtype: bool
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compareNodes</span>(a, b):
+            <span style="color:#66d9ef">if</span> (a <span style="color:#f92672">==</span> None <span style="color:#f92672">and</span> b <span style="color:#f92672">==</span> None):
+                <span style="color:#66d9ef">return</span> True
+            <span style="color:#e6db74">&#34;&#34;&#34;One of the nodes is None, and the other is a valid node&#34;&#34;&#34;</span>
+            <span style="color:#66d9ef">elif</span> ((a <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> b) <span style="color:#f92672">or</span> (<span style="color:#f92672">not</span> a <span style="color:#f92672">and</span> b)):
+                <span style="color:#66d9ef">return</span> False
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">if</span> (a<span style="color:#f92672">.</span>val <span style="color:#f92672">==</span> b<span style="color:#f92672">.</span>val):
+                    <span style="color:#66d9ef">return</span> compareNodes(a<span style="color:#f92672">.</span>left, b<span style="color:#f92672">.</span>left) <span style="color:#f92672">and</span> compareNodes(a<span style="color:#f92672">.</span>right, b<span style="color:#f92672">.</span>right)
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#66d9ef">return</span> False
+        <span style="color:#66d9ef">return</span> compareNodes(p, q)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

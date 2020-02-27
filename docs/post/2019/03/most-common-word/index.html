@@ -17,7 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words. It is guaranteed there is at least one word that isn&amp;rsquo;t banned, and that the answer is unique.
-Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase." />
+Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase.
+Example: Input: paragraph = &amp;quot;Bob hit a ball, the hit BALL flew far after it was hit." />
   <meta name="keywords" content="leetcode hashmap hashset string " />
   
   
@@ -25,14 +26,15 @@ Words in the list of banned words are given in lowercase, and free of punctuatio
     
     <meta name="twitter:title" content="Most Common Word" />
     <meta name="twitter:description" content="Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words. It is guaranteed there is at least one word that isn&amp;rsquo;t banned, and that the answer is unique.
-Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase." />
+Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase.
+Example: Input: paragraph = &amp;quot;Bob hit a ball, the hit BALL flew far after it was hit." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/03/most-common-word/" />
@@ -194,14 +196,9 @@ Words in the list of banned words are given in lowercase, and free of punctuatio
         <h5>Last updated: March 7, 2019</h5>
       
       <hr />
-      
-
-<p>Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words.  It is guaranteed there is at least one word that isn&rsquo;t banned, and that the answer is unique.</p>
-
+      <p>Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words.  It is guaranteed there is at least one word that isn&rsquo;t banned, and that the answer is unique.</p>
 <p>Words in the list of banned words are given in lowercase, and free of punctuation.  Words in the paragraph are not case sensitive.  The answer is in lowercase.</p>
-
 <h3 id="example">Example:</h3>
-
 <pre><code>Input: 
 paragraph = &quot;Bob hit a ball, the hit BALL flew far after it was hit.&quot;
 banned = [&quot;hit&quot;]
@@ -212,49 +209,43 @@ Explanation:
 Note that words in the paragraph are not case sensitive,
 that punctuation is ignored (even if adjacent to words, such as &quot;ball,&quot;), 
 and that &quot;hit&quot; isn't the answer even though it occurs more because it is banned.
-</code></pre>
-
-<h3 id="note">Note:</h3>
-
+</code></pre><h3 id="note">Note:</h3>
 <ol>
 <li><code>1 &lt;= paragraph.length &lt;= 1000</code>.</li>
 <li><code>1 &lt;= banned.length &lt;= 100</code>.</li>
 <li><code>1 &lt;= banned[i].length &lt;= 10</code>.</li>
 <li>The answer is unique, and written in lowercase (even if its occurrences in <code>paragraph</code> may have uppercase symbols, and even if it is a proper noun.)
-<code>paragraph</code> only consists of letters, spaces, or the punctuation symbols !?&lsquo;,;.</li>
+<code>paragraph</code> only consists of letters, spaces, or the punctuation symbols !?',;.</li>
 <li>There are no hyphens or hyphenated words.
 Words only consist of letters, never apostrophes or other punctuation symbols.</li>
 </ol>
-
 <h3 id="solution">SOlution:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Time: `O(n)`
+</span><span style="color:#75715e">// Space: `O(n)`
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">mostCommonWord</span><span style="color:#f92672">(</span>String paragraph<span style="color:#f92672">,</span> String<span style="color:#f92672">[]</span> banned<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        HashSet<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> bannedWords <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>banned<span style="color:#f92672">));</span>
+        HashMap<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> counts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#75715e">// Split by one or more whitespaces
+</span><span style="color:#75715e"></span>        String<span style="color:#f92672">[]</span> words <span style="color:#f92672">=</span> paragraph<span style="color:#f92672">.</span><span style="color:#a6e22e">replaceAll</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\\s&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;,&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">replaceAll</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\\pP&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">toLowerCase</span><span style="color:#f92672">().</span> split<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\\s+&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        String res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
 
-<pre><code class="language-java">// Time: `O(n)`
-// Space: `O(n)`
-class Solution {
-    public String mostCommonWord(String paragraph, String[] banned) {
-        HashSet&lt;String&gt; bannedWords = new HashSet&lt;&gt;(Arrays.asList(banned));
-        HashMap&lt;String, Integer&gt; counts = new HashMap&lt;&gt;();
-        // Split by one or more whitespaces
-        String[] words = paragraph.replaceAll(&quot;\\s&quot;, &quot;,&quot;).replaceAll(&quot;\\pP&quot;, &quot; &quot;).toLowerCase(). split(&quot;\\s+&quot;);
-        int max = 0;
-        String res = &quot;&quot;;
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String word<span style="color:#f92672">:</span> words<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>bannedWords<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>word<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">int</span> currentCount <span style="color:#f92672">=</span> counts<span style="color:#f92672">.</span><span style="color:#a6e22e">getOrDefault</span><span style="color:#f92672">(</span>word<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>
+                counts<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>word<span style="color:#f92672">,</span> currentCount <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>counts<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>word<span style="color:#f92672">)</span> <span style="color:#f92672">&gt;</span> max<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    max <span style="color:#f92672">=</span> counts<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>word<span style="color:#f92672">);</span>
+                    res <span style="color:#f92672">=</span> word<span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        for (String word: words) {
-            if (!bannedWords.contains(word)) {
-                int currentCount = counts.getOrDefault(word, 0);
-                counts.put(word, currentCount + 1);
-                if (counts.get(word) &gt; max) {
-                    max = counts.get(word);
-                    res = word;
-                }
-            }
-        }
-
-        return res;
-    }
-}
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

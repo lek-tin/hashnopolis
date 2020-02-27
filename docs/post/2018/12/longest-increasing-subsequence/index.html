@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?" />
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution Bottom-up solution:" />
   <meta name="keywords" content="leetcode recursion memoization dynamic-programming " />
   
   
@@ -25,14 +25,14 @@ Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increas
     
     <meta name="twitter:title" content="Longest Increasing Subsequence" />
     <meta name="twitter:description" content="Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.  Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?" />
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution Bottom-up solution:" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/12/longest-increasing-subsequence/" />
@@ -194,119 +194,103 @@ Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increas
         <h5>Last updated: December 19, 2018</h5>
       
       <hr />
-      
-
-<p>Given an unsorted array of integers, find the length of longest increasing subsequence.</p>
-
+      <p>Given an unsorted array of integers, find the length of longest increasing subsequence.</p>
 <h3 id="example">Example:</h3>
-
 <pre><code>Input: [10,9,2,5,3,7,101,18]
 Output: 4
 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. 
-</code></pre>
-
-<h3 id="note">Note</h3>
-
+</code></pre><h3 id="note">Note</h3>
 <ul>
 <li>There may be more than one LIS combination, it is only necessary for you to return the length.</li>
-
-<li><p>Your algorithm should run in <code>O(n2)</code> complexity.
-Follow up: Could you improve it to <code>O(n log n)</code> time complexity?</p>
-
-<h3 id="solution">Solution</h3>
-
-<p>Bottom-up solution:</p>
-
-<pre><code class="language-python"># Time: O(n^2)
-# Iterative
-class Solution:
-def lengthOfLIS(self, nums):
-    &quot;&quot;&quot;
-    :type nums: List[int]
-    :rtype: int
-    &quot;&quot;&quot;
-    size = len(nums)
-    if size == 0:
-        return 0
-
-    counts = [1] * size
-
-    for i in range(1, len(nums)):
-        # memoization
-        for j in range(i):
-            if nums[j] &lt; nums[i]:
-                counts[i] = max(counts[i], counts[j] + 1)
-
-    maxCount = max(counts)
-    return maxCount
-</code></pre>
-
-<pre><code class="language-java">class Solution {
-public int lengthOfLIS(int[] nums) {
-    if (nums == null || nums.length == 0) {
-        return 0;
-    }
-
-    int[] counts = new int[nums.length];
-    int longest = 0;
-    Arrays.fill(counts, 1);
-
-    for (int i = 1; i &lt; nums.length; i++) {
-        for (int j = 0; j &lt; i; j++) {
-            // Sub problems for nums[0:i]
-            if (nums[j] &lt; nums[i]) {
-                counts[i] = Math.max(counts[i], counts[j] + 1);
-            }
-        }
-    }
-
-    for (int count: counts) {
-        if (count &gt; longest) {
-            longest = count;
-        }
-    }
-
-    return longest;
-}
-}
-</code></pre>
-
-<pre><code class="language-java">class Solution {
-public int lengthOfLIS(int[] nums) {
-    if (nums == null || nums.length == 0) {
-        return 0;
-    }
-
-    int[] counts = new int[nums.length];
-    int longest = 0;
-    Arrays.fill(counts, 0);
-    counts[0] = 1;
-
-    for (int i = 1; i &lt; nums.length; i++) {
-        for (int j = 0; j &lt; i; j++) {
-            // find longest increasing subsequence that ends with nums[j]
-			    // where nums[j] is less than the current element nums[i]
-            // After the ith iteration, counts[i] is the biggest
-            if (nums[j] &lt; nums[i] &amp;&amp; counts[j] &gt; counts[i]) {
-				    counts[i] = counts[j];
-            }
-        }
-        // include nums[i] in counts
-		    counts[i]++;
-    }
-
-    for (int count: counts) {
-        if (count &gt; longest) {
-            longest = count;
-        }
-    }
-
-    return longest;
-}
-}
-</code></pre></li>
+<li>Your algorithm should run in <code>O(n2)</code> complexity.
+Follow up: Could you improve it to <code>O(n log n)</code> time complexity?</li>
 </ul>
+<h3 id="solution">Solution</h3>
+<p>Bottom-up solution:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: O(n^2)</span>
+<span style="color:#75715e"># Iterative</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLIS</span>(self, nums):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type nums: List[int]
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        size <span style="color:#f92672">=</span> len(nums)
+        <span style="color:#66d9ef">if</span> size <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 
+        counts <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> size
+
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(nums)):
+            <span style="color:#75715e"># memoization</span>
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i):
+                <span style="color:#66d9ef">if</span> nums[j] <span style="color:#f92672">&lt;</span> nums[i]:
+                    counts[i] <span style="color:#f92672">=</span> max(counts[i], counts[j] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+
+        maxCount <span style="color:#f92672">=</span> max(counts)
+        <span style="color:#66d9ef">return</span> maxCount
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lengthOfLIS</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> counts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">];</span>
+        <span style="color:#66d9ef">int</span> longest <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">fill</span><span style="color:#f92672">(</span>counts<span style="color:#f92672">,</span> 1<span style="color:#f92672">);</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> i<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#75715e">// Sub problems for nums[0:i]
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                    counts<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>counts<span style="color:#f92672">[</span>i<span style="color:#f92672">],</span> counts<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> count<span style="color:#f92672">:</span> counts<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>count <span style="color:#f92672">&gt;</span> longest<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                longest <span style="color:#f92672">=</span> count<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> longest<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lengthOfLIS</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> counts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">];</span>
+        <span style="color:#66d9ef">int</span> longest <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">fill</span><span style="color:#f92672">(</span>counts<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>
+        counts<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> i<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#75715e">// find longest increasing subsequence that ends with nums[j]
+</span><span style="color:#75715e"></span>			    <span style="color:#75715e">// where nums[j] is less than the current element nums[i]
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// After the ith iteration, counts[i] is the biggest
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> counts<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> counts<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+				    counts<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> counts<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#75715e">// include nums[i] in counts
+</span><span style="color:#75715e"></span>		    counts<span style="color:#f92672">[</span>i<span style="color:#f92672">]++;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> count<span style="color:#f92672">:</span> counts<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>count <span style="color:#f92672">&gt;</span> longest<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                longest <span style="color:#f92672">=</span> count<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> longest<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 &#43; b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5  Example 2: Input: 3 Output: False  Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &amp;lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &amp;gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False  Without sqrt function" />
+Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &amp;lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &amp;gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function" />
   <meta name="keywords" content="leetcode math binary-search " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5  Example 2: 
     
     <meta name="twitter:title" content="Sum of Square Numbers" />
     <meta name="twitter:description" content="Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 &#43; b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5  Example 2: Input: 3 Output: False  Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &amp;lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &amp;gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False  Without sqrt function" />
+Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &amp;lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &amp;gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/09/sum-of-square-numbers/" />
@@ -192,76 +192,62 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5  Example 2: 
         <h5>Last updated: February 20, 2020</h5>
       
       <hr />
-      
-
-<p>Given a non-negative integer <code>c</code>, your task is to decide whether there&rsquo;re two integers <code>a</code> and <code>b</code> such that <code>a2 + b2 = c</code>.</p>
-
+      <p>Given a non-negative integer <code>c</code>, your task is to decide whether there&rsquo;re two integers <code>a</code> and <code>b</code> such that <code>a2 + b2 = c</code>.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: 5
 Output: True
 Explanation: 1 * 1 + 2 * 2 = 5
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: 3
 Output: False
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 
-<h3 id="solution">Solution</h3>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">judgeSquareSum</span>(self, c: int) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> c <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> True
 
-<pre><code class="language-python">import math
+        sqrt <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>ceil(math<span style="color:#f92672">.</span>sqrt(c))
+        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, sqrt<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 
-class Solution:
-    def judgeSquareSum(self, c: int) -&gt; bool:
-        if c &lt;= 1:
-            return True
+        <span style="color:#66d9ef">while</span> left<span style="color:#f92672">*</span>left <span style="color:#f92672">+</span> right<span style="color:#f92672">*</span>right <span style="color:#f92672">&lt;</span> c:
+            <span style="color:#66d9ef">if</span> (left<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>(left<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> right<span style="color:#f92672">*</span>right <span style="color:#f92672">&gt;</span> c:
+                right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-        sqrt = math.ceil(math.sqrt(c))
-        left, right = 0, sqrt-1
-
-        while left*left + right*right &lt; c:
-            if (left+1)*(left+1) + right*right &gt; c:
-                right -= 1
-            else:
-                left += 1
-
-        if left*left + right*right == c:
-            return True
-        return False
-</code></pre>
-
-<p>Without <code>sqrt</code> function<br />
-Time: <code>O(c​logc)</code><br />
+        <span style="color:#66d9ef">if</span> left<span style="color:#f92672">*</span>left <span style="color:#f92672">+</span> right<span style="color:#f92672">*</span>right <span style="color:#f92672">==</span> c:
+            <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div><p>Without <code>sqrt</code> function<br>
+Time: <code>O(c​logc)</code><br>
 Space: <code>O(clogc)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">judgeSquareSum</span>(self, c: int) <span style="color:#f92672">-&gt;</span> bool:
+        a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span> a<span style="color:#f92672">*</span>a<span style="color:#f92672">&lt;=</span> c:
+            b <span style="color:#f92672">=</span> c <span style="color:#f92672">-</span> a<span style="color:#f92672">*</span>a
+            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>binary_search(<span style="color:#ae81ff">0</span>, b, b):
+                <span style="color:#66d9ef">return</span> True
+            a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-<pre><code class="language-python">class Solution:
-    def judgeSquareSum(self, c: int) -&gt; bool:
-        a = 0
-        while a*a&lt;= c:
-            b = c - a*a
-            if self.binary_search(0, b, b):
-                return True
-            a += 1
-
-        return False
+        <span style="color:#66d9ef">return</span> False
 
 
-    def binary_search(self, start, end, target):
-        if start &gt; end:
-            return False
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">binary_search</span>(self, start, end, target):
+        <span style="color:#66d9ef">if</span> start <span style="color:#f92672">&gt;</span> end:
+            <span style="color:#66d9ef">return</span> False
 
-        mid = start + (end-start)//2
+        mid <span style="color:#f92672">=</span> start <span style="color:#f92672">+</span> (end<span style="color:#f92672">-</span>start)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
 
-        if mid*mid == target:
-            return True
-        elif mid*mid &gt; target:
-            return self.binary_search(start, mid-1, target)
-        else:
-            return self.binary_search(mid+1, end, target)
-</code></pre>
-
+        <span style="color:#66d9ef">if</span> mid<span style="color:#f92672">*</span>mid <span style="color:#f92672">==</span> target:
+            <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">elif</span> mid<span style="color:#f92672">*</span>mid <span style="color:#f92672">&gt;</span> target:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>binary_search(start, mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>binary_search(mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, end, target)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

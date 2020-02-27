@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node." />
+Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node." />
   <meta name="keywords" content="leetcode bst two-pointers inorder-traversal " />
   
   
@@ -25,14 +25,14 @@ Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Inpu
     
     <meta name="twitter:title" content="Two Sum Iv Input Is a Bst" />
     <meta name="twitter:description" content="Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False  Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node." />
+Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/08/two-sum-iv-input-is-a-bst/" />
@@ -194,12 +194,8 @@ Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Inpu
         <h5>Last updated: August 19, 2019</h5>
       
       <hr />
-      
-
-<p>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.</p>
-
+      <p>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.</p>
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: 
     5
    / \
@@ -210,10 +206,7 @@ Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True  Example 2: Inpu
 Target = 9
 
 Output: True
-</code></pre>
-
-<h3 id="example-2">Example 2:</h3>
-
+</code></pre><h3 id="example-2">Example 2:</h3>
 <pre><code>Input: 
     5
    / \
@@ -224,76 +217,70 @@ Output: True
 Target = 28
 
 Output: False
-</code></pre>
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># time: `O(n)`</span>
+<span style="color:#75715e"># space: `O(n)`</span>
+<span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<h3 id="solution">Solution</h3>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findTarget</span>(self, root: TreeNode, k: int) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> False
 
-<pre><code class="language-python"># time: `O(n)`
-# space: `O(n)`
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+        visited <span style="color:#f92672">=</span> set()
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>traverse(root, visited, k)
 
-class Solution:
-    def findTarget(self, root: TreeNode, k: int) -&gt; bool:
-        if not root:
-            return False
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">traverse</span>(self, root, visited, k):
+        <span style="color:#66d9ef">if</span> root <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> False
 
-        visited = set()
-        return self.traverse(root, visited, k)
+        <span style="color:#66d9ef">if</span> k <span style="color:#f92672">-</span> root<span style="color:#f92672">.</span>val <span style="color:#f92672">in</span> visited:
+            <span style="color:#66d9ef">return</span> True
+        visited<span style="color:#f92672">.</span>add(root<span style="color:#f92672">.</span>val)
 
-    def traverse(self, root, visited, k):
-        if root == None:
-            return False
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>traverse(root<span style="color:#f92672">.</span>left, visited, k) <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>traverse(root<span style="color:#f92672">.</span>right, visited, k)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># time: `O(n)`</span>
+<span style="color:#75715e"># space: `O(n)`</span>
+<span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findTarget</span>(self, root: TreeNode, k: int) <span style="color:#f92672">-&gt;</span> bool:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> root:
+            <span style="color:#66d9ef">return</span> False
 
-        if k - root.val in visited:
-            return True
-        visited.add(root.val)
+        target <span style="color:#f92672">=</span> k
+        nums <span style="color:#f92672">=</span> []
+        self<span style="color:#f92672">.</span>flatten(root, nums)
+        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">print</span>(nums)
+        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+            temp <span style="color:#f92672">=</span> nums[left] <span style="color:#f92672">+</span> nums[right]
+            <span style="color:#66d9ef">if</span> temp <span style="color:#f92672">==</span> target:
+                <span style="color:#66d9ef">return</span> True
+            <span style="color:#66d9ef">elif</span> temp <span style="color:#f92672">&lt;</span> target:
+                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:
+                right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> False
 
-        return self.traverse(root.left, visited, k) or self.traverse(root.right, visited, k)
-</code></pre>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">flatten</span>(self, root, nums):
+        <span style="color:#66d9ef">if</span> root <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span>
 
-<pre><code class="language-python"># time: `O(n)`
-# space: `O(n)`
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-class Solution:
-    def findTarget(self, root: TreeNode, k: int) -&gt; bool:
-        if not root:
-            return False
+        self<span style="color:#f92672">.</span>flatten(root<span style="color:#f92672">.</span>left, nums)
+        nums<span style="color:#f92672">.</span>append(root<span style="color:#f92672">.</span>val)
+        self<span style="color:#f92672">.</span>flatten(root<span style="color:#f92672">.</span>right, nums)
 
-        target = k
-        nums = []
-        self.flatten(root, nums)
-        left, right = 0, len(nums)-1
-        print(nums)
-        while left &lt; right:
-            temp = nums[left] + nums[right]
-            if temp == target:
-                return True
-            elif temp &lt; target:
-                left += 1
-            else:
-                right -= 1
-        return False
-
-    def flatten(self, root, nums):
-        if root == None:
-            return
-
-        self.flatten(root.left, nums)
-        nums.append(root.val)
-        self.flatten(root.right, nums)
-
-</code></pre>
-
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

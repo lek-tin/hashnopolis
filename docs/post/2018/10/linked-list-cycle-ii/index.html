@@ -36,7 +36,7 @@ Observation: Solution: /** * Definition for singly-linked list. * class ListNode
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/10/linked-list-cycle-ii/" />
@@ -198,99 +198,87 @@ Observation: Solution: /** * Definition for singly-linked list. * class ListNode
         <h5>Last updated: November 3, 2019</h5>
       
       <hr />
-      
-
-<p>Given a linked list, return the node where the cycle begins. If there is no cycle, return <code>null</code>.</p>
-
+      <p>Given a linked list, return the node where the cycle begins. If there is no cycle, return <code>null</code>.</p>
 <h2 id="note">Note:</h2>
-
 <p>Do not modify the linked list.</p>
-
 <h2 id="follow-up">Follow up:</h2>
-
 <p>Can you solve it without using extra space?</p>
-
 <p><strong>Observation:</strong>
-<img src="/img/post/linked-list-cycle-ii.jpg" alt="Linked List Cycle II" /></p>
-
+<img src="/img/post/linked-list-cycle-ii.jpg" alt="Linked List Cycle II"></p>
 <h2 id="solution">Solution:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for singly-linked list.
+</span><span style="color:#75715e"> * class ListNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     ListNode next;
+</span><span style="color:#75715e"> *     ListNode(int x) {
+</span><span style="color:#75715e"> *         val = x;
+</span><span style="color:#75715e"> *         next = null;
+</span><span style="color:#75715e"> *     }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> ListNode <span style="color:#a6e22e">detectCycle</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 
-<pre><code class="language-java">/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
-    public ListNode detectCycle(ListNode head) {
-        if (head == null) return null;
+        ListNode slow <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        ListNode fast <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">boolean</span> hasCycle <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
 
-        ListNode slow = head;
-        ListNode fast = head;
-        boolean hasCycle = false;
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>slow <span style="color:#f92672">==</span> fast<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                hasCycle <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>hasCycle<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        while (slow.next != null &amp;&amp; fast.next != null &amp;&amp; fast.next.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-            if (slow == fast) {
-                hasCycle = true;
-                break;
-            }
-        }
-        if (!hasCycle) {
-            return null;
-        }
+        slow <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
 
-        slow = head;
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>slow <span style="color:#f92672">!=</span> fast<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        while (slow != fast) {
-            slow = slow.next;
-            fast = fast.next;
-        }
+        <span style="color:#66d9ef">return</span> slow<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for singly-linked list.</span>
+<span style="color:#75715e"># class ListNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.next = None</span>
 
-        return slow;
-    }
-}
-</code></pre>
-
-<pre><code class="language-python"># Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
-class Solution(object):
-    def detectCycle(self, head):
-        &quot;&quot;&quot;
-        :type head: ListNode
-        :rtype: ListNode
-        &quot;&quot;&quot;
-        if head == None:
-            return None
-        slow = head
-        fast = head
-        hasCycle = False
-        while fast.next != None and fast.next.next != None:
-            fast = fast.next.next
-            slow = slow.next
-            if fast == slow:
-                hasCycle = True
-                break
-        if not hasCycle:
-            return None
-        slow = head
-        while slow != fast:
-            # move x steps further
-            fast = fast.next
-            slow = slow.next
-        return slow
-</code></pre>
-
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detectCycle</span>(self, head):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type head: ListNode
+</span><span style="color:#e6db74">        :rtype: ListNode
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> head <span style="color:#f92672">==</span> None:
+            <span style="color:#66d9ef">return</span> None
+        slow <span style="color:#f92672">=</span> head
+        fast <span style="color:#f92672">=</span> head
+        hasCycle <span style="color:#f92672">=</span> False
+        <span style="color:#66d9ef">while</span> fast<span style="color:#f92672">.</span>next <span style="color:#f92672">!=</span> None <span style="color:#f92672">and</span> fast<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next <span style="color:#f92672">!=</span> None:
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span>next
+            <span style="color:#66d9ef">if</span> fast <span style="color:#f92672">==</span> slow:
+                hasCycle <span style="color:#f92672">=</span> True
+                <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> hasCycle:
+            <span style="color:#66d9ef">return</span> None
+        slow <span style="color:#f92672">=</span> head
+        <span style="color:#66d9ef">while</span> slow <span style="color:#f92672">!=</span> fast:
+            <span style="color:#75715e"># move x steps further</span>
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span>next
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span>next
+        <span style="color:#66d9ef">return</span> slow
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

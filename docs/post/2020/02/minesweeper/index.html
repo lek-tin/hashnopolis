@@ -32,7 +32,7 @@ You are given a 2D char matrix representing the game board. &#39;M&#39; represen
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2020/02/minesweeper/" />
@@ -188,21 +188,14 @@ You are given a 2D char matrix representing the game board. &#39;M&#39; represen
         <h5>Last updated: February 5, 2020</h5>
       
       <hr />
-      
-
-<p>Let&rsquo;s play the minesweeper game (Wikipedia, online game)!</p>
-
+      <p>Let&rsquo;s play the minesweeper game (Wikipedia, online game)!</p>
 <p>You are given a 2D char matrix representing the game board. <code>'M'</code> represents an <strong>unrevealed</strong> mine, <code>'E'</code> represents an <strong>unrevealed</strong> empty square, <code>'B'</code> represents a <strong>revealed</strong> blank square that has no adjacent (above, below, left, right, and all 4 diagonals) mines, digit (<code>'1'</code> to <code>'8'</code>) represents how many mines are adjacent to this <strong>revealed</strong> square, and finally <code>'X'</code> represents a <strong>revealed</strong> mine.</p>
-
 <p>Now given the next click position (row and column indices) among all the <strong>unrevealed</strong> squares (<code>'M'</code> or <code>'E'</code>), return the board after revealing this position according to the following rules:</p>
-
 <p>If a mine (<code>'M'</code>) is <strong>revealed</strong>, then the game is over - change it to <code>'X'</code>.
 If an empty square (<code>'E'</code>) <strong>with no adjacent mines</strong> is <strong>revealed</strong>, then change it to <strong>revealed</strong> blank (<code>'B'</code>) and all of its adjacent <strong>unrevealed</strong> squares should be <strong>revealed</strong> recursively.
 If an empty square (<code>'E'</code>) with <strong>at least one adjacent mine</strong> is <strong>revealed</strong>, then change it to a digit (<code>'1'</code> to <code>'8'</code>) representing the number of adjacent mines.
 Return the board when no more squares will be <strong>revealed</strong>.</p>
-
 <h3 id="example-1">Example 1:</h3>
-
 <pre><code>Input: 
 
 [['E', 'E', 'E', 'E', 'E'],
@@ -220,12 +213,8 @@ Output:
  ['B', 'B', 'B', 'B', 'B']]
 
 Explanation:
-</code></pre>
-
-<p><img src="/img/post/minesweeper_example_1.png" alt="minesweeper example 1" /></p>
-
+</code></pre><p><img src="/img/post/minesweeper_example_1.png" alt="minesweeper example 1"></p>
 <h3 id="example-2">Example 2:</h3>
-
 <pre><code>Input: 
 
 [['B', '1', 'E', '1', 'B'],
@@ -243,51 +232,44 @@ Output:
  ['B', 'B', 'B', 'B', 'B']]
 
 Explanation:
-</code></pre>
-
-<p><img src="/img/post/minesweeper_example_2.png" alt="minesweeper example 2" /></p>
-
+</code></pre><p><img src="/img/post/minesweeper_example_2.png" alt="minesweeper example 2"></p>
 <h3 id="note">Note:</h3>
-
 <ol>
 <li>The range of the input matrix&rsquo;s height and width is <code>[1,50]</code>.</li>
 <li>The click position will only be an unrevealed square (<code>'M'</code> or <code>'E'</code>), which also means the input board contains at least one clickable square.</li>
 <li>The input board won&rsquo;t be a stage when game is over (some mines have been revealed).</li>
 <li>For simplicity, not mentioned rules should be ignored in this problem. For example, you <strong>don&rsquo;t</strong> need to reveal all the unrevealed mines when the game is over, consider any cases that you will win the game or flag any squares.</li>
 </ol>
-
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">updateBoard</span>(self, board: List[List[str]], click: List[int]) <span style="color:#f92672">-&gt;</span> List[List[str]]:
+        self<span style="color:#f92672">.</span>search(board, click[<span style="color:#ae81ff">0</span>], click[<span style="color:#ae81ff">1</span>])
+        <span style="color:#66d9ef">return</span> board
 
-<pre><code class="language-python">class Solution:
-    def updateBoard(self, board: List[List[str]], click: List[int]) -&gt; List[List[str]]:
-        self.search(board, click[0], click[1])
-        return board
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search</span>(self, board, i, j):
+        dirs <span style="color:#f92672">=</span> [ [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]
 
-    def search(self, board, i, j):
-        dirs = [ [0,1], [1,0], [0,-1], [-1, 0], [1,1], [1,-1], [-1,1],[-1,-1]]
+        <span style="color:#66d9ef">if</span> board[i][j] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;M&#39;</span>:
+            board[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;X&#39;</span>
+            <span style="color:#66d9ef">return</span>
+        <span style="color:#66d9ef">else</span>:
+            mineCount <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+            <span style="color:#66d9ef">for</span> dir <span style="color:#f92672">in</span> dirs:
+                new_i <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> dir[<span style="color:#ae81ff">0</span>]
+                new_j <span style="color:#f92672">=</span> j <span style="color:#f92672">+</span> dir[<span style="color:#ae81ff">1</span>]
+                <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_i <span style="color:#f92672">&lt;</span> len(board) <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_j <span style="color:#f92672">&lt;</span> len(board[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">and</span> board[new_i][new_j] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;M&#39;</span>:
+                    mineCount <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-        if board[i][j] == 'M':
-            board[i][j] = 'X'
-            return
-        else:
-            mineCount = 0
-            for dir in dirs:
-                new_i = i + dir[0]
-                new_j = j + dir[1]
-                if 0 &lt;= new_i &lt; len(board) and 0 &lt;= new_j &lt; len(board[0]) and board[new_i][new_j] == 'M':
-                    mineCount += 1
-
-            if mineCount &gt; 0:
-                board[i][j] = str(mineCount)
-            else:
-                board[i][j] = 'B'
-                for dir in dirs:
-                    new_i = i + dir[0]
-                    new_j = j + dir[1]
-                    if 0 &lt;= new_i &lt; len(board) and 0 &lt;= new_j &lt; len(board[0]) and board[new_i][new_j] == 'E':
-                        self.search(board, new_i, new_j)
-</code></pre>
-
+            <span style="color:#66d9ef">if</span> mineCount <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+                board[i][j] <span style="color:#f92672">=</span> str(mineCount)
+            <span style="color:#66d9ef">else</span>:
+                board[i][j] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;B&#39;</span>
+                <span style="color:#66d9ef">for</span> dir <span style="color:#f92672">in</span> dirs:
+                    new_i <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> dir[<span style="color:#ae81ff">0</span>]
+                    new_j <span style="color:#f92672">=</span> j <span style="color:#f92672">+</span> dir[<span style="color:#ae81ff">1</span>]
+                    <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_i <span style="color:#f92672">&lt;</span> len(board) <span style="color:#f92672">and</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&lt;=</span> new_j <span style="color:#f92672">&lt;</span> len(board[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">and</span> board[new_i][new_j] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;E&#39;</span>:
+                        self<span style="color:#f92672">.</span>search(board, new_i, new_j)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -18,10 +18,10 @@
   <meta name="author" content="" />
   <meta name="description" content="Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
 Note The input string may contain letters other than the parentheses ( and ). *### Example 1
-Input: &amp;quot;()())()&amp;quot; Output: [&amp;quot;()()()&amp;quot;, &amp;quot;(())()&amp;quot;]  *### Example 2
-Input: &amp;quot;(a)())()&amp;quot; Output: [&amp;quot;(a)()()&amp;quot;, &amp;quot;(a())()&amp;quot;]  *### Example 3
-Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *### Solution
-# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] self." />
+Input: &amp;quot;()())()&amp;quot; Output: [&amp;quot;()()()&amp;quot;, &amp;quot;(())()&amp;quot;] *### Example 2
+Input: &amp;quot;(a)())()&amp;quot; Output: [&amp;quot;(a)()()&amp;quot;, &amp;quot;(a())()&amp;quot;] *### Example 3
+Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;] *### Solution
+# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &amp;#34;&amp;#34;&amp;#34; :type s: str :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; res = [] self." />
   <meta name="keywords" content="leetcode dfs search " />
   
   
@@ -30,17 +30,17 @@ Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *### Solution
     <meta name="twitter:title" content="Remove Invalid Parentheses" />
     <meta name="twitter:description" content="Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
 Note The input string may contain letters other than the parentheses ( and ). *### Example 1
-Input: &amp;quot;()())()&amp;quot; Output: [&amp;quot;()()()&amp;quot;, &amp;quot;(())()&amp;quot;]  *### Example 2
-Input: &amp;quot;(a)())()&amp;quot; Output: [&amp;quot;(a)()()&amp;quot;, &amp;quot;(a())()&amp;quot;]  *### Example 3
-Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *### Solution
-# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &amp;quot;&amp;quot;&amp;quot; :type s: str :rtype: List[str] &amp;quot;&amp;quot;&amp;quot; res = [] self." />
+Input: &amp;quot;()())()&amp;quot; Output: [&amp;quot;()()()&amp;quot;, &amp;quot;(())()&amp;quot;] *### Example 2
+Input: &amp;quot;(a)())()&amp;quot; Output: [&amp;quot;(a)()()&amp;quot;, &amp;quot;(a())()&amp;quot;] *### Example 3
+Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;] *### Solution
+# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &amp;#34;&amp;#34;&amp;#34; :type s: str :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; res = [] self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/11/remove-invalid-parentheses/" />
@@ -200,102 +200,87 @@ Input: &amp;quot;)(&amp;quot; Output: [&amp;quot;&amp;quot;]  *### Solution
         <h5>Last updated: November 13, 2018</h5>
       
       <hr />
-      
-
-<p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.</p>
-
-<h3 id="note-the-input-string-may-contain-letters-other-than-the-parentheses-and">Note The input string may contain letters other than the parentheses <code>(</code> and <code>)</code>.</h3>
-
+      <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.</p>
+<h3 id="note-the-input-string-may-contain-letters-other-than-the-parentheses--and-">Note The input string may contain letters other than the parentheses <code>(</code> and <code>)</code>.</h3>
 <p>*### Example 1</p>
-
 <pre><code>Input: &quot;()())()&quot;
 Output: [&quot;()()()&quot;, &quot;(())()&quot;]
-</code></pre>
-
-<p>*### Example 2</p>
-
+</code></pre><p>*### Example 2</p>
 <pre><code>Input: &quot;(a)())()&quot;
 Output: [&quot;(a)()()&quot;, &quot;(a())()&quot;]
-</code></pre>
-
-<p>*### Example 3</p>
-
+</code></pre><p>*### Example 3</p>
 <pre><code>Input: &quot;)(&quot;
 Output: [&quot;&quot;]
-</code></pre>
+</code></pre><p>*### Solution</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">removeInvalidParentheses</span>(self, s):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type s: str
+</span><span style="color:#e6db74">        :rtype: List[str]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        res <span style="color:#f92672">=</span> []
+        self<span style="color:#f92672">.</span>left_to_right(s, res, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)
+        <span style="color:#66d9ef">return</span> res
 
-<p>*### Solution</p>
+    <span style="color:#75715e"># Remove extra &#34;)&#34;s</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">left_to_right</span>(self, s, res, i_start, j_search_start):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        scan from left to right, remove surplus &#39;)&#39;
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e"># DFS</span>
+        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(i_start, len(s)):
+            <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span>:  <span style="color:#75715e"># &#39;(&#39;</span>
+                count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span>:  <span style="color:#75715e"># &#39;)&#39;</span>
+                count <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#75715e"># Do nothing if it&#39;s neither &#39;)&#39; or &#39;(&#39;</span>
 
-<pre><code class="language-python"># Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS
-class Solution(object):
-    def removeInvalidParentheses(self, s):
-        &quot;&quot;&quot;
-        :type s: str
-        :rtype: List[str]
-        &quot;&quot;&quot;
-        res = []
-        self.left_to_right(s, res, 0, 0)
-        return res
+            <span style="color:#66d9ef">if</span> count <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#75715e"># search for &#39;)&#39;</span>
+                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(j_search_start, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):  <span style="color:#75715e"># j_search_start ~ i</span>
+                    <span style="color:#66d9ef">if</span> s[j] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span> \
+                            <span style="color:#f92672">and</span> ((j <span style="color:#f92672">==</span> j_search_start) <span style="color:#f92672">or</span> s[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">!=</span> s[j]):  <span style="color:#75715e"># remove the first &#39;)&#39; among consecutive ones</span>
+                        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;i: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, j: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">%</span>(i,j))
+                        <span style="color:#75715e"># remove s[j] and continue searching</span>
+                        char_removed <span style="color:#f92672">=</span> s[:j] <span style="color:#f92672">+</span> s[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:]
+                        self<span style="color:#f92672">.</span>left_to_right(char_removed, res, i,j)
+                <span style="color:#66d9ef">return</span>  <span style="color:#75715e"># only search in the char_removed substring</span>
 
-    # Remove extra &quot;)&quot;s
-    def left_to_right(self, s, res, i_start, j_search_start):
-        &quot;&quot;&quot;
-        scan from left to right, remove surplus ')'
-        &quot;&quot;&quot;
-        # DFS
-        count = 0
-        for i in range(i_start, len(s)):
-            if s[i] == '(':  # '('
-                count += 1
-            if s[i] == ')':  # ')'
-                count -= 1
-            # Do nothing if it's neither ')' or '('
+        <span style="color:#75715e"># if finished removing suplus &#39;)&#39; by scanning left to right,</span>
+        <span style="color:#75715e"># scan for &#39;(&#39; right to left</span>
+        self<span style="color:#f92672">.</span>right_to_left(s, res, len(s)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, len(s)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
 
-            if count &lt; 0:
-                # search for ')'
-                for j in range(j_search_start, i + 1):  # j_search_start ~ i
-                    if s[j] == ')' \
-                            and ((j == j_search_start) or s[j - 1] != s[j]):  # remove the first ')' among consecutive ones
-                        print('i: %d, j: %d'%(i,j))
-                        # remove s[j] and continue searching
-                        char_removed = s[:j] + s[j+1:]
-                        self.left_to_right(char_removed, res, i,j)
-                return  # only search in the char_removed substring
+    <span style="color:#75715e"># Remove extra &#34;(&#34;s</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">right_to_left</span>(self, s, res, i_start, j_search_start):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        scan from right to left, remove surplus &#39;(&#39;
+</span><span style="color:#e6db74">        append result to res
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#75715e"># DFS</span>
+        count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(i_start, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):  <span style="color:#75715e"># i_start~0</span>
+            <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;)&#39;</span>:  <span style="color:#75715e"># &#39;)</span>
+                count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span>:  <span style="color:#75715e"># &#39;(</span>
+                count <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#75715e"># Do nothing if it&#39;s neither &#39;)&#39; or &#39;(&#39;</span>
+            <span style="color:#66d9ef">if</span> count <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#75715e"># search for &#39;(&#39;</span>
+                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(j_search_start, i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):  <span style="color:#75715e"># i ~ j_search_start</span>
+                    <span style="color:#66d9ef">if</span> s[j] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;(&#39;</span> \
+                            <span style="color:#f92672">and</span> ((j <span style="color:#f92672">==</span> j_search_start) <span style="color:#f92672">or</span> s[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">!=</span> s[j]):
+                        <span style="color:#75715e"># remove the first &#39;)&#39; among consecutive ones (when scanning from right to left)</span>
+                        <span style="color:#75715e"># remove s[j] and continue searching</span>
+                        char_removed <span style="color:#f92672">=</span> s[:j] <span style="color:#f92672">+</span> s[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:]
+                        self<span style="color:#f92672">.</span>right_to_left(char_removed, res, i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+                <span style="color:#66d9ef">return</span>
 
-        # if finished removing suplus ')' by scanning left to right,
-        # scan for '(' right to left
-        self.right_to_left(s, res, len(s)-1, len(s)-1)
-
-    # Remove extra &quot;(&quot;s
-    def right_to_left(self, s, res, i_start, j_search_start):
-        &quot;&quot;&quot;
-        scan from right to left, remove surplus '('
-        append result to res
-        &quot;&quot;&quot;
-        # DFS
-        count = 0
-        for i in range(i_start, -1, -1):  # i_start~0
-            if s[i] == ')':  # ')
-                count += 1
-            if s[i] == '(':  # '(
-                count -= 1
-            # Do nothing if it's neither ')' or '('
-            if count &lt; 0:
-                # search for '('
-                for j in range(j_search_start, i-1, -1):  # i ~ j_search_start
-                    if s[j] == '(' \
-                            and ((j == j_search_start) or s[j+1] != s[j]):
-                        # remove the first ')' among consecutive ones (when scanning from right to left)
-                        # remove s[j] and continue searching
-                        char_removed = s[:j] + s[j+1:]
-                        self.right_to_left(char_removed, res, i-1,j-1)
-                return
-
-        # base case: finished scanning
-        print('found %s'%s)
-        res.append(s)
-</code></pre>
-
+        <span style="color:#75715e"># base case: finished scanning</span>
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;found </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">%</span>s)
+        res<span style="color:#f92672">.</span>append(s)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -16,23 +16,23 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Given n, how many structurally unique BST&amp;rsquo;s (binary search trees) that store values 1 &amp;hellip; n?
-Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  Exaplanation n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0);  Solution class Solution: def numTrees(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; res = [1] for i in range(1, n&#43;1): for j in range(i): res." />
+  <meta name="description" content="Given n, how many structurally unique BST&#39;s (binary search trees) that store values 1 &amp;hellip; n?
+Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3 Exaplanation n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0); Solution class Solution: def numTrees(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: int &amp;#34;&amp;#34;&amp;#34; res = [1] for i in range(1, n&#43;1): for j in range(i): res." />
   <meta name="keywords" content="leetcode bst dynamic-programming " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Unique Binary Search Trees" />
-    <meta name="twitter:description" content="Given n, how many structurally unique BST&amp;rsquo;s (binary search trees) that store values 1 &amp;hellip; n?
-Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3  Exaplanation n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0);  Solution class Solution: def numTrees(self, n): &amp;quot;&amp;quot;&amp;quot; :type n: int :rtype: int &amp;quot;&amp;quot;&amp;quot; res = [1] for i in range(1, n&#43;1): for j in range(i): res." />
+    <meta name="twitter:description" content="Given n, how many structurally unique BST&#39;s (binary search trees) that store values 1 &amp;hellip; n?
+Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3 Exaplanation n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0); Solution class Solution: def numTrees(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: int &amp;#34;&amp;#34;&amp;#34; res = [1] for i in range(1, n&#43;1): for j in range(i): res." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/unique-binary-search-trees/" />
@@ -192,12 +192,8 @@ Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 uniq
         <h5>Last updated: September 16, 2018</h5>
       
       <hr />
-      
-
-<p>Given n, how many structurally unique <code>BST</code>&rsquo;s (binary search trees) that store values 1 &hellip; n?</p>
-
+      <p>Given n, how many structurally unique <code>BST</code>'s (binary search trees) that store values 1 &hellip; n?</p>
 <h3 id="example">Example</h3>
-
 <pre><code>Input: 3
 Output: 5
 Explanation:
@@ -208,32 +204,25 @@ Given n = 3, there are a total of 5 unique BST's:
      3     2     1      1   3      2
     /     /       \                 \
    2     1         2                 3
-</code></pre>
-
-<h3 id="exaplanation">Exaplanation</h3>
-
+</code></pre><h3 id="exaplanation">Exaplanation</h3>
 <pre><code>n = 3
 root: 1     left: 0 right: 2    f(0)*f(2);
 root: 2     left: 1 right: 1    f(1)*f(1);
 root: 3     left: 2 right: 0    f(2)*f(0);
-</code></pre>
-
-<h3 id="solution">Solution</h3>
-
-<pre><code class="language-python">class Solution:
-    def numTrees(self, n):
-        &quot;&quot;&quot;
-        :type n: int
-        :rtype: int
-        &quot;&quot;&quot;
-        res = [1]
-        for i in range(1, n+1):
-            for j in range(i):
-                res.append(0)
-                res[i] += res[j] * res[i - j - 1]
-        return res[n]
-</code></pre>
-
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numTrees</span>(self, n):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type n: int
+</span><span style="color:#e6db74">        :rtype: int
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        res <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i):
+                res<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)
+                res[i] <span style="color:#f92672">+=</span> res[j] <span style="color:#f92672">*</span> res[i <span style="color:#f92672">-</span> j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">return</span> res[n]
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -20,8 +20,8 @@
 The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 3.  Solution: recursion
-/** * Definition for a binary tree node." />
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 3. Solution: recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int maxDepth(TreeNode root) { if (root == null) return 0; int left = maxDepth(root." />
   <meta name="keywords" content="leetcode binary-tree depth-first-search " />
   
   
@@ -32,15 +32,15 @@ Example: Given binary tree [3,9,20,null,null,15,7],
 The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 Note: A leaf is a node with no children.
 Example: Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7 return its minimum depth = 3.  Solution: recursion
-/** * Definition for a binary tree node." />
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 3. Solution: recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int maxDepth(TreeNode root) { if (root == null) return 0; int left = maxDepth(root." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2019/02/maximum-depth-of-binary-tree/" />
@@ -200,76 +200,61 @@ Example: Given binary tree [3,9,20,null,null,15,7],
         <h5>Last updated: February 12, 2019</h5>
       
       <hr />
-      
-
-<p>Given a binary tree, find its maximum depth.</p>
-
+      <p>Given a binary tree, find its maximum depth.</p>
 <p>The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
-
 <p><strong>Note:</strong> A leaf is a node with no children.</p>
-
 <h3 id="example">Example:</h3>
-
 <p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
-
 <pre><code>    3
    / \
   9  20
     /  \
    15   7
 return its minimum depth = 3.
-</code></pre>
-
-<h3 id="solution">Solution:</h3>
-
+</code></pre><h3 id="solution">Solution:</h3>
 <p>recursion</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxDepth</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> maxDepth<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> maxDepth<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public int maxDepth(TreeNode root) {
-        if (root == null) return 0;
-        int left = maxDepth(root.left);
-        int right = maxDepth(root.right);
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">==</span> 0 <span style="color:#f92672">||</span> right <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">?</span> left <span style="color:#f92672">+</span> right <span style="color:#f92672">+</span> 1 <span style="color:#f92672">:</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>left<span style="color:#f92672">,</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>DFS using stack</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode:</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-        return (left == 0 || right == 0) ? left + right + 1 : Math.max(left, right) + 1;
-    }
-}
-</code></pre>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxDepth</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> int:
+        stack <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">if</span> root:
+            stack<span style="color:#f92672">.</span>append((root, <span style="color:#ae81ff">1</span>))
 
-<p>DFS using stack</p>
+        maxDepth <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span> stack <span style="color:#f92672">!=</span> []:
+            root, currDepth <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span>pop()
+            <span style="color:#66d9ef">if</span> root:
+                maxDepth <span style="color:#f92672">=</span> max(currDepth, maxDepth)
+                stack<span style="color:#f92672">.</span>append((root<span style="color:#f92672">.</span>left, currDepth<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+                stack<span style="color:#f92672">.</span>append((root<span style="color:#f92672">.</span>right, currDepth<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution:
-    def maxDepth(self, root: TreeNode) -&gt; int:
-        stack = []
-        if root:
-            stack.append((root, 1))
-
-        maxDepth = 0
-        while stack != []:
-            root, currDepth = stack.pop()
-            if root:
-                maxDepth = max(currDepth, maxDepth)
-                stack.append((root.left, currDepth+1))
-                stack.append((root.right, currDepth+1))
-
-        return maxDepth
-</code></pre>
-
+        <span style="color:#66d9ef">return</span> maxDepth
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a binary tree, return the preorder traversal of its nodes&amp;rsquo; values.
 Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; if root is None: return [] return [root." />
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3] Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &amp;#34;&amp;#34;&amp;#34; :type root: TreeNode :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; if root is None: return [] return [root." />
   <meta name="keywords" content="leetcode binary-tree " />
   
   
@@ -27,14 +27,14 @@ Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow-up Recursive solution is t
     <meta name="twitter:title" content="Binary Tree Preorder Traversal" />
     <meta name="twitter:description" content="Given a binary tree, return the preorder traversal of its nodes&amp;rsquo; values.
 Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &amp;quot;&amp;quot;&amp;quot; :type root: TreeNode :rtype: List[int] &amp;quot;&amp;quot;&amp;quot; if root is None: return [] return [root." />
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3] Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &amp;#34;&amp;#34;&amp;#34; :type root: TreeNode :rtype: List[int] &amp;#34;&amp;#34;&amp;#34; if root is None: return [] return [root." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.30.2" />
+<meta name="generator" content="Hugo 0.65.3" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/2018/09/binary-tree-preorder-traversal/" />
@@ -192,12 +192,8 @@ Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow-up Recursive solution is t
         <h5>Last updated: September 13, 2018</h5>
       
       <hr />
-      
-
-<p>Given a binary tree, return the preorder traversal of its nodes&rsquo; values.</p>
-
+      <p>Given a binary tree, return the preorder traversal of its nodes&rsquo; values.</p>
 <p>Example:</p>
-
 <pre><code>Input: [1,null,2,3]
    1
     \
@@ -206,38 +202,33 @@ Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3]  Follow-up Recursive solution is t
    3
 
 Output: [1,2,3]
-</code></pre>
-
-<h3 id="follow-up-recursive-solution-is-trivial-could-you-do-it-iteratively">Follow-up Recursive solution is trivial, could you do it iteratively?</h3>
-
+</code></pre><h3 id="follow-up-recursive-solution-is-trivial-could-you-do-it-iteratively">Follow-up Recursive solution is trivial, could you do it iteratively?</h3>
 <h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Definition for a binary tree node.</span>
+<span style="color:#75715e"># class TreeNode(object):</span>
+<span style="color:#75715e">#     def __init__(self, x):</span>
+<span style="color:#75715e">#         self.val = x</span>
+<span style="color:#75715e">#         self.left = None</span>
+<span style="color:#75715e">#         self.right = None</span>
 
-<pre><code class="language-python"># Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
-class Solution(object):
-    def preorderTraversal_1(self, root):
-        &quot;&quot;&quot;
-        :type root: TreeNode
-        :rtype: List[int]
-        &quot;&quot;&quot;
-        if root is None:
-            return []
-        return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">preorderTraversal_1</span>(self, root):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        :type root: TreeNode
+</span><span style="color:#e6db74">        :rtype: List[int]
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> root <span style="color:#f92672">is</span> None:
+            <span style="color:#66d9ef">return</span> []
+        <span style="color:#66d9ef">return</span> [root<span style="color:#f92672">.</span>val] <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>preorderTraversal(root<span style="color:#f92672">.</span>left) <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>preorderTraversal(root<span style="color:#f92672">.</span>right)
     
-    def preorderTraversal_2(self, root):
-    while stack:
-            node = stack.pop()
-            if node:
-                ans.append(node.val)
-                stack.extend([node.right, node.left])
-        return ans
-</code></pre>
-
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">preorderTraversal_2</span>(self, root):
+    <span style="color:#66d9ef">while</span> stack:
+            node <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span>pop()
+            <span style="color:#66d9ef">if</span> node:
+                ans<span style="color:#f92672">.</span>append(node<span style="color:#f92672">.</span>val)
+                stack<span style="color:#f92672">.</span>extend([node<span style="color:#f92672">.</span>right, node<span style="color:#f92672">.</span>left])
+        <span style="color:#66d9ef">return</span> ans
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>
