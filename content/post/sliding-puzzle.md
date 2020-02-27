@@ -52,6 +52,8 @@ Output: 14
 2. `board[i][j]` will be a permutation of `[0, 1, 2, 3, 4, 5]`.
 
 ### Solution
+Time: `O(n*m!)`
+Time: `O(n*m!)`
 ```python
 from collections import deque
 
@@ -142,3 +144,6 @@ class Solution:
 # 152403
 # 120453
 ```
+
+### Improvement
+We can optimize our algorithm with A*. We can use a string to represent a state and have all the trasitions pre-computed.

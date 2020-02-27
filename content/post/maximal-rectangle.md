@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "java", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-02-25T00:41:33-08:00
+lastmod: 2020-02-24T00:41:33-08:00
 draft: false
 archive: false
 ---
@@ -63,7 +64,6 @@ class Solution {
         for (int i = 0; i < h; i++) {
             int curLeft = 0;
             int curRight = w - 1;
-            System.out.println("asdkasdnjaksd");
             for (int j = 0; j < w; j++) {
                 if (matrix[i][j] == '1') height[j]++;
                 else height[j] = 0;
