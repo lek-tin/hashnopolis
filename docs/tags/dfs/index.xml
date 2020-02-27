@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 21 Feb 2020 01:20:58 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 00:48:43 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vertical Order Traversal of a Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/2020/02/vertical-order-traversal-of-a-binary-tree/</link>
+      <pubDate>Thu, 27 Feb 2020 00:48:43 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/02/vertical-order-traversal-of-a-binary-tree/</guid>
+      <description>Given a binary tree, return the vertical order traversal of its nodes values.
+For each node at position (X, Y), its left and right children respectively will be at positions (X-1, Y-1) and (X+1, Y-1).
+Running a vertical line from X = -infinity to X = +infinity, whenever the vertical line touches some nodes, we report the values of the nodes in order from top to bottom (decreasing Y coordinates).</description>
+    </item>
     
     <item>
       <title>Is Graph Bipartite</title>
@@ -160,6 +171,18 @@ Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of 
       <guid>http://www.hashnopolis.com/post/2019/03/number-of-connected-components-in-an-undirected-graph/</guid>
       <description>Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.
 Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2 Example 2: Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1 Note: You can assume that no duplicate edges will appear in edges.</description>
+    </item>
+    
+    <item>
+      <title>Binary Tree Zigzag Level Order Traversal</title>
+      <link>http://www.hashnopolis.com/post/2019/01/binary-tree-zigzag-level-order-traversal/</link>
+      <pubDate>Fri, 25 Jan 2019 00:12:07 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/binary-tree-zigzag-level-order-traversal/</guid>
+      <description>Given a binary tree, return the zigzag level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, then right to left for the next level and alternate between).
+Example Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 return its zigzag level order traversal as:
+[ [3], [20,9], [15,7] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
     </item>
     
     <item>
