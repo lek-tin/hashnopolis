@@ -1,5 +1,5 @@
 ---
-title: "Populating Next Right Pointers in Each Node Ii"
+title: "Populating Next Right Pointers in Each Node II"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "level-traversal", "bfs", "recursion"]

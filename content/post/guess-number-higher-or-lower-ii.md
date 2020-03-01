@@ -1,5 +1,5 @@
 ---
-title: "Guess Number Higher or Lower Ii"
+title: "Guess Number Higher or Lower II"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "dynamic-programming"]

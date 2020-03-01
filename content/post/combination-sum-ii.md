@@ -1,5 +1,5 @@
 ---
-title: "Combination Sum Ii"
+title: "Combination Sum II"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "python", "dfs", "recursion"]
