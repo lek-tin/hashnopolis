@@ -109,7 +109,7 @@ Example 1: Input: cost = [10, 15, 20] Output: 15 Explanation: Cheapest is start 
     </item>
     
     <item>
-      <title>Guess Number Higher or Lower Ii</title>
+      <title>Guess Number Higher or Lower II</title>
       <link>http://www.hashnopolis.com/post/2019/09/guess-number-higher-or-lower-ii/</link>
       <pubDate>Thu, 19 Sep 2019 23:33:43 -0700</pubDate>
       
@@ -270,6 +270,19 @@ class Solution { public int maxSubArray(int[] nums) { if (nums.</description>
       <guid>http://www.hashnopolis.com/post/2019/02/longest-common-subsequence/</guid>
       <description>The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). It differs from the longest common substring problem: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
 Optimal Substructure: Let the input sequences be X[0..m-1] and Y[0..n-1] of lengths m and n respectively. And let L(X[0..m-1], Y[0..n-1]) be the length of LCS of the two sequences X and Y.</description>
+    </item>
+    
+    <item>
+      <title>Trapping Rain Water</title>
+      <link>http://www.hashnopolis.com/post/2019/01/trapping-rain-water/</link>
+      <pubDate>Sat, 26 Jan 2019 23:39:49 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2019/01/trapping-rain-water/</guid>
+      <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
+Example: Input: [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6 Solution 1 Time: O(n)
+Space: O(1)
+class Solution { public int trap(int[] height) { int n = height.</description>
     </item>
     
     <item>
