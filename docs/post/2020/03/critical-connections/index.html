@@ -5,7 +5,7 @@
 
   
   <title>
-        Hashnopolis | Computer Science, Data Science and Awesome Technology
+        Critical Connections | Hashnopolis
       </title>
 
     
@@ -16,15 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="___SITE Description___" />
-  <meta name="keywords" content="___keyword, keyword, keyword___" />
-
+  <meta name="description" content="Given an underected connected graph with n nodes labeled 1..n. A bridge (cut edge) is defined as an edge which, when removed, makes the graph disconnected (or more precisely, increases the number of connected components in the graph). Equivalently, an edge is a bridge if and only if it is not contained in any cycle. The task is to find all bridges in the given graph. Output an empty list if there are no bridges." />
+  <meta name="keywords" content="leetcode " />
   
-  <meta name="twitter:card" content="summary" />
   
-  <meta name="twitter:title" content="Hashnopolis" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Critical Connections" />
+    <meta name="twitter:description" content="Given an underected connected graph with n nodes labeled 1..n. A bridge (cut edge) is defined as an edge which, when removed, makes the graph disconnected (or more precisely, increases the number of connected components in the graph). Equivalently, an edge is a bridge if and only if it is not contained in any cycle. The task is to find all bridges in the given graph. Output an empty list if there are no bridges." />
+    <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+  
 
 
 
@@ -32,7 +33,7 @@
 <meta name="generator" content="Hugo 0.65.3" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/categories/algorithm/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2020/03/critical-connections/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -165,142 +166,77 @@
     
         <section class="main-content">
           
+  
 
   
-  
-  <h2 class="taxonomy-single--title">algorithm:</h2>
-  <div>
-    
-    
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/3sum/">3sum</a></h2>
-
-      <p>Given an array nums of n integers, are there elements a, b, c in nums such that a &#43; b &#43; c = 0? Find all unique triplets in the array which gives the sum of zero.
-Note:
-The solution set must not contain duplicate triplets.
-Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1], [-1, -1, 2] ] Solution # time: o(n^2) # space: o(1) class Solution: def threeSum(self, nums: List[int]) -&gt; List[List[int]]: results = [] if not nums: return results nums.</p>
-
+  <div class="post">
       <p class="meta">
         
-        by
         
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        <span class="highlight">Tags:</span>
         
-        in
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
-  </div>
-
-  
-
-</article>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/critical-connections.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Critical Connections</h1>
+      <h4>Created: March 1, 2020 by [lek-tin]</h4>
       
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/4.-median-of-two-sorted-arrays/">4. Median of Two Sorted Arrays</a></h2>
-
-      <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m&#43;n)).
-You may assume nums1 and nums2 cannot be both empty.
-Example 1: nums1 = [1, 3] nums2 = [2] The median is 2.0 Example 2: nums1 = [1, 2] nums2 = [3, 4] The median is (2 &#43; 3)/2 = 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
+        <h5>Last updated: March 1, 2020</h5>
       
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></h2>
+      <hr />
+      <p>Given an underected connected graph with n nodes labeled <code>1..n</code>. A bridge (cut edge) is defined as an edge which, when removed, makes the graph disconnected (or more precisely, increases the number of connected components in the graph). Equivalently, an edge is a bridge if and only if it is not contained in any cycle. The task is to find all bridges in the given graph. Output an empty list if there are no bridges.</p>
+<h3 id="input">Input</h3>
+<ol>
+<li><code>n</code>, an int representing the total number of nodes.</li>
+<li>edges, a list of pairs of integers representing the nodes connected by an edge.</li>
+</ol>
+<h3 id="example-1">Example 1</h3>
+<p><img src="/img/post/critical-connections-example-1.png" alt="critical connections example 1"></p>
+<pre><code>Input: n = 5, edges = [[1, 2], [1, 3], [3, 4], [1, 4], [4, 5]]
 
-      <p>Given a linked list, remove the n-th node from the end of list and return its head.
-Example Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5. Note Given n will always be valid.
-Follow-up Could you do this in one pass?
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.</p>
 
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
+Output: [[1, 2], [4, 5]]
+Explanation:
+There are 2 bridges:
+1. Between node 1 and 2
+2. Between node 4 and 5
+If we remove these edges, then the graph will be disconnected.
+If we remove any of the remaining edges, the graph will remain connected.
+</code></pre><h3 id="example-2">Example 2</h3>
+<p><img src="/img/post/critical-connections-example-2.png" alt="critical connections example 2"></p>
+<pre><code>Input: n = 6, edges = [[1, 2], [1, 3], [2, 3], [2, 4], [2, 5], [4, 6], [5, 6]]
+
+
+Output: []
+Explanation:
+We can remove any edge, the graph will remain connected.
+</code></pre><h3 id="example-3">Example 3</h3>
+<p><img src="/img/post/critical-connections-example-3.png" alt="critical connections example 3"></p>
+<pre><code>Input: n = 9, edges = [[1, 2], [1, 3], [2, 3], [3, 4], [3, 6], [4, 5], [6, 7], [6, 9], [7, 8], [8, 9]]
+
+
+Output: [[3, 4], [3, 6], [4, 5]]
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"></code></pre></div>
   </div>
+
+  <div id="disqus_thread"></div>
+<script>
+  
 
   
 
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/search-in-rotated-sorted-array-ii/">Search in Rotated Sorted Array II</a></h2>
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
-(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
-You are given a target value to search. If found in the array return true, otherwise return false.
-Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-    
-    
-      <footer class="list-footer">
-        <nav class="pagination">
-        
-        
-          <a class="pagination-previous" href="/categories/algorithm/page/28/">← Newer Posts</a>
-        
-        
-        </nav>
-      </footer>
-    
-  </div>
-  
 
         </section>
         

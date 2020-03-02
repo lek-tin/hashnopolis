@@ -176,6 +176,61 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/populating-next-right-pointers-in-each-node-ii/">Populating Next Right Pointers in Each Node II</a></h2>
+
+      <p>Given a binary tree
+struct Node { int val; Node *left; Node *right; Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
+Initially, all next pointers are set to NULL.
+Follow up  You may only use constant extra space. Recursive approach is fine, you may assume implicit stack space does not count as extra space for this problem.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/decode-ways-ii/">Decode Ways II</a></h2>
+
+      <p>A message containing letters from A-Z is being encoded to numbers using the following mapping way:
+&#39;A&#39; -&gt; 1 &#39;B&#39; -&gt; 2 ... &#39;Z&#39; -&gt; 26 Beyond that, now the encoded string can also contain the character &#39;*&#39;, which can be treated as one of the numbers from 1 to 9.
+Given the encoded message containing digits and the character &#39;*&#39;, return the total number of ways to decode it.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2020/02/is-graph-bipartite/">Is Graph Bipartite</a></h2>
 
       <p>Given an undirected graph, return true if and only if it is bipartite.
@@ -369,61 +424,6 @@ For this problem, a height-balanced binary tree is defined as:
 
       <p>Given an array nums of integers, we need to find the maximum possible sum of elements of the array such that it is divisible by three.
 Example 1: Input: nums = [3,6,5,1,8] Output: 18 Explanation: Pick numbers 3, 6, 1 and 8 their sum is 18 (maximum sum divisible by 3). Example 2: Input: nums = [4] Output: 0 Explanation: Since 4 is not divisible by 3, do not pick any number.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/powerful-integers/">Powerful Integers</a></h2>
-
-      <p>Given two positive integers x and y, an integer is powerful if it is equal to x^i &#43; y^j for some integers i &gt;= 0 and j &gt;= 0.
-Return a list of all powerful integers that have value less than or equal to bound.
-You may return the answer in any order. In your answer, each value should occur at most once.
-Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2 Example 2: Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note:  1 &lt;= x &lt;= 100 1 &lt;= y &lt;= 100 0 &lt;= bound &lt;= 10^6  Hint If x^i &gt; bound, the sum x^i &#43; y^j can’t be less than or equal to the bound.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/k-th-smallest-in-lexicographical-order/">K Th Smallest in Lexicographical Order</a></h2>
-
-      <p>Given integers n and k, find the lexicographically k-th smallest integer in the range from 1 to n.
-Note: 1 ≤ k ≤ n ≤ 10^9.
-Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10. Solution class Solution: def findKthNumber(self, n: int, k: int) -&gt; int: if n &lt; k or k &lt; 1: return 0 if n &lt; 10: return k curr = 1 k -= 1 while k &gt; 0: leap, prev, next = 0, curr, curr&#43;1 while prev &lt;= n: # update leap leap &#43;= min(n&#43;1, next) - prev prev *= 10 next *= 10 if leap &lt;= k: curr &#43;= 1 print(leap, &#34;&lt;= k; curr =&#34;, curr) k -= leap else: curr *= 10 print(leap, &#34;&gt; k; curr =&#34;, curr) k -= 1 return curr # Input: n=1300, k=50 # order: [1,10,100,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,101,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,102,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,103,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,104,1040,1041,1042] # Output: # 412 &gt; k; curr = 10 # 111 &gt; k; curr = 100 # 11 &lt;= k; curr = 101 # 11 &lt;= k; curr = 102 # 11 &lt;= k; curr = 103 # 11 &lt;= k; curr = 104 # 11 &gt; k; curr = 1040 # 1 &lt;= k; curr = 1041 # 1 &lt;= k; curr = 1042 </p>
 
       <p class="meta">
         

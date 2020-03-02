@@ -176,6 +176,61 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/powerful-integers/">Powerful Integers</a></h2>
+
+      <p>Given two positive integers x and y, an integer is powerful if it is equal to x^i &#43; y^j for some integers i &gt;= 0 and j &gt;= 0.
+Return a list of all powerful integers that have value less than or equal to bound.
+You may return the answer in any order. In your answer, each value should occur at most once.
+Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2 Example 2: Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note:  1 &lt;= x &lt;= 100 1 &lt;= y &lt;= 100 0 &lt;= bound &lt;= 10^6  Hint If x^i &gt; bound, the sum x^i &#43; y^j can’t be less than or equal to the bound.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/02/k-th-smallest-in-lexicographical-order/">K Th Smallest in Lexicographical Order</a></h2>
+
+      <p>Given integers n and k, find the lexicographically k-th smallest integer in the range from 1 to n.
+Note: 1 ≤ k ≤ n ≤ 10^9.
+Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10. Solution class Solution: def findKthNumber(self, n: int, k: int) -&gt; int: if n &lt; k or k &lt; 1: return 0 if n &lt; 10: return k curr = 1 k -= 1 while k &gt; 0: leap, prev, next = 0, curr, curr&#43;1 while prev &lt;= n: # update leap leap &#43;= min(n&#43;1, next) - prev prev *= 10 next *= 10 if leap &lt;= k: curr &#43;= 1 print(leap, &#34;&lt;= k; curr =&#34;, curr) k -= leap else: curr *= 10 print(leap, &#34;&gt; k; curr =&#34;, curr) k -= 1 return curr # Input: n=1300, k=50 # order: [1,10,100,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,101,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,102,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,103,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,104,1040,1041,1042] # Output: # 412 &gt; k; curr = 10 # 111 &gt; k; curr = 100 # 11 &lt;= k; curr = 101 # 11 &lt;= k; curr = 102 # 11 &lt;= k; curr = 103 # 11 &lt;= k; curr = 104 # 11 &gt; k; curr = 1040 # 1 &lt;= k; curr = 1041 # 1 &lt;= k; curr = 1042 </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2020/02/maximum-swap/">Maximum Swap</a></h2>
 
       <p>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
@@ -378,59 +433,6 @@ Example: Input: [&#34;cat&#34;,&#34;cats&#34;,&#34;catsdogcats&#34;,&#34;dog&#34
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/12/concatenate-string-using-smaller-strings/">Concatenate String Using Smaller Strings</a></h2>
-
-      <p>Given a big string and a list of small strings, find whether the big string can be represented only by concatenation of smaller strings.
-Example: target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] Output: True Solution Dynamic programming
-target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] N = len(target) dp = [False for _ in range(N)] def check(i, target): for s in smallerStrings: l = len(s) # print(s) if i &#43; l &lt;= N: tryStr = target[i:i&#43;l] # print(tryStr) if tryStr == s: dp[i&#43;l-1] = True check(i&#43;l, target) # print(&#34;-------&#34;) check(0, target) print(dp) print(dp[N-1]) </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/11/word-ladder-ii/">Word Ladder II</a></h2>
-
-      <p>Given two words (beginWord and endWord), and a dictionary’s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
- Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

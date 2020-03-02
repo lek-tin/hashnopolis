@@ -176,6 +176,61 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-paths/">Binary Tree Paths</a></h2>
+
+      <p>Given a binary tree, return all root-to-leaf paths.
+Note: A leaf is a node with no children.
+Example Input: 1 / \ 2 3 \ 5 Output: [&#34;1-&gt;2-&gt;5&#34;, &#34;1-&gt;3&#34;] Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[str] &#34;&#34;&#34; res = [] def traverse(root, path): if root == None: return path &#43;= str(root.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></h2>
+
+      <p>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).
+Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7 return its level order traversal as:
+[ [3], [9,20], [15,7] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal-ii/">Binary Tree Level Order Traversal II</a></h2>
 
       <p>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).
@@ -388,61 +443,6 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock/">Best Time to Buy and Sell Stock</a></h2>
-
-      <p>Say you have an array for which the ith element is the price of a given stock on day i.
-If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
-Note that you cannot sell a stock before you buy one.
-Example 1 Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/add-binary/">Add Binary</a></h2>
-
-      <p>Given two binary strings, return their sum (also a binary string).
-The input strings are both non-empty and contains only characters 1 or 0.
-Example 1 Input: a = &#34;11&#34;, b = &#34;1&#34; Output: &#34;100&#34; Example 2 Input: a = &#34;1010&#34;, b = &#34;1011&#34; Output: &#34;10101&#34; Solution class Solution: def addBinary(self, a, b): &#34;&#34;&#34; :type a: str :type b: str :rtype: str &#34;&#34;&#34; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &gt;= 0 or j &gt;= 0: total = carry if i &gt;= 0: total &#43;= int(a[i]) i -= 1 if j &gt;= 0: total &#43;= int(b[j]) j -= 1 result.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

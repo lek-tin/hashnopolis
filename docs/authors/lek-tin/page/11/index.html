@@ -176,6 +176,60 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/reverse-linked-list/">Reverse Linked List</a></h2>
+
+      <p>Reverse a singly linked list.
+Example: Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; NULL  // prev cur after  while (cur !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/08/palindrome-partitioning/">Palindrome Partitioning</a></h2>
+
+      <p>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return all possible palindrome partitioning of s.
+Example Input: &#34;aab&#34; Output: [ [&#34;aa&#34;,&#34;b&#34;], [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;] ] Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &#39;ababaaeqwds&#39;, one possible call stack will look like &#39;aba&#39;-&gt;&#39;b&#39;-&gt;&#39;aa&#39;-&gt;&#39;e&#39;-&gt;&#39;q&#39;-&gt;&#39;w&#39;-&gt;&#39;d&#39;-&gt;&#39;s&#39;: n space class Solution: def partition(self, s: str) -&gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/08/combination-sum-ii/">Combination Sum II</a></h2>
 
       <p>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
@@ -382,59 +436,6 @@ Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/max-stack/">Max Stack</a></h2>
-
-      <p>Design a max stack that supports push, pop, top, peekMax and popMax.
- push(x) – Push element x onto stack. pop() – Remove the element on top of the stack and return it. top() – Get the element on the top. peekMax() – Retrieve the maximum element in the stack. popMax() – Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/subtree-with-maximum-average/">Subtree With Maximum Average</a></h2>
-
-      <p>Given a binary tree, find the subtree with maximum average. Return the root of the subtree. It’s guaranteed that there is only one subtree with maximum average.
-Example Given a binary tree:
- 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11. Solution public class Solution { private class ResultType { public int sum, size; public ResultType(int sum, int size) { this.sum = sum; this.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
