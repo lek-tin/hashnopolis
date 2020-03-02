@@ -11,7 +11,7 @@ archive: false
 ---
 Given n non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it is able to trap after raining.
 
-![Fig. Trapping Rain Water](https://assets.leetcode.com/uploads/2018/10/22/rainwatertrap.png)
+![Trapping Rain Water Illustration](/img/post/trapping-rain-water-illustration.png)
 The above elevation map is represented by array `[0,1,0,2,1,0,1,3,2,1,2,1]`. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
 
 ### Example:
@@ -64,7 +64,7 @@ class Solution {
 Dynamic programming version  
 Time: `O(n)`  
 Space: `O(n)`  
-![Trapping Rain Water Dynamic Programming](/img/post/trapping_rain_water-dynamic-programming.png)
+![Trapping Rain Water Dynamic Programming](/img/post/trapping-rain-water-dynamic-programming.png)
 ```python
 class Solution:
     def trap(self, height: List[int]) -> int:
