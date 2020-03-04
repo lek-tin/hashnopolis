@@ -30,20 +30,16 @@ class Solution:
         :type n: int
         :rtype: bool
         """
-        triedNums = []
+        tried = set()
         currentNum = n
-        while(currentNum not in triedNums):
-            triedNums.append(currentNum)
+        while currentNum not in tried:
+            tried.add(currentNum)
             sum = 0
-            sumOfDigits = 0
             for num in [int(d) for d in str(currentNum)]:
                 sum += num**2
-            for digit in [int(i) for i in str(sum)]:
-                sumOfDigits += digit
-            if (sumOfDigits == 1):
+            if sum == 1:
                 return True
-            else:
-                currentNum = sum
-            print(sum)
+            currentNum = sum
+
         return False
 ```

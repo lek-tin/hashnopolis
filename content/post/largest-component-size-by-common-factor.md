@@ -76,7 +76,7 @@ class Solution:
             fullFactors.append(factors)
 
         # Input: [20,50,100,9,63,21,49]
-        # factors: [[2, 5.0], [2, 5], [2, 5], [3], [3, 7.0], [3, 7.0], [7]]
+        # fullFactors: [[2, 5.0], [2, 5], [2, 5], [3], [3, 7.0], [3, 7.0], [7]]
         # primes are guaranteed to be sorted
         primes = list({p for factors in fullFactors for p in factors})
         # map each prime to its index

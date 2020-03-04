@@ -29,15 +29,14 @@ Output: false
 ```
 ### Solution
 ```python
-import sys
-INT_MAX = sys.maxsize
+import math
 
 class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
         if not nums or len(nums) < 3:
             return False
         # min_1 < min_2
-        min_1, min_2 = INT_MAX-1, INT_MAX
+        min_1, min_2 = math.inf-1, math.inf
         for n in nums:
             # use = to skip duplicate value, for example, [1,1,1,1,1,1,1,1,1,1]
             if n <= min_1:

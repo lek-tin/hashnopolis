@@ -2,7 +2,7 @@
 title: "Intersection of Two Arrays"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "array", "hashset"]
+tags: ["leetcode", "binary-search", "hashset"]
 categories: ["algorithm"]
 date: 2018-11-28T23:56:14-08:00
 lastmod: 2018-11-28T23:56:14-08:00
@@ -22,9 +22,12 @@ Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [9,4]
 ```
 ### Note
+
 - Each element in the result must be unique.
 - The result can be in any order.
+
 ### Solution
+
 Use binary search when one of the lists is very long and the other is short
 ```python
 class Solution:
@@ -49,7 +52,11 @@ class Solution:
 
         return res
 ```
-Use `hashset`
+
+### Solution (hashset)
+
+#### Python
+
 ```python
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
@@ -64,6 +71,9 @@ class Solution:
 
         return res
 ```
+
+#### Java
+
 ```java
 class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
