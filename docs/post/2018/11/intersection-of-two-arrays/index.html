@@ -19,7 +19,7 @@
   <meta name="description" content="Given two arrays, write a function to compute their intersection.
 Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2] Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4] Note  Each element in the result must be unique. The result can be in any order.  Solution Use binary search when one of the lists is very long and the other is short
 class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: if len(nums1) &amp;lt; len(nums2): return self." />
-  <meta name="keywords" content="leetcode array hashset " />
+  <meta name="keywords" content="leetcode binary-search hashset " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -181,7 +181,7 @@ class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/array"><strong>array</strong></a>",
+          "<a href="/tags/binary-search"><strong>binary-search</strong></a>",
         
           "<a href="/tags/hashset"><strong>hashset</strong></a>",
         
@@ -229,7 +229,8 @@ Output: [9,4]
                     right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
 
         <span style="color:#66d9ef">return</span> res
-</code></pre></div><p>Use <code>hashset</code></p>
+</code></pre></div><h3 id="solution-hashset">Solution (hashset)</h3>
+<h4 id="python">Python</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">intersection</span>(self, nums1: List[int], nums2: List[int]) <span style="color:#f92672">-&gt;</span> List[int]:
         lookup <span style="color:#f92672">=</span> {}
@@ -242,7 +243,8 @@ Output: [9,4]
                 res<span style="color:#f92672">.</span>add(num)
 
         <span style="color:#66d9ef">return</span> res
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+</code></pre></div><h4 id="java">Java</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">intersection</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums1<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums1<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> nums2<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>

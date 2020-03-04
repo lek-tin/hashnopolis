@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 15 Jul 2019 15:38:32 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2020 03:37:24 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Second Highest Salary</title>
+      <link>http://www.hashnopolis.com/post/2020/03/second-highest-salary/</link>
+      <pubDate>Tue, 03 Mar 2020 03:37:24 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/second-highest-salary/</guid>
+      <description>Write a SQL query to get the second highest salary from the Employee table.
++----+--------+ | Id | Salary | +----+--------+ | 1 | 100 | | 2 | 200 | | 3 | 300 | +----+--------+ For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
++---------------------+ | SecondHighestSalary | +---------------------+ | 200 | +---------------------+ Solution (naive) SELECT max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SELECT max(Salary) FROM Employee) Solution This solution considers when second highest salary doesn&amp;rsquo;t exist</description>
+    </item>
     
     <item>
       <title>Top Useful Sql Templates</title>
@@ -43,6 +54,17 @@ Select duplicate rows based on column SELECT TOP 1 C1.</description>
 +----+---------+ | Id | Email | +----+---------+ | 1 | a@b.com | | 2 | c@d.com | | 3 | a@b.com | +----+---------+ For example, your query should return the following for the above table:
 +---------+ | Email | +---------+ | a@b.com | +---------+ Note: All emails are in lowercase.
 Solution # Write your MySQL query statement below SELECT email FROM Person WHERE email IN ( SELECT email FROM Person GROUP BY email HAVING COUNT(*) &amp;gt; 1 ) GROUP BY email </description>
+    </item>
+    
+    <item>
+      <title>Combine Two Tables</title>
+      <link>http://www.hashnopolis.com/post/2018/09/combine-two-tables/</link>
+      <pubDate>Mon, 10 Sep 2018 21:40:30 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/combine-two-tables/</guid>
+      <description>Table: Person
++-------------+---------+ | Column Name | Type | +-------------+---------+ | PersonId | int | | FirstName | varchar | | LastName | varchar | +-------------+---------+ PersonId is the primary key column for this table. Table: Address
++-------------+---------+ | Column Name | Type | +-------------+---------+ | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | +-------------+---------+ AddressId is the primary key column for this table.</description>
     </item>
     
   </channel>

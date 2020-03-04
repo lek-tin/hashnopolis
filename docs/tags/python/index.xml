@@ -118,7 +118,7 @@ Example 1 Input: 123 Output: &amp;quot;One Hundred Twenty Three&amp;quot; Exampl
       <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import sys INT_MAX = sys.</description>
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import math class Solution: def increasingTriplet(self, nums: List[int]) -&amp;gt; bool: if not nums or len(nums) &amp;lt; 3: return False # min_1 &amp;lt; min_2 min_1, min_2 = math.</description>
     </item>
     
     <item>
@@ -303,17 +303,6 @@ Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [
       <guid>http://www.hashnopolis.com/post/2018/09/combinations/</guid>
       <description>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
 Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n, k): &amp;#34;&amp;#34;&amp;#34; :type n: int :type k: int :rtype: List[List[int]] &amp;#34;&amp;#34;&amp;#34; res = [] nums = list(range(1, n+1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans.</description>
-    </item>
-    
-    <item>
-      <title>Combine Two Tables</title>
-      <link>http://www.hashnopolis.com/post/2018/09/combine-two-tables/</link>
-      <pubDate>Mon, 10 Sep 2018 21:40:30 +0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2018/09/combine-two-tables/</guid>
-      <description>Table: Person
-+-------------+---------+ | Column Name | Type | +-------------+---------+ | PersonId | int | | FirstName | varchar | | LastName | varchar | +-------------+---------+ PersonId is the primary key column for this table. Table: Address
-+-------------+---------+ | Column Name | Type | +-------------+---------+ | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | +-------------+---------+ AddressId is the primary key column for this table.</description>
     </item>
     
     <item>

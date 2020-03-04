@@ -185,7 +185,7 @@
       <h1>Employees Earning More Than Their Managers</h1>
       <h4>Created: September 12, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: September 12, 2018</h5>
+        <h5>Last updated: March 2, 2020</h5>
       
       <hr />
       <pre><code># SQL Schema:   
@@ -211,16 +211,14 @@ insert into Employee (Id, Name, Salary, ManagerId) values ('4', 'Max', '90000', 
 | Joe      |
 +----------+
 </code></pre><h3 id="solution">Solution</h3>
-<p><code>WHERE</code>:</p>
+<p><code>WHERE</code>: Select from two tables will get the <code>Cartesian</code> product of these two tables. In this case, the output will be <code>4*4 = 16</code> records. However, what we interest is the employee&rsquo;s salary higher than his/her manager. So we should add two conditions in a WHERE clause like below.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
-    <span style="color:#f92672">*</span>
+    a.Name <span style="color:#66d9ef">AS</span> <span style="color:#e6db74">&#39;Employee&#39;</span>
 <span style="color:#66d9ef">FROM</span>
     Employee <span style="color:#66d9ef">AS</span> a,
     Employee <span style="color:#66d9ef">AS</span> b
 <span style="color:#66d9ef">WHERE</span>
-    a.ManagerId <span style="color:#f92672">=</span> b.Id
-        <span style="color:#66d9ef">AND</span> a.Salary <span style="color:#f92672">&gt;</span> b.Salary
-;
+    a.ManagerId <span style="color:#f92672">=</span> b.Id <span style="color:#66d9ef">AND</span> a.Salary <span style="color:#f92672">&gt;</span> b.Salary
 </code></pre></div><p><code>JOIN</code> - more efficient:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
      a.NAME <span style="color:#66d9ef">AS</span> Employee

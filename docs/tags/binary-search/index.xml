@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 23 Sep 2019 01:36:19 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2020 05:15:27 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/binary-search/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Optimal Utilization</title>
+      <link>http://www.hashnopolis.com/post/2020/03/optimal-utilization/</link>
+      <pubDate>Mon, 02 Mar 2020 05:15:27 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/optimal-utilization/</guid>
+      <description>Given 2 lists a and b. Each element is a pair of integers where the first integer represents the unique id and the second integer represents a value. Your task is to find an element from a and an element form b such that the sum of their values is less or equal to target and as close to target as possible. Return a list of ids of selected elements. If no pair is possible, return an empty list.</description>
+    </item>
     
     <item>
       <title>Find in Mountain Array</title>
@@ -108,6 +117,17 @@ Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4] Example 2: Input: [1,2
       <guid>http://www.hashnopolis.com/post/2019/01/find-a-local-minima-in-an-array/</guid>
       <description>Given an array arr[0 .. n-1] of distinct integers, the task is to find a local minima in it. We say that an element arr[x] is a local minimum if it is less than or equal to both its neighbors.
 For corner elements, we need to consider only one neighbor for comparison. There can be more than one local minima in an array, we need to find any one of them.</description>
+    </item>
+    
+    <item>
+      <title>Intersection of Two Arrays</title>
+      <link>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</link>
+      <pubDate>Wed, 28 Nov 2018 23:56:14 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/11/intersection-of-two-arrays/</guid>
+      <description>Given two arrays, write a function to compute their intersection.
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2] Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4] Note  Each element in the result must be unique. The result can be in any order.  Solution Use binary search when one of the lists is very long and the other is short
+class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: if len(nums1) &amp;lt; len(nums2): return self.</description>
     </item>
     
     <item>

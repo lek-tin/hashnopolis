@@ -7,10 +7,62 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 01 Mar 2020 10:01:11 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Mar 2020 03:37:24 -0800</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Second Highest Salary</title>
+      <link>http://www.hashnopolis.com/post/2020/03/second-highest-salary/</link>
+      <pubDate>Tue, 03 Mar 2020 03:37:24 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/second-highest-salary/</guid>
+      <description>Write a SQL query to get the second highest salary from the Employee table.
++----+--------+ | Id | Salary | +----+--------+ | 1 | 100 | | 2 | 200 | | 3 | 300 | +----+--------+ For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
++---------------------+ | SecondHighestSalary | +---------------------+ | 200 | +---------------------+ Solution (naive) SELECT max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SELECT max(Salary) FROM Employee) Solution This solution considers when second highest salary doesn&amp;rsquo;t exist</description>
+    </item>
+    
+    <item>
+      <title>Longest Bitonic Subsequence</title>
+      <link>http://www.hashnopolis.com/post/2020/03/longest-bitonic-subsequence/</link>
+      <pubDate>Tue, 03 Mar 2020 02:27:40 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/longest-bitonic-subsequence/</guid>
+      <description>Given an array arr[0 … n-1] containing n positive integers, a subsequence of arr[] is called Bitonic if it is first increasing, then decreasing. Write a function that takes an array as argument and returns the length of the longest bitonic subsequence. A sequence, sorted in increasing order is considered Bitonic with the decreasing part as empty. Similarly, decreasing order sequence is considered Bitonic with the increasing part as empty.</description>
+    </item>
+    
+    <item>
+      <title>Redundant Connection</title>
+      <link>http://www.hashnopolis.com/post/2020/03/redundant-connection/</link>
+      <pubDate>Mon, 02 Mar 2020 15:48:06 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/redundant-connection/</guid>
+      <description>In this problem, a tree is an undirected graph that is connected and has no cycles.
+The given input is a graph that started as a tree with N nodes (with distinct values 1, 2, ..., N), with one additional edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.
+The resulting graph is given as a 2D-array of edges.</description>
+    </item>
+    
+    <item>
+      <title>Optimal Utilization</title>
+      <link>http://www.hashnopolis.com/post/2020/03/optimal-utilization/</link>
+      <pubDate>Mon, 02 Mar 2020 05:15:27 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/optimal-utilization/</guid>
+      <description>Given 2 lists a and b. Each element is a pair of integers where the first integer represents the unique id and the second integer represents a value. Your task is to find an element from a and an element form b such that the sum of their values is less or equal to target and as close to target as possible. Return a list of ids of selected elements. If no pair is possible, return an empty list.</description>
+    </item>
+    
+    <item>
+      <title>Critical Routers</title>
+      <link>http://www.hashnopolis.com/post/2020/03/critical-routers/</link>
+      <pubDate>Mon, 02 Mar 2020 00:18:54 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/critical-routers/</guid>
+      <description>You are given an undirected connected graph. An articulation point (or cut vertex) is defined as a vertex which, when removed along with associated edges, makes the graph disconnected (or more precisely, increases the number of connected components in the graph). The task is to find all articulation points in the given graph.
+Input:
+The input to the function/method consists of three arguments:
+ numNodes, an integer representing the number of nodes in the graph.</description>
+    </item>
     
     <item>
       <title>Critical Connections</title>
@@ -2179,7 +2231,7 @@ Solution </description>
       <description>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 Formally the function should:
 Return true if there exists i, j, k such that arr[i] &amp;lt; arr[j] &amp;lt; arr[k] given 0 ≤ i &amp;lt; j &amp;lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import sys INT_MAX = sys.</description>
+Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import math class Solution: def increasingTriplet(self, nums: List[int]) -&amp;gt; bool: if not nums or len(nums) &amp;lt; 3: return False # min_1 &amp;lt; min_2 min_1, min_2 = math.</description>
     </item>
     
     <item>

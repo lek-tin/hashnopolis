@@ -176,6 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/03/second-highest-salary/">Second Highest Salary</a></h2>
+
+      <p>Write a SQL query to get the second highest salary from the Employee table.
+&#43;----&#43;--------&#43; | Id | Salary | &#43;----&#43;--------&#43; | 1 | 100 | | 2 | 200 | | 3 | 300 | &#43;----&#43;--------&#43; For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
+&#43;---------------------&#43; | SecondHighestSalary | &#43;---------------------&#43; | 200 | &#43;---------------------&#43; Solution (naive) SELECT max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SELECT max(Salary) FROM Employee) Solution This solution considers when second highest salary doesn’t exist</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/">Top Useful Sql Templates</a></h2>
 
       <p>In this post, we introduce the most useful SQL template statements.
@@ -235,6 +262,33 @@ Select duplicate rows based on column SELECT TOP 1 C1.</p>
 &#43;----&#43;---------&#43; | Id | Email | &#43;----&#43;---------&#43; | 1 | a@b.com | | 2 | c@d.com | | 3 | a@b.com | &#43;----&#43;---------&#43; For example, your query should return the following for the above table:
 &#43;---------&#43; | Email | &#43;---------&#43; | a@b.com | &#43;---------&#43; Note: All emails are in lowercase.
 Solution # Write your MySQL query statement below SELECT email FROM Person WHERE email IN ( SELECT email FROM Person GROUP BY email HAVING COUNT(*) &gt; 1 ) GROUP BY email </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/combine-two-tables/">Combine Two Tables</a></h2>
+
+      <p>Table: Person
+&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | PersonId | int | | FirstName | varchar | | LastName | varchar | &#43;-------------&#43;---------&#43; PersonId is the primary key column for this table. Table: Address
+&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | &#43;-------------&#43;---------&#43; AddressId is the primary key column for this table.</p>
 
       <p class="meta">
         

@@ -207,21 +207,17 @@ Explanation:
 </span><span style="color:#e6db74">        :type n: int
 </span><span style="color:#e6db74">        :rtype: bool
 </span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
-        triedNums <span style="color:#f92672">=</span> []
+        tried <span style="color:#f92672">=</span> set()
         currentNum <span style="color:#f92672">=</span> n
-        <span style="color:#66d9ef">while</span>(currentNum <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> triedNums):
-            triedNums<span style="color:#f92672">.</span>append(currentNum)
+        <span style="color:#66d9ef">while</span> currentNum <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> tried:
+            tried<span style="color:#f92672">.</span>add(currentNum)
             sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-            sumOfDigits <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
             <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> [int(d) <span style="color:#66d9ef">for</span> d <span style="color:#f92672">in</span> str(currentNum)]:
                 sum <span style="color:#f92672">+=</span> num<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
-            <span style="color:#66d9ef">for</span> digit <span style="color:#f92672">in</span> [int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> str(sum)]:
-                sumOfDigits <span style="color:#f92672">+=</span> digit
-            <span style="color:#66d9ef">if</span> (sumOfDigits <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> sum <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
                 <span style="color:#66d9ef">return</span> True
-            <span style="color:#66d9ef">else</span>:
-                currentNum <span style="color:#f92672">=</span> sum
-            <span style="color:#66d9ef">print</span>(sum)
+            currentNum <span style="color:#f92672">=</span> sum
+
         <span style="color:#66d9ef">return</span> False
 </code></pre></div>
   </div>
