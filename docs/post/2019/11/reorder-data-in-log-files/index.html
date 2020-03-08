@@ -214,7 +214,7 @@ Output: [&quot;g1 act car&quot;,&quot;a8 act zoo&quot;,&quot;ab1 off key dog&quo
 <p>Java comparator</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">logComparator</span> <span style="color:#66d9ef">implements</span> Comparator<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LogComparator</span> <span style="color:#66d9ef">implements</span> Comparator<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
         <span style="color:#a6e22e">@Override</span>
         <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span><span style="color:#f92672">(</span>String a<span style="color:#f92672">,</span> String b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">int</span> index_a <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">indexOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
@@ -244,13 +244,14 @@ Output: [&quot;g1 act car&quot;,&quot;a8 act zoo&quot;,&quot;ab1 off key dog&quo
     <span style="color:#f92672">}</span>
 
     <span style="color:#66d9ef">public</span> String<span style="color:#f92672">[]</span> <span style="color:#a6e22e">reorderLogFiles</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> logs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        logComparator LC <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> logComparator<span style="color:#f92672">();</span>
-        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>logs<span style="color:#f92672">,</span> LC<span style="color:#f92672">);</span>
+        LogComparator log_comp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LogComparator<span style="color:#f92672">();</span>
+        Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>logs<span style="color:#f92672">,</span> log_comp<span style="color:#f92672">);</span>
 
         <span style="color:#66d9ef">return</span> logs<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>Python:</p>
+</code></pre></div><h3 id="solution-1">Solution</h3>
+<p>Python:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reorderLogFiles</span>(self, logs):
         <span style="color:#e6db74">&#34;&#34;&#34;

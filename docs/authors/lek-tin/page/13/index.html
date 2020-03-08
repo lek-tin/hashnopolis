@@ -176,6 +176,34 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/">Playing with Node.js Event Loop</a></h2>
+
+      <p>setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
+process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
+function cb(msg){ console.log(msg); } setImmediate(cb, &#39;setImmediate&#39;); process.nextTick(cb, &#39;process.nextTick: 1&#39;); process.nextTick(cb, &#39;process.nextTick: 2&#39;); process.nextTick(cb, &#39;process.nextTick: 3&#39;); console.log(&#39;Processed in the first iteration&#39;); process.nextTick(cb, &#39;process.nextTick: 4&#39;); process.nextTick(cb, &#39;process.nextTick: 5&#39;); Output:
+Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process.nextTick: 3 process.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/programming" ><strong>"programming"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2019/04/search-a-2d-matrix-ii/">Search a 2d Matrix II</a></h2>
 
       <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
@@ -388,33 +416,6 @@ If there are multiple suitable places for insertion, you may choose any place to
 
       <p>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won’t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
 Given the ball’s start position, the destination and the maze, find the shortest distance for the ball to stop at the destination. The distance is defined by the number of empty spaces traveled by the ball from the start position (excluded) to the destination (included).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/the-maze/">The Maze</a></h2>
-
-      <p>There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won’t stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
-Given the ball’s start position, the destination and the maze, determine whether the ball could stop at the destination.
-The maze is represented by a binary 2D array.</p>
 
       <p class="meta">
         

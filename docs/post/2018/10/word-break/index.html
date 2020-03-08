@@ -210,8 +210,7 @@ Explanation: Return true because &quot;applepenapple&quot; can be segmented as &
 <h3 id="example-3">Example 3</h3>
 <pre><code>Input: s = &quot;catsandog&quot;, wordDict = [&quot;cats&quot;, &quot;dog&quot;, &quot;sand&quot;, &quot;and&quot;, &quot;cat&quot;]
 Output: false
-</code></pre><h3 id="solution">Solution</h3>
-<p>Dynamic programming</p>
+</code></pre><h3 id="solution-dynamic-programming">Solution (Dynamic programming)</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wordBreak</span>(self, s: str, wordDict: List[str]) <span style="color:#f92672">-&gt;</span> bool:
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> wordDict:
@@ -227,14 +226,14 @@ Output: false
                 substring <span style="color:#f92672">=</span> s[j:i]
                 <span style="color:#66d9ef">print</span>(substring)
                 <span style="color:#66d9ef">if</span> flags[j] <span style="color:#f92672">and</span> substring <span style="color:#f92672">in</span> wordDict:
-                    <span style="color:#75715e"># i will be the end index of a new break word</span>
+                    <span style="color:#75715e"># can break at (i-1)</span>
                     <span style="color:#66d9ef">print</span>(j, i)
                     flags[i] <span style="color:#f92672">=</span> True
                     <span style="color:#66d9ef">break</span>
             <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;-------&#34;</span>)
 
         <span style="color:#66d9ef">return</span> flags[n]
-</code></pre></div><p>BFS</p>
+</code></pre></div><h3 id="solution-bfs">Solution (BFS)</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
