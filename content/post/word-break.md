@@ -31,8 +31,8 @@ Note that you are allowed to reuse a dictionary word.
 Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: false
 ```
-### Solution
-Dynamic programming
+### Solution (Dynamic programming)
+
 ```python
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
@@ -49,7 +49,7 @@ class Solution:
                 substring = s[j:i]
                 print(substring)
                 if flags[j] and substring in wordDict:
-                    # i will be the end index of a new break word
+                    # can break at (i-1)
                     print(j, i)
                     flags[i] = True
                     break
@@ -57,7 +57,9 @@ class Solution:
 
         return flags[n]
 ```
-BFS
+
+### Solution (BFS)
+
 ```python
 from collections import deque
 

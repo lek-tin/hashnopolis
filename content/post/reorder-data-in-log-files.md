@@ -38,7 +38,7 @@ Java comparator
 ```java
 class Solution {
 
-    private class logComparator implements Comparator<String> {
+    private class LogComparator implements Comparator<String> {
         @Override
         public int compare(String a, String b) {
             int index_a = a.indexOf(" ") + 1;
@@ -68,13 +68,16 @@ class Solution {
     }
 
     public String[] reorderLogFiles(String[] logs) {
-        logComparator LC = new logComparator();
-        Arrays.sort(logs, LC);
+        LogComparator log_comp = new LogComparator();
+        Arrays.sort(logs, log_comp);
 
         return logs;
     }
 }
 ```
+
+### Solution
+
 Python:
 ```python
 class Solution(object):

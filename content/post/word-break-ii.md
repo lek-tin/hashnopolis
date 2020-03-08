@@ -48,6 +48,7 @@ Output:
 ```
 
 ### Solution
+
 DFS + Memoization
 ```python
 # Time: O(n^3)
@@ -84,4 +85,9 @@ class Solution:
         memo[s] = partitions
 
         return partitions
+```
+
+### Solution (Dynamic programming)
+
+```python
 ```

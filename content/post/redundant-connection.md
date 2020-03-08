@@ -63,6 +63,7 @@ class Solution:
 
     def find(self, x):
         if self.root[x] != x:
+            # path compression
             self.root[x] = self.find(self.root[x])
         return self.root[x]
 
@@ -82,11 +83,11 @@ class Solution:
 
         return True
 ```
-**Improvement**: we can make it more efficient by using path compression
+**alternatively**: we can implement `find` iteratively
 ```python
 def find(x, roots):
     while root[x] != x:
         roots[x] = roots[roots[x]]
         x = roots[x]
-    return node
+    return x
 ```
