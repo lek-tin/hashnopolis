@@ -7,10 +7,88 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 06 Mar 2020 20:24:47 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 17:26:30 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Generalized Abbreviation</title>
+      <link>http://www.hashnopolis.com/post/2020/03/generalized-abbreviation/</link>
+      <pubDate>Mon, 09 Mar 2020 17:26:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/generalized-abbreviation/</guid>
+      <description>Write a function to generate the generalized abbreviations of a word.
+Note The order of the output does not matter.
+Example Input: &amp;quot;word&amp;quot; Output: [&amp;quot;word&amp;quot;, &amp;quot;1ord&amp;quot;, &amp;quot;w1rd&amp;quot;, &amp;quot;wo1d&amp;quot;, &amp;quot;wor1&amp;quot;, &amp;quot;2rd&amp;quot;, &amp;quot;w2d&amp;quot;, &amp;quot;wo2&amp;quot;, &amp;quot;1o1d&amp;quot;, &amp;quot;1or1&amp;quot;, &amp;quot;w1r1&amp;quot;, &amp;quot;1o2&amp;quot;, &amp;quot;2r1&amp;quot;, &amp;quot;3d&amp;quot;, &amp;quot;w3&amp;quot;, &amp;quot;4&amp;quot;] Example class Solution: def generateAbbreviations(self, word: str) -&amp;gt; List[str]: results = [] self.backtrack(results, word, &amp;#34;&amp;#34;, 0, 0) return results def backtrack(self, results, word, curr, start, count): print(curr, start, count) # &amp;#34;&amp;#34; 0 0 # &amp;#34;&amp;#34; 1 1 # &amp;#34;&amp;#34; 2 2 # &amp;#34;&amp;#34; 3 3 # &amp;#34;&amp;#34; 4 4 # ------------ # 3d 4 0 # ------------ # 2r 3 0 # 2r 4 1 # ------------ # 2rd 4 0 # ------------ # 1o 2 0 # 1o 3 1 # 1o 4 2 # ------------ # 1o1d 4 0 # ------------ # 1or 3 0 # 1or 4 1 # ------------ # 1ord 4 0 # ------------ # w 1 0 # w 2 1 # w 3 2 # w 4 3 # ------------ # w2d 4 0 # ------------ # w1r 3 0 # w1r 4 1 # ------------ # w1rd 4 0 # ------------ # wo 2 0 # wo 3 1 # wo 4 2 # ------------ # wo1d 4 0 # ------------ # wor 3 0 # wor 4 1 # ------------ # word 4 0 # ------------ if start == len(word): if count &amp;gt; 0: curr += str(count) # curr could be &amp;#34;4&amp;#34; or &amp;#34;abcd&amp;#34; results.</description>
+    </item>
+    
+    <item>
+      <title>Palindromic Substrings</title>
+      <link>http://www.hashnopolis.com/post/2020/03/palindromic-substrings/</link>
+      <pubDate>Mon, 09 Mar 2020 16:46:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/palindromic-substrings/</guid>
+      <description>Given a string, your task is to count how many palindromic substrings in this string.
+The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters.
+Example 1 Input: &amp;quot;abc&amp;quot; Output: 3 Explanation: Three palindromic strings: &amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;. Example 2 Input: &amp;quot;aaa&amp;quot; Output: 6 Explanation: Six palindromic strings: &amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;, &amp;quot;aa&amp;quot;, &amp;quot;aa&amp;quot;, &amp;quot;aaa&amp;quot;. Note  The input string length won&amp;rsquo;t exceed 1000.</description>
+    </item>
+    
+    <item>
+      <title>Find All Numbers Disappeared in an Array</title>
+      <link>http://www.hashnopolis.com/post/2020/03/find-all-numbers-disappeared-in-an-array/</link>
+      <pubDate>Mon, 09 Mar 2020 04:27:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/find-all-numbers-disappeared-in-an-array/</guid>
+      <description>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements of [1, n] inclusive that do not appear in this array.
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+Example Input: [4,3,2,7,8,2,3,1] Output: [5,6] Solution class Solution: def findDisappearedNumbers(self, nums: List[int]) -&amp;gt; List[int]: N = len(nums) result = [] for num in nums: pos = abs(num) % N if nums[pos] &amp;gt; 0: nums[pos] = -nums[pos] for i in range(1, N+1): if nums[i%N] &amp;gt; 0: result.</description>
+    </item>
+    
+    <item>
+      <title>First Missing Positive</title>
+      <link>http://www.hashnopolis.com/post/2020/03/first-missing-positive/</link>
+      <pubDate>Mon, 09 Mar 2020 02:53:01 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/first-missing-positive/</guid>
+      <description>Given an unsorted integer array, find the smallest missing positive integer.
+Example 1 Input: [1,2,0] Output: 3 Example 2 Input: [3,4,-1,1] Output: 2 Example 3 Input: [7,8,9,11,12] Output: 1 Solution (hashmap) Time: O(N)
+Space: O(N)
+from collections import Counter class Solution: def firstMissingPositive(self, nums: List[int]) -&amp;gt; int: counter = Counter(nums) curr = 1 while True: if curr not in counter: return curr curr += 1 Follow-up  Your algorithm should run in O(n) time and uses constant extra space.</description>
+    </item>
+    
+    <item>
+      <title>Candy</title>
+      <link>http://www.hashnopolis.com/post/2020/03/candy/</link>
+      <pubDate>Mon, 09 Mar 2020 00:42:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/candy/</guid>
+      <description>There are N children standing in a line. Each child is assigned a rating value.
+You are giving candies to these children subjected to the following requirements:
+ Each child must have at least one candy. Children with a higher rating get more candies than their neighbors. What is the minimum candies you must give?  Example 1 Input: [1,0,2] Output: 5 Explanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.</description>
+    </item>
+    
+    <item>
+      <title>Bag of Tokens</title>
+      <link>http://www.hashnopolis.com/post/2020/03/bag-of-tokens/</link>
+      <pubDate>Mon, 09 Mar 2020 00:04:04 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/bag-of-tokens/</guid>
+      <description>You have an initial power P, an initial score of 0 points, and a bag of tokens.
+Each token can be used at most once, has a value token[i], and has potentially two ways to use it.
+ If we have at least token[i] power, we may play the token face up, losing token[i] power, and gaining 1 point. If we have at least 1 point, we may play the token face down, gaining token[i] power, and losing 1 point.</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum Iv</title>
+      <link>http://www.hashnopolis.com/post/2020/03/combination-sum-iv/</link>
+      <pubDate>Sun, 08 Mar 2020 20:19:24 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/combination-sum-iv/</guid>
+      <description>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.
+Example nums = [1, 2, 3] target = 4 The possible combination ways are: (1, 1, 1, 1) (1, 1, 2) (1, 2, 1) (1, 3) (2, 1, 1) (2, 2) (3, 1) Note that different sequences are counted as different combinations. Therefore the output is 7.</description>
+    </item>
     
     <item>
       <title>Number of Islands Ii</title>
@@ -441,7 +519,7 @@ Formally, a parentheses string is valid if and only if:
       <pubDate>Thu, 02 Jan 2020 18:19:16 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2020/01/package-dependencies/</guid>
-      <description>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add) </description>
+      <description>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(add) for node in dependencies: dfs(node) return result </description>
     </item>
     
     <item>
@@ -2748,7 +2826,9 @@ Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6 Example 2 Input: [-10,9,20,null,nul
       
       <guid>http://www.hashnopolis.com/post/2018/10/subsets-ii/</guid>
       <description>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution Time: O(n * 2^n)
+Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
+class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
     </item>
     
     <item>
@@ -2979,7 +3059,9 @@ Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3 Example 2 Input: 8 Outpu
       
       <guid>http://www.hashnopolis.com/post/2018/09/subsets/</guid>
       <description>Given a set of distinct integers, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsets(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ] Solution Time: O(n * 2^n)
+Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
+class Solution: def subsets(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
     </item>
     
     <item>
@@ -3171,9 +3253,8 @@ Solution # Write your MySQL query statement below SELECT email FROM Person WHERE
       <guid>http://www.hashnopolis.com/post/2018/09/combination-sum-iii/</guid>
       <description>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
 Note:
-All numbers will be positive integers. The solution set must not contain duplicate combinations. Example 1:
-Input: k = 3, n = 7 Output: [[1,2,4]] Example 2:
-Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]] Solution class Solution: def combinationSum3(self, k, n): &amp;#34;&amp;#34;&amp;#34; :type k: int :type n: int :rtype: List[List[int]] &amp;#34;&amp;#34;&amp;#34; self.</description>
+All numbers will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: k = 3, n = 7 Output: [[1,2,4]] Example 2 Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]] Solution class Solution: def combinationSum3(self, k: int, n: int) -&amp;gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Start DFS self.</description>
     </item>
     
     <item>

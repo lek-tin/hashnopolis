@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 27 Feb 2020 00:48:43 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 02:53:01 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>First Missing Positive</title>
+      <link>http://www.hashnopolis.com/post/2020/03/first-missing-positive/</link>
+      <pubDate>Mon, 09 Mar 2020 02:53:01 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/first-missing-positive/</guid>
+      <description>Given an unsorted integer array, find the smallest missing positive integer.
+Example 1 Input: [1,2,0] Output: 3 Example 2 Input: [3,4,-1,1] Output: 2 Example 3 Input: [7,8,9,11,12] Output: 1 Solution (hashmap) Time: O(N)
+Space: O(N)
+from collections import Counter class Solution: def firstMissingPositive(self, nums: List[int]) -&amp;gt; int: counter = Counter(nums) curr = 1 while True: if curr not in counter: return curr curr += 1 Follow-up  Your algorithm should run in O(n) time and uses constant extra space.</description>
+    </item>
     
     <item>
       <title>Vertical Order Traversal of a Binary Tree</title>

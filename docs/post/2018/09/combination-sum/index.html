@@ -20,7 +20,7 @@
 The same repeated number may be chosen from candidates unlimited number of times.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
 Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ] Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&amp;gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results." />
-  <meta name="keywords" content="leetcode python " />
+  <meta name="keywords" content="leetcode dfs backtracking " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -183,7 +183,9 @@ Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/python"><strong>python</strong></a>",
+          "<a href="/tags/dfs"><strong>dfs</strong></a>",
+        
+          "<a href="/tags/backtracking"><strong>backtracking</strong></a>",
         
         <i class="small material-icons">access_time</i> 2-min read
       </p>
@@ -191,7 +193,7 @@ Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [
       <h1>Combination Sum</h1>
       <h4>Created: September 10, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: September 10, 2018</h5>
+        <h5>Last updated: March 8, 2020</h5>
       
       <hr />
       <p>Given a <strong>set</strong> of candidate numbers (<code>candidates</code>) <strong>(without duplicates)</strong> and a <code>target</code> number (target), find all unique combinations in candidates where the <code>candidate</code> numbers sums to <code>target</code>.</p>
@@ -248,6 +250,7 @@ A solution set is:
             <span style="color:#75715e">## Choose current number at i</span>
             combination<span style="color:#f92672">.</span>append(candidates[i])
             <span style="color:#75715e">## Deduct current number at i from target and go one level deeper</span>
+            <span style="color:#75715e">## Each number in `candidates` may only be used MULTIPLE TIMES in the combination, hence i</span>
             self<span style="color:#f92672">.</span>dfs(i, combination, target <span style="color:#f92672">-</span> candidates[i], results, candidates)
             <span style="color:#75715e">## Choose current number at i</span>
             combination<span style="color:#f92672">.</span>pop()

@@ -223,7 +223,7 @@ Space: <code>O(N + W)</code></p>
         nxt <span style="color:#f92672">=</span> [float(<span style="color:#e6db74">&#39;inf&#39;</span>)] <span style="color:#f92672">*</span> <span style="color:#ae81ff">102</span>
         ans <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> len(T)
         <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(T) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
-            <span style="color:#75715e">#Use 102 so min(nxt[t]) has a default value</span>
+            <span style="color:#75715e"># Use 102 so min(nxt[t]) has a default value</span>
             warmer_index <span style="color:#f92672">=</span> min(nxt[t] <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(T[i]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">102</span>))
             <span style="color:#66d9ef">print</span>(warmer_index)
             <span style="color:#66d9ef">if</span> warmer_index <span style="color:#f92672">&lt;</span> float(<span style="color:#e6db74">&#39;inf&#39;</span>):

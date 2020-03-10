@@ -17,7 +17,9 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results." />
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution Time: O(n * 2^n)
+Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
+class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results." />
   <meta name="keywords" content="leetcode python dfs backtracking " />
   
   
@@ -25,7 +27,9 @@ Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2
     
     <meta name="twitter:title" content="Subsets II" />
     <meta name="twitter:description" content="Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results." />
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution Time: O(n * 2^n)
+Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
+class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -208,9 +212,9 @@ Output:
   []
 ]
 </code></pre><h3 id="solution">Solution</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: o(2^n)</span>
-<span style="color:#75715e"># Space: `O(n)`</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+<p>Time: <code>O(n * 2^n)</code><br>
+Space: <code>O(n * 2^n)</code> keep all the subsets of length <code>N</code>, since each of <code>N</code> elements could be present or absent.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">subsetsWithDup</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> List[List[int]]:
         results <span style="color:#f92672">=</span> []
         subset <span style="color:#f92672">=</span> []

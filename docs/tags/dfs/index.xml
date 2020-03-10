@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 06 Mar 2020 20:24:47 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 20:19:24 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Combination Sum Iv</title>
+      <link>http://www.hashnopolis.com/post/2020/03/combination-sum-iv/</link>
+      <pubDate>Sun, 08 Mar 2020 20:19:24 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/combination-sum-iv/</guid>
+      <description>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.
+Example nums = [1, 2, 3] target = 4 The possible combination ways are: (1, 1, 1, 1) (1, 1, 2) (1, 2, 1) (1, 3) (2, 1, 1) (2, 2) (3, 1) Note that different sequences are counted as different combinations. Therefore the output is 7.</description>
+    </item>
     
     <item>
       <title>Number of Islands Ii</title>
@@ -70,7 +80,7 @@ The graph is given in the following form: graph[i] is a list of indexes j for wh
       <pubDate>Thu, 02 Jan 2020 18:19:16 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2020/01/package-dependencies/</guid>
-      <description>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add) </description>
+      <description>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(add) for node in dependencies: dfs(node) return result </description>
     </item>
     
     <item>
@@ -326,7 +336,9 @@ Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6 Example 2 Input: [-10,9,20,null,nul
       
       <guid>http://www.hashnopolis.com/post/2018/10/subsets-ii/</guid>
       <description>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution Time: O(n * 2^n)
+Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
+class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
     </item>
     
     <item>
@@ -336,7 +348,33 @@ Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2
       
       <guid>http://www.hashnopolis.com/post/2018/09/subsets/</guid>
       <description>Given a set of distinct integers, nums, return all possible subsets (the power set).
-Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ] Solution # Time: o(2^n) # Space: `O(n)` class Solution: def subsets(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ] Solution Time: O(n * 2^n)
+Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
+class Solution: def subsets(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum III</title>
+      <link>http://www.hashnopolis.com/post/2018/09/combination-sum-iii/</link>
+      <pubDate>Mon, 10 Sep 2018 21:42:37 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/combination-sum-iii/</guid>
+      <description>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: k = 3, n = 7 Output: [[1,2,4]] Example 2 Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]] Solution class Solution: def combinationSum3(self, k: int, n: int) -&amp;gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Start DFS self.</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum</title>
+      <link>http://www.hashnopolis.com/post/2018/09/combination-sum/</link>
+      <pubDate>Mon, 10 Sep 2018 21:42:01 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/combination-sum/</guid>
+      <description>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ] Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&amp;gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</description>
     </item>
     
     <item>

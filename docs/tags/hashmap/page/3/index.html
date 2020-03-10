@@ -176,6 +176,36 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2018/09/valid-anagram/">Valid Anagram</a></h2>
+
+      <p>Given two strings s and t , write a function to determine if t is an anagram of s.
+Example 1:
+Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; Output: true Example 2:
+Input: s = &#34;rat&#34;, t = &#34;car&#34; Output: false Note: You may assume the string contains only lowercase alphabets.
+Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
+Solution: class Solution: def isAnagram(self, s, t): &#34;&#34;&#34; :type s: str :type t: str :rtype: bool &#34;&#34;&#34; primeNums = { &#34;a&#34;: 2, &#34;b&#34;: 3, &#34;c&#34;: 5, &#34;d&#34;: 7, &#34;e&#34;: 11, &#34;f&#34;: 13, &#34;g&#34;: 17, &#34;h&#34;: 19, &#34;i&#34;: 23, &#34;j&#34;: 29, &#34;k&#34;: 31, &#34;m&#34;: 37, &#34;l&#34;: 41, &#34;n&#34;: 43, &#34;o&#34;: 47, &#34;p&#34;: 53, &#34;q&#34;: 59, &#34;r&#34;: 61, &#34;s&#34;: 67, &#34;t&#34;: 71, &#34;u&#34;: 73, &#34;v&#34;: 79, &#34;w&#34;: 83, &#34;x&#34;: 89, &#34;y&#34;: 97, &#34;z&#34;: 101 } val_1 = 0 val_2 = 0 list_1 = list(s) list_2 = list(t) &#34;&#34;&#34; Continue only if the two lists are of the same length&#34;&#34;&#34; if(len(list_1) == len(list_2)): for i in range(len(list_1)): val_1 &#43;= primeNums[list_1[i]] val_2 &#43;= primeNums[list_2[i]] if (val_1 == val_2): return True return False </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2018/09/roman-to-integer/">Roman to Integer</a></h2>
 
       <p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.

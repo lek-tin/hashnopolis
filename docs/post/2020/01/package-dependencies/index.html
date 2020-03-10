@@ -16,14 +16,14 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add) " />
+  <meta name="description" content="Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(add) for node in dependencies: dfs(node) return result " />
   <meta name="keywords" content="leetcode dfs " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Package Dependencies" />
-    <meta name="twitter:description" content="Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) for node in dependencies: dfs(node) visiting.remove(node) visited.add(node) result.add(add) " />
+    <meta name="twitter:description" content="Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(add) for node in dependencies: dfs(node) return result " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -206,12 +206,14 @@
       <span style="color:#66d9ef">if</span> dependency <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited:
         dfs(dependency)
 
+    visiting<span style="color:#f92672">.</span>remove(node)
+    visited<span style="color:#f92672">.</span>add(node)
+    result<span style="color:#f92672">.</span>add(add)
+
   <span style="color:#66d9ef">for</span> node <span style="color:#f92672">in</span> dependencies:
     dfs(node)
 
-  visiting<span style="color:#f92672">.</span>remove(node)
-  visited<span style="color:#f92672">.</span>add(node)
-  result<span style="color:#f92672">.</span>add(add)
+  <span style="color:#66d9ef">return</span> result
 </code></pre></div>
   </div>
 

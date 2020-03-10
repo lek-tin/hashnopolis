@@ -20,7 +20,7 @@
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
 Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:" />
-  <meta name="keywords" content="leetcode python dfs recursion " />
+  <meta name="keywords" content="leetcode dfs backtracking " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -183,11 +183,9 @@ Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: 
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/python"><strong>python</strong></a>",
-        
           "<a href="/tags/dfs"><strong>dfs</strong></a>",
         
-          "<a href="/tags/recursion"><strong>recursion</strong></a>",
+          "<a href="/tags/backtracking"><strong>backtracking</strong></a>",
         
         <i class="small material-icons">access_time</i> 2-min read
       </p>
@@ -195,11 +193,11 @@ Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: 
       <h1>Combination Sum II</h1>
       <h4>Created: August 6, 2019 by [lek-tin]</h4>
       
-        <h5>Last updated: August 6, 2019</h5>
+        <h5>Last updated: March 8, 2020</h5>
       
       <hr />
       <p>Given a collection of candidate numbers (<code>candidates</code>) and a target number (<code>target</code>), find all unique combinations in <code>candidates</code> where the candidate numbers sums to <code>target</code>.</p>
-<p>Each number in <code>candidates</code> may only be used once in the combination.</p>
+<p>Each number in <code>candidates</code> may only be used <strong>once</strong> in the combination.</p>
 <h3 id="note">Note</h3>
 <p>All numbers (including <code>target</code>) will be positive integers.
 The solution set must not contain duplicate combinations.</p>
@@ -257,6 +255,7 @@ A solution set is:
             <span style="color:#75715e">## Choose current number at i</span>
             combination<span style="color:#f92672">.</span>append(candidates[i])
             <span style="color:#75715e">## Deduct current number at i from target and go one level deeper</span>
+            <span style="color:#75715e">## Each number in `candidates` may only be used ONCE in the combination, hence i+1</span>
             self<span style="color:#f92672">.</span>dfs(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, combination, target <span style="color:#f92672">-</span> candidates[i], results, candidates)
             <span style="color:#75715e">## Choose current number at i</span>
             combination<span style="color:#f92672">.</span>pop()
