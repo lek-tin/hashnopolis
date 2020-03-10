@@ -42,6 +42,7 @@ class Solution:
 ```
 
 ### Solution (bitmap/hashmap)
+
 Because temperatures can only be in `[30, 100]`, if the temperature right now is say, `T[i] = 50`, we only need to check for the next occurrence of `51, 52, ..., 100` and take the one that occurs soonest.  
 Time: `O(N * W)`, `W=71`
 Space: `O(N + W)`  
@@ -51,7 +52,7 @@ class Solution:
         nxt = [float('inf')] * 102
         ans = [0] * len(T)
         for i in range(len(T) - 1, -1, -1):
-            #Use 102 so min(nxt[t]) has a default value
+            # Use 102 so min(nxt[t]) has a default value
             warmer_index = min(nxt[t] for t in range(T[i]+1, 102))
             print(warmer_index)
             if warmer_index < float('inf'):

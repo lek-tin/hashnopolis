@@ -71,6 +71,7 @@ class Solution:
         if s in wordDict:
             partitions.append(s)
 
+        # we already checked s, so i <- [1, n-1]
         for i in range(1, len(s)):
             word = s[:i]
 

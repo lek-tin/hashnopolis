@@ -28,10 +28,12 @@ def package_dependencies(dependencies):
       if dependency not in visited:
         dfs(dependency)
 
+    visiting.remove(node)
+    visited.add(node)
+    result.add(add)
+
   for node in dependencies:
     dfs(node)
 
-  visiting.remove(node)
-  visited.add(node)
-  result.add(add)
+  return result
 ```

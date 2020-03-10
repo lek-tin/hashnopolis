@@ -2,9 +2,10 @@
 title: "Combination Sum"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
+tags: ["leetcode", "dfs", "backtracking"]
 categories: ["algorithm"]
 date: 2018-09-10T21:42:01+08:00
+lastmod: 2020-03-08T21:42:37+08:00
 draft: false
 archive: false
 ---
@@ -70,6 +71,7 @@ class Solution:
             ## Choose current number at i
             combination.append(candidates[i])
             ## Deduct current number at i from target and go one level deeper
+            ## Each number in `candidates` may only be used MULTIPLE TIMES in the combination, hence i
             self.dfs(i, combination, target - candidates[i], results, candidates)
             ## Choose current number at i
             combination.pop()

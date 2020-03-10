@@ -25,10 +25,12 @@ Output:
   []
 ]
 ```
+
 ### Solution
+
+Time: `O(n * 2^n)`  
+Space: `O(n * 2^n)` keep all the subsets of length `N`, since each of `N` elements could be present or absent.  
 ```python
-# Time: o(2^n)
-# Space: `O(n)`
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         results = []
