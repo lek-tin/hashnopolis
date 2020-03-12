@@ -34,8 +34,8 @@ class Solution:
         res = currMax = currMin = nums[0]
 
         for i in range(1, n):
-            newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i])
-            newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i])
+            newCurrMax = max( max(currMax * nums[i], currMin * nums[i]), nums[i] )
+            newCurrMin = min( min(currMax * nums[i], currMin * nums[i]), nums[i] )
             currMax, currMin = newCurrMax, newCurrMin
             res = max(currMax, res)
 
