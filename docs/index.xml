@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 09 Mar 2020 17:26:30 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 04:14:10 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Shortest Subarray With Sum at Least K</title>
+      <link>http://www.hashnopolis.com/post/2020/03/shortest-subarray-with-sum-at-least-k/</link>
+      <pubDate>Tue, 10 Mar 2020 04:14:10 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/shortest-subarray-with-sum-at-least-k/</guid>
+      <description>Return the length of the shortest, non-empty, contiguous subarray of A with sum at least K.
+If there is no non-empty subarray with sum at least K, return -1.
+Example 1 Input: A = [1], K = 1 Output: 1 Example 2 Input: A = [1,2], K = 4 Output: -1 Example 3 Input: A = [2,-1,2], K = 3 Output: 3 Note  1 &amp;lt;= A.length &amp;lt;= 50000 -10 ^ 5 &amp;lt;= A[i] &amp;lt;= 10 ^ 5 1 &amp;lt;= K &amp;lt;= 10 ^ 9  Solution (sliding window using pointers) This version exceeds time limit Time: O(N)</description>
+    </item>
     
     <item>
       <title>Generalized Abbreviation</title>
@@ -1044,7 +1055,7 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 +
       
       <guid>http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/</guid>
       <description>Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
-Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6. Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray. Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]) newCurrMin = min(min(currMax * nums[i], currMin * nums[i]), nums[i]) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res </description>
+Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6. Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray. Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max( max(currMax * nums[i], currMin * nums[i]), nums[i] ) newCurrMin = min( min(currMax * nums[i], currMin * nums[i]), nums[i] ) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res </description>
     </item>
     
     <item>
