@@ -2,9 +2,10 @@
 title: "Flatten Nested List Iterator"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "iterator"]
+tags: ["leetcode", "stack", "iterator"]
 categories: ["algorithm"]
 date: 2018-11-13T20:03:07-08:00
+lastmod: 2020-03-14T20:03:07-08:00
 draft: false
 archive: false
 ---
@@ -24,7 +25,8 @@ Input: [1,[4,[6]]]
 Output: [1,4,6]
 Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.
 ```
-### Solution
+### Solution (preprocessing recursively)
+
 ```python
 # """
 # This is the interface that allows for creating nested lists.
@@ -79,7 +81,139 @@ class NestedIterator(object):
         """
         :rtype: bool
         """
+        # equivalent to len(self.flat) > 0
         return bool(self.flat)
+
+# Your NestedIterator object will be instantiated and called as such:
+# i, v = NestedIterator(nestedList), []
+# while i.hasNext(): v.append(i.next())
+```
+
+### Solution (stack)
+
+```python
+# """
+# This is the interface that allows for creating nested lists.
+# You should not implement it, or speculate about its implementation
+# """
+#class NestedInteger:
+#    def isInteger(self) -> bool:
+#        """
+#        @return True if this NestedInteger holds a single integer, rather than a nested list.
+#        """
+#
+#    def getInteger(self) -> int:
+#        """
+#        @return the single integer that this NestedInteger holds, if it holds a single integer
+#        Return None if this NestedInteger holds a nested list
+#        """
+#
+#    def getList(self) -> [NestedInteger]:
+#        """
+#        @return the nested list that this NestedInteger holds, if it holds a nested list
+#        Return None if this NestedInteger holds a single integer
+#        """
+
+class NestedIterator(object):
+    def __init__(self, nestedList):
+        """
+        Initialize your data structure here.
+        :type nestedList: List[NestedInteger]
+        """
+        self.stack = []
+        self.flatten(nestedList)
+
+    def next(self):
+        """
+        :rtype: int
+        """
+        return self.stack.pop().getInteger() if self.hasNext() else None
+
+    def hasNext(self):
+        """
+        :rtype: bool
+        """
+        while self.stack:
+            if self.stack[-1].isInteger():
+                return True
+            else:
+                # a nestedList need to be flatten and its root-level items need to be placed on top of the stack
+                tempList = self.stack.pop().getList()
+                self.flatten(tempList)
+
+        return False
+
+    def flatten(self, nestedList):
+        for i in range(len(nestedList)-1, -1, -1):
+            # push each NestedInteger into stack, it may be an integer or nestedList
+            self.stack.append(nestedList[i])
+
+# Your NestedIterator object will be instantiated and called as such:
+# i, v = NestedIterator(nestedList), []
+# while i.hasNext(): v.append(i.next())
+```
+
+### Solution (stack + iterator)
+
+![Hint](https://www.programcreek.com/2014/05/leetcode-flatten-nested-list-iterator-java/)
+```python
+# """
+# This is the interface that allows for creating nested lists.
+# You should not implement it, or speculate about its implementation
+# """
+#class NestedInteger:
+#    def isInteger(self) -> bool:
+#        """
+#        @return True if this NestedInteger holds a single integer, rather than a nested list.
+#        """
+#
+#    def getInteger(self) -> int:
+#        """
+#        @return the single integer that this NestedInteger holds, if it holds a single integer
+#        Return None if this NestedInteger holds a nested list
+#        """
+#
+#    def getList(self) -> [NestedInteger]:
+#        """
+#        @return the nested list that this NestedInteger holds, if it holds a nested list
+#        Return None if this NestedInteger holds a single integer
+#        """
+
+class NestedIterator(object):
+    def __init__(self, nestedList):
+        """
+        Initialize your data structure here.
+        :type nestedList: List[NestedInteger]
+        """
+        self.stack = [iter(nestedList)]
+        self.curr = None
+
+    def next(self):
+        """
+        :rtype: int
+        """
+        result = self.curr
+        self.curr = None
+        return result
+
+    def hasNext(self):
+        """
+        :rtype: bool
+        """
+        while self.stack and self.curr == None:
+            top = self.stack[-1]
+            top_next = next(top, None)
+            if top_next == None:
+                self.stack.pop()
+                continue
+            else:
+                if top_next.isInteger():
+                    self.curr = top_next.getInteger()
+                    return True
+                else:
+                    self.stack.append( iter(top_next.getList()) )
+
+        return False
 
 # Your NestedIterator object will be instantiated and called as such:
 # i, v = NestedIterator(nestedList), []

@@ -27,13 +27,15 @@ Note: Each term of the sequence of integers will be represented as a string.
 ```
 Input: 1
 Output: "1"
+Explanation: This is the base case.
 ```
 ### Example 2
 ```
 Input: 4
 Output: "1211"
+Explanation: For n = 3 the term was "21" in which we have two groups "2" and "1", "2" can be read as "12" which means frequency = 1 and value = 2, the same way "1" is read as "11", so the answer is the concatenation of "12" and "11" which is "1211".
 ```
-### Solution
+### Solution 1
 ```python
 class Solution:
     def countAndSay(self, n):
@@ -60,4 +62,34 @@ class Solution:
             res = temp
             i += 1
         return res
+```
+
+### Solution 2
+
+```python
+import time
+class Solution:
+    def countAndSay(self, n: int) -> str:
+        digits = "1"
+
+        if n == 1:
+            return digits
+
+        for i in range(n-1):
+            start = 0
+            count = 1
+            N = len(digits)
+            newDigits = ""
+            while start < N:
+                i = start + 1
+                while i < N and digits[i] == digits[i-1]:
+                    count += 1
+                    i += 1
+                newDigits += str(count) + str(digits[start])
+                count = 1 
+                start = i
+                i += 1
+            digits = newDigits
+
+        return digits
 ```
