@@ -7,10 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 02 Mar 2020 05:15:27 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 01:53:02 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reverse Words in a String Iii</title>
+      <link>http://www.hashnopolis.com/post/2020/03/reverse-words-in-a-string-iii/</link>
+      <pubDate>Thu, 12 Mar 2020 01:53:02 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/reverse-words-in-a-string-iii/</guid>
+      <description>Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+Example 1 Input: &amp;quot;Let&#39;s take LeetCode contest&amp;quot; Output: &amp;quot;s&#39;teL ekat edoCteeL tsetnoc&amp;quot; Note In the string, each word is separated by single space and there will not be any extra space in the string.
+Solution class Solution: def reverseWords(self, s: str) -&amp;gt; str: N = len(s) start = 0 s = list(s) res = &amp;#34;&amp;#34; while start &amp;lt; N: while start &amp;lt; N and s[start] == &amp;#34; &amp;#34;: start += 1 stop = start while stop &amp;lt; N and s[stop] !</description>
+    </item>
+    
+    <item>
+      <title>Reverse String II</title>
+      <link>http://www.hashnopolis.com/post/2020/03/reverse-string-ii/</link>
+      <pubDate>Thu, 12 Mar 2020 01:39:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/reverse-string-ii/</guid>
+      <description>Given a string and an integer k, you need to reverse the first k characters for every 2k characters counting from the start of the string. If there are less than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and left the other as original.
+Example Input: s = &amp;quot;abcdefg&amp;quot;, k = 2 Output: &amp;quot;bacdfeg&amp;quot; Restrictions: The string consists of lower English letters only.</description>
+    </item>
+    
+    <item>
+      <title>Reverse String</title>
+      <link>http://www.hashnopolis.com/post/2020/03/reverse-string/</link>
+      <pubDate>Thu, 12 Mar 2020 01:37:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/reverse-string/</guid>
+      <description>Write a function that reverses a string. The input string is given as an array of characters char[].
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+You may assume all the characters consist of printable ascii characters.
+Example 1 Input: [&amp;quot;h&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;l&amp;quot;,&amp;quot;l&amp;quot;,&amp;quot;o&amp;quot;] Output: [&amp;quot;o&amp;quot;,&amp;quot;l&amp;quot;,&amp;quot;l&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;h&amp;quot;] Example 2 Input: [&amp;quot;H&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;n&amp;quot;,&amp;quot;n&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;h&amp;quot;] Output: [&amp;quot;h&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;n&amp;quot;,&amp;quot;n&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;H&amp;quot;] Solution class Solution: def reverseString(self, s: List[str]) -&amp;gt; None: &amp;#34;&amp;#34;&amp;#34; Do not return anything, modify s in-place instead.</description>
+    </item>
     
     <item>
       <title>Optimal Utilization</title>

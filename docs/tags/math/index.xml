@@ -67,5 +67,29 @@ Example 1: Input: 16 Output: true Example 2: Input: 14 Output: false Solution Bi
 class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left + (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid + 1 else: right = mid - 1 return False Binary search version 2</description>
     </item>
     
+    <item>
+      <title>Valid Number</title>
+      <link>http://www.hashnopolis.com/post/2018/09/valid-number/</link>
+      <pubDate>Wed, 05 Sep 2018 23:43:50 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/valid-number/</guid>
+      <description>Validate if a given string can be interpreted as a decimal number.
+Some examples: &amp;quot;0&amp;quot; =&amp;gt; true
+&amp;quot; 0.1 &amp;quot; =&amp;gt; true
+&amp;quot;abc&amp;quot; =&amp;gt; false
+&amp;quot;1 a&amp;quot; =&amp;gt; false
+&amp;quot;2e10&amp;quot; =&amp;gt; true
+&amp;quot; -90e3 &amp;quot; =&amp;gt; true
+&amp;quot; 1e&amp;quot; =&amp;gt; false
+&amp;quot;e3&amp;quot; =&amp;gt; false
+&amp;quot; 6e-1&amp;quot; =&amp;gt; true
+&amp;quot; 99e2.5 &amp;quot; =&amp;gt; false
+&amp;quot;53.5e93&amp;quot; =&amp;gt; true
+&amp;quot; --6 &amp;quot; =&amp;gt; false
+&amp;quot;-+3&amp;quot; =&amp;gt; false
+&amp;quot;95a54e53&amp;quot; =&amp;gt; false
+Note It is intended for the problem statement to be ambiguous.</description>
+    </item>
+    
   </channel>
 </rss>

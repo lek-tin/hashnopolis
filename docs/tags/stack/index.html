@@ -176,6 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/2020/03/evaluate-reverse-polish-notation/">Evaluate Reverse Polish Notation</a></h2>
+
+      <p>Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+Valid operators are &#43;, -, *, /. Each operand may be an integer or another expression.
+Note  Division between two integers should truncate toward zero. The given RPN expression is always valid. That means the expression would always evaluate to a result and there won’t be any divide by zero operation.  Example 1 Input: [&#34;2&#34;, &#34;1&#34;, &#34;&#43;&#34;, &#34;3&#34;, &#34;*&#34;] Output: 9 Explanation: ((2 &#43; 1) * 3) = 9 Example 2 Input: [&#34;4&#34;, &#34;13&#34;, &#34;5&#34;, &#34;/&#34;, &#34;&#43;&#34;] Output: 6 Explanation: (4 &#43; (13 / 5)) = 6 Example 3 Input: [&#34;10&#34;, &#34;6&#34;, &#34;9&#34;, &#34;3&#34;, &#34;&#43;&#34;, &#34;-11&#34;, &#34;*&#34;, &#34;/&#34;, &#34;*&#34;, &#34;17&#34;, &#34;&#43;&#34;, &#34;5&#34;, &#34;&#43;&#34;] Output: 22 Explanation: ((10 * (6 / ((9 &#43; 3) * -11))) &#43; 17) &#43; 5 = ((10 * (6 / (12 * -11))) &#43; 17) &#43; 5 = ((10 * (6 / -132)) &#43; 17) &#43; 5 = ((10 * 0) &#43; 17) &#43; 5 = (0 &#43; 17) &#43; 5 = 17 &#43; 5 = 22 Solution class Solution: def evalRPN(self, tokens: List[str]) -&gt; int: if not tokens: return None stack = [] operators = set([&#34;&#43;&#34;, &#34;-&#34;, &#34;*&#34;, &#34;/&#34;]) N = len(tokens) curr = 0 while curr &lt; N: while curr &lt; N and tokens[curr] not in operators: stack.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/2020/03/daily-temperatures/">Daily Temperatures</a></h2>
 
       <p>Given a list of daily temperatures T, return a list such that, for each day in the input, tells you how many days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put 0 instead.
@@ -392,38 +419,11 @@ Example: Input: [2,1,5,6,2,3] Output: 10 Solution: Push height into the stack in
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/valid-parentheses/">Valid Parentheses</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/2018/11/flatten-nested-list-iterator/">Flatten Nested List Iterator</a></h2>
 
-      <p>Given a string containing just the characters ‘(&#39;, ‘)&#39;, ‘{&#39;, ‘}&#39;, ‘[’ and ‘]&#39;, determine if the input string is valid.
-An input string is valid if:
-Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
-Example 1: Input: &#34;()&#34; Output: true Example 2: Input: &#34;()[]{}&#34; Output: true Example 3: Input: &#34;(]&#34; Output: false Example 4: Input: &#34;([)]&#34; Output: false Example 5: Input: &#34;{[]}&#34; Output: true Solution: class Solution { public boolean isValid(String s) { HashMap&lt;Character, Character&gt; charMap = new HashMap&lt;&gt;(); charMap.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/min-stack/">Min Stack</a></h2>
-
-      <p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
- push(x) – Push element x onto stack. pop() – Removes the element on top of the stack. top() – Get the top element. getMin() – Retrieve the minimum element in the stack.  Example MinStack minStack = new MinStack(); minStack.push(-2); minStack.push(0); minStack.push(-3); minStack.getMin(); --&gt; Returns -3. minStack.pop(); minStack.top(); --&gt; Returns 0. minStack.getMin(); --&gt; Returns -2.</p>
+      <p>Given a nested list of integers, implement an iterator to flatten it.
+Each element is either an integer, or a list – whose elements may also be integers or other lists.
+Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`. Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
 
       <p class="meta">
         
@@ -435,7 +435,7 @@ Example 1: Input: &#34;()&#34; Output: true Example 2: Input: &#34;()[]{}&#34; O
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
       </p>
   </div>
 

@@ -7,10 +7,65 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 10 Mar 2020 04:14:10 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2020 18:53:20 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Text Justification</title>
+      <link>http://www.hashnopolis.com/post/2020/03/text-justification/</link>
+      <pubDate>Fri, 13 Mar 2020 18:53:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/text-justification/</guid>
+      <description>Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.
+You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces &#39; &#39; when necessary so that each line has exactly maxWidth characters.
+Extra spaces between words should be distributed as evenly as possible.</description>
+    </item>
+    
+    <item>
+      <title>Evaluate Reverse Polish Notation</title>
+      <link>http://www.hashnopolis.com/post/2020/03/evaluate-reverse-polish-notation/</link>
+      <pubDate>Thu, 12 Mar 2020 15:32:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/evaluate-reverse-polish-notation/</guid>
+      <description>Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+Valid operators are +, -, *, /. Each operand may be an integer or another expression.
+Note  Division between two integers should truncate toward zero. The given RPN expression is always valid. That means the expression would always evaluate to a result and there won&amp;rsquo;t be any divide by zero operation.  Example 1 Input: [&amp;quot;2&amp;quot;, &amp;quot;1&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;*&amp;quot;] Output: 9 Explanation: ((2 + 1) * 3) = 9 Example 2 Input: [&amp;quot;4&amp;quot;, &amp;quot;13&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;/&amp;quot;, &amp;quot;+&amp;quot;] Output: 6 Explanation: (4 + (13 / 5)) = 6 Example 3 Input: [&amp;quot;10&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;-11&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;/&amp;quot;, &amp;quot;*&amp;quot;, &amp;quot;17&amp;quot;, &amp;quot;+&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;+&amp;quot;] Output: 22 Explanation: ((10 * (6 / ((9 + 3) * -11))) + 17) + 5 = ((10 * (6 / (12 * -11))) + 17) + 5 = ((10 * (6 / -132)) + 17) + 5 = ((10 * 0) + 17) + 5 = (0 + 17) + 5 = 17 + 5 = 22 Solution class Solution: def evalRPN(self, tokens: List[str]) -&amp;gt; int: if not tokens: return None stack = [] operators = set([&amp;#34;+&amp;#34;, &amp;#34;-&amp;#34;, &amp;#34;*&amp;#34;, &amp;#34;/&amp;#34;]) N = len(tokens) curr = 0 while curr &amp;lt; N: while curr &amp;lt; N and tokens[curr] not in operators: stack.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Words in a String Iii</title>
+      <link>http://www.hashnopolis.com/post/2020/03/reverse-words-in-a-string-iii/</link>
+      <pubDate>Thu, 12 Mar 2020 01:53:02 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/reverse-words-in-a-string-iii/</guid>
+      <description>Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+Example 1 Input: &amp;quot;Let&#39;s take LeetCode contest&amp;quot; Output: &amp;quot;s&#39;teL ekat edoCteeL tsetnoc&amp;quot; Note In the string, each word is separated by single space and there will not be any extra space in the string.
+Solution class Solution: def reverseWords(self, s: str) -&amp;gt; str: N = len(s) start = 0 s = list(s) res = &amp;#34;&amp;#34; while start &amp;lt; N: while start &amp;lt; N and s[start] == &amp;#34; &amp;#34;: start += 1 stop = start while stop &amp;lt; N and s[stop] !</description>
+    </item>
+    
+    <item>
+      <title>Reverse String II</title>
+      <link>http://www.hashnopolis.com/post/2020/03/reverse-string-ii/</link>
+      <pubDate>Thu, 12 Mar 2020 01:39:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/reverse-string-ii/</guid>
+      <description>Given a string and an integer k, you need to reverse the first k characters for every 2k characters counting from the start of the string. If there are less than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and left the other as original.
+Example Input: s = &amp;quot;abcdefg&amp;quot;, k = 2 Output: &amp;quot;bacdfeg&amp;quot; Restrictions: The string consists of lower English letters only.</description>
+    </item>
+    
+    <item>
+      <title>Reverse String</title>
+      <link>http://www.hashnopolis.com/post/2020/03/reverse-string/</link>
+      <pubDate>Thu, 12 Mar 2020 01:37:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/reverse-string/</guid>
+      <description>Write a function that reverses a string. The input string is given as an array of characters char[].
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+You may assume all the characters consist of printable ascii characters.
+Example 1 Input: [&amp;quot;h&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;l&amp;quot;,&amp;quot;l&amp;quot;,&amp;quot;o&amp;quot;] Output: [&amp;quot;o&amp;quot;,&amp;quot;l&amp;quot;,&amp;quot;l&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;h&amp;quot;] Example 2 Input: [&amp;quot;H&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;n&amp;quot;,&amp;quot;n&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;h&amp;quot;] Output: [&amp;quot;h&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;n&amp;quot;,&amp;quot;n&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;H&amp;quot;] Solution class Solution: def reverseString(self, s: List[str]) -&amp;gt; None: &amp;#34;&amp;#34;&amp;#34; Do not return anything, modify s in-place instead.</description>
+    </item>
     
     <item>
       <title>Shortest Subarray With Sum at Least K</title>
@@ -2026,7 +2081,7 @@ You have the following 3 operations permitted on a word:
       <guid>http://www.hashnopolis.com/post/2019/01/reverse-integer/</guid>
       <description>Given a 32-bit signed integer, reverse digits of an integer.
 Example 1 Input: 123 Output: 321 Example 2 Input: -123 Output: -321 Example 3 Input: 120 Output: 21 Note Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
-Solution class Solution(object): def reverse(self, x): &amp;#34;&amp;#34;&amp;#34; :type x: int :rtype: int &amp;#34;&amp;#34;&amp;#34; if x == &amp;#34;&amp;#34; or x == None: return x res = &amp;#34;&amp;#34; if x &amp;gt; 0 else &amp;#34;-&amp;#34; string = str(abs(x)) for i in range(len(string)-1, -1, -1): res += string[i] res = int(res) if res &amp;lt; -2**31 or res &amp;gt;= 2**31: return 0 return int(res) class Solution(object): def reverse(self, x): &amp;#34;&amp;#34;&amp;#34; :type x: int :rtype: int &amp;#34;&amp;#34;&amp;#34; res = 0 isNegative = x &amp;lt; 0 x = abs(x) while x !</description>
+Solution class Solution(object): def reverse(self, x): &amp;#34;&amp;#34;&amp;#34; :type x: int :rtype: int &amp;#34;&amp;#34;&amp;#34; if x == &amp;#34;&amp;#34; or x == None: return x res = &amp;#34;&amp;#34; if x &amp;gt; 0 else &amp;#34;-&amp;#34; string = str(abs(x)) for i in range(len(string)-1, -1, -1): res += string[i] res = int(res) if res &amp;lt; -2**31 or res &amp;gt;= 2**31: return 0 return int(res) class Solution: def reverse(self, x: int) -&amp;gt; int: isNegative = x &amp;lt; 0 x = abs(x) new_x = 0 while x !</description>
     </item>
     
     <item>
@@ -2219,7 +2274,7 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
       <pubDate>Tue, 13 Nov 2018 22:05:44 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/arrays-in-python/</guid>
-      <description>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] arr[3:5] = arr[3:5][::-1] Clone a list newArr = oldArr[:]</description>
+      <description>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] # [8, 7, 6, 5, 4, 3, 2, 1] arr[3:5] = arr[3:5][::-1] Clone a list newArr = oldArr[:]</description>
     </item>
     
     <item>
@@ -3358,6 +3413,30 @@ Example 1 Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) a
       <description>Given two binary strings, return their sum (also a binary string).
 The input strings are both non-empty and contains only characters 1 or 0.
 Example 1 Input: a = &amp;#34;11&amp;#34;, b = &amp;#34;1&amp;#34; Output: &amp;#34;100&amp;#34; Example 2 Input: a = &amp;#34;1010&amp;#34;, b = &amp;#34;1011&amp;#34; Output: &amp;#34;10101&amp;#34; Solution class Solution: def addBinary(self, a, b): &amp;#34;&amp;#34;&amp;#34; :type a: str :type b: str :rtype: str &amp;#34;&amp;#34;&amp;#34; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &amp;gt;= 0 or j &amp;gt;= 0: total = carry if i &amp;gt;= 0: total += int(a[i]) i -= 1 if j &amp;gt;= 0: total += int(b[j]) j -= 1 result.</description>
+    </item>
+    
+    <item>
+      <title>Valid Number</title>
+      <link>http://www.hashnopolis.com/post/2018/09/valid-number/</link>
+      <pubDate>Wed, 05 Sep 2018 23:43:50 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2018/09/valid-number/</guid>
+      <description>Validate if a given string can be interpreted as a decimal number.
+Some examples: &amp;quot;0&amp;quot; =&amp;gt; true
+&amp;quot; 0.1 &amp;quot; =&amp;gt; true
+&amp;quot;abc&amp;quot; =&amp;gt; false
+&amp;quot;1 a&amp;quot; =&amp;gt; false
+&amp;quot;2e10&amp;quot; =&amp;gt; true
+&amp;quot; -90e3 &amp;quot; =&amp;gt; true
+&amp;quot; 1e&amp;quot; =&amp;gt; false
+&amp;quot;e3&amp;quot; =&amp;gt; false
+&amp;quot; 6e-1&amp;quot; =&amp;gt; true
+&amp;quot; 99e2.5 &amp;quot; =&amp;gt; false
+&amp;quot;53.5e93&amp;quot; =&amp;gt; true
+&amp;quot; --6 &amp;quot; =&amp;gt; false
+&amp;quot;-+3&amp;quot; =&amp;gt; false
+&amp;quot;95a54e53&amp;quot; =&amp;gt; false
+Note It is intended for the problem statement to be ambiguous.</description>
     </item>
     
     <item>

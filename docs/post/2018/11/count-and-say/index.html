@@ -183,7 +183,7 @@ Note: Each term of the sequence of integers will be represented as a string." />
         
           "<a href="/tags/python"><strong>python</strong></a>",
         
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/count-and-say.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Count and Say</h1>
@@ -208,10 +208,12 @@ Note: Each term of the sequence of integers will be represented as a string." />
 <h3 id="example-1">Example 1</h3>
 <pre><code>Input: 1
 Output: &quot;1&quot;
+Explanation: This is the base case.
 </code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 4
 Output: &quot;1211&quot;
-</code></pre><h3 id="solution">Solution</h3>
+Explanation: For n = 3 the term was &quot;21&quot; in which we have two groups &quot;2&quot; and &quot;1&quot;, &quot;2&quot; can be read as &quot;12&quot; which means frequency = 1 and value = 2, the same way &quot;1&quot; is read as &quot;11&quot;, so the answer is the concatenation of &quot;12&quot; and &quot;11&quot; which is &quot;1211&quot;.
+</code></pre><h3 id="solution-1">Solution 1</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">countAndSay</span>(self, n):
         <span style="color:#e6db74">&#34;&#34;&#34;
@@ -237,6 +239,32 @@ Output: &quot;1211&quot;
             res <span style="color:#f92672">=</span> temp
             i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
         <span style="color:#66d9ef">return</span> res
+</code></pre></div><h3 id="solution-2">Solution 2</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> time
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">countAndSay</span>(self, n: int) <span style="color:#f92672">-&gt;</span> str:
+        digits <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1&#34;</span>
+
+        <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> digits
+
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            start <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+            count <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            N <span style="color:#f92672">=</span> len(digits)
+            newDigits <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+            <span style="color:#66d9ef">while</span> start <span style="color:#f92672">&lt;</span> N:
+                i <span style="color:#f92672">=</span> start <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> N <span style="color:#f92672">and</span> digits[i] <span style="color:#f92672">==</span> digits[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]:
+                    count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                    i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                newDigits <span style="color:#f92672">+=</span> str(count) <span style="color:#f92672">+</span> str(digits[start])
+                count <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> 
+                start <span style="color:#f92672">=</span> i
+                i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            digits <span style="color:#f92672">=</span> newDigits
+
+        <span style="color:#66d9ef">return</span> digits
 </code></pre></div>
   </div>
 
