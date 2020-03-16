@@ -53,14 +53,52 @@ class Solution:
             return False
 ```
 
-### Solution (using flags)
+### Solution (using flags: without natural number e)
+
+```python
+class Solution:
+    def isNumberWithoutE(self, s: str) -> bool:
+        s = s.strip()
+        N = len(s)
+
+        if N == 0:
+            return False
+
+        hasSeenDot, hasSeenNum = False, False
+
+        for i in range(len(s)):
+            currChar = s[i]
+            # Number
+            if ord("0") <= ord(currChar) <= ord("9"):
+                hasSeenNum = True
+            # dot
+            elif currChar == ".":
+                if hasSeenDot:
+                    print(currChar,": invalid '.'")
+                    return False
+                hasSeenDot = True
+            # +/- sign
+            elif currChar in "+-":
+                # +/- at invalid position
+                if i != 0:
+                    print(currChar, ": +/- at invalid position")
+                    return False
+            # illegal characters
+            else:
+                print(currChar, ": illegal characters")
+                return False
+
+        return hasSeenNum
+```
+
+### Solution (using flags: with atural number e)
 
 ```python
 class Solution:
     def isNumber(self, s: str) -> bool:
         s = s.strip()
         N = len(s)
-        
+
         if N == 0:
             return False
 

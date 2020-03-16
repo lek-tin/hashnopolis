@@ -27,7 +27,9 @@ You may assume the string contains only lowercase alphabets.
 What if the inputs contain unicode characters? How would you adapt your solution to such case?
 
 
-### Solution:
+### Solution (using prime numbers)
+
+this approach is elegant but noted that if the strings are too long, the total sums maybe too big (overflow)
 ```python
 class Solution:
     def isAnagram(self, s, t):
@@ -76,4 +78,29 @@ class Solution:
             if (val_1 == val_2):
                 return True
         return False
+```
+
+### Solution (hashtable)
+
+```python
+from collections import Counter
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+
+        if not s and not t:
+            return True
+        if len(s) == len(t) == 0:
+            return True
+
+        counter_s = Counter(list(s))
+
+        for c in t:
+            if c not in counter_s:
+                return False
+            counter_s[c] -= 1
+            if counter_s[c] == 0:
+                del counter_s[c]
+
+        return not bool(counter_s)
 ```

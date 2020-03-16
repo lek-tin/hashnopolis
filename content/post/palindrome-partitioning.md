@@ -2,7 +2,7 @@
 title: "Palindrome Partitioning"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dfs"]
+tags: ["leetcode", "backtracking"]
 categories: ["algorithm"]
 date: 2019-08-07T00:27:33-07:00
 draft: false

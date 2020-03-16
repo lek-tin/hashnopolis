@@ -71,7 +71,7 @@ class Solution:
             ## Choose current number at i
             combination.append(candidates[i])
             ## Deduct current number at i from target and go one level deeper
-            ## Each number in `candidates` may only be used MULTIPLE TIMES in the combination, hence i
+            ## Each number in `candidates` may be used MULTIPLE TIMES in the combination, hence i
             self.dfs(i, combination, target - candidates[i], results, candidates)
             ## Choose current number at i
             combination.pop()

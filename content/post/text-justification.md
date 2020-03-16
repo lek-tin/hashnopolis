@@ -2,11 +2,11 @@
 title: "Text Justification"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dynamic-programming"]
+tags: ["leetcode", "greedy", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2020-03-13T18:53:20-07:00
 lastmod: 2020-03-13T18:53:20-07:00
-draft: false
+draft: true
 archive: false
 ---
 Given an array of words and a width `maxWidth`, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.  
@@ -70,4 +70,9 @@ Output:
   "everything  else  we",
   "do                  "
 ]
+```
+
+### Solution (greedy)
+
+```python
 ```
