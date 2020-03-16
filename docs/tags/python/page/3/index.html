@@ -263,7 +263,7 @@ Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3 Example 2 Input: 8 Outpu
       <h2><a href="http://www.hashnopolis.com/post/2018/09/combinations/">Combinations</a></h2>
 
       <p>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n, k): &#34;&#34;&#34; :type n: int :type k: int :rtype: List[List[int]] &#34;&#34;&#34; res = [] nums = list(range(1, n&#43;1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &gt; k: return if index &lt; n: ans.</p>
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n: int, k: int) -&gt; List[List[int]]: def backtrack(start = 1, curr = []): # if the combination is done if len(curr) == k: output.append(curr[:]) return for i in range(start, n &#43; 1): # add i into the current combination curr.</p>
 
       <p class="meta">
         

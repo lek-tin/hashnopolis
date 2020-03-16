@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 09 Mar 2020 02:53:01 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 02:19:42 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Palindrome Permutation</title>
+      <link>http://www.hashnopolis.com/post/2020/03/palindrome-permutation/</link>
+      <pubDate>Sun, 15 Mar 2020 02:19:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/palindrome-permutation/</guid>
+      <description>Given a string, determine if a permutation of the string could form a palindrome.
+Example 1 Input: &amp;quot;code&amp;quot; Output: false Example 2 Input: &amp;quot;aab&amp;quot; Output: true Example 3 Input: &amp;quot;carerac&amp;quot; Output: true Solution class Solution: def canPermutePalindrome(self, s: str) -&amp;gt; bool: lookup = set() for c in s: if c not in lookup: lookup.add(c) else: lookup.remove(c) return len(lookup) &amp;lt;= 1 </description>
+    </item>
     
     <item>
       <title>First Missing Positive</title>
@@ -242,7 +252,7 @@ Example 1:
 Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true Example 2:
 Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note: You may assume the string contains only lowercase alphabets.
 Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
-Solution: class Solution: def isAnagram(self, s, t): &amp;#34;&amp;#34;&amp;#34; :type s: str :type t: str :rtype: bool &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } val_1 = 0 val_2 = 0 list_1 = list(s) list_2 = list(t) &amp;#34;&amp;#34;&amp;#34; Continue only if the two lists are of the same length&amp;#34;&amp;#34;&amp;#34; if(len(list_1) == len(list_2)): for i in range(len(list_1)): val_1 += primeNums[list_1[i]] val_2 += primeNums[list_2[i]] if (val_1 == val_2): return True return False </description>
+Solution (using prime numbers) this approach is elegant but noted that if the strings are too long, the total sums maybe too big (overflow)</description>
     </item>
     
     <item>

@@ -7,20 +7,88 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 13 Mar 2020 18:53:20 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 01:53:48 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Text Justification</title>
-      <link>http://www.hashnopolis.com/post/2020/03/text-justification/</link>
-      <pubDate>Fri, 13 Mar 2020 18:53:20 -0700</pubDate>
+      <title>Interval List Intersections</title>
+      <link>http://www.hashnopolis.com/post/2020/03/interval-list-intersections/</link>
+      <pubDate>Mon, 16 Mar 2020 01:53:48 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/03/text-justification/</guid>
-      <description>Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.
-You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces &#39; &#39; when necessary so that each line has exactly maxWidth characters.
-Extra spaces between words should be distributed as evenly as possible.</description>
+      <guid>http://www.hashnopolis.com/post/2020/03/interval-list-intersections/</guid>
+      <description>Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.
+Return the intersection of these two interval lists.
+(Formally, a closed interval [a, b] (with a &amp;lt;= b) denotes the set of real numbers x with a &amp;lt;= x &amp;lt;= b. The intersection of two closed intervals is a set of real numbers that is either empty, or can be represented as a closed interval.</description>
+    </item>
+    
+    <item>
+      <title>Scramble String</title>
+      <link>http://www.hashnopolis.com/post/2020/03/scramble-string/</link>
+      <pubDate>Sun, 15 Mar 2020 04:42:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/scramble-string/</guid>
+      <description>Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
+Below is one possible representation of s1 = &amp;quot;great&amp;quot;:
+ great / \ gr eat / \ / \ g r e at / \ a t To scramble the string, we may choose any non-leaf node and swap its two children.
+For example, if we choose the node &amp;quot;gr&amp;quot; and swap its two children, it produces a scrambled string &amp;quot;rgeat&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Partitioning Ii</title>
+      <link>http://www.hashnopolis.com/post/2020/03/palindrome-partitioning-ii/</link>
+      <pubDate>Sun, 15 Mar 2020 03:31:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/palindrome-partitioning-ii/</guid>
+      <description>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return the minimum cuts needed for a palindrome partitioning of s.
+Example Input: &amp;quot;aab&amp;quot; Output: 1 Explanation: The palindrome partitioning [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;] could be produced using 1 cut. Solution (DP) class Solution: def minCut(self, s: str) -&amp;gt; int: N = len(s) # valid[i][j] = True if s[i~j] IS palindrome, or False if IS NOT palindrome valid = [ [True for _ in range(N)] for _ in range(N) ] # min cuts of s[0~i] dp = [N for _ in range(N)] for l in range(2, N+1): for i in range(N-l+1): j = i+l-1 valid[i][j] = s[i]==s[j] and valid[i+1][j-1] for i in range(N): if valid[0][i]: # no cuts needed dp[i] = 0 continue for j in range(i): if valid[j+1][i]: #.</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Permutation</title>
+      <link>http://www.hashnopolis.com/post/2020/03/palindrome-permutation/</link>
+      <pubDate>Sun, 15 Mar 2020 02:19:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/palindrome-permutation/</guid>
+      <description>Given a string, determine if a permutation of the string could form a palindrome.
+Example 1 Input: &amp;quot;code&amp;quot; Output: false Example 2 Input: &amp;quot;aab&amp;quot; Output: true Example 3 Input: &amp;quot;carerac&amp;quot; Output: true Solution class Solution: def canPermutePalindrome(self, s: str) -&amp;gt; bool: lookup = set() for c in s: if c not in lookup: lookup.add(c) else: lookup.remove(c) return len(lookup) &amp;lt;= 1 </description>
+    </item>
+    
+    <item>
+      <title>First Unique Character in a String</title>
+      <link>http://www.hashnopolis.com/post/2020/03/first-unique-character-in-a-string/</link>
+      <pubDate>Sun, 15 Mar 2020 01:00:21 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/first-unique-character-in-a-string/</guid>
+      <description>Given a string, find the first non-repeating character in it and return it&amp;rsquo;s index. If it doesn&amp;rsquo;t exist, return -1.
+Example 1 s = &amp;quot;leetcode&amp;quot; return 0. Example 2 s = &amp;quot;loveleetcode&amp;quot;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&amp;gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 </description>
+    </item>
+    
+    <item>
+      <title>Max Queue</title>
+      <link>http://www.hashnopolis.com/post/2020/03/max-queue/</link>
+      <pubDate>Sun, 15 Mar 2020 00:27:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/max-queue/</guid>
+      <description>Implement a MaxQueue class that has the following methods:
+public interface MaxQueue { public void add(Long l); public Long poll(); public Long pollMax(); } All 3 operations should take on average O(logN) time.
+Solution // &amp;#34;static void main&amp;#34; must be defined in a public class. public class Main { public static void main(String[] args) throws Exception { System.out.println(&amp;#34;Hello World!&amp;#34;); DoubleLinkedList list = new DoubleLinkedList(); MaxQueue maxQ = new MaxQueue(); maxQ.add(5); maxQ.</description>
+    </item>
+    
+    <item>
+      <title>String Compression</title>
+      <link>http://www.hashnopolis.com/post/2020/03/string-compression/</link>
+      <pubDate>Sat, 14 Mar 2020 23:17:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/string-compression/</guid>
+      <description>Given an array of characters, compress it in-place.
+The length after compression must always be smaller than or equal to the original array.
+Every element of the array should be a character (not int) of length 1.
+After you are done modifying the input array in-place, return the new length of the array.
+Follow up Could you solve it using only O(1) extra space?
+Example 1 Input: [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;,&amp;quot;b&amp;quot;,&amp;quot;c&amp;quot;,&amp;quot;c&amp;quot;,&amp;quot;c&amp;quot;] Output: Return 6, and the first 6 characters of the input array should be: [&amp;quot;a&amp;quot;,&amp;quot;2&amp;quot;,&amp;quot;b&amp;quot;,&amp;quot;2&amp;quot;,&amp;quot;c&amp;quot;,&amp;quot;3&amp;quot;] Explanation: &amp;quot;aa&amp;quot; is replaced by &amp;quot;a2&amp;quot;.</description>
     </item>
     
     <item>
@@ -2274,7 +2342,8 @@ signed -128 = 10000000 signed -127 = 10000001 signed -1 = 11111111 signed 0 = 00
       <pubDate>Tue, 13 Nov 2018 22:05:44 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/arrays-in-python/</guid>
-      <description>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] # [8, 7, 6, 5, 4, 3, 2, 1] arr[3:5] = arr[3:5][::-1] Clone a list newArr = oldArr[:]</description>
+      <description>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] # [8, 7, 6, 5, 4, 3, 2, 1] arr[3:5] = arr[3:5][::-1] Slices with step s[i:j:k] means &amp;ldquo;slice of s from i to j with step k&amp;rdquo;. When i and j are absent, the whole sequence is assumed and thus s[::k] means &amp;ldquo;every k-th item&amp;rdquo; in the entire sequence.
+s = range(20) # output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] # 3rd item from s: s[::3] # output: [0, 3, 6, 9, 12, 15, 18] # 3rd item from s[2:]: s[2:] # output: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] s[2::3] # output: [2, 5, 8, 11, 14, 17] # 3rd item from s[5:12]: s[5:12] # output: [5, 6, 7, 8, 9, 10, 11] s[5:12:3] # output: [5, 8, 11] # 3rd item from s[:10]: s[:10] # output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] s[:10:3] # output: [0, 3, 6, 9] Clone a list newArr = oldArr[:]</description>
     </item>
     
     <item>
@@ -3104,7 +3173,7 @@ Example 1:
 Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true Example 2:
 Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note: You may assume the string contains only lowercase alphabets.
 Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
-Solution: class Solution: def isAnagram(self, s, t): &amp;#34;&amp;#34;&amp;#34; :type s: str :type t: str :rtype: bool &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } val_1 = 0 val_2 = 0 list_1 = list(s) list_2 = list(t) &amp;#34;&amp;#34;&amp;#34; Continue only if the two lists are of the same length&amp;#34;&amp;#34;&amp;#34; if(len(list_1) == len(list_2)): for i in range(len(list_1)): val_1 += primeNums[list_1[i]] val_2 += primeNums[list_2[i]] if (val_1 == val_2): return True return False </description>
+Solution (using prime numbers) this approach is elegant but noted that if the strings are too long, the total sums maybe too big (overflow)</description>
     </item>
     
     <item>
@@ -3342,7 +3411,7 @@ Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [
       
       <guid>http://www.hashnopolis.com/post/2018/09/combinations/</guid>
       <description>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n, k): &amp;#34;&amp;#34;&amp;#34; :type n: int :type k: int :rtype: List[List[int]] &amp;#34;&amp;#34;&amp;#34; res = [] nums = list(range(1, n+1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans.</description>
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n: int, k: int) -&amp;gt; List[List[int]]: def backtrack(start = 1, curr = []): # if the combination is done if len(curr) == k: output.append(curr[:]) return for i in range(start, n + 1): # add i into the current combination curr.</description>
     </item>
     
     <item>

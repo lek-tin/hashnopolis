@@ -150,17 +150,6 @@ Example: Input: {&amp;quot;$id&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;neighbo
     </item>
     
     <item>
-      <title>Palindrome Partitioning</title>
-      <link>http://www.hashnopolis.com/post/2019/08/palindrome-partitioning/</link>
-      <pubDate>Wed, 07 Aug 2019 00:27:33 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/2019/08/palindrome-partitioning/</guid>
-      <description>Given a string s, partition s such that every substring of the partition is a palindrome.
-Return all possible palindrome partitioning of s.
-Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;] ] Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &amp;#39;ababaaeqwds&amp;#39;, one possible call stack will look like &amp;#39;aba&amp;#39;-&amp;gt;&amp;#39;b&amp;#39;-&amp;gt;&amp;#39;aa&amp;#39;-&amp;gt;&amp;#39;e&amp;#39;-&amp;gt;&amp;#39;q&amp;#39;-&amp;gt;&amp;#39;w&amp;#39;-&amp;gt;&amp;#39;d&amp;#39;-&amp;gt;&amp;#39;s&amp;#39;: n space class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</description>
-    </item>
-    
-    <item>
       <title>Combination Sum II</title>
       <link>http://www.hashnopolis.com/post/2019/08/combination-sum-ii/</link>
       <pubDate>Tue, 06 Aug 2019 00:57:28 -0700</pubDate>

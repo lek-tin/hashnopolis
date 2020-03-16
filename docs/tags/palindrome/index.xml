@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 17 Feb 2019 22:07:48 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 02:19:42 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/palindrome/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Palindrome Permutation</title>
+      <link>http://www.hashnopolis.com/post/2020/03/palindrome-permutation/</link>
+      <pubDate>Sun, 15 Mar 2020 02:19:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/palindrome-permutation/</guid>
+      <description>Given a string, determine if a permutation of the string could form a palindrome.
+Example 1 Input: &amp;quot;code&amp;quot; Output: false Example 2 Input: &amp;quot;aab&amp;quot; Output: true Example 3 Input: &amp;quot;carerac&amp;quot; Output: true Solution class Solution: def canPermutePalindrome(self, s: str) -&amp;gt; bool: lookup = set() for c in s: if c not in lookup: lookup.add(c) else: lookup.remove(c) return len(lookup) &amp;lt;= 1 </description>
+    </item>
     
     <item>
       <title>Longest Palindromic Substring</title>

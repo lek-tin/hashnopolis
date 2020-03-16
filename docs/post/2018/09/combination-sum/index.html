@@ -250,7 +250,7 @@ A solution set is:
             <span style="color:#75715e">## Choose current number at i</span>
             combination<span style="color:#f92672">.</span>append(candidates[i])
             <span style="color:#75715e">## Deduct current number at i from target and go one level deeper</span>
-            <span style="color:#75715e">## Each number in `candidates` may only be used MULTIPLE TIMES in the combination, hence i</span>
+            <span style="color:#75715e">## Each number in `candidates` may be used MULTIPLE TIMES in the combination, hence i</span>
             self<span style="color:#f92672">.</span>dfs(i, combination, target <span style="color:#f92672">-</span> candidates[i], results, candidates)
             <span style="color:#75715e">## Choose current number at i</span>
             combination<span style="color:#f92672">.</span>pop()

@@ -84,7 +84,8 @@ Now you want to find out who the celebrity is or verify that there is not one. T
       <pubDate>Tue, 13 Nov 2018 22:05:44 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/2018/11/arrays-in-python/</guid>
-      <description>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] # [8, 7, 6, 5, 4, 3, 2, 1] arr[3:5] = arr[3:5][::-1] Clone a list newArr = oldArr[:]</description>
+      <description>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] # [8, 7, 6, 5, 4, 3, 2, 1] arr[3:5] = arr[3:5][::-1] Slices with step s[i:j:k] means &amp;ldquo;slice of s from i to j with step k&amp;rdquo;. When i and j are absent, the whole sequence is assumed and thus s[::k] means &amp;ldquo;every k-th item&amp;rdquo; in the entire sequence.
+s = range(20) # output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] # 3rd item from s: s[::3] # output: [0, 3, 6, 9, 12, 15, 18] # 3rd item from s[2:]: s[2:] # output: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] s[2::3] # output: [2, 5, 8, 11, 14, 17] # 3rd item from s[5:12]: s[5:12] # output: [5, 6, 7, 8, 9, 10, 11] s[5:12:3] # output: [5, 8, 11] # 3rd item from s[:10]: s[:10] # output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] s[:10:3] # output: [0, 3, 6, 9] Clone a list newArr = oldArr[:]</description>
     </item>
     
     <item>
@@ -267,7 +268,7 @@ Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3 Example 2 Input: 8 Outpu
       
       <guid>http://www.hashnopolis.com/post/2018/09/combinations/</guid>
       <description>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
-Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n, k): &amp;#34;&amp;#34;&amp;#34; :type n: int :type k: int :rtype: List[List[int]] &amp;#34;&amp;#34;&amp;#34; res = [] nums = list(range(1, n+1)) def iterate(index, tempAns): ans = list(tempAns) if len(ans) &amp;gt; k: return if index &amp;lt; n: ans.</description>
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n: int, k: int) -&amp;gt; List[List[int]]: def backtrack(start = 1, curr = []): # if the combination is done if len(curr) == k: output.append(curr[:]) return for i in range(start, n + 1): # add i into the current combination curr.</description>
     </item>
     
     <item>

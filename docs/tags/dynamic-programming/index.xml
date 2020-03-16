@@ -7,20 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 13 Mar 2020 18:53:20 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 03:31:13 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Text Justification</title>
-      <link>http://www.hashnopolis.com/post/2020/03/text-justification/</link>
-      <pubDate>Fri, 13 Mar 2020 18:53:20 -0700</pubDate>
+      <title>Palindrome Partitioning Ii</title>
+      <link>http://www.hashnopolis.com/post/2020/03/palindrome-partitioning-ii/</link>
+      <pubDate>Sun, 15 Mar 2020 03:31:13 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/03/text-justification/</guid>
-      <description>Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.
-You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces &#39; &#39; when necessary so that each line has exactly maxWidth characters.
-Extra spaces between words should be distributed as evenly as possible.</description>
+      <guid>http://www.hashnopolis.com/post/2020/03/palindrome-partitioning-ii/</guid>
+      <description>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return the minimum cuts needed for a palindrome partitioning of s.
+Example Input: &amp;quot;aab&amp;quot; Output: 1 Explanation: The palindrome partitioning [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;] could be produced using 1 cut. Solution (DP) class Solution: def minCut(self, s: str) -&amp;gt; int: N = len(s) # valid[i][j] = True if s[i~j] IS palindrome, or False if IS NOT palindrome valid = [ [True for _ in range(N)] for _ in range(N) ] # min cuts of s[0~i] dp = [N for _ in range(N)] for l in range(2, N+1): for i in range(N-l+1): j = i+l-1 valid[i][j] = s[i]==s[j] and valid[i+1][j-1] for i in range(N): if valid[0][i]: # no cuts needed dp[i] = 0 continue for j in range(i): if valid[j+1][i]: #.</description>
     </item>
     
     <item>

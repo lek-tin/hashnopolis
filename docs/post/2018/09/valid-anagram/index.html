@@ -21,7 +21,7 @@ Example 1:
 Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true Example 2:
 Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note: You may assume the string contains only lowercase alphabets.
 Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
-Solution: class Solution: def isAnagram(self, s, t): &amp;#34;&amp;#34;&amp;#34; :type s: str :type t: str :rtype: bool &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } val_1 = 0 val_2 = 0 list_1 = list(s) list_2 = list(t) &amp;#34;&amp;#34;&amp;#34; Continue only if the two lists are of the same length&amp;#34;&amp;#34;&amp;#34; if(len(list_1) == len(list_2)): for i in range(len(list_1)): val_1 &#43;= primeNums[list_1[i]] val_2 &#43;= primeNums[list_2[i]] if (val_1 == val_2): return True return False " />
+Solution (using prime numbers) this approach is elegant but noted that if the strings are too long, the total sums maybe too big (overflow)" />
   <meta name="keywords" content="leetcode hashmap " />
   
   
@@ -33,7 +33,7 @@ Example 1:
 Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true Example 2:
 Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note: You may assume the string contains only lowercase alphabets.
 Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
-Solution: class Solution: def isAnagram(self, s, t): &amp;#34;&amp;#34;&amp;#34; :type s: str :type t: str :rtype: bool &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } val_1 = 0 val_2 = 0 list_1 = list(s) list_2 = list(t) &amp;#34;&amp;#34;&amp;#34; Continue only if the two lists are of the same length&amp;#34;&amp;#34;&amp;#34; if(len(list_1) == len(list_2)): for i in range(len(list_1)): val_1 &#43;= primeNums[list_1[i]] val_2 &#43;= primeNums[list_2[i]] if (val_1 == val_2): return True return False " />
+Solution (using prime numbers) this approach is elegant but noted that if the strings are too long, the total sums maybe too big (overflow)" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -189,7 +189,7 @@ Solution: class Solution: def isAnagram(self, s, t): &amp;#34;&amp;#34;&amp;#34;
         
           "<a href="/tags/hashmap"><strong>hashmap</strong></a>",
         
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/valid-anagram.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Valid Anagram</h1>
@@ -209,7 +209,8 @@ Output: false
 <p>You may assume the string contains only lowercase alphabets.</p>
 <h3 id="follow-up">Follow-up</h3>
 <p>What if the inputs contain unicode characters? How would you adapt your solution to such case?</p>
-<h3 id="solution">Solution:</h3>
+<h3 id="solution-using-prime-numbers">Solution (using prime numbers)</h3>
+<p>this approach is elegant but noted that if the strings are too long, the total sums maybe too big (overflow)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isAnagram</span>(self, s, t):
         <span style="color:#e6db74">&#34;&#34;&#34;
@@ -257,6 +258,27 @@ Output: false
             <span style="color:#66d9ef">if</span> (val_1 <span style="color:#f92672">==</span> val_2):
                 <span style="color:#66d9ef">return</span> True
         <span style="color:#66d9ef">return</span> False
+</code></pre></div><h3 id="solution-hashtable">Solution (hashtable)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isAnagram</span>(self, s: str, t: str) <span style="color:#f92672">-&gt;</span> bool:
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> s <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> t:
+            <span style="color:#66d9ef">return</span> True
+        <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">==</span> len(t) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> True
+
+        counter_s <span style="color:#f92672">=</span> Counter(list(s))
+
+        <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> t:
+            <span style="color:#66d9ef">if</span> c <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> counter_s:
+                <span style="color:#66d9ef">return</span> False
+            counter_s[c] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> counter_s[c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#66d9ef">del</span> counter_s[c]
+
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">not</span> bool(counter_s)
 </code></pre></div>
   </div>
 
