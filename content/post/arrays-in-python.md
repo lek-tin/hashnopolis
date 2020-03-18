@@ -49,3 +49,19 @@ s[:10:3]
 ### Clone a list
 
 `newArr = oldArr[:]`
+
+### Slicing
+
+```python
+>>> a = numpy.arange(3)
+>>> a
+array([0, 1, 2])
+>>> b = a[1:3]
+>>> b
+array([1, 2])
+What happens when we modify a and look again at b?
+
+>>> a[2] = 1001
+>>> b
+array([   1, 1001])
+```

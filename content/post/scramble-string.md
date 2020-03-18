@@ -2,7 +2,7 @@
 title: "Scramble String"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "dfs"]
 categories: ["algorithm"]
 date: 2020-03-15T04:42:35-07:00
 lastmod: 2020-03-15T04:42:35-07:00
@@ -65,6 +65,41 @@ Output: true
 ```
 Input: s1 = "abcde", s2 = "caebd"
 Output: false
+```
+
+### Solution (DFS with memoization)
+
+```python
+from collections import Counter
+
+class Solution:
+    def isScramble(self, s1: str, s2: str) -> bool:
+        if len(s1) == len(s2) == 0:
+            return True
+
+        return self.helper(s1, s2, {})
+
+    def helper(self, s1, s2, cache):
+        if( s1 == s2 ):
+            return True
+        if len(s1) <= 1:
+            return False
+        key = s1 + " " + s2
+        if key in cache:
+            return cache[key]
+
+        flag = False
+        N = len(s1)
+        for i in range(1, N):
+            if self.helper(s1[:i], s2[:i], cache) and self.helper(s1[i:], s2[i:], cache):
+                flag = True
+                break
+            if self.helper(s1[:i], s2[-i:], cache) and self.helper(s1[i:], s2[:-i], cache):
+                flag = True
+                break
+
+        cache[key] = flag
+        return flag
 ```
 
 ### Solution

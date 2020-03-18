@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "string"]
 categories: ["algorithm"]
 date: 2019-10-16T00:04:09-07:00
-lastmod: 2019-10-16T00:04:09-07:00
+lastmod: 2020-03-16T00:04:09-07:00
 draft: false
 archive: false
 ---
@@ -55,4 +55,52 @@ class Solution:
         ans = s[start:] + " " + ans
 
         return ans.strip()
+```
+
+### Solution (in-place)
+
+```python
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        self.reverseArray(array)
+
+        start = end = 0
+
+        while end < len(array):
+            while start > 0:
+                if end < len(array) and array[end] == array[end+1] == " ":
+                    end += 1
+                else:
+                    end += 1
+                    break
+            start = end
+            while end < len(array) and array[end] != " ":
+                end += 1
+
+            temp = [ object() for _ in range(10) ]
+            temp_1 = temp[:5]
+            temp_1[0] = object()
+
+            print(temp[0] == temp_1[0])
+            left, right = start, end-1
+            while left < right:
+                temp = array[right]
+                array[right] = array[left]
+                array[left] = temp
+
+                left += 1
+                right -= 1
+
+    def reverseArray(array):
+        left, right = 0, len(array)-1
+
+        while left < right:
+            temp = array[right]
+            array[right] = array[left]
+            array[left] = temp
+
+            left += 1
+            right -= 1
+
+        return array
 ```
