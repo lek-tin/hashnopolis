@@ -5,7 +5,7 @@
 
   
   <title>
-         | Hashnopolis
+        Remove Duplicate Letters | Hashnopolis
       </title>
 
     
@@ -16,20 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
-Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
-A partially filled sudoku which is valid.
-The Sudoku board could be partially filled, where empty cells are filled with the character &#39;." />
-  <meta name="keywords" content="" />
+  <meta name="description" content="Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+Example 1 Input: &amp;quot;bcabc&amp;quot; Output: &amp;quot;abc&amp;quot; Example 2 Input: &amp;quot;cbacdcbc&amp;quot; Output: &amp;quot;acdb&amp;quot; Example 3 Input: &amp;quot;cba&amp;quot; Output: &amp;quot;cba&amp;quot; Solution class Solution: def removeDuplicateLetters(self, s: str) -&amp;gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &amp;lt; stack[-1] and i &amp;lt; last_indices[stack[-1]]: seen." />
+  <meta name="keywords" content="leetcode greedy stack " />
   
   
     <meta name="twitter:card" content="summary" />
     
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:description" content="Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
-Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
-A partially filled sudoku which is valid.
-The Sudoku board could be partially filled, where empty cells are filled with the character &#39;." />
+    <meta name="twitter:title" content="Remove Duplicate Letters" />
+    <meta name="twitter:description" content="Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+Example 1 Input: &amp;quot;bcabc&amp;quot; Output: &amp;quot;abc&amp;quot; Example 2 Input: &amp;quot;cbacdcbc&amp;quot; Output: &amp;quot;acdb&amp;quot; Example 3 Input: &amp;quot;cba&amp;quot; Output: &amp;quot;cba&amp;quot; Solution class Solution: def removeDuplicateLetters(self, s: str) -&amp;gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &amp;lt; stack[-1] and i &amp;lt; last_indices[stack[-1]]: seen." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -39,7 +35,7 @@ The Sudoku board could be partially filled, where empty cells are filled with th
 <meta name="generator" content="Hugo 0.65.3" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/post/1/01/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/2020/03/remove-duplicate-letters/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -181,56 +177,49 @@ The Sudoku board could be partially filled, where empty cells are filled with th
         
         <span class="highlight">Tags:</span>
         
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
+        
+          "<a href="/tags/greedy"><strong>greedy</strong></a>",
+        
+          "<a href="/tags/stack"><strong>stack</strong></a>",
+        
         <i class="small material-icons">access_time</i> 1-min read
       </p>
-      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/valid-sudoku.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
-      <h1></h1>
-      <h4>Created: January 1, 0001 by </h4>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/remove-duplicate-letters.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Remove Duplicate Letters</h1>
+      <h4>Created: March 19, 2020 by [lek-tin]</h4>
+      
+        <h5>Last updated: March 19, 2020</h5>
       
       <hr />
-      <p>Determine if a <code>9x9</code> Sudoku board is valid. Only the filled cells need to be validated according to the following rules:</p>
-<p>Each row must contain the digits <code>1-9</code> without repetition.
-Each column must contain the digits <code>1-9</code> without repetition.
-Each of the 9 <code>3x3</code> sub-boxes of the grid must contain the digits <code>1-9</code> without repetition.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png" alt="Valid Sudoku">
-A partially filled sudoku which is valid.</p>
-<p>The Sudoku board could be partially filled, where empty cells are filled with the character <code>'.'</code>.</p>
+      <p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.</p>
 <h3 id="example-1">Example 1</h3>
-<pre><code>Input:
-[
-  [&quot;5&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],
-  [&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],
-  [&quot;.&quot;,&quot;9&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;],
-  [&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;3&quot;],
-  [&quot;4&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;],
-  [&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;],
-  [&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;8&quot;,&quot;.&quot;],
-  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;.&quot;,&quot;.&quot;,&quot;5&quot;],
-  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;9&quot;]
-]
-Output: true
+<pre><code>Input: &quot;bcabc&quot;
+Output: &quot;abc&quot;
 </code></pre><h3 id="example-2">Example 2</h3>
-<pre><code>Input:
-[
-  [&quot;8&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],
-  [&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],
-  [&quot;.&quot;,&quot;9&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;],
-  [&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;3&quot;],
-  [&quot;4&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;],
-  [&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;],
-  [&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;8&quot;,&quot;.&quot;],
-  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;.&quot;,&quot;.&quot;,&quot;5&quot;],
-  [&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;9&quot;]
-]
-Output: false
-Explanation: Same as Example 1, except with the 5 in the top left corner being 
-    modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
-</code></pre><h3 id="note">Note</h3>
-<ul>
-<li>A Sudoku board (partially filled) could be valid but is not necessarily solvable.</li>
-<li>Only the filled cells need to be validated according to the</li>
-</ul>
+<pre><code>Input: &quot;cbacdcbc&quot;
+Output: &quot;acdb&quot;
+</code></pre><h3 id="example-3">Example 3</h3>
+<pre><code>Input: &quot;cba&quot;
+Output: &quot;cba&quot;
+</code></pre><h3 id="solution">Solution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">removeDuplicateLetters</span>(self, s: str) <span style="color:#f92672">-&gt;</span> str:
+        stack <span style="color:#f92672">=</span> []
+        seen <span style="color:#f92672">=</span> set()
 
+        last_indices <span style="color:#f92672">=</span> {c: i <span style="color:#66d9ef">for</span> i, c <span style="color:#f92672">in</span> enumerate(s)}
+
+        <span style="color:#66d9ef">for</span> i, c <span style="color:#f92672">in</span> enumerate(s):
+            <span style="color:#66d9ef">print</span>(c, seen, stack)
+            <span style="color:#66d9ef">if</span> c <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> seen:
+                <span style="color:#66d9ef">while</span> stack <span style="color:#f92672">and</span> c <span style="color:#f92672">&lt;</span> stack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">and</span> i <span style="color:#f92672">&lt;</span> last_indices[stack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]:
+                    seen<span style="color:#f92672">.</span>remove(stack<span style="color:#f92672">.</span>pop())
+                seen<span style="color:#f92672">.</span>add(c)
+                stack<span style="color:#f92672">.</span>append(c)
+
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(stack)
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

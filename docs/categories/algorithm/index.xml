@@ -7,10 +7,66 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 16 Mar 2020 01:53:48 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2020 20:05:48 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Logger Rate Limiter</title>
+      <link>http://www.hashnopolis.com/post/2020/03/logger-rate-limiter/</link>
+      <pubDate>Sat, 21 Mar 2020 20:05:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/logger-rate-limiter/</guid>
+      <description>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
+Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.
+It is possible that several messages arrive roughly at the same time.
+Example Logger logger = new Logger(); // logging string &amp;quot;foo&amp;quot; at timestamp 1 logger.</description>
+    </item>
+    
+    <item>
+      <title>Design Hit Counter</title>
+      <link>http://www.hashnopolis.com/post/2020/03/design-hit-counter/</link>
+      <pubDate>Sat, 21 Mar 2020 19:18:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/design-hit-counter/</guid>
+      <description>Design a hit counter which counts the number of hits received in the past 5 minutes.
+Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.
+It is possible that several hits arrive roughly at the same time.
+Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</description>
+    </item>
+    
+    <item>
+      <title>Cut Wood</title>
+      <link>http://www.hashnopolis.com/post/2020/03/cut-wood/</link>
+      <pubDate>Fri, 20 Mar 2020 02:58:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/cut-wood/</guid>
+      <description>Given an int array wood representing the length of n pieces of wood and an int k. It is required to cut these pieces of wood such that more or equal to k pieces of the same length len are cut. What is the longest len you can get?
+Example 1 Input: wood = [5, 9, 7], k = 3 Output: 5 Explanation: 5 -&amp;gt; 5 9 -&amp;gt; 5 + 4 7 -&amp;gt; 5 + 2 Example 2 Input: wood = [5, 9, 7], k = 4 Output: 4 Explanation: 5 -&amp;gt; 4 + 1 9 -&amp;gt; 4 * 2 + 1 7 -&amp;gt; 4 + 3 Example 3 Input: wood = [1, 2, 3], k = 7 Output: 0 Explanation: We cannot make it.</description>
+    </item>
+    
+    <item>
+      <title>Remove Duplicate Letters</title>
+      <link>http://www.hashnopolis.com/post/2020/03/remove-duplicate-letters/</link>
+      <pubDate>Thu, 19 Mar 2020 03:16:26 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/remove-duplicate-letters/</guid>
+      <description>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+Example 1 Input: &amp;quot;bcabc&amp;quot; Output: &amp;quot;abc&amp;quot; Example 2 Input: &amp;quot;cbacdcbc&amp;quot; Output: &amp;quot;acdb&amp;quot; Example 3 Input: &amp;quot;cba&amp;quot; Output: &amp;quot;cba&amp;quot; Solution class Solution: def removeDuplicateLetters(self, s: str) -&amp;gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &amp;lt; stack[-1] and i &amp;lt; last_indices[stack[-1]]: seen.</description>
+    </item>
+    
+    <item>
+      <title>Valid Sudoku</title>
+      <link>http://www.hashnopolis.com/post/2020/03/valid-sudoku/</link>
+      <pubDate>Wed, 18 Mar 2020 00:27:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/2020/03/valid-sudoku/</guid>
+      <description>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+A partially filled sudoku which is valid.
+The Sudoku board could be partially filled, where empty cells are filled with the character &#39;.</description>
+    </item>
     
     <item>
       <title>Interval List Intersections</title>
@@ -1157,7 +1213,7 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 +
       
       <guid>http://www.hashnopolis.com/post/2019/09/maximum-product-subarray/</guid>
       <description>Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
-Example 1: Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6. Example 2: Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray. Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max( max(currMax * nums[i], currMin * nums[i]), nums[i] ) newCurrMin = min( min(currMax * nums[i], currMin * nums[i]), nums[i] ) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res </description>
+Example 1 Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6. Example 2 Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray. Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max( max(currMax * nums[i], currMin * nums[i]), nums[i] ) newCurrMin = min( min(currMax * nums[i], currMin * nums[i]), nums[i] ) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res Solution (need to return the subarray) class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = prevMin = prevMax = nums[0] maxPos = 0 minLens = [1 for _ in range(n)] maxLens = [1 for _ in range(n)] print(prevMin, prevMax) for i in range(1, n): num = nums[i] currMin, currMax = prevMin, prevMax if num &amp;gt; 0: if prevMax * num &amp;gt; num: currMax *= num maxLens[i] = maxLens[i-1] + 1 else: currMax = num if prevMin * num &amp;lt; num: currMin *= num minLens[i] = minLens[i-1] + 1 else: currMin = num else: if prevMin * num &amp;gt; num: currMax = prevMin * num maxLens[i] = minLens[i-1] + 1 else: currMax = num if prevMax * num &amp;lt; num: currMin = prevMax * num minLens[i] = maxLens[i-1] + 1 else: currMin = num prevMin, prevMax = currMin, currMax if prevMax &amp;gt; res: maxPos = i res = prevMax print(prevMin, prevMax) print(minLens) print(maxLens) maxLen = maxLens[maxPos] maxSubarr = nums[maxPos+1-maxLen:maxPos+1] print(maxSubarr) return res </description>
     </item>
     
     <item>
@@ -3190,7 +3246,7 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
       <guid>http://www.hashnopolis.com/post/2018/09/binary-tree-level-order-traversal/</guid>
       <description>Given a binary tree, return the level order traversal of its nodes&amp;rsquo; values. (ie, from left to right, level by level).
 Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7 return its level order traversal as:
-[ [3], [9,20], [15,7] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
+[ [3], [9,20], [15,7] ] Solution (recursion) # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
     </item>
     
     <item>
