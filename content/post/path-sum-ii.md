@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "dfs"]
 categories: ["algorithm"]
 date: 2019-11-30T01:51:33-08:00
-lastmod: 2019-11-30T01:51:33-08:00
+lastmod: 2020-03-20T01:51:33-08:00
 draft: false
 archive: false
 ---
@@ -33,6 +33,7 @@ Return:
 ```
 
 ### Solution
+
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
@@ -42,27 +43,22 @@ Return:
 #         self.right = None
 
 class Solution:
-    results = []
     def pathSum(self, root: TreeNode, sum: int) -> List[List[int]]:
-        self.dfs(root, 0, sum, [])
-        # return the global results
+        self.results = []
+        self.dfs(root, [], sum)
         return self.results
 
-    def dfs(self, root, partial, sum, result):
-        # root is null, return
+    def dfs(self, root, partial, remain):
         if not root:
             return
-        # Update partial and result
-        partial += root.val
-        newResult = list(result+[root.val])
 
-        # sum found
-        if partial == sum and root.left is None and root.right is None:
-            self.results.append(newResult)
-        # go to left child node if it exists
-        if root.left:
-            self.dfs(root.left, partial, sum, newResult)
-        # go to right child node if it exists
-        if root.right:
-            self.dfs(root.right, partial, sum, newResult)
+        partial.append(root.val)
+
+        if remain == root.val and not root.left and not root.right:
+            self.results.append(partial[:])
+        else:
+            self.dfs(root.left, partial, remain-root.val)
+            self.dfs(root.right, partial, remain-root.val)
+
+        partial.pop()
 ```

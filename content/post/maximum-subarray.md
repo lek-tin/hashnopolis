@@ -60,6 +60,29 @@ class Solution:
 ```
 ![Prefix Sum Maximum Subarray](/img/post/prefix-sum-maximum-subarray.jpeg)
 
+Need to return the max subarray
+```python
+import math
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        preSums, minSum, maxSum = 0, 0, -math.inf
+
+        start, left, right = 0, 0, 0
+
+        for i, num in enumerate(nums):
+            preSums += num
+            if maxSum < preSums:
+                maxSum = preSums
+                left = start
+                right = i
+            if preSums < 0:
+                preSums = 0
+                start = i+1
+
+        return nums[left:right+1]
+```
+
 ### Solution (Kadane's Algorithm)
 
 ![kadane's algorithm example](/img/post/kadanes-algorithm-example.png)
