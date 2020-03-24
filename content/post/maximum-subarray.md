@@ -20,8 +20,8 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 ### Follow up:
 If you have figured out the `O(n)` solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
-### Solution:
-Dynamic Programming
+### Solution (Dynamic Programming)
+
 ```java
 class Solution {
     public int maxSubArray(int[] nums) {
@@ -41,7 +41,9 @@ class Solution {
     }
 }
 ```
-prefix sum
+
+### Solution (prefix sum)
+
 ```python
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
@@ -60,7 +62,8 @@ class Solution:
 ```
 ![Prefix Sum Maximum Subarray](/img/post/prefix-sum-maximum-subarray.jpeg)
 
-Need to return the max subarray
+Need to return the max subarray  
+
 ```python
 import math
 

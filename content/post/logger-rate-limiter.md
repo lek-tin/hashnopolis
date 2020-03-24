@@ -2,7 +2,7 @@
 title: "Logger Rate Limiter"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "hashtable", "deque"]
+tags: ["leetcode", "ood", "deque", "sliding-window", "hashtable"]
 categories: ["algorithm"]
 date: 2020-03-21T20:05:48-07:00
 lastmod: 2020-03-21T20:05:48-07:00

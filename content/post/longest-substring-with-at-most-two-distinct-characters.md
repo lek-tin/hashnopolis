@@ -53,4 +53,4 @@ class Solution {
 ```
 
 ### Related
-[Longest Substring With at Most K Distinct Characters](/post/2019/03/longest-substring-with-at-most-k-distinct-characters/)
+[Longest Substring With at Most K Distinct Characters](/post/longest-substring-with-at-most-k-distinct-characters/)

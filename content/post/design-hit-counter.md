@@ -2,7 +2,7 @@
 title: "Design Hit Counter"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "ood", "deque"]
+tags: ["leetcode", "ood", "deque", "sliding-window"]
 categories: ["algorithm"]
 date: 2020-03-21T19:18:12-07:00
 lastmod: 2020-03-21T19:18:12-07:00
@@ -41,10 +41,6 @@ counter.getHits(300);
 // get hits at timestamp 301, should return 3.
 counter.getHits(301);
 ```
-
-### Follow up
-
-What if the number of hits per second could be very large? Does your design scale?
 
 ### Solution
 
@@ -133,4 +129,57 @@ class HitCounter:
 # obj = HitCounter()
 # obj.hit(timestamp)
 # param_2 = obj.getHits(timestamp)
+```
+
+#### Follow up
+
+What if the number of hits per second could be very large? Does your design scale?
+
+### Solution (scalable)
+
+```java
+public class HitCounter {
+
+    private int[] times;
+    private int[] hits;
+
+    /** Initialize your data structure here. */
+    public HitCounter() {
+        times = new int[300];
+        hits = new int[300];
+    }
+
+    /** Record a hit.
+    ** @param timestamp - The current timestamp (in seconds granularity).
+    */
+    public void hit(int timestamp) {
+        int index = timestamp % 300;
+        if (times[index] != timestamp) {
+            times[index] = timestamp;
+            hits[index] = 1;
+        } else {
+            hits[index]++;
+        }
+    }
+
+    /** Return the number of hits in the past 5 minutes.
+    **  @param timestamp - The current timestamp (in seconds granularity).
+    */
+    public int getHits(int timestamp) {
+        int total = 0;
+        for (int i = 0; i < 300; i++) {
+            if (timestamp - times[i] < 300) {
+                total += hits[i];
+            }
+        }
+        return total;
+    }
+}
+
+/**
+ * Your HitCounter object will be instantiated and called as such:
+ * HitCounter obj = new HitCounter();
+ * obj.hit(timestamp);
+ * int param_2 = obj.getHits(timestamp);
+ */
 ```

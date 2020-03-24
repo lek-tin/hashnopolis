@@ -39,8 +39,9 @@ wordList = ["hot","dot","dog","lot","log"]
 Output: 0
 ```
 **Explanation** The endWord "cog" is not in wordList, therefore no possible transformation.
-### Solution
-BFS
+### Solution (BFS)
+
+version 1
 ```python
 # time: o(26^(L/2)), L is the length of the word
 class Solution:
@@ -91,7 +92,8 @@ class Solution:
 
         return 0
 ```
-BFS 2
+
+version 2
 ```python
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
