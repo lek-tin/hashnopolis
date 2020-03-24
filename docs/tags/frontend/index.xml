@@ -14,10 +14,10 @@
     
     <item>
       <title>Conditional Render in React</title>
-      <link>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</link>
+      <link>http://www.hashnopolis.com/post/conditional-render-in-react/</link>
       <pubDate>Tue, 28 Aug 2018 23:31:12 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</guid>
+      <guid>http://www.hashnopolis.com/post/conditional-render-in-react/</guid>
       <description>In react, sometimes we need to render a component based on some flag, for example, we need to display a different set of information to the admin users than the normal users. We have a prop called isAdmin
 render () { const { isAdmin } = this.props return ( &amp;lt;div&amp;gt; { isAdmin ? &amp;lt;CustomeComponent {...propSetA} / &amp;gt; : &amp;lt;CustomeComponent {...propSetB} / &amp;gt; } &amp;lt;/div&amp;gt; ) } Looks good right, but there is one problem.</description>
     </item>

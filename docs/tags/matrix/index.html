@@ -176,7 +176,7 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/valid-sudoku/">Valid Sudoku</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/valid-sudoku/">Valid Sudoku</a></h2>
 
       <p>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
 Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
@@ -204,7 +204,7 @@ The Sudoku board could be partially filled, where empty cells are filled with th
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/09/minimum-path-sum/">Minimum Path Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/minimum-path-sum/">Minimum Path Sum</a></h2>
 
       <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
 Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution 1 (DP with n extra space) class Solution: def minPathSum(self, grid: List[List[int]]) -&gt; int: m = len(grid) n = len(grid[0]) if m == 0 or n == 0: return 0 sums = [[0 for _ in range(n)] for _ in range(m)] sums[0][0] = grid[0][0] for i in range(1, m): sums[i][0] = sums[i-1][0] &#43; grid[i][0] for i in range(1, n): sums[0][i] = sums[0][i-1] &#43; grid[0][i] for i in range(1, m): for j in range(1, n): sums[i][j] = min(sums[i-1][j], sums[i][j-1]) &#43; grid[i][j] return sums[-1][-1] Solution 2 (DP with no extra space) class Solution: def minPathSum(self, grid): &#34;&#34;&#34; :type grid: List[List[int]] :rtype: int &#34;&#34;&#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</p>
@@ -230,7 +230,7 @@ Note You can only move either down or right at any point in time. Example Input:
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/maximum-path-sum/">Maximum Path Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-path-sum/">Maximum Path Sum</a></h2>
 
       <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
 Note: You can only move either down or right at any point in time.
@@ -257,7 +257,7 @@ Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/spiral-matrix/">Spiral Matrix</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/spiral-matrix/">Spiral Matrix</a></h2>
 
       <p>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
 Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5] Example 2: Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7] Solution: class Solution { public List&lt;Integer&gt; spiralOrder(int[][] matrix) { if (matrix == null || matrix.</p>
@@ -283,7 +283,7 @@ Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/maximal-square/">Maximal Square</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximal-square/">Maximal Square</a></h2>
 
       <p>Given a 2D binary matrix filled with 0&#39;s and 1&#39;s, find the largest square containing only 1&#39;s and return its area.
 Example Input: 1 0 1 0 0 1 0 **1** **1** 1 1 1 **1** **1** 1 1 0 0 1 0 Output: 4 Solution class Solution: def maximalSquare(self, matrix): &#34;&#34;&#34; :type matrix: List[List[str]] :rtype: int &#34;&#34;&#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &#34;1&#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &#34;1&#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &#34;0&#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin &#43; 1 if matrix[i][j] &gt; area: area = matrix[i][j] return area**2 class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</p>
@@ -309,7 +309,7 @@ Example Input: 1 0 1 0 0 1 0 **1** **1** 1 1 1 **1** **1** 1 1 0 0 1 0 Output: 4
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/10/search-a-2d-matrix/">Search a 2D Matrix</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/search-a-2d-matrix/">Search a 2D Matrix</a></h2>
 
       <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
  Integers in each row are sorted from left to right. The first integer of each row is greater than the last integer of the previous row.  Example 1 Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 3 Output: true Example 2 Input: matrix = [ [1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50] ] target = 13 Output: false Solution # Treat the 2-d matrix as a 1-d list of length rows * cols.</p>

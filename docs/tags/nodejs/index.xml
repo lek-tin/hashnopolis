@@ -14,10 +14,10 @@
     
     <item>
       <title>Playing with Node.js Event Loop</title>
-      <link>http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/</link>
+      <link>http://www.hashnopolis.com/post/playing-with-node.js-event-loop/</link>
       <pubDate>Thu, 04 Apr 2019 09:37:24 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/</guid>
+      <guid>http://www.hashnopolis.com/post/playing-with-node.js-event-loop/</guid>
       <description>setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
 process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
 function cb(msg){ console.log(msg); } setImmediate(cb, &amp;#39;setImmediate&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 1&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 2&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 3&amp;#39;); console.log(&amp;#39;Processed in the first iteration&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 4&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 5&amp;#39;); Output:

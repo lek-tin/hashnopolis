@@ -176,7 +176,59 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/split-array-into-consecutive-subsequences/">Split Array Into Consecutive Subsequences</a></h2>
+
+      <p>Given an array nums sorted in ascending order, return true if and only if you can split it into 1 or more subsequences such that each subsequence consists of consecutive integers and has length at least 3.
+Example 1 Input: [1,2,3,3,4,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3 3, 4, 5 Example 2 Input: [1,2,3,3,4,4,5,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3, 4, 5 3, 4, 5 Example 3 Input: [1,2,3,4,4,5] Output: False Constraints  1 &lt;= nums.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/validate-stack-sequence/">Validate Stack Sequence</a></h2>
+
+      <p>Given two sequences pushed and popped with distinct values, return true if and only if this could have been the result of a sequence of push and pop operations on an initially empty stack.
+Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explanation: We might do the following sequence: push(1), push(2), push(3), push(4), pop() -&gt; 4, push(5), pop() -&gt; 5, pop() -&gt; 3, pop() -&gt; 2, pop() -&gt; 1 Example 2 Input: pushed = [1,2,3,4,5], popped = [4,3,5,1,2] Output: false Explanation: 1 cannot be popped before 2.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
 
       <p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
 Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cbacdcbc&#34; Output: &#34;acdb&#34; Example 3 Input: &#34;cba&#34; Output: &#34;cba&#34; Solution class Solution: def removeDuplicateLetters(self, s: str) -&gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &lt; stack[-1] and i &lt; last_indices[stack[-1]]: seen.</p>
@@ -202,7 +254,7 @@ Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cba
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/candy/">Candy</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/candy/">Candy</a></h2>
 
       <p>There are N children standing in a line. Each child is assigned a rating value.
 You are giving candies to these children subjected to the following requirements:
@@ -229,7 +281,7 @@ You are giving candies to these children subjected to the following requirements
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/bag-of-tokens/">Bag of Tokens</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/bag-of-tokens/">Bag of Tokens</a></h2>
 
       <p>You have an initial power P, an initial score of 0 points, and a bag of tokens.
 Each token can be used at most once, has a value token[i], and has potentially two ways to use it.
@@ -256,7 +308,7 @@ Each token can be used at most once, has a value token[i], and has potentially t
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/partition-labels/">Partition Labels</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/partition-labels/">Partition Labels</a></h2>
 
       <p>A string S of lowercase letters is given. We want to partition this string into as many parts as possible so that each letter appears in at most one part, and return a list of integers representing the size of these parts.
 Example 1 Input: S = &#34;ababcbacadefegdehijhklij&#34; Output: [9,7,8] Explanation: The partition is &#34;ababcbaca&#34;, &#34;defegde&#34;, &#34;hijhklij&#34;. This is a partition so that each letter appears in at most one part.</p>
@@ -282,7 +334,7 @@ Example 1 Input: S = &#34;ababcbacadefegdehijhklij&#34; Output: [9,7,8] Explanat
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/minimum-cost-to-connect-sticks/">Minimum Cost to Connect Sticks</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/minimum-cost-to-connect-sticks/">Minimum Cost to Connect Sticks</a></h2>
 
       <p>Given n sticks of different lengths, we need to connect these sticks into one stick. We can connect only 2 sticks at a time. The cost required to connect 2 sticks is equal to sum of their lengths. The length of this connected stick is also equal to the sum of their lengths. This process is repeated until n sticks are connected into a single stick. Find the min possible cost required to connect all sticks.</p>
 
@@ -307,7 +359,7 @@ Example 1 Input: S = &#34;ababcbacadefegdehijhklij&#34; Output: [9,7,8] Explanat
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/maximum-swap/">Maximum Swap</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-swap/">Maximum Swap</a></h2>
 
       <p>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
 Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2: Input: 9973 Output: 9973 Explanation: No swap. Note:  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&#34;0&#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &gt; int(ord(numChars[i])-ord(&#34;0&#34;)): if last[j] &gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&#34;&#34;.</p>
@@ -333,7 +385,7 @@ Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the numbe
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/campus-bikes/">Campus Bikes</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/campus-bikes/">Campus Bikes</a></h2>
 
       <p>On a campus represented as a 2D grid, there are N workers and M bikes, with N &lt;= M. Each worker and bike is a 2D coordinate on this grid.
 Our goal is to assign a bike to each worker. Among the available bikes and workers, we choose the (worker, bike) pair with the shortest Manhattan distance between each other, and assign the bike to that worker. (If there are multiple (worker, bike) pairs with the same shortest Manhattan distance, we choose the pair with the smallest worker index; if there are multiple ways to do that, we choose the pair with the smallest bike index).</p>
@@ -359,7 +411,7 @@ Our goal is to assign a bike to each worker. Among the available bikes and worke
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/task-scheduler/">Task Scheduler</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/task-scheduler/">Task Scheduler</a></h2>
 
       <p>Given a char array representing tasks CPU need to do. It contains capital letters A to Z where different letters represent different tasks.Tasks could be done without original order. Each task could be done in one interval. For each interval, CPU could finish one task or just be idle.
 However, there is a non-negative cooling interval n that means between two same tasks, there must be at least n intervals that CPU are doing different tasks or just be idle.</p>
@@ -382,34 +434,17 @@ However, there is a non-negative cooling interval n that means between two same 
 
 </article>
       
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/">Best Time to Buy and Sell Stock II</a></h2>
-
-      <p>Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
-Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
     
+    
+      <footer class="list-footer">
+        <nav class="pagination">
+        
+        
+        
+          <a class="pagination-next" href="/tags/greedy/page/2/">Older Posts →</a>
+        
+        </nav>
+      </footer>
     
   </div>
   

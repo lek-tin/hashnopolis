@@ -14,10 +14,10 @@
     
     <item>
       <title>Playing with Node.js Event Loop</title>
-      <link>http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/</link>
+      <link>http://www.hashnopolis.com/post/playing-with-node.js-event-loop/</link>
       <pubDate>Thu, 04 Apr 2019 09:37:24 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/04/playing-with-node.js-event-loop/</guid>
+      <guid>http://www.hashnopolis.com/post/playing-with-node.js-event-loop/</guid>
       <description>setImmediate/clearImmediate - will execute code at the end of the current event loop cycle
 process.nextTick - used to schedule a callback function to be invoked in the next iteration of the Event Loop
 function cb(msg){ console.log(msg); } setImmediate(cb, &amp;#39;setImmediate&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 1&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 2&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 3&amp;#39;); console.log(&amp;#39;Processed in the first iteration&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 4&amp;#39;); process.nextTick(cb, &amp;#39;process.nextTick: 5&amp;#39;); Output:
@@ -26,10 +26,10 @@ Processed in the first iteration process.nextTick: 1 process.nextTick: 2 process
     
     <item>
       <title>Conditional Render in React</title>
-      <link>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</link>
+      <link>http://www.hashnopolis.com/post/conditional-render-in-react/</link>
       <pubDate>Tue, 28 Aug 2018 23:31:12 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/08/conditional-render-in-react/</guid>
+      <guid>http://www.hashnopolis.com/post/conditional-render-in-react/</guid>
       <description>In react, sometimes we need to render a component based on some flag, for example, we need to display a different set of information to the admin users than the normal users. We have a prop called isAdmin
 render () { const { isAdmin } = this.props return ( &amp;lt;div&amp;gt; { isAdmin ? &amp;lt;CustomeComponent {...propSetA} / &amp;gt; : &amp;lt;CustomeComponent {...propSetB} / &amp;gt; } &amp;lt;/div&amp;gt; ) } Looks good right, but there is one problem.</description>
     </item>

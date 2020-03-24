@@ -176,7 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/validate-stack-sequence/">Validate Stack Sequence</a></h2>
+
+      <p>Given two sequences pushed and popped with distinct values, return true if and only if this could have been the result of a sequence of push and pop operations on an initially empty stack.
+Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explanation: We might do the following sequence: push(1), push(2), push(3), push(4), pop() -&gt; 4, push(5), pop() -&gt; 5, pop() -&gt; 3, pop() -&gt; 2, pop() -&gt; 1 Example 2 Input: pushed = [1,2,3,4,5], popped = [4,3,5,1,2] Output: false Explanation: 1 cannot be popped before 2.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
 
       <p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
 Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cbacdcbc&#34; Output: &#34;acdb&#34; Example 3 Input: &#34;cba&#34; Output: &#34;cba&#34; Solution class Solution: def removeDuplicateLetters(self, s: str) -&gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &lt; stack[-1] and i &lt; last_indices[stack[-1]]: seen.</p>
@@ -202,7 +228,7 @@ Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cba
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/evaluate-reverse-polish-notation/">Evaluate Reverse Polish Notation</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/evaluate-reverse-polish-notation/">Evaluate Reverse Polish Notation</a></h2>
 
       <p>Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 Valid operators are &#43;, -, *, /. Each operand may be an integer or another expression.
@@ -229,7 +255,7 @@ Note  Division between two integers should truncate toward zero. The given RPN e
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/daily-temperatures/">Daily Temperatures</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/daily-temperatures/">Daily Temperatures</a></h2>
 
       <p>Given a list of daily temperatures T, return a list such that, for each day in the input, tells you how many days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put 0 instead.
 For example, given the list of temperatures T = [73, 74, 75, 71, 69, 72, 76, 73], your output should be [1, 1, 4, 2, 1, 1, 0, 0].</p>
@@ -255,7 +281,7 @@ For example, given the list of temperatures T = [73, 74, 75, 71, 69, 72, 76, 73]
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/01/minimum-remove-to-make-valid-parentheses/">Minimum Remove to Make Valid Parentheses</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/minimum-remove-to-make-valid-parentheses/">Minimum Remove to Make Valid Parentheses</a></h2>
 
       <p>Given a string s of &#39;(&#39; , &#39;)&#39; and lowercase English characters.
 Your task is to remove the minimum number of parentheses ( &#39;(&#39; or &#39;)&#39;, in any positions ) so that the resulting parentheses string is valid and return any valid string.
@@ -283,7 +309,7 @@ Formally, a parentheses string is valid if and only if:
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/11/longest-valid-parentheses/">Longest Valid Parentheses</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/longest-valid-parentheses/">Longest Valid Parentheses</a></h2>
 
       <p>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
 Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parentheses substring is &#34;()&#34; Example 2: Input: &#34;)()())&#34; Output: 4 Explanation: The longest valid parentheses substring is &#34;()()&#34; Solution Dynamic programming
@@ -310,7 +336,7 @@ Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parenth
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/prefix-postfix-conversion/">Prefix Postfix Conversion</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/prefix-postfix-conversion/">Prefix Postfix Conversion</a></h2>
 
       <p>Prefix : An expression is called the prefix expression if the operator appears in the expression before the operands. Simply of the form (operator operand1 operand2). Example : *&#43;AB-CD (Infix : (A&#43;B) * (C-D) )
 Postfix: An expression is called the postfix expression if the operator appears in the expression after the operands. Simply of the form (operand1 operand2 operator). Example : AB&#43;CD-* (Infix : (A&#43;B * (C-D) )
@@ -337,7 +363,7 @@ Given a Prefix expression, convert it into a Postfix expression.</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/08/inorder-successor-in-bst/">Inorder Successor in BST</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/inorder-successor-in-bst/">Inorder Successor in BST</a></h2>
 
       <p>Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
 The successor of a node p is the node with the smallest key greater than p.val.
@@ -364,7 +390,7 @@ Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/max-stack/">Max Stack</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/max-stack/">Max Stack</a></h2>
 
       <p>Design a max stack that supports push, pop, top, peekMax and popMax.
  push(x) – Push element x onto stack. pop() – Remove the element on top of the stack and return it. top() – Get the element on the top. peekMax() – Retrieve the maximum element in the stack. popMax() – Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.</p>
@@ -390,7 +416,7 @@ Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/03/maximum-frequency-stack/">Maximum Frequency Stack</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-frequency-stack/">Maximum Frequency Stack</a></h2>
 
       <p>Implement FreqStack, a class which simulates the operation of a stack-like data structure.
 FreqStack has two functions:
@@ -407,34 +433,6 @@ FreqStack has two functions:
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/02/largest-rectangle-in-histogram/">Largest Rectangle in Histogram</a></h2>
-
-      <p>Given n non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
-Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
-The largest rectangle is shown in the shaded area, which has area = 10 unit.
-Example: Input: [2,1,5,6,2,3] Output: 10 Solution: Push height into the stack in ascending order. When we encounter a height that is shorter than te top of the stack, we start to calculate area by popping heights out of the stack.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

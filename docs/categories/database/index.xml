@@ -14,20 +14,20 @@
     
     <item>
       <title>Department Highest Salary</title>
-      <link>http://www.hashnopolis.com/post/2020/03/department-highest-salary/</link>
+      <link>http://www.hashnopolis.com/post/department-highest-salary/</link>
       <pubDate>Tue, 03 Mar 2020 23:58:39 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/03/department-highest-salary/</guid>
+      <guid>http://www.hashnopolis.com/post/department-highest-salary/</guid>
       <description>The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
 +----+-------+--------+--------------+ | Id | Name | Salary | DepartmentId | +----+-------+--------+--------------+ | 1 | Joe | 70000 | 1 | | 2 | Jim | 90000 | 1 | | 3 | Henry | 80000 | 2 | | 4 | Sam | 60000 | 2 | | 5 | Max | 90000 | 1 | +----+-------+--------+--------------+ The Department table holds all departments of the company.</description>
     </item>
     
     <item>
       <title>Second Highest Salary</title>
-      <link>http://www.hashnopolis.com/post/2020/03/second-highest-salary/</link>
+      <link>http://www.hashnopolis.com/post/second-highest-salary/</link>
       <pubDate>Tue, 03 Mar 2020 03:37:24 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/03/second-highest-salary/</guid>
+      <guid>http://www.hashnopolis.com/post/second-highest-salary/</guid>
       <description>Write a SQL query to get the second highest salary from the Employee table.
 +----+--------+ | Id | Salary | +----+--------+ | 1 | 100 | | 2 | 200 | | 3 | 300 | +----+--------+ For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
 +---------------------+ | SecondHighestSalary | +---------------------+ | 200 | +---------------------+ Solution (naive) SELECT max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SELECT max(Salary) FROM Employee) Solution This solution considers when second highest salary doesn&amp;rsquo;t exist</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>Top Useful Sql Templates</title>
-      <link>http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/</link>
+      <link>http://www.hashnopolis.com/post/top-useful-sql-templates/</link>
       <pubDate>Mon, 15 Jul 2019 15:38:32 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/07/top-useful-sql-templates/</guid>
+      <guid>http://www.hashnopolis.com/post/top-useful-sql-templates/</guid>
       <description>In this post, we introduce the most useful SQL template statements.
 Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &amp;gt; 1) This is significantly more efficient than using EXISTS
 Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&amp;gt;18).
@@ -47,19 +47,19 @@ Select duplicate rows based on column SELECT TOP 1 C1.</description>
     
     <item>
       <title>Employees Earning More Than Their Managers</title>
-      <link>http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/</link>
+      <link>http://www.hashnopolis.com/post/employees-earning-more-than-their-managers/</link>
       <pubDate>Wed, 12 Sep 2018 23:57:13 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/09/employees-earning-more-than-their-managers/</guid>
+      <guid>http://www.hashnopolis.com/post/employees-earning-more-than-their-managers/</guid>
       <description># SQL Schema: Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int) Truncate table Employee insert into Employee (Id, Name, Salary, ManagerId) values (&#39;1&#39;, &#39;Joe&#39;, &#39;70000&#39;, &#39;3&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;2&#39;, &#39;Henry&#39;, &#39;80000&#39;, &#39;4&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;3&#39;, &#39;Sam&#39;, &#39;60000&#39;, &#39;None&#39;) insert into Employee (Id, Name, Salary, ManagerId) values (&#39;4&#39;, &#39;Max&#39;, &#39;90000&#39;, &#39;None&#39;) The Employee table holds all employees including their managers.</description>
     </item>
     
     <item>
       <title>Duplicate Emails</title>
-      <link>http://www.hashnopolis.com/post/2018/09/duplicate-emails/</link>
+      <link>http://www.hashnopolis.com/post/duplicate-emails/</link>
       <pubDate>Wed, 12 Sep 2018 23:55:39 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/09/duplicate-emails/</guid>
+      <guid>http://www.hashnopolis.com/post/duplicate-emails/</guid>
       <description>Write a SQL query to find all duplicate emails in a table named Person.
 +----+---------+ | Id | Email | +----+---------+ | 1 | a@b.com | | 2 | c@d.com | | 3 | a@b.com | +----+---------+ For example, your query should return the following for the above table:
 +---------+ | Email | +---------+ | a@b.com | +---------+ Note: All emails are in lowercase.
@@ -68,10 +68,10 @@ Solution # Write your MySQL query statement below SELECT email FROM Person WHERE
     
     <item>
       <title>Combine Two Tables</title>
-      <link>http://www.hashnopolis.com/post/2018/09/combine-two-tables/</link>
+      <link>http://www.hashnopolis.com/post/combine-two-tables/</link>
       <pubDate>Mon, 10 Sep 2018 21:40:30 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/09/combine-two-tables/</guid>
+      <guid>http://www.hashnopolis.com/post/combine-two-tables/</guid>
       <description>Table: Person
 +-------------+---------+ | Column Name | Type | +-------------+---------+ | PersonId | int | | FirstName | varchar | | LastName | varchar | +-------------+---------+ PersonId is the primary key column for this table. Table: Address
 +-------------+---------+ | Column Name | Type | +-------------+---------+ | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | +-------------+---------+ AddressId is the primary key column for this table.</description>

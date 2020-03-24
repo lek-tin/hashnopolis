@@ -176,12 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/logger-rate-limiter/">Logger Rate Limiter</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/flatten-a-multilevel-doubly-linked-list/">Flatten a Multilevel Doubly Linked List</a></h2>
 
-      <p>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
-Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.
-It is possible that several messages arrive roughly at the same time.
-Example Logger logger = new Logger(); // logging string &#34;foo&#34; at timestamp 1 logger.</p>
+      <p>You are given a doubly linked list which in addition to the next and previous pointers, it could have a child pointer, which may or may not point to a separate doubly linked list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in the example below.
+Flatten the list so that all the nodes appear in a single-level, doubly linked list.</p>
 
       <p class="meta">
         
@@ -204,12 +202,9 @@ Example Logger logger = new Logger(); // logging string &#34;foo&#34; at timesta
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/design-hit-counter/">Design Hit Counter</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/optimal-account-balancing/">Optimal Account Balancing</a></h2>
 
-      <p>Design a hit counter which counts the number of hits received in the past 5 minutes.
-Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.
-It is possible that several hits arrive roughly at the same time.
-Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</p>
+      <p>A group of friends went on holiday and sometimes lent each other money. For example, Alice paid for Bill’s lunch for $10. Then later Chris gave Alice $5 for a taxi ride. We can model each transaction as a tuple (x, y, z) which means person x gave person y $z. Assuming Alice, Bill, and Chris are person 0, 1, and 2 respectively (0, 1, 2 are the person’s ID), the transactions can be represented as [[0, 1, 10], [2, 0, 5]].</p>
 
       <p class="meta">
         
@@ -232,10 +227,10 @@ Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/cut-wood/">Cut Wood</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/split-array-into-consecutive-subsequences/">Split Array Into Consecutive Subsequences</a></h2>
 
-      <p>Given an int array wood representing the length of n pieces of wood and an int k. It is required to cut these pieces of wood such that more or equal to k pieces of the same length len are cut. What is the longest len you can get?
-Example 1 Input: wood = [5, 9, 7], k = 3 Output: 5 Explanation: 5 -&gt; 5 9 -&gt; 5 &#43; 4 7 -&gt; 5 &#43; 2 Example 2 Input: wood = [5, 9, 7], k = 4 Output: 4 Explanation: 5 -&gt; 4 &#43; 1 9 -&gt; 4 * 2 &#43; 1 7 -&gt; 4 &#43; 3 Example 3 Input: wood = [1, 2, 3], k = 7 Output: 0 Explanation: We cannot make it.</p>
+      <p>Given an array nums sorted in ascending order, return true if and only if you can split it into 1 or more subsequences such that each subsequence consists of consecutive integers and has length at least 3.
+Example 1 Input: [1,2,3,3,4,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3 3, 4, 5 Example 2 Input: [1,2,3,3,4,4,5,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3, 4, 5 3, 4, 5 Example 3 Input: [1,2,3,4,4,5] Output: False Constraints  1 &lt;= nums.</p>
 
       <p class="meta">
         
@@ -258,10 +253,36 @@ Example 1 Input: wood = [5, 9, 7], k = 3 Output: 5 Explanation: 5 -&gt; 5 9 -&gt
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/expressive-words/">Expressive Words</a></h2>
 
-      <p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
-Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cbacdcbc&#34; Output: &#34;acdb&#34; Example 3 Input: &#34;cba&#34; Output: &#34;cba&#34; Solution class Solution: def removeDuplicateLetters(self, s: str) -&gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &lt; stack[-1] and i &lt; last_indices[stack[-1]]: seen.</p>
+      <p>Sometimes people repeat letters to represent extra feeling, such as “hello” -&gt; “heeellooo”, “hi” -&gt; “hiiii”. In these strings like “heeellooo”, we have groups of adjacent letters that are all the same: “h”, “eee”, “ll”, “ooo”.
+For some given string S, a query word is stretchy if it can be made to be equal to S by any number of applications of the following extension operation: choose a group consisting of characters c, and add some number of characters c to the group so that the size of the group is 3 or more.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/validate-stack-sequence/">Validate Stack Sequence</a></h2>
+
+      <p>Given two sequences pushed and popped with distinct values, return true if and only if this could have been the result of a sequence of push and pop operations on an initially empty stack.
+Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explanation: We might do the following sequence: push(1), push(2), push(3), push(4), pop() -&gt; 4, push(5), pop() -&gt; 5, pop() -&gt; 3, pop() -&gt; 2, pop() -&gt; 1 Example 2 Input: pushed = [1,2,3,4,5], popped = [4,3,5,1,2] Output: false Explanation: 1 cannot be popped before 2.</p>
 
       <p class="meta">
         
@@ -284,94 +305,12 @@ Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cba
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/valid-sudoku/">Valid Sudoku</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/delete-nodes-and-return-forest/">Delete Nodes and Return Forest</a></h2>
 
-      <p>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
-Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
-A partially filled sudoku which is valid.
-The Sudoku board could be partially filled, where empty cells are filled with the character &#39;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/interval-list-intersections/">Interval List Intersections</a></h2>
-
-      <p>Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.
-Return the intersection of these two interval lists.
-(Formally, a closed interval [a, b] (with a &lt;= b) denotes the set of real numbers x with a &lt;= x &lt;= b. The intersection of two closed intervals is a set of real numbers that is either empty, or can be represented as a closed interval.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/scramble-string/">Scramble String</a></h2>
-
-      <p>Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
-Below is one possible representation of s1 = &#34;great&#34;:
- great / \ gr eat / \ / \ g r e at / \ a t To scramble the string, we may choose any non-leaf node and swap its two children.
-For example, if we choose the node &#34;gr&#34; and swap its two children, it produces a scrambled string &#34;rgeat&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/palindrome-partitioning-ii/">Palindrome Partitioning Ii</a></h2>
-
-      <p>Given a string s, partition s such that every substring of the partition is a palindrome.
-Return the minimum cuts needed for a palindrome partitioning of s.
-Example Input: &#34;aab&#34; Output: 1 Explanation: The palindrome partitioning [&#34;aa&#34;,&#34;b&#34;] could be produced using 1 cut. Solution (DP) class Solution: def minCut(self, s: str) -&gt; int: N = len(s) # valid[i][j] = True if s[i~j] IS palindrome, or False if IS NOT palindrome valid = [ [True for _ in range(N)] for _ in range(N) ] # min cuts of s[0~i] dp = [N for _ in range(N)] for l in range(2, N&#43;1): for i in range(N-l&#43;1): j = i&#43;l-1 valid[i][j] = s[i]==s[j] and valid[i&#43;1][j-1] for i in range(N): if valid[0][i]: # no cuts needed dp[i] = 0 continue for j in range(i): if valid[j&#43;1][i]: #.</p>
+      <p>Given the root of a binary tree, each node in the tree has a distinct value.
+After deleting all nodes with a value in to_delete, we are left with a forest (a disjoint union of trees).
+Return the roots of the trees in the remaining forest. You may return the result in any order.
+Example 1 Input: root = [1,2,3,4,5,6,7], to_delete = [3,5] Output: [[1,2,null,4],[6],[7]] Constraints 1 The number of nodes in the given tree is at most 1000.</p>
 
       <p class="meta">
         
@@ -394,10 +333,67 @@ Example Input: &#34;aab&#34; Output: 1 Explanation: The palindrome partitioning 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/palindrome-permutation/">Palindrome Permutation</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1/">Insert Delete Getrandom O1</a></h2>
 
-      <p>Given a string, determine if a permutation of the string could form a palindrome.
-Example 1 Input: &#34;code&#34; Output: false Example 2 Input: &#34;aab&#34; Output: true Example 3 Input: &#34;carerac&#34; Output: true Solution class Solution: def canPermutePalindrome(self, s: str) -&gt; bool: lookup = set() for c in s: if c not in lookup: lookup.add(c) else: lookup.remove(c) return len(lookup) &lt;= 1 </p>
+      <p>Design a data structure that supports all following operations in average O(1) time.
+ insert(val): Inserts an item val to the set if not already present. remove(val): Removes an item val from the set if present. getRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.  Example // Init an empty set. RandomizedSet randomSet = new RandomizedSet(); // Inserts 1 to the set.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1-duplicates-allowed/">Insert Delete Getrandom O1 Duplicates Allowed</a></h2>
+
+      <p>Design a data structure that supports all following operations in average O(1) time.
+Note: Duplicate elements are allowed.
+ insert(val): Inserts an item val to the collection. remove(val): Removes an item val from the collection if present. getRandom: Returns a random element from current collection of elements. The probability of each element being returned is linearly related to the number of same value the collection contains.  Example // Init an empty collection.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+          <a  class="meta--cat" href="/categories/ood" ><strong>"ood"</strong></a>
+        
+          <a  class="meta--cat" href="/categories/hashmap" ><strong>"hashmap"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/moving-average-from-data-stream/">Moving Average From Data Stream</a></h2>
+
+      <p>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+Example MovingAverage m = new MovingAverage(3); m.next(1) = 1 m.next(10) = (1 &#43; 10) / 2 m.next(3) = (1 &#43; 10 &#43; 3) / 3 m.next(5) = (10 &#43; 3 &#43; 5) / 3 Solution from collections import deque class MovingAverage: def __init__(self, size: int): &#34;&#34;&#34; Initialize your data structure here.</p>
 
       <p class="meta">
         
@@ -420,10 +416,10 @@ Example 1 Input: &#34;code&#34; Output: false Example 2 Input: &#34;aab&#34; Out
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/first-unique-character-in-a-string/">First Unique Character in a String</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/evaluate-division/">Evaluate Division</a></h2>
 
-      <p>Given a string, find the first non-repeating character in it and return it’s index. If it doesn’t exist, return -1.
-Example 1 s = &#34;leetcode&#34; return 0. Example 2 s = &#34;loveleetcode&#34;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 </p>
+      <p>Equations are given in the format A / B = k, where A and B are variables represented as strings, and k is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return -1.0.
+Example Given a / b = 2.0, b / c = 3.0. queries are: a / c = ?, b / a = ?, a / e = ?</p>
 
       <p class="meta">
         
@@ -435,7 +431,7 @@ Example 1 s = &#34;leetcode&#34; return 0. Example 2 s = &#34;loveleetcode&#34;,
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 

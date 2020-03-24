@@ -7,27 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 19 Mar 2020 03:16:26 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 03:52:41 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/greedy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Split Array Into Consecutive Subsequences</title>
+      <link>http://www.hashnopolis.com/post/split-array-into-consecutive-subsequences/</link>
+      <pubDate>Mon, 23 Mar 2020 03:52:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/split-array-into-consecutive-subsequences/</guid>
+      <description>Given an array nums sorted in ascending order, return true if and only if you can split it into 1 or more subsequences such that each subsequence consists of consecutive integers and has length at least 3.
+Example 1 Input: [1,2,3,3,4,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3 3, 4, 5 Example 2 Input: [1,2,3,3,4,4,5,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3, 4, 5 3, 4, 5 Example 3 Input: [1,2,3,4,4,5] Output: False Constraints  1 &amp;lt;= nums.</description>
+    </item>
+    
+    <item>
+      <title>Validate Stack Sequence</title>
+      <link>http://www.hashnopolis.com/post/validate-stack-sequence/</link>
+      <pubDate>Sun, 22 Mar 2020 17:06:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/validate-stack-sequence/</guid>
+      <description>Given two sequences pushed and popped with distinct values, return true if and only if this could have been the result of a sequence of push and pop operations on an initially empty stack.
+Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explanation: We might do the following sequence: push(1), push(2), push(3), push(4), pop() -&amp;gt; 4, push(5), pop() -&amp;gt; 5, pop() -&amp;gt; 3, pop() -&amp;gt; 2, pop() -&amp;gt; 1 Example 2 Input: pushed = [1,2,3,4,5], popped = [4,3,5,1,2] Output: false Explanation: 1 cannot be popped before 2.</description>
+    </item>
+    
+    <item>
       <title>Remove Duplicate Letters</title>
-      <link>http://www.hashnopolis.com/post/2020/03/remove-duplicate-letters/</link>
+      <link>http://www.hashnopolis.com/post/remove-duplicate-letters/</link>
       <pubDate>Thu, 19 Mar 2020 03:16:26 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/03/remove-duplicate-letters/</guid>
+      <guid>http://www.hashnopolis.com/post/remove-duplicate-letters/</guid>
       <description>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
 Example 1 Input: &amp;quot;bcabc&amp;quot; Output: &amp;quot;abc&amp;quot; Example 2 Input: &amp;quot;cbacdcbc&amp;quot; Output: &amp;quot;acdb&amp;quot; Example 3 Input: &amp;quot;cba&amp;quot; Output: &amp;quot;cba&amp;quot; Solution class Solution: def removeDuplicateLetters(self, s: str) -&amp;gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &amp;lt; stack[-1] and i &amp;lt; last_indices[stack[-1]]: seen.</description>
     </item>
     
     <item>
       <title>Candy</title>
-      <link>http://www.hashnopolis.com/post/2020/03/candy/</link>
+      <link>http://www.hashnopolis.com/post/candy/</link>
       <pubDate>Mon, 09 Mar 2020 00:42:43 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/03/candy/</guid>
+      <guid>http://www.hashnopolis.com/post/candy/</guid>
       <description>There are N children standing in a line. Each child is assigned a rating value.
 You are giving candies to these children subjected to the following requirements:
  Each child must have at least one candy. Children with a higher rating get more candies than their neighbors. What is the minimum candies you must give?  Example 1 Input: [1,0,2] Output: 5 Explanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.</description>
@@ -35,10 +55,10 @@ You are giving candies to these children subjected to the following requirements
     
     <item>
       <title>Bag of Tokens</title>
-      <link>http://www.hashnopolis.com/post/2020/03/bag-of-tokens/</link>
+      <link>http://www.hashnopolis.com/post/bag-of-tokens/</link>
       <pubDate>Mon, 09 Mar 2020 00:04:04 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/03/bag-of-tokens/</guid>
+      <guid>http://www.hashnopolis.com/post/bag-of-tokens/</guid>
       <description>You have an initial power P, an initial score of 0 points, and a bag of tokens.
 Each token can be used at most once, has a value token[i], and has potentially two ways to use it.
  If we have at least token[i] power, we may play the token face up, losing token[i] power, and gaining 1 point. If we have at least 1 point, we may play the token face down, gaining token[i] power, and losing 1 point.</description>
@@ -46,59 +66,59 @@ Each token can be used at most once, has a value token[i], and has potentially t
     
     <item>
       <title>Partition Labels</title>
-      <link>http://www.hashnopolis.com/post/2020/03/partition-labels/</link>
+      <link>http://www.hashnopolis.com/post/partition-labels/</link>
       <pubDate>Sun, 01 Mar 2020 09:27:30 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/03/partition-labels/</guid>
+      <guid>http://www.hashnopolis.com/post/partition-labels/</guid>
       <description>A string S of lowercase letters is given. We want to partition this string into as many parts as possible so that each letter appears in at most one part, and return a list of integers representing the size of these parts.
 Example 1 Input: S = &amp;quot;ababcbacadefegdehijhklij&amp;quot; Output: [9,7,8] Explanation: The partition is &amp;quot;ababcbaca&amp;quot;, &amp;quot;defegde&amp;quot;, &amp;quot;hijhklij&amp;quot;. This is a partition so that each letter appears in at most one part.</description>
     </item>
     
     <item>
       <title>Minimum Cost to Connect Sticks</title>
-      <link>http://www.hashnopolis.com/post/2020/02/minimum-cost-to-connect-sticks/</link>
+      <link>http://www.hashnopolis.com/post/minimum-cost-to-connect-sticks/</link>
       <pubDate>Sat, 29 Feb 2020 20:46:40 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/02/minimum-cost-to-connect-sticks/</guid>
+      <guid>http://www.hashnopolis.com/post/minimum-cost-to-connect-sticks/</guid>
       <description>Given n sticks of different lengths, we need to connect these sticks into one stick. We can connect only 2 sticks at a time. The cost required to connect 2 sticks is equal to sum of their lengths. The length of this connected stick is also equal to the sum of their lengths. This process is repeated until n sticks are connected into a single stick. Find the min possible cost required to connect all sticks.</description>
     </item>
     
     <item>
       <title>Maximum Swap</title>
-      <link>http://www.hashnopolis.com/post/2020/02/maximum-swap/</link>
+      <link>http://www.hashnopolis.com/post/maximum-swap/</link>
       <pubDate>Thu, 13 Feb 2020 12:22:27 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/02/maximum-swap/</guid>
+      <guid>http://www.hashnopolis.com/post/maximum-swap/</guid>
       <description>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
 Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2: Input: 9973 Output: 9973 Explanation: No swap. Note:  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&amp;gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&amp;#34;0&amp;#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &amp;gt; int(ord(numChars[i])-ord(&amp;#34;0&amp;#34;)): if last[j] &amp;gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&amp;#34;&amp;#34;.</description>
     </item>
     
     <item>
       <title>Campus Bikes</title>
-      <link>http://www.hashnopolis.com/post/2019/10/campus-bikes/</link>
+      <link>http://www.hashnopolis.com/post/campus-bikes/</link>
       <pubDate>Mon, 14 Oct 2019 20:13:22 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/10/campus-bikes/</guid>
+      <guid>http://www.hashnopolis.com/post/campus-bikes/</guid>
       <description>On a campus represented as a 2D grid, there are N workers and M bikes, with N &amp;lt;= M. Each worker and bike is a 2D coordinate on this grid.
 Our goal is to assign a bike to each worker. Among the available bikes and workers, we choose the (worker, bike) pair with the shortest Manhattan distance between each other, and assign the bike to that worker. (If there are multiple (worker, bike) pairs with the same shortest Manhattan distance, we choose the pair with the smallest worker index; if there are multiple ways to do that, we choose the pair with the smallest bike index).</description>
     </item>
     
     <item>
       <title>Task Scheduler</title>
-      <link>http://www.hashnopolis.com/post/2018/11/task-scheduler/</link>
+      <link>http://www.hashnopolis.com/post/task-scheduler/</link>
       <pubDate>Mon, 12 Nov 2018 19:39:03 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/11/task-scheduler/</guid>
+      <guid>http://www.hashnopolis.com/post/task-scheduler/</guid>
       <description>Given a char array representing tasks CPU need to do. It contains capital letters A to Z where different letters represent different tasks.Tasks could be done without original order. Each task could be done in one interval. For each interval, CPU could finish one task or just be idle.
 However, there is a non-negative cooling interval n that means between two same tasks, there must be at least n intervals that CPU are doing different tasks or just be idle.</description>
     </item>
     
     <item>
       <title>Best Time to Buy and Sell Stock II</title>
-      <link>http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/</link>
+      <link>http://www.hashnopolis.com/post/best-time-to-buy-and-sell-stock-ii/</link>
       <pubDate>Thu, 06 Sep 2018 23:39:13 +0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/</guid>
+      <guid>http://www.hashnopolis.com/post/best-time-to-buy-and-sell-stock-ii/</guid>
       <description>Say you have an array for which the ith element is the price of a given stock on day i.
 Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
 Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</description>

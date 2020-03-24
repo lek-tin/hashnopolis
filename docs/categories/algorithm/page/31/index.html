@@ -176,14 +176,11 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/contains-duplicate/">Contains Duplicate</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/convert-sorted-array-to-binary-search-tree/">Convert Sorted Array to Binary Search Tree</a></h2>
 
-      <p>Given an array of integers, find if the array contains any duplicates.
-Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
-Example 1:
-Input: [1,2,3,1] Output: true Example 2:
-Input: [1,2,3,4] Output: false Example 3:
-Input: [1,1,1,3,3,4,3,2,4,2] Output: true Solution class Solution: def containsDuplicate(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: bool &#34;&#34;&#34; sortedNums = sorted(nums) for i in range(1, len(nums)): if sortedNums[i] == sortedNums[i-1]: return True return False </p>
+      <p>Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5 Solution # Definition for a binary tree node.</p>
 
       <p class="meta">
         
@@ -206,38 +203,10 @@ Input: [1,1,1,3,3,4,3,2,4,2] Output: true Solution class Solution: def containsD
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/binary-search-tree-iterator/">Binary Search Tree Iterator</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-right-side-view/">Binary Tree Right Side View</a></h2>
 
-      <p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
-Calling next() will return the next smallest number in the BST.
-Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree. Solution # Definition for a binary tree node # class TreeNode(object): # def __init__(self, x): # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock-ii/">Best Time to Buy and Sell Stock II</a></h2>
-
-      <p>Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
-Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
+      <p>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+Example Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &lt;--- / \ 2 3 &lt;--- \ \ 5 4 &lt;--- Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
 
       <p class="meta">
         
@@ -260,134 +229,11 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/best-time-to-buy-and-sell-stock/">Best Time to Buy and Sell Stock</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-preorder-traversal/">Binary Tree Preorder Traversal</a></h2>
 
-      <p>Say you have an array for which the ith element is the price of a given stock on day i.
-If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
-Note that you cannot sell a stock before you buy one.
-Example 1 Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/add-binary/">Add Binary</a></h2>
-
-      <p>Given two binary strings, return their sum (also a binary string).
-The input strings are both non-empty and contains only characters 1 or 0.
-Example 1 Input: a = &#34;11&#34;, b = &#34;1&#34; Output: &#34;100&#34; Example 2 Input: a = &#34;1010&#34;, b = &#34;1011&#34; Output: &#34;10101&#34; Solution class Solution: def addBinary(self, a, b): &#34;&#34;&#34; :type a: str :type b: str :rtype: str &#34;&#34;&#34; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &gt;= 0 or j &gt;= 0: total = carry if i &gt;= 0: total &#43;= int(a[i]) i -= 1 if j &gt;= 0: total &#43;= int(b[j]) j -= 1 result.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/valid-number/">Valid Number</a></h2>
-
-      <p>Validate if a given string can be interpreted as a decimal number.
-Some examples: &#34;0&#34; =&gt; true
-&#34; 0.1 &#34; =&gt; true
-&#34;abc&#34; =&gt; false
-&#34;1 a&#34; =&gt; false
-&#34;2e10&#34; =&gt; true
-&#34; -90e3 &#34; =&gt; true
-&#34; 1e&#34; =&gt; false
-&#34;e3&#34; =&gt; false
-&#34; 6e-1&#34; =&gt; true
-&#34; 99e2.5 &#34; =&gt; false
-&#34;53.5e93&#34; =&gt; true
-&#34; --6 &#34; =&gt; false
-&#34;-&#43;3&#34; =&gt; false
-&#34;95a54e53&#34; =&gt; false
-Note It is intended for the problem statement to be ambiguous.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/17.-letter-combinations-of-a-phone-number/">17. Letter Combinations of a Phone Number</a></h2>
-
-      <p>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
-A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
-Example Input: &#34;23&#34; Output: [&#34;ad&#34;, &#34;ae&#34;, &#34;af&#34;, &#34;bd&#34;, &#34;be&#34;, &#34;bf&#34;, &#34;cd&#34;, &#34;ce&#34;, &#34;cf&#34;]. Note Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/18.-4sum/">18. 4Sum</a></h2>
-
-      <p>Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a &#43; b &#43; c &#43; d = target? Find all unique quadruplets in the array which gives the sum of target.
-Note The solution set must not contain duplicate quadruplets.
+      <p>Given a binary tree, return the preorder traversal of its nodes’ values.
 Example:
-Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ] </p>
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3] Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; if root is None: return [] return [root.</p>
 
       <p class="meta">
         
@@ -410,16 +256,12 @@ Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/23.-merge-k-sorted-lists/">23. Merge k Sorted Lists</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-postorder-traversal/">Binary Tree Postorder Traversal</a></h2>
 
-      <p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
-Example: Input: [ 1-&gt;4-&gt;5, 1-&gt;3-&gt;4, 2-&gt;6 ] Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6 Solution: Idea #1 - Brute force with sorting first:
-Time complexity : O(NlogN)
-Space complexity : O(N)
-Idea #2 - Compare head nodes one by one:
-Time complexity : O(kN)
-Space complexity : O(N) - creating a new linked list or O(1) in-place
-Idea #3 - Merge lists one by one:</p>
+      <p>Given a binary tree, return the postorder traversal of its nodes’ values.
+Example Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1] Follow-up Recursive solution is trivial, could you do it iteratively?
+Solution Recursive👇
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def postorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; def traverse(node): if node == None: return [] return traverse(node.</p>
 
       <p class="meta">
         
@@ -431,7 +273,7 @@ Idea #3 - Merge lists one by one:</p>
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -442,11 +284,149 @@ Idea #3 - Merge lists one by one:</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/08/57.-insert-interval/">57. Insert Interval</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-paths/">Binary Tree Paths</a></h2>
 
-      <p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
-You may assume that the intervals were initially sorted according to their start times.
-Example 1 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]] Example 2 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8] Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10]. Solution # Definition for an interval. # class Interval: # def __init__(self, s=0, e=0): # self.</p>
+      <p>Given a binary tree, return all root-to-leaf paths.
+Note: A leaf is a node with no children.
+Example Input: 1 / \ 2 3 \ 5 Output: [&#34;1-&gt;2-&gt;5&#34;, &#34;1-&gt;3&#34;] Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[str] &#34;&#34;&#34; res = [] def traverse(root, path): if root == None: return path &#43;= str(root.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></h2>
+
+      <p>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).
+Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7 return its level order traversal as:
+[ [3], [9,20], [15,7] ] Solution (recursion) # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-level-order-traversal-ii/">Binary Tree Level Order Traversal II</a></h2>
+
+      <p>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).
+For example: Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 return its bottom-up level order traversal as:
+[ [15,7], [9,20], [3] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/combination-sum-iii/">Combination Sum III</a></h2>
+
+      <p>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: k = 3, n = 7 Output: [[1,2,4]] Example 2 Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]] Solution class Solution: def combinationSum3(self, k: int, n: int) -&gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Start DFS self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/combination-sum/">Combination Sum</a></h2>
+
+      <p>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ] Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/combinations/">Combinations</a></h2>
+
+      <p>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+Example Input: n = 4, k = 2 Output: [ [2,4], [3,4], [2,3], [1,2], [1,3], [1,4], ] Solution class Solution: def combine(self, n: int, k: int) -&gt; List[List[int]]: def backtrack(start = 1, curr = []): # if the combination is done if len(curr) == k: output.append(curr[:]) return for i in range(start, n &#43; 1): # add i into the current combination curr.</p>
 
       <p class="meta">
         

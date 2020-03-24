@@ -7,17 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 10 Mar 2020 04:14:10 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2020 22:04:00 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/sliding-window/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Moving Average From Data Stream</title>
+      <link>http://www.hashnopolis.com/post/moving-average-from-data-stream/</link>
+      <pubDate>Sat, 21 Mar 2020 22:04:00 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/moving-average-from-data-stream/</guid>
+      <description>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+Example MovingAverage m = new MovingAverage(3); m.next(1) = 1 m.next(10) = (1 + 10) / 2 m.next(3) = (1 + 10 + 3) / 3 m.next(5) = (10 + 3 + 5) / 3 Solution from collections import deque class MovingAverage: def __init__(self, size: int): &amp;#34;&amp;#34;&amp;#34; Initialize your data structure here.</description>
+    </item>
+    
+    <item>
+      <title>Logger Rate Limiter</title>
+      <link>http://www.hashnopolis.com/post/logger-rate-limiter/</link>
+      <pubDate>Sat, 21 Mar 2020 20:05:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/logger-rate-limiter/</guid>
+      <description>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
+Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.
+It is possible that several messages arrive roughly at the same time.
+Example Logger logger = new Logger(); // logging string &amp;quot;foo&amp;quot; at timestamp 1 logger.</description>
+    </item>
+    
+    <item>
+      <title>Design Hit Counter</title>
+      <link>http://www.hashnopolis.com/post/design-hit-counter/</link>
+      <pubDate>Sat, 21 Mar 2020 19:18:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/design-hit-counter/</guid>
+      <description>Design a hit counter which counts the number of hits received in the past 5 minutes.
+Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.
+It is possible that several hits arrive roughly at the same time.
+Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</description>
+    </item>
+    
+    <item>
       <title>Shortest Subarray With Sum at Least K</title>
-      <link>http://www.hashnopolis.com/post/2020/03/shortest-subarray-with-sum-at-least-k/</link>
+      <link>http://www.hashnopolis.com/post/shortest-subarray-with-sum-at-least-k/</link>
       <pubDate>Tue, 10 Mar 2020 04:14:10 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/03/shortest-subarray-with-sum-at-least-k/</guid>
+      <guid>http://www.hashnopolis.com/post/shortest-subarray-with-sum-at-least-k/</guid>
       <description>Return the length of the shortest, non-empty, contiguous subarray of A with sum at least K.
 If there is no non-empty subarray with sum at least K, return -1.
 Example 1 Input: A = [1], K = 1 Output: 1 Example 2 Input: A = [1,2], K = 4 Output: -1 Example 3 Input: A = [2,-1,2], K = 3 Output: 3 Note  1 &amp;lt;= A.length &amp;lt;= 50000 -10 ^ 5 &amp;lt;= A[i] &amp;lt;= 10 ^ 5 1 &amp;lt;= K &amp;lt;= 10 ^ 9  Solution (sliding window using pointers) This version exceeds time limit Time: O(N)</description>
@@ -25,10 +59,10 @@ Example 1 Input: A = [1], K = 1 Output: 1 Example 2 Input: A = [1,2], K = 4 Outp
     
     <item>
       <title>Longest Substring Without Repeating Characters</title>
-      <link>http://www.hashnopolis.com/post/2019/11/longest-substring-without-repeating-characters/</link>
+      <link>http://www.hashnopolis.com/post/longest-substring-without-repeating-characters/</link>
       <pubDate>Thu, 21 Nov 2019 22:24:06 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/11/longest-substring-without-repeating-characters/</guid>
+      <guid>http://www.hashnopolis.com/post/longest-substring-without-repeating-characters/</guid>
       <description>Given a string, find the length of the longest substring without repeating characters.
 *### Example 1
 Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3. *### Example 2
@@ -38,10 +72,10 @@ Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot
     
     <item>
       <title>Subarray Product Less Than K</title>
-      <link>http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/</link>
+      <link>http://www.hashnopolis.com/post/subarray-product-less-than-k/</link>
       <pubDate>Tue, 10 Sep 2019 00:38:42 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/09/subarray-product-less-than-k/</guid>
+      <guid>http://www.hashnopolis.com/post/subarray-product-less-than-k/</guid>
       <description>Your are given an array of positive integers nums.
 Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than k.
 Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]. Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</description>
@@ -49,60 +83,60 @@ Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 sub
     
     <item>
       <title>Minimum Size Subarray Sum</title>
-      <link>http://www.hashnopolis.com/post/2019/09/minimum-size-subarray-sum/</link>
+      <link>http://www.hashnopolis.com/post/minimum-size-subarray-sum/</link>
       <pubDate>Sun, 08 Sep 2019 23:43:48 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/09/minimum-size-subarray-sum/</guid>
+      <guid>http://www.hashnopolis.com/post/minimum-size-subarray-sum/</guid>
       <description>Given an array of n positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum ≥ s. If there isn&amp;rsquo;t one, return 0 instead.
 Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray [4,3] has the minimal length under the problem constraint. Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).</description>
     </item>
     
     <item>
       <title>Minimum Window Substring</title>
-      <link>http://www.hashnopolis.com/post/2019/03/minimum-window-substring/</link>
+      <link>http://www.hashnopolis.com/post/minimum-window-substring/</link>
       <pubDate>Sat, 16 Mar 2019 16:05:09 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/03/minimum-window-substring/</guid>
+      <guid>http://www.hashnopolis.com/post/minimum-window-substring/</guid>
       <description>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
 Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot; Note:  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;quot;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
     </item>
     
     <item>
       <title>Longest Substring With at Most Two Distinct Characters</title>
-      <link>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/</link>
+      <link>http://www.hashnopolis.com/post/longest-substring-with-at-most-two-distinct-characters/</link>
       <pubDate>Sat, 16 Mar 2019 13:30:30 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-two-distinct-characters/</guid>
+      <guid>http://www.hashnopolis.com/post/longest-substring-with-at-most-two-distinct-characters/</guid>
       <description>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
 Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
     </item>
     
     <item>
       <title>Longest Substring With at Most K Distinct Characters</title>
-      <link>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/</link>
+      <link>http://www.hashnopolis.com/post/longest-substring-with-at-most-k-distinct-characters/</link>
       <pubDate>Thu, 14 Mar 2019 01:03:53 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/03/longest-substring-with-at-most-k-distinct-characters/</guid>
+      <guid>http://www.hashnopolis.com/post/longest-substring-with-at-most-k-distinct-characters/</guid>
       <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
 Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2. Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s.</description>
     </item>
     
     <item>
       <title>Sliding Window Maximum</title>
-      <link>http://www.hashnopolis.com/post/2019/03/sliding-window-maximum/</link>
+      <link>http://www.hashnopolis.com/post/sliding-window-maximum/</link>
       <pubDate>Fri, 08 Mar 2019 23:26:00 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2019/03/sliding-window-maximum/</guid>
+      <guid>http://www.hashnopolis.com/post/sliding-window-maximum/</guid>
       <description>Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
 Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7 Note: You may assume k is always valid, 1 ≤ k ≤ input array&amp;rsquo;s size for non-empty array.</description>
     </item>
     
     <item>
       <title>Find All Anagrams in a String</title>
-      <link>http://www.hashnopolis.com/post/2018/12/find-all-anagrams-in-a-string/</link>
+      <link>http://www.hashnopolis.com/post/find-all-anagrams-in-a-string/</link>
       <pubDate>Sat, 15 Dec 2018 09:42:45 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/12/find-all-anagrams-in-a-string/</guid>
+      <guid>http://www.hashnopolis.com/post/find-all-anagrams-in-a-string/</guid>
       <description>Given a string s and a non-empty string p, find all the start indices of p&#39;s anagrams in s.
 Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
 The order of output does not matter.

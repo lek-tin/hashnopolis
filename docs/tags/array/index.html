@@ -176,7 +176,7 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/03/find-all-numbers-disappeared-in-an-array/">Find All Numbers Disappeared in an Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/find-all-numbers-disappeared-in-an-array/">Find All Numbers Disappeared in an Array</a></h2>
 
       <p>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 Find all the elements of [1, n] inclusive that do not appear in this array.
@@ -204,7 +204,7 @@ Example Input: [4,3,2,7,8,2,3,1] Output: [5,6] Solution class Solution: def find
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/maximum-swap/">Maximum Swap</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-swap/">Maximum Swap</a></h2>
 
       <p>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
 Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2: Input: 9973 Output: 9973 Explanation: No swap. Note:  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&#34;0&#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &gt; int(ord(numChars[i])-ord(&#34;0&#34;)): if last[j] &gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&#34;&#34;.</p>
@@ -230,7 +230,7 @@ Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the numbe
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/find-all-duplicates-in-an-array/">Find All Duplicates in an Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/find-all-duplicates-in-an-array/">Find All Duplicates in an Array</a></h2>
 
       <p>Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 Find all the elements that appear twice in this array.
@@ -258,7 +258,7 @@ Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3] Solution # Time: O(n) # Space: O
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2020/02/squares-of-a-sorted-array/">Squares of a Sorted Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/squares-of-a-sorted-array/">Squares of a Sorted Array</a></h2>
 
       <p>Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
 Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note:  1 &lt;= A.length &lt;= 10000 -10000 &lt;= A[i] &lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &lt;= rightPtr: i &#43;= 1 if abs(A[leftPtr]) &lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr &#43;= 1 return result </p>
@@ -284,7 +284,7 @@ Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2: Input: [-7,-3
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2019/10/intersection-of-three-sorted-arrays/">Intersection of Three Sorted Arrays</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/intersection-of-three-sorted-arrays/">Intersection of Three Sorted Arrays</a></h2>
 
       <p>Given three integer arrays arr1, arr2 and arr3 sorted in strictly increasing order, return a sorted array of only the integers that appeared in all three arrays.
 Example 1:
@@ -311,7 +311,7 @@ Input: arr1 = [1,2,3,4,5], arr2 = [1,2,5,7,9], arr3 = [1,3,4,5,8] Output: [1,5] 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/12/longest-continuous-increasing-subsequence/">Longest Continuous Increasing Subsequence</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/longest-continuous-increasing-subsequence/">Longest Continuous Increasing Subsequence</a></h2>
 
       <p>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
 Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4. Example 2 Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</p>
@@ -337,7 +337,7 @@ Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous incre
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/arrays-in-python/">Arrays in Python</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/arrays-in-python/">Arrays in Python</a></h2>
 
       <p>Reverse an array arr = [1, 2, 3, 4, 5, 6, 7, 8] reversedArray = arr[::-1] # [8, 7, 6, 5, 4, 3, 2, 1] arr[3:5] = arr[3:5][::-1] Slices with step s[i:j:k] means “slice of s from i to j with step k”. When i and j are absent, the whole sequence is assumed and thus s[::k] means “every k-th item” in the entire sequence.
 s = range(20) # output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] # 3rd item from s: s[::3] # output: [0, 3, 6, 9, 12, 15, 18] # 3rd item from s[2:]: s[2:] # output: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] s[2::3] # output: [2, 5, 8, 11, 14, 17] # 3rd item from s[5:12]: s[5:12] # output: [5, 6, 7, 8, 9, 10, 11] s[5:12:3] # output: [5, 8, 11] # 3rd item from s[:10]: s[:10] # output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] s[:10:3] # output: [0, 3, 6, 9] Clone a list newArr = oldArr[:]</p>
@@ -363,7 +363,7 @@ s = range(20) # output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/arrays-in-cpp/">Arrays in CPP</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/arrays-in-cpp/">Arrays in CPP</a></h2>
 
       <p>To get the number of elements in an array in C&#43;&#43;:
 sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. Divide it with the size of one element in the array will give you the number of elements in the array: sizeof(awesomeArray)/sizeof(awesomeArray[0])</p>
@@ -389,7 +389,7 @@ sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. D
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/11/product-of-array-except-self/">Product of Array Except Self</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/product-of-array-except-self/">Product of Array Except Self</a></h2>
 
       <p>Given an array of n integers where n &gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
 Solve it without division and in O(n).
@@ -419,7 +419,7 @@ class Solution: def productExceptSelf(self, nums: List[int]) -&gt; List[int]: le
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/2018/09/plus-one/">Plus One</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/plus-one/">Plus One</a></h2>
 
       <p>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
 The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.

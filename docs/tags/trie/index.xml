@@ -14,10 +14,10 @@
     
     <item>
       <title>Lexicographical Numbers</title>
-      <link>http://www.hashnopolis.com/post/2020/02/lexicographical-numbers/</link>
+      <link>http://www.hashnopolis.com/post/lexicographical-numbers/</link>
       <pubDate>Sun, 16 Feb 2020 01:09:58 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/02/lexicographical-numbers/</guid>
+      <guid>http://www.hashnopolis.com/post/lexicographical-numbers/</guid>
       <description>Given an integer n, return 1 - n in lexicographical order.
 For example, given 13, return: [1,10,11,12,13,2,3,4,5,6,7,8,9].
 Please optimize your algorithm to use less time and space. The input size may be as large as 5,000,000.
@@ -26,10 +26,10 @@ Solution class Solution: def lexicalOrder(self, n: int) -&amp;gt; List[int]: res
     
     <item>
       <title>K Th Smallest in Lexicographical Order</title>
-      <link>http://www.hashnopolis.com/post/2020/02/k-th-smallest-in-lexicographical-order/</link>
+      <link>http://www.hashnopolis.com/post/k-th-smallest-in-lexicographical-order/</link>
       <pubDate>Thu, 13 Feb 2020 13:15:02 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2020/02/k-th-smallest-in-lexicographical-order/</guid>
+      <guid>http://www.hashnopolis.com/post/k-th-smallest-in-lexicographical-order/</guid>
       <description>Given integers n and k, find the lexicographically k-th smallest integer in the range from 1 to n.
 Note: 1 ≤ k ≤ n ≤ 10^9.
 Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10. Solution class Solution: def findKthNumber(self, n: int, k: int) -&amp;gt; int: if n &amp;lt; k or k &amp;lt; 1: return 0 if n &amp;lt; 10: return k curr = 1 k -= 1 while k &amp;gt; 0: leap, prev, next = 0, curr, curr+1 while prev &amp;lt;= n: # update leap leap += min(n+1, next) - prev prev *= 10 next *= 10 if leap &amp;lt;= k: curr += 1 print(leap, &amp;#34;&amp;lt;= k; curr =&amp;#34;, curr) k -= leap else: curr *= 10 print(leap, &amp;#34;&amp;gt; k; curr =&amp;#34;, curr) k -= 1 return curr # Input: n=1300, k=50 # order: [1,10,100,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,101,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,102,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,103,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,104,1040,1041,1042] # Output: # 412 &amp;gt; k; curr = 10 # 111 &amp;gt; k; curr = 100 # 11 &amp;lt;= k; curr = 101 # 11 &amp;lt;= k; curr = 102 # 11 &amp;lt;= k; curr = 103 # 11 &amp;lt;= k; curr = 104 # 11 &amp;gt; k; curr = 1040 # 1 &amp;lt;= k; curr = 1041 # 1 &amp;lt;= k; curr = 1042 </description>
@@ -37,10 +37,10 @@ Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [
     
     <item>
       <title>Implement Trie Prefix Tree</title>
-      <link>http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/</link>
+      <link>http://www.hashnopolis.com/post/implement-trie-prefix-tree/</link>
       <pubDate>Thu, 08 Nov 2018 23:07:10 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/11/implement-trie-prefix-tree/</guid>
+      <guid>http://www.hashnopolis.com/post/implement-trie-prefix-tree/</guid>
       <description>Implement a trie with insert, search, and startsWith methods.
 Example Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
 Solution Python
@@ -49,10 +49,10 @@ class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _
     
     <item>
       <title>Add and Search Word Data Structure Design</title>
-      <link>http://www.hashnopolis.com/post/2018/11/add-and-search-word-data-structure-design/</link>
+      <link>http://www.hashnopolis.com/post/add-and-search-word-data-structure-design/</link>
       <pubDate>Thu, 08 Nov 2018 22:37:27 -0800</pubDate>
       
-      <guid>http://www.hashnopolis.com/post/2018/11/add-and-search-word-data-structure-design/</guid>
+      <guid>http://www.hashnopolis.com/post/add-and-search-word-data-structure-design/</guid>
       <description>Design a data structure that supports the following two operations:
 void addWord(word) bool search(word) search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.
 Example addWord(&amp;quot;bad&amp;quot;) addWord(&amp;quot;dad&amp;quot;) addWord(&amp;quot;mad&amp;quot;) search(&amp;quot;pad&amp;quot;) -&amp;gt; false search(&amp;quot;bad&amp;quot;) -&amp;gt; true search(&amp;quot;.ad&amp;quot;) -&amp;gt; true search(&amp;quot;b..&amp;quot;) -&amp;gt; true Note You may assume that all words are consist of lowercase letters a-z.
