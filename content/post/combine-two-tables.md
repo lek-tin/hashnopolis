@@ -2,9 +2,10 @@
 title: "Combine Two Tables"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python"]
-categories: ["algorithm"]
+tags: ["leetcode", "sql"]
+categories: ["database"]
 date: 2018-09-10T21:40:30+08:00
+lastmod: 2020-03-02T21:40:30+08:00
 draft: false
 archive: false
 ---
@@ -32,7 +33,7 @@ Table: `Address`
 AddressId is the primary key column for this table.
 ```
 
-Write a SQL query for a report that provides the following information for each person in the Person table, regardless if there is an address for each of those people:
+Write a SQL query for a report that provides the following information for each person in the Person table, **regardless if there is an address** for each of those people:
 ```
 FirstName, LastName, City, State
 ```

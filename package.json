@@ -11,7 +11,7 @@
     "dev": "hugo server --disableFastRender",
     "audit": "blc https://www.hashnopolis.com -ro",
     "misc": "hugo list drafts",
-    "build": "hugo && git add . && git commit -m \"dev: build\" && git push origin"
+    "build": "rm -rf docs/ && hugo && cp CNAME docs/ && git add . && git commit -m \"dev: build\" && git push origin"
   },
   "repository": {
     "type": "git",

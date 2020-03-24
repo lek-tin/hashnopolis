@@ -2,10 +2,10 @@
 title: "Minesweeper"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "bfs"]
 categories: ["algorithm"]
 date: 2020-02-05T23:38:00-08:00
-lastmod: 2020-02-05T23:38:00-08:00
+lastmod: 2020-02-23T23:38:00-08:00
 draft: false
 archive: false
 ---
@@ -20,7 +20,8 @@ If an empty square (`'E'`) **with no adjacent mines** is **revealed**, then chan
 If an empty square (`'E'`) with **at least one adjacent mine** is **revealed**, then change it to a digit (`'1'` to `'8'`) representing the number of adjacent mines.
 Return the board when no more squares will be **revealed**.
 
-### Example 1:
+### Example 1
+
 ```
 Input: 
 
@@ -41,7 +42,9 @@ Output:
 Explanation:
 ```
 ![minesweeper example 1](/img/post/minesweeper_example_1.png)
-### Example 2:
+
+### Example 2
+
 ```
 Input: 
 
@@ -62,7 +65,9 @@ Output:
 Explanation:
 ```
 ![minesweeper example 2](/img/post/minesweeper_example_2.png)
-### Note:
+
+### Note
+
 1. The range of the input matrix's height and width is `[1,50]`.
 2. The click position will only be an unrevealed square (`'M'` or `'E'`), which also means the input board contains at least one clickable square.
 3. The input board won't be a stage when game is over (some mines have been revealed).

@@ -1,5 +1,5 @@
 ---
-title: "Search a 2d Matrix Ii"
+title: "Search a 2d Matrix II"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "binary-search", "divide-and-conquer"]

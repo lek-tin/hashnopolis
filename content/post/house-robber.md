@@ -2,7 +2,7 @@
 title: "House Robber"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "java", "dynamic-programming"]
+tags: ["leetcode", "divide-and-conquer", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-10-25T23:45:32-07:00
 draft: false

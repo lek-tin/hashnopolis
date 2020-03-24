@@ -71,6 +71,7 @@ class MedianFinder {
 Python version
 ```python
 from heapq import *
+
 class MedianFinder:
     def __init__(self):
         """

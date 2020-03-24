@@ -37,13 +37,17 @@ Explanation: Pick numbers 1, 3, 4 and 4 their sum is 12 (maximum sum divisible b
 2. `1 <= nums[i] <= 10^4`
 
 ### Solution
+
+`dp[0][i]`: greatest sum that is %3 == 0 from `nums[0...i]`  
+`dp[1][i]`: greatest sum that is %3 == 1 from `nums[0...i]`  
+`dp[2][i]`: greatest sum that is %3 == 2 from `nums[0...i]`  
 ```python
 import math
 
 class Solution:
     def maxSumDivThree(self, nums: List[int]) -> int:
-        n = len(nums)
-        dp = [[0 for j in range(n+1)] for i in range(3)]
+        N = len(nums)
+        dp = [ [0 for j in range(N+1)] for i in range(3) ]
         dp[1][0] = -math.inf
         dp[2][0] = -math.inf
 
@@ -51,8 +55,8 @@ class Solution:
             num = nums[i-1]
             if num % 3 == 0:
                 dp[0][i] = max(dp[0][i-1], dp[0][i-1] + num)
-                dp[1][i] = max(dp[1][i-1], dp[2][i-1] + num)
-                dp[2][i] = max(dp[2][i-1], dp[1][i-1] + num)
+                dp[1][i] = max(dp[1][i-1], dp[1][i-1] + num)
+                dp[2][i] = max(dp[2][i-1], dp[2][i-1] + num)
             if num % 3 == 1:
                 dp[0][i] = max(dp[0][i-1], dp[2][i-1] + num)
                 dp[1][i] = max(dp[1][i-1], dp[0][i-1] + num)

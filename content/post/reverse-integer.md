@@ -2,7 +2,7 @@
 title: "Reverse Integer"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "integer", "modulo"]
+tags: ["leetcode", "overflow", "modulo"]
 categories: ["algorithm"]
 date: 2019-01-16T18:44:45-08:00
 draft: false
@@ -52,27 +52,19 @@ class Solution(object):
         return int(res)
 ```
 ```python
-class Solution(object):
-    def reverse(self, x):
-        """
-        :type x: int
-        :rtype: int
-        """
-        res = 0
+class Solution:
+    def reverse(self, x: int) -> int:
         isNegative = x < 0
         x = abs(x)
+        new_x = 0
 
         while x != 0:
-            tail = x % 10
-            res = res * 10 + tail
+            new_x = new_x * 10 + x % 10
+            x //= 10
 
-            x = x / 10
-
-        if isNegative:
-            res = -res
         # Handles overflow
-        if res < -2**31 or res >= 2**31:
+        if new_x < -2**31 or new_x >= 2**31:
             return 0
 
-        return res
+        return -new_x if isNegative else new_x
 ```

@@ -2,9 +2,10 @@
 title: "House Robber III"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "java", "binary-tree", "memoization"]
+tags: ["leetcode", "binary-tree", "memoization", "dfs", "divide-and-conquer"]
 categories: ["algorithm"]
 date: 2019-02-21T20:56:55-08:00
+lastmod: 2019-03-20T20:56:55-08:00
 draft: false
 archive: false
 ---
@@ -38,7 +39,53 @@ Input: [3,4,5,1,3,null,1]
 Output: 9
 Explanation: Maximum amount of money the thief can rob = 4 + 5 = 9.
 ```
-### Solution:
+### Solution
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    memo = {}
+
+    def rob(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+
+        return self.dfs(root)
+
+    def dfs(self, root):
+        if not root:
+            return 0
+
+        if root in self.memo:
+            return self.memo[root]
+
+        res = 0
+        leftMax = self.dfs(root.left)
+        rightMax = self.dfs(root.right)
+
+        maxWithoutRoot = leftMax + rightMax
+        maxWithRoot = 0
+
+        if root.left:
+            maxWithRoot += self.dfs(root.left.left) + self.dfs(root.left.right)
+        if root.right:
+            maxWithRoot += self.dfs(root.right.left) + self.dfs(root.right.right)
+
+        res = max(maxWithRoot + root.val, maxWithoutRoot)
+
+        self.memo[root] = res
+
+        return res
+```
+
+### Solution
+
 ```java
 /**
  * Definition for a binary tree node.
@@ -61,31 +108,31 @@ class Solution {
      }
 
      public int helper(TreeNode node, HashMap<TreeNode, Integer> memo) {
-     if (node == null) {
-          return 0;
-     }
+          if (node == null) {
+               return 0;
+          }
 
-     if (memo.containsKey(node)) {
-          return memo.get(node);
-     }
+          if (memo.containsKey(node)) {
+               return memo.get(node);
+          }
 
-     int res = 0;
-     int left_with     = helper(node.left, memo);
-     int right_with    = helper(node.right, memo);
-     int maxWithoutRoot = left_with + right_with;
-     int maxWithRoot = 0;
+          int res = 0;
+          int left_with     = helper(node.left, memo);
+          int right_with    = helper(node.right, memo);
+          int maxWithoutRoot = left_with + right_with;
+          int maxWithRoot = 0;
 
-     if (node.left != null) {
-          maxWithRoot += helper(node.left.left, memo) + helper(node.left.right, memo);
-     }
+          if (node.left != null) {
+               maxWithRoot += helper(node.left.left, memo) + helper(node.left.right, memo);
+          }
 
-     if (node.right != null) {
-          maxWithRoot += helper(node.right.left, memo) + helper(node.right.right, memo);
-     }
+          if (node.right != null) {
+               maxWithRoot += helper(node.right.left, memo) + helper(node.right.right, memo);
+          }
 
-     res = Math.max(maxWithRoot + node.val, maxWithoutRoot);
+          res = Math.max(maxWithRoot + node.val, maxWithoutRoot);
 
-     return res;
+          return res;
      }
 }
 ```

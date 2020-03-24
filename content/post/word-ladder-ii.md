@@ -1,5 +1,5 @@
 ---
-title: "Word Ladder Ii"
+title: "Word Ladder II"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "bfs", "dfs"]

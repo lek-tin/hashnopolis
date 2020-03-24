@@ -26,8 +26,8 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
  -10  5
 ```
 
-### Solution
-python
+### Solution (recursion)
+
 ```python
 # Definition for singly-linked list.
 # class ListNode:
@@ -70,4 +70,54 @@ class Solution:
         currNode.right = rightRoot
 
         return currNode
+```
+
+more concise
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def sortedListToBST(self, head: ListNode) -> TreeNode:
+        if not head:
+            return None
+
+        mid = self.findMiddle(head)
+        root = TreeNode(mid.val)
+
+        if head == mid:
+            return root
+
+        # since the mid node was cut off during searching for mid
+        # sortedListToBST(head) will give us a mid node between head ~ mid_prev
+        root.left = self.sortedListToBST(head)
+        root.right = self.sortedListToBST(mid.next)
+
+        return root
+
+    def findMiddle(self, head):
+        # prevPtr will be the predecessor slowPtr and
+        # ultimately the predecessor to mid node
+        prevPtr, slowPtr, fastPtr = None, head, head
+
+        while fastPtr and fastPtr.next:
+            prevPtr = slowPtr
+            slowPtr = slowPtr.next
+            fastPtr = fastPtr.next.next
+
+        # need to cut the mid node off the linked-list
+        if prevPtr:
+            prevPtr.next = None
+
+        return slowPtr
 ```

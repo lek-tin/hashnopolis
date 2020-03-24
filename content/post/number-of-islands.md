@@ -70,11 +70,6 @@ BFS
 ```python
 from collections import deque
 
-class Coordinate:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         res = 0
@@ -84,34 +79,27 @@ class Solution:
 
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                if grid[i][j]:
+                if grid[i][j] == "1":
                     self.search(i, j, grid)
                     res += 1
         return res
 
-    def inBound(self, coor, grid):
-        x = coor.x
-        y = coor.y
+    def inBound(self, x, y, grid):
         return x >= 0 and x < len(grid) and y >= 0 and y < len(grid[0])
 
     def search(self, i, j, grid):
-        directions = [
-            [0, 1],
-            [0, -1],
-            [1, 0],
-            [-1, 0]
-        ]
+        directions = [ [0, 1], [0, -1], [1, 0], [-1, 0] ]
         q = deque()
-        q.append(Coordinate(i,j))
-        grid[i][j] = False
+        q.append( (i, j) )
+        grid[i][j] = "-1"
 
         while q:
-            coor = q.popleft()
-            for _, dir in enumerate(directions):
-                neighbour = Coordinate(coor.x + dir[0], coor.y + dir[1])
-                if not self.inBound(neighbour, grid):
+            x, y = q.popleft()
+            for dir in directions:
+                new_x, new_y = x+dir[0], y+dir[1]
+                if not self.inBound(new_x, new_y, grid):
                     continue
-                if grid[neighbour.x][neighbour.y]:
-                    grid[neighbour.x][neighbour.y] = False
-                    q.append(neighbour)
+                if grid[new_x][new_y] == "1":
+                    grid[new_x][new_y] = "-1"
+                    q.append( (new_x, new_y) )
 ```

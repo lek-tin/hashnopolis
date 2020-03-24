@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python"]
 categories: ["algorithm"]
 date: 2018-09-10T21:41:18+08:00
+lastmod: 2020-03-15T21:41:18+08:00
 draft: false
 archive: false
 ---
@@ -23,32 +24,26 @@ Output:
   [1,4],
 ]
 ```
+
 ### Solution
 ```python
 class Solution:
-    def combine(self, n, k):
-        """
-        :type n: int
-        :type k: int
-        :rtype: List[List[int]]
-        """
-        res = []
-        nums = list(range(1, n+1))
-        def iterate(index, tempAns):
-            ans = list(tempAns)
-            if len(ans) > k:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        def backtrack(start = 1, curr = []):
+            # if the combination is done
+            if len(curr) == k:
+                output.append(curr[:])
                 return
-            if index < n:
-                ans.append(index+1)
-            
-            print(ans)
-            if len(ans) == k:
-                res.append(ans)
-                return
-            for j in range(index+1, n):
-                iterate(j, ans)
-        for i in range(n-k+1):
-            iterate(i, [])
-            
-        return res
+            for i in range(start, n + 1):
+                # add i into the current combination
+                curr.append(i)
+                # use next integers to complete the combination
+                backtrack(i + 1, curr)
+                # backtrack
+                curr.pop()
+
+        output = []
+        backtrack()
+
+        return output
 ```

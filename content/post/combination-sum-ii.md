@@ -1,16 +1,17 @@
 ---
-title: "Combination Sum Ii"
+title: "Combination Sum II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "python", "dfs", "recursion"]
+tags: ["leetcode", "dfs", "backtracking"]
 categories: ["algorithm"]
 date: 2019-08-06T00:57:28-07:00
+lastmod: 2020-03-08T21:42:37+08:00
 draft: false
 archive: false
 ---
 Given a collection of candidate numbers (`candidates`) and a target number (`target`), find all unique combinations in `candidates` where the candidate numbers sums to `target`.
 
-Each number in `candidates` may only be used once in the combination.
+Each number in `candidates` may only be used **once** in the combination.
 
 ### Note
 
@@ -75,6 +76,7 @@ class Solution:
             ## Choose current number at i
             combination.append(candidates[i])
             ## Deduct current number at i from target and go one level deeper
+            ## Each number in `candidates` may only be used ONCE in the combination, hence i+1
             self.dfs(i+1, combination, target - candidates[i], results, candidates)
             ## Choose current number at i
             combination.pop()
