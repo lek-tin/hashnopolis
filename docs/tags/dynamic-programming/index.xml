@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dynamic-programming on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/dynamic-programming/</link>
+    <description>Recent content in dynamic-programming on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Sat, 21 Mar 2020 21:57:58 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Evaluate Division</title>
+      <link>http://www.hashnopolis.com/post/evaluate-division/</link>
+      <pubDate>Sat, 21 Mar 2020 21:57:58 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/evaluate-division/</guid>
+      <description>Equations are given in the format A / B = k, where A and B are variables represented as strings, and k is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return -1.0.
+Example Given a / b = 2.0, b / c = 3.0. queries are: a / c = ?, b / a = ?, a / e = ?</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Partitioning Ii</title>
+      <link>http://www.hashnopolis.com/post/palindrome-partitioning-ii/</link>
+      <pubDate>Sun, 15 Mar 2020 03:31:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/palindrome-partitioning-ii/</guid>
+      <description>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return the minimum cuts needed for a palindrome partitioning of s.
+Example Input: &amp;quot;aab&amp;quot; Output: 1 Explanation: The palindrome partitioning [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;] could be produced using 1 cut. Solution (DP) class Solution: def minCut(self, s: str) -&amp;gt; int: N = len(s) # valid[i][j] = True if s[i~j] IS palindrome, or False if IS NOT palindrome valid = [ [True for _ in range(N)] for _ in range(N) ] # min cuts of s[0~i] dp = [N for _ in range(N)] for l in range(2, N+1): for i in range(N-l+1): j = i+l-1 valid[i][j] = s[i]==s[j] and valid[i+1][j-1] for i in range(N): if valid[0][i]: # no cuts needed dp[i] = 0 continue for j in range(i): if valid[j+1][i]: #.</description>
+    </item>
+    
+    <item>
+      <title>Palindromic Substrings</title>
+      <link>http://www.hashnopolis.com/post/palindromic-substrings/</link>
+      <pubDate>Mon, 09 Mar 2020 16:46:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/palindromic-substrings/</guid>
+      <description>Given a string, your task is to count how many palindromic substrings in this string.
+The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters.
+Example 1 Input: &amp;quot;abc&amp;quot; Output: 3 Explanation: Three palindromic strings: &amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;. Example 2 Input: &amp;quot;aaa&amp;quot; Output: 6 Explanation: Six palindromic strings: &amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;, &amp;quot;a&amp;quot;, &amp;quot;aa&amp;quot;, &amp;quot;aa&amp;quot;, &amp;quot;aaa&amp;quot;. Note  The input string length won&amp;rsquo;t exceed 1000.</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum Iv</title>
+      <link>http://www.hashnopolis.com/post/combination-sum-iv/</link>
+      <pubDate>Sun, 08 Mar 2020 20:19:24 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/combination-sum-iv/</guid>
+      <description>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.
+Example nums = [1, 2, 3] target = 4 The possible combination ways are: (1, 1, 1, 1) (1, 1, 2) (1, 2, 1) (1, 3) (2, 1, 1) (2, 2) (3, 1) Note that different sequences are counted as different combinations. Therefore the output is 7.</description>
+    </item>
+    
+    <item>
+      <title>Paint House II</title>
+      <link>http://www.hashnopolis.com/post/paint-house-ii/</link>
+      <pubDate>Wed, 04 Mar 2020 23:30:09 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/paint-house-ii/</guid>
+      <description>There are a row of n houses, each house can be painted with one of the k colors. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.
+The cost of painting each house with a certain color is represented by a n x k cost matrix. For example, costs[0][0] is the cost of painting house 0 with color 0; costs[1][2] is the cost of painting house 1 with color 2, and so on&amp;hellip; Find the minimum cost to paint all houses.</description>
+    </item>
+    
+    <item>
+      <title>Paint House</title>
+      <link>http://www.hashnopolis.com/post/paint-house/</link>
+      <pubDate>Wed, 04 Mar 2020 23:27:37 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/paint-house/</guid>
+      <description>There are a row of n houses, each house can be painted with one of the three colors: red, blue or green. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.
+The cost of painting each house with a certain color is represented by a n x 3 cost matrix. For example, costs[0][0] is the cost of painting house 0 with color red; costs[1][2] is the cost of painting house 1 with color green, and so on&amp;hellip; Find the minimum cost to paint all houses.</description>
+    </item>
+    
+    <item>
+      <title>Longest Bitonic Subsequence</title>
+      <link>http://www.hashnopolis.com/post/longest-bitonic-subsequence/</link>
+      <pubDate>Tue, 03 Mar 2020 02:27:40 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-bitonic-subsequence/</guid>
+      <description>Given an array arr[0 … n-1] containing n positive integers, a subsequence of arr[] is called Bitonic if it is first increasing, then decreasing. Write a function that takes an array as argument and returns the length of the longest bitonic subsequence. A sequence, sorted in increasing order is considered Bitonic with the decreasing part as empty. Similarly, decreasing order sequence is considered Bitonic with the increasing part as empty.</description>
+    </item>
+    
+    <item>
+      <title>Decode Ways II</title>
+      <link>http://www.hashnopolis.com/post/decode-ways-ii/</link>
+      <pubDate>Tue, 25 Feb 2020 02:24:42 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/decode-ways-ii/</guid>
+      <description>A message containing letters from A-Z is being encoded to numbers using the following mapping way:
+&#39;A&#39; -&amp;gt; 1 &#39;B&#39; -&amp;gt; 2 ... &#39;Z&#39; -&amp;gt; 26 Beyond that, now the encoded string can also contain the character &#39;*&#39;, which can be treated as one of the numbers from 1 to 9.
+Given the encoded message containing digits and the character &#39;*&#39;, return the total number of ways to decode it.</description>
+    </item>
+    
+    <item>
+      <title>Shortest Common Supersequence</title>
+      <link>http://www.hashnopolis.com/post/shortest-common-supersequence/</link>
+      <pubDate>Sun, 16 Feb 2020 13:24:49 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/shortest-common-supersequence/</guid>
+      <description>Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If multiple answers exist, you may return any of them.
+(A string S is a subsequence of string T if deleting some number of characters from T (possibly 0, and the characters are chosen anywhere from T) results in the string S.)
+Example 1: Input: str1 = &amp;quot;abac&amp;quot;, str2 = &amp;quot;cab&amp;quot; Output: &amp;quot;cabac&amp;quot; Explanation: str1 = &amp;quot;abac&amp;quot; is a subsequence of &amp;quot;cabac&amp;quot; because we can delete the first &amp;quot;c&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Longest Common Substring</title>
+      <link>http://www.hashnopolis.com/post/longest-common-substring/</link>
+      <pubDate>Sun, 16 Feb 2020 12:34:38 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-common-substring/</guid>
+      <description>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m + 1, n + 1.  int L[][] = new int[m+1][n+1]; /* Following steps build L[m+1][n+1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&amp;lt;=m; i++) { for (int j=0; j&amp;lt;=n; j++) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] + 1 = 0 + 1 = 1  L[i][j] = L[i-1][j-1] + 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</description>
+    </item>
+    
+    <item>
+      <title>Greatest Sum Divisible by Three</title>
+      <link>http://www.hashnopolis.com/post/greatest-sum-divisible-by-three/</link>
+      <pubDate>Sat, 15 Feb 2020 14:34:52 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/greatest-sum-divisible-by-three/</guid>
+      <description>Given an array nums of integers, we need to find the maximum possible sum of elements of the array such that it is divisible by three.
+Example 1: Input: nums = [3,6,5,1,8] Output: 18 Explanation: Pick numbers 3, 6, 1 and 8 their sum is 18 (maximum sum divisible by 3). Example 2: Input: nums = [4] Output: 0 Explanation: Since 4 is not divisible by 3, do not pick any number.</description>
+    </item>
+    
+    <item>
+      <title>Concatenated Words</title>
+      <link>http://www.hashnopolis.com/post/concatenated-words/</link>
+      <pubDate>Thu, 12 Dec 2019 22:43:05 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/concatenated-words/</guid>
+      <description>Given a list of words (without duplicates), please write a program that returns all concatenated words in the given list of words. A concatenated word is defined as a string that is comprised entirely of at least two shorter words in the given array.
+Example: Input: [&amp;quot;cat&amp;quot;,&amp;quot;cats&amp;quot;,&amp;quot;catsdogcats&amp;quot;,&amp;quot;dog&amp;quot;,&amp;quot;dogcatsdog&amp;quot;,&amp;quot;hippopotamuses&amp;quot;,&amp;quot;rat&amp;quot;,&amp;quot;ratcatdogcat&amp;quot;] Output: [&amp;quot;catsdogcats&amp;quot;,&amp;quot;dogcatsdog&amp;quot;,&amp;quot;ratcatdogcat&amp;quot;] Explanation: &amp;quot;catsdogcats&amp;quot; can be concatenated by &amp;quot;cats&amp;quot;, &amp;quot;dog&amp;quot; and &amp;quot;cats&amp;quot;; &amp;quot;dogcatsdog&amp;quot; can be concatenated by &amp;quot;dog&amp;quot;, &amp;quot;cats&amp;quot; and &amp;quot;dog&amp;quot;; &amp;quot;ratcatdogcat&amp;quot; can be concatenated by &amp;quot;rat&amp;quot;, &amp;quot;cat&amp;quot;, &amp;quot;dog&amp;quot; and &amp;quot;cat&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Concatenate String Using Smaller Strings</title>
+      <link>http://www.hashnopolis.com/post/concatenate-string-using-smaller-strings/</link>
+      <pubDate>Mon, 09 Dec 2019 21:41:31 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/concatenate-string-using-smaller-strings/</guid>
+      <description>Given a big string and a list of small strings, find whether the big string can be represented only by concatenation of smaller strings.
+Example: target = &amp;quot;abccbacbb&amp;quot; smallerStrings = [&amp;quot;abc&amp;quot;, &amp;quot;cc&amp;quot;, &amp;quot;ab&amp;quot;, &amp;quot;bac&amp;quot;, &amp;quot;b&amp;quot;] Output: True Solution Dynamic programming
+target = &amp;#34;abccbacbb&amp;#34; smallerStrings = [&amp;#34;abc&amp;#34;, &amp;#34;cc&amp;#34;, &amp;#34;ab&amp;#34;, &amp;#34;bac&amp;#34;, &amp;#34;b&amp;#34;] N = len(target) dp = [False for _ in range(N)] def check(i, target): for s in smallerStrings: l = len(s) # print(s) if i + l &amp;lt;= N: tryStr = target[i:i+l] # print(tryStr) if tryStr == s: dp[i+l-1] = True check(i+l, target) # print(&amp;#34;-------&amp;#34;) check(0, target) print(dp) print(dp[N-1]) </description>
+    </item>
+    
+    <item>
+      <title>Longest Valid Parentheses</title>
+      <link>http://www.hashnopolis.com/post/longest-valid-parentheses/</link>
+      <pubDate>Sat, 30 Nov 2019 03:24:56 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-valid-parentheses/</guid>
+      <description>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
+Example 1: Input: &amp;quot;(()&amp;quot; Output: 2 Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot; Example 2: Input: &amp;quot;)()())&amp;quot; Output: 4 Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot; Solution Dynamic programming
+// Time: `O(n)` // Space: `O(n)` public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</description>
+    </item>
+    
+    <item>
+      <title>Best Time to Buy and Sell Stock III</title>
+      <link>http://www.hashnopolis.com/post/best-time-to-buy-and-sell-stock-iii/</link>
+      <pubDate>Fri, 29 Nov 2019 23:12:48 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/best-time-to-buy-and-sell-stock-iii/</guid>
+      <description>Say you have an array for which the ithelement is the price of a given stock on day i.
+Design an algorithm to find the maximum profit. You may complete at most two transactions.
+Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
+Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</description>
+    </item>
+    
+    <item>
+      <title>Min Cost Climbing Stairs</title>
+      <link>http://www.hashnopolis.com/post/min-cost-climbing-stairs/</link>
+      <pubDate>Wed, 20 Nov 2019 23:55:40 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/min-cost-climbing-stairs/</guid>
+      <description>On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+Once you pay the cost, you can either climb one or two steps. You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.
+Example 1: Input: cost = [10, 15, 20] Output: 15 Explanation: Cheapest is start on cost[1], pay that cost and go to the top.</description>
+    </item>
+    
+    <item>
+      <title>Guess Number Higher or Lower II</title>
+      <link>http://www.hashnopolis.com/post/guess-number-higher-or-lower-ii/</link>
+      <pubDate>Thu, 19 Sep 2019 23:33:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/guess-number-higher-or-lower-ii/</guid>
+      <description>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I&amp;rsquo;ll tell you whether the number I picked is higher or lower.
+However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</description>
+    </item>
+    
+    <item>
+      <title>Perfect Squares</title>
+      <link>http://www.hashnopolis.com/post/perfect-squares/</link>
+      <pubDate>Sat, 14 Sep 2019 16:03:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/perfect-squares/</guid>
+      <description>Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
+Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4. Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 + 9. Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n+1)] for i in range(1, n+1): for j in range(1, n+1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]+1) return count[n] </description>
+    </item>
+    
+    <item>
+      <title>Russian Doll Envelopes</title>
+      <link>http://www.hashnopolis.com/post/russian-doll-envelopes/</link>
+      <pubDate>Tue, 10 Sep 2019 00:37:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/russian-doll-envelopes/</guid>
+      <description>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
+What is the maximum number of envelopes can you Russian doll? (put one inside other)
+Note: Rotation is not allowed.
+Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&amp;gt; [5,4] =&amp;gt; [6,7]).</description>
+    </item>
+    
+    <item>
+      <title>Coin Change</title>
+      <link>http://www.hashnopolis.com/post/coin-change/</link>
+      <pubDate>Sat, 07 Sep 2019 23:58:51 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/coin-change/</guid>
+      <description>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1 Example 2: Input: coins = [2], amount = 3 Output: -1 Note: You may assume that you have an infinite number of each kind of coin.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Product Subarray</title>
+      <link>http://www.hashnopolis.com/post/maximum-product-subarray/</link>
+      <pubDate>Wed, 04 Sep 2019 23:44:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/maximum-product-subarray/</guid>
+      <description>Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
+Example 1 Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6. Example 2 Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray. Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max( max(currMax * nums[i], currMin * nums[i]), nums[i] ) newCurrMin = min( min(currMax * nums[i], currMin * nums[i]), nums[i] ) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res Solution (need to return the subarray) class Solution: def maxProduct(self, nums: List[int]) -&amp;gt; int: n = len(nums) if n == 0: return 0 res = prevMin = prevMax = nums[0] maxPos = 0 minLens = [1 for _ in range(n)] maxLens = [1 for _ in range(n)] print(prevMin, prevMax) for i in range(1, n): num = nums[i] currMin, currMax = prevMin, prevMax if num &amp;gt; 0: if prevMax * num &amp;gt; num: currMax *= num maxLens[i] = maxLens[i-1] + 1 else: currMax = num if prevMin * num &amp;lt; num: currMin *= num minLens[i] = minLens[i-1] + 1 else: currMin = num else: if prevMin * num &amp;gt; num: currMax = prevMin * num maxLens[i] = minLens[i-1] + 1 else: currMax = num if prevMax * num &amp;lt; num: currMin = prevMax * num minLens[i] = maxLens[i-1] + 1 else: currMin = num prevMin, prevMax = currMin, currMax if prevMax &amp;gt; res: maxPos = i res = prevMax print(prevMin, prevMax) print(minLens) print(maxLens) maxLen = maxLens[maxPos] maxSubarr = nums[maxPos+1-maxLen:maxPos+1] print(maxSubarr) return res </description>
+    </item>
+    
+    <item>
+      <title>Triangle</title>
+      <link>http://www.hashnopolis.com/post/triangle/</link>
+      <pubDate>Wed, 04 Sep 2019 23:06:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/triangle/</guid>
+      <description>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
+For example, given the following triangle
+[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11). Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</description>
+    </item>
+    
+    <item>
+      <title>Minimum Path Sum</title>
+      <link>http://www.hashnopolis.com/post/minimum-path-sum/</link>
+      <pubDate>Mon, 02 Sep 2019 23:04:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/minimum-path-sum/</guid>
+      <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution 1 (DP with n extra space) class Solution: def minPathSum(self, grid: List[List[int]]) -&amp;gt; int: m = len(grid) n = len(grid[0]) if m == 0 or n == 0: return 0 sums = [[0 for _ in range(n)] for _ in range(m)] sums[0][0] = grid[0][0] for i in range(1, m): sums[i][0] = sums[i-1][0] + grid[i][0] for i in range(1, n): sums[0][i] = sums[0][i-1] + grid[0][i] for i in range(1, m): for j in range(1, n): sums[i][j] = min(sums[i-1][j], sums[i][j-1]) + grid[i][j] return sums[-1][-1] Solution 2 (DP with no extra space) class Solution: def minPathSum(self, grid): &amp;#34;&amp;#34;&amp;#34; :type grid: List[List[int]] :rtype: int &amp;#34;&amp;#34;&amp;#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
+    </item>
+    
+    <item>
+      <title>Largest Divisible Subset</title>
+      <link>http://www.hashnopolis.com/post/largest-divisible-subset/</link>
+      <pubDate>Thu, 29 Aug 2019 02:15:01 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/largest-divisible-subset/</guid>
+      <description>Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
+Si % Sj = 0 or Sj % Si = 0.
+If there are multiple solutions, return any subset is fine.
+Example 1: Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok) Example 2: Input: [1,2,4,8] Output: [1,2,4,8] Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&amp;gt; List[int]: if not nums or len(nums) == 0: return [] nums.</description>
+    </item>
+    
+    <item>
+      <title>Coin Change 2</title>
+      <link>http://www.hashnopolis.com/post/coin-change-2/</link>
+      <pubDate>Sat, 06 Apr 2019 22:45:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/coin-change-2/</guid>
+      <description>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
+Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2+2+1 5=2+1+1+1 5=1+1+1+1+1 Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Path Sum</title>
+      <link>http://www.hashnopolis.com/post/maximum-path-sum/</link>
+      <pubDate>Sat, 16 Mar 2019 01:17:11 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/maximum-path-sum/</guid>
+      <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+Note: You can only move either down or right at any point in time.
+Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</description>
+    </item>
+    
+    <item>
+      <title>Unique Paths II</title>
+      <link>http://www.hashnopolis.com/post/unique-paths-ii/</link>
+      <pubDate>Sat, 02 Mar 2019 12:24:17 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/unique-paths-ii/</guid>
+      <description>A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
+Now consider if some obstacles are added to the grids. How many unique paths would there be?
+An obstacle and empty space is marked as 1 and 0 respectively in the grid.</description>
+    </item>
+    
+    <item>
+      <title>Maximal Rectangle</title>
+      <link>http://www.hashnopolis.com/post/maximal-rectangle/</link>
+      <pubDate>Mon, 25 Feb 2019 00:41:33 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/maximal-rectangle/</guid>
+      <description>Given a 2D binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest rectangle containing only 1&amp;rsquo;s and return its area.
+Example: Input: [ [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;0&amp;quot;], [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;], [&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;1&amp;quot;], [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;] ] Output: 6 Hint Height:
+1 0 1 0 0 2 0 2 1 1 3 1 3 2 2 4 0 0 3 0 Left:
+0 0 2 0 0 0 0 2 2 2 0 0 2 2 2 0 0 0 3 0 Right:</description>
+    </item>
+    
+    <item>
+      <title>House Robber II</title>
+      <link>http://www.hashnopolis.com/post/house-robber-ii/</link>
+      <pubDate>Thu, 21 Feb 2019 19:39:05 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/house-robber-ii/</guid>
+      <description>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Subarray</title>
+      <link>http://www.hashnopolis.com/post/maximum-subarray/</link>
+      <pubDate>Wed, 20 Feb 2019 22:30:14 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/maximum-subarray/</guid>
+      <description>Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+Example: Input: [-2,1,-3,4,-1,2,1,-5,4], Output: 6 Explanation: [4,-1,2,1] has the largest sum = 6. Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+Solution (Dynamic Programming) class Solution { public int maxSubArray(int[] nums) { if (nums.</description>
+    </item>
+    
+    <item>
+      <title>Longest Common Subsequence</title>
+      <link>http://www.hashnopolis.com/post/longest-common-subsequence/</link>
+      <pubDate>Fri, 15 Feb 2019 17:28:18 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-common-subsequence/</guid>
+      <description>The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). It differs from the longest common substring problem: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
+Optimal Substructure: Let the input sequences be X[0..m-1] and Y[0..n-1] of lengths m and n respectively. And let L(X[0..m-1], Y[0..n-1]) be the length of LCS of the two sequences X and Y.</description>
+    </item>
+    
+    <item>
+      <title>Trapping Rain Water</title>
+      <link>http://www.hashnopolis.com/post/trapping-rain-water/</link>
+      <pubDate>Sat, 26 Jan 2019 23:39:49 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/trapping-rain-water/</guid>
+      <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
+Example: Input: [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6 Solution 1 Time: O(n)
+Space: O(1)
+class Solution { public int trap(int[] height) { int n = height.</description>
+    </item>
+    
+    <item>
+      <title>Longest Palindromic Substring</title>
+      <link>http://www.hashnopolis.com/post/longest-palindromic-substring/</link>
+      <pubDate>Tue, 22 Jan 2019 22:29:56 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-palindromic-substring/</guid>
+      <description>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+Example 1 Input: &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Note: &amp;quot;aba&amp;quot; is also a valid answer. Example 2 Input: &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot; Solution Dynamic Programming
+# https://leetcode.com/problems/longest-palindromic-substring/discuss/157861/Python3-DP-Solution-with-Lots-of-Comments # time: O(n^2) # space: O(n^2) class Solution(object): def longestPalindrome(self, s): &amp;#34;&amp;#34;&amp;#34; :type s: str :rtype: str &amp;#34;&amp;#34;&amp;#34; str_len = len(s) if str_len == 0: return &amp;#34;&amp;#34; # Initialize DP table (dimensions: str_len x str_len) memo = [[False for i in range(str_len)] for j in range(str_len)] start = 0 # Starting index of the longest palindrome max_len = 1 # Length of the longest palindrome # Fill DP table for single char palindromes for i in range(str_len): memo[i][i] = True # Fill DP table for 2 char long palindromes for i in range(str_len - 1): j = i + 1 if s[i] == s[j]: memo[i][j] = True start = i max_len = 2 # Fill DP table for palindromes of every other length # starting from 3 for length in range(3, str_len + 1): for i in range(str_len - length + 1): j = i + (length - 1) if s[i] == s[j] and memo[i+1][j-1]: memo[i][j] = True start = i max_len = length return s[start: start + max_len] # time: O(n^2) # space: O(1) class Solution(object): def __init__(self): self.</description>
+    </item>
+    
+    <item>
+      <title>Edit Distance</title>
+      <link>http://www.hashnopolis.com/post/edit-distance/</link>
+      <pubDate>Thu, 17 Jan 2019 23:56:53 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/edit-distance/</guid>
+      <description>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
+You have the following 3 operations permitted on a word:
+ Insert a character Delete a character Replace a character  Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot; Output: 3 Explanation: horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&amp;gt; rose (remove &#39;r&#39;) rose -&amp;gt; ros (remove &#39;e&#39;) Example 2: Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot; Output: 5 Explanation: intention -&amp;gt; inention (remove &#39;t&#39;) inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&amp;gt; execution (insert &#39;u&#39;) Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</description>
+    </item>
+    
+    <item>
+      <title>Longest Increasing Subsequence</title>
+      <link>http://www.hashnopolis.com/post/longest-increasing-subsequence/</link>
+      <pubDate>Wed, 19 Dec 2018 10:47:57 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-increasing-subsequence/</guid>
+      <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution Bottom-up solution:</description>
+    </item>
+    
+    <item>
+      <title>Word Break II</title>
+      <link>http://www.hashnopolis.com/post/word-break-ii/</link>
+      <pubDate>Thu, 29 Nov 2018 00:00:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/word-break-ii/</guid>
+      <description>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.  Example 1 Input: s = &amp;quot;catsanddog&amp;quot; wordDict = [&amp;quot;cat&amp;quot;, &amp;quot;cats&amp;quot;, &amp;quot;and&amp;quot;, &amp;quot;sand&amp;quot;, &amp;quot;dog&amp;quot;] Output: [ &amp;quot;cats and dog&amp;quot;, &amp;quot;cat sand dog&amp;quot; ] Example 2 Input: s = &amp;quot;pineapplepenapple&amp;quot; wordDict = [&amp;quot;apple&amp;quot;, &amp;quot;pen&amp;quot;, &amp;quot;applepen&amp;quot;, &amp;quot;pine&amp;quot;, &amp;quot;pineapple&amp;quot;] Output: [ &amp;quot;pine apple pen apple&amp;quot;, &amp;quot;pineapple pen apple&amp;quot;, &amp;quot;pine applepen apple&amp;quot; ] Explanation: Note that you are allowed to reuse a dictionary word.</description>
+    </item>
+    
+    <item>
+      <title>Product of Array Except Self</title>
+      <link>http://www.hashnopolis.com/post/product-of-array-except-self/</link>
+      <pubDate>Sat, 03 Nov 2018 16:41:47 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/product-of-array-except-self/</guid>
+      <description>Given an array of n integers where n &amp;gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+Solve it without division and in O(n).
+For example, given [1,2,3,4], return [24,12,8,6].
+Solution 1 Time: O(n)
+Space: O(n)
+class Solution: def productExceptSelf(self, nums: List[int]) -&amp;gt; List[int]: left, right = [nums[0]], [nums[-1]] N = len(nums) if N &amp;lt;= 1: return 0 res = [] for i in range(1, N-1): left.</description>
+    </item>
+    
+    <item>
+      <title>Maximal Square</title>
+      <link>http://www.hashnopolis.com/post/maximal-square/</link>
+      <pubDate>Thu, 01 Nov 2018 23:18:11 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/maximal-square/</guid>
+      <description>Given a 2D binary matrix filled with 0&#39;s and 1&#39;s, find the largest square containing only 1&#39;s and return its area.
+Example Input: 1 0 1 0 0 1 0 **1** **1** 1 1 1 **1** **1** 1 1 0 0 1 0 Output: 4 Solution class Solution: def maximalSquare(self, matrix): &amp;#34;&amp;#34;&amp;#34; :type matrix: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;#34;1&amp;#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;#34;1&amp;#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;#34;0&amp;#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2 class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</description>
+    </item>
+    
+    <item>
+      <title>House Robber</title>
+      <link>http://www.hashnopolis.com/post/house-robber/</link>
+      <pubDate>Thu, 25 Oct 2018 23:45:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/house-robber/</guid>
+      <description>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.</description>
+    </item>
+    
+    <item>
+      <title>Word Break</title>
+      <link>http://www.hashnopolis.com/post/word-break/</link>
+      <pubDate>Wed, 10 Oct 2018 23:57:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/word-break/</guid>
+      <description>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.  Example 1 Input: s = &amp;quot;leetcode&amp;quot;, wordDict = [&amp;quot;leet&amp;quot;, &amp;quot;code&amp;quot;] Output: true Explanation: Return true because &amp;quot;leetcode&amp;quot; can be segmented as &amp;quot;leet code&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Decode Ways</title>
+      <link>http://www.hashnopolis.com/post/decode-ways/</link>
+      <pubDate>Wed, 03 Oct 2018 23:49:00 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/decode-ways/</guid>
+      <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
+&amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
+Example 1 Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12). Example 2 Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
+    </item>
+    
+    <item>
+      <title>Unique Binary Search Trees</title>
+      <link>http://www.hashnopolis.com/post/unique-binary-search-trees/</link>
+      <pubDate>Sun, 16 Sep 2018 15:06:01 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/unique-binary-search-trees/</guid>
+      <description>Given n, how many structurally unique BST&#39;s (binary search trees) that store values 1 &amp;hellip; n?
+Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3 Exaplanation n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0); Solution class Solution: def numTrees(self, n): &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: int &amp;#34;&amp;#34;&amp;#34; res = [1] for i in range(1, n+1): for j in range(i): res.</description>
+    </item>
+    
+    <item>
+      <title>Unique Paths</title>
+      <link>http://www.hashnopolis.com/post/unique-paths/</link>
+      <pubDate>Sat, 15 Sep 2018 12:54:17 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/unique-paths/</guid>
+      <description>A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).
+How many possible unique paths are there?
+Above is a 7 x 3 grid. How many possible unique paths are there?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>backtracking on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/backtracking/</link>
+    <description>Recent content in backtracking on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Mon, 09 Mar 2020 17:26:30 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/backtracking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generalized Abbreviation</title>
+      <link>http://www.hashnopolis.com/post/generalized-abbreviation/</link>
+      <pubDate>Mon, 09 Mar 2020 17:26:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/generalized-abbreviation/</guid>
+      <description>Write a function to generate the generalized abbreviations of a word.
+Note The order of the output does not matter.
+Example Input: &amp;quot;word&amp;quot; Output: [&amp;quot;word&amp;quot;, &amp;quot;1ord&amp;quot;, &amp;quot;w1rd&amp;quot;, &amp;quot;wo1d&amp;quot;, &amp;quot;wor1&amp;quot;, &amp;quot;2rd&amp;quot;, &amp;quot;w2d&amp;quot;, &amp;quot;wo2&amp;quot;, &amp;quot;1o1d&amp;quot;, &amp;quot;1or1&amp;quot;, &amp;quot;w1r1&amp;quot;, &amp;quot;1o2&amp;quot;, &amp;quot;2r1&amp;quot;, &amp;quot;3d&amp;quot;, &amp;quot;w3&amp;quot;, &amp;quot;4&amp;quot;] Example class Solution: def generateAbbreviations(self, word: str) -&amp;gt; List[str]: results = [] self.backtrack(results, word, &amp;#34;&amp;#34;, 0, 0) return results def backtrack(self, results, word, curr, start, count): print(curr, start, count) # &amp;#34;&amp;#34; 0 0 # &amp;#34;&amp;#34; 1 1 # &amp;#34;&amp;#34; 2 2 # &amp;#34;&amp;#34; 3 3 # &amp;#34;&amp;#34; 4 4 # ------------ # 3d 4 0 # ------------ # 2r 3 0 # 2r 4 1 # ------------ # 2rd 4 0 # ------------ # 1o 2 0 # 1o 3 1 # 1o 4 2 # ------------ # 1o1d 4 0 # ------------ # 1or 3 0 # 1or 4 1 # ------------ # 1ord 4 0 # ------------ # w 1 0 # w 2 1 # w 3 2 # w 4 3 # ------------ # w2d 4 0 # ------------ # w1r 3 0 # w1r 4 1 # ------------ # w1rd 4 0 # ------------ # wo 2 0 # wo 3 1 # wo 4 2 # ------------ # wo1d 4 0 # ------------ # wor 3 0 # wor 4 1 # ------------ # word 4 0 # ------------ if start == len(word): if count &amp;gt; 0: curr += str(count) # curr could be &amp;#34;4&amp;#34; or &amp;#34;abcd&amp;#34; results.</description>
+    </item>
+    
+    <item>
+      <title>Palindrome Partitioning</title>
+      <link>http://www.hashnopolis.com/post/palindrome-partitioning/</link>
+      <pubDate>Wed, 07 Aug 2019 00:27:33 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/palindrome-partitioning/</guid>
+      <description>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return all possible palindrome partitioning of s.
+Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;quot;b&amp;quot;], [&amp;quot;a&amp;quot;,&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;] ] Solution # Time: O(n*2^n) # Space: `O(n)`. At any time, only one call stack will be in progress # For example, in put &amp;#39;ababaaeqwds&amp;#39;, one possible call stack will look like &amp;#39;aba&amp;#39;-&amp;gt;&amp;#39;b&amp;#39;-&amp;gt;&amp;#39;aa&amp;#39;-&amp;gt;&amp;#39;e&amp;#39;-&amp;gt;&amp;#39;q&amp;#39;-&amp;gt;&amp;#39;w&amp;#39;-&amp;gt;&amp;#39;d&amp;#39;-&amp;gt;&amp;#39;s&amp;#39;: n space class Solution: def partition(self, s: str) -&amp;gt; List[List[str]]: if len(s) == 0 or s == None: return [] results = [] temp = [] self.</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum II</title>
+      <link>http://www.hashnopolis.com/post/combination-sum-ii/</link>
+      <pubDate>Tue, 06 Aug 2019 00:57:28 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/combination-sum-ii/</guid>
+      <description>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+Each number in candidates may only be used once in the combination.
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</description>
+    </item>
+    
+    <item>
+      <title>Generate Parentheses</title>
+      <link>http://www.hashnopolis.com/post/generate-parentheses/</link>
+      <pubDate>Mon, 22 Jul 2019 23:08:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/generate-parentheses/</guid>
+      <description>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+For example, given n = 3, a solution set is:
+[ &amp;quot;((()))&amp;quot;, &amp;quot;(()())&amp;quot;, &amp;quot;(())()&amp;quot;, &amp;quot;()(())&amp;quot;, &amp;quot;()()()&amp;quot; ] Solution class Solution: def generateParenthesis(self, n: int) -&amp;gt; List[str]: &amp;#34;&amp;#34;&amp;#34; :type n: int :rtype: List[str] &amp;#34;&amp;#34;&amp;#34; ans = [] self.dfs(ans, &amp;#39;&amp;#39;, 0, 0, n) return ans def dfs(self, ans, S, left, right, n): if len(S) == 2 * n: ans.</description>
+    </item>
+    
+    <item>
+      <title>Subsets II</title>
+      <link>http://www.hashnopolis.com/post/subsets-ii/</link>
+      <pubDate>Mon, 08 Oct 2018 13:04:14 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/subsets-ii/</guid>
+      <description>Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
+Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution Time: O(n * 2^n)
+Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
+class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+    </item>
+    
+    <item>
+      <title>Subsets</title>
+      <link>http://www.hashnopolis.com/post/subsets/</link>
+      <pubDate>Sat, 15 Sep 2018 12:48:42 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/subsets/</guid>
+      <description>Given a set of distinct integers, nums, return all possible subsets (the power set).
+Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ] Solution Time: O(n * 2^n)
+Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
+class Solution: def subsets(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum III</title>
+      <link>http://www.hashnopolis.com/post/combination-sum-iii/</link>
+      <pubDate>Mon, 10 Sep 2018 21:42:37 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/combination-sum-iii/</guid>
+      <description>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: k = 3, n = 7 Output: [[1,2,4]] Example 2 Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]] Solution class Solution: def combinationSum3(self, k: int, n: int) -&amp;gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Start DFS self.</description>
+    </item>
+    
+    <item>
+      <title>Combination Sum</title>
+      <link>http://www.hashnopolis.com/post/combination-sum/</link>
+      <pubDate>Mon, 10 Sep 2018 21:42:01 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/combination-sum/</guid>
+      <description>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+The same repeated number may be chosen from candidates unlimited number of times.
+Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: candidates = [2,3,6,7], target = 7, A solution set is: [ [7], [2,2,3] ] Example 2 Input: candidates = [2,3,5], target = 8, A solution set is: [ [2,2,2,2], [2,3,3], [3,5] ] Solution class Solution: def combinationSum(self, candidates: List[int], target: int) -&amp;gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Edge cases if candidates == None: return results if len(candidates) == 0: results.</description>
+    </item>
+    
+  </channel>
+</rss>

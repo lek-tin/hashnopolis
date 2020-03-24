@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deque on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/deque/</link>
+    <description>Recent content in deque on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Sat, 21 Mar 2020 22:04:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/deque/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moving Average From Data Stream</title>
+      <link>http://www.hashnopolis.com/post/moving-average-from-data-stream/</link>
+      <pubDate>Sat, 21 Mar 2020 22:04:00 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/moving-average-from-data-stream/</guid>
+      <description>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+Example MovingAverage m = new MovingAverage(3); m.next(1) = 1 m.next(10) = (1 + 10) / 2 m.next(3) = (1 + 10 + 3) / 3 m.next(5) = (10 + 3 + 5) / 3 Solution from collections import deque class MovingAverage: def __init__(self, size: int): &amp;#34;&amp;#34;&amp;#34; Initialize your data structure here.</description>
+    </item>
+    
+    <item>
+      <title>Logger Rate Limiter</title>
+      <link>http://www.hashnopolis.com/post/logger-rate-limiter/</link>
+      <pubDate>Sat, 21 Mar 2020 20:05:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/logger-rate-limiter/</guid>
+      <description>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
+Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.
+It is possible that several messages arrive roughly at the same time.
+Example Logger logger = new Logger(); // logging string &amp;quot;foo&amp;quot; at timestamp 1 logger.</description>
+    </item>
+    
+    <item>
+      <title>Design Hit Counter</title>
+      <link>http://www.hashnopolis.com/post/design-hit-counter/</link>
+      <pubDate>Sat, 21 Mar 2020 19:18:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/design-hit-counter/</guid>
+      <description>Design a hit counter which counts the number of hits received in the past 5 minutes.
+Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.
+It is possible that several hits arrive roughly at the same time.
+Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</description>
+    </item>
+    
+    <item>
+      <title>Shortest Subarray With Sum at Least K</title>
+      <link>http://www.hashnopolis.com/post/shortest-subarray-with-sum-at-least-k/</link>
+      <pubDate>Tue, 10 Mar 2020 04:14:10 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/shortest-subarray-with-sum-at-least-k/</guid>
+      <description>Return the length of the shortest, non-empty, contiguous subarray of A with sum at least K.
+If there is no non-empty subarray with sum at least K, return -1.
+Example 1 Input: A = [1], K = 1 Output: 1 Example 2 Input: A = [1,2], K = 4 Output: -1 Example 3 Input: A = [2,-1,2], K = 3 Output: 3 Note  1 &amp;lt;= A.length &amp;lt;= 50000 -10 ^ 5 &amp;lt;= A[i] &amp;lt;= 10 ^ 5 1 &amp;lt;= K &amp;lt;= 10 ^ 9  Solution (sliding window using pointers) This version exceeds time limit Time: O(N)</description>
+    </item>
+    
+    <item>
+      <title>Sliding Window Maximum</title>
+      <link>http://www.hashnopolis.com/post/sliding-window-maximum/</link>
+      <pubDate>Fri, 08 Mar 2019 23:26:00 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/sliding-window-maximum/</guid>
+      <description>Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
+Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7 Note: You may assume k is always valid, 1 ≤ k ≤ input array&amp;rsquo;s size for non-empty array.</description>
+    </item>
+    
+  </channel>
+</rss>

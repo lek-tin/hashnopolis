@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linked-list on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/linked-list/</link>
+    <description>Recent content in linked-list on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Sat, 24 Aug 2019 17:36:35 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Palindrome Linked List</title>
+      <link>http://www.hashnopolis.com/post/palindrome-linked-list/</link>
+      <pubDate>Sat, 24 Aug 2019 17:36:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/palindrome-linked-list/</guid>
+      <description>Given a singly linked list, determine if it is a palindrome.
+Example 1: Input: 1-&amp;gt;2 Output: false Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
+Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&amp;gt; bool: if not head: return True middle = self.</description>
+    </item>
+    
+    <item>
+      <title>Copy List With Random Pointer</title>
+      <link>http://www.hashnopolis.com/post/copy-list-with-random-pointer/</link>
+      <pubDate>Sun, 11 Aug 2019 23:34:11 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/copy-list-with-random-pointer/</guid>
+      <description>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution Solution 1: Insert cloned nodes in between original nodes then connect the cloned nodes
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Nodes in K Group</title>
+      <link>http://www.hashnopolis.com/post/reverse-nodes-in-k-group/</link>
+      <pubDate>Sun, 11 Aug 2019 18:04:36 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/reverse-nodes-in-k-group/</guid>
+      <description>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
+Example Given this linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5
+For k = 2, you should return: 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5</description>
+    </item>
+    
+    <item>
+      <title>Reverse Linked List</title>
+      <link>http://www.hashnopolis.com/post/reverse-linked-list/</link>
+      <pubDate>Sat, 10 Aug 2019 23:51:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/reverse-linked-list/</guid>
+      <description>Reverse a singly linked list.
+Example: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode cur = head, prev = null, after = new ListNode(0); // null 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 -&amp;gt; 5 -&amp;gt; NULL  // prev cur after  while (cur !</description>
+    </item>
+    
+    <item>
+      <title>Insert Into a Cyclic Sorted List</title>
+      <link>http://www.hashnopolis.com/post/insert-into-a-cyclic-sorted-list/</link>
+      <pubDate>Tue, 26 Mar 2019 20:15:43 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/insert-into-a-cyclic-sorted-list/</guid>
+      <description>Given a node from a cyclic linked list which is sorted in ascending order, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be a reference to any single node in the list, and may not be necessarily the smallest value in the cyclic list.
+If there are multiple suitable places for insertion, you may choose any place to insert the new value.</description>
+    </item>
+    
+    <item>
+      <title>Add Two Numbers</title>
+      <link>http://www.hashnopolis.com/post/add-two-numbers/</link>
+      <pubDate>Mon, 21 Jan 2019 23:38:03 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/add-two-numbers/</guid>
+      <description>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+Example Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
+    </item>
+    
+    <item>
+      <title>LRU Cache</title>
+      <link>http://www.hashnopolis.com/post/lru-cache/</link>
+      <pubDate>Sun, 11 Nov 2018 15:33:09 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/lru-cache/</guid>
+      <description>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
+get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</description>
+    </item>
+    
+    <item>
+      <title>Merge Two Sorted Lists</title>
+      <link>http://www.hashnopolis.com/post/merge-two-sorted-lists/</link>
+      <pubDate>Thu, 25 Oct 2018 23:43:25 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/merge-two-sorted-lists/</guid>
+      <description>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+Example: Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4 Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode mergeTwoLists(ListNode l1, ListNode l2) { if (l1 == null) return l2; if (l2 == null) return l1; ListNode dummy = new ListNode(0); ListNode temp = dummy; while (l1 !</description>
+    </item>
+    
+    <item>
+      <title>Linked List Cycle II</title>
+      <link>http://www.hashnopolis.com/post/linked-list-cycle-ii/</link>
+      <pubDate>Sun, 21 Oct 2018 23:08:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/linked-list-cycle-ii/</guid>
+      <description>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+Note: Do not modify the linked list.
+Follow up: Can you solve it without using extra space?
+Observation: Solution: /** * Definition for singly-linked list. * class ListNode { * int val; * ListNode next; * ListNode(int x) { * val = x; * next = null; * } * } */ public class Solution { public ListNode detectCycle(ListNode head) { if (head == null) return null; ListNode slow = head; ListNode fast = head; boolean hasCycle = false; while (slow.</description>
+    </item>
+    
+    <item>
+      <title>Linked List Cycle</title>
+      <link>http://www.hashnopolis.com/post/linked-list-cycle/</link>
+      <pubDate>Sun, 21 Oct 2018 23:07:55 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/linked-list-cycle/</guid>
+      <description>Given a linked list, determine if it has a cycle in it.
+Follow-up Can you solve it without using extra space?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def hasCycle(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: bool &amp;#34;&amp;#34;&amp;#34; slow = head fast = head while fast: # fast reaches the end, no cycle was detected if fast and not fast.</description>
+    </item>
+    
+    <item>
+      <title>Intersection of Two Linked Lists</title>
+      <link>http://www.hashnopolis.com/post/intersection-of-two-linked-lists/</link>
+      <pubDate>Sun, 14 Oct 2018 23:56:47 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/intersection-of-two-linked-lists/</guid>
+      <description>Write a program to find the node at which the intersection of two singly linked lists begins.
+For example, the following two linked lists:
+A: a1 → a2 ↘ c1 → c2 → c3 ↗ B: b1 → b2 → b3 begin to intersect at node c1.
+Note If the two linked lists have no intersection at all, return null. The linked lists must retain their original structure after the function returns.</description>
+    </item>
+    
+    <item>
+      <title>Reverse Linked List II</title>
+      <link>http://www.hashnopolis.com/post/reverse-linked-list-ii/</link>
+      <pubDate>Sun, 30 Sep 2018 22:19:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/reverse-linked-list-ii/</guid>
+      <description>Reverse a linked list from position m to n. Do it in one-pass.
+Note: 1 ≤ m ≤ n ≤ length of list.
+Example:
+Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy.</description>
+    </item>
+    
+    <item>
+      <title>Remove Linked List Elements</title>
+      <link>http://www.hashnopolis.com/post/remove-linked-list-elements/</link>
+      <pubDate>Tue, 18 Sep 2018 16:07:09 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/remove-linked-list-elements/</guid>
+      <description>Remove all elements from a linked list of integers that have value val.
+Example Input: 1-&amp;gt;2-&amp;gt;6-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6, val = 6 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def removeElements(self, head, val): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :type val: int :rtype: ListNode &amp;#34;&amp;#34;&amp;#34; pre = ListNode(0) pre.next = head pos = pre while pos.next != None: if pos.</description>
+    </item>
+    
+    <item>
+      <title>Remove Duplicates From Sorted List</title>
+      <link>http://www.hashnopolis.com/post/remove-duplicates-from-sorted-list/</link>
+      <pubDate>Sun, 16 Sep 2018 15:01:24 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/remove-duplicates-from-sorted-list/</guid>
+      <description>Given a sorted linked list, delete all duplicates such that each element appear only once.
+Example 1 Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2 Example 2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3 Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &amp;#34;&amp;#34;&amp;#34; :type head: ListNode :rtype: ListNode &amp;#34;&amp;#34;&amp;#34; curr = head while curr != None and curr.next != None: if curr.</description>
+    </item>
+    
+    <item>
+      <title>Delete Node in a Linked List</title>
+      <link>http://www.hashnopolis.com/post/delete-node-in-a-linked-list/</link>
+      <pubDate>Fri, 14 Sep 2018 11:49:07 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/delete-node-in-a-linked-list/</guid>
+      <description>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
+Supposed the linked list is 1 -&amp;gt; 2 -&amp;gt; 3 -&amp;gt; 4 and you are given the third node with value 3, the linked list should become 1 -&amp;gt; 2 -&amp;gt; 4 after calling your function.
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</description>
+    </item>
+    
+    <item>
+      <title>Remove Nth Node From End of List</title>
+      <link>http://www.hashnopolis.com/post/remove-nth-node-from-end-of-list/</link>
+      <pubDate>Mon, 20 Aug 2018 23:33:38 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/remove-nth-node-from-end-of-list/</guid>
+      <description>Given a linked list, remove the n-th node from the end of list and return its head.
+Example Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5. Note Given n will always be valid.
+Follow-up Could you do this in one pass?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.</description>
+    </item>
+    
+  </channel>
+</rss>

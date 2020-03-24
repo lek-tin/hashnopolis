@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>index-array on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/index-array/</link>
+    <description>Recent content in index-array on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Mon, 09 Mar 2020 04:27:08 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/index-array/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Find All Numbers Disappeared in an Array</title>
+      <link>http://www.hashnopolis.com/post/find-all-numbers-disappeared-in-an-array/</link>
+      <pubDate>Mon, 09 Mar 2020 04:27:08 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/find-all-numbers-disappeared-in-an-array/</guid>
+      <description>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements of [1, n] inclusive that do not appear in this array.
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+Example Input: [4,3,2,7,8,2,3,1] Output: [5,6] Solution class Solution: def findDisappearedNumbers(self, nums: List[int]) -&amp;gt; List[int]: N = len(nums) result = [] for num in nums: pos = abs(num) % N if nums[pos] &amp;gt; 0: nums[pos] = -nums[pos] for i in range(1, N+1): if nums[i%N] &amp;gt; 0: result.</description>
+    </item>
+    
+  </channel>
+</rss>

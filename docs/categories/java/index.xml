@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/categories/java/</link>
+    <description>Recent content in java on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Wed, 27 Mar 2019 00:04:16 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lists in Java</title>
+      <link>http://www.hashnopolis.com/post/lists-in-java/</link>
+      <pubDate>Wed, 27 Mar 2019 00:04:16 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/lists-in-java/</guid>
+      <description>List interface: The List interface specifies two remove methods:
+List&amp;lt;Integer&amp;gt; list = new List&amp;lt;&amp;gt;(); // Remove the element at index 4 remove(int index): list.remove(4); // Remove the first occurrence of the object 4 remove(Object o): list.remove(new Integer(4)); Linked List:    Pros Cons     Can insert or remove anywhere in the list without shifting elements Not sortable   Insert: O(1) Elements are not stored in contiguous memory addresses   Remove: O(1) Find: O(n), as must traverse to find an element    </description>
+    </item>
+    
+  </channel>
+</rss>

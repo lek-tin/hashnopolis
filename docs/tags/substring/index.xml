@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>substring on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/substring/</link>
+    <description>Recent content in substring on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Sat, 16 Mar 2019 13:30:30 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/substring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Longest Substring With at Most Two Distinct Characters</title>
+      <link>http://www.hashnopolis.com/post/longest-substring-with-at-most-two-distinct-characters/</link>
+      <pubDate>Sat, 16 Mar 2019 13:30:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-substring-with-at-most-two-distinct-characters/</guid>
+      <description>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
+Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
+    </item>
+    
+    <item>
+      <title>Longest Substring With at Most K Distinct Characters</title>
+      <link>http://www.hashnopolis.com/post/longest-substring-with-at-most-k-distinct-characters/</link>
+      <pubDate>Thu, 14 Mar 2019 01:03:53 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-substring-with-at-most-k-distinct-characters/</guid>
+      <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2. Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s.</description>
+    </item>
+    
+    <item>
+      <title>Count Number of Substrings With K Distinct Characters</title>
+      <link>http://www.hashnopolis.com/post/count-number-of-substrings-with-k-distinct-characters/</link>
+      <pubDate>Wed, 30 Jan 2019 00:56:00 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/count-number-of-substrings-with-k-distinct-characters/</guid>
+      <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 5 Explanation: &amp;quot;ec&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;eb&amp;quot;, &amp;quot;ba&amp;quot; and &amp;quot;ece&amp;quot; k distinct characters. Example 2 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: &amp;quot;a&amp;quot; and &amp;quot;aa&amp;quot; have k distinct characters. import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings  // with exactly k unique characters  int countkDist(String str, int k) { // Initialize result  int res = 0; int n = str.</description>
+    </item>
+    
+  </channel>
+</rss>

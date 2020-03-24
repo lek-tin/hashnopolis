@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ood on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/ood/</link>
+    <description>Recent content in ood on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Sat, 21 Mar 2020 22:04:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/ood/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moving Average From Data Stream</title>
+      <link>http://www.hashnopolis.com/post/moving-average-from-data-stream/</link>
+      <pubDate>Sat, 21 Mar 2020 22:04:00 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/moving-average-from-data-stream/</guid>
+      <description>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+Example MovingAverage m = new MovingAverage(3); m.next(1) = 1 m.next(10) = (1 + 10) / 2 m.next(3) = (1 + 10 + 3) / 3 m.next(5) = (10 + 3 + 5) / 3 Solution from collections import deque class MovingAverage: def __init__(self, size: int): &amp;#34;&amp;#34;&amp;#34; Initialize your data structure here.</description>
+    </item>
+    
+    <item>
+      <title>Logger Rate Limiter</title>
+      <link>http://www.hashnopolis.com/post/logger-rate-limiter/</link>
+      <pubDate>Sat, 21 Mar 2020 20:05:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/logger-rate-limiter/</guid>
+      <description>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
+Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.
+It is possible that several messages arrive roughly at the same time.
+Example Logger logger = new Logger(); // logging string &amp;quot;foo&amp;quot; at timestamp 1 logger.</description>
+    </item>
+    
+    <item>
+      <title>Design Hit Counter</title>
+      <link>http://www.hashnopolis.com/post/design-hit-counter/</link>
+      <pubDate>Sat, 21 Mar 2020 19:18:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/design-hit-counter/</guid>
+      <description>Design a hit counter which counts the number of hits received in the past 5 minutes.
+Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.
+It is possible that several hits arrive roughly at the same time.
+Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</description>
+    </item>
+    
+  </channel>
+</rss>
