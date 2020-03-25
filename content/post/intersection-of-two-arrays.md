@@ -21,7 +21,7 @@ Output: [2]
 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [9,4]
 ```
-### Note
+#### Note
 
 - Each element in the result must be unique.
 - The result can be in any order.

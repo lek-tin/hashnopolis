@@ -18,24 +18,24 @@ Formally, a parentheses string is valid if and only if:
 2. It can be written as AB (A concatenated with B), where A and B are valid strings, or
 3. It can be written as (A), where A is a valid string.
 
-### Example 1:
+### Example 1
 ```
 Input: s = "lee(t(c)o)de)"
 Output: "lee(t(c)o)de"
 Explanation: "lee(t(co)de)" , "lee(t(c)ode)" would also be accepted.
 ```
-### Example 2:
+### Example 2
 ```
 Input: s = "a)b(c)d"
 Output: "ab(c)d"
 ```
-### Example 3:
+### Example 3
 ```
 Input: s = "))(("
 Output: ""
 Explanation: An empty string is also valid.
 ```
-### Example 4:
+### Example 4
 ```
 Input: s = "(a(b(c)d)"
 Output: "a(b(c)d)"

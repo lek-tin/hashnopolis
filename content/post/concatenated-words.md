@@ -23,7 +23,7 @@ Explanation: "catsdogcats" can be concatenated by "cats", "dog" and "cats";
 "ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat".
 ```
 
-### Note:
+#### Note
 1. The number of elements of the given array will not exceed `10,000`
 2. The length sum of elements in the given array will not exceed `600,000`.
 3. All the input string will only include lower case letters.

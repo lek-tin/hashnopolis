@@ -34,7 +34,7 @@ Output: 5
 Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
 ```
 
-### Note
+#### Note
 - All of the nodes' values will be unique.
 - p and q are different and both values will exist in the binary tree.
 

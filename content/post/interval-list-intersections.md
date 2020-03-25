@@ -25,7 +25,7 @@ Output: [[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]
 Reminder: The inputs and the desired output are lists of Interval objects, and not arrays or lists.
 ```
 
-#### Note
+##### Note
 
 1. `0 <= A.length < 1000`
 2. `0 <= B.length < 1000`

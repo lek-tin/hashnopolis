@@ -47,7 +47,7 @@ Output: ""
 ```
 ### Explanation The order is invalid, so return "".
 
-### Note
+#### Note
 1. You may assume all letters are in lowercase.
 2. You may assume that if a is a prefix of b, then a must appear before b in the given dictionary.
 3. If the order is invalid, return an empty string.

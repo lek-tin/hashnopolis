@@ -13,7 +13,7 @@ Given a list of strings `words` representing an English Dictionary, find the lon
 
 If there is no answer, return the empty string.
 
-### Example 1:
+### Example 1
 ```
 Input: 
 words = ["w","wo","wor","worl", "world"]
@@ -21,7 +21,7 @@ Output: "world"
 Explanation: 
 The word "world" can be built one character at a time by "w", "wo", "wor", and "worl".
 ```
-### Example 2:
+### Example 2
 ```
 Input: 
 words = ["a", "banana", "app", "appl", "ap", "apply", "apple"]
@@ -29,7 +29,7 @@ Output: "apple"
 Explanation: 
 Both "apply" and "apple" can be built from other words in the dictionary. However, "apple" is lexicographically smaller than "apply".
 ```
-### Note:
+#### Note
 1. All the strings in the input will only contain lowercase letters.
 2. The length of words will be in the range `[1, 1000]`.
 3. The length of `words[i]` will be in the range `[1, 30]`.

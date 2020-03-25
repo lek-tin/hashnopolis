@@ -43,7 +43,7 @@ Output: 0
 Explanation:  Since there are already no fresh oranges at minute 0, the answer is just 0.
 ```
 
-### Note
+#### Note
 
 1. 1 <= grid.length <= 10
 2. 1 <= grid[0].length <= 10

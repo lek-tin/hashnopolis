@@ -31,7 +31,7 @@ Explanation: "the", "is", "sunny" and "day" are the four most frequent words,
 with the number of occurrence being `4, 3, 2 and 1` respectively.
 ```
 
-### Note
+#### Note
 
 You may assume k is always valid, `1 ≤ k ≤` number of unique elements.
 Input words contain only lowercase letters.

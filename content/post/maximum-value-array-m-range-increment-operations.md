@@ -13,7 +13,7 @@ Consider an array of size `n` with all initial values as 0, we need to perform f
 
 `increment(a, b, k)` : Increment values from `a` to `b` by `k`. After `m` operations, we need to calculate the maximum of the values in the array.
 
-### Example 1:
+### Example 1
 ```
 Input : n = 5 m = 3
         a = 0, b = 1, k = 100
@@ -31,7 +31,7 @@ array = {100, 200, 200, 200, 100}
 Maximum element after m operations 
 is 200.
 ```
-### Example 2:
+### Example 2
 ```
 Input : n = 4 m = 3
         a = 1, b = 2, k = 603

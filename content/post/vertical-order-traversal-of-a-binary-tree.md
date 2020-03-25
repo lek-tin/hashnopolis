@@ -43,7 +43,7 @@ The node with value 5 and the node with value 6 have the same position according
 However, in the report "[1,5,6]", the node value of 5 comes first since 5 is smaller than 6.
 ```
 
-### Note
+#### Note
 
 1. The tree will have between `1 and 1000` nodes.
 2. Each node's value will be between `0 and 1000`.

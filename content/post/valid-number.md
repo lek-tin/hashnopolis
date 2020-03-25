@@ -26,7 +26,7 @@ Validate if a given string can be interpreted as a decimal number.
 `"-+3" => false`  
 `"95a54e53" => false`  
 
-#### Note
+##### Note
 It is intended for the problem statement to be ambiguous. You should gather all requirements up front before implementing one. However, here is a list of characters that can be in a valid decimal number:
 
 1. Numbers `0-9`

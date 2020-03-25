@@ -14,7 +14,7 @@ Design an algorithm to serialize and deserialize a `binary search tree`. There i
 
 The encoded string should be as compact as possible.
 
-### Note:
+#### Note
 Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.
 
 ### Solution:
@@ -66,9 +66,9 @@ public class Codec {
         return build(queue);
     }
     // example:
-    //     10
-    //  8     15
-    // 4 9   11  20
+    //      10
+    //   8     15
+    // 4  9  11  20
     private TreeNode build(Queue<Integer> q) {
         if (q.isEmpty()) return null;
         // 10

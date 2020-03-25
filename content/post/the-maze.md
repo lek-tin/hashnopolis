@@ -12,7 +12,7 @@ archive: false
 There is a **ball** in a maze with empty spaces and walls. The ball can go through empty spaces by rolling **up**, **down**, **left** or **right**, but it won't stop rolling until hitting a wall. When the ball stops, it could choose the next direction.  
 Given the ball's **start position**, the **destination** and the **maze**, determine whether the ball could stop at the destination.  
 The maze is represented by a binary 2D array. 1 means the wall and 0 means the empty space. You may assume that the borders of the maze are all walls. The start and destination coordinates are represented by row and column indexes.  
-### Example 1:
+### Example 1
 ```
 Input 1: a maze represented by a 2D array
 
@@ -30,7 +30,7 @@ Output: true
 Explanation: One possible way is : left -> down -> left -> down -> right -> down -> right.
 ```
 ![the maze example 1](https://assets.leetcode.com/uploads/2018/10/12/maze_1_example_1.png)
-### Example 2:
+### Example 2
 ```
 Input 1: a maze represented by a 2D array
 
@@ -49,7 +49,7 @@ Explanation: There is no way for the ball to stop at the destination.
 ```
 ![the maze example 2](https://assets.leetcode.com/uploads/2018/10/13/maze_1_example_2.png)
 
-### Note:
+#### Note
 1. There is only one ball and one destination in the maze.
 2. Both the ball and the destination exist on an empty space, and they will not be at the same position initially.
 3. The given maze does not contain border (like the red rectangle in the example pictures), but you could assume the border of the maze are all walls.

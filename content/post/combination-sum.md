@@ -13,7 +13,7 @@ Given a **set** of candidate numbers (`candidates`) **(without duplicates)** and
 
 The same repeated number may be chosen from `candidates` unlimited number of times.
 
-### Note
+#### Note
 
 All numbers (including `target`) will be positive integers.
 The solution set must not contain duplicate combinations.

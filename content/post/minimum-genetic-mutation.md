@@ -19,7 +19,7 @@ Also, there is a given gene "bank", which records all the valid gene mutations. 
 
 Now, given `3` things - start, end, bank, your task is to determine what is the minimum number of mutations needed to mutate from "start" to "end". If there is no such a mutation, return `-1`.  
 
-### Note
+#### Note
 
 1. Starting point is assumed to be valid, so it might not be included in the bank.
 2. If multiple mutations are needed, all mutations during in the sequence must be valid.

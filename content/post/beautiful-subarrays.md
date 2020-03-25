@@ -11,7 +11,7 @@ archive: false
 ---
 Find the **distinct** `subarrays` with `m` **odd** numbers
 
-### Example 1:
+### Example 1
 ```
 Input : arr = {2, 5, 6, 9},  m = 2
 Output : 2
@@ -19,7 +19,7 @@ Explanation: subarrays are [2, 5, 6, 9]
 and [5, 6, 9]
 ```
 
-### Example 2:
+### Example 2
 ```
 Input : arr = {2, 2, 5, 6, 9, 2, 11},  m = 2
 Output : 8

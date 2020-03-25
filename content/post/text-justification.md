@@ -17,13 +17,13 @@ Extra spaces between words should be distributed as evenly as possible. If the n
 
 For the last line of text, it should be left justified and **no extra** space is inserted between words.  
 
-### Note 
+#### Note 
 
 1. A word is defined as a character sequence consisting of non-space characters only.
 2. Each word's length is guaranteed to be greater than 0 and not exceed maxWidth.
 3. The input array words contains at least one word.
 
-### Example 1:
+### Example 1
 
 ```
 Input:

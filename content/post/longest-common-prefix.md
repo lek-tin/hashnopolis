@@ -23,9 +23,9 @@ Input: ["dog","racecar","car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.
 ```
-### Note
+#### Note
 All given inputs are in lowercase letters a-z.
-### Note
+#### Note
 ```python
 # Time: O(n*l), l: number of strings
 class Solution(object):

@@ -40,7 +40,7 @@ class Solution:
         return res
 ```
 
-### Note
+#### Note
 ```
 G(i) = i ^ (i/2)
 i / 2 == 1 >> 1

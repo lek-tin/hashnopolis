@@ -25,7 +25,7 @@ We should return
 [1, 4, 3, 2, 0]
 as P[0] = 1 because the 0th element of A appears at B[1], and P[1] = 4 because the 1st element of A appears at B[4], and so on.
 ```
-### Note:
+#### Note
 1. `A, B` have equal lengths in range `[1, 100]`.
 2. `A[i], B[i]` are integers in range `[0, 10^5]`.
 

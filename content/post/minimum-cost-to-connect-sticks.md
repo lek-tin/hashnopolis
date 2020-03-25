@@ -37,7 +37,7 @@ Input: sticks = [1, 2, 5, 10, 35, 89]
 Output: 224
 ```
 
-### Example 4:
+### Example 4
 ```
 Input: sticks = [2, 2, 3, 3]
 Output: 20

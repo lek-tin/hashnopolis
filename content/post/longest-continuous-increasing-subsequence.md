@@ -23,7 +23,7 @@ Input: [2,2,2,2,2]
 Output: 1
 Explanation: The longest continuous increasing subsequence is [2], its length is 1.
 ```
-### Note Length of the array will not exceed `10,000`.
+#### Note Length of the array will not exceed `10,000`.
 ### Solution
 ```python
 # Time: `O(n)`

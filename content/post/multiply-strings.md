@@ -20,7 +20,7 @@ Output: "6"
 Input: num1 = "123", num2 = "456"
 Output: "56088"
 ```
-### Note
+#### Note
 - The length of both `num1` and `num2` is < 110.
 - Both `num1` and `num2` contain only digits 0-9.
 - Both `num1` and `num2` do not contain any leading zero, except the number 0 itself.

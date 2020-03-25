@@ -22,7 +22,7 @@ This is a partition so that each letter appears in at most one part.
 A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits S into less parts.
 ```
 
-### Note
+#### Note
 
 1. `S` will have length in range `[1, 500]`.
 2. `S` will consist of lowercase letters (`'a' to 'z'`) only.

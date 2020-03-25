@@ -10,13 +10,13 @@ archive: false
 ---
 Given `a` string `s`, find the length of the longest substring `t` that contains at most `2` distinct characters.
 
-### Example 1:
+### Example 1
 ```
 Input: "eceba"
 Output: 3
 Explanation: t is "ece" which its length is 3.
 ```
-### Example 2:
+### Example 2
 ```
 Input: "ccaabbb"
 Output: 5

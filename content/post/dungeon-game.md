@@ -22,7 +22,7 @@ For example, given the dungeon below, the initial health of the knight must be a
 
 ![dungeon-game-example](/img/post/dungeon-game-example.png)
 
-### Note:
+#### Note
 1. The knight's health has no upper bound.
 2. Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.
 

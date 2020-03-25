@@ -29,7 +29,7 @@ Output: 6
 Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
 ```
 
-#### Note
+##### Note
 
 1. The input string length won't exceed `1000`.
 

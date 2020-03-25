@@ -61,7 +61,7 @@ Since the character "a" does not repeat, it is not compressed. "bbbbbbbbbbbb" is
 Notice each digit has it's own entry in the array.
 ```
 
-#### Note
+##### Note
 
 1. All characters have an `ASCII` value in `[35, 126]`.
 2. `1 <= len(chars) <= 1000`.

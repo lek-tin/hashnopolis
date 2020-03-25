@@ -2,7 +2,7 @@
 title: "Package Dependencies"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dfs"]
+tags: ["leetcode", "dfs", "directed-graph"]
 categories: ["algorithm"]
 date: 2020-01-02T18:19:16-08:00
 lastmod: 2020-01-02T18:19:16-08:00
@@ -10,6 +10,7 @@ draft: false
 archive: false
 ---
 ### Solution
+
 ```python
 def package_dependencies(dependencies):
   result = []
@@ -30,7 +31,7 @@ def package_dependencies(dependencies):
 
     visiting.remove(node)
     visited.add(node)
-    result.add(add)
+    result.add(node)
 
   for node in dependencies:
     dfs(node)
