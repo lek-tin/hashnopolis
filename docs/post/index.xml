@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 23 Mar 2020 22:53:23 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2020 00:30:49 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Surrounded Regions</title>
+      <link>http://www.hashnopolis.com/post/surrounded-regions/</link>
+      <pubDate>Wed, 25 Mar 2020 00:30:49 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/surrounded-regions/</guid>
+      <description>Given a 2D board containing &#39;X&#39; and &#39;O&#39; (the letter O), capture all regions surrounded by &#39;X&#39;.
+A region is captured by flipping all &#39;O&#39;s into &#39;X&#39;s in that surrounded region.
+Example X X X X X O O X X X O X X O X X After running your function, the board should be:
+X X X X X X X X X X X X X O X X Explanation Surrounded regions shouldn’t be on the border, which means that any &#39;O&#39; on the border of the board are not flipped to &#39;X&#39;.</description>
+    </item>
+    
+    <item>
+      <title>Course Schedule II</title>
+      <link>http://www.hashnopolis.com/post/course-schedule-ii/</link>
+      <pubDate>Tue, 24 Mar 2020 21:07:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/course-schedule-ii/</guid>
+      <description>There are a total of n courses you have to take, labeled from 0 to n-1.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+Given the total number of courses and a list of prerequisite pairs, return the ordering of courses you should take to finish all courses.
+There may be multiple correct orders, you just need to return one of them.</description>
+    </item>
+    
+    <item>
+      <title>Flatten Binary Tree to Linked List</title>
+      <link>http://www.hashnopolis.com/post/flatten-binary-tree-to-linked-list/</link>
+      <pubDate>Tue, 24 Mar 2020 03:28:41 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/flatten-binary-tree-to-linked-list/</guid>
+      <description>Given a binary tree, flatten it to a linked list in-place.
+For example, given the following tree:
+ 1 / \ 2 5 / \ \ 3 4 6 The flattened tree should look like:
+1 \ 2 \ 3 \ 4 \ 5 \ 6 Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</description>
+    </item>
     
     <item>
       <title>Flatten a Multilevel Doubly Linked List</title>
@@ -661,7 +697,7 @@ Given a puzzle board, return the least number of moves required so that the stat
       <guid>http://www.hashnopolis.com/post/shortest-common-supersequence/</guid>
       <description>Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If multiple answers exist, you may return any of them.
 (A string S is a subsequence of string T if deleting some number of characters from T (possibly 0, and the characters are chosen anywhere from T) results in the string S.)
-Example 1: Input: str1 = &amp;quot;abac&amp;quot;, str2 = &amp;quot;cab&amp;quot; Output: &amp;quot;cabac&amp;quot; Explanation: str1 = &amp;quot;abac&amp;quot; is a subsequence of &amp;quot;cabac&amp;quot; because we can delete the first &amp;quot;c&amp;quot;.</description>
+Example 1 Input: str1 = &amp;quot;abac&amp;quot;, str2 = &amp;quot;cab&amp;quot; Output: &amp;quot;cabac&amp;quot; Explanation: str1 = &amp;quot;abac&amp;quot; is a subsequence of &amp;quot;cabac&amp;quot; because we can delete the first &amp;quot;c&amp;quot;.</description>
     </item>
     
     <item>
@@ -694,7 +730,7 @@ Solution class Solution: def lexicalOrder(self, n: int) -&amp;gt; List[int]: res
       <description>Given a binary tree, determine if it is height-balanced.
 For this problem, a height-balanced binary tree is defined as:
  a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
- Example 1: Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7 Return true. Example 2: Given the following tree [1,2,2,3,3,null,null,4,4]: 1 / \ 2 2 / \ 3 3 / \ 4 4 Return false.</description>
+ Example 1 Given the following tree [3,9,20,null,null,15,7]: 3 / \ 9 20 / \ 15 7 Return true. Example 2 Given the following tree [1,2,2,3,3,null,null,4,4]: 1 / \ 2 2 / \ 3 3 / \ 4 4 Return false.</description>
     </item>
     
     <item>
@@ -714,7 +750,7 @@ For this problem, a height-balanced binary tree is defined as:
       
       <guid>http://www.hashnopolis.com/post/greatest-sum-divisible-by-three/</guid>
       <description>Given an array nums of integers, we need to find the maximum possible sum of elements of the array such that it is divisible by three.
-Example 1: Input: nums = [3,6,5,1,8] Output: 18 Explanation: Pick numbers 3, 6, 1 and 8 their sum is 18 (maximum sum divisible by 3). Example 2: Input: nums = [4] Output: 0 Explanation: Since 4 is not divisible by 3, do not pick any number.</description>
+Example 1 Input: nums = [3,6,5,1,8] Output: 18 Explanation: Pick numbers 3, 6, 1 and 8 their sum is 18 (maximum sum divisible by 3). Example 2 Input: nums = [4] Output: 0 Explanation: Since 4 is not divisible by 3, do not pick any number.</description>
     </item>
     
     <item>
@@ -726,7 +762,7 @@ Example 1: Input: nums = [3,6,5,1,8] Output: 18 Explanation: Pick numbers 3, 6, 
       <description>Given two positive integers x and y, an integer is powerful if it is equal to x^i + y^j for some integers i &amp;gt;= 0 and j &amp;gt;= 0.
 Return a list of all powerful integers that have value less than or equal to bound.
 You may return the answer in any order. In your answer, each value should occur at most once.
-Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 + 3^0 3 = 2^1 + 3^0 4 = 2^0 + 3^1 5 = 2^1 + 3^1 7 = 2^2 + 3^1 9 = 2^3 + 3^0 10 = 2^0 + 3^2 Example 2: Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note:  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i + y^j can&amp;rsquo;t be less than or equal to the bound.</description>
+Example 1 Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 + 3^0 3 = 2^1 + 3^0 4 = 2^0 + 3^1 5 = 2^1 + 3^1 7 = 2^2 + 3^1 9 = 2^3 + 3^0 10 = 2^0 + 3^2 Example 2 Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i + y^j can&amp;rsquo;t be less than or equal to the bound.</description>
     </item>
     
     <item>
@@ -747,7 +783,7 @@ Example Input: n: 13 k: 2 Output: 10 Explanation: The lexicographical order is [
       
       <guid>http://www.hashnopolis.com/post/maximum-swap/</guid>
       <description>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
-Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2: Input: 9973 Output: 9973 Explanation: No swap. Note:  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&amp;gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&amp;#34;0&amp;#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &amp;gt; int(ord(numChars[i])-ord(&amp;#34;0&amp;#34;)): if last[j] &amp;gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&amp;#34;&amp;#34;.</description>
+Example 1 Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2 Input: 9973 Output: 9973 Explanation: No swap. Note  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&amp;gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&amp;#34;0&amp;#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &amp;gt; int(ord(numChars[i])-ord(&amp;#34;0&amp;#34;)): if last[j] &amp;gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&amp;#34;&amp;#34;.</description>
     </item>
     
     <item>
@@ -758,7 +794,7 @@ Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the numbe
       <guid>http://www.hashnopolis.com/post/largest-component-size-by-common-factor/</guid>
       <description>Given a non-empty array of unique positive integers A, consider the following graph:
  There are A.length nodes, labelled A[0] to A[A.length - 1]; There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.  Return the size of the largest connected component in the graph.
-Example 1: Input: [4,6,15,35] Output: 4 Example 2: Input: [20,50,9,63] Output: 2 Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8 Note:  1 &amp;lt;= A.</description>
+Example 1 Input: [4,6,15,35] Output: 4 Example 2 Input: [20,50,9,63] Output: 2 Example 3  Input: [2,3,6,7,4,12,21,39] Output: 8 Note  1 &amp;lt;= A.</description>
     </item>
     
     <item>
@@ -780,7 +816,7 @@ Example: Input: [4,3,2,7,8,2,3,1] Output: [2,3] Solution # Time: O(n) # Space: O
       
       <guid>http://www.hashnopolis.com/post/squares-of-a-sorted-array/</guid>
       <description>Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
-Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note:  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i += 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr += 1 return result </description>
+Example 1 Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2 Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i += 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr += 1 return result </description>
     </item>
     
     <item>
@@ -811,7 +847,7 @@ Formally, a parentheses string is valid if and only if:
       <pubDate>Thu, 02 Jan 2020 18:19:16 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/package-dependencies/</guid>
-      <description>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(add) for node in dependencies: dfs(node) return result </description>
+      <description>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(node) for node in dependencies: dfs(node) return result </description>
     </item>
     
     <item>
@@ -842,7 +878,7 @@ target = &amp;#34;abccbacbb&amp;#34; smallerStrings = [&amp;#34;abc&amp;#34;, &a
       
       <guid>http://www.hashnopolis.com/post/word-ladder-ii/</guid>
       <description>Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
- Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</description>
+ Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</description>
     </item>
     
     <item>
@@ -852,7 +888,7 @@ target = &amp;#34;abccbacbb&amp;#34; smallerStrings = [&amp;#34;abc&amp;#34;, &a
       
       <guid>http://www.hashnopolis.com/post/longest-valid-parentheses/</guid>
       <description>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
-Example 1: Input: &amp;quot;(()&amp;quot; Output: 2 Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot; Example 2: Input: &amp;quot;)()())&amp;quot; Output: 4 Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot; Solution Dynamic programming
+Example 1 Input: &amp;quot;(()&amp;quot; Output: 2 Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot; Example 2 Input: &amp;quot;)()())&amp;quot; Output: 4 Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot; Solution Dynamic programming
 // Time: `O(n)` // Space: `O(n)` public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</description>
     </item>
     
@@ -878,7 +914,7 @@ Example: Given the below binary tree and sum = 22,
       <description>Say you have an array for which the ithelement is the price of a given stock on day i.
 Design an algorithm to find the maximum profit. You may complete at most two transactions.
 Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
-Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</description>
+Example 1 Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</description>
     </item>
     
     <item>
@@ -902,7 +938,7 @@ Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot
       <guid>http://www.hashnopolis.com/post/min-cost-climbing-stairs/</guid>
       <description>On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
 Once you pay the cost, you can either climb one or two steps. You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.
-Example 1: Input: cost = [10, 15, 20] Output: 15 Explanation: Cheapest is start on cost[1], pay that cost and go to the top.</description>
+Example 1 Input: cost = [10, 15, 20] Output: 15 Explanation: Cheapest is start on cost[1], pay that cost and go to the top.</description>
     </item>
     
     <item>
@@ -936,7 +972,7 @@ Before and After puzzles are phrases that are formed by merging two phrases wher
       <description>Given an integer array, find three numbers whose product is maximum and output the maximum product.
 Example 1:
 Input: [1,2,3] Output: 6 Example 2:
-Input: [1,2,3,4] Output: 24 Note:  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&amp;rsquo;t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :rtype: int &amp;#34;&amp;#34;&amp;#34; min_1, min_2 = float(&amp;#34;inf&amp;#34;), float(&amp;#34;inf&amp;#34;) max_1, max_2, max_3 = float(&amp;#34;-inf&amp;#34;), float(&amp;#34;-inf&amp;#34;), float(&amp;#34;-inf&amp;#34;) for num in nums: if num &amp;lt; min_1: min_2 = min_1 min_1 = num elif num &amp;lt; min_2: min_2 = num if num &amp;gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &amp;gt; max_2: max_3 = max_2 max_2 = num elif num &amp;gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3) </description>
+Input: [1,2,3,4] Output: 24 Note  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won&amp;rsquo;t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :rtype: int &amp;#34;&amp;#34;&amp;#34; min_1, min_2 = float(&amp;#34;inf&amp;#34;), float(&amp;#34;inf&amp;#34;) max_1, max_2, max_3 = float(&amp;#34;-inf&amp;#34;), float(&amp;#34;-inf&amp;#34;), float(&amp;#34;-inf&amp;#34;) for num in nums: if num &amp;lt; min_1: min_2 = min_1 min_1 = num elif num &amp;lt; min_2: min_2 = num if num &amp;gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &amp;gt; max_2: max_3 = max_2 max_2 = num elif num &amp;gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3) </description>
     </item>
     
     <item>
@@ -958,7 +994,7 @@ Given a Prefix expression, convert it into a Postfix expression.</description>
       <guid>http://www.hashnopolis.com/post/maximum-value-array-m-range-increment-operations/</guid>
       <description>Consider an array of size n with all initial values as 0, we need to perform following m range increment operations.
 increment(a, b, k) : Increment values from a to b by k. After m operations, we need to calculate the maximum of the values in the array.
-Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2, b = 3, k = 100 Output : 200 Explanation: Initially array = {0, 0, 0, 0, 0} After first operation: array = {100, 100, 0, 0, 0} After second operation: array = {100, 200, 100, 100, 100} After third operation: array = {100, 200, 200, 200, 100} Maximum element after m operations is 200.</description>
+Example 1 Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2, b = 3, k = 100 Output : 200 Explanation: Initially array = {0, 0, 0, 0, 0} After first operation: array = {100, 100, 0, 0, 0} After second operation: array = {100, 200, 100, 100, 100} After third operation: array = {100, 200, 200, 200, 100} Maximum element after m operations is 200.</description>
     </item>
     
     <item>
@@ -968,7 +1004,7 @@ Example 1: Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2
       
       <guid>http://www.hashnopolis.com/post/consecutive-numbers-sum/</guid>
       <description>Given a positive integer N, how many ways can we write it as a sum of consecutive positive integers?
-Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 + 3 Example 2: Input: 9 Output: 3 Explanation: 9 = 9 = 4 + 5 = 2 + 3 + 4 Example 3: Input: 15 Output: 4 Explanation: 15 = 15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5 Note  1 &amp;lt;= N &amp;lt;= 10 ^ 9.</description>
+Example 1 Input: 5 Output: 2 Explanation: 5 = 5 = 2 + 3 Example 2 Input: 9 Output: 3 Explanation: 9 = 9 = 4 + 5 = 2 + 3 + 4 Example 3 Input: 15 Output: 4 Explanation: 15 = 15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5 Note  1 &amp;lt;= N &amp;lt;= 10 ^ 9.</description>
     </item>
     
     <item>
@@ -978,7 +1014,7 @@ Example 1: Input: 5 Output: 2 Explanation: 5 = 5 = 2 + 3 Example 2: Input: 9 Out
       
       <guid>http://www.hashnopolis.com/post/beautiful-subarrays/</guid>
       <description>Find the distinct subarrays with m odd numbers
-Example 1: Input : arr = {2, 5, 6, 9}, m = 2 Output : 2 Explanation: subarrays are [2, 5, 6, 9] and [5, 6, 9] Example 2: Input : arr = {2, 2, 5, 6, 9, 2, 11}, m = 2 Output : 8 Explanation: subarrays are [2, 2, 5, 6, 9], [2, 5, 6, 9], [5, 6, 9], [2, 2, 5, 6, 9, 2], [2, 5, 6, 9, 2], [5, 6, 9, 2], [6, 9, 2, 11] and [9, 2, 11] Solution python</description>
+Example 1 Input : arr = {2, 5, 6, 9}, m = 2 Output : 2 Explanation: subarrays are [2, 5, 6, 9] and [5, 6, 9] Example 2 Input : arr = {2, 2, 5, 6, 9, 2, 11}, m = 2 Output : 8 Explanation: subarrays are [2, 2, 5, 6, 9], [2, 5, 6, 9], [5, 6, 9], [2, 2, 5, 6, 9, 2], [2, 5, 6, 9, 2], [5, 6, 9, 2], [6, 9, 2, 11] and [9, 2, 11] Solution python</description>
     </item>
     
     <item>
@@ -999,7 +1035,7 @@ Input: arr1 = [1,2,3,4,5], arr2 = [1,2,5,7,9], arr3 = [1,3,4,5,8] Output: [1,5] 
       
       <guid>http://www.hashnopolis.com/post/add-strings/</guid>
       <description>Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
-Note:  The length of both num1 and num2 is &amp;lt; 5100. Both num1 and num2 contains only digits 0-9. Both num1 and num2 does not contain any leading zero. You must not use any built-in BigInteger library or convert the inputs to integer directly.  Solution class Solution: def addStrings(self, num1: str, num2: str) -&amp;gt; str: if len(num1) &amp;lt; len(num2): return self.</description>
+Note  The length of both num1 and num2 is &amp;lt; 5100. Both num1 and num2 contains only digits 0-9. Both num1 and num2 does not contain any leading zero. You must not use any built-in BigInteger library or convert the inputs to integer directly.  Solution class Solution: def addStrings(self, num1: str, num2: str) -&amp;gt; str: if len(num1) &amp;lt; len(num2): return self.</description>
     </item>
     
     <item>
@@ -1009,8 +1045,8 @@ Note:  The length of both num1 and num2 is &amp;lt; 5100. Both num1 and num2 con
       
       <guid>http://www.hashnopolis.com/post/reverse-words-in-a-string/</guid>
       <description>Given an input string, reverse the string word by word.
-Example 1: Input: &amp;quot;the sky is blue&amp;quot; Output: &amp;quot;blue is sky the&amp;quot; Example 2: Input: &amp;quot; hello world! &amp;quot; Output: &amp;quot;world! hello&amp;quot; Explanation: Your reversed string should not contain leading or trailing spaces.
-Example 3: Input: &amp;quot;a good example&amp;quot; Output: &amp;quot;example good a&amp;quot; Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.</description>
+Example 1 Input: &amp;quot;the sky is blue&amp;quot; Output: &amp;quot;blue is sky the&amp;quot; Example 2 Input: &amp;quot; hello world! &amp;quot; Output: &amp;quot;world! hello&amp;quot; Explanation: Your reversed string should not contain leading or trailing spaces.
+Example 3 Input: &amp;quot;a good example&amp;quot; Output: &amp;quot;example good a&amp;quot; Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.</description>
     </item>
     
     <item>
@@ -1020,7 +1056,7 @@ Example 3: Input: &amp;quot;a good example&amp;quot; Output: &amp;quot;example g
       
       <guid>http://www.hashnopolis.com/post/count-complete-tree-nodes/</guid>
       <description>Given a complete binary tree, count the number of nodes.
-Note: Definition of a complete binary tree from Wikipedia: In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2hnodes inclusive at the last level h.
+Note Definition of a complete binary tree from Wikipedia: In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2hnodes inclusive at the last level h.
 Example: Input: 1 / \ 2 3 / \ / 4 5 6 Output: 6 Solution # Definition for a binary tree node.</description>
     </item>
     
@@ -1032,7 +1068,7 @@ Example: Input: 1 / \ 2 3 / \ / 4 5 6 Output: 6 Solution # Definition for a bina
       <guid>http://www.hashnopolis.com/post/kth-smallest-element-in-a-sorted-matrix/</guid>
       <description>Given a n x n matrix where each of the rows and columns are sorted in ascending order, find the kth smallest element in the matrix.
 Note that it is the kth smallest element in the sorted order, not the kth distinct element.
-Example: matrix = [ [ 1, 5, 9], [10, 11, 13], [12, 13, 15] ], k = 8, return 13. Note:  You may assume k is always valid, 1 ≤ k ≤ n2.</description>
+Example: matrix = [ [ 1, 5, 9], [10, 11, 13], [12, 13, 15] ], k = 8, return 13. Note  You may assume k is always valid, 1 ≤ k ≤ n2.</description>
     </item>
     
     <item>
@@ -1042,7 +1078,7 @@ Example: matrix = [ [ 1, 5, 9], [10, 11, 13], [12, 13, 15] ], k = 8, return 13. 
       
       <guid>http://www.hashnopolis.com/post/subtree-of-another-tree/</guid>
       <description>Given two non-empty binary trees s and t, check whether tree t has exactly the same structure and node values with a subtree of s. A subtree of s is a tree consists of a node in s and all of this node&amp;rsquo;s descendants. The tree s could also be considered as a subtree of itself.
-Example 1: Given tree s:
+Example 1 Given tree s:
  3 / \ 4 5 / \ 1 2 Given tree t:</description>
     </item>
     
@@ -1063,7 +1099,7 @@ Our goal is to assign a bike to each worker. Among the available bikes and worke
       
       <guid>http://www.hashnopolis.com/post/path-sum/</guid>
       <description>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
-Note: A leaf is a node with no children.
+Note A leaf is a node with no children.
 Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1 return true, as there exist a root-to-leaf path 5-&amp;gt;4-&amp;gt;11-&amp;gt;2 which sum is 22.</description>
     </item>
     
@@ -1074,7 +1110,7 @@ Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \
       
       <guid>http://www.hashnopolis.com/post/continuous-subarray-sum/</guid>
       <description>Given a list of non-negative numbers and a target integer k, write a function to check if the array has a continuous subarray of size at least 2 that sums up to a multiple of k, that is, sums up to n*k where n is also an integer.
-Example 1: Input: [23, 2, 4, 6, 7], k=6 Output: True Explanation: Because [2, 4] is a continuous subarray of size 2 and sums up to 6.</description>
+Example 1 Input: [23, 2, 4, 6, 7], k=6 Output: True Explanation: Because [2, 4] is a continuous subarray of size 2 and sums up to 6.</description>
     </item>
     
     <item>
@@ -1119,7 +1155,7 @@ Example: Input: n = 2 Output: [&amp;quot;11&amp;quot;,&amp;quot;69&amp;quot;,&am
       <guid>http://www.hashnopolis.com/post/strobogrammatic-number/</guid>
       <description>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
 Write a function to determine if a number is strobogrammatic. The number is represented as a string.
-Example 1: Input: &amp;quot;69&amp;quot; Output: true Example 2: Input: &amp;quot;88&amp;quot; Output: true Example 3: Input: &amp;quot;962&amp;quot; Output: false Solution class Solution: def isStrobogrammatic(self, num: str) -&amp;gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2+1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</description>
+Example 1 Input: &amp;quot;69&amp;quot; Output: true Example 2 Input: &amp;quot;88&amp;quot; Output: true Example 3 Input: &amp;quot;962&amp;quot; Output: false Solution class Solution: def isStrobogrammatic(self, num: str) -&amp;gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2+1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</description>
     </item>
     
     <item>
@@ -1141,7 +1177,7 @@ The island doesn&amp;rsquo;t have &amp;ldquo;lakes&amp;rdquo; (water inside that
       <guid>http://www.hashnopolis.com/post/verifying-an-alien-dictionary/</guid>
       <description>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
 Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
-Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</description>
+Example 1 Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</description>
     </item>
     
     <item>
@@ -1151,7 +1187,7 @@ Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot
       
       <guid>http://www.hashnopolis.com/post/subarray-sum-equals-k/</guid>
       <description>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1: Input:nums = [1,1,1], k = 2 Output: 2 Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] + nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count += mapping[s-k] temp = 0 try: temp = mapping[s] + 1 except: temp = 1 mapping[s] = temp return count </description>
+Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] + nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count += mapping[s-k] temp = 0 try: temp = mapping[s] + 1 except: temp = 1 mapping[s] = temp return count </description>
     </item>
     
     <item>
@@ -1182,7 +1218,7 @@ You may recall that an array A is a mountain array if and only if:
       
       <guid>http://www.hashnopolis.com/post/sum-of-square-numbers/</guid>
       <description>Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5 Example 2: Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left + right*right &amp;lt; c: if (left+1)*(left+1) + right*right &amp;gt; c: right -= 1 else: left += 1 if left*left + right*right == c: return True return False Without sqrt function</description>
+Example 1 Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5 Example 2 Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left + right*right &amp;lt; c: if (left+1)*(left+1) + right*right &amp;gt; c: right -= 1 else: left += 1 if left*left + right*right == c: return True return False Without sqrt function</description>
     </item>
     
     <item>
@@ -1192,8 +1228,8 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5 Example 2: Input
       
       <guid>http://www.hashnopolis.com/post/valid-perfect-square/</guid>
       <description>Given a positive integer num, write a function which returns True if num is a perfect square else False.
-Note: Do not use any built-in library function such as sqrt.
-Example 1: Input: 16 Output: true Example 2: Input: 14 Output: false Solution Binary search version 1
+Note Do not use any built-in library function such as sqrt.
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
 class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left + (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid + 1 else: right = mid - 1 return False Binary search version 2</description>
     </item>
     
@@ -1251,7 +1287,7 @@ Return the k-values corresponding to a sequence of pancake flips that sort A. An
       <guid>http://www.hashnopolis.com/post/super-ugly-number/</guid>
       <description>Write a program to find the nthsuper ugly number.
 Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
-Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4. Note:  1 is a super ugly number for any given primes. The given numbers in primes are in ascending order.</description>
+Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4. Note  1 is a super ugly number for any given primes. The given numbers in primes are in ascending order.</description>
     </item>
     
     <item>
@@ -1261,7 +1297,7 @@ Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,
       
       <guid>http://www.hashnopolis.com/post/perfect-squares/</guid>
       <description>Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
-Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4. Example 2: Input: n = 13 Output: 2 Explanation: 13 = 4 + 9. Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n+1)] for i in range(1, n+1): for j in range(1, n+1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]+1) return count[n] </description>
+Example 1 Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4. Example 2 Input: n = 13 Output: 2 Explanation: 13 = 4 + 9. Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&amp;gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n+1)] for i in range(1, n+1): for j in range(1, n+1): if j*j &amp;gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]+1) return count[n] </description>
     </item>
     
     <item>
@@ -1272,7 +1308,7 @@ Example 1: Input: n = 12 Output: 3 Explanation: 12 = 4 + 4 + 4. Example 2: Input
       <guid>http://www.hashnopolis.com/post/ugly-number-ii/</guid>
       <description>Write a program to find the n-th ugly number.
 Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers. Note:  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&amp;gt; int: if n &amp;lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !</description>
+Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers. Note  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&amp;gt; int: if n &amp;lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !</description>
     </item>
     
     <item>
@@ -1294,7 +1330,7 @@ Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecu
       <guid>http://www.hashnopolis.com/post/subarray-product-less-than-k/</guid>
       <description>Your are given an array of positive integers nums.
 Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than k.
-Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]. Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</description>
+Example 1 Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]. Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</description>
     </item>
     
     <item>
@@ -1305,7 +1341,7 @@ Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 sub
       <guid>http://www.hashnopolis.com/post/russian-doll-envelopes/</guid>
       <description>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
 What is the maximum number of envelopes can you Russian doll? (put one inside other)
-Note: Rotation is not allowed.
+Note Rotation is not allowed.
 Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&amp;gt; [5,4] =&amp;gt; [6,7]).</description>
     </item>
     
@@ -1326,7 +1362,7 @@ Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray 
       
       <guid>http://www.hashnopolis.com/post/coin-change/</guid>
       <description>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1 Example 2: Input: coins = [2], amount = 3 Output: -1 Note: You may assume that you have an infinite number of each kind of coin.</description>
+Example 1 Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1 Example 2 Input: coins = [2], amount = 3 Output: -1 Note You may assume that you have an infinite number of each kind of coin.</description>
     </item>
     
     <item>
@@ -1347,7 +1383,7 @@ Example 1 Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product
       <guid>http://www.hashnopolis.com/post/triangle/</guid>
       <description>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
 For example, given the following triangle
-[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11). Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</description>
+[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11). Note  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</description>
     </item>
     
     <item>
@@ -1379,7 +1415,7 @@ Note You can only move either down or right at any point in time. Example Input:
       <description>Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
 Si % Sj = 0 or Sj % Si = 0.
 If there are multiple solutions, return any subset is fine.
-Example 1: Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok) Example 2: Input: [1,2,4,8] Output: [1,2,4,8] Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&amp;gt; List[int]: if not nums or len(nums) == 0: return [] nums.</description>
+Example 1 Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok) Example 2 Input: [1,2,4,8] Output: [1,2,4,8] Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&amp;gt; List[int]: if not nums or len(nums) == 0: return [] nums.</description>
     </item>
     
     <item>
@@ -1400,9 +1436,9 @@ Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanatio
       
       <guid>http://www.hashnopolis.com/post/valid-triangle-number/</guid>
       <description>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
-Example 1: Input: [2,2,3,4] Output: 3 Explanation: Valid combinations are:
+Example 1 Input: [2,2,3,4] Output: 3 Explanation: Valid combinations are:
 2,3,4 (using the first 2) 2,3,4 (using the second 2) 2,2,3
-Note:  The length of the given array won&amp;rsquo;t exceed 1000. The integers in the given array are in the range of [0, 1000].</description>
+Note  The length of the given array won&amp;rsquo;t exceed 1000. The integers in the given array are in the range of [0, 1000].</description>
     </item>
     
     <item>
@@ -1412,7 +1448,7 @@ Note:  The length of the given array won&amp;rsquo;t exceed 1000. The integers i
       
       <guid>http://www.hashnopolis.com/post/construct-binary-tree-from-inorder-and-postorder-traversal/</guid>
       <description>Given inorder and postorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
+Note You may assume that duplicates do not exist in the tree.
 For example, given
 inorder = [9,3,15,20,7] postorder = [9,15,7,20,3] Return the following binary tree:
  3 / \ 9 20 / \ 15 7 Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</description>
@@ -1425,7 +1461,7 @@ inorder = [9,3,15,20,7] postorder = [9,15,7,20,3] Return the following binary tr
       
       <guid>http://www.hashnopolis.com/post/construct-binary-tree-from-preorder-and-inorder-traversal/</guid>
       <description>Given preorder and inorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
+Note You may assume that duplicates do not exist in the tree.
 For example, given:
 preorder = [3,9,20,15,7] inorder = [9,3,15,20,7] Return the following binary tree:
  3 / \ 9 20 / \ 15 7 Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</description>
@@ -1438,7 +1474,7 @@ preorder = [3,9,20,15,7] inorder = [9,3,15,20,7] Return the following binary tre
       
       <guid>http://www.hashnopolis.com/post/palindrome-linked-list/</guid>
       <description>Given a singly linked list, determine if it is a palindrome.
-Example 1: Input: 1-&amp;gt;2 Output: false Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
+Example 1 Input: 1-&amp;gt;2 Output: false Example 2 Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&amp;gt; bool: if not head: return True middle = self.</description>
     </item>
     
@@ -1450,7 +1486,7 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
       <guid>http://www.hashnopolis.com/post/3sum-with-multiplicity/</guid>
       <description>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &amp;lt; j &amp;lt; k and A[i] + A[j] + A[k] == target.
 As the answer can be very large, return it modulo 10^9 + 7.
-Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20 Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</description>
+Example 1 Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20 Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</description>
     </item>
     
     <item>
@@ -1470,7 +1506,7 @@ Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because
       
       <guid>http://www.hashnopolis.com/post/two-sum-less-than-k/</guid>
       <description>Given an array A of integers and integer K, return the maximum S such that there exists i &amp;lt; j with A[i] + A[j] = S and S &amp;lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60. Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</description>
+Example 1 Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60. Example 2 Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</description>
     </item>
     
     <item>
@@ -1481,7 +1517,7 @@ Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We
       <guid>http://www.hashnopolis.com/post/inorder-successor-in-bst/</guid>
       <description>Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
 The successor of a node p is the node with the smallest key greater than p.val.
-Example 1: Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type. Example 2: Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null.</description>
+Example 1 Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type. Example 2 Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null.</description>
     </item>
     
     <item>
@@ -1512,7 +1548,7 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
       <guid>http://www.hashnopolis.com/post/two-sum-iii-data-structure-design-design/</guid>
       <description>Design and implement a TwoSum class. It should support the following operations: add and find.
 add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
-Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false Example 2: add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &amp;#34;&amp;#34;&amp;#34; Initialize your data structure here.</description>
+Example 1 add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false Example 2 add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &amp;#34;&amp;#34;&amp;#34; Initialize your data structure here.</description>
     </item>
     
     <item>
@@ -1522,7 +1558,7 @@ Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; fals
       
       <guid>http://www.hashnopolis.com/post/two-sum-iv-input-is-a-bst/</guid>
       <description>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</description>
+Example 1 Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2 Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -1621,7 +1657,7 @@ Example Input: &amp;quot;aab&amp;quot; Output: [ [&amp;quot;aa&amp;quot;,&amp;qu
       <description>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</description>
+Example 1 Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</description>
     </item>
     
     <item>
@@ -1665,7 +1701,7 @@ What is Gradient Descent?</description>
       <guid>http://www.hashnopolis.com/post/word-search-ii/</guid>
       <description>Given a 2D board and a list of words from the dictionary, find all words in the board.
 Each word must be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
-Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&amp;quot;oath&amp;quot;,&amp;quot;pea&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;rain&amp;quot;] Output: [&amp;quot;eat&amp;quot;,&amp;quot;oath&amp;quot;] Note:  All inputs are consist of lowercase letters a-z.</description>
+Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&amp;quot;oath&amp;quot;,&amp;quot;pea&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;rain&amp;quot;] Output: [&amp;quot;eat&amp;quot;,&amp;quot;oath&amp;quot;] Note  All inputs are consist of lowercase letters a-z.</description>
     </item>
     
     <item>
@@ -1675,7 +1711,7 @@ Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#
       
       <guid>http://www.hashnopolis.com/post/coin-change-2/</guid>
       <description>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
-Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2+2+1 5=2+1+1+1 5=1+1+1+1+1 Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2.</description>
+Example 1 Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2+2+1 5=2+1+1+1 5=1+1+1+1+1 Example 2 Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2.</description>
     </item>
     
     <item>
@@ -1809,7 +1845,7 @@ Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum differenc
       
       <guid>http://www.hashnopolis.com/post/minimum-window-substring/</guid>
       <description>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
-Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot; Note:  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;quot;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
+Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot; Note  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;quot;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
     </item>
     
     <item>
@@ -1819,7 +1855,7 @@ Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quo
       
       <guid>http://www.hashnopolis.com/post/longest-substring-with-at-most-two-distinct-characters/</guid>
       <description>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
-Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
+Example 1 Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3. Example 2 Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
     </item>
     
     <item>
@@ -1829,7 +1865,7 @@ Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quo
       
       <guid>http://www.hashnopolis.com/post/maximum-path-sum/</guid>
       <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note: You can only move either down or right at any point in time.
+Note You can only move either down or right at any point in time.
 Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the path 1→3→1→1→1 minimizes the sum. Solution class Solution { public int minPathSum(int[][] grid) { if (grid == null || grid.</description>
     </item>
     
@@ -1840,7 +1876,7 @@ Example: Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation: Because the
       
       <guid>http://www.hashnopolis.com/post/find-k-closest-elements/</guid>
       <description>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4] Example 2: Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4] Note:  The value k is positive and will always be smaller than the length of the sorted array.</description>
+Example 1 Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4] Example 2 Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4] Note  The value k is positive and will always be smaller than the length of the sorted array.</description>
     </item>
     
     <item>
@@ -1850,7 +1886,7 @@ Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4] Example 2: Input: [1,2
       
       <guid>http://www.hashnopolis.com/post/longest-substring-with-at-most-k-distinct-characters/</guid>
       <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2. Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s.</description>
+Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3. Example 2 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2. Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s.</description>
     </item>
     
     <item>
@@ -1871,7 +1907,7 @@ Example: Assume that the iterator is initialized to the beginning of the list: [
       <guid>http://www.hashnopolis.com/post/maximum-frequency-stack/</guid>
       <description>Implement FreqStack, a class which simulates the operation of a stack-like data structure.
 FreqStack has two functions:
- push(int x), which pushes an integer x onto the stack. pop(), which removes and returns the most frequent element in the stack. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.  Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six .</description>
+ push(int x), which pushes an integer x onto the stack. pop(), which removes and returns the most frequent element in the stack. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.  Example 1 Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six .</description>
     </item>
     
     <item>
@@ -1954,7 +1990,7 @@ Your KthLargest class will have a constructor which accepts an integer k and an 
       
       <guid>http://www.hashnopolis.com/post/sliding-window-maximum/</guid>
       <description>Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
-Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7 Note: You may assume k is always valid, 1 ≤ k ≤ input array&amp;rsquo;s size for non-empty array.</description>
+Example: Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3 Output: [3,3,5,5,6,7] Explanation: Window position Max --------------- ----- [1 3 -1] -3 5 3 6 7 3 1 [3 -1 -3] 5 3 6 7 3 1 3 [-1 -3 5] 3 6 7 5 1 3 -1 [-3 5 3] 6 7 5 1 3 -1 -3 [5 3 6] 7 6 1 3 -1 -3 5 [3 6 7] 7 Note You may assume k is always valid, 1 ≤ k ≤ input array&amp;rsquo;s size for non-empty array.</description>
     </item>
     
     <item>
@@ -1995,7 +2031,7 @@ Example: Input: paragraph = &amp;quot;Bob hit a ball, the hit BALL flew far afte
       
       <guid>http://www.hashnopolis.com/post/number-of-connected-components-in-an-undirected-graph/</guid>
       <description>Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.
-Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2 Example 2: Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1 Note: You can assume that no duplicate edges will appear in edges.</description>
+Example 1 Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2 Example 2 Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1 Note You can assume that no duplicate edges will appear in edges.</description>
     </item>
     
     <item>
@@ -2006,7 +2042,7 @@ Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 O
       <guid>http://www.hashnopolis.com/post/graph-valid-tree/</guid>
       <description>Given n nodes labeled from 0 to n-1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
 ###Example 1:
-Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true Example 2: Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false ###Note: you can assume that no duplicate edges will appear in edges.</description>
+Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true Example 2 Input: n = 5, and edges = [[0,1], [1,2], [2,3], [1,3], [1,4]] Output: false ###Note: you can assume that no duplicate edges will appear in edges.</description>
     </item>
     
     <item>
@@ -2018,7 +2054,7 @@ Input: n = 5, and edges = [[0,1], [0,2], [0,3], [1,4]] Output: true Example 2: I
       <description>We have a list of points on the plane. Find the K closest points to the origin (0, 0).
 (Here, the distance between two points on a plane is the Euclidean distance.)
 You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in.)
-Example 1: Input: points = [[1,3],[-2,2]], K = 1 Output: [[-2,2]] Explanation: The distance between (1, 3) and the origin is sqrt(10).</description>
+Example 1 Input: points = [[1,3],[-2,2]], K = 1 Output: [[-2,2]] Explanation: The distance between (1, 3) and the origin is sqrt(10).</description>
     </item>
     
     <item>
@@ -2028,7 +2064,7 @@ Example 1: Input: points = [[1,3],[-2,2]], K = 1 Output: [[-2,2]] Explanation: T
       
       <guid>http://www.hashnopolis.com/post/meeting-room/</guid>
       <description>Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si &amp;lt; ei), determine if a person could attend all meetings.
-Example 1: Input: [[0,30],[5,10],[15,20]] Output: false Example 2: Input: [[7,10],[2,4]] Output: true Solution /** * Definition for an interval. * public class Interval { * int start; * int end; * Interval() { start = 0; end = 0; } * Interval(int s, int e) { start = s; end = e; } * } */ class Solution { public boolean canAttendMeetings(Interval[] intervals) { Arrays.</description>
+Example 1 Input: [[0,30],[5,10],[15,20]] Output: false Example 2 Input: [[7,10],[2,4]] Output: true Solution /** * Definition for an interval. * public class Interval { * int start; * int end; * Interval() { start = 0; end = 0; } * Interval(int s, int e) { start = s; end = e; } * } */ class Solution { public boolean canAttendMeetings(Interval[] intervals) { Arrays.</description>
     </item>
     
     <item>
@@ -2126,7 +2162,7 @@ Solution (Dynamic Programming) class Solution { public int maxSubArray(int[] num
       
       <guid>http://www.hashnopolis.com/post/intersection-of-two-arrays-ii/</guid>
       <description>Given two arrays, write a function to compute their intersection.
-Example 1: Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2,2] Example 2: Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [4,9] Note: Each element in the result should appear as many times as it shows in both arrays. The result can be in any order.
+Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2,2] Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [4,9] Note Each element in the result should appear as many times as it shows in both arrays. The result can be in any order.
 Follow up:  What if the given array is already sorted? How would you optimize your algorithm?</description>
     </item>
     
@@ -2137,7 +2173,7 @@ Follow up:  What if the given array is already sorted? How would you optimize yo
       
       <guid>http://www.hashnopolis.com/post/spiral-matrix/</guid>
       <description>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
-Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5] Example 2: Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7] Solution: class Solution { public List&amp;lt;Integer&amp;gt; spiralOrder(int[][] matrix) { if (matrix == null || matrix.</description>
+Example 1 Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5] Example 2 Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7] Solution: class Solution { public List&amp;lt;Integer&amp;gt; spiralOrder(int[][] matrix) { if (matrix == null || matrix.</description>
     </item>
     
     <item>
@@ -2147,7 +2183,7 @@ Example 1: Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8
       
       <guid>http://www.hashnopolis.com/post/palindrome-number/</guid>
       <description>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
-Example 1: Input: 121 Output: true Example 2: Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome. Example 3: Input: 10 Output: false Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</description>
+Example 1 Input: 121 Output: true Example 2 Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome. Example 3 Input: 10 Output: false Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</description>
     </item>
     
     <item>
@@ -2218,7 +2254,7 @@ class Solution { public int trap(int[] height) { int n = height.</description>
       
       <guid>http://www.hashnopolis.com/post/container-with-most-water/</guid>
       <description>Given n non-negative integers a1, a2, &amp;hellip;, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
-Note: You may not slant the container and n is at least 2. The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7].</description>
+Note You may not slant the container and n is at least 2. The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7].</description>
     </item>
     
     <item>
@@ -2295,7 +2331,7 @@ Example Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output:
       <guid>http://www.hashnopolis.com/post/edit-distance/</guid>
       <description>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
 You have the following 3 operations permitted on a word:
- Insert a character Delete a character Replace a character  Example 1: Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot; Output: 3 Explanation: horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&amp;gt; rose (remove &#39;r&#39;) rose -&amp;gt; ros (remove &#39;e&#39;) Example 2: Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot; Output: 5 Explanation: intention -&amp;gt; inention (remove &#39;t&#39;) inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&amp;gt; execution (insert &#39;u&#39;) Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</description>
+ Insert a character Delete a character Replace a character  Example 1 Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot; Output: 3 Explanation: horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;) rorse -&amp;gt; rose (remove &#39;r&#39;) rose -&amp;gt; ros (remove &#39;e&#39;) Example 2 Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot; Output: 5 Explanation: intention -&amp;gt; inention (remove &#39;t&#39;) inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;) enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;) exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;) exection -&amp;gt; execution (insert &#39;u&#39;) Solution: class Solution { public int minDistance(String word1, String word2) { if (word1 == null || word2 == null) return -1; if (word1.</description>
     </item>
     
     <item>
@@ -2740,7 +2776,7 @@ class Solution: def productExceptSelf(self, nums: List[int]) -&amp;gt; List[int]
       <guid>http://www.hashnopolis.com/post/move-zeroes/</guid>
       <description>Given an array nums, write a function to move all 0&#39;s to the end of it while maintaining the relative order of the non-zero elements.
 For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
-Note: You must do this in-place without making a copy of the array. Minimize the total number of operations.
+Note You must do this in-place without making a copy of the array. Minimize the total number of operations.
 Credit Special thanks to @jianchao.</description>
     </item>
     
@@ -2776,7 +2812,7 @@ For the purpose of this problem, we will return 0 when needle is an empty string
       <description>Given a string containing just the characters &amp;lsquo;(&#39;, &amp;lsquo;)&#39;, &amp;lsquo;{&#39;, &amp;lsquo;}&#39;, &amp;lsquo;[&amp;rsquo; and &amp;lsquo;]&#39;, determine if the input string is valid.
 An input string is valid if:
 Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Note that an empty string is also considered valid.
-Example 1: Input: &amp;quot;()&amp;quot; Output: true Example 2: Input: &amp;quot;()[]{}&amp;quot; Output: true Example 3: Input: &amp;quot;(]&amp;quot; Output: false Example 4: Input: &amp;quot;([)]&amp;quot; Output: false Example 5: Input: &amp;quot;{[]}&amp;quot; Output: true Solution: class Solution { public boolean isValid(String s) { HashMap&amp;lt;Character, Character&amp;gt; charMap = new HashMap&amp;lt;&amp;gt;(); charMap.</description>
+Example 1 Input: &amp;quot;()&amp;quot; Output: true Example 2 Input: &amp;quot;()[]{}&amp;quot; Output: true Example 3 Input: &amp;quot;(]&amp;quot; Output: false Example 4 Input: &amp;quot;([)]&amp;quot; Output: false Example 5 Input: &amp;quot;{[]}&amp;quot; Output: true Solution: class Solution { public boolean isValid(String s) { HashMap&amp;lt;Character, Character&amp;gt; charMap = new HashMap&amp;lt;&amp;gt;(); charMap.</description>
     </item>
     
     <item>
@@ -2999,7 +3035,7 @@ Note You may assume k is always valid, 1 ≤ k ≤ BST&#39;s total elements. Exa
       
       <guid>http://www.hashnopolis.com/post/kth-largest-element-in-an-array/</guid>
       <description>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5 Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4 Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Example 1 Input: [3,2,1,5,6,4] and k = 2 Output: 5 Example 2 Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4 Note You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
 Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n+kLogk)</description>
     </item>
     
@@ -3328,7 +3364,7 @@ Above is a 7 x 3 grid. How many possible unique paths are there?</description>
       <description>Given two strings s and t , write a function to determine if t is an anagram of s.
 Example 1:
 Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true Example 2:
-Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note: You may assume the string contains only lowercase alphabets.
+Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note You may assume the string contains only lowercase alphabets.
 Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
 Solution (using prime numbers) this approach is elegant but noted that if the strings are too long, the total sums maybe too big (overflow)</description>
     </item>
@@ -3374,7 +3410,7 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as
       <guid>http://www.hashnopolis.com/post/single-number-iii/</guid>
       <description>Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
 For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].
-Note:  The order of the result is not important. So in the above example, [5, 3] is also correct. Your algorithm should run in linear runtime complexity.</description>
+Note  The order of the result is not important. So in the above example, [5, 3] is also correct. Your algorithm should run in linear runtime complexity.</description>
     </item>
     
     <item>
@@ -3604,7 +3640,7 @@ Input: [1,1,1,3,3,4,3,2,4,2] Output: true Solution class Solution: def containsD
       <guid>http://www.hashnopolis.com/post/binary-search-tree-iterator/</guid>
       <description>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.
 Calling next() will return the next smallest number in the BST.
-Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree. Solution # Definition for a binary tree node # class TreeNode(object): # def __init__(self, x): # self.</description>
+Note next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree. Solution # Definition for a binary tree node # class TreeNode(object): # def __init__(self, x): # self.</description>
     </item>
     
     <item>
@@ -3789,7 +3825,7 @@ Example Given array nums = [-1, 0, 1, 2, -1, -4], A solution set is: [ [-1, 0, 1
       <description>There are two sorted arrays nums1 and nums2 of size m and n respectively.
 Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 You may assume nums1 and nums2 cannot be both empty.
-Example 1: nums1 = [1, 3] nums2 = [2] The median is 2.0 Example 2: nums1 = [1, 2] nums2 = [3, 4] The median is (2 + 3)/2 = 2.</description>
+Example 1 nums1 = [1, 3] nums2 = [2] The median is 2.0 Example 2 nums1 = [1, 2] nums2 = [3, 4] The median is (2 + 3)/2 = 2.</description>
     </item>
     
     <item>

@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
 Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
-Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted." />
+Example 1 Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted." />
   <meta name="keywords" content="leetcode hashmap " />
   
   
@@ -27,7 +27,7 @@ Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot
     <meta name="twitter:title" content="Verifying an Alien Dictionary" />
     <meta name="twitter:description" content="In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
 Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
-Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted." />
+Example 1 Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -194,19 +194,19 @@ Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot
       <hr />
       <p>In an alien language, surprisingly they also use english lowercase <code>letters</code>, but possibly in a different order. The order of the alphabet is some permutation of lowercase <code>letters</code>.</p>
 <p>Given a sequence of <code>words</code> written in the alien language, and the order of the alphabet, return true if and only if the given <code>words</code> are sorted lexicographicaly in this alien language.</p>
-<h3 id="example-1">Example 1:</h3>
+<h3 id="example-1">Example 1</h3>
 <pre><code>Input: words = [&quot;hello&quot;,&quot;leetcode&quot;], order = &quot;hlabcdefgijkmnopqrstuvwxyz&quot;
 Output: true
 Explanation: As 'h' comes before 'l' in this language, then the sequence is sorted.
-</code></pre><h3 id="example-2">Example 2:</h3>
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: words = [&quot;word&quot;,&quot;world&quot;,&quot;row&quot;], order = &quot;worldabcefghijkmnpqstuvxyz&quot;
 Output: false
 Explanation: As 'd' comes after 'l' in this language, then words[0] &gt; words[1], hence the sequence is unsorted.
-</code></pre><h3 id="example-3">Example 3:</h3>
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>Input: words = [&quot;apple&quot;,&quot;app&quot;], order = &quot;abcdefghijklmnopqrstuvwxyz&quot;
 Output: false
 Explanation: The first three characters &quot;app&quot; match, and the second string is shorter (in size.) According to lexicographical rules &quot;apple&quot; &gt; &quot;app&quot;, because 'l' &gt; '∅', where '∅' is defined as the blank character which is less than any other character (More info).
-</code></pre><h3 id="note">Note:</h3>
+</code></pre><h4 id="note">Note</h4>
 <ol>
 <li><code>1 &lt;= words.length &lt;= 100</code></li>
 <li><code>1 &lt;= words[i].length &lt;= 20</code></li>

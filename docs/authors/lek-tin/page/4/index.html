@@ -176,6 +176,88 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/generalized-abbreviation/">Generalized Abbreviation</a></h2>
+
+      <p>Write a function to generate the generalized abbreviations of a word.
+Note The order of the output does not matter.
+Example Input: &#34;word&#34; Output: [&#34;word&#34;, &#34;1ord&#34;, &#34;w1rd&#34;, &#34;wo1d&#34;, &#34;wor1&#34;, &#34;2rd&#34;, &#34;w2d&#34;, &#34;wo2&#34;, &#34;1o1d&#34;, &#34;1or1&#34;, &#34;w1r1&#34;, &#34;1o2&#34;, &#34;2r1&#34;, &#34;3d&#34;, &#34;w3&#34;, &#34;4&#34;] Example class Solution: def generateAbbreviations(self, word: str) -&gt; List[str]: results = [] self.backtrack(results, word, &#34;&#34;, 0, 0) return results def backtrack(self, results, word, curr, start, count): print(curr, start, count) # &#34;&#34; 0 0 # &#34;&#34; 1 1 # &#34;&#34; 2 2 # &#34;&#34; 3 3 # &#34;&#34; 4 4 # ------------ # 3d 4 0 # ------------ # 2r 3 0 # 2r 4 1 # ------------ # 2rd 4 0 # ------------ # 1o 2 0 # 1o 3 1 # 1o 4 2 # ------------ # 1o1d 4 0 # ------------ # 1or 3 0 # 1or 4 1 # ------------ # 1ord 4 0 # ------------ # w 1 0 # w 2 1 # w 3 2 # w 4 3 # ------------ # w2d 4 0 # ------------ # w1r 3 0 # w1r 4 1 # ------------ # w1rd 4 0 # ------------ # wo 2 0 # wo 3 1 # wo 4 2 # ------------ # wo1d 4 0 # ------------ # wor 3 0 # wor 4 1 # ------------ # word 4 0 # ------------ if start == len(word): if count &gt; 0: curr &#43;= str(count) # curr could be &#34;4&#34; or &#34;abcd&#34; results.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/palindromic-substrings/">Palindromic Substrings</a></h2>
+
+      <p>Given a string, your task is to count how many palindromic substrings in this string.
+The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters.
+Example 1 Input: &#34;abc&#34; Output: 3 Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;. Example 2 Input: &#34;aaa&#34; Output: 6 Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;. Note  The input string length won’t exceed 1000.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/find-all-numbers-disappeared-in-an-array/">Find All Numbers Disappeared in an Array</a></h2>
+
+      <p>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements of [1, n] inclusive that do not appear in this array.
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+Example Input: [4,3,2,7,8,2,3,1] Output: [5,6] Solution class Solution: def findDisappearedNumbers(self, nums: List[int]) -&gt; List[int]: N = len(nums) result = [] for num in nums: pos = abs(num) % N if nums[pos] &gt; 0: nums[pos] = -nums[pos] for i in range(1, N&#43;1): if nums[i%N] &gt; 0: result.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/first-missing-positive/">First Missing Positive</a></h2>
 
       <p>Given an unsorted integer array, find the smallest missing positive integer.
@@ -353,84 +435,6 @@ For example, given the list of temperatures T = [73, 74, 75, 71, 69, 72, 76, 73]
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/k-diff-pairs-in-an-array/">K Diff Pairs in an Array</a></h2>
-
-      <p>Given an array of integers and an integer k, you need to find the number of unique k-diff pairs in the array. Here a k-diff pair is defined as an integer pair (i, j), where i and j are both numbers in the array and their absolute difference is k.
-Example 1 Input: [3, 1, 4, 1, 5], k = 2 Output: 2 Explanation: There are two 2-diff pairs in the array, (1, 3) and (3, 5).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/paint-house-ii/">Paint House II</a></h2>
-
-      <p>There are a row of n houses, each house can be painted with one of the k colors. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.
-The cost of painting each house with a certain color is represented by a n x k cost matrix. For example, costs[0][0] is the cost of painting house 0 with color 0; costs[1][2] is the cost of painting house 1 with color 2, and so on… Find the minimum cost to paint all houses.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/paint-house/">Paint House</a></h2>
-
-      <p>There are a row of n houses, each house can be painted with one of the three colors: red, blue or green. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.
-The cost of painting each house with a certain color is represented by a n x 3 cost matrix. For example, costs[0][0] is the cost of painting house 0 with color red; costs[1][2] is the cost of painting house 1 with color green, and so on… Find the minimum cost to paint all houses.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

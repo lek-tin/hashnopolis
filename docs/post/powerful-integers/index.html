@@ -19,7 +19,7 @@
   <meta name="description" content="Given two positive integers x and y, an integer is powerful if it is equal to x^i &#43; y^j for some integers i &amp;gt;= 0 and j &amp;gt;= 0.
 Return a list of all powerful integers that have value less than or equal to bound.
 You may return the answer in any order. In your answer, each value should occur at most once.
-Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2 Example 2: Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note:  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i &#43; y^j can&amp;rsquo;t be less than or equal to the bound." />
+Example 1 Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2 Example 2 Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i &#43; y^j can&amp;rsquo;t be less than or equal to the bound." />
   <meta name="keywords" content="leetcode math " />
   
   
@@ -29,7 +29,7 @@ Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation:
     <meta name="twitter:description" content="Given two positive integers x and y, an integer is powerful if it is equal to x^i &#43; y^j for some integers i &amp;gt;= 0 and j &amp;gt;= 0.
 Return a list of all powerful integers that have value less than or equal to bound.
 You may return the answer in any order. In your answer, each value should occur at most once.
-Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2 Example 2: Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note:  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i &#43; y^j can&amp;rsquo;t be less than or equal to the bound." />
+Example 1 Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation: 2 = 2^0 &#43; 3^0 3 = 2^1 &#43; 3^0 4 = 2^0 &#43; 3^1 5 = 2^1 &#43; 3^1 7 = 2^2 &#43; 3^1 9 = 2^3 &#43; 3^0 10 = 2^0 &#43; 3^2 Example 2 Input: x = 3, y = 5, bound = 15 Output: [2,4,6,8,10,14] Note  1 &amp;lt;= x &amp;lt;= 100 1 &amp;lt;= y &amp;lt;= 100 0 &amp;lt;= bound &amp;lt;= 10^6  Hint If x^i &amp;gt; bound, the sum x^i &#43; y^j can&amp;rsquo;t be less than or equal to the bound." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -197,7 +197,7 @@ Example 1: Input: x = 2, y = 3, bound = 10 Output: [2,3,4,5,7,9,10] Explanation:
       <p>Given two positive integers <code>x</code> and <code>y</code>, an integer is powerful if it is equal to <code>x^i</code> + <code>y^j</code> for some integers <code>i &gt;= 0</code> and <code>j &gt;= 0</code>.</p>
 <p>Return a list of all powerful integers that have value less than or equal to bound.</p>
 <p>You may return the answer in any order.  In your answer, each value should occur at most once.</p>
-<h3 id="example-1">Example 1:</h3>
+<h3 id="example-1">Example 1</h3>
 <pre><code>Input: x = 2, y = 3, bound = 10
 Output: [2,3,4,5,7,9,10]
 Explanation: 
@@ -208,10 +208,10 @@ Explanation:
 7 = 2^2 + 3^1
 9 = 2^3 + 3^0
 10 = 2^0 + 3^2
-</code></pre><h3 id="example-2">Example 2:</h3>
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: x = 3, y = 5, bound = 15
 Output: [2,4,6,8,10,14]
-</code></pre><h3 id="note">Note:</h3>
+</code></pre><h4 id="note">Note</h4>
 <ol>
 <li><code>1 &lt;= x &lt;= 100</code></li>
 <li><code>1 &lt;= y &lt;= 100</code></li>

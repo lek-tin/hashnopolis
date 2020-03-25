@@ -199,7 +199,7 @@ The graph is given in the following form: graph[i] is a list of indexes j for wh
       <p>Given an undirected graph, return true if and only if it is bipartite.</p>
 <p>Recall that a graph is bipartite if we can split it&rsquo;s set of nodes into two independent subsets <code>A</code> and B such that every edge in the graph has one node in A and another node in <code>B</code>.</p>
 <p>The graph is given in the following form: <code>graph[i]</code> is a list of indexes <code>j</code> for which the edge between nodes <code>i</code> and <code>j</code> exists.  Each node is an integer between <code>0</code> and <code>graph.length - 1</code>.  There are no self edges or parallel edges: <code>graph[i]</code> does not contain <code>i</code>, and it doesn&rsquo;t contain any element twice.</p>
-<h3 id="example-1">Example 1:</h3>
+<h3 id="example-1">Example 1</h3>
 <pre><code>Input: [[1,3], [0,2], [1,3], [0,2]]
 Output: true
 Explanation: 
@@ -209,7 +209,7 @@ The graph looks like this:
 |    |
 3----2
 We can divide the vertices into two groups: {0, 2} and {1, 3}.
-</code></pre><h3 id="example-2">Example 2:</h3>
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: [[1,2,3], [0,2], [0,1,3], [0,2]]
 Output: false
 Explanation: 
@@ -219,7 +219,7 @@ The graph looks like this:
 |  \ |
 3----2
 We cannot find a way to divide the set of nodes into two independent subsets.
-</code></pre><h3 id="note">Note:</h3>
+</code></pre><h4 id="note">Note</h4>
 <ol>
 <li><code>graph</code> will have length in range <code>[1, 100]</code>.</li>
 <li><code>graph[i]</code> will contain integers in range <code>[0, graph.length - 1]</code>.</li>

@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1: Input:nums = [1,1,1], k = 2 Output: 2 Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count " />
+Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count " />
   <meta name="keywords" content="leetcode hashmap " />
   
   
@@ -25,7 +25,7 @@ Example 1: Input:nums = [1,1,1], k = 2 Output: 2 Note:  The length of the array 
     
     <meta name="twitter:title" content="Subarray Sum Equals K" />
     <meta name="twitter:description" content="Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1: Input:nums = [1,1,1], k = 2 Output: 2 Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count " />
+Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count " />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -191,10 +191,10 @@ Example 1: Input:nums = [1,1,1], k = 2 Output: 2 Note:  The length of the array 
       
       <hr />
       <p>Given an array of integers and an integer <code>k</code>, you need to find the total number of continuous subarrays whose sum equals to <code>k</code>.</p>
-<h3 id="example-1">Example 1:</h3>
+<h3 id="example-1">Example 1</h3>
 <pre><code>Input:nums = [1,1,1], k = 2
 Output: 2
-</code></pre><h3 id="note">Note:</h3>
+</code></pre><h4 id="note">Note</h4>
 <ol>
 <li>The length of the array is in range <code>[1, 20,000]</code>.</li>
 <li>The range of numbers in the array is <code>[-1000, 1000]</code> and the range of the integer <code>k</code> is <code>[-1e7, 1e7]</code>.</li>

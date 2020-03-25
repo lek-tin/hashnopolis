@@ -17,7 +17,7 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 &#43; b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &amp;lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &amp;gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function" />
+Example 1 Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2 Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &amp;lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &amp;gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function" />
   <meta name="keywords" content="leetcode math binary-search " />
   
   
@@ -25,7 +25,7 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: I
     
     <meta name="twitter:title" content="Sum of Square Numbers" />
     <meta name="twitter:description" content="Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 &#43; b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &amp;lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &amp;gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function" />
+Example 1 Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2 Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &amp;lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &amp;gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -193,11 +193,11 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: I
       
       <hr />
       <p>Given a non-negative integer <code>c</code>, your task is to decide whether there&rsquo;re two integers <code>a</code> and <code>b</code> such that <code>a2 + b2 = c</code>.</p>
-<h3 id="example-1">Example 1:</h3>
+<h3 id="example-1">Example 1</h3>
 <pre><code>Input: 5
 Output: True
 Explanation: 1 * 1 + 2 * 2 = 5
-</code></pre><h3 id="example-2">Example 2:</h3>
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 3
 Output: False
 </code></pre><h3 id="solution">Solution</h3>

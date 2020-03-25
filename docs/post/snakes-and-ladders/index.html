@@ -197,7 +197,7 @@ If <code>S</code> has a snake or ladder, you move to the destination of that sna
 A board square on row r and column c has a &ldquo;snake or ladder&rdquo; if <code>board[r][c] != -1</code>.  The destination of that snake or ladder is <code>board[r][c]</code>.</p>
 <p><strong>Note that you only take a snake or ladder at most once per move</strong>: if the destination to a snake or ladder is the start of another snake or ladder, you do not continue moving.  (For example, if the board is <code>[[4,-1],[-1,3]]</code>, and on the first move your destination square is <code>2</code>, then you finish your first move at <code>3</code>, because you do not continue moving to <code>4</code>.)</p>
 <p>Return the least number of moves required to reach square N*N.  If it is not possible, return -1.</p>
-<h3 id="example-1">Example 1:</h3>
+<h3 id="example-1">Example 1</h3>
 <pre><code>Input: [
 [-1,-1,-1,-1,-1,-1],
 [-1,-1,-1,-1,-1,-1],
@@ -213,7 +213,7 @@ You then decide to move to square 17 (row 3, column 5), and must take the snake 
 You then decide to move to square 14, and must take the ladder to square 35.
 You then decide to move to square 36, ending the game.
 It can be shown that you need at least 4 moves to reach the N*N-th square, so the answer is 4.
-</code></pre><h3 id="note">Note:</h3>
+</code></pre><h4 id="note">Note</h4>
 <ol>
 <li><code>2 &lt;= board.length = board[0].length &lt;= 20</code></li>
 <li><code>board[i][j]</code> is between <code>1</code> and <code>N*N</code> or is equal to <code>-1</code>.</li>

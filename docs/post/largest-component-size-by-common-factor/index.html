@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a non-empty array of unique positive integers A, consider the following graph:
  There are A.length nodes, labelled A[0] to A[A.length - 1]; There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.  Return the size of the largest connected component in the graph.
-Example 1: Input: [4,6,15,35] Output: 4 Example 2: Input: [20,50,9,63] Output: 2 Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8 Note:  1 &amp;lt;= A." />
+Example 1 Input: [4,6,15,35] Output: 4 Example 2 Input: [20,50,9,63] Output: 2 Example 3  Input: [2,3,6,7,4,12,21,39] Output: 8 Note  1 &amp;lt;= A." />
   <meta name="keywords" content="leetcode graph union-find " />
   
   
@@ -27,7 +27,7 @@ Example 1: Input: [4,6,15,35] Output: 4 Example 2: Input: [20,50,9,63] Output: 2
     <meta name="twitter:title" content="Largest Component Size by Common Factor" />
     <meta name="twitter:description" content="Given a non-empty array of unique positive integers A, consider the following graph:
  There are A.length nodes, labelled A[0] to A[A.length - 1]; There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.  Return the size of the largest connected component in the graph.
-Example 1: Input: [4,6,15,35] Output: 4 Example 2: Input: [20,50,9,63] Output: 2 Example 3:  Input: [2,3,6,7,4,12,21,39] Output: 8 Note:  1 &amp;lt;= A." />
+Example 1 Input: [4,6,15,35] Output: 4 Example 2 Input: [20,50,9,63] Output: 2 Example 3  Input: [2,3,6,7,4,12,21,39] Output: 8 Note  1 &amp;lt;= A." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -200,17 +200,17 @@ Example 1: Input: [4,6,15,35] Output: 4 Example 2: Input: [20,50,9,63] Output: 2
 <li>There is an edge between <code>A[i]</code> and <code>A[j]</code> if and only if <code>A[i]</code> and <code>A[j]</code> share a common factor greater than <code>1</code>.</li>
 </ol>
 <p>Return the size of the largest connected component in the graph.</p>
-<h3 id="example-1">Example 1:</h3>
+<h3 id="example-1">Example 1</h3>
 <pre><code>Input: [4,6,15,35]
 Output: 4
-</code></pre><h3 id="example-2">Example 2:</h3>
+</code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: [20,50,9,63]
 Output: 2
-</code></pre><h3 id="example-3">Example 3:</h3>
+</code></pre><h3 id="example-3">Example 3</h3>
 <pre><code>
 Input: [2,3,6,7,4,12,21,39]
 Output: 8
-</code></pre><h3 id="note">Note:</h3>
+</code></pre><h4 id="note">Note</h4>
 <ol>
 <li><code>1 &lt;= A.length &lt;= 20000</code></li>
 <li><code>1 &lt;= A[i] &lt;= 100000</code></li>
@@ -264,8 +264,9 @@ Output: 8
             <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> factors:
                 unionFind<span style="color:#f92672">.</span>union(prime_to_index[factors[<span style="color:#ae81ff">0</span>]], prime_to_index[f])
         <span style="color:#75715e"># Counter will count how many times each value in an array appears.</span>
-        tempMap <span style="color:#f92672">=</span> [unionFind<span style="color:#f92672">.</span>find(prime_to_index[factors[<span style="color:#ae81ff">0</span>]]) <span style="color:#66d9ef">for</span> factors <span style="color:#f92672">in</span> fullFactors] <span style="color:#75715e"># [2, 2, 2, 3, 3, 3, 3]</span>
-        counter <span style="color:#f92672">=</span> Counter(tempMap) <span style="color:#75715e"># Counter({3: 4, 2: 3})</span>
+        freqMap <span style="color:#f92672">=</span> [ unionFind<span style="color:#f92672">.</span>find(prime_to_index[factors[<span style="color:#ae81ff">0</span>]]) <span style="color:#66d9ef">for</span> factors <span style="color:#f92672">in</span> fullFactors ] <span style="color:#75715e"># [2, 2, 2, 3, 3, 3, 3]</span>
+        counter <span style="color:#f92672">=</span> Counter(freqMap) <span style="color:#75715e"># Counter({3: 4, 2: 3})</span>
+
         <span style="color:#66d9ef">return</span> max(counter<span style="color:#f92672">.</span>values())
 </code></pre></div><h3 id="illustration">Illustration:</h3>
 <p><img src="/img/post/largest-component-size-by-common-factor-1.jpg" alt="largest component size by common factor 1">

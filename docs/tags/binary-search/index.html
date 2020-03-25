@@ -283,7 +283,7 @@ You may recall that an array A is a mountain array if and only if:
       <h2><a href="http://www.hashnopolis.com/post/sum-of-square-numbers/">Sum of Square Numbers</a></h2>
 
       <p>Given a non-negative integer c, your task is to decide whether there’re two integers a and b such that a2 &#43; b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function</p>
+Example 1 Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2 Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function</p>
 
       <p class="meta">
         
@@ -309,8 +309,8 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: I
       <h2><a href="http://www.hashnopolis.com/post/valid-perfect-square/">Valid Perfect Square</a></h2>
 
       <p>Given a positive integer num, write a function which returns True if num is a perfect square else False.
-Note: Do not use any built-in library function such as sqrt.
-Example 1: Input: 16 Output: true Example 2: Input: 14 Output: false Solution Binary search version 1
+Note Do not use any built-in library function such as sqrt.
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
 class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: return True left, right = 0, num while left &lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2</p>
 
       <p class="meta">
@@ -367,7 +367,7 @@ You call a pre-defined API guess(int num) which returns 3 possible results (-1, 
 
       <p>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
 What is the maximum number of envelopes can you Russian doll? (put one inside other)
-Note: Rotation is not allowed.
+Note Rotation is not allowed.
 Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&gt; [5,4] =&gt; [6,7]).</p>
 
       <p class="meta">
@@ -420,7 +420,7 @@ Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum num
       <h2><a href="http://www.hashnopolis.com/post/find-k-closest-elements/">Find K Closest Elements</a></h2>
 
       <p>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4] Example 2: Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4] Note:  The value k is positive and will always be smaller than the length of the sorted array.</p>
+Example 1 Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4] Example 2 Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4] Note  The value k is positive and will always be smaller than the length of the sorted array.</p>
 
       <p class="meta">
         

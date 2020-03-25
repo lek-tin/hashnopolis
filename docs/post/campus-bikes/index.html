@@ -195,22 +195,22 @@ Our goal is to assign a bike to each worker. Among the available bikes and worke
       
       <hr />
       <p>On a campus represented as a 2D grid, there are <code>N</code> workers and <code>M</code> bikes, with <code>N &lt;= M</code>. Each worker and bike is a 2D coordinate on this grid.</p>
-<p>Our goal is to assign a bike to each worker. Among the available bikes and workers, we choose the (worker, bike) pair with the shortest Manhattan distance between each other, and assign the bike to that worker. (If there are multiple (worker, bike) pairs with the same shortest Manhattan distance, we choose the pair with the smallest worker index; if there are multiple ways to do that, we choose the pair with the smallest bike index). We repeat this process until there are no available workers.</p>
-<p>The Manhattan distance between two points <code>p1</code> and <code>p2</code> is <code>Manhattan(p1, p2) = |p1.x - p2.x| + |p1.y - p2.y|</code>.</p>
+<p>Our goal is to assign a bike to each worker. Among the available bikes and workers, we choose the (worker, bike) pair with the shortest <strong>Manhattan distance</strong> between each other, and assign the bike to that worker. (If there are multiple (worker, bike) pairs with the same shortest <strong>Manhattan distance</strong>, we choose the pair with the smallest worker index; if there are multiple ways to do that, we choose the pair with the smallest bike index). We repeat this process until there are no available workers.</p>
+<p>The <strong>Manhattan distance</strong> between two points <code>p1</code> and <code>p2</code> is <code>Manhattan(p1, p2) = |p1.x - p2.x| + |p1.y - p2.y|</code>.</p>
 <p>Return a vector <code>ans</code> of length <code>N</code>, where <code>ans[i]</code> is the index <code>(0-indexed)</code> of the bike that the <code>i-th</code> worker is assigned to.</p>
-<h3 id="example-1">Example 1:</h3>
+<h3 id="example-1">Example 1</h3>
 <p><img src="/img/post/campus-bikes-exmaple-1.png" alt="Campus bikes example 1"></p>
 <pre><code>Input: workers = [[0,0],[2,1]], bikes = [[1,2],[3,3]]
 Output: [1,0]
 Explanation: 
 Worker 1 grabs Bike 0 as they are closest (without ties), and Worker 0 is assigned Bike 1. So the output is [1, 0].
-</code></pre><h3 id="example-2">Example 2:</h3>
+</code></pre><h3 id="example-2">Example 2</h3>
 <p><img src="/img/post/campus-bikes-exmaple-2.png" alt="Campus bikes example 2"></p>
 <pre><code>Input: workers = [[0,0],[1,1],[2,0]], bikes = [[1,0],[2,2],[2,1]]
 Output: [0,2,1]
 Explanation: 
 Worker 0 grabs Bike 0 at first. Worker 1 and Worker 2 share the same distance to Bike 2, thus Worker 1 is assigned to Bike 2, and Worker 2 will take Bike 1. So the output is [0,2,1].
-</code></pre><h3 id="note">Note:</h3>
+</code></pre><h5 id="note">Note</h5>
 <ol>
 <li><code>0 &lt;= workers[i][j]</code>, <code>bikes[i][j] &lt; 1000</code></li>
 <li>All worker and bike locations are distinct.</li>
@@ -234,6 +234,7 @@ Worker 0 grabs Bike 0 at first. Worker 1 and Worker 2 share the same distance to
         ans <span style="color:#f92672">=</span> [None <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(N)]
         minHQ <span style="color:#f92672">=</span> []
         takenBikes <span style="color:#f92672">=</span> set([])
+
         <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N):
             heapq<span style="color:#f92672">.</span>heappush(minHQ, distances[i]<span style="color:#f92672">.</span>pop())
 
@@ -243,10 +244,13 @@ Worker 0 grabs Bike 0 at first. Worker 1 and Worker 2 share the same distance to
                 ans[worker] <span style="color:#f92672">=</span> bike
                 takenBikes<span style="color:#f92672">.</span>add(bike)
             <span style="color:#66d9ef">else</span>:
+                <span style="color:#75715e"># push next closest bike to minHQ for worker</span>
                 heapq<span style="color:#f92672">.</span>heappush(minHQ, distances[worker]<span style="color:#f92672">.</span>pop())
+
         <span style="color:#66d9ef">return</span> ans
 
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calcDistance</span>(self, pos1, pos2):
+        <span style="color:#75715e"># Manhattan distance</span>
         <span style="color:#66d9ef">return</span> abs(pos1[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span>pos2[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">+</span> abs(pos1[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span>pos2[<span style="color:#ae81ff">0</span>])
 </code></pre></div>
   </div>

@@ -176,6 +176,88 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/two-sum/">Two Sum</a></h2>
+
+      <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1]. Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/two-sum-ii-input-array-is-sorted/">Two Sum II Input Array Is Sorted</a></h2>
+
+      <p>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
+Note  Your returned answers (both index1 and index2) are not zero-based. You may assume that each input would have exactly one solution and you may not use the same element twice.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/copy-list-with-random-pointer/">Copy List With Random Pointer</a></h2>
+
+      <p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Return a deep copy of the list.
+Solution Solution 1: Insert cloned nodes in between original nodes then connect the cloned nodes
+# Definition for singly-linked list with a random pointer. # class RandomListNode(object): # def __init__(self, x): # self.label = x # self.next = None # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/reverse-nodes-in-k-group/">Reverse Nodes in K Group</a></h2>
 
       <p>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
@@ -289,7 +371,7 @@ Example Input: &#34;aab&#34; Output: [ [&#34;aa&#34;,&#34;b&#34;], [&#34;a&#34;,
       <p>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</p>
+Example 1 Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</p>
 
       <p class="meta">
         
@@ -343,7 +425,7 @@ For example, given n = 3, a solution set is:
 
       <p>Given a 2D board and a list of words from the dictionary, find all words in the board.
 Each word must be constructed from letters of sequentially adjacent cell, where “adjacent” cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
-Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&#34;oath&#34;,&#34;pea&#34;,&#34;eat&#34;,&#34;rain&#34;] Output: [&#34;eat&#34;,&#34;oath&#34;] Note:  All inputs are consist of lowercase letters a-z.</p>
+Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&#34;oath&#34;,&#34;pea&#34;,&#34;eat&#34;,&#34;rain&#34;] Output: [&#34;eat&#34;,&#34;oath&#34;] Note  All inputs are consist of lowercase letters a-z.</p>
 
       <p class="meta">
         
@@ -356,84 +438,6 @@ Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/coin-change-2/">Coin Change 2</a></h2>
-
-      <p>You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.
-Example 1: Input: amount = 5, coins = [1, 2, 5] Output: 4 Explanation: there are four ways to make up the amount: 5=5 5=2&#43;2&#43;1 5=2&#43;1&#43;1&#43;1 5=1&#43;1&#43;1&#43;1&#43;1 Example 2: Input: amount = 3, coins = [2] Output: 0 Explanation: the amount of 3 cannot be made up just with coins of 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/search-a-2d-matrix-ii/">Search a 2d Matrix II</a></h2>
-
-      <p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
- Integers in each row are sorted in ascending from left to right. Integers in each column are sorted in ascending from top to bottom.  Example: Consider the following matrix: [ [1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30] ] Given target = 5, return true.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/max-stack/">Max Stack</a></h2>
-
-      <p>Design a max stack that supports push, pop, top, peekMax and popMax.
- push(x) – Push element x onto stack. pop() – Remove the element on top of the stack and return it. top() – Get the element on the top. peekMax() – Retrieve the maximum element in the stack. popMax() – Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 

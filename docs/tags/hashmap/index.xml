@@ -87,7 +87,7 @@ Before and After puzzles are phrases that are formed by merging two phrases wher
       <guid>http://www.hashnopolis.com/post/verifying-an-alien-dictionary/</guid>
       <description>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
 Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
-Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</description>
+Example 1 Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;], order = &amp;quot;hlabcdefgijkmnopqrstuvwxyz&amp;quot; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</description>
     </item>
     
     <item>
@@ -97,7 +97,7 @@ Example 1: Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot
       
       <guid>http://www.hashnopolis.com/post/subarray-sum-equals-k/</guid>
       <description>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1: Input:nums = [1,1,1], k = 2 Output: 2 Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] + nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count += mapping[s-k] temp = 0 try: temp = mapping[s] + 1 except: temp = 1 mapping[s] = temp return count </description>
+Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] + nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count += mapping[s-k] temp = 0 try: temp = mapping[s] + 1 except: temp = 1 mapping[s] = temp return count </description>
     </item>
     
     <item>
@@ -119,7 +119,7 @@ These lists A and B may contain duplicates. If there are multiple answers, outpu
       <guid>http://www.hashnopolis.com/post/super-ugly-number/</guid>
       <description>Write a program to find the nthsuper ugly number.
 Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
-Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4. Note:  1 is a super ugly number for any given primes. The given numbers in primes are in ascending order.</description>
+Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4. Note  1 is a super ugly number for any given primes. The given numbers in primes are in ascending order.</description>
     </item>
     
     <item>
@@ -141,7 +141,7 @@ Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecu
       <guid>http://www.hashnopolis.com/post/two-sum-iii-data-structure-design-design/</guid>
       <description>Design and implement a TwoSum class. It should support the following operations: add and find.
 add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
-Example 1: add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false Example 2: add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &amp;#34;&amp;#34;&amp;#34; Initialize your data structure here.</description>
+Example 1 add(1); add(3); add(5); find(4) -&amp;gt; true find(7) -&amp;gt; false Example 2 add(3); add(1); add(2); find(3) -&amp;gt; true find(6) -&amp;gt; false Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &amp;#34;&amp;#34;&amp;#34; Initialize your data structure here.</description>
     </item>
     
     <item>
@@ -174,7 +174,7 @@ Solution Solution 1: Insert cloned nodes in between original nodes then connect 
       
       <guid>http://www.hashnopolis.com/post/longest-substring-with-at-most-two-distinct-characters/</guid>
       <description>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
-Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
+Example 1 Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3. Example 2 Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
     </item>
     
     <item>
@@ -184,7 +184,7 @@ Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quo
       
       <guid>http://www.hashnopolis.com/post/longest-substring-with-at-most-k-distinct-characters/</guid>
       <description>Given a string, find the length of the longest substring T that contains at most k distinct characters.
-Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2. Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s.</description>
+Example 1 Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T is &amp;quot;ece&amp;quot; which its length is 3. Example 2 Input: s = &amp;quot;aa&amp;quot;, k = 1 Output: 2 Explanation: T is &amp;quot;aa&amp;quot; which its length is 2. Solution class Solution { public int lengthOfLongestSubstringKDistinct(String s, int k) { Map&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;&amp;gt;(); int left = 0; int max = 0; for(int i = 0; i &amp;lt; s.</description>
     </item>
     
     <item>
@@ -195,7 +195,7 @@ Example 1: Input: s = &amp;quot;eceba&amp;quot;, k = 2 Output: 3 Explanation: T 
       <guid>http://www.hashnopolis.com/post/maximum-frequency-stack/</guid>
       <description>Implement FreqStack, a class which simulates the operation of a stack-like data structure.
 FreqStack has two functions:
- push(int x), which pushes an integer x onto the stack. pop(), which removes and returns the most frequent element in the stack. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.  Example 1: Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six .</description>
+ push(int x), which pushes an integer x onto the stack. pop(), which removes and returns the most frequent element in the stack. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.  Example 1 Input: [&amp;quot;FreqStack&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;,&amp;quot;pop&amp;quot;], [[],[5],[7],[5],[7],[4],[5],[],[],[],[]] Output: [null,null,null,null,null,null,null,5,7,5,4] Explanation: After making six .</description>
     </item>
     
     <item>
@@ -260,7 +260,7 @@ Solution class Solution: def topKFrequent(self, nums, k): &amp;#34;&amp;#34;&amp
       <description>Given two strings s and t , write a function to determine if t is an anagram of s.
 Example 1:
 Input: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quot; Output: true Example 2:
-Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note: You may assume the string contains only lowercase alphabets.
+Input: s = &amp;quot;rat&amp;quot;, t = &amp;quot;car&amp;quot; Output: false Note You may assume the string contains only lowercase alphabets.
 Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
 Solution (using prime numbers) this approach is elegant but noted that if the strings are too long, the total sums maybe too big (overflow)</description>
     </item>
