@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 03 Mar 2020 23:58:39 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2020 00:37:45 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Team Scores in Football Tournament</title>
+      <link>http://www.hashnopolis.com/post/team-scores-in-football-tournament/</link>
+      <pubDate>Fri, 27 Mar 2020 00:37:45 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/team-scores-in-football-tournament/</guid>
+      <description>Solution (Union) SELECT t.team_id, t.team_name, IFNULL(SUM(p.points), 0) AS num_points FROM Teams t LEFT JOIN ( SELECT host_team as team_id, CASE WHEN host_goals &amp;gt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches UNION ALL SELECT guest_team as team_id, CASE WHEN host_goals &amp;lt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches ) AS p ON t.team_id = p.</description>
+    </item>
     
     <item>
       <title>Department Highest Salary</title>

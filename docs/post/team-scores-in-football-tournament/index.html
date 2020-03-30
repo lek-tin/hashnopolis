@@ -5,7 +5,7 @@
 
   
   <title>
-        Hashnopolis | Computer Science, Data Science and Awesome Technology
+        Team Scores in Football Tournament | Hashnopolis
       </title>
 
     
@@ -16,15 +16,16 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="___SITE Description___" />
-  <meta name="keywords" content="___keyword, keyword, keyword___" />
-
+  <meta name="description" content="Solution (Union) SELECT t.team_id, t.team_name, IFNULL(SUM(p.points), 0) AS num_points FROM Teams t LEFT JOIN ( SELECT host_team as team_id, CASE WHEN host_goals &amp;gt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches UNION ALL SELECT guest_team as team_id, CASE WHEN host_goals &amp;lt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches ) AS p ON t.team_id = p." />
+  <meta name="keywords" content="leetcode sql " />
   
-  <meta name="twitter:card" content="summary" />
   
-  <meta name="twitter:title" content="Hashnopolis" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Team Scores in Football Tournament" />
+    <meta name="twitter:description" content="Solution (Union) SELECT t.team_id, t.team_name, IFNULL(SUM(p.points), 0) AS num_points FROM Teams t LEFT JOIN ( SELECT host_team as team_id, CASE WHEN host_goals &amp;gt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches UNION ALL SELECT guest_team as team_id, CASE WHEN host_goals &amp;lt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches ) AS p ON t.team_id = p." />
+    <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+  
 
 
 
@@ -32,7 +33,7 @@
 <meta name="generator" content="Hugo 0.65.3" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/tags/dll/" />
+<link rel="canonical" href="http://www.hashnopolis.com/post/team-scores-in-football-tournament/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -165,44 +166,78 @@
     
         <section class="main-content">
           
+  
 
   
-  
-  <h2 class="taxonomy-single--title">dll:</h2>
-  <div>
-    
-    
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/lru-cache/">LRU Cache</a></h2>
-
-      <p>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
-get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</p>
-
+  <div class="post">
       <p class="meta">
         
-        by
         
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        <span class="highlight">Tags:</span>
         
-        in
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+          "<a href="/tags/sql"><strong>sql</strong></a>",
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
+        <i class="small material-icons">access_time</i> 1-min read
       </p>
-  </div>
-
-  
-
-</article>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/team-scores-in-football-tournament.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>Team Scores in Football Tournament</h1>
+      <h4>Created: March 27, 2020 by [lek-tin]</h4>
       
-    
-    
+        <h5>Last updated: March 27, 2020</h5>
+      
+      <hr />
+      <h3 id="solution-union">Solution (Union)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> t.team_id,
+       t.team_name,
+       IFNULL(<span style="color:#66d9ef">SUM</span>(p.points), <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">AS</span> num_points
+<span style="color:#66d9ef">FROM</span> Teams t
+
+<span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span>
+
+(
+    <span style="color:#66d9ef">SELECT</span> host_team <span style="color:#66d9ef">as</span> team_id,
+        <span style="color:#66d9ef">CASE</span>
+            <span style="color:#66d9ef">WHEN</span> host_goals <span style="color:#f92672">&gt;</span> guest_goals <span style="color:#66d9ef">THEN</span> <span style="color:#ae81ff">3</span>
+            <span style="color:#66d9ef">WHEN</span> host_goals <span style="color:#f92672">=</span> guest_goals <span style="color:#66d9ef">THEN</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">ELSE</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">as</span> points
+    <span style="color:#66d9ef">FROM</span> Matches
+
+    <span style="color:#66d9ef">UNION</span> <span style="color:#66d9ef">ALL</span>
+
+    <span style="color:#66d9ef">SELECT</span> guest_team <span style="color:#66d9ef">as</span> team_id,
+        <span style="color:#66d9ef">CASE</span>
+            <span style="color:#66d9ef">WHEN</span> host_goals <span style="color:#f92672">&lt;</span> guest_goals <span style="color:#66d9ef">THEN</span> <span style="color:#ae81ff">3</span>
+            <span style="color:#66d9ef">WHEN</span> host_goals <span style="color:#f92672">=</span> guest_goals <span style="color:#66d9ef">THEN</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">ELSE</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">as</span> points
+    <span style="color:#66d9ef">FROM</span> Matches
+
+) <span style="color:#66d9ef">AS</span> p
+
+<span style="color:#66d9ef">ON</span> t.team_id <span style="color:#f92672">=</span> p.team_id
+<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> t.team_id
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> num_points <span style="color:#66d9ef">DESC</span>, team_id
+</code></pre></div>
   </div>
+
+  <div id="disqus_thread"></div>
+<script>
   
+
+  
+
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 
         </section>
         

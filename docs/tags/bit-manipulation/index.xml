@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 08 Mar 2019 01:33:22 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2020 23:37:58 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/bit-manipulation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Utf 8 Validation</title>
+      <link>http://www.hashnopolis.com/post/utf-8-validation/</link>
+      <pubDate>Wed, 25 Mar 2020 23:37:58 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/utf-8-validation/</guid>
+      <description>A character in UTF8 can be from 1 to 4 bytes long, subjected to the following rules:
+ For 1-byte character, the first bit is a 0, followed by its unicode code. For n-bytes character, the first n-bits are all one&amp;rsquo;s, the n+1 bit is 0, followed by n-1 bytes with most significant 2 bits being 10.  This is how the UTF-8 encoding would work:
+ Char. number range | UTF-8 octet sequence (hexadecimal) | (binary) --------------------+--------------------------------------------- 0000 0000-0000 007F | 0xxxxxxx 0000 0080-0000 07FF | 110xxxxx 10xxxxxx 0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx 0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx Given an array of integers representing the data, return whether it is a valid utf-8 encoding.</description>
+    </item>
     
     <item>
       <title>Prison Cells After N Days</title>
