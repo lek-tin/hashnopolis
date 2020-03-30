@@ -23,6 +23,7 @@ An obstacle and empty space is marked as `1` and `0` respectively in the grid.
 - m and n will be at most 100.
 
 ### Example 1
+
 ```
 Input:
 [
@@ -38,7 +39,8 @@ There are two ways to reach the bottom-right corner:
 2. Down -> Down -> Right -> Right
 ```
 
-### Solution:
+### Solution
+
 ```python
 # Time: O(m*n)
 # Space: `O(n)`
@@ -52,13 +54,13 @@ class Solution:
         dp = [[0 for i in range(n)] for j in range(m)]
 
         for i in range(m):
-            if obstacleGrid[i][0] != 1:
+            if obstacleGrid[i][0] == 0:
                 dp[i][0] = 1
             else:p
                 break
 
         for i in range(n):
-            if obstacleGrid[0][i] != 1:
+            if obstacleGrid[0][i] == 0:
                 dp[0][i] = 1
             else:
                 break
@@ -75,6 +77,7 @@ class Solution:
         else:
             return dp[-1][-1]
 ```
+
 ```java
 // Time: O(m*n)
 // Space: `O(n)`

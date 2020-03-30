@@ -22,9 +22,11 @@ Output: 4
 ```
 
 #### Note
+
 You may assume `k` is always valid, `1 ≤ k ≤ array's length`.
 
-### Solution:
+### Solution
+
 Average time complexity: `O(n)` if we don’t need the sorted output, otherwise `O(n+kLogk)`  
 `T(n) = T(n/2) + n = n + n/2 + n/4 + ... = n * (1 + 1/2 + 1/4 + ...)`  
 Thisa sum of geometric series, which is equal to 2. Therefore the sum is `2n`. So the complexity is `O(n)`.
@@ -57,6 +59,7 @@ class Solution:
             if nums[end] <= nums[pivot]:
                 end -= 1
         self.swap(nums, pivot, end)
+
         return end
 
     def swap(self, nums, i, j):

@@ -2,7 +2,7 @@
 title: "Divide Chocolate"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "binary-search", "greedy"]
 categories: ["algorithm"]
 date: 2020-03-25T01:09:27-07:00
 lastmod: 2020-03-25T01:09:27-07:00
@@ -46,7 +46,34 @@ Explanation: You can divide the chocolate to [1,2,2], [1,2,2], [1,2,2]
 1. `0 <= K < sweetness.length <= 10^4`
 2. `1 <= sweetness[i] <= 10^5`
 
+#### Hint
+
+1. After dividing the array into K+1 sub-arrays, you will pick the sub-array with the minimum sum.
+2. Divide the sub-array into K+1 sub-arrays such that the minimum sub-array sum is as maximum as possible.
+3. Use binary search with greedy check.
+
 ### Solution
 
 ```python
+class Solution:
+    def maximizeSweetness(self, sweetness: List[int], K: int) -> int:
+        left, right = min(sweetness), sum(sweetness)//(K+1)
+        while left <= right:
+            mid = left + (right-left)//2
+            if not self.check(sweetness, K, mid):
+                right = mid-1
+            else:
+                left = mid+1
+        return right
+
+    # greedy search
+    def check(sweetness, K, x):
+        curr, cuts = 0, 0
+        for s in sweetness:
+            curr += s
+            if curr >= x:
+                cuts += 1
+                curr = 0
+        # return True if such partition is possible
+        return cuts >= K+1
 ```

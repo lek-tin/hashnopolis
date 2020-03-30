@@ -2,7 +2,7 @@
 title: "Campus Bikes Ii"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dynamic-programming", "bitmasking"]
+tags: ["leetcode", "dynamic-programming", "bit-masking"]
 categories: ["algorithm"]
 date: 2020-03-24T15:28:17-07:00
 lastmod: 2020-03-24T15:28:17-07:00
@@ -44,7 +44,7 @@ We first assign bike 0 to worker 0, then assign bike 1 to worker 1 or worker 2, 
 2. All worker and bike locations are distinct.
 3. `1 <= workers.length <= bikes.length <= 10`
 
-#### Solution (bit manipulation + dynamic programming)
+#### Solution (dynamic programming + bit manipulation)
 
 time: `O(N*M*2^M)`  
 space: `O(N*2^M)`  

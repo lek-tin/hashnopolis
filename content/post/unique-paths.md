@@ -34,7 +34,9 @@ From the top-left corner, there are a total of 3 ways to reach the bottom-right 
 Input: m = 7, n = 3
 Output: 28
 ```
+
 ### Solution
+
 ```python
 # Time: O(n*m)
 # Space: O(n*m)
@@ -55,6 +57,7 @@ class Solution:
         print(grid[n-1][m-1])
         return(grid[n-1][m-1])
 ```
+
 ```java
 // Time: O(m*n)
 // Space: `O(n)`

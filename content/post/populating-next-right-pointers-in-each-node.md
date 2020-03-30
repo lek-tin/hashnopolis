@@ -29,6 +29,7 @@ Initially, all next pointers are set to NULL.
 2. Recursive approach is fine, you may assume implicit stack space does not count as extra space for this problem.
 
 ### Example 1
+
 ![Populating Next Right Pointers in Each Node](/img/post/populating-next-right-pointers-in-each-node.png)
 ```
 Input: root = [1,2,3,4,5,6,7]
@@ -42,6 +43,7 @@ Explanation: Given the above perfect binary tree (Figure A), your function shoul
 2. `-1000 <= node.val <= 1000`
 
 ### Solution 1 (bfs / level by level)
+
 Time: `O(n)`  
 Space: `O(n)`  
 ```python
@@ -103,10 +105,12 @@ class Solution:
 
         self.connect(root.left)
         self.connect(root.right)
+
         return root
 ```
 
 ### Solution 3 (constant space)
+
 We can use previously constructed next pointers to reduce space to constant  
 Time: `O(n)`  
 Space: `O(1)`  

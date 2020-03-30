@@ -3,7 +3,7 @@ title: "Nested List Weight Sum"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "list", "sum"]
-categories: ["database"]
+categories: ["algorithm"]
 date: 2018-09-12T23:57:13+08:00
 draft: true
 archive: false
