@@ -32,7 +32,7 @@
 <meta name="generator" content="Hugo 0.65.3" />
 
 
-<link rel="canonical" href="http://www.hashnopolis.com/tags/dynamic-programming/" />
+<link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
 <link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
 
 
@@ -168,7 +168,7 @@
 
   
   
-  <h2 class="taxonomy-single--title">dynamic-programming:</h2>
+  <h2 class="taxonomy-single--title">lek-tin:</h2>
   <div>
     
     
@@ -176,63 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/word-break/">Word Break</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></h2>
 
-      <p>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
-Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.  Example 1 Input: s = &#34;leetcode&#34;, wordDict = [&#34;leet&#34;, &#34;code&#34;] Output: true Explanation: Return true because &#34;leetcode&#34; can be segmented as &#34;leet code&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/decode-ways/">Decode Ways</a></h2>
-
-      <p>A message containing letters from A-Z is being encoded to numbers using the following mapping:
-‘A’ -&gt; 1 ‘B’ -&gt; 2 … ‘Z’ -&gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
-Example 1 Input: &#34;12&#34; Output: 2 Explanation: It could be decoded as &#34;AB&#34; (1 2) or &#34;L&#34; (12). Example 2 Input: &#34;226&#34; Output: 3 Explanation: It could be decoded as &#34;BZ&#34; (2 26), &#34;VF&#34; (22 6), or &#34;BBF&#34; (2 2 6).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/unique-binary-search-trees/">Unique Binary Search Trees</a></h2>
-
-      <p>Given n, how many structurally unique BST&#39;s (binary search trees) that store values 1 … n?
-Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 unique BST&#39;s: 1 3 3 2 1 \ / / / \ \ 3 2 1 1 3 2 / / \ \ 2 1 2 3 Exaplanation n = 3 root: 1 left: 0 right: 2 f(0)*f(2); root: 2 left: 1 right: 1 f(1)*f(1); root: 3 left: 2 right: 0 f(2)*f(0); Solution class Solution: def numTrees(self, n): &#34;&#34;&#34; :type n: int :rtype: int &#34;&#34;&#34; res = [1] for i in range(1, n&#43;1): for j in range(i): res.</p>
+      <p>Given a linked list, remove the n-th node from the end of list and return its head.
+Example Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5. Note Given n will always be valid.
+Follow-up Could you do this in one pass?
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.</p>
 
       <p class="meta">
         
@@ -255,12 +204,14 @@ Example Input: 3 Output: 5 Explanation: Given n = 3, there are a total of 5 uniq
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/unique-paths/">Unique Paths</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/search-in-rotated-sorted-array-ii/">Search in Rotated Sorted Array II</a></h2>
 
-      <p>A robot is located at the top-left corner of a m x n grid (marked ‘Start’ in the diagram below).
-The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked ‘Finish’ in the diagram below).
-How many possible unique paths are there?
-Above is a 7 x 3 grid. How many possible unique paths are there?</p>
+      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
+You are given a target value to search. If found in the array return true, otherwise return false.
+Example 1:
+Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true Example 2:
+Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
 
       <p class="meta">
         
@@ -280,13 +231,40 @@ Above is a 7 x 3 grid. How many possible unique paths are there?</p>
 
 </article>
       
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/when-you-new-a-class-in-javascript/">When You New a Class in JavaScript?</a></h2>
+
+      <p>Here is an example of instantiating a class using the new operator:
+class Person { constructor(name, age) { this.name = name; this.age = age; } } const asian = new Person(&#39;Alice&#39;, 25); console.log(asian); As you can see from below, asian is not a class, it is instead, an object:
+[object Object] { age: 25, name: &#34;Alice&#34; } The values of asian are set by the constructor of the Person class.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/javascript" ><strong>"javascript"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
     
     
       <footer class="list-footer">
         <nav class="pagination">
         
         
-          <a class="pagination-previous" href="/tags/dynamic-programming/page/4/">← Newer Posts</a>
+          <a class="pagination-previous" href="/authors/lek-tin/page/36/">← Newer Posts</a>
         
         
         </nav>

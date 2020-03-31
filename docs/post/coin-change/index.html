@@ -232,7 +232,8 @@ Output: -1
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> mem<span style="color:#f92672">[</span>amount<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> infLimit <span style="color:#f92672">?</span> <span style="color:#f92672">-</span>1 <span style="color:#f92672">:</span> mem<span style="color:#f92672">[</span>amount<span style="color:#f92672">];</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>Python top-down version<br>
+</code></pre></div><h3 id="solution-bottom-up-dynamic-programming">Solution (bottom-up dynamic programming)</h3>
+<p>Python bottom-up version<br>
 Time complexity : <code>O(amount * coin_denoms)</code><br>
 Space complexity : <code>O(coin_denoms)</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
@@ -253,7 +254,8 @@ Space complexity : <code>O(coin_denoms)</code></p>
                 ans[i] <span style="color:#f92672">=</span> min(ans[i], ans[i <span style="color:#f92672">-</span> coin] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
 
         <span style="color:#66d9ef">return</span> ans[amount] <span style="color:#66d9ef">if</span> ans[amount] <span style="color:#f92672">!=</span> math<span style="color:#f92672">.</span>inf <span style="color:#66d9ef">else</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-</code></pre></div><p>Python top-down version</p>
+</code></pre></div><h3 id="solution-top-down-memoized-recursion">Solution (top-down memoized recursion)</h3>
+<p>Python top-down version</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:

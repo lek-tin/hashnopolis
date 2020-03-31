@@ -176,6 +176,31 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/longest-common-substring/">Longest Common Substring</a></h2>
+
+      <p>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m &#43; 1, n &#43; 1.  int L[][] = new int[m&#43;1][n&#43;1]; /* Following steps build L[m&#43;1][n&#43;1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&lt;=m; i&#43;&#43;) { for (int j=0; j&lt;=n; j&#43;&#43;) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] &#43; 1 = 0 &#43; 1 = 1  L[i][j] = L[i-1][j-1] &#43; 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/greatest-sum-divisible-by-three/">Greatest Sum Divisible by Three</a></h2>
 
       <p>Given an array nums of integers, we need to find the maximum possible sum of elements of the array such that it is divisible by three.
@@ -409,32 +434,6 @@ Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum num
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/coin-change/">Coin Change</a></h2>
-
-      <p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1 Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1 Example 2 Input: coins = [2], amount = 3 Output: -1 Note You may assume that you have an infinite number of each kind of coin.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 

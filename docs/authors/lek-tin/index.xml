@@ -7,10 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 29 Mar 2020 06:53:15 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 02:39:52 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Minimum Number of Refueling Stops</title>
+      <link>http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/</link>
+      <pubDate>Mon, 30 Mar 2020 02:39:52 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/</guid>
+      <description>A car travels from a starting position to a destination which is target miles east of the starting position.
+Along the way, there are gas stations. Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.
+The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses 1 liter of gas per 1 mile that it drives.</description>
+    </item>
+    
+    <item>
+      <title>Second Degree Follower</title>
+      <link>http://www.hashnopolis.com/post/second-degree-follower/</link>
+      <pubDate>Sun, 29 Mar 2020 23:56:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/second-degree-follower/</guid>
+      <description>In facebook, there is a follow table with two columns: followee, follower.
+Please write a sql query to get the amount of each follower’s follower if he/she has one.
+For example:
++-------------+------------+ | followee | follower | +-------------+------------+ | A | B | | B | C | | B | D | | D | E | +-------------+------------+ should output: +-------------+------------+ | follower | num | +-------------+------------+ | B | 2 | | D | 1 | +-------------+------------+ Explaination: Both B and D exist in the follower list, when as a followee, B&#39;s follower is C and D, and D&#39;s follower is E.</description>
+    </item>
+    
+    <item>
+      <title>Last Person to Fit in the Elevator</title>
+      <link>http://www.hashnopolis.com/post/last-person-to-fit-in-the-elevator/</link>
+      <pubDate>Sun, 29 Mar 2020 23:44:34 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/last-person-to-fit-in-the-elevator/</guid>
+      <description>Table: Queue
++-------------+---------+ | Column Name | Type | +-------------+---------+ | person_id | int | | person_name | varchar | | weight | int | | turn | int | +-------------+---------+ person_id is the primary key column for this table. This table has the information about all people waiting for an elevator. The person_id and turn columns will contain all numbers from 1 to n, where n is the number of rows in the table.</description>
+    </item>
+    
+    <item>
+      <title>Movie Rating</title>
+      <link>http://www.hashnopolis.com/post/movie-rating/</link>
+      <pubDate>Sun, 29 Mar 2020 23:27:25 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/movie-rating/</guid>
+      <description>Table: Movies
++---------------+---------+ | Column Name | Type | +---------------+---------+ | movie_id | int | | title | varchar | +---------------+---------+ movie_id is the primary key for this table. title is the name of the movie. Table: Users
++---------------+---------+ | Column Name | Type | +---------------+---------+ | user_id | int | | name | varchar | +---------------+---------+ user_id is the primary key for this table. Table: Movie_Rating
++---------------+---------+ | Column Name | Type | +---------------+---------+ | movie_id | int | | user_id | int | | rating | int | | created_at | date | +---------------+---------+ (movie_id, user_id) is the primary key for this table.</description>
+    </item>
     
     <item>
       <title>Design Hashmap</title>

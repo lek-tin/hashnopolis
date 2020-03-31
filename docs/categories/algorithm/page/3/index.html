@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/evaluate-division/">Evaluate Division</a></h2>
+
+      <p>Equations are given in the format A / B = k, where A and B are variables represented as strings, and k is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return -1.0.
+Example Given a / b = 2.0, b / c = 3.0. queries are: a / c = ?, b / a = ?, a / e = ?</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/logger-rate-limiter/">Logger Rate Limiter</a></h2>
 
       <p>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
@@ -398,32 +424,6 @@ Example Input: &#34;aab&#34; Output: 1 Explanation: The palindrome partitioning 
 
       <p>Given a string, determine if a permutation of the string could form a palindrome.
 Example 1 Input: &#34;code&#34; Output: false Example 2 Input: &#34;aab&#34; Output: true Example 3 Input: &#34;carerac&#34; Output: true Solution class Solution: def canPermutePalindrome(self, s: str) -&gt; bool: lookup = set() for c in s: if c not in lookup: lookup.add(c) else: lookup.remove(c) return len(lookup) &lt;= 1 </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/first-unique-character-in-a-string/">First Unique Character in a String</a></h2>
-
-      <p>Given a string, find the first non-repeating character in it and return it’s index. If it doesn’t exist, return -1.
-Example 1 s = &#34;leetcode&#34; return 0. Example 2 s = &#34;loveleetcode&#34;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 </p>
 
       <p class="meta">
         

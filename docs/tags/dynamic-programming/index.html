@@ -176,6 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/">Minimum Number of Refueling Stops</a></h2>
+
+      <p>A car travels from a starting position to a destination which is target miles east of the starting position.
+Along the way, there are gas stations. Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.
+The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses 1 liter of gas per 1 mile that it drives.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/evaluate-division/">Evaluate Division</a></h2>
 
       <p>Equations are given in the format A / B = k, where A and B are variables represented as strings, and k is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return -1.0.
@@ -391,31 +418,6 @@ Given the encoded message containing digits and the character &#39;*&#39;, retur
       <p>Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If multiple answers exist, you may return any of them.
 (A string S is a subsequence of string T if deleting some number of characters from T (possibly 0, and the characters are chosen anywhere from T) results in the string S.)
 Example 1 Input: str1 = &#34;abac&#34;, str2 = &#34;cab&#34; Output: &#34;cabac&#34; Explanation: str1 = &#34;abac&#34; is a subsequence of &#34;cabac&#34; because we can delete the first &#34;c&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/longest-common-substring/">Longest Common Substring</a></h2>
-
-      <p>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m &#43; 1, n &#43; 1.  int L[][] = new int[m&#43;1][n&#43;1]; /* Following steps build L[m&#43;1][n&#43;1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&lt;=m; i&#43;&#43;) { for (int j=0; j&lt;=n; j&#43;&#43;) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] &#43; 1 = 0 &#43; 1 = 1  L[i][j] = L[i-1][j-1] &#43; 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</p>
 
       <p class="meta">
         

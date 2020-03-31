@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/squares-of-a-sorted-array/">Squares of a Sorted Array</a></h2>
+
+      <p>Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
+Example 1 Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2 Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note  1 &lt;= A.length &lt;= 10000 -10000 &lt;= A[i] &lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &lt;= rightPtr: i &#43;= 1 if abs(A[leftPtr]) &lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr &#43;= 1 return result </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/minesweeper/">Minesweeper</a></h2>
 
       <p>Let’s play the minesweeper game (Wikipedia, online game)!
@@ -408,35 +434,6 @@ Example 1 Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/longest-substring-without-repeating-characters/">Longest Substring Without Repeating Characters</a></h2>
-
-      <p>Given a string, find the length of the longest substring without repeating characters.
-*### Example 1
-Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3. *### Example 2
-Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1. *### Example 3
-Input: &#34;pwwkew&#34; Output: 3 Explanation: The answer is &#34;wke&#34;, with the length of 3. Note that the answer must be a substring, &#34;pwke&#34; is a subsequence and not a substring.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
