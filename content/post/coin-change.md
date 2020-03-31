@@ -62,7 +62,10 @@ class Solution {
     }
 }
 ```
-Python top-down version  
+
+### Solution (bottom-up dynamic programming)
+
+Python bottom-up version  
 Time complexity : `O(amount * coin_denoms)`  
 Space complexity : `O(coin_denoms)`  
 ```python
@@ -85,6 +88,9 @@ class Solution:
 
         return ans[amount] if ans[amount] != math.inf else -1
 ```
+
+### Solution (top-down memoized recursion)
+
 Python top-down version
 ```python
 import math

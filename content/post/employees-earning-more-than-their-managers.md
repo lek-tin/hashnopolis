@@ -9,8 +9,9 @@ lastmod: 2020-03-02T23:57:13+08:00
 draft: false
 archive: false
 ---
+
 ```
-# SQL Schema:   
+# SQL Schema:
 Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int)
 Truncate table Employee
 insert into Employee (Id, Name, Salary, ManagerId) values ('1', 'Joe', '70000', '3')
@@ -18,6 +19,7 @@ insert into Employee (Id, Name, Salary, ManagerId) values ('2', 'Henry', '80000'
 insert into Employee (Id, Name, Salary, ManagerId) values ('3', 'Sam', '60000', 'None')
 insert into Employee (Id, Name, Salary, ManagerId) values ('4', 'Max', '90000', 'None')
 ```
+
 The `Employee` table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
 ```
 +----+-------+--------+-----------+
@@ -37,7 +39,9 @@ Given the `Employee` table, write a SQL query that finds out employees who earn 
 | Joe      |
 +----------+
 ```
-### Solution
+
+### Solution (where)
+
 `WHERE`: Select from two tables will get the `Cartesian` product of these two tables. In this case, the output will be `4*4 = 16` records. However, what we interest is the employee's salary higher than his/her manager. So we should add two conditions in a WHERE clause like below.
 ```sql
 SELECT
@@ -48,12 +52,17 @@ FROM
 WHERE
     a.ManagerId = b.Id AND a.Salary > b.Salary
 ```
-`JOIN` - more efficient:
+
+### Solution (join)
+
+more efficient than using `where`
 ```sql
 SELECT
      a.NAME AS Employee
-FROM Employee AS a JOIN Employee AS b
-     ON a.ManagerId = b.Id
-     AND a.Salary > b.Salary
-;
+FROM
+    Employee AS a
+JOIN
+    Employee AS b
+ON a.ManagerId = b.Id
+AND a.Salary > b.Salary
 ```
