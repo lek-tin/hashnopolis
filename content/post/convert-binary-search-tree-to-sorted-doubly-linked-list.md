@@ -2,7 +2,7 @@
 title: "Convert Binary Search Tree to Sorted Doubly Linked List"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "double-linked-list", "bst"]
+tags: ["leetcode", "doubly-linked-list", "bst"]
 categories: ["algorithm"]
 date: 2018-12-26T01:24:33-08:00
 lastmod: 2019-10-12T13:24:33-08:00

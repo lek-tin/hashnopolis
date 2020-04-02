@@ -2,7 +2,7 @@
 title: "Minimum Number of Refueling Stops"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "dynamic-programming"]
+tags: ["leetcode", "dynamic-programming", "greedy", "heap"]
 categories: ["algorithm"]
 date: 2020-03-30T02:39:52-07:00
 lastmod: 2020-03-30T02:39:52-07:00
@@ -64,15 +64,40 @@ class Solution:
         # dp[i], the farthest location we can get to using i refueling stops.
         # dp[0]: best situation, can travel startFuel miles with 0 stop
         dp = [startFuel] + [0] * len(stations)
-
+        # descending order because we want the max distance for each stop
         for i, (location, capacity) in enumerate(stations):
             for stop in range(i, -1, -1):
                 if dp[stop] >= location:
                     dp[stop+1] = max(dp[stop+1], dp[stop] + capacity)
 
-        for stop, d in enumerate(dp):
-            if d >= target:
-                return stop
+        for i, distance in enumerate(dp):
+            if distance >= target:
+                return i
 
         return -1
+```
+
+### Solution (greedy + heap)
+
+```python
+class Solution:
+    def minRefuelStops(self, target: int, startFuel: int, stations: List[List[int]]) -> int:
+        max_pq = []
+        stations.append( [target, float("inf")] )
+        ans = prev = 0
+        tank = startFuel
+
+        for location, refill in stations:
+            tank -= location - prev
+
+            while max_pq and tank < 0:
+                tank += -heapq.heappop(max_pq)
+                ans += 1
+            if tank < 0:
+                # not possible to reach location
+                return -1
+            heapq.heappush(max_pq, -refill)
+            prev = location
+
+        return ans
 ```

@@ -2,7 +2,7 @@
 title: "Design Circular Deque"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "ood", "deque", "double-linked-list", "linked-list"]
+tags: ["leetcode", "ood", "deque", "doubly-linked-list", "linked-list"]
 categories: ["algorithm"]
 date: 2020-03-29T06:40:37-07:00
 lastmod: 2020-03-29T06:40:37-07:00

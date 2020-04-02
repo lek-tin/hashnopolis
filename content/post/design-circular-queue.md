@@ -2,7 +2,7 @@
 title: "Design Circular Queue"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "ood", "queue", "double-linked-list", "linked-list"]
+tags: ["leetcode", "ood", "queue", "doubly-linked-list", "linked-list"]
 categories: ["algorithm"]
 date: 2020-03-25T23:29:21-07:00
 lastmod: 2020-03-25T23:29:21-07:00
