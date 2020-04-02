@@ -7,10 +7,98 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 30 Mar 2020 02:39:52 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 22:20:28 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LFU Cache</title>
+      <link>http://www.hashnopolis.com/post/lfu-cache/</link>
+      <pubDate>Tue, 31 Mar 2020 22:20:28 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/lfu-cache/</guid>
+      <description>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item.</description>
+    </item>
+    
+    <item>
+      <title>Android Unlock Patterns</title>
+      <link>http://www.hashnopolis.com/post/android-unlock-patterns/</link>
+      <pubDate>Tue, 31 Mar 2020 20:08:24 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/android-unlock-patterns/</guid>
+      <description>Given an Android 3x3 key lock screen and two integers m and n, where 1 ≤ m ≤ n ≤ 9, count the total number of unlock patterns of the Android lock screen, which consist of minimum of m keys and maximum n keys.
+Rules for a valid pattern:
+ Each pattern must connect at least m keys and at most n keys. All the keys must be distinct. If the line connecting two consecutive keys in the pattern passes through any other keys, the other keys must have previously selected in the pattern.</description>
+    </item>
+    
+    <item>
+      <title>Human Traffic of Stadium</title>
+      <link>http://www.hashnopolis.com/post/human-traffic-of-stadium/</link>
+      <pubDate>Tue, 31 Mar 2020 02:28:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/human-traffic-of-stadium/</guid>
+      <description>X city built a new stadium, each day many people visit it and the stats are saved as these columns: id, visit_date, people
+Please write a query to display the records which have 3 or more consecutive rows and the amount of people more than 100(inclusive).
+For example, the table stadium:
++------+------------+-----------+ | id | visit_date | people | +------+------------+-----------+ | 1 | 2017-01-01 | 10 | | 2 | 2017-01-02 | 109 | | 3 | 2017-01-03 | 150 | | 4 | 2017-01-04 | 99 | | 5 | 2017-01-05 | 145 | | 6 | 2017-01-06 | 1455 | | 7 | 2017-01-07 | 199 | | 8 | 2017-01-08 | 188 | +------+------------+-----------+ For the sample data above, the output is:</description>
+    </item>
+    
+    <item>
+      <title>Consecutive Available Seats</title>
+      <link>http://www.hashnopolis.com/post/consecutive-available-seats/</link>
+      <pubDate>Tue, 31 Mar 2020 02:16:23 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/consecutive-available-seats/</guid>
+      <description>Several friends at a cinema ticket office would like to reserve consecutive available seats. Can you help to query all the consecutive available seats order by the seat_id using the following cinema table?
+| seat_id | free | |---------|------| | 1 | 1 | | 2 | 0 | | 3 | 1 | | 4 | 1 | | 5 | 1 | Your query should return the following result for the sample case above.</description>
+    </item>
+    
+    <item>
+      <title>Active Businesses</title>
+      <link>http://www.hashnopolis.com/post/active-businesses/</link>
+      <pubDate>Tue, 31 Mar 2020 01:55:10 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/active-businesses/</guid>
+      <description>Table: Events
++---------------+---------+ | Column Name | Type | +---------------+---------+ | business_id | int | | event_type | varchar | | occurences | int | +---------------+---------+ (business_id, event_type) is the primary key of this table. Each row in the table logs the info that an event of some type occured at some business for a number of times. Write an SQL query to find all active businesses.
+An active business is a business that has more than one event type with occurences greater than the average occurences of that event type among all businesses.</description>
+    </item>
+    
+    <item>
+      <title>Bitwise and of Numbers Range</title>
+      <link>http://www.hashnopolis.com/post/bitwise-and-of-numbers-range/</link>
+      <pubDate>Tue, 31 Mar 2020 01:24:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/bitwise-and-of-numbers-range/</guid>
+      <description>Given a range [m, n] where 0 &amp;lt;= m &amp;lt;= n &amp;lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.
+Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution class Solution: def rangeBitwiseAnd(self, m: int, n: int) -&amp;gt; int: shift = 0 while m &amp;lt; n: m = m &amp;gt;&amp;gt; 1 n = n &amp;gt;&amp;gt; 1 shift += 1 m = m &amp;lt;&amp;lt; shift return m </description>
+    </item>
+    
+    <item>
+      <title>Shortest Distance From All Buildings</title>
+      <link>http://www.hashnopolis.com/post/shortest-distance-from-all-buildings/</link>
+      <pubDate>Tue, 31 Mar 2020 01:20:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/shortest-distance-from-all-buildings/</guid>
+      <description>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You can only move up, down, left and right. You are given a 2D grid of values 0, 1 or 2, where:
+ Each 0 marks an empty land which you can pass by freely. Each 1 marks a building which you cannot pass through. Each 2 marks an obstacle which you cannot pass through.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Xor of Two Numbers in an Array</title>
+      <link>http://www.hashnopolis.com/post/maximum-xor-of-two-numbers-in-an-array/</link>
+      <pubDate>Mon, 30 Mar 2020 22:59:16 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/maximum-xor-of-two-numbers-in-an-array/</guid>
+      <description>Given a non-empty array of numbers, a0, a1, a2, … , an-1, where 0 ≤ ai&amp;lt; 231.
+Find the maximum result of ai XOR aj, where 0 ≤ i, j &amp;lt; n.
+Could you do this in O(n) runtime?
+Example Input: [3, 10, 5, 25, 2, 8] Output: 28 Explanation: The maximum result is 5 ^ 25 = 28. Solution (prefix hashset - less efficient) Time: O(N)
+Space: O(1)
+class Solution: def findMaximumXOR(self, nums: List[int]) -&amp;gt; int: # 0bxxxxxx - 0b L = len(bin(max(nums))) - 2 max_xor = 0 for i in range(L-1, -1, -1): max_xor &amp;lt;&amp;lt;= 1 print(&amp;#34;max_xor:&amp;#34;, bin(max_xor) ) # set the rightmost bit to 1 curr_xor = max_xor | 1 print(&amp;#34;curr_xor:&amp;#34;, bin(curr_xor) ) # highest (L-i) bits prefixes = {num &amp;gt;&amp;gt; i for num in nums} print(&amp;#34;prefixes:&amp;#34;, [bin(p) for p in prefixes] ) # as long as there exists a p that makes curr_xor^p &amp;gt; 0 # Update max_xor, if two of these prefixes could result in curr_xor.</description>
+    </item>
     
     <item>
       <title>Minimum Number of Refueling Stops</title>
@@ -2570,7 +2658,7 @@ Example 1 Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 cou
       
       <guid>http://www.hashnopolis.com/post/alien-dictionary/</guid>
       <description>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot; Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot; Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot; Explanation The order is invalid, so return &amp;ldquo;&amp;quot;.</description>
+Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot; Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot; Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot; Explanation The order is invalid, so return &amp;quot;&amp;quot;.</description>
     </item>
     
     <item>
@@ -3562,9 +3650,7 @@ Example 1 Input: [2,2,3,2] Output: 3 Example 2 Input: [0,1,0,1,0,1,99] Output: 9
       
       <guid>http://www.hashnopolis.com/post/single-number/</guid>
       <description>Given a non-empty array of integers, every element appears twice except for one. Find that single one. Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
-Example 1:
-Input: [2,2,1] Output: 1 Example 2: Input: [4,1,2,1,2] Output: 4 Solution:
-// Java class Solution { public int singleNumber(int[] nums) { int result=0; for(int num : nums) { result=result^num; } return result; } } </description>
+Example 1 Input: [2,2,1] Output: 1 Example 2 Input: [4,1,2,1,2] Output: 4 Solution // Java class Solution { public int singleNumber(int[] nums) { int result=0; for(int num : nums) { result=result^num; } return result; } } Solution class Solution: def singleNumber(self, nums: List[int]) -&amp;gt; int: singleNum = nums[0] for i in range(1, len(nums)): singleNum ^= nums[i] return singleNum </description>
     </item>
     
     <item>

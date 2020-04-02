@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="no-js" language="en-us">
+
+<head>
+
+  
+  <title>
+        LFU Cache | Hashnopolis
+      </title>
+
+    
+  
+
+
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item." />
+  <meta name="keywords" content="leetcode ood doubly-linked-list hashmap " />
+  
+  
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="LFU Cache" />
+    <meta name="twitter:description" content="Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item." />
+    <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+  
+
+
+
+
+<meta name="generator" content="Hugo 0.65.3" />
+
+
+<link rel="canonical" href="http://www.hashnopolis.com/post/lfu-cache/" />
+<link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="msapplication-TileColor" content="#7679EC">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#7679EC">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Hashnopolis" />
+<meta name="msapplication-tooltip" content="Hashnopolis" />
+<meta name='msapplication-navbutton-color' content="#7679EC" />
+<meta name="msapplication-TileColor" content="#7679EC" />
+<meta name="msapplication-TileImage" content="/img/favicon/favicon-32x32.png" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="/css/highlight.css" />
+<link rel="stylesheet" href="/css/highlight-atom-one-dark.min.css" />
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/overrides.css" />
+
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+</head>
+
+<body>
+  
+  <main class="container left-container">
+
+      <div class="row">
+
+        <section id="sideber" class="sidebar">
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+<a href="/" class="menu-logo">
+  <h1  class="menu-logo__text"># Hashnopolis #</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
+    <g>
+      <path d="M10.001 16l-.143-.01c-.547-.078-.926-.585-.849-1.132l2-14c.078-.546.588-.926 1.132-.848.547.078.927.584.849 1.131l-2 14c-.071.5-.499.859-.989.859zM4.001 16l-.143-.01c-.546-.078-.926-.585-.848-1.132l2-14c.078-.547.58-.927 1.132-.848.546.078.926.585.848 1.132l-2 14c-.072.499-.499.858-.989.858zM15 6h-13c-.552 0-1-.448-1-1s.448-1 1-1h13c.553 0 1 .448 1 1s-.447 1-1 1zM14 12h-13c-.552 0-1-.447-1-1s.448-1 1-1h13c.553 0 1 .447 1 1s-.447 1-1 1z"/>
+    </g>
+  </svg>
+</a>
+
+
+
+
+<ul id="mobile-menu" class="navigation">
+  <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
+  <li><a href="/">Home</a></li>
+  
+  
+  <li><a href="/categories/java">Java</a></li>
+  <li><a href="/categories/python">Python</a></li>
+  <li><a href="/categories/javascript">JavaScript</a></li>
+  <li><a href="/categories/algorithm">Algorithm</a></li>
+  <li><a href="/categories">Categories</a></li>
+  <li><a href="/tags">tags</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+<div class="site-info">
+  <div class="primary-info">
+    <h1>Computer Science, Data Science and Awesome Technology</h1>
+    <footer class="site-footer">
+    <p>© 2016-2020 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    
+    </footer>
+  </div>
+
+  
+  <div class="social-info">
+      <a href="https://linkedin.com/in/lektin/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/lek-tin"><i class="fa fa-github" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+        </section>
+    
+        <section class="main-content">
+          
+  
+
+  
+  <div class="post">
+      <p class="meta">
+        
+        
+        <span class="highlight">Tags:</span>
+        
+          "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
+        
+          "<a href="/tags/ood"><strong>ood</strong></a>",
+        
+          "<a href="/tags/doubly-linked-list"><strong>doubly-linked-list</strong></a>",
+        
+          "<a href="/tags/hashmap"><strong>hashmap</strong></a>",
+        
+        <i class="small material-icons">access_time</i> 3-min read
+      </p>
+      <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/lfu-cache.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
+      <h1>LFU Cache</h1>
+      <h4>Created: March 31, 2020 by [lek-tin]</h4>
+      
+        <h5>Last updated: March 31, 2020</h5>
+      
+      <hr />
+      <p>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: <code>get</code> and <code>put</code>.</p>
+<ol>
+<li><code>get(key)</code> - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.</li>
+<li><code>put(key, value)</code> - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item. For the purpose of this problem, when there is a tie (i.e., two or more keys that have the same frequency), the <strong>least</strong> recently used key would be evicted.</li>
+</ol>
+<p>Note that the number of times an item is used is the number of calls to the <code>get</code> and <code>put</code> functions for that item since it was inserted. This number is set to zero when the item is removed.</p>
+<h4 id="follow-up">Follow up</h4>
+<ul>
+<li>Could you do both operations in <code>O(1)</code> time complexity?</li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code>LFUCache cache = new LFUCache( 2 /* capacity */ );
+
+cache.put(1, 1);
+cache.put(2, 2);
+cache.get(1);       // returns 1
+cache.put(3, 3);    // evicts key 2
+cache.get(2);       // returns -1 (not found)
+cache.get(3);       // returns 3.
+cache.put(4, 4);    // evicts key 1.
+cache.get(1);       // returns -1 (not found)
+cache.get(3);       // returns 3
+cache.get(4);       // returns 4
+</code></pre><h4 id="illustration">Illustration</h4>
+<p><img src="/img/post/doubly-liked-lists-mapped-to-frequency-1.png" alt="doubly liked lists mapped to frequency 1">
+<img src="/img/post/doubly-liked-lists-mapped-to-frequency-2.png" alt="doubly liked lists mapped to frequency 2"></p>
+<h3 id="solution-o1">Solution (<code>O(1)</code>)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> defaultdict
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span>:
+    <span style="color:#66d9ef">def</span> __init__(self, _key<span style="color:#f92672">=</span>None, _val<span style="color:#f92672">=</span>None, _freq<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
+        self<span style="color:#f92672">.</span>key <span style="color:#f92672">=</span> _key
+        self<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> _val
+        self<span style="color:#f92672">.</span>freq <span style="color:#f92672">=</span> _freq
+        self<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> None
+        self<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> None
+
+    <span style="color:#66d9ef">def</span> __str__(self):
+        temp <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#f92672">+</span> str(self<span style="color:#f92672">.</span>key) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">+</span> str(self<span style="color:#f92672">.</span>val) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">+</span> str(self<span style="color:#f92672">.</span>freq) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>next:
+          nextNode <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>next
+          temp <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34; -&gt; (&#34;</span> <span style="color:#f92672">+</span> str(nextNode<span style="color:#f92672">.</span>key) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">+</span> str(nextNode<span style="color:#f92672">.</span>val) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">+</span> str(nextNode<span style="color:#f92672">.</span>freq) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DLL</span>:
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>head <span style="color:#f92672">=</span> Node(None)
+        self<span style="color:#f92672">.</span>tail <span style="color:#f92672">=</span> Node(None)
+        self<span style="color:#f92672">.</span>head<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>tail
+        self<span style="color:#f92672">.</span>tail<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>head
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">append</span>(self, node):
+        node<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>tail<span style="color:#f92672">.</span>prev
+        node<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>tail
+        node<span style="color:#f92672">.</span>prev<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> node
+        node<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> node
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">front</span>(self):
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>isEmpty():
+            <span style="color:#66d9ef">return</span> None
+
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>head<span style="color:#f92672">.</span>next
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">deleteFront</span>(self,):
+        front <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>front()
+        self<span style="color:#f92672">.</span>delete(front)
+        <span style="color:#66d9ef">del</span> front
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">delete</span>(self, node):
+        node<span style="color:#f92672">.</span>prev<span style="color:#f92672">.</span>next  <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span>next
+        node<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>prev <span style="color:#f92672">=</span> node<span style="color:#f92672">.</span>prev
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isEmpty</span>(self):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>head<span style="color:#f92672">.</span>next <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>tail
+
+    <span style="color:#66d9ef">def</span> __str__(self):
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>isEmpty():
+          <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Empty DLL&#34;</span>
+        <span style="color:#66d9ef">else</span>:
+          <span style="color:#66d9ef">return</span> str(self<span style="color:#f92672">.</span>head<span style="color:#f92672">.</span>next)
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LFUCache</span>:
+
+    <span style="color:#66d9ef">def</span> __init__(self, capacity: int):
+        self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">=</span> capacity
+        self<span style="color:#f92672">.</span>size <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        self<span style="color:#f92672">.</span>min_freq <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#75715e"># key : Node</span>
+        self<span style="color:#f92672">.</span>key_to_node <span style="color:#f92672">=</span> {}
+        <span style="color:#75715e"># freq: DLL&lt;Node&gt;</span>
+        self<span style="color:#f92672">.</span>freq_to_nodes <span style="color:#f92672">=</span> defaultdict(DLL)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get</span>(self, key: int) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>key_to_node:
+            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#75715e"># only update node, no new value</span>
+        self<span style="color:#f92672">.</span>updateFreq(key)
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>key_to_node[key]<span style="color:#f92672">.</span>val
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">put</span>(self, key: int, value: int) <span style="color:#f92672">-&gt;</span> None:
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span>
+
+        <span style="color:#75715e"># key exists</span>
+        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>key_to_node:
+            self<span style="color:#f92672">.</span>updateFreq(key, value)
+            <span style="color:#66d9ef">return</span>
+
+        <span style="color:#75715e"># key doesn&#39;t exist</span>
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>size <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>capacity:
+            self<span style="color:#f92672">.</span>evict()
+
+        self<span style="color:#f92672">.</span>addNode(key, value)
+
+        <span style="color:#66d9ef">return</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">updateFreq</span>(self, key, val<span style="color:#f92672">=</span>None):
+        oldNode <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>key_to_node[key]
+        self<span style="color:#f92672">.</span>freq_to_nodes[oldNode<span style="color:#f92672">.</span>freq]<span style="color:#f92672">.</span>delete(oldNode)
+        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>freq_to_nodes[oldNode<span style="color:#f92672">.</span>freq]<span style="color:#f92672">.</span>isEmpty():
+            <span style="color:#66d9ef">del</span> self<span style="color:#f92672">.</span>freq_to_nodes[oldNode<span style="color:#f92672">.</span>freq]
+            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>min_freq <span style="color:#f92672">==</span> oldNode<span style="color:#f92672">.</span>freq:
+                self<span style="color:#f92672">.</span>min_freq <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+
+        newNode <span style="color:#f92672">=</span> Node(key, oldNode<span style="color:#f92672">.</span>val <span style="color:#66d9ef">if</span> val <span style="color:#f92672">==</span> None <span style="color:#66d9ef">else</span> val, oldNode<span style="color:#f92672">.</span>freq<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+        self<span style="color:#f92672">.</span>key_to_node[key] <span style="color:#f92672">=</span> newNode
+        newFreq <span style="color:#f92672">=</span> newNode<span style="color:#f92672">.</span>freq
+        self<span style="color:#f92672">.</span>freq_to_nodes[newFreq]<span style="color:#f92672">.</span>append(newNode)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">evict</span>(self):
+        nodes_at_freq <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>freq_to_nodes[self<span style="color:#f92672">.</span>min_freq]
+        node_to_delete <span style="color:#f92672">=</span> nodes_at_freq<span style="color:#f92672">.</span>front()
+        <span style="color:#66d9ef">del</span> self<span style="color:#f92672">.</span>key_to_node[node_to_delete<span style="color:#f92672">.</span>key]
+        nodes_at_freq<span style="color:#f92672">.</span>deleteFront()
+        <span style="color:#66d9ef">if</span> nodes_at_freq<span style="color:#f92672">.</span>isEmpty():
+            <span style="color:#66d9ef">del</span> self<span style="color:#f92672">.</span>freq_to_nodes[self<span style="color:#f92672">.</span>min_freq]
+        self<span style="color:#f92672">.</span>size <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">addNode</span>(self, key, val):
+        self<span style="color:#f92672">.</span>min_freq <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        newNode <span style="color:#f92672">=</span> Node(key, val, self<span style="color:#f92672">.</span>min_freq)
+        self<span style="color:#f92672">.</span>key_to_node[key] <span style="color:#f92672">=</span> newNode
+        self<span style="color:#f92672">.</span>freq_to_nodes[self<span style="color:#f92672">.</span>min_freq]<span style="color:#f92672">.</span>append(newNode)
+        self<span style="color:#f92672">.</span>size <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+
+<span style="color:#75715e"># Your LFUCache object will be instantiated and called as such:</span>
+<span style="color:#75715e"># obj = LFUCache(capacity)</span>
+<span style="color:#75715e"># param_1 = obj.get(key)</span>
+<span style="color:#75715e"># obj.put(key,value)</span>
+</code></pre></div>
+  </div>
+
+  <div id="disqus_thread"></div>
+<script>
+  
+
+  
+
+  (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hashnopolis.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+        </section>
+        
+
+      </div>
+      
+
+  </main>
+
+  
+
+
+<script src="/js/bundle.js"></script>
+
+
+<script src="/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js"></script>
+<script src="/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="/js/vendor/jquery.jpanelmenu.min.js"></script>
+<script src="/js/vendor/highlight.min.js"></script>
+<script src="/js/vendor/fastclick.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script id="dsq-count-scr" src="//hashnopolis.disqus.com/count.js" async></script>
+
+</body>
+
+</html>

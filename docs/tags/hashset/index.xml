@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 26 Mar 2020 04:15:15 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 22:59:16 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/hashset/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Maximum Xor of Two Numbers in an Array</title>
+      <link>http://www.hashnopolis.com/post/maximum-xor-of-two-numbers-in-an-array/</link>
+      <pubDate>Mon, 30 Mar 2020 22:59:16 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/maximum-xor-of-two-numbers-in-an-array/</guid>
+      <description>Given a non-empty array of numbers, a0, a1, a2, … , an-1, where 0 ≤ ai&amp;lt; 231.
+Find the maximum result of ai XOR aj, where 0 ≤ i, j &amp;lt; n.
+Could you do this in O(n) runtime?
+Example Input: [3, 10, 5, 25, 2, 8] Output: 28 Explanation: The maximum result is 5 ^ 25 = 28. Solution (prefix hashset - less efficient) Time: O(N)
+Space: O(1)
+class Solution: def findMaximumXOR(self, nums: List[int]) -&amp;gt; int: # 0bxxxxxx - 0b L = len(bin(max(nums))) - 2 max_xor = 0 for i in range(L-1, -1, -1): max_xor &amp;lt;&amp;lt;= 1 print(&amp;#34;max_xor:&amp;#34;, bin(max_xor) ) # set the rightmost bit to 1 curr_xor = max_xor | 1 print(&amp;#34;curr_xor:&amp;#34;, bin(curr_xor) ) # highest (L-i) bits prefixes = {num &amp;gt;&amp;gt; i for num in nums} print(&amp;#34;prefixes:&amp;#34;, [bin(p) for p in prefixes] ) # as long as there exists a p that makes curr_xor^p &amp;gt; 0 # Update max_xor, if two of these prefixes could result in curr_xor.</description>
+    </item>
     
     <item>
       <title>Design Hashset</title>
