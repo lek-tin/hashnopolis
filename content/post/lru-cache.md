@@ -2,7 +2,7 @@
 title: "LRU Cache"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "lru-cache", "dll", "linked-list", "hashmap", "linked-hashmap"]
+tags: ["leetcode", "lru-cache", "doubly-linked-list", "linked-list", "hashmap", "linked-hashmap"]
 categories: ["algorithm"]
 date: 2018-11-11T15:33:09-08:00
 lastmod: 2018-11-11T15:33:09-08:00

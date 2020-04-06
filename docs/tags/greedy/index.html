@@ -176,6 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/">Minimum Number of Refueling Stops</a></h2>
+
+      <p>A car travels from a starting position to a destination which is target miles east of the starting position.
+Along the way, there are gas stations. Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.
+The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses 1 liter of gas per 1 mile that it drives.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/split-array-into-consecutive-subsequences/">Split Array Into Consecutive Subsequences</a></h2>
 
       <p>Given an array nums sorted in ascending order, return true if and only if you can split it into 1 or more subsequences such that each subsequence consists of consecutive integers and has length at least 3.
@@ -362,7 +389,7 @@ Example 1 Input: S = &#34;ababcbacadefegdehijhklij&#34; Output: [9,7,8] Explanat
       <h2><a href="http://www.hashnopolis.com/post/maximum-swap/">Maximum Swap</a></h2>
 
       <p>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
-Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2: Input: 9973 Output: 9973 Explanation: No swap. Note:  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&#34;0&#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &gt; int(ord(numChars[i])-ord(&#34;0&#34;)): if last[j] &gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&#34;&#34;.</p>
+Example 1 Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2 Input: 9973 Output: 9973 Explanation: No swap. Note  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&#34;0&#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &gt; int(ord(numChars[i])-ord(&#34;0&#34;)): if last[j] &gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&#34;&#34;.</p>
 
       <p class="meta">
         
@@ -401,32 +428,6 @@ Our goal is to assign a bike to each worker. Among the available bikes and worke
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/task-scheduler/">Task Scheduler</a></h2>
-
-      <p>Given a char array representing tasks CPU need to do. It contains capital letters A to Z where different letters represent different tasks.Tasks could be done without original order. Each task could be done in one interval. For each interval, CPU could finish one task or just be idle.
-However, there is a non-negative cooling interval n that means between two same tasks, there must be at least n intervals that CPU are doing different tasks or just be idle.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

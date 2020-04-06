@@ -19,7 +19,7 @@
   <meta name="description" content="Given a non-empty array of integers, every element appears three times except for one, which appears exactly once. Find that single one.
 Note Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 Example 1 Input: [2,2,3,2] Output: 3 Example 2 Input: [0,1,0,1,0,1,99] Output: 99 Solution class Solution: def singleNumber(self, nums): &amp;#34;&amp;#34;&amp;#34; :type nums: List[int] :rtype: int &amp;#34;&amp;#34;&amp;#34; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.csdn.net/karen0310/article/details/78226261 ones, twos = 0, 0 for _, num in enumerate(nums): ones = (ones ^ num) &amp;amp; ~twos twos = (twos ^ num) &amp;amp; ~ones print(bin(num), &amp;#34;ones: &amp;#34;, bin(ones), &amp;#34;twos: &amp;#34;, bin(twos)) return ones " />
-  <meta name="keywords" content="leetcode bit-operation " />
+  <meta name="keywords" content="leetcode bit-manipulation " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -181,7 +181,7 @@ Example 1 Input: [2,2,3,2] Output: 3 Example 2 Input: [0,1,0,1,0,1,99] Output: 9
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/bit-operation"><strong>bit-operation</strong></a>",
+          "<a href="/tags/bit-manipulation"><strong>bit-manipulation</strong></a>",
         
         <i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -193,7 +193,7 @@ Example 1 Input: [2,2,3,2] Output: 3 Example 2 Input: [0,1,0,1,0,1,99] Output: 9
       
       <hr />
       <p>Given a <strong>non-empty</strong> array of integers, every element appears three times except for one, which appears exactly once. Find that single one.</p>
-<h3 id="note">Note</h3>
+<h4 id="note">Note</h4>
 <p>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
 <h3 id="example-1">Example 1</h3>
 <pre><code>Input: [2,2,3,2]

@@ -2,7 +2,7 @@
 title: "Single Number III"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "bit-operation"]
+tags: ["leetcode", "bit-manipulation"]
 categories: ["algorithm"]
 date: 2018-09-14T11:54:43+08:00
 draft: false
@@ -12,7 +12,7 @@ Given an array of numbers `nums`, in which exactly two elements appear only once
 
 For example:
 Given `nums = [1, 2, 1, 3, 2, 5]`, return `[3, 5]`.
-### Note:
+#### Note
 
 1. The order of the result is not important. So in the above example, `[5, 3]` is also correct.
 2. Your algorithm should run in linear runtime complexity. Could you implement it using only constant space complexity?

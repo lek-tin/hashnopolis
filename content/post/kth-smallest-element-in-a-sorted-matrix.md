@@ -25,5 +25,5 @@ k = 8,
 return 13.
 ```
 
-### Note:
+#### Note
 1. You may assume `k` is always valid, `1 ≤ k ≤ n2`.

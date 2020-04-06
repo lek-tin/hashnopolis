@@ -193,7 +193,7 @@ Design an algorithm to serialize and deserialize a binary search tree. There is 
       <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.</p>
 <p>Design an algorithm to serialize and deserialize a <code>binary search tree</code>. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a <code>binary search tree</code> can be serialized to a string and this string can be deserialized to the original tree structure.</p>
 <p>The encoded string should be as compact as possible.</p>
-<h3 id="note">Note:</h3>
+<h4 id="note">Note</h4>
 <p>Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.</p>
 <h3 id="solution">Solution:</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
@@ -243,9 +243,9 @@ Design an algorithm to serialize and deserialize a binary search tree. There is 
         <span style="color:#66d9ef">return</span> build<span style="color:#f92672">(</span>queue<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
     <span style="color:#75715e">// example:
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">//     10
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">//  8     15
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 4 9   11  20
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//      10
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   8     15
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 4  9  11  20
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> TreeNode <span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>Queue<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> q<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>q<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
         <span style="color:#75715e">// 10

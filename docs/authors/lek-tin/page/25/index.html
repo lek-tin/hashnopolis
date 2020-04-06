@@ -176,11 +176,11 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/validate-binary-search-tree/">Validate Binary Search Tree</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/one-edit-distance/">One Edit Distance</a></h2>
 
-      <p>Given a binary tree, determine if it is a valid binary search tree (BST).
-Assume a BST is defined as follows:
- The left subtree of a node contains only nodes with keys less than the node’s key. The right subtree of a node contains only nodes with keys greater than the node’s key. Both the left and right subtrees must also be binary search trees.  Example 1 Input: 2 / \ 1 3 Output: true Example 2  5 / \ 1 4 / \ 3 6 Output: false Explanation The input is: [5,1,4,null,null,3,6].</p>
+      <p>Given two strings s and t, determine if they are both one edit distance apart.
+Note There are 3 possiblities to satisify one edit distance apart:
+ Insert a character into s to get t Delete a character from s to get t Replace a character of s to get t  Example 1 Input: s = &#34;ab&#34;, t = &#34;acb&#34; Output: true Explanation: We can insert &#39;c&#39; into s to get t.</p>
 
       <p class="meta">
         
@@ -203,10 +203,10 @@ Assume a BST is defined as follows:
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/arrays-in-cpp/">Arrays in CPP</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/find-a-local-minima-in-an-array/">Find a Local Minima in an Array</a></h2>
 
-      <p>To get the number of elements in an array in C&#43;&#43;:
-sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. Divide it with the size of one element in the array will give you the number of elements in the array: sizeof(awesomeArray)/sizeof(awesomeArray[0])</p>
+      <p>Given an array arr[0 .. n-1] of distinct integers, the task is to find a local minima in it. We say that an element arr[x] is a local minimum if it is less than or equal to both its neighbors.
+For corner elements, we need to consider only one neighbor for comparison. There can be more than one local minima in an array, we need to find any one of them.</p>
 
       <p class="meta">
         
@@ -216,9 +216,9 @@ sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. D
         
         in
         
-          <a  class="meta--cat" href="/categories/programming-language" ><strong>"programming-language"</strong></a>
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
@@ -229,10 +229,90 @@ sizeof(awesomeArray) = total number of bytes allocated for awesomeArray array. D
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/count-primes/">Count Primes</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-vertical-order-traversal/">Binary Tree Vertical Order Traversal</a></h2>
 
-      <p>Count the number of prime numbers less than a non-negative number, n.
-Example Input: 10 Output: 4 Explanation There are 4 prime numbers less than 10, they are 2, 3, 5, 7. Solution class Solution: def countPrimes(self, n): &#34;&#34;&#34; :type n: int :rtype: int &#34;&#34;&#34; if n &lt;= 2: return 0 marked = [0] * (n-1) for i in range(int(n**0.5)&#43;1): if marked[i] != 1: prime = i &#43; 2 for j in range(prime**2-2, n-1, prime): marked[j] = 1 count = 0 for c, k in enumerate(marked): # We are counting numbers less than n, hence len(marked)-1 if k == 0 and c &lt; len(marked)-1: count &#43;= 1 return count Cleaner version</p>
+      <p>Given a binary tree, return the vertical order traversal of its nodes’ values. (ie, from top to bottom, column by column).
+If two nodes are in the same row and column, the order should be from left to right.
+Example 1 Input: [3,9,20,null,null,15,7] 3 /\ / \ 9 20 /\ / \ 15 7 Output: [ [9], [3,15], [20], [7] ] Example 2 Input: [3,9,8,4,0,1,7] 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 Output: [ [4], [9], [3,0,1], [8], [7] ] Example 3 Input: [3,9,8,4,0,1,7,null,null,null,2,5] (0&#39;s right child is 2 and 1&#39;s left child is 5) 3 /\ / \ 9 8 /\ /\ / \/ \ 4 01 7 /\ / \ 5 2 Output: [ [4], [9,5], [3,0,1], [8,2], [7] ] Solution # https://www.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/convert-binary-search-tree-to-sorted-doubly-linked-list/">Convert Binary Search Tree to Sorted Doubly Linked List</a></h2>
+
+      <p>Convert a BST to a sorted circular doubly-linked list in-place. Think of the left and right pointers as synonymous to the previous and next pointers in a doubly-linked list.
+Let’s take the following BST as an example, it may help you understand the problem better:
+We want to transform this BST into a circular doubly linked list. Each node in a doubly linked list has a predecessor and successor. For a circular doubly linked list, the predecessor of the first element is the last element, and the successor of the last element is the first element.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
+
+      <p>Given an unsorted array of integers, find the length of longest increasing subsequence.
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution Bottom-up solution:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/longest-continuous-increasing-subsequence/">Longest Continuous Increasing Subsequence</a></h2>
+
+      <p>Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
+Example 1 Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4. Example 2 Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</p>
 
       <p class="meta">
         
@@ -255,12 +335,40 @@ Example Input: 10 Output: 4 Explanation There are 4 prime numbers less than 10, 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/implement-trie-prefix-tree/">Implement Trie Prefix Tree</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/find-all-anagrams-in-a-string/">Find All Anagrams in a String</a></h2>
 
-      <p>Implement a trie with insert, search, and startsWith methods.
-Example Trie trie = new Trie(); trie.insert(&#34;apple&#34;); trie.search(&#34;apple&#34;); // returns true trie.search(&#34;app&#34;); // returns false trie.startsWith(&#34;app&#34;); // returns true trie.insert(&#34;app&#34;); trie.search(&#34;app&#34;); // returns true Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
-Solution Python
-class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _ in range(26)] self.</p>
+      <p>Given a string s and a non-empty string p, find all the start indices of p&#39;s anagrams in s.
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+The order of output does not matter.
+Example 1 Input: s: &#34;cbaebabacd&#34; p: &#34;abc&#34; Output: [0, 6] Explanation: The substring with start index = 0 is &#34;cba&#34;, which is an anagram of &#34;abc&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/course-schedule/">Course Schedule</a></h2>
+
+      <p>There are a total of n courses you have to take, labeled from 0 to n-1.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+Example 1 Input: 2, [[1,0]] Output: true Explanation: There are a total of 2 courses to take.</p>
 
       <p class="meta">
         
@@ -283,39 +391,10 @@ class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/excel-sheet-column-title/">Excel Sheet Column Title</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/alien-dictionary/">Alien Dictionary</a></h2>
 
-      <p>Given a positive integer, return its corresponding column title as appear in an Excel sheet.
-For example:
- 1 -&gt; A 2 -&gt; B 3 -&gt; C ... 26 -&gt; Z 27 -&gt; AA 28 -&gt; AB ... Example 1 Input: 1 Output: &#34;A&#34; Example 2 Input: 28 Output: &#34;AB&#34; Example 3 Input: 701 Output: &#34;ZY&#34; Solution class Solution: def convertToTitle(self, n): &#34;&#34;&#34; :type n: int :rtype: str &#34;&#34;&#34; digit = 1 res = &#34;&#34; while n &gt; 0: # Because we start from A.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/add-and-search-word-data-structure-design/">Add and Search Word Data Structure Design</a></h2>
-
-      <p>Design a data structure that supports the following two operations:
-void addWord(word) bool search(word) search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.
-Example addWord(&#34;bad&#34;) addWord(&#34;dad&#34;) addWord(&#34;mad&#34;) search(&#34;pad&#34;) -&gt; false search(&#34;bad&#34;) -&gt; true search(&#34;.ad&#34;) -&gt; true search(&#34;b..&#34;) -&gt; true Note You may assume that all words are consist of lowercase letters a-z.
-Solution </p>
+      <p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
+Example 1 Input: [ &#34;wrt&#34;, &#34;wrf&#34;, &#34;er&#34;, &#34;ett&#34;, &#34;rftt&#34; ] Output: &#34;wertf&#34; Example 2 Input: [ &#34;z&#34;, &#34;x&#34; ] Output: &#34;zx&#34; Example 3 Input: [ &#34;z&#34;, &#34;x&#34;, &#34;z&#34; ] Output: &#34;&#34; Explanation The order is invalid, so return &#34;&#34;.</p>
 
       <p class="meta">
         
@@ -327,7 +406,7 @@ Solution </p>
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 
@@ -338,94 +417,11 @@ Solution </p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/increasing-triplet-subsequence/">Increasing Triplet Subsequence</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/random-pick-index/">Random Pick Index</a></h2>
 
-      <p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
-Formally the function should:
-Return true if there exists i, j, k such that arr[i] &lt; arr[j] &lt; arr[k] given 0 ≤ i &lt; j &lt; k ≤ n-1 else return false.
-Note Your algorithm should run in O(n) time complexity and O(1) space complexity. Example 1 Input: [1,2,3,4,5] Output: true Example 2 Input: [5,4,3,2,1] Output: false Solution import math class Solution: def increasingTriplet(self, nums: List[int]) -&gt; bool: if not nums or len(nums) &lt; 3: return False # min_1 &lt; min_2 min_1, min_2 = math.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/simplify-path/">Simplify Path</a></h2>
-
-      <p>Given an absolute path for a file (Unix-style), simplify it.
-For example, path = &#34;/home/&#34;, =&gt; &#34;/home&#34; path = &#34;/a/./b/../../c/&#34;, =&gt; &#34;/c&#34; path = &#34;/a/../../b/../c//.//&#34;, =&gt; &#34;/c&#34; path = &#34;/a//b////c/d//././/..&#34;, =&gt; &#34;/a/b/c&#34;
-In a UNIX-style file system, a period (&#39;.&#39;) refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period (&#34;..&#34;) moves up a directory, so it cancels out whatever the last directory was.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/sqrtx/">Sqrtx</a></h2>
-
-      <p>Implement int sqrt(int x).
-Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
-Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.
-Example 1 Input: 4 Output: 2 Example 2 Input: 8 Output: 2 Explanation: The square root of 8 is 2.82842…, and since the decimal part is truncated, 2 is returned.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/sort-colors/">Sort Colors</a></h2>
-
-      <p>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
-Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
-Note You are not suppose to use the library’s sort function for this problem. Example Input: [2,0,2,1,1,0] Output: [0,0,1,1,2,2] Follow-up  A rather straight forward solution is a two-pass algorithm using counting sort.</p>
+      <p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.
+Note The array size can be very large. Solution that uses too much extra space will not pass the judge.
+Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</p>
 
       <p class="meta">
         

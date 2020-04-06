@@ -59,7 +59,7 @@ You may recall that an array A is a mountain array if and only if:
       
       <guid>http://www.hashnopolis.com/post/sum-of-square-numbers/</guid>
       <description>Given a non-negative integer c, your task is to decide whether there&amp;rsquo;re two integers a and b such that a2 + b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5 Example 2: Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left + right*right &amp;lt; c: if (left+1)*(left+1) + right*right &amp;gt; c: right -= 1 else: left += 1 if left*left + right*right == c: return True return False Without sqrt function</description>
+Example 1 Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5 Example 2 Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&amp;gt; bool: if c &amp;lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left + right*right &amp;lt; c: if (left+1)*(left+1) + right*right &amp;gt; c: right -= 1 else: left += 1 if left*left + right*right == c: return True return False Without sqrt function</description>
     </item>
     
     <item>
@@ -69,8 +69,8 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5 Example 2: Input
       
       <guid>http://www.hashnopolis.com/post/valid-perfect-square/</guid>
       <description>Given a positive integer num, write a function which returns True if num is a perfect square else False.
-Note: Do not use any built-in library function such as sqrt.
-Example 1: Input: 16 Output: true Example 2: Input: 14 Output: false Solution Binary search version 1
+Note Do not use any built-in library function such as sqrt.
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
 class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left + (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid + 1 else: right = mid - 1 return False Binary search version 2</description>
     </item>
     
@@ -95,7 +95,7 @@ You call a pre-defined API guess(int num) which returns 3 possible results (-1, 
       <guid>http://www.hashnopolis.com/post/russian-doll-envelopes/</guid>
       <description>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
 What is the maximum number of envelopes can you Russian doll? (put one inside other)
-Note: Rotation is not allowed.
+Note Rotation is not allowed.
 Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&amp;gt; [5,4] =&amp;gt; [6,7]).</description>
     </item>
     
@@ -116,7 +116,7 @@ Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum num
       
       <guid>http://www.hashnopolis.com/post/find-k-closest-elements/</guid>
       <description>Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
-Example 1: Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4] Example 2: Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4] Note:  The value k is positive and will always be smaller than the length of the sorted array.</description>
+Example 1 Input: [1,2,3,4,5], k=4, x=3 Output: [1,2,3,4] Example 2 Input: [1,2,3,4,5], k=4, x=-1 Output: [1,2,3,4] Note  The value k is positive and will always be smaller than the length of the sorted array.</description>
     </item>
     
     <item>
@@ -220,7 +220,7 @@ Example 1 Input: [3,4,5,1,2] Output: 1 Example 2 Input: [4,5,6,7,0,1,2] Output: 
       <description>There are two sorted arrays nums1 and nums2 of size m and n respectively.
 Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 You may assume nums1 and nums2 cannot be both empty.
-Example 1: nums1 = [1, 3] nums2 = [2] The median is 2.0 Example 2: nums1 = [1, 2] nums2 = [3, 4] The median is (2 + 3)/2 = 2.</description>
+Example 1 nums1 = [1, 3] nums2 = [2] The median is 2.0 Example 2 nums1 = [1, 2] nums2 = [3, 4] The median is (2 + 3)/2 = 2.</description>
     </item>
     
     <item>

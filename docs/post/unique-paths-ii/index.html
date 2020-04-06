@@ -201,11 +201,11 @@ An obstacle and empty space is marked as 1 and 0 respectively in the grid." />
 <p>Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
 <p><img src="https://leetcode.com/static/images/problemset/robot_maze.png" alt="unique paths" title="Unique paths"></p>
 <p>An obstacle and empty space is marked as <code>1</code> and <code>0</code> respectively in the grid.</p>
-<h3 id="note">Note:</h3>
+<h4 id="note">Note</h4>
 <ul>
 <li>m and n will be at most 100.</li>
 </ul>
-<h3 id="example-1">Example 1:</h3>
+<h3 id="example-1">Example 1</h3>
 <pre><code>Input:
 [
   [0,0,0],
@@ -218,7 +218,7 @@ There is one obstacle in the middle of the 3x3 grid above.
 There are two ways to reach the bottom-right corner:
 1. Right -&gt; Right -&gt; Down -&gt; Down
 2. Down -&gt; Down -&gt; Right -&gt; Right
-</code></pre><h3 id="solution">Solution:</h3>
+</code></pre><h3 id="solution">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Time: O(m*n)</span>
 <span style="color:#75715e"># Space: `O(n)`</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
@@ -231,13 +231,13 @@ There are two ways to reach the bottom-right corner:
         dp <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n)] <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(m)]
 
         <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(m):
-            <span style="color:#66d9ef">if</span> obstacleGrid[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">if</span> obstacleGrid[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
                 dp[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
             <span style="color:#66d9ef">else</span>:p
                 <span style="color:#66d9ef">break</span>
 
         <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
-            <span style="color:#66d9ef">if</span> obstacleGrid[<span style="color:#ae81ff">0</span>][i] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">if</span> obstacleGrid[<span style="color:#ae81ff">0</span>][i] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
                 dp[<span style="color:#ae81ff">0</span>][i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
             <span style="color:#66d9ef">else</span>:
                 <span style="color:#66d9ef">break</span>

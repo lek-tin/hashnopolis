@@ -176,65 +176,11 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/strobogrammatic-number/">Strobogrammatic Number</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/reorder-data-in-log-files/">Reorder Data in Log Files</a></h2>
 
-      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
-Write a function to determine if a number is strobogrammatic. The number is represented as a string.
-Example 1: Input: &#34;69&#34; Output: true Example 2: Input: &#34;88&#34; Output: true Example 3: Input: &#34;962&#34; Output: false Solution class Solution: def isStrobogrammatic(self, num: str) -&gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2&#43;1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/island-perimeter/">Island Perimeter</a></h2>
-
-      <p>You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
-Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
-The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island). One cell is a square with side length 1.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/verifying-an-alien-dictionary/">Verifying an Alien Dictionary</a></h2>
-
-      <p>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
-Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
-Example 1: Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlabcdefgijkmnopqrstuvwxyz&#34; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</p>
+      <p>You have an array of logs. Each log is a space delimited string of words.
+For each log, the first word in each log is an alphanumeric identifier. Then, either:
+Each word after the identifier will consist only of lowercase letters, or; Each word after the identifier will consist only of digits. We will call these two varieties of logs letter-logs and digit-logs. It is guaranteed that each log has at least one word after its identifier.</p>
 
       <p class="meta">
         
@@ -257,37 +203,11 @@ Example 1: Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hla
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/subarray-sum-equals-k/">Subarray Sum Equals K</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/before-and-after-puzzle/">Before and After Puzzle</a></h2>
 
-      <p>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1: Input:nums = [1,1,1], k = 2 Output: 2 Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/find-in-mountain-array/">Find in Mountain Array</a></h2>
-
-      <p>(This problem is an interactive problem.)
-You may recall that an array A is a mountain array if and only if:
- A.length &gt;= 3 There exists some i with 0 &lt; i &lt; A.length - 1 such that:  A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target.</p>
+      <p>Given a list of phrases, generate a list of Before and After puzzles.
+A phrase is a string that consists of lowercase English letters and spaces only. No space appears in the start or the end of a phrase. There are no consecutive spaces in a phrase.
+Before and After puzzles are phrases that are formed by merging two phrases where the last word of the first phrase is the same as the first word of the second phrase.</p>
 
       <p class="meta">
         
@@ -310,36 +230,12 @@ You may recall that an array A is a mountain array if and only if:
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/peak-index-in-a-mountain-array/">Peak Index in a Mountain Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-product-of-three-numbers/">Maximum Product of Three Numbers</a></h2>
 
-      <p>Let’s call an array A a mountain if the following properties hold:
- A.length &gt;= 3 There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1]  Given an array that is definitely a mountain, return any i such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/sum-of-square-numbers/">Sum of Square Numbers</a></h2>
-
-      <p>Given a non-negative integer c, your task is to decide whether there’re two integers a and b such that a2 &#43; b2 = c.
-Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function</p>
+      <p>Given an integer array, find three numbers whose product is maximum and output the maximum product.
+Example 1:
+Input: [1,2,3] Output: 6 Example 2:
+Input: [1,2,3,4] Output: 24 Note  The length of the given array will be in range [3,104] and all elements are in the range [-1000, 1000]. Multiplication of any three numbers in the input won’t exceed the range of 32-bit signed integer.  Solution class Solution(object): def maximumProduct(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; min_1, min_2 = float(&#34;inf&#34;), float(&#34;inf&#34;) max_1, max_2, max_3 = float(&#34;-inf&#34;), float(&#34;-inf&#34;), float(&#34;-inf&#34;) for num in nums: if num &lt; min_1: min_2 = min_1 min_1 = num elif num &lt; min_2: min_2 = num if num &gt; max_1: max_3 = max_2 max_2 = max_1 max_1 = num elif num &gt; max_2: max_3 = max_2 max_2 = num elif num &gt; max_3: max_3 = num return max(min_1 * min_2 * max_1, max_1 * max_2 * max_3) </p>
 
       <p class="meta">
         
@@ -362,12 +258,11 @@ Example 1: Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2: I
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/valid-perfect-square/">Valid Perfect Square</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/prefix-postfix-conversion/">Prefix Postfix Conversion</a></h2>
 
-      <p>Given a positive integer num, write a function which returns True if num is a perfect square else False.
-Note: Do not use any built-in library function such as sqrt.
-Example 1: Input: 16 Output: true Example 2: Input: 14 Output: false Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: return True left, right = 0, num while left &lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2</p>
+      <p>Prefix : An expression is called the prefix expression if the operator appears in the expression before the operands. Simply of the form (operator operand1 operand2). Example : *&#43;AB-CD (Infix : (A&#43;B) * (C-D) )
+Postfix: An expression is called the postfix expression if the operator appears in the expression after the operands. Simply of the form (operand1 operand2 operator). Example : AB&#43;CD-* (Infix : (A&#43;B * (C-D) )
+Given a Prefix expression, convert it into a Postfix expression.</p>
 
       <p class="meta">
         
@@ -390,12 +285,11 @@ class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: ret
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/guess-number-higher-or-lower-ii/">Guess Number Higher or Lower II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-value-array-m-range-increment-operations/">Maximum Value Array M Range Increment Operations</a></h2>
 
-      <p>We are playing the Guess Game. The game is as follows:
-I pick a number from 1 to n. You have to guess which number I picked.
-Every time you guess wrong, I’ll tell you whether the number I picked is higher or lower.
-However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</p>
+      <p>Consider an array of size n with all initial values as 0, we need to perform following m range increment operations.
+increment(a, b, k) : Increment values from a to b by k. After m operations, we need to calculate the maximum of the values in the array.
+Example 1 Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2, b = 3, k = 100 Output : 200 Explanation: Initially array = {0, 0, 0, 0, 0} After first operation: array = {100, 100, 0, 0, 0} After second operation: array = {100, 200, 100, 100, 100} After third operation: array = {100, 200, 200, 200, 100} Maximum element after m operations is 200.</p>
 
       <p class="meta">
         
@@ -418,13 +312,10 @@ However, when you guess a particular number x, and you guess wrong, you pay $x. 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/guess-number-higher-or-lower/">Guess Number Higher or Lower</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/consecutive-numbers-sum/">Consecutive Numbers Sum</a></h2>
 
-      <p>We are playing the Guess Game. The game is as follows:
-I pick a number from 1 to n. You have to guess which number I picked.
-Every time you guess wrong, I’ll tell you whether the number is higher or lower.
-You call a pre-defined API guess(int num) which returns 3 possible results (-1, 1, or 0):
--1 : My number is lower 1 : My number is higher 0 : Congrats!</p>
+      <p>Given a positive integer N, how many ways can we write it as a sum of consecutive positive integers?
+Example 1 Input: 5 Output: 2 Explanation: 5 = 5 = 2 &#43; 3 Example 2 Input: 9 Output: 3 Explanation: 9 = 9 = 4 &#43; 5 = 2 &#43; 3 &#43; 4 Example 3 Input: 15 Output: 4 Explanation: 15 = 15 = 8 &#43; 7 = 4 &#43; 5 &#43; 6 = 1 &#43; 2 &#43; 3 &#43; 4 &#43; 5 Note  1 &lt;= N &lt;= 10 ^ 9.</p>
 
       <p class="meta">
         
@@ -437,6 +328,112 @@ You call a pre-defined API guess(int num) which returns 3 possible results (-1, 
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/beautiful-subarrays/">Beautiful Subarrays</a></h2>
+
+      <p>Find the distinct subarrays with m odd numbers
+Example 1 Input : arr = {2, 5, 6, 9}, m = 2 Output : 2 Explanation: subarrays are [2, 5, 6, 9] and [5, 6, 9] Example 2 Input : arr = {2, 2, 5, 6, 9, 2, 11}, m = 2 Output : 8 Explanation: subarrays are [2, 2, 5, 6, 9], [2, 5, 6, 9], [5, 6, 9], [2, 2, 5, 6, 9, 2], [2, 5, 6, 9, 2], [5, 6, 9, 2], [6, 9, 2, 11] and [9, 2, 11] Solution python</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/intersection-of-three-sorted-arrays/">Intersection of Three Sorted Arrays</a></h2>
+
+      <p>Given three integer arrays arr1, arr2 and arr3 sorted in strictly increasing order, return a sorted array of only the integers that appeared in all three arrays.
+Example 1:
+Input: arr1 = [1,2,3,4,5], arr2 = [1,2,5,7,9], arr3 = [1,3,4,5,8] Output: [1,5] Explanation: Only 1 and 5 appeared in the three arrays. Constraints:  1 &lt;= arr1.length, arr2.length, arr3.length &lt;= 1000 1 &lt;= arr1[i], arr2[i], arr3[i] &lt;= 2000  Solution Python</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/add-strings/">Add Strings</a></h2>
+
+      <p>Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
+Note  The length of both num1 and num2 is &lt; 5100. Both num1 and num2 contains only digits 0-9. Both num1 and num2 does not contain any leading zero. You must not use any built-in BigInteger library or convert the inputs to integer directly.  Solution class Solution: def addStrings(self, num1: str, num2: str) -&gt; str: if len(num1) &lt; len(num2): return self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/reverse-words-in-a-string/">Reverse Words in a String</a></h2>
+
+      <p>Given an input string, reverse the string word by word.
+Example 1 Input: &#34;the sky is blue&#34; Output: &#34;blue is sky the&#34; Example 2 Input: &#34; hello world! &#34; Output: &#34;world! hello&#34; Explanation: Your reversed string should not contain leading or trailing spaces.
+Example 3 Input: &#34;a good example&#34; Output: &#34;example good a&#34; Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

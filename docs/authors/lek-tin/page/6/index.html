@@ -176,10 +176,11 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/treasure-island-ii/">Treasure Island II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/reverse-words-in-a-string-iii/">Reverse Words in a String Iii</a></h2>
 
-      <p>You have a map that marks the locations of treasure islands. Some of the map area has jagged rocks and dangerous reefs. Other areas are safe to sail in. There are other explorers trying to find the treasure. So you must figure out a shortest route to one of the treasure islands.
-Assume the map area is a two dimensional grid, represented by a matrix of characters. You must start from one of the starting point (marked as S) of the map and can move one block up, down, left or right at a time.</p>
+      <p>Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+Example 1 Input: &#34;Let&#39;s take LeetCode contest&#34; Output: &#34;s&#39;teL ekat edoCteeL tsetnoc&#34; Note In the string, each word is separated by single space and there will not be any extra space in the string.
+Solution class Solution: def reverseWords(self, s: str) -&gt; str: N = len(s) start = 0 s = list(s) res = &#34;&#34; while start &lt; N: while start &lt; N and s[start] == &#34; &#34;: start &#43;= 1 stop = start while stop &lt; N and s[stop] !</p>
 
       <p class="meta">
         
@@ -191,7 +192,7 @@ Assume the map area is a two dimensional grid, represented by a matrix of charac
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -202,10 +203,65 @@ Assume the map area is a two dimensional grid, represented by a matrix of charac
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/treasure-island/">Treasure Island</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/reverse-string-ii/">Reverse String II</a></h2>
 
-      <p>You have a map that marks the location of a treasure island. Some of the map area has jagged rocks and dangerous reefs. Other areas are safe to sail in. There are other explorers trying to find the treasure. So you must figure out a shortest route to the treasure island.
-Assume the map area is a two dimensional grid, represented by a matrix of characters. You must start from the top-left corner of the map and can move one block up, down, left or right at a time.</p>
+      <p>Given a string and an integer k, you need to reverse the first k characters for every 2k characters counting from the start of the string. If there are less than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and left the other as original.
+Example Input: s = &#34;abcdefg&#34;, k = 2 Output: &#34;bacdfeg&#34; Restrictions: The string consists of lower English letters only.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/reverse-string/">Reverse String</a></h2>
+
+      <p>Write a function that reverses a string. The input string is given as an array of characters char[].
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+You may assume all the characters consist of printable ascii characters.
+Example 1 Input: [&#34;h&#34;,&#34;e&#34;,&#34;l&#34;,&#34;l&#34;,&#34;o&#34;] Output: [&#34;o&#34;,&#34;l&#34;,&#34;l&#34;,&#34;e&#34;,&#34;h&#34;] Example 2 Input: [&#34;H&#34;,&#34;a&#34;,&#34;n&#34;,&#34;n&#34;,&#34;a&#34;,&#34;h&#34;] Output: [&#34;h&#34;,&#34;a&#34;,&#34;n&#34;,&#34;n&#34;,&#34;a&#34;,&#34;H&#34;] Solution class Solution: def reverseString(self, s: List[str]) -&gt; None: &#34;&#34;&#34; Do not return anything, modify s in-place instead.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/shortest-subarray-with-sum-at-least-k/">Shortest Subarray With Sum at Least K</a></h2>
+
+      <p>Return the length of the shortest, non-empty, contiguous subarray of A with sum at least K.
+If there is no non-empty subarray with sum at least K, return -1.
+Example 1 Input: A = [1], K = 1 Output: 1 Example 2 Input: A = [1,2], K = 4 Output: -1 Example 3 Input: A = [2,-1,2], K = 3 Output: 3 Note  1 &lt;= A.length &lt;= 50000 -10 ^ 5 &lt;= A[i] &lt;= 10 ^ 5 1 &lt;= K &lt;= 10 ^ 9  Solution (sliding window using pointers) This version exceeds time limit Time: O(N)</p>
 
       <p class="meta">
         
@@ -228,37 +284,11 @@ Assume the map area is a two dimensional grid, represented by a matrix of charac
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/repair-broken-edges-of-a-graph/">Repair Broken Edges of a Graph</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/generalized-abbreviation/">Generalized Abbreviation</a></h2>
 
-      <p>There’s an undirected connected graph with n nodes labeled 1..n. But some of the edges has been broken disconnecting the graph. Find the minimum cost to repair the edges so that all the nodes are once again accessible from each other.
-Input  n, an int representing the total number of nodes. edges, a list of integer pair representing the nodes connected by an edge. edgesToRepair, a list where each element is a triplet representing the pair of nodes between which an edge is currently broken and the cost of repearing that edge respectively (e.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/top-k-frequent-words/">Top K Frequent Words</a></h2>
-
-      <p>Given a non-empty list of words, return the k most frequent elements.
-Your answer should be sorted by frequency from highest to lowest. If two words have the same frequency, then the word with the lower alphabetical order comes first.
-Example 1 Input: [&#34;i&#34;, &#34;love&#34;, &#34;leetcode&#34;, &#34;i&#34;, &#34;love&#34;, &#34;coding&#34;], k = 2 Output: [&#34;i&#34;, &#34;love&#34;] Explanation: &#34;i&#34; and &#34;love&#34; are the two most frequent words. Note that &#34;i&#34; comes before &#34;love&#34; due to a lower alphabetical order.</p>
+      <p>Write a function to generate the generalized abbreviations of a word.
+Note The order of the output does not matter.
+Example Input: &#34;word&#34; Output: [&#34;word&#34;, &#34;1ord&#34;, &#34;w1rd&#34;, &#34;wo1d&#34;, &#34;wor1&#34;, &#34;2rd&#34;, &#34;w2d&#34;, &#34;wo2&#34;, &#34;1o1d&#34;, &#34;1or1&#34;, &#34;w1r1&#34;, &#34;1o2&#34;, &#34;2r1&#34;, &#34;3d&#34;, &#34;w3&#34;, &#34;4&#34;] Example class Solution: def generateAbbreviations(self, word: str) -&gt; List[str]: results = [] self.backtrack(results, word, &#34;&#34;, 0, 0) return results def backtrack(self, results, word, curr, start, count): print(curr, start, count) # &#34;&#34; 0 0 # &#34;&#34; 1 1 # &#34;&#34; 2 2 # &#34;&#34; 3 3 # &#34;&#34; 4 4 # ------------ # 3d 4 0 # ------------ # 2r 3 0 # 2r 4 1 # ------------ # 2rd 4 0 # ------------ # 1o 2 0 # 1o 3 1 # 1o 4 2 # ------------ # 1o1d 4 0 # ------------ # 1or 3 0 # 1or 4 1 # ------------ # 1ord 4 0 # ------------ # w 1 0 # w 2 1 # w 3 2 # w 4 3 # ------------ # w2d 4 0 # ------------ # w1r 3 0 # w1r 4 1 # ------------ # w1rd 4 0 # ------------ # wo 2 0 # wo 3 1 # wo 4 2 # ------------ # wo1d 4 0 # ------------ # wor 3 0 # wor 4 1 # ------------ # word 4 0 # ------------ if start == len(word): if count &gt; 0: curr &#43;= str(count) # curr could be &#34;4&#34; or &#34;abcd&#34; results.</p>
 
       <p class="meta">
         
@@ -281,11 +311,67 @@ Example 1 Input: [&#34;i&#34;, &#34;love&#34;, &#34;leetcode&#34;, &#34;i&#34;, 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/vertical-order-traversal-of-a-binary-tree/">Vertical Order Traversal of a Binary Tree</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/palindromic-substrings/">Palindromic Substrings</a></h2>
 
-      <p>Given a binary tree, return the vertical order traversal of its nodes values.
-For each node at position (X, Y), its left and right children respectively will be at positions (X-1, Y-1) and (X&#43;1, Y-1).
-Running a vertical line from X = -infinity to X = &#43;infinity, whenever the vertical line touches some nodes, we report the values of the nodes in order from top to bottom (decreasing Y coordinates).</p>
+      <p>Given a string, your task is to count how many palindromic substrings in this string.
+The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters.
+Example 1 Input: &#34;abc&#34; Output: 3 Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;. Example 2 Input: &#34;aaa&#34; Output: 6 Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;. Note  The input string length won’t exceed 1000.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/find-all-numbers-disappeared-in-an-array/">Find All Numbers Disappeared in an Array</a></h2>
+
+      <p>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements of [1, n] inclusive that do not appear in this array.
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+Example Input: [4,3,2,7,8,2,3,1] Output: [5,6] Solution class Solution: def findDisappearedNumbers(self, nums: List[int]) -&gt; List[int]: N = len(nums) result = [] for num in nums: pos = abs(num) % N if nums[pos] &gt; 0: nums[pos] = -nums[pos] for i in range(1, N&#43;1): if nums[i%N] &gt; 0: result.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/first-missing-positive/">First Missing Positive</a></h2>
+
+      <p>Given an unsorted integer array, find the smallest missing positive integer.
+Example 1 Input: [1,2,0] Output: 3 Example 2 Input: [3,4,-1,1] Output: 2 Example 3 Input: [7,8,9,11,12] Output: 1 Solution (hashmap) Time: O(N)
+Space: O(N)
+from collections import Counter class Solution: def firstMissingPositive(self, nums: List[int]) -&gt; int: counter = Counter(nums) curr = 1 while True: if curr not in counter: return curr curr &#43;= 1 Follow-up  Your algorithm should run in O(n) time and uses constant extra space.</p>
 
       <p class="meta">
         
@@ -308,11 +394,11 @@ Running a vertical line from X = -infinity to X = &#43;infinity, whenever the ve
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/populating-next-right-pointers-in-each-node/">Populating Next Right Pointers in Each Node</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/candy/">Candy</a></h2>
 
-      <p>You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:
-struct Node { int val; Node *left; Node *right; Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
-Initially, all next pointers are set to NULL.</p>
+      <p>There are N children standing in a line. Each child is assigned a rating value.
+You are giving candies to these children subjected to the following requirements:
+ Each child must have at least one candy. Children with a higher rating get more candies than their neighbors. What is the minimum candies you must give?  Example 1 Input: [1,0,2] Output: 5 Explanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.</p>
 
       <p class="meta">
         
@@ -324,7 +410,7 @@ Initially, all next pointers are set to NULL.</p>
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -335,39 +421,11 @@ Initially, all next pointers are set to NULL.</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/populating-next-right-pointers-in-each-node-ii/">Populating Next Right Pointers in Each Node II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/bag-of-tokens/">Bag of Tokens</a></h2>
 
-      <p>Given a binary tree
-struct Node { int val; Node *left; Node *right; Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
-Initially, all next pointers are set to NULL.
-Follow up  You may only use constant extra space. Recursive approach is fine, you may assume implicit stack space does not count as extra space for this problem.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/decode-ways-ii/">Decode Ways II</a></h2>
-
-      <p>A message containing letters from A-Z is being encoded to numbers using the following mapping way:
-&#39;A&#39; -&gt; 1 &#39;B&#39; -&gt; 2 ... &#39;Z&#39; -&gt; 26 Beyond that, now the encoded string can also contain the character &#39;*&#39;, which can be treated as one of the numbers from 1 to 9.
-Given the encoded message containing digits and the character &#39;*&#39;, return the total number of ways to decode it.</p>
+      <p>You have an initial power P, an initial score of 0 points, and a bag of tokens.
+Each token can be used at most once, has a value token[i], and has potentially two ways to use it.
+ If we have at least token[i] power, we may play the token face up, losing token[i] power, and gaining 1 point. If we have at least 1 point, we may play the token face down, gaining token[i] power, and losing 1 point.</p>
 
       <p class="meta">
         
@@ -379,62 +437,7 @@ Given the encoded message containing digits and the character &#39;*&#39;, retur
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/is-graph-bipartite/">Is Graph Bipartite</a></h2>
-
-      <p>Given an undirected graph, return true if and only if it is bipartite.
-Recall that a graph is bipartite if we can split it’s set of nodes into two independent subsets A and B such that every edge in the graph has one node in A and another node in B.
-The graph is given in the following form: graph[i] is a list of indexes j for which the edge between nodes i and j exists.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/sliding-puzzle/">Sliding Puzzle</a></h2>
-
-      <p>On a 2x3 board, there are 5 tiles represented by the integers 1 through 5, and an empty square represented by 0.
-A move consists of choosing 0 and a 4-directionally adjacent number and swapping it.
-The state of the board is solved if and only if the board is [[1,2,3],[4,5,0]].
-Given a puzzle board, return the least number of moves required so that the state of the board is solved.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

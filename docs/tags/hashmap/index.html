@@ -176,6 +176,59 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/lfu-cache/">LFU Cache</a></h2>
+
+      <p>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-hashmap/">Design Hashmap</a></h2>
+
+      <p>Design a HashMap without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ put(key, value): Insert a (key, value) pair into the HashMap. If the value already exists in the HashMap, update the value. get(key): Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key. remove(key): Remove the mapping for the value key if this map contains the mapping for the key.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/evaluate-division/">Evaluate Division</a></h2>
 
       <p>Equations are given in the format A / B = k, where A and B are variables represented as strings, and k is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return -1.0.
@@ -343,7 +396,7 @@ Before and After puzzles are phrases that are formed by merging two phrases wher
 
       <p>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
 Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
-Example 1: Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlabcdefgijkmnopqrstuvwxyz&#34; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</p>
+Example 1 Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlabcdefgijkmnopqrstuvwxyz&#34; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</p>
 
       <p class="meta">
         
@@ -369,61 +422,7 @@ Example 1: Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hla
       <h2><a href="http://www.hashnopolis.com/post/subarray-sum-equals-k/">Subarray Sum Equals K</a></h2>
 
       <p>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1: Input:nums = [1,1,1], k = 2 Output: 2 Note:  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/find-anagram-mappings/">Find Anagram Mappings</a></h2>
-
-      <p>Given two lists A and B, and B is an anagram of A. B is an anagram of A means B is made by randomizing the order of the elements in A.
-We want to find an index mapping P, from A to B. A mapping P[i] = j means the ith element in A appears in B at index j.
-These lists A and B may contain duplicates. If there are multiple answers, output any of them.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/super-ugly-number/">Super Ugly Number</a></h2>
-
-      <p>Write a program to find the nthsuper ugly number.
-Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
-Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4. Note:  1 is a super ugly number for any given primes. The given numbers in primes are in ascending order.</p>
+Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count </p>
 
       <p class="meta">
         

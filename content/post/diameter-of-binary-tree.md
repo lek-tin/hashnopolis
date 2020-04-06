@@ -56,5 +56,5 @@ class Solution {
     }
 }
 ```
-### Note:
+#### Note
 The length of path between two nodes is represented by the number of edges between them.

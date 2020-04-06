@@ -47,7 +47,7 @@ Input: board = [[3,2,4],[1,5,0]]
 Output: 14
 ```
 
-### Note:
+#### Note
 1. board will be a `2 x 3` array as described above.
 2. `board[i][j]` will be a permutation of `[0, 1, 2, 3, 4, 5]`.
 

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 05 Mar 2020 23:18:26 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 01:20:13 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/bfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Shortest Distance From All Buildings</title>
+      <link>http://www.hashnopolis.com/post/shortest-distance-from-all-buildings/</link>
+      <pubDate>Tue, 31 Mar 2020 01:20:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/shortest-distance-from-all-buildings/</guid>
+      <description>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You can only move up, down, left and right. You are given a 2D grid of values 0, 1 or 2, where:
+ Each 0 marks an empty land which you can pass by freely. Each 1 marks a building which you cannot pass through. Each 2 marks an obstacle which you cannot pass through.</description>
+    </item>
     
     <item>
       <title>Minimum Genetic Mutation</title>
@@ -107,7 +117,7 @@ You are given a 2D char matrix representing the game board. &#39;M&#39; represen
       
       <guid>http://www.hashnopolis.com/post/word-ladder-ii/</guid>
       <description>Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
- Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</description>
+ Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Example 1 Input: beginWord = &amp;quot;hit&amp;quot;, endWord = &amp;quot;cog&amp;quot;, wordList = [&amp;quot;hot&amp;quot;,&amp;quot;dot&amp;quot;,&amp;quot;dog&amp;quot;,&amp;quot;lot&amp;quot;,&amp;quot;log&amp;quot;,&amp;quot;cog&amp;quot;] Output: [ [&amp;quot;hit&amp;quot;,&amp;quot;hot&amp;quot;,&amp;quot;dot&amp;quot;,&amp;quot;dog&amp;quot;,&amp;quot;cog&amp;quot;], [&amp;quot;hit&amp;quot;,&amp;quot;hot&amp;quot;,&amp;quot;lot&amp;quot;,&amp;quot;log&amp;quot;,&amp;quot;cog&amp;quot;] ] Example 2 Input: beginWord = &amp;quot;hit&amp;quot; endWord = &amp;quot;cog&amp;quot; wordList = [&amp;quot;hot&amp;quot;,&amp;quot;dot&amp;quot;,&amp;quot;dog&amp;quot;,&amp;quot;lot&amp;quot;,&amp;quot;log&amp;quot;] Output: [] Explanation: The endWord &amp;ldquo;cog&amp;rdquo; is not in wordList, therefore no possible transformation.</description>
     </item>
     
     <item>
@@ -139,7 +149,7 @@ Example: Input: {&amp;quot;$id&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;neighbo
       <guid>http://www.hashnopolis.com/post/word-search-ii/</guid>
       <description>Given a 2D board and a list of words from the dictionary, find all words in the board.
 Each word must be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
-Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&amp;quot;oath&amp;quot;,&amp;quot;pea&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;rain&amp;quot;] Output: [&amp;quot;eat&amp;quot;,&amp;quot;oath&amp;quot;] Note:  All inputs are consist of lowercase letters a-z.</description>
+Example: Input: board = [ [&#39;o&#39;,&#39;a&#39;,&#39;a&#39;,&#39;n&#39;], [&#39;e&#39;,&#39;t&#39;,&#39;a&#39;,&#39;e&#39;], [&#39;i&#39;,&#39;h&#39;,&#39;k&#39;,&#39;r&#39;], [&#39;i&#39;,&#39;f&#39;,&#39;l&#39;,&#39;v&#39;] ] words = [&amp;quot;oath&amp;quot;,&amp;quot;pea&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;rain&amp;quot;] Output: [&amp;quot;eat&amp;quot;,&amp;quot;oath&amp;quot;] Note  All inputs are consist of lowercase letters a-z.</description>
     </item>
     
     <item>
@@ -182,6 +192,16 @@ The maze is represented by a binary 2D array.</description>
 Example Given binary tree [3,9,20,null,null,15,7],
  3 / \ 9 20 / \ 15 7 return its zigzag level order traversal as:
 [ [3], [20,9], [15,7] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</description>
+    </item>
+    
+    <item>
+      <title>Alien Dictionary</title>
+      <link>http://www.hashnopolis.com/post/alien-dictionary/</link>
+      <pubDate>Sat, 08 Dec 2018 23:57:13 +0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/alien-dictionary/</guid>
+      <description>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
+Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot; Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot; Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot; Explanation The order is invalid, so return &amp;quot;&amp;quot;.</description>
     </item>
     
     <item>

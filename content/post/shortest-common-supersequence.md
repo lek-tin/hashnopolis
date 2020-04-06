@@ -13,7 +13,7 @@ Given two strings `str1` and `str2`, return the shortest string that has both `s
 
 (A string **S** is a subsequence of string **T** if deleting some number of characters from **T** (possibly 0, and the characters are chosen _anywhere_ from T) results in the string S.)
 
-### Example 1:
+### Example 1
 ```
 Input: str1 = "abac", str2 = "cab"
 Output: "cabac"
@@ -23,7 +23,7 @@ str2 = "cab" is a subsequence of "cabac" because we can delete the last "ac".
 The answer provided is the shortest such string that satisfies these properties.
 ```
 
-### Note:
+#### Note
 1. `1 <= str1.length`, `str2.length <= 1000`
 2. `str1` and `str2` consist of lowercase English letters.
 

@@ -25,7 +25,7 @@ words = ["oath","pea","eat","rain"]
 
 Output: ["eat","oath"]
 ```
-### Note:
+#### Note
 1. All inputs are consist of lowercase letters `a-z`.
 2. The values of `words` are distinct.
 

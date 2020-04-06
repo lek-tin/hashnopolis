@@ -15,7 +15,7 @@ Return a list of all powerful integers that have value less than or equal to bou
 
 You may return the answer in any order.  In your answer, each value should occur at most once.  
 
-### Example 1:
+### Example 1
 ```
 Input: x = 2, y = 3, bound = 10
 Output: [2,3,4,5,7,9,10]
@@ -29,13 +29,13 @@ Explanation:
 10 = 2^0 + 3^2
 ```
 
-### Example 2:
+### Example 2
 ```
 Input: x = 3, y = 5, bound = 15
 Output: [2,4,6,8,10,14]
 ```
 
-### Note:
+#### Note
 1. `1 <= x <= 100`
 2. `1 <= y <= 100`
 3. `0 <= bound <= 10^6`

@@ -209,15 +209,60 @@ Explanation: There are a total of 2 courses to take. To take course 1 you should
 <pre><code>Input: 2, [[1,0],[0,1]]
 Output: false
 Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
-</code></pre><h3 id="note">Note</h3>
+</code></pre><h5 id="note">Note</h5>
 <ol>
 <li>The input prerequisites is a graph represented by <strong>a list of edges</strong>, not adjacency matrices. Read more about how a graph is represented.</li>
 <li>You may assume that there are no duplicate edges in the input prerequisites.</li>
 </ol>
-<h3 id="solution">Solution</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># time: O(Vertices + Edges)</span>
-<span style="color:#75715e"># space: `O(n)`</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+<h3 id="solution-topological-sort-using-dfs">Solution (topological sort using dfs)</h3>
+<p>possible if no cycle in a directed graph<br>
+Time: <code>O(V+E) ~ O(V^2)</code><br>
+Space: <code>O(V)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">canFinish</span>(self, numCourses: int, prerequisites: List[List[int]]) <span style="color:#f92672">-&gt;</span> bool:
+        self<span style="color:#f92672">.</span>adj <span style="color:#f92672">=</span> [ [] <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(numCourses) ]
+
+        <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> prerequisites:
+            parent, child <span style="color:#f92672">=</span> p
+            self<span style="color:#f92672">.</span>adj[parent]<span style="color:#f92672">.</span>append(child)
+
+        <span style="color:#75715e"># mark starting nodes</span>
+        visiting <span style="color:#f92672">=</span> [ False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(numCourses) ]
+        visited <span style="color:#f92672">=</span> [ False <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(numCourses) ]
+
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(numCourses):
+            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>detectCycle(i, visiting, visited):
+                <span style="color:#66d9ef">return</span> False
+
+        <span style="color:#66d9ef">return</span> True
+
+    <span style="color:#75715e"># cycle exists: True</span>
+    <span style="color:#75715e"># otherwies: False</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">detectCycle</span>(self, parent, visiting, visited):
+        <span style="color:#75715e"># cycle detected</span>
+        <span style="color:#66d9ef">if</span> visiting[parent]:
+            <span style="color:#66d9ef">return</span> True
+        <span style="color:#75715e"># node already visited -&gt; abort</span>
+        <span style="color:#75715e"># no cycle detected -&gt; return False</span>
+        <span style="color:#66d9ef">if</span> visited[parent]:
+            <span style="color:#66d9ef">return</span> False
+
+        <span style="color:#75715e"># mark node as visiting</span>
+        visiting[parent] <span style="color:#f92672">=</span> True
+
+        <span style="color:#75715e"># traverse all children</span>
+        <span style="color:#66d9ef">for</span> child <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>adj[parent]:
+            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>detectCycle(child, visiting, visited):
+                <span style="color:#66d9ef">return</span> True
+        <span style="color:#75715e"># unset parent as a prerequiste course</span>
+        visiting[parent] <span style="color:#f92672">=</span> False
+        <span style="color:#75715e"># mark node as visited</span>
+        visited[parent] <span style="color:#f92672">=</span> True
+        <span style="color:#66d9ef">return</span> False
+</code></pre></div><h3 id="solution">Solution</h3>
+<p>time: <code>O(V + E)</code><br>
+space: <code>O(n)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#75715e"># @param {integer} numCourses</span>
     <span style="color:#75715e"># @param {integer[][]} prerequisites</span>
     <span style="color:#75715e"># @return {boolean}</span>
@@ -253,7 +298,8 @@ Explanation: There are a total of 2 courses to take. To take course 1 you should
                 courses<span style="color:#f92672">.</span>remove(course)
         <span style="color:#75715e"># if courses is an empty list, it means the student can take all of the courses.</span>
         <span style="color:#66d9ef">return</span> len(courses) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</code></pre></div><p>C++</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
 <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
     <span style="color:#66d9ef">bool</span> canFinish(<span style="color:#66d9ef">int</span> numCourses, vector<span style="color:#f92672">&lt;</span>pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> prerequisites) {
         graph <span style="color:#f92672">=</span> vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span>(numCourses);

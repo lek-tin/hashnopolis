@@ -200,7 +200,7 @@ Return the intersection of these two interval lists.
 <pre><code>Input: A = [[0,2],[5,10],[13,23],[24,25]], B = [[1,5],[8,12],[15,24],[25,26]]
 Output: [[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]
 Reminder: The inputs and the desired output are lists of Interval objects, and not arrays or lists.
-</code></pre><h4 id="note">Note</h4>
+</code></pre><h4 id="constraints">Constraints</h4>
 <ol>
 <li><code>0 &lt;= A.length &lt; 1000</code></li>
 <li><code>0 &lt;= B.length &lt; 1000</code></li>
@@ -222,14 +222,14 @@ Reminder: The inputs and the desired output are lists of Interval objects, and n
             <span style="color:#66d9ef">if</span> lo <span style="color:#f92672">&lt;=</span> hi:
                 ans<span style="color:#f92672">.</span>append([lo, hi])
 
-            <span style="color:#75715e"># Remove the interval with the smallest endpoint</span>
+            <span style="color:#75715e"># Remove the interval with the smaller endpoint</span>
             <span style="color:#66d9ef">if</span> A[i][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;</span> B[j][<span style="color:#ae81ff">1</span>]:
                 i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
             <span style="color:#66d9ef">else</span>:
                 j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
         <span style="color:#66d9ef">return</span> ans
-</code></pre></div>
+<span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#e6db74">&#39;</span></code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

@@ -17,7 +17,7 @@ How many possible unique paths are there?
 ![unique paths](https://leetcode.com/static/images/problemset/robot_maze.png "Unique paths")  
 Above is a `7 x 3` grid. How many possible unique paths are there?
 
-### Note m and n will be at most 100.
+#### Note m and n will be at most 100.
 
 ### Example 1
 ```
@@ -34,7 +34,9 @@ From the top-left corner, there are a total of 3 ways to reach the bottom-right 
 Input: m = 7, n = 3
 Output: 28
 ```
+
 ### Solution
+
 ```python
 # Time: O(n*m)
 # Space: O(n*m)
@@ -55,6 +57,7 @@ class Solution:
         print(grid[n-1][m-1])
         return(grid[n-1][m-1])
 ```
+
 ```java
 // Time: O(m*n)
 // Space: `O(n)`

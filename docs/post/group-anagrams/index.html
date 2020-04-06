@@ -17,7 +17,10 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array of strings, group anagrams together.
-Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ] Note  All inputs will be in lowercase. The order of your output does not matter.  Solution class Solution(object): def groupAnagrams(self, strs): &amp;#34;&amp;#34;&amp;#34; :type strs: List[str] :rtype: List[List[str]] &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
+Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ] Note  All inputs will be in lowercase. The order of your output does not matter.  Solution (naive) Time: O(Nklogk), k: length of the longest word
+Space: O(Nk)
+sort each word and use it the sorted str as a key to the lookup dictionary
+class Solution: def groupAnagrams(self, strs: List[str]) -&amp;gt; List[List[str]]: ans = collections." />
   <meta name="keywords" content="leetcode anagrams dictionary " />
   
   
@@ -25,7 +28,10 @@ Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&
     
     <meta name="twitter:title" content="Group Anagrams" />
     <meta name="twitter:description" content="Given an array of strings, group anagrams together.
-Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ] Note  All inputs will be in lowercase. The order of your output does not matter.  Solution class Solution(object): def groupAnagrams(self, strs): &amp;#34;&amp;#34;&amp;#34; :type strs: List[str] :rtype: List[List[str]] &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams." />
+Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ] Note  All inputs will be in lowercase. The order of your output does not matter.  Solution (naive) Time: O(Nklogk), k: length of the longest word
+Space: O(Nk)
+sort each word and use it the sorted str as a key to the lookup dictionary
+class Solution: def groupAnagrams(self, strs: List[str]) -&amp;gt; List[List[str]]: ans = collections." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -183,13 +189,13 @@ Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&
         
           "<a href="/tags/dictionary"><strong>dictionary</strong></a>",
         
-        <i class="small material-icons">access_time</i> 1-min read
+        <i class="small material-icons">access_time</i> 2-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/group-anagrams.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Group Anagrams</h1>
       <h4>Created: October 22, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: October 22, 2018</h5>
+        <h5>Last updated: April 6, 2020</h5>
       
       <hr />
       <p>Given an array of strings, group anagrams together.</p>
@@ -201,18 +207,40 @@ Output:
     [&quot;nat&quot;,&quot;tan&quot;],
     [&quot;bat&quot;]
 ]
-</code></pre><h3 id="note">Note</h3>
+</code></pre><h4 id="note">Note</h4>
 <ul>
 <li>All inputs will be in lowercase.</li>
 <li>The order of your output does not matter.</li>
 </ul>
-<h3 id="solution">Solution</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>(object):
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(self, strs):
-        <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">        :type strs: List[str]
-</span><span style="color:#e6db74">        :rtype: List[List[str]]
-</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+<h3 id="solution-naive">Solution (naive)</h3>
+<p>Time: <code>O(Nklogk)</code>, <code>k</code>: length of the longest word<br>
+Space: <code>O(Nk)</code><br>
+sort each word and use it the sorted str as a key to the lookup dictionary</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(self, strs: List[str]) <span style="color:#f92672">-&gt;</span> List[List[str]]:
+        ans <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>defaultdict(list)
+        <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> strs:
+            ans[tuple(sorted(s))]<span style="color:#f92672">.</span>append(s)
+
+        <span style="color:#66d9ef">return</span> ans<span style="color:#f92672">.</span>values()
+</code></pre></div><h3 id="solution-better-time-efficiency">Solution (better time efficiency)</h3>
+<p>Time: <code>O(Nk)</code>, <code>k</code>: length of the longest word<br>
+Space: <code>O(Nk)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(self, strs: List[str]) <span style="color:#f92672">-&gt;</span> List[List[str]]:
+        ans <span style="color:#f92672">=</span> collections<span style="color:#f92672">.</span>defaultdict(list)
+        <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> strs:
+            flags <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>)]
+            <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> s:
+                flags[ord(c) <span style="color:#f92672">-</span> ord(<span style="color:#e6db74">&#39;a&#39;</span>)] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            ans[tuple(flags)]<span style="color:#f92672">.</span>append(s)
+
+        <span style="color:#66d9ef">return</span> ans<span style="color:#f92672">.</span>values()
+</code></pre></div><h3 id="solution-most-time-and-space-efficient">Solution (most time and space efficient)</h3>
+<p>Time: <code>O(Nk)</code>, <code>k</code>: length of the longest word<br>
+Space: <code>O(N)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">groupAnagrams</span>(self, strs: List[str]) <span style="color:#f92672">-&gt;</span> List[List[str]]:
         primeNums <span style="color:#f92672">=</span> {
             <span style="color:#e6db74">&#34;a&#34;</span>: <span style="color:#ae81ff">2</span>,
             <span style="color:#e6db74">&#34;b&#34;</span>: <span style="color:#ae81ff">3</span>,
@@ -242,22 +270,21 @@ Output:
             <span style="color:#e6db74">&#34;z&#34;</span>: <span style="color:#ae81ff">101</span>
         }
 
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">encode</span>(string):
-            res <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-            <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> list(string):
-                res <span style="color:#f92672">*=</span> primeNums[s]
-            <span style="color:#66d9ef">return</span> res
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">encode</span>(s):
+            code <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> list(s):
+                code <span style="color:#f92672">*=</span> primeNums[c]
+            <span style="color:#66d9ef">return</span> code
 
-        anagrams <span style="color:#f92672">=</span> {}
+        ans <span style="color:#f92672">=</span> {}
 
-        <span style="color:#66d9ef">for</span> string <span style="color:#f92672">in</span> strs:
-            code <span style="color:#f92672">=</span> encode(string)
-            <span style="color:#66d9ef">if</span> anagrams<span style="color:#f92672">.</span>get(code, None) <span style="color:#f92672">is</span> None:
-                anagrams[code] <span style="color:#f92672">=</span> [string]
-            <span style="color:#66d9ef">else</span>:
-                anagrams<span style="color:#f92672">.</span>get(code)<span style="color:#f92672">.</span>append(string)
-        <span style="color:#66d9ef">print</span>(anagrams)
-        <span style="color:#66d9ef">return</span> list(anagrams<span style="color:#f92672">.</span>values())
+        <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> strs:
+            key <span style="color:#f92672">=</span> encode(s)
+            <span style="color:#66d9ef">if</span> key <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> ans:
+                ans[key] <span style="color:#f92672">=</span> []
+            ans[key]<span style="color:#f92672">.</span>append(s)
+
+        <span style="color:#66d9ef">return</span> ans<span style="color:#f92672">.</span>values()
 </code></pre></div>
   </div>
 

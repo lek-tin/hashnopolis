@@ -15,24 +15,79 @@ Some courses may have prerequisites, for example to take course `0` you have to 
 Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
 
 ### Example 1
+
 ```
 Input: 2, [[1,0]]
 Output: true
 Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
 ```
+
 ### Example 2
 ```
 Input: 2, [[1,0],[0,1]]
 Output: false
 Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
 ```
-### Note
+
+##### Note
+
 1. The input prerequisites is a graph represented by **a list of edges**, not adjacency matrices. Read more about how a graph is represented.
 2. You may assume that there are no duplicate edges in the input prerequisites.
-### Solution
+
+### Solution (topological sort using dfs)
+
+possible if no cycle in a directed graph  
+Time: `O(V+E) ~ O(V^2)`  
+Space: `O(V)`  
 ```python
-# time: O(Vertices + Edges)
-# space: `O(n)`
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        self.adj = [ [] for _ in range(numCourses) ]
+
+        for p in prerequisites:
+            parent, child = p
+            self.adj[parent].append(child)
+
+        # mark starting nodes
+        visiting = [ False for _ in range(numCourses) ]
+        visited = [ False for _ in range(numCourses) ]
+
+        for i in range(numCourses):
+            if self.detectCycle(i, visiting, visited):
+                return False
+
+        return True
+
+    # cycle exists: True
+    # otherwies: False
+    def detectCycle(self, parent, visiting, visited):
+        # cycle detected
+        if visiting[parent]:
+            return True
+        # node already visited -> abort
+        # no cycle detected -> return False
+        if visited[parent]:
+            return False
+
+        # mark node as visiting
+        visiting[parent] = True
+
+        # traverse all children
+        for child in self.adj[parent]:
+            if self.detectCycle(child, visiting, visited):
+                return True
+        # unset parent as a prerequiste course
+        visiting[parent] = False
+        # mark node as visited
+        visited[parent] = True
+        return False
+```
+
+### Solution
+
+time: `O(V + E)`  
+space: `O(n)`  
+```python
 class Solution:
     # @param {integer} numCourses
     # @param {integer[][]} prerequisites
@@ -70,6 +125,8 @@ class Solution:
         # if courses is an empty list, it means the student can take all of the courses.
         return len(courses) == 0
 ```
+
+C++
 ```cpp
 class Solution {
 public:

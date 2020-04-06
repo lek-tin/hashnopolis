@@ -193,14 +193,14 @@ Note Your algorithm should run in O(n) time complexity and O(1) space complexity
       <h1>Increasing Triplet Subsequence</h1>
       <h4>Created: November 8, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: September 15, 2019</h5>
+        <h5>Last updated: March 24, 2020</h5>
       
       <hr />
       <p>Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.</p>
 <p>Formally the function should:</p>
 <p>Return true if there exists <code>i, j, k</code>
 such that <code>arr[i] &lt; arr[j] &lt; arr[k]</code> given <code>0 ≤ i &lt; j &lt; k ≤ n-1</code> else return false.</p>
-<h3 id="note-your-algorithm-should-run-in-on-time-complexity-and-o1-space-complexity">Note Your algorithm should run in <code>O(n)</code> time complexity and <code>O(1)</code> space complexity.</h3>
+<h4 id="note-your-algorithm-should-run-in-on-time-complexity-and-o1-space-complexity">Note Your algorithm should run in <code>O(n)</code> time complexity and <code>O(1)</code> space complexity.</h4>
 <h3 id="example-1">Example 1</h3>
 <pre><code>Input: [1,2,3,4,5]
 Output: true
@@ -217,7 +217,7 @@ Output: false
         <span style="color:#75715e"># min_1 &lt; min_2</span>
         min_1, min_2 <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>inf<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, math<span style="color:#f92672">.</span>inf
         <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> nums:
-            <span style="color:#75715e"># use = to skip duplicate value, for example, [1,1,1,1,1,1,1,1,1,1]</span>
+            <span style="color:#75715e"># use &lt;= to skip duplicate value, for example, [1,1,1,1,1,1,1,1,1,1]</span>
             <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> min_1:
                 min_1 <span style="color:#f92672">=</span> n
             <span style="color:#66d9ef">elif</span> n <span style="color:#f92672">&lt;=</span> min_2:

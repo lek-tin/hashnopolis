@@ -30,7 +30,7 @@ Output: 3
 Explanation: We slide A to right by 1 unit and down by 1 unit.
 ```
 
-#### Notes
+##### Notes
 
 1. `1 <= A.length = A[0].length = B.length = B[0].length <= 30`
 2. `0 <= A[i][j], B[i][j] <= 1`

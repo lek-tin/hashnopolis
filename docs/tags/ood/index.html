@@ -176,6 +176,193 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/lfu-cache/">LFU Cache</a></h2>
+
+      <p>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-hashmap/">Design Hashmap</a></h2>
+
+      <p>Design a HashMap without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ put(key, value): Insert a (key, value) pair into the HashMap. If the value already exists in the HashMap, update the value. get(key): Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key. remove(key): Remove the mapping for the value key if this map contains the mapping for the key.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-circular-deque/">Design Circular Deque</a></h2>
+
+      <p>Design your implementation of the circular double-ended queue (deque).
+Your implementation should support following operations:
+MyCircularDeque(k): Constructor, set the size of the deque to be k.
+ insertFront(): Adds an item at the front of Deque. Return true if the operation is successful. insertLast(): Adds an item at the rear of Deque. Return true if the operation is successful. deleteFront(): Deletes an item from the front of Deque. Return true if the operation is successful.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-hashset/">Design Hashset</a></h2>
+
+      <p>Design a HashSet without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ add(value): Insert a value into the HashSet. contains(value): Return whether the value exists in the HashSet or not. remove(value): Remove a value in the HashSet. If the value does not exist in the HashSet, do nothing.  Example MyHashSet hashSet = new MyHashSet(); hashSet.add(1); hashSet.add(2); hashSet.contains(1); // returns true hashSet.contains(3); // returns false (not found) hashSet.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/flatten-2d-vector/">Flatten 2d Vector</a></h2>
+
+      <p>Design and implement an iterator to flatten a 2d vector. It should support the following operations: next and hasNext.
+Example Vector2D iterator = new Vector2D([[1,2],[3],[4]]); iterator.next(); // return 1 iterator.next(); // return 2 iterator.next(); // return 3 iterator.hasNext(); // return true iterator.hasNext(); // return true iterator.next(); // return 4 iterator.hasNext(); // return false Notes  Please remember to RESET your class variables declared in Vector2D, as static/class variables are persisted across multiple test cases.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/utf-8-validation/">Utf 8 Validation</a></h2>
+
+      <p>A character in UTF8 can be from 1 to 4 bytes long, subjected to the following rules:
+ For 1-byte character, the first bit is a 0, followed by its unicode code. For n-bytes character, the first n-bits are all one’s, the n&#43;1 bit is 0, followed by n-1 bytes with most significant 2 bits being 10.  This is how the UTF-8 encoding would work:
+ Char. number range | UTF-8 octet sequence (hexadecimal) | (binary) --------------------&#43;--------------------------------------------- 0000 0000-0000 007F | 0xxxxxxx 0000 0080-0000 07FF | 110xxxxx 10xxxxxx 0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx 0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx Given an array of integers representing the data, return whether it is a valid utf-8 encoding.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-circular-queue/">Design Circular Queue</a></h2>
+
+      <p>Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle and the last position is connected back to the first position to make a circle. It is also called “Ring Buffer”.
+One of the benefits of the circular queue is that we can make use of the spaces in front of the queue.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/moving-average-from-data-stream/">Moving Average From Data Stream</a></h2>
 
       <p>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.

@@ -176,10 +176,11 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-size-subarray-sum/">Minimum Size Subarray Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/count-complete-tree-nodes/">Count Complete Tree Nodes</a></h2>
 
-      <p>Given an array of n positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum ≥ s. If there isn’t one, return 0 instead.
-Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray [4,3] has the minimal length under the problem constraint. Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).</p>
+      <p>Given a complete binary tree, count the number of nodes.
+Note Definition of a complete binary tree from Wikipedia: In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2hnodes inclusive at the last level h.
+Example: Input: 1 / \ 2 3 / \ / 4 5 6 Output: 6 Solution # Definition for a binary tree node.</p>
 
       <p class="meta">
         
@@ -202,10 +203,11 @@ Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/coin-change/">Coin Change</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/kth-smallest-element-in-a-sorted-matrix/">Kth Smallest Element in a Sorted Matrix</a></h2>
 
-      <p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1 Example 2: Input: coins = [2], amount = 3 Output: -1 Note: You may assume that you have an infinite number of each kind of coin.</p>
+      <p>Given a n x n matrix where each of the rows and columns are sorted in ascending order, find the kth smallest element in the matrix.
+Note that it is the kth smallest element in the sorted order, not the kth distinct element.
+Example: matrix = [ [ 1, 5, 9], [10, 11, 13], [12, 13, 15] ], k = 8, return 13. Note  You may assume k is always valid, 1 ≤ k ≤ n2.</p>
 
       <p class="meta">
         
@@ -217,7 +219,7 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -228,10 +230,11 @@ Example 1: Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/maximum-product-subarray/">Maximum Product Subarray</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/subtree-of-another-tree/">Subtree of Another Tree</a></h2>
 
-      <p>Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
-Example 1 Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6. Example 2 Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray. Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max( max(currMax * nums[i], currMin * nums[i]), nums[i] ) newCurrMin = min( min(currMax * nums[i], currMin * nums[i]), nums[i] ) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res Solution (need to return the subarray) class Solution: def maxProduct(self, nums: List[int]) -&gt; int: n = len(nums) if n == 0: return 0 res = prevMin = prevMax = nums[0] maxPos = 0 minLens = [1 for _ in range(n)] maxLens = [1 for _ in range(n)] print(prevMin, prevMax) for i in range(1, n): num = nums[i] currMin, currMax = prevMin, prevMax if num &gt; 0: if prevMax * num &gt; num: currMax *= num maxLens[i] = maxLens[i-1] &#43; 1 else: currMax = num if prevMin * num &lt; num: currMin *= num minLens[i] = minLens[i-1] &#43; 1 else: currMin = num else: if prevMin * num &gt; num: currMax = prevMin * num maxLens[i] = minLens[i-1] &#43; 1 else: currMax = num if prevMax * num &lt; num: currMin = prevMax * num minLens[i] = maxLens[i-1] &#43; 1 else: currMin = num prevMin, prevMax = currMin, currMax if prevMax &gt; res: maxPos = i res = prevMax print(prevMin, prevMax) print(minLens) print(maxLens) maxLen = maxLens[maxPos] maxSubarr = nums[maxPos&#43;1-maxLen:maxPos&#43;1] print(maxSubarr) return res </p>
+      <p>Given two non-empty binary trees s and t, check whether tree t has exactly the same structure and node values with a subtree of s. A subtree of s is a tree consists of a node in s and all of this node’s descendants. The tree s could also be considered as a subtree of itself.
+Example 1 Given tree s:
+ 3 / \ 4 5 / \ 1 2 Given tree t:</p>
 
       <p class="meta">
         
@@ -254,37 +257,10 @@ Example 1 Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/triangle/">Triangle</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/campus-bikes/">Campus Bikes</a></h2>
 
-      <p>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
-For example, given the following triangle
-[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11). Note:  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/dungeon-game/">Dungeon Game</a></h2>
-
-      <p>The demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (K) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.
-The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
+      <p>On a campus represented as a 2D grid, there are N workers and M bikes, with N &lt;= M. Each worker and bike is a 2D coordinate on this grid.
+Our goal is to assign a bike to each worker. Among the available bikes and workers, we choose the (worker, bike) pair with the shortest Manhattan distance between each other, and assign the bike to that worker. (If there are multiple (worker, bike) pairs with the same shortest Manhattan distance, we choose the pair with the smallest worker index; if there are multiple ways to do that, we choose the pair with the smallest bike index).</p>
 
       <p class="meta">
         
@@ -307,38 +283,11 @@ The knight has an initial health point represented by a positive integer. If at 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-path-sum/">Minimum Path Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/path-sum/">Path Sum</a></h2>
 
-      <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution 1 (DP with n extra space) class Solution: def minPathSum(self, grid: List[List[int]]) -&gt; int: m = len(grid) n = len(grid[0]) if m == 0 or n == 0: return 0 sums = [[0 for _ in range(n)] for _ in range(m)] sums[0][0] = grid[0][0] for i in range(1, m): sums[i][0] = sums[i-1][0] &#43; grid[i][0] for i in range(1, n): sums[0][i] = sums[0][i-1] &#43; grid[0][i] for i in range(1, m): for j in range(1, n): sums[i][j] = min(sums[i-1][j], sums[i][j-1]) &#43; grid[i][j] return sums[-1][-1] Solution 2 (DP with no extra space) class Solution: def minPathSum(self, grid): &#34;&#34;&#34; :type grid: List[List[int]] :rtype: int &#34;&#34;&#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/largest-divisible-subset/">Largest Divisible Subset</a></h2>
-
-      <p>Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
-Si % Sj = 0 or Sj % Si = 0.
-If there are multiple solutions, return any subset is fine.
-Example 1: Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok) Example 2: Input: [1,2,4,8] Output: [1,2,4,8] Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&gt; List[int]: if not nums or len(nums) == 0: return [] nums.</p>
+      <p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+Note A leaf is a node with no children.
+Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1 return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22.</p>
 
       <p class="meta">
         
@@ -361,68 +310,10 @@ Example 1: Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok) Examp
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/climbing-stairs/">Climbing Stairs</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/continuous-subarray-sum/">Continuous Subarray Sum</a></h2>
 
-      <p>You are climbing a stair case. It takes n steps to reach to the top.
-Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/valid-triangle-number/">Valid Triangle Number</a></h2>
-
-      <p>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
-Example 1: Input: [2,2,3,4] Output: 3 Explanation: Valid combinations are:
-2,3,4 (using the first 2) 2,3,4 (using the second 2) 2,2,3
-Note:  The length of the given array won’t exceed 1000. The integers in the given array are in the range of [0, 1000].</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/construct-binary-tree-from-inorder-and-postorder-traversal/">Construct Binary Tree From Inorder and Postorder Traversal</a></h2>
-
-      <p>Given inorder and postorder traversal of a tree, construct the binary tree.
-Note: You may assume that duplicates do not exist in the tree.
-For example, given
-inorder = [9,3,15,20,7] postorder = [9,15,7,20,3] Return the following binary tree:
- 3 / \ 9 20 / \ 15 7 Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</p>
+      <p>Given a list of non-negative numbers and a target integer k, write a function to check if the array has a continuous subarray of size at least 2 that sums up to a multiple of k, that is, sums up to n*k where n is also an integer.
+Example 1 Input: [23, 2, 4, 6, 7], k=6 Output: True Explanation: Because [2, 4] is a continuous subarray of size 2 and sums up to 6.</p>
 
       <p class="meta">
         
@@ -435,6 +326,115 @@ inorder = [9,3,15,20,7] postorder = [9,15,7,20,3] Return the following binary tr
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/convert-sorted-list-to-binary-search-tree/">Convert Sorted List to Binary Search Tree</a></h2>
+
+      <p>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+Example: Given the sorted linked list: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5 Solution (recursion) # Definition for singly-linked list.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/read-n-characters-given-read4-ii-call-multiple-times/">Read N Characters Given Read4 II Call Multiple Times</a></h2>
+
+      <p>Given a file and assume that you can only read the file using a given method read4, implement a method read to read n characters. Your method read may be called multiple times.
+Method read4: The API read4 reads 4 consecutive characters from the file, then writes those characters into the buffer array buf.
+The return value is the number of actual characters read.
+Note that read4() has its own file pointer, much like FILE *fp in C.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/strobogrammatic-number-ii/">Strobogrammatic Number II</a></h2>
+
+      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Find all strobogrammatic numbers that are of length = n.
+Example: Input: n = 2 Output: [&#34;11&#34;,&#34;69&#34;,&#34;88&#34;,&#34;96&#34;] Solution # Time: O(n^2 * 5^(n/2)) # Space: `O(n)` class Solution: def findStrobogrammatic(self, n: int) -&gt; List[str]: stroboPairs = { &#34;0&#34;: &#34;0&#34;, &#34;1&#34;: &#34;1&#34;, &#34;6&#34;: &#34;9&#34;, &#34;8&#34;: &#34;8&#34;, &#34;9&#34;: &#34;6&#34; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&#34;&#34;] if curr == 1: return list(&#34;018&#34;) prev = self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/strobogrammatic-number/">Strobogrammatic Number</a></h2>
+
+      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.
+Example 1 Input: &#34;69&#34; Output: true Example 2 Input: &#34;88&#34; Output: true Example 3 Input: &#34;962&#34; Output: false Solution class Solution: def isStrobogrammatic(self, num: str) -&gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2&#43;1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

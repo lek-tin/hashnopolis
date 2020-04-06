@@ -188,7 +188,7 @@
         <h5>Last updated: March 2, 2020</h5>
       
       <hr />
-      <pre><code># SQL Schema:   
+      <pre><code># SQL Schema:
 Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int)
 Truncate table Employee
 insert into Employee (Id, Name, Salary, ManagerId) values ('1', 'Joe', '70000', '3')
@@ -210,7 +210,7 @@ insert into Employee (Id, Name, Salary, ManagerId) values ('4', 'Max', '90000', 
 +----------+
 | Joe      |
 +----------+
-</code></pre><h3 id="solution">Solution</h3>
+</code></pre><h3 id="solution-where">Solution (where)</h3>
 <p><code>WHERE</code>: Select from two tables will get the <code>Cartesian</code> product of these two tables. In this case, the output will be <code>4*4 = 16</code> records. However, what we interest is the employee&rsquo;s salary higher than his/her manager. So we should add two conditions in a WHERE clause like below.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
     a.Name <span style="color:#66d9ef">AS</span> <span style="color:#e6db74">&#39;Employee&#39;</span>
@@ -219,13 +219,16 @@ insert into Employee (Id, Name, Salary, ManagerId) values ('4', 'Max', '90000', 
     Employee <span style="color:#66d9ef">AS</span> b
 <span style="color:#66d9ef">WHERE</span>
     a.ManagerId <span style="color:#f92672">=</span> b.Id <span style="color:#66d9ef">AND</span> a.Salary <span style="color:#f92672">&gt;</span> b.Salary
-</code></pre></div><p><code>JOIN</code> - more efficient:</p>
+</code></pre></div><h3 id="solution-join">Solution (join)</h3>
+<p>more efficient than using <code>where</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
      a.NAME <span style="color:#66d9ef">AS</span> Employee
-<span style="color:#66d9ef">FROM</span> Employee <span style="color:#66d9ef">AS</span> a <span style="color:#66d9ef">JOIN</span> Employee <span style="color:#66d9ef">AS</span> b
-     <span style="color:#66d9ef">ON</span> a.ManagerId <span style="color:#f92672">=</span> b.Id
-     <span style="color:#66d9ef">AND</span> a.Salary <span style="color:#f92672">&gt;</span> b.Salary
-;
+<span style="color:#66d9ef">FROM</span>
+    Employee <span style="color:#66d9ef">AS</span> a
+<span style="color:#66d9ef">JOIN</span>
+    Employee <span style="color:#66d9ef">AS</span> b
+<span style="color:#66d9ef">ON</span> a.ManagerId <span style="color:#f92672">=</span> b.Id
+<span style="color:#66d9ef">AND</span> a.Salary <span style="color:#f92672">&gt;</span> b.Salary
 </code></pre></div>
   </div>
 

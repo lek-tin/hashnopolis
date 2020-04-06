@@ -24,7 +24,7 @@ Node 3's value is 3, and it has two neighbors: Node 2 and 4.
 Node 4's value is 4, and it has two neighbors: Node 1 and 3.
 ```
 
-### Note:
+#### Note
 1. The number of nodes will be between 1 and 100.
 2. The undirected graph is a simple graph, which means no repeated edges and no self-loops in the graph.
 3. Since the graph is undirected, if node p has node q as neighbor, then node q must have node p as neighbor too.

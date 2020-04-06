@@ -176,35 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/flatten-a-multilevel-doubly-linked-list/">Flatten a Multilevel Doubly Linked List</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/handshakes-that-dont-cross/">Handshakes That Dont Cross</a></h2>
 
-      <p>You are given a doubly linked list which in addition to the next and previous pointers, it could have a child pointer, which may or may not point to a separate doubly linked list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in the example below.
-Flatten the list so that all the nodes appear in a single-level, doubly linked list.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/optimal-account-balancing/">Optimal Account Balancing</a></h2>
-
-      <p>A group of friends went on holiday and sometimes lent each other money. For example, Alice paid for Bill’s lunch for $10. Then later Chris gave Alice $5 for a taxi ride. We can model each transaction as a tuple (x, y, z) which means person x gave person y $z. Assuming Alice, Bill, and Chris are person 0, 1, and 2 respectively (0, 1, 2 are the person’s ID), the transactions can be represented as [[0, 1, 10], [2, 0, 5]].</p>
+      <p>You are given an even number of people num_people that stand around a circle and each person shakes hands with someone else, so that there are num_people / 2 handshakes total.
+Return the number of ways these handshakes could occur such that none of the handshakes cross.
+Since this number could be very big, return the answer mod 10^9 &#43; 7
+Example 1 Input: num_people = 2 Output: 1 Example 2 Input: num_people = 4 Output: 2 Explanation: There are two ways to do it, the first way is [(1,2),(3,4)] and the second one is [(2,3),(4,1)].</p>
 
       <p class="meta">
         
@@ -227,62 +204,11 @@ Flatten the list so that all the nodes appear in a single-level, doubly linked l
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/split-array-into-consecutive-subsequences/">Split Array Into Consecutive Subsequences</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-product-of-splitted-binary-tree/">Maximum Product of Splitted Binary Tree</a></h2>
 
-      <p>Given an array nums sorted in ascending order, return true if and only if you can split it into 1 or more subsequences such that each subsequence consists of consecutive integers and has length at least 3.
-Example 1 Input: [1,2,3,3,4,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3 3, 4, 5 Example 2 Input: [1,2,3,3,4,4,5,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3, 4, 5 3, 4, 5 Example 3 Input: [1,2,3,4,4,5] Output: False Constraints  1 &lt;= nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/expressive-words/">Expressive Words</a></h2>
-
-      <p>Sometimes people repeat letters to represent extra feeling, such as “hello” -&gt; “heeellooo”, “hi” -&gt; “hiiii”. In these strings like “heeellooo”, we have groups of adjacent letters that are all the same: “h”, “eee”, “ll”, “ooo”.
-For some given string S, a query word is stretchy if it can be made to be equal to S by any number of applications of the following extension operation: choose a group consisting of characters c, and add some number of characters c to the group so that the size of the group is 3 or more.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/validate-stack-sequence/">Validate Stack Sequence</a></h2>
-
-      <p>Given two sequences pushed and popped with distinct values, return true if and only if this could have been the result of a sequence of push and pop operations on an initially empty stack.
-Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explanation: We might do the following sequence: push(1), push(2), push(3), push(4), pop() -&gt; 4, push(5), pop() -&gt; 5, pop() -&gt; 3, pop() -&gt; 2, pop() -&gt; 1 Example 2 Input: pushed = [1,2,3,4,5], popped = [4,3,5,1,2] Output: false Explanation: 1 cannot be popped before 2.</p>
+      <p>Given a binary tree root. Split the binary tree into two subtrees by removing 1 edge such that the product of the sums of the subtrees are maximized.
+Since the answer may be too large, return it modulo 10e9 &#43; 7.
+Example 1 Input: root = [1,2,3,4,5,6] Output: 110 Explanation: Remove the red edge and get 2 binary trees with sum 11 and 10. Their product is 110 (11*10) Example 2 Input: root = [1,null,2,3,4,null,null,5,6] Output: 90 Explanation: Remove the red edge and get 2 binary trees with sum 15 and 6.</p>
 
       <p class="meta">
         
@@ -305,121 +231,12 @@ Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explana
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/delete-nodes-and-return-forest/">Delete Nodes and Return Forest</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/smallest-string-with-swaps/">Smallest String With Swaps</a></h2>
 
-      <p>Given the root of a binary tree, each node in the tree has a distinct value.
-After deleting all nodes with a value in to_delete, we are left with a forest (a disjoint union of trees).
-Return the roots of the trees in the remaining forest. You may return the result in any order.
-Example 1 Input: root = [1,2,3,4,5,6,7], to_delete = [3,5] Output: [[1,2,null,4],[6],[7]] Constraints 1 The number of nodes in the given tree is at most 1000.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1/">Insert Delete Getrandom O1</a></h2>
-
-      <p>Design a data structure that supports all following operations in average O(1) time.
- insert(val): Inserts an item val to the set if not already present. remove(val): Removes an item val from the set if present. getRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.  Example // Init an empty set. RandomizedSet randomSet = new RandomizedSet(); // Inserts 1 to the set.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1-duplicates-allowed/">Insert Delete Getrandom O1 Duplicates Allowed</a></h2>
-
-      <p>Design a data structure that supports all following operations in average O(1) time.
-Note: Duplicate elements are allowed.
- insert(val): Inserts an item val to the collection. remove(val): Removes an item val from the collection if present. getRandom: Returns a random element from current collection of elements. The probability of each element being returned is linearly related to the number of same value the collection contains.  Example // Init an empty collection.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-          <a  class="meta--cat" href="/categories/ood" ><strong>"ood"</strong></a>
-        
-          <a  class="meta--cat" href="/categories/hashmap" ><strong>"hashmap"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/moving-average-from-data-stream/">Moving Average From Data Stream</a></h2>
-
-      <p>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
-Example MovingAverage m = new MovingAverage(3); m.next(1) = 1 m.next(10) = (1 &#43; 10) / 2 m.next(3) = (1 &#43; 10 &#43; 3) / 3 m.next(5) = (10 &#43; 3 &#43; 5) / 3 Solution from collections import deque class MovingAverage: def __init__(self, size: int): &#34;&#34;&#34; Initialize your data structure here.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/evaluate-division/">Evaluate Division</a></h2>
-
-      <p>Equations are given in the format A / B = k, where A and B are variables represented as strings, and k is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return -1.0.
-Example Given a / b = 2.0, b / c = 3.0. queries are: a / c = ?, b / a = ?, a / e = ?</p>
+      <p>You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.
+You can swap the characters at any pair of indices in the given pairs any number of times.
+Return the lexicographically smallest string that s can be changed to after using the swaps.
+Example 1 Input: s = &#34;dcab&#34;, pairs = [[0,3],[1,2]] Output: &#34;bacd&#34; Explaination: Swap s[0] and s[3], s = &#34;bcad&#34; Swap s[1] and s[2], s = &#34;bacd&#34; Example 2 Input: s = &#34;dcab&#34;, pairs = [[0,3],[1,2],[0,2]] Output: &#34;abcd&#34; Explaination: Swap s[0] and s[3], s = &#34;bcad&#34; Swap s[0] and s[2], s = &#34;acbd&#34; Swap s[1] and s[2], s = &#34;abcd&#34; Example 3 Input: s = &#34;cba&#34;, pairs = [[0,1],[1,2]] Output: &#34;abc&#34; Explaination: Swap s[0] and s[1], s = &#34;bca&#34; Swap s[1] and s[2], s = &#34;bac&#34; Swap s[0] and s[1], s = &#34;abc&#34; Constraints  1 &lt;= s.</p>
 
       <p class="meta">
         
@@ -432,6 +249,195 @@ Example Given a / b = 2.0, b / c = 3.0. queries are: a / c = ?, b / a = ?, a / e
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/lfu-cache/">LFU Cache</a></h2>
+
+      <p>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/android-unlock-patterns/">Android Unlock Patterns</a></h2>
+
+      <p>Given an Android 3x3 key lock screen and two integers m and n, where 1 ≤ m ≤ n ≤ 9, count the total number of unlock patterns of the Android lock screen, which consist of minimum of m keys and maximum n keys.
+Rules for a valid pattern:
+ Each pattern must connect at least m keys and at most n keys. All the keys must be distinct. If the line connecting two consecutive keys in the pattern passes through any other keys, the other keys must have previously selected in the pattern.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/bitwise-and-of-numbers-range/">Bitwise and of Numbers Range</a></h2>
+
+      <p>Given a range [m, n] where 0 &lt;= m &lt;= n &lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.
+Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution class Solution: def rangeBitwiseAnd(self, m: int, n: int) -&gt; int: shift = 0 while m &lt; n: m = m &gt;&gt; 1 n = n &gt;&gt; 1 shift &#43;= 1 m = m &lt;&lt; shift return m </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/shortest-distance-from-all-buildings/">Shortest Distance From All Buildings</a></h2>
+
+      <p>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You can only move up, down, left and right. You are given a 2D grid of values 0, 1 or 2, where:
+ Each 0 marks an empty land which you can pass by freely. Each 1 marks a building which you cannot pass through. Each 2 marks an obstacle which you cannot pass through.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/maximum-xor-of-two-numbers-in-an-array/">Maximum Xor of Two Numbers in an Array</a></h2>
+
+      <p>Given a non-empty array of numbers, a0, a1, a2, … , an-1, where 0 ≤ ai&lt; 231.
+Find the maximum result of ai XOR aj, where 0 ≤ i, j &lt; n.
+Could you do this in O(n) runtime?
+Example Input: [3, 10, 5, 25, 2, 8] Output: 28 Explanation: The maximum result is 5 ^ 25 = 28. Solution (prefix hashset - less efficient) Time: O(N)
+Space: O(1)
+class Solution: def findMaximumXOR(self, nums: List[int]) -&gt; int: # 0bxxxxxx - 0b L = len(bin(max(nums))) - 2 max_xor = 0 for i in range(L-1, -1, -1): max_xor &lt;&lt;= 1 print(&#34;max_xor:&#34;, bin(max_xor) ) # set the rightmost bit to 1 curr_xor = max_xor | 1 print(&#34;curr_xor:&#34;, bin(curr_xor) ) # highest (L-i) bits prefixes = {num &gt;&gt; i for num in nums} print(&#34;prefixes:&#34;, [bin(p) for p in prefixes] ) # as long as there exists a p that makes curr_xor^p &gt; 0 # Update max_xor, if two of these prefixes could result in curr_xor.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/">Minimum Number of Refueling Stops</a></h2>
+
+      <p>A car travels from a starting position to a destination which is target miles east of the starting position.
+Along the way, there are gas stations. Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.
+The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses 1 liter of gas per 1 mile that it drives.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-hashmap/">Design Hashmap</a></h2>
+
+      <p>Design a HashMap without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ put(key, value): Insert a (key, value) pair into the HashMap. If the value already exists in the HashMap, update the value. get(key): Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key. remove(key): Remove the mapping for the value key if this map contains the mapping for the key.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

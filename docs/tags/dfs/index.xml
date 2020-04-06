@@ -7,10 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 23 Mar 2020 05:02:54 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 20:08:24 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android Unlock Patterns</title>
+      <link>http://www.hashnopolis.com/post/android-unlock-patterns/</link>
+      <pubDate>Tue, 31 Mar 2020 20:08:24 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/android-unlock-patterns/</guid>
+      <description>Given an Android 3x3 key lock screen and two integers m and n, where 1 ≤ m ≤ n ≤ 9, count the total number of unlock patterns of the Android lock screen, which consist of minimum of m keys and maximum n keys.
+Rules for a valid pattern:
+ Each pattern must connect at least m keys and at most n keys. All the keys must be distinct. If the line connecting two consecutive keys in the pattern passes through any other keys, the other keys must have previously selected in the pattern.</description>
+    </item>
+    
+    <item>
+      <title>Course Schedule II</title>
+      <link>http://www.hashnopolis.com/post/course-schedule-ii/</link>
+      <pubDate>Tue, 24 Mar 2020 21:07:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/course-schedule-ii/</guid>
+      <description>There are a total of n courses you have to take, labeled from 0 to n-1.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+Given the total number of courses and a list of prerequisite pairs, return the ordering of courses you should take to finish all courses.
+There may be multiple correct orders, you just need to return one of them.</description>
+    </item>
+    
+    <item>
+      <title>Flatten a Multilevel Doubly Linked List</title>
+      <link>http://www.hashnopolis.com/post/flatten-a-multilevel-doubly-linked-list/</link>
+      <pubDate>Mon, 23 Mar 2020 22:53:23 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/flatten-a-multilevel-doubly-linked-list/</guid>
+      <description>You are given a doubly linked list which in addition to the next and previous pointers, it could have a child pointer, which may or may not point to a separate doubly linked list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in the example below.
+Flatten the list so that all the nodes appear in a single-level, doubly linked list.</description>
+    </item>
     
     <item>
       <title>Optimal Account Balancing</title>
@@ -123,7 +156,7 @@ The graph is given in the following form: graph[i] is a list of indexes j for wh
       <pubDate>Thu, 02 Jan 2020 18:19:16 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/package-dependencies/</guid>
-      <description>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(add) for node in dependencies: dfs(node) return result </description>
+      <description>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&amp;#34;Have cycle in dependency graph.&amp;#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(node) for node in dependencies: dfs(node) return result </description>
     </item>
     
     <item>
@@ -133,7 +166,7 @@ The graph is given in the following form: graph[i] is a list of indexes j for wh
       
       <guid>http://www.hashnopolis.com/post/word-ladder-ii/</guid>
       <description>Given two words (beginWord and endWord), and a dictionary&amp;rsquo;s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
- Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</description>
+ Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Example 1 Input: beginWord = &amp;quot;hit&amp;quot;, endWord = &amp;quot;cog&amp;quot;, wordList = [&amp;quot;hot&amp;quot;,&amp;quot;dot&amp;quot;,&amp;quot;dog&amp;quot;,&amp;quot;lot&amp;quot;,&amp;quot;log&amp;quot;,&amp;quot;cog&amp;quot;] Output: [ [&amp;quot;hit&amp;quot;,&amp;quot;hot&amp;quot;,&amp;quot;dot&amp;quot;,&amp;quot;dog&amp;quot;,&amp;quot;cog&amp;quot;], [&amp;quot;hit&amp;quot;,&amp;quot;hot&amp;quot;,&amp;quot;lot&amp;quot;,&amp;quot;log&amp;quot;,&amp;quot;cog&amp;quot;] ] Example 2 Input: beginWord = &amp;quot;hit&amp;quot; endWord = &amp;quot;cog&amp;quot; wordList = [&amp;quot;hot&amp;quot;,&amp;quot;dot&amp;quot;,&amp;quot;dog&amp;quot;,&amp;quot;lot&amp;quot;,&amp;quot;log&amp;quot;] Output: [] Explanation: The endWord &amp;ldquo;cog&amp;rdquo; is not in wordList, therefore no possible transformation.</description>
     </item>
     
     <item>
@@ -156,7 +189,7 @@ Example: Given the below binary tree and sum = 22,
       
       <guid>http://www.hashnopolis.com/post/path-sum/</guid>
       <description>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
-Note: A leaf is a node with no children.
+Note A leaf is a node with no children.
 Example: Given the below binary tree and sum = 22, 5 / \ 4 8 / / \ 11 13 4 / \ \ 7 2 1 return true, as there exist a root-to-leaf path 5-&amp;gt;4-&amp;gt;11-&amp;gt;2 which sum is 22.</description>
     </item>
     
@@ -201,7 +234,7 @@ Example: Input: {&amp;quot;$id&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;neighbo
       <description>Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
 Each number in candidates may only be used once in the combination.
 Note All numbers (including target) will be positive integers. The solution set must not contain duplicate combinations.
-Example 1: Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</description>
+Example 1 Input: candidates = [10,1,2,7,6,1,5], target = 8, A solution set is: [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6] ] ###Example 2:</description>
     </item>
     
     <item>
@@ -242,7 +275,7 @@ Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of 
       
       <guid>http://www.hashnopolis.com/post/number-of-connected-components-in-an-undirected-graph/</guid>
       <description>Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to find the number of connected components in an undirected graph.
-Example 1: Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2 Example 2: Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1 Note: You can assume that no duplicate edges will appear in edges.</description>
+Example 1 Input: n = 5 and edges = [[0, 1], [1, 2], [3, 4]] 0 3 | | 1 --- 2 4 Output: 2 Example 2 Input: n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]] 0 4 | | 1 --- 2 --- 3 Output: 1 Note You can assume that no duplicate edges will appear in edges.</description>
     </item>
     
     <item>

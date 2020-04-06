@@ -10,7 +10,7 @@ archive: false
 ---
 Given two strings s and t, determine if they are both one edit distance apart.
 
-### Note
+#### Note
 There are 3 possiblities to satisify one edit distance apart:
 1. Insert a character into s to get t
 2. Delete a character from s to get t

@@ -2,7 +2,7 @@
 title: "Single Number II"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "bit-operation"]
+tags: ["leetcode", "bit-manipulation"]
 categories: ["algorithm"]
 date: 2018-09-14T11:53:51+08:00
 draft: false
@@ -10,7 +10,7 @@ archive: false
 ---
 Given a **non-empty** array of integers, every element appears three times except for one, which appears exactly once. Find that single one.
 
-### Note
+#### Note
 
 Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 

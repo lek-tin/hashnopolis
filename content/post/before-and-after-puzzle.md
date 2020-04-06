@@ -19,13 +19,13 @@ Return the Before and After puzzles that can be formed by every two phrases `phr
 
 You should return a list of **distinct** strings sorted **lexicographically**.
 
-### Example 1:
+### Example 1
 ```
 Input: phrases = ["writing code","code rocks"]
 Output: ["writing code rocks"]
 ```
 
-### Example 2:
+### Example 2
 ```
 Input: phrases = ["mission statement",
                   "a quick bite to eat",
@@ -43,7 +43,7 @@ Output: ["a chip off the old block party",
          "chocolate bar of soap"]
 ```
 
-### Example 3:
+### Example 3
 ```
 Input: phrases = ["a","b","a"]
 Output: ["a"]

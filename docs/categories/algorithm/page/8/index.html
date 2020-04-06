@@ -176,10 +176,65 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minesweeper/">Minesweeper</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/top-k-frequent-words/">Top K Frequent Words</a></h2>
 
-      <p>Let’s play the minesweeper game (Wikipedia, online game)!
-You are given a 2D char matrix representing the game board. &#39;M&#39; represents an unrevealed mine, &#39;E&#39; represents an unrevealed empty square, &#39;B&#39; represents a revealed blank square that has no adjacent (above, below, left, right, and all 4 diagonals) mines, digit (&#39;1&#39; to &#39;8&#39;) represents how many mines are adjacent to this revealed square, and finally &#39;X&#39; represents a revealed mine.</p>
+      <p>Given a non-empty list of words, return the k most frequent elements.
+Your answer should be sorted by frequency from highest to lowest. If two words have the same frequency, then the word with the lower alphabetical order comes first.
+Example 1 Input: [&#34;i&#34;, &#34;love&#34;, &#34;leetcode&#34;, &#34;i&#34;, &#34;love&#34;, &#34;coding&#34;], k = 2 Output: [&#34;i&#34;, &#34;love&#34;] Explanation: &#34;i&#34; and &#34;love&#34; are the two most frequent words. Note that &#34;i&#34; comes before &#34;love&#34; due to a lower alphabetical order.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/vertical-order-traversal-of-a-binary-tree/">Vertical Order Traversal of a Binary Tree</a></h2>
+
+      <p>Given a binary tree, return the vertical order traversal of its nodes values.
+For each node at position (X, Y), its left and right children respectively will be at positions (X-1, Y-1) and (X&#43;1, Y-1).
+Running a vertical line from X = -infinity to X = &#43;infinity, whenever the vertical line touches some nodes, we report the values of the nodes in order from top to bottom (decreasing Y coordinates).</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/populating-next-right-pointers-in-each-node/">Populating Next Right Pointers in Each Node</a></h2>
+
+      <p>You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:
+struct Node { int val; Node *left; Node *right; Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
+Initially, all next pointers are set to NULL.</p>
 
       <p class="meta">
         
@@ -202,116 +257,12 @@ You are given a 2D char matrix representing the game board. &#39;M&#39; represen
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-remove-to-make-valid-parentheses/">Minimum Remove to Make Valid Parentheses</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/populating-next-right-pointers-in-each-node-ii/">Populating Next Right Pointers in Each Node II</a></h2>
 
-      <p>Given a string s of &#39;(&#39; , &#39;)&#39; and lowercase English characters.
-Your task is to remove the minimum number of parentheses ( &#39;(&#39; or &#39;)&#39;, in any positions ) so that the resulting parentheses string is valid and return any valid string.
-Formally, a parentheses string is valid if and only if:
- It is the empty string, contains only lowercase characters, or It can be written as AB (A concatenated with B), where A and B are valid strings, or It can be written as (A), where A is a valid string.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/package-dependencies/">Package Dependencies</a></h2>
-
-      <p>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&#34;Have cycle in dependency graph.&#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(add) for node in dependencies: dfs(node) return result </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/concatenated-words/">Concatenated Words</a></h2>
-
-      <p>Given a list of words (without duplicates), please write a program that returns all concatenated words in the given list of words. A concatenated word is defined as a string that is comprised entirely of at least two shorter words in the given array.
-Example: Input: [&#34;cat&#34;,&#34;cats&#34;,&#34;catsdogcats&#34;,&#34;dog&#34;,&#34;dogcatsdog&#34;,&#34;hippopotamuses&#34;,&#34;rat&#34;,&#34;ratcatdogcat&#34;] Output: [&#34;catsdogcats&#34;,&#34;dogcatsdog&#34;,&#34;ratcatdogcat&#34;] Explanation: &#34;catsdogcats&#34; can be concatenated by &#34;cats&#34;, &#34;dog&#34; and &#34;cats&#34;; &#34;dogcatsdog&#34; can be concatenated by &#34;dog&#34;, &#34;cats&#34; and &#34;dog&#34;; &#34;ratcatdogcat&#34; can be concatenated by &#34;rat&#34;, &#34;cat&#34;, &#34;dog&#34; and &#34;cat&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/concatenate-string-using-smaller-strings/">Concatenate String Using Smaller Strings</a></h2>
-
-      <p>Given a big string and a list of small strings, find whether the big string can be represented only by concatenation of smaller strings.
-Example: target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] Output: True Solution Dynamic programming
-target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] N = len(target) dp = [False for _ in range(N)] def check(i, target): for s in smallerStrings: l = len(s) # print(s) if i &#43; l &lt;= N: tryStr = target[i:i&#43;l] # print(tryStr) if tryStr == s: dp[i&#43;l-1] = True check(i&#43;l, target) # print(&#34;-------&#34;) check(0, target) print(dp) print(dp[N-1]) </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/word-ladder-ii/">Word Ladder II</a></h2>
-
-      <p>Given two words (beginWord and endWord), and a dictionary’s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
- Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Note:  Return an empty list if there is no such transformation sequence. All words have the same length. All words contain only lowercase alphabetic characters.</p>
+      <p>Given a binary tree
+struct Node { int val; Node *left; Node *right; Node *next; } Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
+Initially, all next pointers are set to NULL.
+Follow up  You may only use constant extra space. Recursive approach is fine, you may assume implicit stack space does not count as extra space for this problem.</p>
 
       <p class="meta">
         
@@ -334,11 +285,38 @@ target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/longest-valid-parentheses/">Longest Valid Parentheses</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/decode-ways-ii/">Decode Ways II</a></h2>
 
-      <p>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
-Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parentheses substring is &#34;()&#34; Example 2: Input: &#34;)()())&#34; Output: 4 Explanation: The longest valid parentheses substring is &#34;()()&#34; Solution Dynamic programming
-// Time: `O(n)` // Space: `O(n)` public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</p>
+      <p>A message containing letters from A-Z is being encoded to numbers using the following mapping way:
+&#39;A&#39; -&gt; 1 &#39;B&#39; -&gt; 2 ... &#39;Z&#39; -&gt; 26 Beyond that, now the encoded string can also contain the character &#39;*&#39;, which can be treated as one of the numbers from 1 to 9.
+Given the encoded message containing digits and the character &#39;*&#39;, return the total number of ways to decode it.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/is-graph-bipartite/">Is Graph Bipartite</a></h2>
+
+      <p>Given an undirected graph, return true if and only if it is bipartite.
+Recall that a graph is bipartite if we can split it’s set of nodes into two independent subsets A and B such that every edge in the graph has one node in A and another node in B.
+The graph is given in the following form: graph[i] is a list of indexes j for which the edge between nodes i and j exists.</p>
 
       <p class="meta">
         
@@ -361,13 +339,39 @@ Example 1: Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parenth
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/path-sum-ii/">Path Sum II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/sliding-puzzle/">Sliding Puzzle</a></h2>
 
-      <p>Given a binary tree and a sum, find all root-to-leaf paths where each path’s sum equals the given sum.
-Note: A leaf is a node with no children.
-Example: Given the below binary tree and sum = 22,
- 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 Return:
-[ [5,4,11,2], [5,8,4,5] ] Solution # Definition for a binary tree node.</p>
+      <p>On a 2x3 board, there are 5 tiles represented by the integers 1 through 5, and an empty square represented by 0.
+A move consists of choosing 0 and a 4-directionally adjacent number and swapping it.
+The state of the board is solved if and only if the board is [[1,2,3],[4,5,0]].
+Given a puzzle board, return the least number of moves required so that the state of the board is solved.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/shortest-common-supersequence/">Shortest Common Supersequence</a></h2>
+
+      <p>Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If multiple answers exist, you may return any of them.
+(A string S is a subsequence of string T if deleting some number of characters from T (possibly 0, and the characters are chosen anywhere from T) results in the string S.)
+Example 1 Input: str1 = &#34;abac&#34;, str2 = &#34;cab&#34; Output: &#34;cabac&#34; Explanation: str1 = &#34;abac&#34; is a subsequence of &#34;cabac&#34; because we can delete the first &#34;c&#34;.</p>
 
       <p class="meta">
         
@@ -390,12 +394,9 @@ Example: Given the below binary tree and sum = 22,
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/best-time-to-buy-and-sell-stock-iii/">Best Time to Buy and Sell Stock III</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/longest-common-substring/">Longest Common Substring</a></h2>
 
-      <p>Say you have an array for which the ithelement is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete at most two transactions.
-Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
-Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</p>
+      <p>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m &#43; 1, n &#43; 1.  int L[][] = new int[m&#43;1][n&#43;1]; /* Following steps build L[m&#43;1][n&#43;1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&lt;=m; i&#43;&#43;) { for (int j=0; j&lt;=n; j&#43;&#43;) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] &#43; 1 = 0 &#43; 1 = 1  L[i][j] = L[i-1][j-1] &#43; 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</p>
 
       <p class="meta">
         
@@ -407,7 +408,7 @@ Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price =
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -418,13 +419,12 @@ Example 1: Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price =
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/longest-substring-without-repeating-characters/">Longest Substring Without Repeating Characters</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/lexicographical-numbers/">Lexicographical Numbers</a></h2>
 
-      <p>Given a string, find the length of the longest substring without repeating characters.
-*### Example 1
-Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3. *### Example 2
-Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1. *### Example 3
-Input: &#34;pwwkew&#34; Output: 3 Explanation: The answer is &#34;wke&#34;, with the length of 3. Note that the answer must be a substring, &#34;pwke&#34; is a subsequence and not a substring.</p>
+      <p>Given an integer n, return 1 - n in lexicographical order.
+For example, given 13, return: [1,10,11,12,13,2,3,4,5,6,7,8,9].
+Please optimize your algorithm to use less time and space. The input size may be as large as 5,000,000.
+Solution class Solution: def lexicalOrder(self, n: int) -&gt; List[int]: res = [0 for i in range(n)] curr = 1 for i in range(n): res[i] = curr # lower digits if curr * 10 &lt;= n: curr *= 10 # higher digits else: # if curr is greater than n, we reverse it by /10 if curr &gt;= n: curr //= 10 curr &#43;= 1 # if curr becomes X00000, we need to get rid of the trailing 0&#39;s while curr % 10 == 0: curr //= 10 return res # Input: n = 50 # Output: [1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,6,7,8,9] Recursion</p>
 
       <p class="meta">
         

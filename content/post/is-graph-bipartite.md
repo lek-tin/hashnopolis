@@ -15,7 +15,7 @@ Recall that a graph is bipartite if we can split it's set of nodes into two inde
 
 The graph is given in the following form: `graph[i]` is a list of indexes `j` for which the edge between nodes `i` and `j` exists.  Each node is an integer between `0` and `graph.length - 1`.  There are no self edges or parallel edges: `graph[i]` does not contain `i`, and it doesn't contain any element twice.  
 
-### Example 1:
+### Example 1
 ```
 Input: [[1,3], [0,2], [1,3], [0,2]]
 Output: true
@@ -27,7 +27,7 @@ The graph looks like this:
 3----2
 We can divide the vertices into two groups: {0, 2} and {1, 3}.
 ```
-### Example 2:
+### Example 2
 ```
 Input: [[1,2,3], [0,2], [0,1,3], [0,2]]
 Output: false
@@ -40,7 +40,7 @@ The graph looks like this:
 We cannot find a way to divide the set of nodes into two independent subsets.
 ```
 
-### Note:
+#### Note
 1. `graph` will have length in range `[1, 100]`.
 2. `graph[i]` will contain integers in range `[0, graph.length - 1]`.
 3. `graph[i]` will not contain `i` or duplicate values.

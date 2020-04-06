@@ -7,10 +7,85 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 21 Mar 2020 22:04:00 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 22:20:28 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/ood/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LFU Cache</title>
+      <link>http://www.hashnopolis.com/post/lfu-cache/</link>
+      <pubDate>Tue, 31 Mar 2020 22:20:28 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/lfu-cache/</guid>
+      <description>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item.</description>
+    </item>
+    
+    <item>
+      <title>Design Hashmap</title>
+      <link>http://www.hashnopolis.com/post/design-hashmap/</link>
+      <pubDate>Sun, 29 Mar 2020 06:53:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/design-hashmap/</guid>
+      <description>Design a HashMap without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ put(key, value): Insert a (key, value) pair into the HashMap. If the value already exists in the HashMap, update the value. get(key): Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key. remove(key): Remove the mapping for the value key if this map contains the mapping for the key.</description>
+    </item>
+    
+    <item>
+      <title>Design Circular Deque</title>
+      <link>http://www.hashnopolis.com/post/design-circular-deque/</link>
+      <pubDate>Sun, 29 Mar 2020 06:40:37 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/design-circular-deque/</guid>
+      <description>Design your implementation of the circular double-ended queue (deque).
+Your implementation should support following operations:
+MyCircularDeque(k): Constructor, set the size of the deque to be k.
+ insertFront(): Adds an item at the front of Deque. Return true if the operation is successful. insertLast(): Adds an item at the rear of Deque. Return true if the operation is successful. deleteFront(): Deletes an item from the front of Deque. Return true if the operation is successful.</description>
+    </item>
+    
+    <item>
+      <title>Design Hashset</title>
+      <link>http://www.hashnopolis.com/post/design-hashset/</link>
+      <pubDate>Thu, 26 Mar 2020 04:15:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/design-hashset/</guid>
+      <description>Design a HashSet without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ add(value): Insert a value into the HashSet. contains(value): Return whether the value exists in the HashSet or not. remove(value): Remove a value in the HashSet. If the value does not exist in the HashSet, do nothing.  Example MyHashSet hashSet = new MyHashSet(); hashSet.add(1); hashSet.add(2); hashSet.contains(1); // returns true hashSet.contains(3); // returns false (not found) hashSet.</description>
+    </item>
+    
+    <item>
+      <title>Flatten 2d Vector</title>
+      <link>http://www.hashnopolis.com/post/flatten-2d-vector/</link>
+      <pubDate>Thu, 26 Mar 2020 03:11:06 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/flatten-2d-vector/</guid>
+      <description>Design and implement an iterator to flatten a 2d vector. It should support the following operations: next and hasNext.
+Example Vector2D iterator = new Vector2D([[1,2],[3],[4]]); iterator.next(); // return 1 iterator.next(); // return 2 iterator.next(); // return 3 iterator.hasNext(); // return true iterator.hasNext(); // return true iterator.next(); // return 4 iterator.hasNext(); // return false Notes  Please remember to RESET your class variables declared in Vector2D, as static/class variables are persisted across multiple test cases.</description>
+    </item>
+    
+    <item>
+      <title>Utf 8 Validation</title>
+      <link>http://www.hashnopolis.com/post/utf-8-validation/</link>
+      <pubDate>Wed, 25 Mar 2020 23:37:58 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/utf-8-validation/</guid>
+      <description>A character in UTF8 can be from 1 to 4 bytes long, subjected to the following rules:
+ For 1-byte character, the first bit is a 0, followed by its unicode code. For n-bytes character, the first n-bits are all one&amp;rsquo;s, the n+1 bit is 0, followed by n-1 bytes with most significant 2 bits being 10.  This is how the UTF-8 encoding would work:
+ Char. number range | UTF-8 octet sequence (hexadecimal) | (binary) --------------------+--------------------------------------------- 0000 0000-0000 007F | 0xxxxxxx 0000 0080-0000 07FF | 110xxxxx 10xxxxxx 0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx 0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx Given an array of integers representing the data, return whether it is a valid utf-8 encoding.</description>
+    </item>
+    
+    <item>
+      <title>Design Circular Queue</title>
+      <link>http://www.hashnopolis.com/post/design-circular-queue/</link>
+      <pubDate>Wed, 25 Mar 2020 23:29:21 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/design-circular-queue/</guid>
+      <description>Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle and the last position is connected back to the first position to make a circle. It is also called &amp;ldquo;Ring Buffer&amp;rdquo;.
+One of the benefits of the circular queue is that we can make use of the spaces in front of the queue.</description>
+    </item>
     
     <item>
       <title>Moving Average From Data Stream</title>

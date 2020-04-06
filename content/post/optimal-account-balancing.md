@@ -13,7 +13,7 @@ A group of friends went on holiday and sometimes lent each other money. For exam
 
 Given a list of transactions between a group of people, return the minimum number of transactions required to settle the debt.  
 
-#### Note
+##### Note
 
 1. A transaction will be given as a `tuple (x, y, z)`. Note that `x ≠ y` and `z > 0`.
 2. Person's IDs may not be linear, e.g. we could have the persons `0, 1, 2` or we could also have the persons `0, 2, 6`.

@@ -22,7 +22,7 @@ A board square on row r and column c has a "snake or ladder" if `board[r][c] != 
 
 Return the least number of moves required to reach square N*N.  If it is not possible, return -1.
 
-### Example 1:
+### Example 1
 ```
 Input: [
 [-1,-1,-1,-1,-1,-1],
@@ -40,7 +40,7 @@ You then decide to move to square 14, and must take the ladder to square 35.
 You then decide to move to square 36, ending the game.
 It can be shown that you need at least 4 moves to reach the N*N-th square, so the answer is 4.
 ```
-### Note:
+#### Note
 1. `2 <= board.length = board[0].length <= 20`
 2. `board[i][j]` is between `1` and `N*N` or is equal to `-1`.
 3. The board square with number `1` has no snake or ladder.

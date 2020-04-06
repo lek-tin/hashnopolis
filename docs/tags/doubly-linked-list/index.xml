@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>doubly-linked-list on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/doubly-linked-list/</link>
+    <description>Recent content in doubly-linked-list on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Tue, 31 Mar 2020 22:20:28 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/doubly-linked-list/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LFU Cache</title>
+      <link>http://www.hashnopolis.com/post/lfu-cache/</link>
+      <pubDate>Tue, 31 Mar 2020 22:20:28 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/lfu-cache/</guid>
+      <description>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item.</description>
+    </item>
+    
+    <item>
+      <title>Design Circular Deque</title>
+      <link>http://www.hashnopolis.com/post/design-circular-deque/</link>
+      <pubDate>Sun, 29 Mar 2020 06:40:37 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/design-circular-deque/</guid>
+      <description>Design your implementation of the circular double-ended queue (deque).
+Your implementation should support following operations:
+MyCircularDeque(k): Constructor, set the size of the deque to be k.
+ insertFront(): Adds an item at the front of Deque. Return true if the operation is successful. insertLast(): Adds an item at the rear of Deque. Return true if the operation is successful. deleteFront(): Deletes an item from the front of Deque. Return true if the operation is successful.</description>
+    </item>
+    
+    <item>
+      <title>Design Circular Queue</title>
+      <link>http://www.hashnopolis.com/post/design-circular-queue/</link>
+      <pubDate>Wed, 25 Mar 2020 23:29:21 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/design-circular-queue/</guid>
+      <description>Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle and the last position is connected back to the first position to make a circle. It is also called &amp;ldquo;Ring Buffer&amp;rdquo;.
+One of the benefits of the circular queue is that we can make use of the spaces in front of the queue.</description>
+    </item>
+    
+    <item>
+      <title>Convert Binary Search Tree to Sorted Doubly Linked List</title>
+      <link>http://www.hashnopolis.com/post/convert-binary-search-tree-to-sorted-doubly-linked-list/</link>
+      <pubDate>Wed, 26 Dec 2018 01:24:33 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/convert-binary-search-tree-to-sorted-doubly-linked-list/</guid>
+      <description>Convert a BST to a sorted circular doubly-linked list in-place. Think of the left and right pointers as synonymous to the previous and next pointers in a doubly-linked list.
+Let&amp;rsquo;s take the following BST as an example, it may help you understand the problem better:
+We want to transform this BST into a circular doubly linked list. Each node in a doubly linked list has a predecessor and successor. For a circular doubly linked list, the predecessor of the first element is the last element, and the successor of the last element is the first element.</description>
+    </item>
+    
+    <item>
+      <title>LRU Cache</title>
+      <link>http://www.hashnopolis.com/post/lru-cache/</link>
+      <pubDate>Sun, 11 Nov 2018 15:33:09 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/lru-cache/</guid>
+      <description>Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
+get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.</description>
+    </item>
+    
+  </channel>
+</rss>

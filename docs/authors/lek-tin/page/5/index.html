@@ -176,37 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/department-highest-salary/">Department Highest Salary</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
 
-      <p>The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
-&#43;----&#43;-------&#43;--------&#43;--------------&#43; | Id | Name | Salary | DepartmentId | &#43;----&#43;-------&#43;--------&#43;--------------&#43; | 1 | Joe | 70000 | 1 | | 2 | Jim | 90000 | 1 | | 3 | Henry | 80000 | 2 | | 4 | Sam | 60000 | 2 | | 5 | Max | 90000 | 1 | &#43;----&#43;-------&#43;--------&#43;--------------&#43; The Department table holds all departments of the company.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/second-highest-salary/">Second Highest Salary</a></h2>
-
-      <p>Write a SQL query to get the second highest salary from the Employee table.
-&#43;----&#43;--------&#43; | Id | Salary | &#43;----&#43;--------&#43; | 1 | 100 | | 2 | 200 | | 3 | 300 | &#43;----&#43;--------&#43; For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
-&#43;---------------------&#43; | SecondHighestSalary | &#43;---------------------&#43; | 200 | &#43;---------------------&#43; Solution (naive) SELECT max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SELECT max(Salary) FROM Employee) Solution This solution considers when second highest salary doesn’t exist</p>
+      <p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cbacdcbc&#34; Output: &#34;acdb&#34; Example 3 Input: &#34;cba&#34; Output: &#34;cba&#34; Solution class Solution: def removeDuplicateLetters(self, s: str) -&gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &lt; stack[-1] and i &lt; last_indices[stack[-1]]: seen.</p>
 
       <p class="meta">
         
@@ -216,7 +189,7 @@
         
         in
         
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -229,36 +202,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/longest-bitonic-subsequence/">Longest Bitonic Subsequence</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/valid-sudoku/">Valid Sudoku</a></h2>
 
-      <p>Given an array arr[0 … n-1] containing n positive integers, a subsequence of arr[] is called Bitonic if it is first increasing, then decreasing. Write a function that takes an array as argument and returns the length of the longest bitonic subsequence. A sequence, sorted in increasing order is considered Bitonic with the decreasing part as empty. Similarly, decreasing order sequence is considered Bitonic with the increasing part as empty.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/redundant-connection/">Redundant Connection</a></h2>
-
-      <p>In this problem, a tree is an undirected graph that is connected and has no cycles.
-The given input is a graph that started as a tree with N nodes (with distinct values 1, 2, ..., N), with one additional edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.
-The resulting graph is given as a 2D-array of edges.</p>
+      <p>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+A partially filled sudoku which is valid.
+The Sudoku board could be partially filled, where empty cells are filled with the character &#39;.</p>
 
       <p class="meta">
         
@@ -281,9 +230,145 @@ The resulting graph is given as a 2D-array of edges.</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/optimal-utilization/">Optimal Utilization</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/interval-list-intersections/">Interval List Intersections</a></h2>
 
-      <p>Given 2 lists a and b. Each element is a pair of integers where the first integer represents the unique id and the second integer represents a value. Your task is to find an element from a and an element form b such that the sum of their values is less or equal to target and as close to target as possible. Return a list of ids of selected elements. If no pair is possible, return an empty list.</p>
+      <p>Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.
+Return the intersection of these two interval lists.
+(Formally, a closed interval [a, b] (with a &lt;= b) denotes the set of real numbers x with a &lt;= x &lt;= b. The intersection of two closed intervals is a set of real numbers that is either empty, or can be represented as a closed interval.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/scramble-string/">Scramble String</a></h2>
+
+      <p>Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
+Below is one possible representation of s1 = &#34;great&#34;:
+ great / \ gr eat / \ / \ g r e at / \ a t To scramble the string, we may choose any non-leaf node and swap its two children.
+For example, if we choose the node &#34;gr&#34; and swap its two children, it produces a scrambled string &#34;rgeat&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/palindrome-partitioning-ii/">Palindrome Partitioning Ii</a></h2>
+
+      <p>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return the minimum cuts needed for a palindrome partitioning of s.
+Example Input: &#34;aab&#34; Output: 1 Explanation: The palindrome partitioning [&#34;aa&#34;,&#34;b&#34;] could be produced using 1 cut. Solution (DP) class Solution: def minCut(self, s: str) -&gt; int: N = len(s) # valid[i][j] = True if s[i~j] IS palindrome, or False if IS NOT palindrome valid = [ [True for _ in range(N)] for _ in range(N) ] # min cuts of s[0~i] dp = [N for _ in range(N)] for l in range(2, N&#43;1): for i in range(N-l&#43;1): j = i&#43;l-1 valid[i][j] = s[i]==s[j] and valid[i&#43;1][j-1] for i in range(N): if valid[0][i]: # no cuts needed dp[i] = 0 continue for j in range(i): if valid[j&#43;1][i]: #.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/palindrome-permutation/">Palindrome Permutation</a></h2>
+
+      <p>Given a string, determine if a permutation of the string could form a palindrome.
+Example 1 Input: &#34;code&#34; Output: false Example 2 Input: &#34;aab&#34; Output: true Example 3 Input: &#34;carerac&#34; Output: true Solution class Solution: def canPermutePalindrome(self, s: str) -&gt; bool: lookup = set() for c in s: if c not in lookup: lookup.add(c) else: lookup.remove(c) return len(lookup) &lt;= 1 </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/first-unique-character-in-a-string/">First Unique Character in a String</a></h2>
+
+      <p>Given a string, find the first non-repeating character in it and return it’s index. If it doesn’t exist, return -1.
+Example 1 s = &#34;leetcode&#34; return 0. Example 2 s = &#34;loveleetcode&#34;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/max-queue/">Max Queue</a></h2>
+
+      <p>Implement a MaxQueue class that has the following methods:
+public interface MaxQueue { public void add(Long l); public Long poll(); public Long pollMax(); } All 3 operations should take on average O(logN) time.
+Solution // &#34;static void main&#34; must be defined in a public class. public class Main { public static void main(String[] args) throws Exception { System.out.println(&#34;Hello World!&#34;); DoubleLinkedList list = new DoubleLinkedList(); MaxQueue maxQ = new MaxQueue(); maxQ.add(5); maxQ.</p>
 
       <p class="meta">
         
@@ -306,88 +391,14 @@ The resulting graph is given as a 2D-array of edges.</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/critical-routers/">Critical Routers</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/string-compression/">String Compression</a></h2>
 
-      <p>You are given an undirected connected graph. An articulation point (or cut vertex) is defined as a vertex which, when removed along with associated edges, makes the graph disconnected (or more precisely, increases the number of connected components in the graph). The task is to find all articulation points in the given graph.
-Input:
-The input to the function/method consists of three arguments:
- numNodes, an integer representing the number of nodes in the graph.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/critical-connections/">Critical Connections</a></h2>
-
-      <p>Given an underected connected graph with n nodes labeled 1..n. A bridge (cut edge) is defined as an edge which, when removed, makes the graph disconnected (or more precisely, increases the number of connected components in the graph). Equivalently, an edge is a bridge if and only if it is not contained in any cycle. The task is to find all bridges in the given graph. Output an empty list if there are no bridges.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/partition-labels/">Partition Labels</a></h2>
-
-      <p>A string S of lowercase letters is given. We want to partition this string into as many parts as possible so that each letter appears in at most one part, and return a list of integers representing the size of these parts.
-Example 1 Input: S = &#34;ababcbacadefegdehijhklij&#34; Output: [9,7,8] Explanation: The partition is &#34;ababcbaca&#34;, &#34;defegde&#34;, &#34;hijhklij&#34;. This is a partition so that each letter appears in at most one part.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-cost-to-connect-sticks/">Minimum Cost to Connect Sticks</a></h2>
-
-      <p>Given n sticks of different lengths, we need to connect these sticks into one stick. We can connect only 2 sticks at a time. The cost required to connect 2 sticks is equal to sum of their lengths. The length of this connected stick is also equal to the sum of their lengths. This process is repeated until n sticks are connected into a single stick. Find the min possible cost required to connect all sticks.</p>
+      <p>Given an array of characters, compress it in-place.
+The length after compression must always be smaller than or equal to the original array.
+Every element of the array should be a character (not int) of length 1.
+After you are done modifying the input array in-place, return the new length of the array.
+Follow up Could you solve it using only O(1) extra space?
+Example 1 Input: [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;,&#34;b&#34;,&#34;c&#34;,&#34;c&#34;,&#34;c&#34;] Output: Return 6, and the first 6 characters of the input array should be: [&#34;a&#34;,&#34;2&#34;,&#34;b&#34;,&#34;2&#34;,&#34;c&#34;,&#34;3&#34;] Explanation: &#34;aa&#34; is replaced by &#34;a2&#34;.</p>
 
       <p class="meta">
         
@@ -410,11 +421,11 @@ Example 1 Input: S = &#34;ababcbacadefegdehijhklij&#34; Output: [9,7,8] Explanat
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/rotting-oranges/">Rotting Oranges</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/evaluate-reverse-polish-notation/">Evaluate Reverse Polish Notation</a></h2>
 
-      <p>In a given grid, each cell can have one of three values:
- the value 0 representing an empty cell; the value 1 representing a fresh orange; the value 2 representing a rotten orange.  Every minute, any fresh orange that is adjacent (4-directionally) to a rotten orange becomes rotten.
-Return the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return -1 instead.</p>
+      <p>Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+Valid operators are &#43;, -, *, /. Each operand may be an integer or another expression.
+Note  Division between two integers should truncate toward zero. The given RPN expression is always valid. That means the expression would always evaluate to a result and there won’t be any divide by zero operation.  Example 1 Input: [&#34;2&#34;, &#34;1&#34;, &#34;&#43;&#34;, &#34;3&#34;, &#34;*&#34;] Output: 9 Explanation: ((2 &#43; 1) * 3) = 9 Example 2 Input: [&#34;4&#34;, &#34;13&#34;, &#34;5&#34;, &#34;/&#34;, &#34;&#43;&#34;] Output: 6 Explanation: (4 &#43; (13 / 5)) = 6 Example 3 Input: [&#34;10&#34;, &#34;6&#34;, &#34;9&#34;, &#34;3&#34;, &#34;&#43;&#34;, &#34;-11&#34;, &#34;*&#34;, &#34;/&#34;, &#34;*&#34;, &#34;17&#34;, &#34;&#43;&#34;, &#34;5&#34;, &#34;&#43;&#34;] Output: 22 Explanation: ((10 * (6 / ((9 &#43; 3) * -11))) &#43; 17) &#43; 5 = ((10 * (6 / (12 * -11))) &#43; 17) &#43; 5 = ((10 * (6 / -132)) &#43; 17) &#43; 5 = ((10 * 0) &#43; 17) &#43; 5 = (0 &#43; 17) &#43; 5 = 17 &#43; 5 = 22 Solution class Solution: def evalRPN(self, tokens: List[str]) -&gt; int: if not tokens: return None stack = [] operators = set([&#34;&#43;&#34;, &#34;-&#34;, &#34;*&#34;, &#34;/&#34;]) N = len(tokens) curr = 0 while curr &lt; N: while curr &lt; N and tokens[curr] not in operators: stack.</p>
 
       <p class="meta">
         
@@ -426,7 +437,7 @@ Return the minimum number of minutes that must elapse until no cell has a fresh 
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

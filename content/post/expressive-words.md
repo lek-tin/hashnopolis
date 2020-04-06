@@ -29,7 +29,7 @@ We can extend "e" and "o" in the word "hello" to get "heeellooo".
 We can't extend "helo" to get "heeellooo" because the group "ll" is not size 3 or more.
 ```
 
-#### Notes
+##### Notes
 
 1. `0 <= len(S) <= 100.`
 2. `0 <= len(words) <= 100.`

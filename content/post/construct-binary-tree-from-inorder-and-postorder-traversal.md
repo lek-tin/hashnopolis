@@ -10,7 +10,7 @@ archive: false
 ---
 Given inorder and postorder traversal of a tree, construct the binary tree.
 
-### Note:
+#### Note
 You may assume that duplicates do not exist in the tree.
 
 For example, given

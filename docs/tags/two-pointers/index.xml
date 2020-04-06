@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 16 Mar 2020 01:53:48 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 03:11:06 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flatten 2d Vector</title>
+      <link>http://www.hashnopolis.com/post/flatten-2d-vector/</link>
+      <pubDate>Thu, 26 Mar 2020 03:11:06 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/flatten-2d-vector/</guid>
+      <description>Design and implement an iterator to flatten a 2d vector. It should support the following operations: next and hasNext.
+Example Vector2D iterator = new Vector2D([[1,2],[3],[4]]); iterator.next(); // return 1 iterator.next(); // return 2 iterator.next(); // return 3 iterator.hasNext(); // return true iterator.hasNext(); // return true iterator.next(); // return 4 iterator.hasNext(); // return false Notes  Please remember to RESET your class variables declared in Vector2D, as static/class variables are persisted across multiple test cases.</description>
+    </item>
     
     <item>
       <title>Interval List Intersections</title>
@@ -86,7 +96,7 @@ Example 1 Input: [&amp;quot;h&amp;quot;,&amp;quot;e&amp;quot;,&amp;quot;l&amp;qu
       
       <guid>http://www.hashnopolis.com/post/squares-of-a-sorted-array/</guid>
       <description>Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
-Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2: Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note:  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i += 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr += 1 return result </description>
+Example 1 Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2 Input: [-7,-3,2,3,11] Output: [4,9,9,49,121] Note  1 &amp;lt;= A.length &amp;lt;= 10000 -10000 &amp;lt;= A[i] &amp;lt;= 10000 A is sorted in non-decreasing order.  Solution class Solution: def sortedSquares(self, A: List[int]) -&amp;gt; List[int]: result = A[:] leftPtr, rightPtr = 0, len(A)-1 i = 0 while leftPtr &amp;lt;= rightPtr: i += 1 if abs(A[leftPtr]) &amp;lt;= abs(A[rightPtr]): result[-i] = A[rightPtr] * A[rightPtr] rightPtr -= 1 else: result[-i] = A[leftPtr] * A[leftPtr] leftPtr += 1 return result </description>
     </item>
     
     <item>
@@ -97,7 +107,7 @@ Example 1: Input: [-4,-1,0,3,10] Output: [0,1,9,16,100] Example 2: Input: [-7,-3
       <guid>http://www.hashnopolis.com/post/subarray-product-less-than-k/</guid>
       <description>Your are given an array of positive integers nums.
 Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than k.
-Example 1: Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]. Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</description>
+Example 1 Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]. Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</description>
     </item>
     
     <item>
@@ -117,9 +127,9 @@ Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray 
       
       <guid>http://www.hashnopolis.com/post/valid-triangle-number/</guid>
       <description>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
-Example 1: Input: [2,2,3,4] Output: 3 Explanation: Valid combinations are:
+Example 1 Input: [2,2,3,4] Output: 3 Explanation: Valid combinations are:
 2,3,4 (using the first 2) 2,3,4 (using the second 2) 2,2,3
-Note:  The length of the given array won&amp;rsquo;t exceed 1000. The integers in the given array are in the range of [0, 1000].</description>
+Note  The length of the given array won&amp;rsquo;t exceed 1000. The integers in the given array are in the range of [0, 1000].</description>
     </item>
     
     <item>
@@ -129,7 +139,7 @@ Note:  The length of the given array won&amp;rsquo;t exceed 1000. The integers i
       
       <guid>http://www.hashnopolis.com/post/palindrome-linked-list/</guid>
       <description>Given a singly linked list, determine if it is a palindrome.
-Example 1: Input: 1-&amp;gt;2 Output: false Example 2: Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
+Example 1 Input: 1-&amp;gt;2 Output: false Example 2 Input: 1-&amp;gt;2-&amp;gt;2-&amp;gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&amp;gt; bool: if not head: return True middle = self.</description>
     </item>
     
@@ -141,7 +151,7 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
       <guid>http://www.hashnopolis.com/post/3sum-with-multiplicity/</guid>
       <description>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &amp;lt; j &amp;lt; k and A[i] + A[j] + A[k] == target.
 As the answer can be very large, return it modulo 10^9 + 7.
-Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20 Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</description>
+Example 1 Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20 Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</description>
     </item>
     
     <item>
@@ -151,7 +161,7 @@ Example 1: Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20 Explanation: 
       
       <guid>http://www.hashnopolis.com/post/two-sum-less-than-k/</guid>
       <description>Given an array A of integers and integer K, return the maximum S such that there exists i &amp;lt; j with A[i] + A[j] = S and S &amp;lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60. Example 2: Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</description>
+Example 1 Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60. Example 2 Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</description>
     </item>
     
     <item>
@@ -161,7 +171,7 @@ Example 1: Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We
       
       <guid>http://www.hashnopolis.com/post/two-sum-iv-input-is-a-bst/</guid>
       <description>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2: Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</description>
+Example 1 Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2 Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</description>
     </item>
     
     <item>
@@ -215,7 +225,7 @@ Example Given array nums = [-1, 2, 1, -4], and target = 4. The minimum differenc
       
       <guid>http://www.hashnopolis.com/post/minimum-window-substring/</guid>
       <description>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
-Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot; Note:  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;quot;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
+Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output: &amp;quot;BANC&amp;quot; Note  If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;quot;. If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</description>
     </item>
     
     <item>
@@ -225,7 +235,7 @@ Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quo
       
       <guid>http://www.hashnopolis.com/post/longest-substring-with-at-most-two-distinct-characters/</guid>
       <description>Given a string s, find the length of the longest substring t that contains at most 2 distinct characters.
-Example 1: Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3. Example 2: Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
+Example 1 Input: &amp;quot;eceba&amp;quot; Output: 3 Explanation: t is &amp;quot;ece&amp;quot; which its length is 3. Example 2 Input: &amp;quot;ccaabbb&amp;quot; Output: 5 Explanation: t is &amp;quot;aabbb&amp;quot; which its length is 5. Solution class Solution { public int lengthOfLongestSubstringTwoDistinct(String s) { HashMap&amp;lt;Character, Integer&amp;gt; countMap = new HashMap&amp;lt;Character, Integer&amp;gt;(); int left = 0; int max = 0; for (int i = 0; i &amp;lt; s.</description>
     </item>
     
     <item>
@@ -248,7 +258,7 @@ class Solution { public int trap(int[] height) { int n = height.</description>
       
       <guid>http://www.hashnopolis.com/post/container-with-most-water/</guid>
       <description>Given n non-negative integers a1, a2, &amp;hellip;, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
-Note: You may not slant the container and n is at least 2. The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7].</description>
+Note You may not slant the container and n is at least 2. The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7].</description>
     </item>
     
     <item>
@@ -282,7 +292,7 @@ Note Your algorithm should run in O(n) time complexity and O(1) space complexity
       <guid>http://www.hashnopolis.com/post/move-zeroes/</guid>
       <description>Given an array nums, write a function to move all 0&#39;s to the end of it while maintaining the relative order of the non-zero elements.
 For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
-Note: You must do this in-place without making a copy of the array. Minimize the total number of operations.
+Note You must do this in-place without making a copy of the array. Minimize the total number of operations.
 Credit Special thanks to @jianchao.</description>
     </item>
     
@@ -293,8 +303,8 @@ Credit Special thanks to @jianchao.</description>
       
       <guid>http://www.hashnopolis.com/post/kth-largest-element-in-an-array/</guid>
       <description>Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-Example 1: Input: [3,2,1,5,6,4] and k = 2 Output: 5 Example 2: Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4 Note: You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
-Solution: Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n+kLogk)</description>
+Example 1 Input: [3,2,1,5,6,4] and k = 2 Output: 5 Example 2 Input: [3,2,3,1,2,4,5,5,6] and k = 4 Output: 4 Note You may assume k is always valid, 1 ≤ k ≤ array&#39;s length.
+Solution Average time complexity: O(n) if we don’t need the sorted output, otherwise O(n+kLogk)</description>
     </item>
     
     <item>

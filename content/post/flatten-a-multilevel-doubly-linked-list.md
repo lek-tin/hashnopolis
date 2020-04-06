@@ -2,7 +2,7 @@
 title: "Flatten a Multilevel Doubly Linked List"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode"]
+tags: ["leetcode", "dfs", "recursion"]
 categories: ["algorithm"]
 date: 2020-03-23T22:53:23-07:00
 lastmod: 2020-03-23T22:53:23-07:00
@@ -80,8 +80,88 @@ Merging the serialization of each level and removing trailing nulls we obtain:
 1. Number of Nodes will not exceed `1000`.
 2. `1 <= Node.val <= 10^5`
 
-### Solution
+### Solution (recursive dfs)
 
+Time: `O(n)`  
+Space: `O(n)`  
 ```python
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val, prev, next, child):
+        self.val = val
+        self.prev = prev
+        self.next = next
+        self.child = child
+"""
+class Solution:
+    def flatten(self, head: 'Node') -> 'Node':
+        if not head:
+            return head
 
+        dummy = Node(None, None, None, None)
+        dummy.next = head
+
+        self.dfs(dummy, head)
+
+        # delete prev pointer for head
+        dummy.next.prev = None
+        return dummy.next
+
+    def dfs(self, prev, curr):
+        if not curr:
+            return prev
+
+        curr.prev = prev
+        prev.next = curr
+
+        pending_next = curr.next
+        # if child doesn't exist, it will return curr immediately
+        # otherwise, dfs will continue flattening the child level
+        pending_tail = self.dfs(curr, curr.child)
+        # delete child pointer for curr
+        curr.child = None
+        return self.dfs(pending_tail, pending_next)
+```
+
+### Solution (iterative dfs)
+
+Time: `O(n)`  
+Space: `O(1)`  
+```python
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val, prev, next, child):
+        self.val = val
+        self.prev = prev
+        self.next = next
+        self.child = child
+"""
+class Solution:
+    def flatten(self, head: 'Node') -> 'Node':
+        if not head:
+            return None
+
+        curr = head
+
+        while curr:
+            # flatten child level first
+            if curr.child:
+                pending_next = curr.next
+                curr.child.prev = curr
+                curr.next = curr.child
+                nextLevel_prev = curr
+                while nextLevel_prev.next:
+                    nextLevel_prev = nextLevel_prev.next
+                if pending_next:
+                    nextLevel_prev.next = pending_next
+                    pending_next.prev = nextLevel_prev
+                # clear child pointer for curr
+                curr.child = None
+            # curr will move onto the already flattened child level head now
+            # e.g., 3 -> 7
+            curr = curr.next
+
+        return head
 ```

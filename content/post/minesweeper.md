@@ -66,7 +66,7 @@ Explanation:
 ```
 ![minesweeper example 2](/img/post/minesweeper_example_2.png)
 
-### Note
+#### Note
 
 1. The range of the input matrix's height and width is `[1,50]`.
 2. The click position will only be an unrevealed square (`'M'` or `'E'`), which also means the input board contains at least one clickable square.

@@ -10,20 +10,20 @@ draft: false
 archive: false
 ---
 You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return `-1`.  
-### Example 1:
+### Example 1
 ```
 Input: coins = [1, 2, 5], amount = 11
 Output: 3 
 Explanation: 11 = 5 + 5 + 1
 ```
 
-### Example 2:
+### Example 2
 ```
 Input: coins = [2], amount = 3
 Output: -1
 ```
 
-### Note:
+#### Note
 You may assume that you have an infinite number of each kind of coin.
 
 ### Solution:
@@ -62,7 +62,10 @@ class Solution {
     }
 }
 ```
-Python top-down version  
+
+### Solution (bottom-up dynamic programming)
+
+Python bottom-up version  
 Time complexity : `O(amount * coin_denoms)`  
 Space complexity : `O(coin_denoms)`  
 ```python
@@ -85,6 +88,9 @@ class Solution:
 
         return ans[amount] if ans[amount] != math.inf else -1
 ```
+
+### Solution (top-down memoized recursion)
+
 Python top-down version
 ```python
 import math

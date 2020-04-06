@@ -38,7 +38,7 @@ vector<string> strs2 = decode(encoded_string);
 
 Implement the `encode` and `decode` methods.  
 
-#### Note
+##### Note
 
 1. The string may contain any possible characters out of `256` valid **ascii** characters. Your algorithm should be generalized enough to work on any possible characters.
 2. Do not use class member/global/static variables to store states. Your `encode` and `decode` algorithms should be stateless.

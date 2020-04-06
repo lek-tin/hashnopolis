@@ -15,7 +15,7 @@ Given the ball's **start position**, the **destination** and the **maze**, find 
 
 The maze is represented by a binary 2D array. `1` means the wall and `0` means the empty space. You may assume that the borders of the maze are all walls. The start and destination coordinates are represented by row and column indexes.  
 
-### Example 1:
+### Example 1
 ```
 Input 1: a maze represented by a 2D array
 
@@ -33,7 +33,7 @@ Output: 12
 Explanation: One shortest way is : left -> down -> left -> down -> right -> down -> right.
              The total distance is 1 + 1 + 3 + 1 + 2 + 2 + 2 = 12.
 ```
-### Example 2:
+### Example 2
 ```
 Input 1: a maze represented by a 2D array
 
@@ -51,7 +51,7 @@ Output: -1
 Explanation: There is no way for the ball to stop at the destination.
 ```
 
-### Note:
+#### Note
 1. There is only one ball and one destination in the maze.
 2. Both the ball and the destination exist on an empty space, and they will not be at the same position initially.
 3. The given maze does not contain border (like the red rectangle in the example pictures), but you could assume the border of the maze are all walls.

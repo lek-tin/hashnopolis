@@ -39,7 +39,7 @@ Explanation: The given undirected graph will be like this:
     4 - 3
 ```
 
-### Note
+#### Note
 1. The size of the input **2D-array** will be between 3 and 1000.
 2. Every integer represented in the **2D-array** will be between 1 and N, where N is the size of the input array.
 

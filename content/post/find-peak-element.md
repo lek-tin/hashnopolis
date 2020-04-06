@@ -29,7 +29,7 @@ Output: 1 or 5
 Explanation: Your function can return either index number 1 where the peak element is 2, 
              or index number 5 where the peak element is 6.
 ```
-### Note
+#### Note
 Your solution should be in logarithmic complexity.
 
 ### Solution

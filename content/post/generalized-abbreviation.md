@@ -11,7 +11,7 @@ archive: false
 ---
 Write a function to generate the generalized abbreviations of a word.  
 
-#### Note
+##### Note
 
 The order of the output does not matter.
 

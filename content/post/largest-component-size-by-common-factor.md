@@ -2,7 +2,7 @@
 title: "Largest Component Size by Common Factor"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "graph", "union-find"]
+tags: ["leetcode", "graph", "union-find", "connected-components"]
 categories: ["algorithm"]
 date: 2020-02-11T23:25:11-08:00
 lastmod: 2020-02-11T23:25:11-08:00
@@ -15,30 +15,32 @@ Given a **non-empty** array of unique positive integers `A`, consider the follow
 
 Return the size of the largest connected component in the graph.  
 
-### Example 1:
+### Example 1
 ```
 Input: [4,6,15,35]
 Output: 4
 ```
 
-### Example 2:
+### Example 2
 ```
 Input: [20,50,9,63]
 Output: 2
 ```
 
-### Example 3:
+### Example 3
 ```
 
 Input: [2,3,6,7,4,12,21,39]
 Output: 8
 ```
 
-### Note:
+#### Note
+
 1. `1 <= A.length <= 20000`
 2. `1 <= A[i] <= 100000`
 
 ### Solution
+
 ```python
 from collections import Counter
 
@@ -88,8 +90,9 @@ class Solution:
             for f in factors:
                 unionFind.union(prime_to_index[factors[0]], prime_to_index[f])
         # Counter will count how many times each value in an array appears.
-        tempMap = [unionFind.find(prime_to_index[factors[0]]) for factors in fullFactors] # [2, 2, 2, 3, 3, 3, 3]
-        counter = Counter(tempMap) # Counter({3: 4, 2: 3})
+        freqMap = [ unionFind.find(prime_to_index[factors[0]]) for factors in fullFactors ] # [2, 2, 2, 3, 3, 3, 3]
+        counter = Counter(freqMap) # Counter({3: 4, 2: 3})
+
         return max(counter.values())
 ```
 

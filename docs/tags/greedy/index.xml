@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 23 Mar 2020 03:52:41 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 02:39:52 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/greedy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Minimum Number of Refueling Stops</title>
+      <link>http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/</link>
+      <pubDate>Mon, 30 Mar 2020 02:39:52 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/</guid>
+      <description>A car travels from a starting position to a destination which is target miles east of the starting position.
+Along the way, there are gas stations. Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.
+The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses 1 liter of gas per 1 mile that it drives.</description>
+    </item>
     
     <item>
       <title>Split Array Into Consecutive Subsequences</title>
@@ -90,7 +101,7 @@ Example 1 Input: S = &amp;quot;ababcbacadefegdehijhklij&amp;quot; Output: [9,7,8
       
       <guid>http://www.hashnopolis.com/post/maximum-swap/</guid>
       <description>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
-Example 1: Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2: Input: 9973 Output: 9973 Explanation: No swap. Note:  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&amp;gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&amp;#34;0&amp;#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &amp;gt; int(ord(numChars[i])-ord(&amp;#34;0&amp;#34;)): if last[j] &amp;gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&amp;#34;&amp;#34;.</description>
+Example 1 Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2 Input: 9973 Output: 9973 Explanation: No swap. Note  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&amp;gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&amp;#34;0&amp;#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &amp;gt; int(ord(numChars[i])-ord(&amp;#34;0&amp;#34;)): if last[j] &amp;gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&amp;#34;&amp;#34;.</description>
     </item>
     
     <item>

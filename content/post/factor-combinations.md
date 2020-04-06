@@ -15,10 +15,10 @@ Numbers can be regarded as product of its factors. For example,
 ```
 Write a function that takes an integer `n` and return all possible combinations of its factors.
 
-### Note:
+#### Note
 - You may assume that n is always positive.
 - Factors should be greater than 1 and less than n.
-### Example 1:
+### Example 1
 ```
 Input: 1
 Output: []
@@ -27,7 +27,7 @@ Example 2:
 Input: 37
 Output:[]
 ```
-### Example 3:
+### Example 3
 ```
 Input: 12
 Output:
@@ -37,7 +37,7 @@ Output:
   [3, 4]
 ]
 ```
-### Example 4:
+### Example 4
 ```
 Input: 32
 Output:

@@ -207,7 +207,7 @@ Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-
 <pre><code>Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
-</code></pre><h3 id="solution">Solution:</h3>
+</code></pre><h3 id="solution-recursion">Solution (recursion)</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxProfit</span>(self, prices):
         <span style="color:#e6db74">&#34;&#34;&#34;
@@ -223,6 +223,26 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
             <span style="color:#66d9ef">return</span> makeProfit(priceList, prevVal, profit)
 
         <span style="color:#66d9ef">return</span> makeProfit(prices)
+</code></pre></div><h3 id="solution-iterative">Solution (iterative)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxProfit</span>(self, prices: List[int]) <span style="color:#f92672">-&gt;</span> int:
+        N <span style="color:#f92672">=</span> len(prices)
+        <span style="color:#66d9ef">if</span> N <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+
+        curr <span style="color:#f92672">=</span> N<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        localMax <span style="color:#f92672">=</span> prices[curr]
+        curr <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+        profit <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+        <span style="color:#66d9ef">while</span> curr <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+            price <span style="color:#f92672">=</span> prices[curr]
+            <span style="color:#66d9ef">if</span> price <span style="color:#f92672">&lt;</span> localMax:
+                profit <span style="color:#f92672">+=</span> localMax <span style="color:#f92672">-</span> price
+            localMax <span style="color:#f92672">=</span> price
+            curr <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+
+        <span style="color:#66d9ef">return</span> profit
 </code></pre></div>
   </div>
 

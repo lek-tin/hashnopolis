@@ -15,7 +15,7 @@ Implement `FreqStack`, a class which simulates the operation of a stack-like dat
 2. `pop()`, which removes and returns the most frequent element in the stack.  
 3. If there is a tie for most frequent element, the element closest to the top of the stack is removed and returned.  
 
-### Example 1:
+### Example 1
 ```
 Input: 
 ["FreqStack","push","push","push","push","push","push","pop","pop","pop","pop"],
@@ -37,7 +37,7 @@ pop() -> returns 4.
 The stack becomes [5,7].
 ```
 
-### Note:
+#### Note
 1. Calls to `FreqStack.push(int x)` will be such that `0 <= x <= 10^9`.
 2. It is guaranteed that `FreqStack.pop()` won't be called if the stack has zero elements.
 3. The total number of `FreqStack.push` calls will not exceed `10000` in a single test case.

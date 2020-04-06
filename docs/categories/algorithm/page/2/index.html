@@ -176,40 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/logger-rate-limiter/">Logger Rate Limiter</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/design-circular-deque/">Design Circular Deque</a></h2>
 
-      <p>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
-Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.
-It is possible that several messages arrive roughly at the same time.
-Example Logger logger = new Logger(); // logging string &#34;foo&#34; at timestamp 1 logger.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/design-hit-counter/">Design Hit Counter</a></h2>
-
-      <p>Design a hit counter which counts the number of hits received in the past 5 minutes.
-Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.
-It is possible that several hits arrive roughly at the same time.
-Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</p>
+      <p>Design your implementation of the circular double-ended queue (deque).
+Your implementation should support following operations:
+MyCircularDeque(k): Constructor, set the size of the deque to be k.
+ insertFront(): Adds an item at the front of Deque. Return true if the operation is successful. insertLast(): Adds an item at the rear of Deque. Return true if the operation is successful. deleteFront(): Deletes an item from the front of Deque. Return true if the operation is successful.</p>
 
       <p class="meta">
         
@@ -232,64 +204,11 @@ Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</p>
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/cut-wood/">Cut Wood</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/design-hashset/">Design Hashset</a></h2>
 
-      <p>Given an int array wood representing the length of n pieces of wood and an int k. It is required to cut these pieces of wood such that more or equal to k pieces of the same length len are cut. What is the longest len you can get?
-Example 1 Input: wood = [5, 9, 7], k = 3 Output: 5 Explanation: 5 -&gt; 5 9 -&gt; 5 &#43; 4 7 -&gt; 5 &#43; 2 Example 2 Input: wood = [5, 9, 7], k = 4 Output: 4 Explanation: 5 -&gt; 4 &#43; 1 9 -&gt; 4 * 2 &#43; 1 7 -&gt; 4 &#43; 3 Example 3 Input: wood = [1, 2, 3], k = 7 Output: 0 Explanation: We cannot make it.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
-
-      <p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
-Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cbacdcbc&#34; Output: &#34;acdb&#34; Example 3 Input: &#34;cba&#34; Output: &#34;cba&#34; Solution class Solution: def removeDuplicateLetters(self, s: str) -&gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &lt; stack[-1] and i &lt; last_indices[stack[-1]]: seen.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/valid-sudoku/">Valid Sudoku</a></h2>
-
-      <p>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
-Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
-A partially filled sudoku which is valid.
-The Sudoku board could be partially filled, where empty cells are filled with the character &#39;.</p>
+      <p>Design a HashSet without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ add(value): Insert a value into the HashSet. contains(value): Return whether the value exists in the HashSet or not. remove(value): Remove a value in the HashSet. If the value does not exist in the HashSet, do nothing.  Example MyHashSet hashSet = new MyHashSet(); hashSet.add(1); hashSet.add(2); hashSet.contains(1); // returns true hashSet.contains(3); // returns false (not found) hashSet.</p>
 
       <p class="meta">
         
@@ -312,39 +231,10 @@ The Sudoku board could be partially filled, where empty cells are filled with th
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/interval-list-intersections/">Interval List Intersections</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/flatten-2d-vector/">Flatten 2d Vector</a></h2>
 
-      <p>Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.
-Return the intersection of these two interval lists.
-(Formally, a closed interval [a, b] (with a &lt;= b) denotes the set of real numbers x with a &lt;= x &lt;= b. The intersection of two closed intervals is a set of real numbers that is either empty, or can be represented as a closed interval.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/scramble-string/">Scramble String</a></h2>
-
-      <p>Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
-Below is one possible representation of s1 = &#34;great&#34;:
- great / \ gr eat / \ / \ g r e at / \ a t To scramble the string, we may choose any non-leaf node and swap its two children.
-For example, if we choose the node &#34;gr&#34; and swap its two children, it produces a scrambled string &#34;rgeat&#34;.</p>
+      <p>Design and implement an iterator to flatten a 2d vector. It should support the following operations: next and hasNext.
+Example Vector2D iterator = new Vector2D([[1,2],[3],[4]]); iterator.next(); // return 1 iterator.next(); // return 2 iterator.next(); // return 3 iterator.hasNext(); // return true iterator.hasNext(); // return true iterator.next(); // return 4 iterator.hasNext(); // return false Notes  Please remember to RESET your class variables declared in Vector2D, as static/class variables are persisted across multiple test cases.</p>
 
       <p class="meta">
         
@@ -367,11 +257,65 @@ For example, if we choose the node &#34;gr&#34; and swap its two children, it pr
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/palindrome-partitioning-ii/">Palindrome Partitioning Ii</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/utf-8-validation/">Utf 8 Validation</a></h2>
 
-      <p>Given a string s, partition s such that every substring of the partition is a palindrome.
-Return the minimum cuts needed for a palindrome partitioning of s.
-Example Input: &#34;aab&#34; Output: 1 Explanation: The palindrome partitioning [&#34;aa&#34;,&#34;b&#34;] could be produced using 1 cut. Solution (DP) class Solution: def minCut(self, s: str) -&gt; int: N = len(s) # valid[i][j] = True if s[i~j] IS palindrome, or False if IS NOT palindrome valid = [ [True for _ in range(N)] for _ in range(N) ] # min cuts of s[0~i] dp = [N for _ in range(N)] for l in range(2, N&#43;1): for i in range(N-l&#43;1): j = i&#43;l-1 valid[i][j] = s[i]==s[j] and valid[i&#43;1][j-1] for i in range(N): if valid[0][i]: # no cuts needed dp[i] = 0 continue for j in range(i): if valid[j&#43;1][i]: #.</p>
+      <p>A character in UTF8 can be from 1 to 4 bytes long, subjected to the following rules:
+ For 1-byte character, the first bit is a 0, followed by its unicode code. For n-bytes character, the first n-bits are all one’s, the n&#43;1 bit is 0, followed by n-1 bytes with most significant 2 bits being 10.  This is how the UTF-8 encoding would work:
+ Char. number range | UTF-8 octet sequence (hexadecimal) | (binary) --------------------&#43;--------------------------------------------- 0000 0000-0000 007F | 0xxxxxxx 0000 0080-0000 07FF | 110xxxxx 10xxxxxx 0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx 0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx Given an array of integers representing the data, return whether it is a valid utf-8 encoding.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-circular-queue/">Design Circular Queue</a></h2>
+
+      <p>Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle and the last position is connected back to the first position to make a circle. It is also called “Ring Buffer”.
+One of the benefits of the circular queue is that we can make use of the spaces in front of the queue.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/decode-string/">Decode String</a></h2>
+
+      <p>Given an encoded string, return its decoded string.
+The encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.
+You may assume that the input string is always valid; No extra white spaces, square brackets are well-formed, etc.
+Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k.</p>
 
       <p class="meta">
         
@@ -394,10 +338,68 @@ Example Input: &#34;aab&#34; Output: 1 Explanation: The palindrome partitioning 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/palindrome-permutation/">Palindrome Permutation</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/surrounded-regions/">Surrounded Regions</a></h2>
 
-      <p>Given a string, determine if a permutation of the string could form a palindrome.
-Example 1 Input: &#34;code&#34; Output: false Example 2 Input: &#34;aab&#34; Output: true Example 3 Input: &#34;carerac&#34; Output: true Solution class Solution: def canPermutePalindrome(self, s: str) -&gt; bool: lookup = set() for c in s: if c not in lookup: lookup.add(c) else: lookup.remove(c) return len(lookup) &lt;= 1 </p>
+      <p>Given a 2D board containing &#39;X&#39; and &#39;O&#39; (the letter O), capture all regions surrounded by &#39;X&#39;.
+A region is captured by flipping all &#39;O&#39;s into &#39;X&#39;s in that surrounded region.
+Example X X X X X O O X X X O X X O X X After running your function, the board should be:
+X X X X X X X X X X X X X O X X Explanation Surrounded regions shouldn’t be on the border, which means that any &#39;O&#39; on the border of the board are not flipped to &#39;X&#39;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/course-schedule-ii/">Course Schedule II</a></h2>
+
+      <p>There are a total of n courses you have to take, labeled from 0 to n-1.
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+Given the total number of courses and a list of prerequisite pairs, return the ordering of courses you should take to finish all courses.
+There may be multiple correct orders, you just need to return one of them.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/flatten-binary-tree-to-linked-list/">Flatten Binary Tree to Linked List</a></h2>
+
+      <p>Given a binary tree, flatten it to a linked list in-place.
+For example, given the following tree:
+ 1 / \ 2 5 / \ \ 3 4 6 The flattened tree should look like:
+1 \ 2 \ 3 \ 4 \ 5 \ 6 Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
 
       <p class="meta">
         
@@ -420,10 +422,10 @@ Example 1 Input: &#34;code&#34; Output: false Example 2 Input: &#34;aab&#34; Out
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/first-unique-character-in-a-string/">First Unique Character in a String</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/flatten-a-multilevel-doubly-linked-list/">Flatten a Multilevel Doubly Linked List</a></h2>
 
-      <p>Given a string, find the first non-repeating character in it and return it’s index. If it doesn’t exist, return -1.
-Example 1 s = &#34;leetcode&#34; return 0. Example 2 s = &#34;loveleetcode&#34;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 </p>
+      <p>You are given a doubly linked list which in addition to the next and previous pointers, it could have a child pointer, which may or may not point to a separate doubly linked list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in the example below.
+Flatten the list so that all the nodes appear in a single-level, doubly linked list.</p>
 
       <p class="meta">
         
@@ -435,7 +437,7 @@ Example 1 s = &#34;leetcode&#34; return 0. Example 2 s = &#34;loveleetcode&#34;,
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 

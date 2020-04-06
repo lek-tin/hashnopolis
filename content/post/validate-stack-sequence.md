@@ -29,7 +29,7 @@ Output: false
 Explanation: 1 cannot be popped before 2.
 ```
 
-#### Note
+##### Note
 
 1. `0 <= pushed.length == popped.length <= 1000`
 2. `0 <= pushed[i], popped[i] < 1000`

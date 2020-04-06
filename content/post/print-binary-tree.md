@@ -17,7 +17,7 @@ Print a binary tree in an `m*n` **2D** string array following these rules:
 4. Each unused space should contain an empty string "".
 5. Print the subtrees following the same rules.
 
-### Example 1:
+### Example 1
 ```
 Input:
      1
@@ -28,7 +28,7 @@ Output:
  ["2", "", ""]]
 ```
 
-### Example 2:
+### Example 2
 ```
 Input:
      1
@@ -42,7 +42,7 @@ Output:
  ["", "", "4", "", "", "", ""]]
 ```
 
-### Example 3:
+### Example 3
 ```
 Input:
       1

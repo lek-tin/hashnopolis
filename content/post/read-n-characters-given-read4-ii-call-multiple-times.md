@@ -49,7 +49,7 @@ The return value is the number of actual characters read.
 Note: buf[] is destination not source, you will need to write the results to buf[]
 ```
 
-### Example 1:
+### Example 1
 ```
 File file("abc");
 Solution sol;
@@ -66,7 +66,7 @@ sol.read(buf, 4); // After calling your read method, buf should contain "abc". W
 sol.read(buf, 1); // We have reached the end of file, no more characters can be read. So return 0.
 ```
 
-### Note:
+#### Note
 
 1. Consider that you **cannot** manipulate the file directly, the file is only accesible for `read4` but **not** for `read`.
 2. The `read` function may be called **multiple times**.

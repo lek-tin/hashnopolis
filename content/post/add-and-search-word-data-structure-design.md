@@ -27,7 +27,7 @@ search(".ad") -> true
 search("b..") -> true
 ```
 
-### Note
+#### Note
 You may assume that all words are consist of lowercase letters `a-z`.
 
 ### Solution

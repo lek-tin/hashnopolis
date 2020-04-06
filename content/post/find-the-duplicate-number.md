@@ -20,7 +20,7 @@ Output: 2
 Input: [3,1,3,4,2]
 Output: 3
 ```
-### Note
+#### Note
 You **must not** modify the array (assume the array is read only).
 You **must** use only constant, `O(1)` extra space.
 Your runtime complexity should be less than `O(n2)`.

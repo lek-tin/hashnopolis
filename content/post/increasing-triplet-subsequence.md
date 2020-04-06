@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "python", "two-pointers"]
 categories: ["algorithm"]
 date: 2018-11-08T22:10:52-08:00
-lastmod: 2019-09-15T14:10:52-08:00
+lastmod: 2020-03-24T03:10:52-08:00
 draft: false
 archive: false
 ---
@@ -15,7 +15,7 @@ Formally the function should:
 
 Return true if there exists `i, j, k`
 such that `arr[i] < arr[j] < arr[k]` given `0 ≤ i < j < k ≤ n-1` else return false.
-### Note Your algorithm should run in `O(n)` time complexity and `O(1)` space complexity.
+#### Note Your algorithm should run in `O(n)` time complexity and `O(1)` space complexity.
 
 ### Example 1
 ```
@@ -38,7 +38,7 @@ class Solution:
         # min_1 < min_2
         min_1, min_2 = math.inf-1, math.inf
         for n in nums:
-            # use = to skip duplicate value, for example, [1,1,1,1,1,1,1,1,1,1]
+            # use <= to skip duplicate value, for example, [1,1,1,1,1,1,1,1,1,1]
             if n <= min_1:
                 min_1 = n
             elif n <= min_2:

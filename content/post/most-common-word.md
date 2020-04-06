@@ -28,7 +28,7 @@ that punctuation is ignored (even if adjacent to words, such as "ball,"),
 and that "hit" isn't the answer even though it occurs more because it is banned.
 ```
 
-### Note:
+#### Note
 1. `1 <= paragraph.length <= 1000`.
 2. `1 <= banned.length <= 100`.
 3. `1 <= banned[i].length <= 10`.

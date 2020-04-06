@@ -36,7 +36,7 @@ Output: 1
 Explanation: There is one 0-diff pair in the array, (1, 1).
 ```
 
-#### Note
+##### Note
 
 1. The pairs `(i, j)` and `(j, i)` count as the same pair.
 2. The length of the array won't exceed `10,000`.

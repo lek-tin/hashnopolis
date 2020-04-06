@@ -17,15 +17,15 @@
   
   <meta name="author" content="" />
   <meta name="description" content="There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot; Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot; Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot; Explanation The order is invalid, so return &amp;ldquo;&amp;quot;." />
-  <meta name="keywords" content="leetcode java topological-sort " />
+Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot; Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot; Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot; Explanation The order is invalid, so return &amp;quot;&amp;quot;." />
+  <meta name="keywords" content="leetcode bfs topological-sort " />
   
   
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Alien Dictionary" />
     <meta name="twitter:description" content="There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot; Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot; Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot; Explanation The order is invalid, so return &amp;ldquo;&amp;quot;." />
+Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;er&amp;quot;, &amp;quot;ett&amp;quot;, &amp;quot;rftt&amp;quot; ] Output: &amp;quot;wertf&amp;quot; Example 2 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot; ] Output: &amp;quot;zx&amp;quot; Example 3 Input: [ &amp;quot;z&amp;quot;, &amp;quot;x&amp;quot;, &amp;quot;z&amp;quot; ] Output: &amp;quot;&amp;quot; Explanation The order is invalid, so return &amp;quot;&amp;quot;." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -179,7 +179,7 @@ Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;e
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/java"><strong>java</strong></a>",
+          "<a href="/tags/bfs"><strong>bfs</strong></a>",
         
           "<a href="/tags/topological-sort"><strong>topological-sort</strong></a>",
         
@@ -189,7 +189,7 @@ Example 1 Input: [ &amp;quot;wrt&amp;quot;, &amp;quot;wrf&amp;quot;, &amp;quot;e
       <h1>Alien Dictionary</h1>
       <h4>Created: December 8, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: December 8, 2018</h5>
+        <h5>Last updated: April 1, 2020</h5>
       
       <hr />
       <p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of <strong>non-empty</strong> words from the dictionary, where <strong>words are sorted lexicographically by the rules of this new language</strong>. Derive the order of letters in this language.</p>
@@ -221,15 +221,15 @@ Output: &quot;zx&quot;
 ]
 
 Output: &quot;&quot;
-</code></pre><h3 id="explanation-the-order-is-invalid-so-return-">Explanation The order is invalid, so return &ldquo;&quot;.</h3>
-<h3 id="note">Note</h3>
+Explanation The order is invalid, so return &quot;&quot;.
+</code></pre><h4 id="note">Note</h4>
 <ol>
 <li>You may assume all letters are in lowercase.</li>
 <li>You may assume that if a is a prefix of b, then a must appear before b in the given dictionary.</li>
 <li>If the order is invalid, return an empty string.</li>
 <li>There may be multiple valid order of letters, return any one of them is fine.</li>
 </ol>
-<h3 id="solution">Solution</h3>
+<h3 id="solution-topological-sort-in-java">Solution (topological sort in java)</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">alienOrder</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> words<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#75715e">// construct the graph
@@ -256,7 +256,12 @@ Output: &quot;&quot;
                 <span style="color:#66d9ef">char</span> to <span style="color:#f92672">=</span> words<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
                 <span style="color:#75715e">// from &gt; ...
 </span><span style="color:#75715e"></span>                <span style="color:#75715e">//   to &gt; ...
-</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>from <span style="color:#f92672">!=</span> to<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>from <span style="color:#f92672">==</span> to<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>j<span style="color:#f92672">+</span>1 <span style="color:#f92672">&gt;</span> words<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()-</span>1 <span style="color:#f92672">&amp;&amp;</span> j<span style="color:#f92672">+</span>1 <span style="color:#f92672">&lt;=</span> words<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span>
+                    <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
                     <span style="color:#75715e">// entry from is empty
 </span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>graph<span style="color:#f92672">[</span>from <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
                         graph<span style="color:#f92672">[</span>from <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
@@ -297,10 +302,62 @@ Output: &quot;&quot;
                 <span style="color:#f92672">}</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
-        <span style="color:#75715e">// if count == 0, means a valid order is possible, thud return the order.
+        <span style="color:#75715e">// if count == 0, means a valid order is possible, otherwise return the &#34;&#34;.
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> count <span style="color:#f92672">==</span> 0 <span style="color:#f92672">?</span> sb<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
+</code></pre></div><h3 id="solution-topological-sort-in-python">Solution (topological sort in python)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">alienOrder</span>(self, words: List[str]) <span style="color:#f92672">-&gt;</span> str:
+        indegrees <span style="color:#f92672">=</span> {}
+        graph <span style="color:#f92672">=</span> {}
+
+        <span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> words:
+            <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> word:
+                <span style="color:#66d9ef">if</span> c <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> indegrees:
+                    indegrees[c] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(words)):
+            word1 <span style="color:#f92672">=</span> words[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+            word2 <span style="color:#f92672">=</span> words[i]
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(min(len(word1), len(word2))):
+                from_char <span style="color:#f92672">=</span> word1[j]
+                to_char <span style="color:#f92672">=</span> word2[j]
+                <span style="color:#66d9ef">if</span> from_char <span style="color:#f92672">==</span> to_char:
+                    <span style="color:#66d9ef">if</span> len(word2)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;=</span> len(word1)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+                        <span style="color:#75715e"># corner case: [&#34;abc&#34;,&#34;ab&#34;]</span>
+                        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>
+                    <span style="color:#66d9ef">continue</span>
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#66d9ef">if</span> from_char <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> graph:
+                        <span style="color:#75715e"># array here because duplocate to_chars can be added</span>
+                        graph[from_char] <span style="color:#f92672">=</span> []
+                    graph[from_char]<span style="color:#f92672">.</span>append(to_char)
+                    indegrees[to_char] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                    <span style="color:#66d9ef">break</span>
+
+        res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+        count <span style="color:#f92672">=</span> len(indegrees<span style="color:#f92672">.</span>items())
+        q <span style="color:#f92672">=</span> deque()
+
+        <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> indegrees<span style="color:#f92672">.</span>keys():
+            <span style="color:#66d9ef">if</span> indegrees[c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                q<span style="color:#f92672">.</span>append(c)
+
+        <span style="color:#66d9ef">while</span> q:
+            count <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            c <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>popleft()
+            res <span style="color:#f92672">+=</span> c
+
+            <span style="color:#66d9ef">if</span> c <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> graph:
+                <span style="color:#66d9ef">continue</span>
+
+            <span style="color:#66d9ef">for</span> nei <span style="color:#f92672">in</span> graph[c]:
+                indegrees[nei] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">if</span> indegrees[nei] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                    q<span style="color:#f92672">.</span>append(nei)
+
+        <span style="color:#66d9ef">return</span> res <span style="color:#66d9ef">if</span> len(indegrees) <span style="color:#f92672">==</span> len(res) <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;&#34;</span>
 </code></pre></div>
   </div>
 
