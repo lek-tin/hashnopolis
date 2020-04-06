@@ -2,7 +2,7 @@
 title: "Largest Component Size by Common Factor"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "graph", "union-find"]
+tags: ["leetcode", "graph", "union-find", "connected-components"]
 categories: ["algorithm"]
 date: 2020-02-11T23:25:11-08:00
 lastmod: 2020-02-11T23:25:11-08:00

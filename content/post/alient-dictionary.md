@@ -9,6 +9,7 @@ lastmod: 2020-04-01T20:57:13+08:00
 draft: false
 archive: false
 ---
+
 There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of **non-empty** words from the dictionary, where **words are sorted lexicographically by the rules of this new language**. Derive the order of letters in this language.
 
 ### Example 1
@@ -170,8 +171,7 @@ class Solution:
         res = ""
         count = len(indegrees.items())
         q = deque()
-        print(graph)
-        print(indegrees)
+
         for c in indegrees.keys():
             if indegrees[c] == 0:
                 q.append(c)
@@ -188,6 +188,6 @@ class Solution:
                 indegrees[nei] -= 1
                 if indegrees[nei] == 0:
                     q.append(nei)
-        print(indegrees)
+
         return res if len(indegrees) == len(res) else ""
 ```
