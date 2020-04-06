@@ -3060,7 +3060,10 @@ Solution Average time complexity: O(n) if we don’t need the sorted output, oth
       
       <guid>http://www.hashnopolis.com/post/group-anagrams/</guid>
       <description>Given an array of strings, group anagrams together.
-Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ] Note  All inputs will be in lowercase. The order of your output does not matter.  Solution class Solution(object): def groupAnagrams(self, strs): &amp;#34;&amp;#34;&amp;#34; :type strs: List[str] :rtype: List[List[str]] &amp;#34;&amp;#34;&amp;#34; primeNums = { &amp;#34;a&amp;#34;: 2, &amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 5, &amp;#34;d&amp;#34;: 7, &amp;#34;e&amp;#34;: 11, &amp;#34;f&amp;#34;: 13, &amp;#34;g&amp;#34;: 17, &amp;#34;h&amp;#34;: 19, &amp;#34;i&amp;#34;: 23, &amp;#34;j&amp;#34;: 29, &amp;#34;k&amp;#34;: 31, &amp;#34;m&amp;#34;: 37, &amp;#34;l&amp;#34;: 41, &amp;#34;n&amp;#34;: 43, &amp;#34;o&amp;#34;: 47, &amp;#34;p&amp;#34;: 53, &amp;#34;q&amp;#34;: 59, &amp;#34;r&amp;#34;: 61, &amp;#34;s&amp;#34;: 67, &amp;#34;t&amp;#34;: 71, &amp;#34;u&amp;#34;: 73, &amp;#34;v&amp;#34;: 79, &amp;#34;w&amp;#34;: 83, &amp;#34;x&amp;#34;: 89, &amp;#34;y&amp;#34;: 97, &amp;#34;z&amp;#34;: 101 } def encode(string): res = 1 for s in list(string): res *= primeNums[s] return res anagrams = {} for string in strs: code = encode(string) if anagrams.</description>
+Example Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ] Note  All inputs will be in lowercase. The order of your output does not matter.  Solution (naive) Time: O(Nklogk), k: length of the longest word
+Space: O(Nk)
+sort each word and use it the sorted str as a key to the lookup dictionary
+class Solution: def groupAnagrams(self, strs: List[str]) -&amp;gt; List[List[str]]: ans = collections.</description>
     </item>
     
     <item>
