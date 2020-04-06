@@ -339,8 +339,7 @@ Explanation The order is invalid, so return &quot;&quot;.
         res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
         count <span style="color:#f92672">=</span> len(indegrees<span style="color:#f92672">.</span>items())
         q <span style="color:#f92672">=</span> deque()
-        <span style="color:#66d9ef">print</span>(graph)
-        <span style="color:#66d9ef">print</span>(indegrees)
+
         <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> indegrees<span style="color:#f92672">.</span>keys():
             <span style="color:#66d9ef">if</span> indegrees[c] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
                 q<span style="color:#f92672">.</span>append(c)
@@ -357,7 +356,7 @@ Explanation The order is invalid, so return &quot;&quot;.
                 indegrees[nei] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
                 <span style="color:#66d9ef">if</span> indegrees[nei] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
                     q<span style="color:#f92672">.</span>append(nei)
-        <span style="color:#66d9ef">print</span>(indegrees)
+
         <span style="color:#66d9ef">return</span> res <span style="color:#66d9ef">if</span> len(indegrees) <span style="color:#f92672">==</span> len(res) <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;&#34;</span>
 </code></pre></div>
   </div>

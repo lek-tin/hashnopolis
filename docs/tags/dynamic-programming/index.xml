@@ -7,10 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 30 Mar 2020 02:39:52 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 20:15:25 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Handshakes That Dont Cross</title>
+      <link>http://www.hashnopolis.com/post/handshakes-that-dont-cross/</link>
+      <pubDate>Thu, 02 Apr 2020 20:15:25 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/handshakes-that-dont-cross/</guid>
+      <description>You are given an even number of people num_people that stand around a circle and each person shakes hands with someone else, so that there are num_people / 2 handshakes total.
+Return the number of ways these handshakes could occur such that none of the handshakes cross.
+Since this number could be very big, return the answer mod 10^9 + 7
+Example 1 Input: num_people = 2 Output: 1 Example 2 Input: num_people = 4 Output: 2 Explanation: There are two ways to do it, the first way is [(1,2),(3,4)] and the second one is [(2,3),(4,1)].</description>
+    </item>
+    
+    <item>
+      <title>Maximum Product of Splitted Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/maximum-product-of-splitted-binary-tree/</link>
+      <pubDate>Thu, 02 Apr 2020 06:30:54 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/maximum-product-of-splitted-binary-tree/</guid>
+      <description>Given a binary tree root. Split the binary tree into two subtrees by removing 1 edge such that the product of the sums of the subtrees are maximized.
+Since the answer may be too large, return it modulo 10e9 + 7.
+Example 1 Input: root = [1,2,3,4,5,6] Output: 110 Explanation: Remove the red edge and get 2 binary trees with sum 11 and 10. Their product is 110 (11*10) Example 2 Input: root = [1,null,2,3,4,null,null,5,6] Output: 90 Explanation: Remove the red edge and get 2 binary trees with sum 15 and 6.</description>
+    </item>
     
     <item>
       <title>Minimum Number of Refueling Stops</title>

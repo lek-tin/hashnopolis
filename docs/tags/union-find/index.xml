@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 21 Mar 2020 21:57:58 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 21:23:13 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/union-find/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Smallest String With Swaps</title>
+      <link>http://www.hashnopolis.com/post/smallest-string-with-swaps/</link>
+      <pubDate>Wed, 01 Apr 2020 21:23:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/smallest-string-with-swaps/</guid>
+      <description>You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.
+You can swap the characters at any pair of indices in the given pairs any number of times.
+Return the lexicographically smallest string that s can be changed to after using the swaps.
+Example 1 Input: s = &amp;quot;dcab&amp;quot;, pairs = [[0,3],[1,2]] Output: &amp;quot;bacd&amp;quot; Explaination: Swap s[0] and s[3], s = &amp;quot;bcad&amp;quot; Swap s[1] and s[2], s = &amp;quot;bacd&amp;quot; Example 2 Input: s = &amp;quot;dcab&amp;quot;, pairs = [[0,3],[1,2],[0,2]] Output: &amp;quot;abcd&amp;quot; Explaination: Swap s[0] and s[3], s = &amp;quot;bcad&amp;quot; Swap s[0] and s[2], s = &amp;quot;acbd&amp;quot; Swap s[1] and s[2], s = &amp;quot;abcd&amp;quot; Example 3 Input: s = &amp;quot;cba&amp;quot;, pairs = [[0,1],[1,2]] Output: &amp;quot;abc&amp;quot; Explaination: Swap s[0] and s[1], s = &amp;quot;bca&amp;quot; Swap s[1] and s[2], s = &amp;quot;bac&amp;quot; Swap s[0] and s[1], s = &amp;quot;abc&amp;quot; Constraints  1 &amp;lt;= s.</description>
+    </item>
     
     <item>
       <title>Evaluate Division</title>

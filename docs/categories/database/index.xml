@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 31 Mar 2020 02:28:50 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 16:19:21 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Report Contiguous Dates</title>
+      <link>http://www.hashnopolis.com/post/report-contiguous-dates/</link>
+      <pubDate>Thu, 02 Apr 2020 16:19:21 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/report-contiguous-dates/</guid>
+      <description>Table: Failed
++--------------+---------+ | Column Name | Type | +--------------+---------+ | fail_date | date | +--------------+---------+ Primary key for this table is fail_date. Failed table contains the days of failed tasks. Table: Succeeded
++--------------+---------+ | Column Name | Type | +--------------+---------+ | success_date | date | +--------------+---------+ Primary key for this table is success_date. Succeeded table contains the days of succeeded tasks. A system is running one task every day. Every task is independent of the previous tasks.</description>
+    </item>
     
     <item>
       <title>Human Traffic of Stadium</title>

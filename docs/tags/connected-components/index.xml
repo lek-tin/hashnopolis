@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Fri, 06 Mar 2020 20:24:47 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 21:23:13 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/connected-components/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Smallest String With Swaps</title>
+      <link>http://www.hashnopolis.com/post/smallest-string-with-swaps/</link>
+      <pubDate>Wed, 01 Apr 2020 21:23:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/smallest-string-with-swaps/</guid>
+      <description>You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.
+You can swap the characters at any pair of indices in the given pairs any number of times.
+Return the lexicographically smallest string that s can be changed to after using the swaps.
+Example 1 Input: s = &amp;quot;dcab&amp;quot;, pairs = [[0,3],[1,2]] Output: &amp;quot;bacd&amp;quot; Explaination: Swap s[0] and s[3], s = &amp;quot;bcad&amp;quot; Swap s[1] and s[2], s = &amp;quot;bacd&amp;quot; Example 2 Input: s = &amp;quot;dcab&amp;quot;, pairs = [[0,3],[1,2],[0,2]] Output: &amp;quot;abcd&amp;quot; Explaination: Swap s[0] and s[3], s = &amp;quot;bcad&amp;quot; Swap s[0] and s[2], s = &amp;quot;acbd&amp;quot; Swap s[1] and s[2], s = &amp;quot;abcd&amp;quot; Example 3 Input: s = &amp;quot;cba&amp;quot;, pairs = [[0,1],[1,2]] Output: &amp;quot;abc&amp;quot; Explaination: Swap s[0] and s[1], s = &amp;quot;bca&amp;quot; Swap s[1] and s[2], s = &amp;quot;bac&amp;quot; Swap s[0] and s[1], s = &amp;quot;abc&amp;quot; Constraints  1 &amp;lt;= s.</description>
+    </item>
     
     <item>
       <title>Number of Islands Ii</title>
@@ -40,6 +52,17 @@ The input to the function/method consists of three arguments:
       
       <guid>http://www.hashnopolis.com/post/critical-connections/</guid>
       <description>Given an underected connected graph with n nodes labeled 1..n. A bridge (cut edge) is defined as an edge which, when removed, makes the graph disconnected (or more precisely, increases the number of connected components in the graph). Equivalently, an edge is a bridge if and only if it is not contained in any cycle. The task is to find all bridges in the given graph. Output an empty list if there are no bridges.</description>
+    </item>
+    
+    <item>
+      <title>Largest Component Size by Common Factor</title>
+      <link>http://www.hashnopolis.com/post/largest-component-size-by-common-factor/</link>
+      <pubDate>Tue, 11 Feb 2020 23:25:11 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/largest-component-size-by-common-factor/</guid>
+      <description>Given a non-empty array of unique positive integers A, consider the following graph:
+ There are A.length nodes, labelled A[0] to A[A.length - 1]; There is an edge between A[i] and A[j] if and only if A[i] and A[j] share a common factor greater than 1.  Return the size of the largest connected component in the graph.
+Example 1 Input: [4,6,15,35] Output: 4 Example 2 Input: [20,50,9,63] Output: 2 Example 3  Input: [2,3,6,7,4,12,21,39] Output: 8 Note  1 &amp;lt;= A.</description>
     </item>
     
   </channel>

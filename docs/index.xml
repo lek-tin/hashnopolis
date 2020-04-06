@@ -7,10 +7,56 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 31 Mar 2020 22:20:28 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 20:15:25 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Handshakes That Dont Cross</title>
+      <link>http://www.hashnopolis.com/post/handshakes-that-dont-cross/</link>
+      <pubDate>Thu, 02 Apr 2020 20:15:25 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/handshakes-that-dont-cross/</guid>
+      <description>You are given an even number of people num_people that stand around a circle and each person shakes hands with someone else, so that there are num_people / 2 handshakes total.
+Return the number of ways these handshakes could occur such that none of the handshakes cross.
+Since this number could be very big, return the answer mod 10^9 + 7
+Example 1 Input: num_people = 2 Output: 1 Example 2 Input: num_people = 4 Output: 2 Explanation: There are two ways to do it, the first way is [(1,2),(3,4)] and the second one is [(2,3),(4,1)].</description>
+    </item>
+    
+    <item>
+      <title>Report Contiguous Dates</title>
+      <link>http://www.hashnopolis.com/post/report-contiguous-dates/</link>
+      <pubDate>Thu, 02 Apr 2020 16:19:21 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/report-contiguous-dates/</guid>
+      <description>Table: Failed
++--------------+---------+ | Column Name | Type | +--------------+---------+ | fail_date | date | +--------------+---------+ Primary key for this table is fail_date. Failed table contains the days of failed tasks. Table: Succeeded
++--------------+---------+ | Column Name | Type | +--------------+---------+ | success_date | date | +--------------+---------+ Primary key for this table is success_date. Succeeded table contains the days of succeeded tasks. A system is running one task every day. Every task is independent of the previous tasks.</description>
+    </item>
+    
+    <item>
+      <title>Maximum Product of Splitted Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/maximum-product-of-splitted-binary-tree/</link>
+      <pubDate>Thu, 02 Apr 2020 06:30:54 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/maximum-product-of-splitted-binary-tree/</guid>
+      <description>Given a binary tree root. Split the binary tree into two subtrees by removing 1 edge such that the product of the sums of the subtrees are maximized.
+Since the answer may be too large, return it modulo 10e9 + 7.
+Example 1 Input: root = [1,2,3,4,5,6] Output: 110 Explanation: Remove the red edge and get 2 binary trees with sum 11 and 10. Their product is 110 (11*10) Example 2 Input: root = [1,null,2,3,4,null,null,5,6] Output: 90 Explanation: Remove the red edge and get 2 binary trees with sum 15 and 6.</description>
+    </item>
+    
+    <item>
+      <title>Smallest String With Swaps</title>
+      <link>http://www.hashnopolis.com/post/smallest-string-with-swaps/</link>
+      <pubDate>Wed, 01 Apr 2020 21:23:13 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/smallest-string-with-swaps/</guid>
+      <description>You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.
+You can swap the characters at any pair of indices in the given pairs any number of times.
+Return the lexicographically smallest string that s can be changed to after using the swaps.
+Example 1 Input: s = &amp;quot;dcab&amp;quot;, pairs = [[0,3],[1,2]] Output: &amp;quot;bacd&amp;quot; Explaination: Swap s[0] and s[3], s = &amp;quot;bcad&amp;quot; Swap s[1] and s[2], s = &amp;quot;bacd&amp;quot; Example 2 Input: s = &amp;quot;dcab&amp;quot;, pairs = [[0,3],[1,2],[0,2]] Output: &amp;quot;abcd&amp;quot; Explaination: Swap s[0] and s[3], s = &amp;quot;bcad&amp;quot; Swap s[0] and s[2], s = &amp;quot;acbd&amp;quot; Swap s[1] and s[2], s = &amp;quot;abcd&amp;quot; Example 3 Input: s = &amp;quot;cba&amp;quot;, pairs = [[0,1],[1,2]] Output: &amp;quot;abc&amp;quot; Explaination: Swap s[0] and s[1], s = &amp;quot;bca&amp;quot; Swap s[1] and s[2], s = &amp;quot;bac&amp;quot; Swap s[0] and s[1], s = &amp;quot;abc&amp;quot; Constraints  1 &amp;lt;= s.</description>
+    </item>
     
     <item>
       <title>LFU Cache</title>
@@ -3198,16 +3244,6 @@ Given a list of non-negative integers representing the amount of money of each h
     </item>
     
     <item>
-      <title>Happy Number</title>
-      <link>http://www.hashnopolis.com/post/happy-number/</link>
-      <pubDate>Thu, 25 Oct 2018 23:44:12 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/happy-number/</guid>
-      <description>Write an algorithm to determine if a number is &amp;ldquo;happy&amp;rdquo;.
-A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.</description>
-    </item>
-    
-    <item>
       <title>Merge Two Sorted Lists</title>
       <link>http://www.hashnopolis.com/post/merge-two-sorted-lists/</link>
       <pubDate>Thu, 25 Oct 2018 23:43:25 -0700</pubDate>
@@ -4080,6 +4116,16 @@ Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false Follow-up  This is a fol
       <description>Here is an example of instantiating a class using the new operator:
 class Person { constructor(name, age) { this.name = name; this.age = age; } } const asian = new Person(&amp;#39;Alice&amp;#39;, 25); console.log(asian); As you can see from below, asian is not a class, it is instead, an object:
 [object Object] { age: 25, name: &amp;#34;Alice&amp;#34; } The values of asian are set by the constructor of the Person class.</description>
+    </item>
+    
+    <item>
+      <title>Happy Number</title>
+      <link>http://www.hashnopolis.com/post/happy-number/</link>
+      <pubDate>Tue, 02 Apr 2002 01:44:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/happy-number/</guid>
+      <description>Write an algorithm to determine if a number is &amp;ldquo;happy&amp;rdquo;.
+A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.</description>
     </item>
     
   </channel>

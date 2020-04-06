@@ -176,6 +176,33 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/report-contiguous-dates/">Report Contiguous Dates</a></h2>
+
+      <p>Table: Failed
+&#43;--------------&#43;---------&#43; | Column Name | Type | &#43;--------------&#43;---------&#43; | fail_date | date | &#43;--------------&#43;---------&#43; Primary key for this table is fail_date. Failed table contains the days of failed tasks. Table: Succeeded
+&#43;--------------&#43;---------&#43; | Column Name | Type | &#43;--------------&#43;---------&#43; | success_date | date | &#43;--------------&#43;---------&#43; Primary key for this table is success_date. Succeeded table contains the days of succeeded tasks. A system is running one task every day. Every task is independent of the previous tasks.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/human-traffic-of-stadium/">Human Traffic of Stadium</a></h2>
 
       <p>X city built a new stadium, each day many people visit it and the stats are saved as these columns: id, visit_date, people
@@ -395,34 +422,6 @@ For example:
       <p>Write a SQL query to get the second highest salary from the Employee table.
 &#43;----&#43;--------&#43; | Id | Salary | &#43;----&#43;--------&#43; | 1 | 100 | | 2 | 200 | | 3 | 300 | &#43;----&#43;--------&#43; For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
 &#43;---------------------&#43; | SecondHighestSalary | &#43;---------------------&#43; | 200 | &#43;---------------------&#43; Solution (naive) SELECT max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SELECT max(Salary) FROM Employee) Solution This solution considers when second highest salary doesn’t exist</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/top-useful-sql-templates/">Top Useful Sql Templates</a></h2>
-
-      <p>In this post, we introduce the most useful SQL template statements.
-Find all duplicates based on a field SELECT [EmailAddress], [CustomerName] FROM [Customers] WHERE [EmailAddress] IN (SELECT [EmailAddress] FROM [Customers] GROUP BY [EmailAddress] HAVING COUNT(*) &gt; 1) This is significantly more efficient than using EXISTS
-Select DISTINCT on multiple columns We can select distinct on multiple columns(distinct combinations of column values.), for example, gender(male) AND age(&gt;18).
-Select duplicate rows based on column SELECT TOP 1 C1.</p>
 
       <p class="meta">
         
