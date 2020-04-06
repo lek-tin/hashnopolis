@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "anagrams", "dictionary"]
 categories: ["algorithm"]
 date: 2018-10-22T12:01:59-07:00
+lastmod: 2020-04-06T12:01:59-07:00
 draft: false
 archive: false
 ---
@@ -20,17 +21,52 @@ Output:
     ["bat"]
 ]
 ```
+
 #### Note
+
 - All inputs will be in lowercase.
 - The order of your output does not matter.
-### Solution
+
+### Solution (naive)
+
+Time: `O(Nklogk)`, `k`: length of the longest word  
+Space: `O(Nk)`  
+sort each word and use it the sorted str as a key to the lookup dictionary
 ```python
-class Solution(object):
-    def groupAnagrams(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: List[List[str]]
-        """
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        ans = collections.defaultdict(list)
+        for s in strs:
+            ans[tuple(sorted(s))].append(s)
+
+        return ans.values()
+```
+
+### Solution (better time efficiency)
+
+Time: `O(Nk)`, `k`: length of the longest word  
+Space: `O(Nk)`  
+```python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        ans = collections.defaultdict(list)
+        for s in strs:
+            flags = [0 for _ in range(26)]
+            for c in s:
+                flags[ord(c) - ord('a')] += 1
+            ans[tuple(flags)].append(s)
+
+        return ans.values()
+```
+
+
+### Solution (most time and space efficient)
+
+Time: `O(Nk)`, `k`: length of the longest word  
+Space: `O(N)`  
+```python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         primeNums = {
             "a": 2,
             "b": 3,
@@ -60,20 +96,19 @@ class Solution(object):
             "z": 101
         }
 
-        def encode(string):
-            res = 1
-            for s in list(string):
-                res *= primeNums[s]
-            return res
+        def encode(s):
+            code = 1
+            for c in list(s):
+                code *= primeNums[c]
+            return code
 
-        anagrams = {}
+        ans = {}
 
-        for string in strs:
-            code = encode(string)
-            if anagrams.get(code, None) is None:
-                anagrams[code] = [string]
-            else:
-                anagrams.get(code).append(string)
-        print(anagrams)
-        return list(anagrams.values())
+        for s in strs:
+            key = encode(s)
+            if key not in ans:
+                ans[key] = []
+            ans[key].append(s)
+
+        return ans.values()
 ```
