@@ -6,7 +6,7 @@ tags: ["leetcode", "sql"]
 categories: ["database"]
 date: 2020-03-03T16:56:09-08:00
 lastmod: 2020-03-03T16:56:09-08:00
-draft: true
+draft: false
 archive: false
 ---
 Write a SQL query to rank scores. If there is a tie between two scores, both should have the same ranking. Note that after a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no "holes" between ranks.
@@ -58,21 +58,35 @@ FROM
 ### Solution (row variable)
 
 ```sql
+--  Subquery 2: Generate row_number
 SELECT s.Score, r.Rank
 FROM (
-    --  Subquery 2: Generate row_number
+    -- Subquery 1: Generate unique scores and ranks
     SELECT Score, (@row_number:=@row_number + 1) AS `Rank`
     FROM (
-        -- Subquery 1: Generate ranked, unique scores
         SELECT Score
         FROM Scores
         GROUP BY Score
         ORDER BY Score DESC
-    ) AS s, (SELECT @row_number:=0) AS dummie
+    ) AS s,
+    (SELECT @row_number:=0) AS dummy
 ) AS r
-RIGHT JOIN Scores AS s
+RIGHT JOIN
+    Scores AS s
     ON s.Score = r.Score
 ORDER BY r.Rank;
+```
+
+### Solution
+
+```sql
+SELECT Score, CASE
+WHEN @pre = Score THEN @rk + 0
+WHEN @pre := Score THEN @rk := @rk + 1
+ELSE @rk := @rk + 1
+END AS Rank
+FROM Scores, (SELECT @pre := NULL, @rk := 0) AS init
+ORDER BY Score DESC;
 ```
 
 If we have version 8, we can use ROW_NUMBER() OVER() to solve this easily.
