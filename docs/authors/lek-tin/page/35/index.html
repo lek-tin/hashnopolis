@@ -176,175 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/single-number-ii/">Single Number II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/remove-element/">Remove Element</a></h2>
 
-      <p>Given a non-empty array of integers, every element appears three times except for one, which appears exactly once. Find that single one.
-Note Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
-Example 1 Input: [2,2,3,2] Output: 3 Example 2 Input: [0,1,0,1,0,1,99] Output: 99 Solution class Solution: def singleNumber(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.csdn.net/karen0310/article/details/78226261 ones, twos = 0, 0 for _, num in enumerate(nums): ones = (ones ^ num) &amp; ~twos twos = (twos ^ num) &amp; ~ones print(bin(num), &#34;ones: &#34;, bin(ones), &#34;twos: &#34;, bin(twos)) return ones </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/single-number/">Single Number</a></h2>
-
-      <p>Given a non-empty array of integers, every element appears twice except for one. Find that single one. Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
-Example 1 Input: [2,2,1] Output: 1 Example 2 Input: [4,1,2,1,2] Output: 4 Solution // Java class Solution { public int singleNumber(int[] nums) { int result=0; for(int num : nums) { result=result^num; } return result; } } Solution class Solution: def singleNumber(self, nums: List[int]) -&gt; int: singleNum = nums[0] for i in range(1, len(nums)): singleNum ^= nums[i] return singleNum </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/find-peak-element/">Find Peak Element</a></h2>
-
-      <p>A peak element is an element that is greater than its neighbors.
-Given an input array nums, where nums[i] ≠ nums[i&#43;1], find a peak element and return its index.
-The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
-You may imagine that nums[-1] = nums[n] = -∞.
-Example 1 Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/find-minimum-in-rotated-sorted-array/">Find Minimum in Rotated Sorted Array</a></h2>
-
-      <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
-(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
-Find the minimum element.
-You may assume no duplicate exists in the array.
-Example 1 Input: [3,4,5,1,2] Output: 1 Example 2 Input: [4,5,6,7,0,1,2] Output: 0 Solution class Solution: def findMin(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if len(nums) == 1: return nums[0] if len(nums) == 2: return min(nums[0], nums[1]) if nums[0] &lt; nums[len(nums)-1]: return nums[0] if nums[len(nums)-2] &gt; nums[len(nums)-1]: return nums[len(nums)-1] for i in range(1, len(nums)-1): if nums[i] &lt; nums[i-1] and nums[i] &lt; nums[i&#43;1]: return nums[i] def bsFindMin(self, nums): l, r = 0, len(nums) - 1 while l &lt; r: m = (l &#43; r) // 2 if nums[m] &gt; nums[m - 1] and nums[m] &gt; nums[m &#43; 1]: return nums[m &#43; 1] if nums[m] &lt; nums[m - 1] and nums[m] &lt; nums[m &#43; 1]: return nums[m] if nums[m] &gt;= nums[r]: l = m else: r = m return nums[0] </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/delete-node-in-a-linked-list/">Delete Node in a Linked List</a></h2>
-
-      <p>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
-Supposed the linked list is 1 -&gt; 2 -&gt; 3 -&gt; 4 and you are given the third node with value 3, the linked list should become 1 -&gt; 2 -&gt; 4 after calling your function.
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/convert-sorted-array-to-binary-search-tree/">Convert Sorted Array to Binary Search Tree</a></h2>
-
-      <p>Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
-For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
-Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5 Solution # Definition for a binary tree node.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/binary-tree-right-side-view/">Binary Tree Right Side View</a></h2>
-
-      <p>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
-Example Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &lt;--- / \ 2 3 &lt;--- \ \ 5 4 &lt;--- Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
+      <p>Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+The order of elements can be changed. It doesn’t matter what you leave beyond the new length.
+Example 1 Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with the first two elements of nums being 2.</p>
 
       <p class="meta">
         
@@ -367,39 +204,10 @@ Example Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &lt;--- / 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/binary-tree-preorder-traversal/">Binary Tree Preorder Traversal</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/remove-duplicates-from-sorted-list/">Remove Duplicates From Sorted List</a></h2>
 
-      <p>Given a binary tree, return the preorder traversal of its nodes’ values.
-Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3] Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; if root is None: return [] return [root.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/binary-tree-postorder-traversal/">Binary Tree Postorder Traversal</a></h2>
-
-      <p>Given a binary tree, return the postorder traversal of its nodes’ values.
-Example Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1] Follow-up Recursive solution is trivial, could you do it iteratively?
-Solution Recursive👇
-# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def postorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; def traverse(node): if node == None: return [] return traverse(node.</p>
+      <p>Given a sorted linked list, delete all duplicates such that each element appear only once.
+Example 1 Input: 1-&gt;1-&gt;2 Output: 1-&gt;2 Example 2 Input: 1-&gt;1-&gt;2-&gt;3-&gt;3 Output: 1-&gt;2-&gt;3 Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr = head while curr != None and curr.next != None: if curr.</p>
 
       <p class="meta">
         
@@ -422,12 +230,10 @@ Solution Recursive👇
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/binary-tree-paths/">Binary Tree Paths</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/power-of-two/">Power of Two</a></h2>
 
-      <p>Given a binary tree, return all root-to-leaf paths.
-Note: A leaf is a node with no children.
-Example Input: 1 / \ 2 3 \ 5 Output: [&#34;1-&gt;2-&gt;5&#34;, &#34;1-&gt;3&#34;] Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[str] &#34;&#34;&#34; res = [] def traverse(root, path): if root == None: return path &#43;= str(root.</p>
+      <p>Given an integer, write a function to determine if it is a power of two.
+Example 1 Input: 1 Output: true Explanation: 2**0 = 1 Example 2 Input: 16 Output: true Explanation: 2**4 = 16 Example 3 Input: 218 Output: false Solution class Solution: def isPowerOfTwo(self, n): &#34;&#34;&#34; :type n: int :rtype: bool &#34;&#34;&#34; if n == 0: return False if n &amp; (n - 1) == 0: return True return False </p>
 
       <p class="meta">
         
@@ -440,6 +246,199 @@ Solution # Definition for a binary tree node. # class TreeNode: # def __init__(s
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/plus-one/">Plus One</a></h2>
+
+      <p>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
+You may assume the integer does not contain any leading zero, except the number 0 itself.
+Example 1 Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/swap-nodes-in-pairs/">Swap Nodes in Pairs</a></h2>
+
+      <p>Given a linked list, swap every two adjacent nodes and return its head.
+Example Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3. Note  Your algorithm should use only constant extra space. You may not modify the values in the list’s nodes, only nodes itself may be changed.  Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def swapPairs(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; # https://www.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/unique-paths/">Unique Paths</a></h2>
+
+      <p>A robot is located at the top-left corner of a m x n grid (marked ‘Start’ in the diagram below).
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked ‘Finish’ in the diagram below).
+How many possible unique paths are there?
+Above is a 7 x 3 grid. How many possible unique paths are there?</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/valid-anagram/">Valid Anagram</a></h2>
+
+      <p>Given two strings s and t , write a function to determine if t is an anagram of s.
+Example 1:
+Input: s = &#34;anagram&#34;, t = &#34;nagaram&#34; Output: true Example 2:
+Input: s = &#34;rat&#34;, t = &#34;car&#34; Output: false Note You may assume the string contains only lowercase alphabets.
+Follow-up What if the inputs contain unicode characters? How would you adapt your solution to such case?
+Solution (using prime numbers) this approach is elegant but noted that if the strings are too long, the total sums maybe too big (overflow)</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/ugly-number/">Ugly Number</a></h2>
+
+      <p>Write a program to check whether a given number is an ugly number.
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
+Example 1 Input: 6 Output: true Explanation: 6 = 2 × 3 Example 2 Input: 8 Output: true Explanation: 8 = 2 × 2 × 2 Example 3 Input: 14 Output: false Explanation: 14 is not ugly since it includes another prime factor 7. Note  1 is typically treated as an ugly number.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/subsets/">Subsets</a></h2>
+
+      <p>Given a set of distinct integers, nums, return all possible subsets (the power set).
+Note The solution set must not contain duplicate subsets. Example Input: nums = [1,2,3] Output: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ] Solution Time: O(n * 2^n)
+Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
+class Solution: def subsets(self, nums: List[int]) -&gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/roman-to-integer/">Roman to Integer</a></h2>
+
+      <p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as II in Roman numeral, just two one’s added together. Twelve is written as, XII, which is simply X &#43; II. The number twenty seven is written as XXVII, which is XX &#43; V &#43; II.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

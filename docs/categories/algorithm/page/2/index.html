@@ -176,6 +176,113 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/smallest-string-with-swaps/">Smallest String With Swaps</a></h2>
+
+      <p>You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.
+You can swap the characters at any pair of indices in the given pairs any number of times.
+Return the lexicographically smallest string that s can be changed to after using the swaps.
+Example 1 Input: s = &#34;dcab&#34;, pairs = [[0,3],[1,2]] Output: &#34;bacd&#34; Explaination: Swap s[0] and s[3], s = &#34;bcad&#34; Swap s[1] and s[2], s = &#34;bacd&#34; Example 2 Input: s = &#34;dcab&#34;, pairs = [[0,3],[1,2],[0,2]] Output: &#34;abcd&#34; Explaination: Swap s[0] and s[3], s = &#34;bcad&#34; Swap s[0] and s[2], s = &#34;acbd&#34; Swap s[1] and s[2], s = &#34;abcd&#34; Example 3 Input: s = &#34;cba&#34;, pairs = [[0,1],[1,2]] Output: &#34;abc&#34; Explaination: Swap s[0] and s[1], s = &#34;bca&#34; Swap s[1] and s[2], s = &#34;bac&#34; Swap s[0] and s[1], s = &#34;abc&#34; Constraints  1 &lt;= s.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/lfu-cache/">LFU Cache</a></h2>
+
+      <p>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/android-unlock-patterns/">Android Unlock Patterns</a></h2>
+
+      <p>Given an Android 3x3 key lock screen and two integers m and n, where 1 ≤ m ≤ n ≤ 9, count the total number of unlock patterns of the Android lock screen, which consist of minimum of m keys and maximum n keys.
+Rules for a valid pattern:
+ Each pattern must connect at least m keys and at most n keys. All the keys must be distinct. If the line connecting two consecutive keys in the pattern passes through any other keys, the other keys must have previously selected in the pattern.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/bitwise-and-of-numbers-range/">Bitwise and of Numbers Range</a></h2>
+
+      <p>Given a range [m, n] where 0 &lt;= m &lt;= n &lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.
+Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution class Solution: def rangeBitwiseAnd(self, m: int, n: int) -&gt; int: shift = 0 while m &lt; n: m = m &gt;&gt; 1 n = n &gt;&gt; 1 shift &#43;= 1 m = m &lt;&lt; shift return m </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/shortest-distance-from-all-buildings/">Shortest Distance From All Buildings</a></h2>
 
       <p>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You can only move up, down, left and right. You are given a 2D grid of values 0, 1 or 2, where:
@@ -331,113 +438,6 @@ To be specific, your design should include these functions:
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/flatten-2d-vector/">Flatten 2d Vector</a></h2>
-
-      <p>Design and implement an iterator to flatten a 2d vector. It should support the following operations: next and hasNext.
-Example Vector2D iterator = new Vector2D([[1,2],[3],[4]]); iterator.next(); // return 1 iterator.next(); // return 2 iterator.next(); // return 3 iterator.hasNext(); // return true iterator.hasNext(); // return true iterator.next(); // return 4 iterator.hasNext(); // return false Notes  Please remember to RESET your class variables declared in Vector2D, as static/class variables are persisted across multiple test cases.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/utf-8-validation/">Utf 8 Validation</a></h2>
-
-      <p>A character in UTF8 can be from 1 to 4 bytes long, subjected to the following rules:
- For 1-byte character, the first bit is a 0, followed by its unicode code. For n-bytes character, the first n-bits are all one’s, the n&#43;1 bit is 0, followed by n-1 bytes with most significant 2 bits being 10.  This is how the UTF-8 encoding would work:
- Char. number range | UTF-8 octet sequence (hexadecimal) | (binary) --------------------&#43;--------------------------------------------- 0000 0000-0000 007F | 0xxxxxxx 0000 0080-0000 07FF | 110xxxxx 10xxxxxx 0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx 0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx Given an array of integers representing the data, return whether it is a valid utf-8 encoding.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/design-circular-queue/">Design Circular Queue</a></h2>
-
-      <p>Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle and the last position is connected back to the first position to make a circle. It is also called “Ring Buffer”.
-One of the benefits of the circular queue is that we can make use of the spaces in front of the queue.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/decode-string/">Decode String</a></h2>
-
-      <p>Given an encoded string, return its decoded string.
-The encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.
-You may assume that the input string is always valid; No extra white spaces, square brackets are well-formed, etc.
-Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

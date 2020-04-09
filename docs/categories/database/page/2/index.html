@@ -176,6 +176,190 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/last-person-to-fit-in-the-elevator/">Last Person to Fit in the Elevator</a></h2>
+
+      <p>Table: Queue
+&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | person_id | int | | person_name | varchar | | weight | int | | turn | int | &#43;-------------&#43;---------&#43; person_id is the primary key column for this table. This table has the information about all people waiting for an elevator. The person_id and turn columns will contain all numbers from 1 to n, where n is the number of rows in the table.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/movie-rating/">Movie Rating</a></h2>
+
+      <p>Table: Movies
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | title | varchar | &#43;---------------&#43;---------&#43; movie_id is the primary key for this table. title is the name of the movie. Table: Users
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | user_id | int | | name | varchar | &#43;---------------&#43;---------&#43; user_id is the primary key for this table. Table: Movie_Rating
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | user_id | int | | rating | int | | created_at | date | &#43;---------------&#43;---------&#43; (movie_id, user_id) is the primary key for this table.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/team-scores-in-football-tournament/">Team Scores in Football Tournament</a></h2>
+
+      <p>Solution (Union) SELECT t.team_id, t.team_name, IFNULL(SUM(p.points), 0) AS num_points FROM Teams t LEFT JOIN ( SELECT host_team as team_id, CASE WHEN host_goals &gt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches UNION ALL SELECT guest_team as team_id, CASE WHEN host_goals &lt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches ) AS p ON t.team_id = p.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/highest-grade-for-each-student/">Highest Grade for Each Student</a></h2>
+
+      <p>Table: Enrollments
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | student_id | int | | course_id | int | | grade | int | &#43;---------------&#43;---------&#43; (student_id, course_id) is the primary key of this table. Write a SQL query to find the highest grade with its corresponding course for each student. In case of a tie, you should find the course with the smallest course_id. The output must be sorted by increasing student_id.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/department-highest-salary/">Department Highest Salary</a></h2>
+
+      <p>The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
+&#43;----&#43;-------&#43;--------&#43;--------------&#43; | Id | Name | Salary | DepartmentId | &#43;----&#43;-------&#43;--------&#43;--------------&#43; | 1 | Joe | 70000 | 1 | | 2 | Jim | 90000 | 1 | | 3 | Henry | 80000 | 2 | | 4 | Sam | 60000 | 2 | | 5 | Max | 90000 | 1 | &#43;----&#43;-------&#43;--------&#43;--------------&#43; The Department table holds all departments of the company.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/rank-scores/">Rank Scores</a></h2>
+
+      <p>Write a SQL query to rank scores. If there is a tie between two scores, both should have the same ranking. Note that after a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no “holes” between ranks.
+&#43;----&#43;-------&#43; | Id | Score | &#43;----&#43;-------&#43; | 1 | 3.50 | | 2 | 3.65 | | 3 | 4.00 | | 4 | 3.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/second-highest-salary/">Second Highest Salary</a></h2>
+
+      <p>Write a SQL query to get the second highest salary from the Employee table.
+&#43;----&#43;--------&#43; | Id | Salary | &#43;----&#43;--------&#43; | 1 | 100 | | 2 | 200 | | 3 | 300 | &#43;----&#43;--------&#43; For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
+&#43;---------------------&#43; | SecondHighestSalary | &#43;---------------------&#43; | 200 | &#43;---------------------&#43; Solution (naive) SELECT max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SELECT max(Salary) FROM Employee) Solution This solution considers when second highest salary doesn’t exist</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/top-useful-sql-templates/">Top Useful Sql Templates</a></h2>
 
       <p>In this post, we introduce the most useful SQL template statements.
@@ -254,33 +438,6 @@ Solution # Write your MySQL query statement below SELECT email FROM Person WHERE
 
 </article>
       
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/combine-two-tables/">Combine Two Tables</a></h2>
-
-      <p>Table: Person
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | PersonId | int | | FirstName | varchar | | LastName | varchar | &#43;-------------&#43;---------&#43; PersonId is the primary key column for this table. Table: Address
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | AddressId | int | | PersonId | int | | City | varchar | | State | varchar | &#43;-------------&#43;---------&#43; AddressId is the primary key column for this table.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
     
     
       <footer class="list-footer">
@@ -289,6 +446,8 @@ Solution # Write your MySQL query statement below SELECT email FROM Person WHERE
         
           <a class="pagination-previous" href="/categories/database/">← Newer Posts</a>
         
+        
+          <a class="pagination-next" href="/categories/database/page/3/">Older Posts →</a>
         
         </nav>
       </footer>

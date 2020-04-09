@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/max-points-on-a-line/">Max Points on a Line</a></h2>
+
+      <p>Given n points on a 2D plane, find the maximum number of points that lie on the same straight line.
+Example 1 Input: [[1,1],[2,2],[3,3]] Output: 3 Explanation: ^ | | o | o | o &#43;-------------&gt; 0 1 2 3 4 Example 2 Input: [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]] Output: 4 Explanation: ^ | | o | o o | o | o o &#43;-------------------&gt; 0 1 2 3 4 5 6 NOTE: input types have been changed on April 15, 2019.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/lfu-cache/">LFU Cache</a></h2>
 
       <p>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
@@ -409,32 +435,6 @@ Example 1 Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlab
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/subarray-sum-equals-k/">Subarray Sum Equals K</a></h2>
-
-      <p>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

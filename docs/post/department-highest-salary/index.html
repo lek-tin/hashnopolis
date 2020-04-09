@@ -219,22 +219,21 @@
 <p>Max and Jim both have the highest salary in the IT department and Henry has the highest salary in the Sales department.</p>
 <h3 id="solution">Solution</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
-    Department.name <span style="color:#66d9ef">AS</span> <span style="color:#e6db74">&#39;Department&#39;</span>,
-    Employee.name <span style="color:#66d9ef">AS</span> <span style="color:#e6db74">&#39;Employee&#39;</span>,
+    Department.name <span style="color:#66d9ef">as</span> Department,
+    Employee.Name <span style="color:#66d9ef">as</span> Employee,
     Salary
 <span style="color:#66d9ef">FROM</span>
     Employee
-    <span style="color:#66d9ef">JOIN</span>
-    DEPARTMENT <span style="color:#66d9ef">on</span> Employee.DepartmentId <span style="color:#f92672">=</span> Department.Id
+<span style="color:#66d9ef">JOIN</span>
+    Department
+<span style="color:#66d9ef">ON</span>
+    Employee.DepartmentId <span style="color:#f92672">=</span> Department.Id
 <span style="color:#66d9ef">WHERE</span>
     (Employee.DepartmentId, Salary) <span style="color:#66d9ef">IN</span>
     (
-        <span style="color:#66d9ef">SELECT</span>
-            Department.Id, <span style="color:#66d9ef">MAX</span>(Salary)
-        <span style="color:#66d9ef">FROM</span>
-            Employee
-        <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
-            DepartmentId
+        <span style="color:#66d9ef">SELECT</span> DepartmentId, <span style="color:#66d9ef">MAX</span>(Salary)
+        <span style="color:#66d9ef">FROM</span> Employee
+        <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> DepartmentId
     )
 </code></pre></div>
   </div>

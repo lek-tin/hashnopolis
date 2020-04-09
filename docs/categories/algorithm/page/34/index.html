@@ -176,6 +176,117 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-paths/">Binary Tree Paths</a></h2>
+
+      <p>Given a binary tree, return all root-to-leaf paths.
+Note: A leaf is a node with no children.
+Example Input: 1 / \ 2 3 \ 5 Output: [&#34;1-&gt;2-&gt;5&#34;, &#34;1-&gt;3&#34;] Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[str] &#34;&#34;&#34; res = [] def traverse(root, path): if root == None: return path &#43;= str(root.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></h2>
+
+      <p>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).
+Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7 return its level order traversal as:
+[ [3], [9,20], [15,7] ] Solution (recursion) # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-level-order-traversal-ii/">Binary Tree Level Order Traversal II</a></h2>
+
+      <p>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).
+For example: Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 return its bottom-up level order traversal as:
+[ [15,7], [9,20], [3] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/combination-sum-iii/">Combination Sum III</a></h2>
+
+      <p>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Note:
+All numbers will be positive integers. The solution set must not contain duplicate combinations.
+Example 1 Input: k = 3, n = 7 Output: [[1,2,4]] Example 2 Input: k = 3, n = 9 Output: [[1,2,6], [1,3,5], [2,3,4]] Solution class Solution: def combinationSum3(self, k: int, n: int) -&gt; List[List[int]]: # Equivalent to subsets results = [] combination = [] # Start DFS self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/combination-sum/">Combination Sum</a></h2>
 
       <p>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
@@ -320,128 +431,6 @@ Note: You may not engage in multiple transactions at the same time (i.e., you mu
 If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
 Note that you cannot sell a stock before you buy one.
 Example 1 Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/add-binary/">Add Binary</a></h2>
-
-      <p>Given two binary strings, return their sum (also a binary string).
-The input strings are both non-empty and contains only characters 1 or 0.
-Example 1 Input: a = &#34;11&#34;, b = &#34;1&#34; Output: &#34;100&#34; Example 2 Input: a = &#34;1010&#34;, b = &#34;1011&#34; Output: &#34;10101&#34; Solution class Solution: def addBinary(self, a, b): &#34;&#34;&#34; :type a: str :type b: str :rtype: str &#34;&#34;&#34; result = [] carry = 0 i = len(a)-1 j = len(b)-1 while carry or i &gt;= 0 or j &gt;= 0: total = carry if i &gt;= 0: total &#43;= int(a[i]) i -= 1 if j &gt;= 0: total &#43;= int(b[j]) j -= 1 result.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/valid-number/">Valid Number</a></h2>
-
-      <p>Validate if a given string can be interpreted as a decimal number.
-Some examples: &#34;0&#34; =&gt; true
-&#34; 0.1 &#34; =&gt; true
-&#34;abc&#34; =&gt; false
-&#34;1 a&#34; =&gt; false
-&#34;2e10&#34; =&gt; true
-&#34; -90e3 &#34; =&gt; true
-&#34; 1e&#34; =&gt; false
-&#34;e3&#34; =&gt; false
-&#34; 6e-1&#34; =&gt; true
-&#34; 99e2.5 &#34; =&gt; false
-&#34;53.5e93&#34; =&gt; true
-&#34; --6 &#34; =&gt; false
-&#34;-&#43;3&#34; =&gt; false
-&#34;95a54e53&#34; =&gt; false
-Note It is intended for the problem statement to be ambiguous.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/17.-letter-combinations-of-a-phone-number/">17. Letter Combinations of a Phone Number</a></h2>
-
-      <p>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
-A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
-Example Input: &#34;23&#34; Output: [&#34;ad&#34;, &#34;ae&#34;, &#34;af&#34;, &#34;bd&#34;, &#34;be&#34;, &#34;bf&#34;, &#34;cd&#34;, &#34;ce&#34;, &#34;cf&#34;]. Note Although the above answer is in lexicographical order, your answer could be in any order you want.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/18.-4sum/">18. 4Sum</a></h2>
-
-      <p>Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a &#43; b &#43; c &#43; d = target? Find all unique quadruplets in the array which gives the sum of target.
-Note The solution set must not contain duplicate quadruplets.
-Example:
-Given array nums = [1, 0, -1, 0, -2, 2], and target = 0. A solution set is: [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ] </p>
 
       <p class="meta">
         
