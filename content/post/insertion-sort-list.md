@@ -9,7 +9,8 @@ lastmod: 2020-04-08T07:21:58-07:00
 draft: false
 archive: false
 ---
-Algorithm of Insertion Sort:
+
+#### Algorithm of Insertion Sort
 
 Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.
 At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.
@@ -43,18 +44,17 @@ class Solution:
         if not head: return head
 
         dummy = ListNode(0)
-        dummy.next = head
-        cur, sorted_tail = head.next, head
+        curr = head
+        prev, curr_next = ListNode(0), ListNode(0)
 
-        while cur:
+        while curr:
+            curr_next = curr.next
             prev = dummy
-            while prev.next.val < cur.val:
+            while prev.next and prev.next.val < curr.val:
                 prev = prev.next
-            if prev == sorted_tail:
-                cur, sorted_tail = cur.next, cur
-            else:
-                cur.next, prev.next, sorted_tail.next = prev.next, cur, cur.next
-                cur = sorted_tail.next
+            curr.next = prev.next
+            prev.next = curr
+            curr = curr_next
 
         return dummy.next
 ```
