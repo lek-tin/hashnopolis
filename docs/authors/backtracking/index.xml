@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>backtracking on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/authors/backtracking/</link>
+    <description>Recent content in backtracking on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Mon, 01 Oct 2018 23:44:18 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/authors/backtracking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Restore Ip Addresses</title>
+      <link>http://www.hashnopolis.com/post/restore-ip-addresses/</link>
+      <pubDate>Mon, 01 Oct 2018 23:44:18 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/restore-ip-addresses/</guid>
+      <description>Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+Example Input: &amp;quot;25525511135&amp;quot; Output: [&amp;quot;255.255.11.135&amp;quot;, &amp;quot;255.255.111.35&amp;quot;] Solution class Solution: def restoreIpAddresses(self, s: str) -&amp;gt; List[str]: results = [] self.backtrack(results, s, 0, &amp;#34;&amp;#34;, 0) return results def backtrack(self, results, s, start, partial, segment_count): # pruning for performance improvement if (4 - segment_count) * 3 &amp;lt; len(s) - start or (4 - segment_count) &amp;gt; len(s) - start: return # base case goal if start == len(s) and segment_count == 4: results.</description>
+    </item>
+    
+  </channel>
+</rss>

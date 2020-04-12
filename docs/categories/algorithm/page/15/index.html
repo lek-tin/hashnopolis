@@ -176,6 +176,86 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/find-anagram-mappings/">Find Anagram Mappings</a></h2>
+
+      <p>Given two lists A and B, and B is an anagram of A. B is an anagram of A means B is made by randomizing the order of the elements in A.
+We want to find an index mapping P, from A to B. A mapping P[i] = j means the ith element in A appears in B at index j.
+These lists A and B may contain duplicates. If there are multiple answers, output any of them.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/pancake-sorting/">Pancake Sorting</a></h2>
+
+      <p>Given an array A, we can perform a pancake flip: We choose some positive integer k &lt;= A.length, then reverse the order of the first k elements of A. We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array A.
+Return the k-values corresponding to a sequence of pancake flips that sort A. Any valid answer that sorts the array within 10 * A.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/super-ugly-number/">Super Ugly Number</a></h2>
+
+      <p>Write a program to find the nthsuper ugly number.
+Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
+Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4. Note  1 is a super ugly number for any given primes. The given numbers in primes are in ascending order.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/perfect-squares/">Perfect Squares</a></h2>
 
       <p>Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
@@ -353,85 +433,6 @@ Example 1 Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/maximum-product-subarray/">Maximum Product Subarray</a></h2>
-
-      <p>Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
-Example 1 Input: [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6. Example 2 Input: [-2,0,-1] Output: 0 Explanation: The result cannot be 2, because [-2,-1] is not a subarray. Solution # time: `O(n)` class Solution: def maxProduct(self, nums: List[int]) -&gt; int: n = len(nums) if n == 0: return 0 res = currMax = currMin = nums[0] for i in range(1, n): newCurrMax = max( max(currMax * nums[i], currMin * nums[i]), nums[i] ) newCurrMin = min( min(currMax * nums[i], currMin * nums[i]), nums[i] ) currMax, currMin = newCurrMax, newCurrMin res = max(currMax, res) return res Solution (need to return the subarray) class Solution: def maxProduct(self, nums: List[int]) -&gt; int: n = len(nums) if n == 0: return 0 res = prevMin = prevMax = nums[0] maxPos = 0 minLens = [1 for _ in range(n)] maxLens = [1 for _ in range(n)] print(prevMin, prevMax) for i in range(1, n): num = nums[i] currMin, currMax = prevMin, prevMax if num &gt; 0: if prevMax * num &gt; num: currMax *= num maxLens[i] = maxLens[i-1] &#43; 1 else: currMax = num if prevMin * num &lt; num: currMin *= num minLens[i] = minLens[i-1] &#43; 1 else: currMin = num else: if prevMin * num &gt; num: currMax = prevMin * num maxLens[i] = minLens[i-1] &#43; 1 else: currMax = num if prevMax * num &lt; num: currMin = prevMax * num minLens[i] = maxLens[i-1] &#43; 1 else: currMin = num prevMin, prevMax = currMin, currMax if prevMax &gt; res: maxPos = i res = prevMax print(prevMin, prevMax) print(minLens) print(maxLens) maxLen = maxLens[maxPos] maxSubarr = nums[maxPos&#43;1-maxLen:maxPos&#43;1] print(maxSubarr) return res </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/triangle/">Triangle</a></h2>
-
-      <p>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
-For example, given the following triangle
-[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11). Note  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/dungeon-game/">Dungeon Game</a></h2>
-
-      <p>The demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (K) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.
-The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

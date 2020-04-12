@@ -176,6 +176,88 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/logger-rate-limiter/">Logger Rate Limiter</a></h2>
+
+      <p>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
+Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.
+It is possible that several messages arrive roughly at the same time.
+Example Logger logger = new Logger(); // logging string &#34;foo&#34; at timestamp 1 logger.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-hit-counter/">Design Hit Counter</a></h2>
+
+      <p>Design a hit counter which counts the number of hits received in the past 5 minutes.
+Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.
+It is possible that several hits arrive roughly at the same time.
+Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/cut-wood/">Cut Wood</a></h2>
+
+      <p>Given an int array wood representing the length of n pieces of wood and an int k. It is required to cut these pieces of wood such that more or equal to k pieces of the same length len are cut. What is the longest len you can get?
+Example 1 Input: wood = [5, 9, 7], k = 3 Output: 5 Explanation: 5 -&gt; 5 9 -&gt; 5 &#43; 4 7 -&gt; 5 &#43; 2 Example 2 Input: wood = [5, 9, 7], k = 4 Output: 4 Explanation: 5 -&gt; 4 &#43; 1 9 -&gt; 4 * 2 &#43; 1 7 -&gt; 4 &#43; 3 Example 3 Input: wood = [1, 2, 3], k = 7 Output: 0 Explanation: We cannot make it.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
 
       <p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
@@ -354,90 +436,6 @@ Example 1 s = &#34;leetcode&#34; return 0. Example 2 s = &#34;loveleetcode&#34;,
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/max-queue/">Max Queue</a></h2>
-
-      <p>Implement a MaxQueue class that has the following methods:
-public interface MaxQueue { public void add(Long l); public Long poll(); public Long pollMax(); } All 3 operations should take on average O(logN) time.
-Solution // &#34;static void main&#34; must be defined in a public class. public class Main { public static void main(String[] args) throws Exception { System.out.println(&#34;Hello World!&#34;); DoubleLinkedList list = new DoubleLinkedList(); MaxQueue maxQ = new MaxQueue(); maxQ.add(5); maxQ.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/string-compression/">String Compression</a></h2>
-
-      <p>Given an array of characters, compress it in-place.
-The length after compression must always be smaller than or equal to the original array.
-Every element of the array should be a character (not int) of length 1.
-After you are done modifying the input array in-place, return the new length of the array.
-Follow up Could you solve it using only O(1) extra space?
-Example 1 Input: [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;,&#34;b&#34;,&#34;c&#34;,&#34;c&#34;,&#34;c&#34;] Output: Return 6, and the first 6 characters of the input array should be: [&#34;a&#34;,&#34;2&#34;,&#34;b&#34;,&#34;2&#34;,&#34;c&#34;,&#34;3&#34;] Explanation: &#34;aa&#34; is replaced by &#34;a2&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/evaluate-reverse-polish-notation/">Evaluate Reverse Polish Notation</a></h2>
-
-      <p>Evaluate the value of an arithmetic expression in Reverse Polish Notation.
-Valid operators are &#43;, -, *, /. Each operand may be an integer or another expression.
-Note  Division between two integers should truncate toward zero. The given RPN expression is always valid. That means the expression would always evaluate to a result and there won’t be any divide by zero operation.  Example 1 Input: [&#34;2&#34;, &#34;1&#34;, &#34;&#43;&#34;, &#34;3&#34;, &#34;*&#34;] Output: 9 Explanation: ((2 &#43; 1) * 3) = 9 Example 2 Input: [&#34;4&#34;, &#34;13&#34;, &#34;5&#34;, &#34;/&#34;, &#34;&#43;&#34;] Output: 6 Explanation: (4 &#43; (13 / 5)) = 6 Example 3 Input: [&#34;10&#34;, &#34;6&#34;, &#34;9&#34;, &#34;3&#34;, &#34;&#43;&#34;, &#34;-11&#34;, &#34;*&#34;, &#34;/&#34;, &#34;*&#34;, &#34;17&#34;, &#34;&#43;&#34;, &#34;5&#34;, &#34;&#43;&#34;] Output: 22 Explanation: ((10 * (6 / ((9 &#43; 3) * -11))) &#43; 17) &#43; 5 = ((10 * (6 / (12 * -11))) &#43; 17) &#43; 5 = ((10 * (6 / -132)) &#43; 17) &#43; 5 = ((10 * 0) &#43; 17) &#43; 5 = (0 &#43; 17) &#43; 5 = 17 &#43; 5 = 22 Solution class Solution: def evalRPN(self, tokens: List[str]) -&gt; int: if not tokens: return None stack = [] operators = set([&#34;&#43;&#34;, &#34;-&#34;, &#34;*&#34;, &#34;/&#34;]) N = len(tokens) curr = 0 while curr &lt; N: while curr &lt; N and tokens[curr] not in operators: stack.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

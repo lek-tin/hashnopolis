@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 08 Apr 2020 07:21:58 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 06:07:32 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/authors/lek-tin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Basic Calculator Ii</title>
+      <link>http://www.hashnopolis.com/post/basic-calculator-ii/</link>
+      <pubDate>Thu, 09 Apr 2020 06:07:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/basic-calculator-ii/</guid>
+      <description>Implement a basic calculator to evaluate a simple expression string.
+The expression string contains only non-negative integers, +, -, *, / operators and empty spaces  . The integer division should truncate toward zero.
+Example 1 Input: &amp;quot;3+2*2&amp;quot; Output: 7 Example 2 Input: &amp;quot; 3/2 &amp;quot; Output: 1 Example 3 Input: &amp;quot; 3+5 / 2 &amp;quot; Output: 5 Note  You may assume that the given expression is always valid. Do not use the eval built-in library function.</description>
+    </item>
+    
+    <item>
+      <title>Basic Calculator</title>
+      <link>http://www.hashnopolis.com/post/basic-calculator/</link>
+      <pubDate>Thu, 09 Apr 2020 03:50:38 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/basic-calculator/</guid>
+      <description>Implement a basic calculator to evaluate a simple expression string.
+The expression string may contain open ( and closing parentheses ), the plus + or minus sign -, non-negative integers and empty spaces  .
+Example 1 Input: &amp;quot;1 + 1&amp;quot; Output: 2 Example 2 Input: &amp;quot; 2-1 + 2 &amp;quot; Output: 3 Example 3 Input: &amp;quot;(1+(4+5+2)-3)+(6+8)&amp;quot; Output: 23 Note  You may assume that the given expression is always valid.</description>
+    </item>
+    
+    <item>
+      <title>Backspace String Compare</title>
+      <link>http://www.hashnopolis.com/post/backspace-string-compare/</link>
+      <pubDate>Thu, 09 Apr 2020 01:53:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/backspace-string-compare/</guid>
+      <description>Solution (build string ❌) Time: O(N)
+Space: O(N)
+class Solution: def backspaceCompare(self, S: str, T: str) -&amp;gt; bool: res_1 = self.helper(S) res_2 = self.helper(T) return len(res_1) == len(res_2) and res_1 == res_2 def helper(self, s): stack = [] for c in s: if c != &amp;#34;#&amp;#34;: stack.append(c) else: if len(stack) &amp;gt; 0: stack.pop() return &amp;#34;&amp;#34;.join(stack) s
+Solution (two pointers 👍🏼) Time: O(N)
+Space: O(1)
+from itertools import zip_longest class Solution: def backspaceCompare(self, S: str, T: str) -&amp;gt; bool: return all( a == b for a, b in zip_longest(self.</description>
+    </item>
     
     <item>
       <title>Insertion Sort List</title>
@@ -18,8 +54,7 @@
       <pubDate>Wed, 08 Apr 2020 07:21:58 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/post/insertion-sort-list/</guid>
-      <description>Algorithm of Insertion Sort:
-Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+      <description>Algorithm of Insertion Sort Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
 Example 1 Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4 Example 2 Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;gt;3-&amp;gt;4-&amp;gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.</description>
     </item>
     
@@ -2392,7 +2427,7 @@ Design an algorithm to serialize and deserialize a binary search tree. There is 
       
       <guid>http://www.hashnopolis.com/post/diameter-of-binary-tree/</guid>
       <description>Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
-Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].</description>
+Example Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].</description>
     </item>
     
     <item>
@@ -3595,6 +3630,16 @@ Output: `[1,2,2,3,5,6]` Solution # Time: o(m+n) # Space: o(1) class Solution: de
       <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
 &amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
 Example 1 Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12). Example 2 Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
+    </item>
+    
+    <item>
+      <title>Restore Ip Addresses</title>
+      <link>http://www.hashnopolis.com/post/restore-ip-addresses/</link>
+      <pubDate>Mon, 01 Oct 2018 23:44:18 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/restore-ip-addresses/</guid>
+      <description>Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+Example Input: &amp;quot;25525511135&amp;quot; Output: [&amp;quot;255.255.11.135&amp;quot;, &amp;quot;255.255.111.35&amp;quot;] Solution class Solution: def restoreIpAddresses(self, s: str) -&amp;gt; List[str]: results = [] self.backtrack(results, s, 0, &amp;#34;&amp;#34;, 0) return results def backtrack(self, results, s, start, partial, segment_count): # pruning for performance improvement if (4 - segment_count) * 3 &amp;lt; len(s) - start or (4 - segment_count) &amp;gt; len(s) - start: return # base case goal if start == len(s) and segment_count == 4: results.</description>
     </item>
     
     <item>

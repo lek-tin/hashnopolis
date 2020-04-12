@@ -16,8 +16,7 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Algorithm of Insertion Sort:
-Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+  <meta name="description" content="Algorithm of Insertion Sort Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
 Example 1 Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4 Example 2 Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;gt;3-&amp;gt;4-&amp;gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self." />
   <meta name="keywords" content="leetcode linked-list sorting " />
   
@@ -25,8 +24,7 @@ Example 1 Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&
     <meta name="twitter:card" content="summary" />
     
     <meta name="twitter:title" content="Insertion Sort List" />
-    <meta name="twitter:description" content="Algorithm of Insertion Sort:
-Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+    <meta name="twitter:description" content="Algorithm of Insertion Sort Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
 Example 1 Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4 Example 2 Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;gt;3-&amp;gt;4-&amp;gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
@@ -194,7 +192,7 @@ Example 1 Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&
         <h5>Last updated: April 8, 2020</h5>
       
       <hr />
-      <p>Algorithm of Insertion Sort:</p>
+      <h4 id="algorithm-of-insertion-sort">Algorithm of Insertion Sort</h4>
 <p>Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.
 At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.
 It repeats until no input elements remain.</p>
@@ -216,18 +214,17 @@ Output: -1-&gt;0-&gt;3-&gt;4-&gt;5
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> head: <span style="color:#66d9ef">return</span> head
 
         dummy <span style="color:#f92672">=</span> ListNode(<span style="color:#ae81ff">0</span>)
-        dummy<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> head
-        cur, sorted_tail <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next, head
+        curr <span style="color:#f92672">=</span> head
+        prev, curr_next <span style="color:#f92672">=</span> ListNode(<span style="color:#ae81ff">0</span>), ListNode(<span style="color:#ae81ff">0</span>)
 
-        <span style="color:#66d9ef">while</span> cur:
+        <span style="color:#66d9ef">while</span> curr:
+            curr_next <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span>next
             prev <span style="color:#f92672">=</span> dummy
-            <span style="color:#66d9ef">while</span> prev<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>val <span style="color:#f92672">&lt;</span> cur<span style="color:#f92672">.</span>val:
+            <span style="color:#66d9ef">while</span> prev<span style="color:#f92672">.</span>next <span style="color:#f92672">and</span> prev<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>val <span style="color:#f92672">&lt;</span> curr<span style="color:#f92672">.</span>val:
                 prev <span style="color:#f92672">=</span> prev<span style="color:#f92672">.</span>next
-            <span style="color:#66d9ef">if</span> prev <span style="color:#f92672">==</span> sorted_tail:
-                cur, sorted_tail <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>next, cur
-            <span style="color:#66d9ef">else</span>:
-                cur<span style="color:#f92672">.</span>next, prev<span style="color:#f92672">.</span>next, sorted_tail<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> prev<span style="color:#f92672">.</span>next, cur, cur<span style="color:#f92672">.</span>next
-                cur <span style="color:#f92672">=</span> sorted_tail<span style="color:#f92672">.</span>next
+            curr<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> prev<span style="color:#f92672">.</span>next
+            prev<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> curr
+            curr <span style="color:#f92672">=</span> curr_next
 
         <span style="color:#66d9ef">return</span> dummy<span style="color:#f92672">.</span>next
 </code></pre></div>
