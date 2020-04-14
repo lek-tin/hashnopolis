@@ -36,7 +36,7 @@ Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].
 
 class Solution:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
-        self.max_diamter = -1
+        self.max_diamter = 0
         self.dfs(root)
         return self.max_diamter
 
