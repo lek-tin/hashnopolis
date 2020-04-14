@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Wed, 08 Apr 2020 01:25:27 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 01:47:35 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Monthly Transactions Ii</title>
+      <link>http://www.hashnopolis.com/post/monthly-transactions-ii/</link>
+      <pubDate>Sun, 12 Apr 2020 01:47:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/monthly-transactions-ii/</guid>
+      <description>Table: Transactions
++----------------+---------+ | Column Name | Type | +----------------+---------+ | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | +----------------+---------+ id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&amp;quot;approved&amp;quot;, &amp;quot;declined&amp;quot;]. Table: Chargebacks +----------------+---------+ | Column Name | Type | +----------------+---------+ | trans_id | int | | charge_date | date | +----------------+---------+ Chargebacks contains basic information regarding incoming chargebacks from some transactions placed in Transactions table.</description>
+    </item>
+    
+    <item>
+      <title>Monthly Transactions I</title>
+      <link>http://www.hashnopolis.com/post/monthly-transactions-i/</link>
+      <pubDate>Sun, 12 Apr 2020 01:47:02 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/monthly-transactions-i/</guid>
+      <description>Table: Transactions
++---------------+---------+ | Column Name | Type | +---------------+---------+ | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | +---------------+---------+ id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&amp;quot;approved&amp;quot;, &amp;quot;declined&amp;quot;]. Write an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.</description>
+    </item>
     
     <item>
       <title>Reported Posts II</title>

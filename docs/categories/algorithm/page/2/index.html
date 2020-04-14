@@ -176,6 +176,58 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/fizz-buzz-multithreaded/">Fizz Buzz Multithreaded</a></h2>
+
+      <p>Write a program that outputs the string representation of numbers from 1 to n, however:
+ If the number is divisible by 3, output &#34;fizz&#34;. If the number is divisible by 5, output &#34;buzz&#34;. If the number is divisible by both 3 and 5, output &#34;fizzbuzz&#34;.  For example, for n = 15, we output: 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/print-in-order/">Print in Order</a></h2>
+
+      <p>Suppose we have a class:
+public class Foo { public void first() { print(&#34;first&#34;); } public void second() { print(&#34;second&#34;); } public void third() { print(&#34;third&#34;); } } The same instance of Foo will be passed to three different threads. Thread A will call first(), thread B will call second(), and thread C will call third(). Design a mechanism and modify the program to ensure that second() is executed after first(), and third() is executed after second().</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/the-dining-philosophers/">The Dining Philosophers</a></h2>
 
       <p>Five silent philosophers sit at a round table with bowls of spaghetti. Forks are placed between each pair of adjacent philosophers.
@@ -368,63 +420,6 @@ Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution class
 
       <p>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You can only move up, down, left and right. You are given a 2D grid of values 0, 1 or 2, where:
  Each 0 marks an empty land which you can pass by freely. Each 1 marks a building which you cannot pass through. Each 2 marks an obstacle which you cannot pass through.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/maximum-xor-of-two-numbers-in-an-array/">Maximum Xor of Two Numbers in an Array</a></h2>
-
-      <p>Given a non-empty array of numbers, a0, a1, a2, … , an-1, where 0 ≤ ai&lt; 231.
-Find the maximum result of ai XOR aj, where 0 ≤ i, j &lt; n.
-Could you do this in O(n) runtime?
-Example Input: [3, 10, 5, 25, 2, 8] Output: 28 Explanation: The maximum result is 5 ^ 25 = 28. Solution (prefix hashset - less efficient) Time: O(N)
-Space: O(1)
-class Solution: def findMaximumXOR(self, nums: List[int]) -&gt; int: # 0bxxxxxx - 0b L = len(bin(max(nums))) - 2 max_xor = 0 for i in range(L-1, -1, -1): max_xor &lt;&lt;= 1 print(&#34;max_xor:&#34;, bin(max_xor) ) # set the rightmost bit to 1 curr_xor = max_xor | 1 print(&#34;curr_xor:&#34;, bin(curr_xor) ) # highest (L-i) bits prefixes = {num &gt;&gt; i for num in nums} print(&#34;prefixes:&#34;, [bin(p) for p in prefixes] ) # as long as there exists a p that makes curr_xor^p &gt; 0 # Update max_xor, if two of these prefixes could result in curr_xor.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/">Minimum Number of Refueling Stops</a></h2>
-
-      <p>A car travels from a starting position to a destination which is target miles east of the starting position.
-Along the way, there are gas stations. Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.
-The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses 1 liter of gas per 1 mile that it drives.</p>
 
       <p class="meta">
         

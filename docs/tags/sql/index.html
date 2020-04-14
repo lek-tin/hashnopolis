@@ -176,6 +176,58 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/monthly-transactions-ii/">Monthly Transactions Ii</a></h2>
+
+      <p>Table: Transactions
+&#43;----------------&#43;---------&#43; | Column Name | Type | &#43;----------------&#43;---------&#43; | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | &#43;----------------&#43;---------&#43; id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&#34;approved&#34;, &#34;declined&#34;]. Table: Chargebacks &#43;----------------&#43;---------&#43; | Column Name | Type | &#43;----------------&#43;---------&#43; | trans_id | int | | charge_date | date | &#43;----------------&#43;---------&#43; Chargebacks contains basic information regarding incoming chargebacks from some transactions placed in Transactions table.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/monthly-transactions-i/">Monthly Transactions I</a></h2>
+
+      <p>Table: Transactions
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | &#43;---------------&#43;---------&#43; id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&#34;approved&#34;, &#34;declined&#34;]. Write an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/reported-posts-ii/">Reported Posts II</a></h2>
 
       <p>Table: Actions
@@ -366,61 +418,6 @@ For example, the table stadium:
 
       <p>Several friends at a cinema ticket office would like to reserve consecutive available seats. Can you help to query all the consecutive available seats order by the seat_id using the following cinema table?
 | seat_id | free | |---------|------| | 1 | 1 | | 2 | 0 | | 3 | 1 | | 4 | 1 | | 5 | 1 | Your query should return the following result for the sample case above.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/active-businesses/">Active Businesses</a></h2>
-
-      <p>Table: Events
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | business_id | int | | event_type | varchar | | occurences | int | &#43;---------------&#43;---------&#43; (business_id, event_type) is the primary key of this table. Each row in the table logs the info that an event of some type occured at some business for a number of times. Write an SQL query to find all active businesses.
-An active business is a business that has more than one event type with occurences greater than the average occurences of that event type among all businesses.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/second-degree-follower/">Second Degree Follower</a></h2>
-
-      <p>In facebook, there is a follow table with two columns: followee, follower.
-Please write a sql query to get the amount of each follower’s follower if he/she has one.
-For example:
-&#43;-------------&#43;------------&#43; | followee | follower | &#43;-------------&#43;------------&#43; | A | B | | B | C | | B | D | | D | E | &#43;-------------&#43;------------&#43; should output: &#43;-------------&#43;------------&#43; | follower | num | &#43;-------------&#43;------------&#43; | B | 2 | | D | 1 | &#43;-------------&#43;------------&#43; Explaination: Both B and D exist in the follower list, when as a followee, B&#39;s follower is C and D, and D&#39;s follower is E.</p>
 
       <p class="meta">
         

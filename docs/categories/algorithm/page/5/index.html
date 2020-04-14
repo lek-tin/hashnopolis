@@ -176,6 +176,58 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/moving-average-from-data-stream/">Moving Average From Data Stream</a></h2>
+
+      <p>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+Example MovingAverage m = new MovingAverage(3); m.next(1) = 1 m.next(10) = (1 &#43; 10) / 2 m.next(3) = (1 &#43; 10 &#43; 3) / 3 m.next(5) = (10 &#43; 3 &#43; 5) / 3 Solution from collections import deque class MovingAverage: def __init__(self, size: int): &#34;&#34;&#34; Initialize your data structure here.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/evaluate-division/">Evaluate Division</a></h2>
+
+      <p>Equations are given in the format A / B = k, where A and B are variables represented as strings, and k is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return -1.0.
+Example Given a / b = 2.0, b / c = 3.0. queries are: a / c = ?, b / a = ?, a / e = ?</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/logger-rate-limiter/">Logger Rate Limiter</a></h2>
 
       <p>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
@@ -372,58 +424,6 @@ For example, if we choose the node &#34;gr&#34; and swap its two children, it pr
       <p>Given a string s, partition s such that every substring of the partition is a palindrome.
 Return the minimum cuts needed for a palindrome partitioning of s.
 Example Input: &#34;aab&#34; Output: 1 Explanation: The palindrome partitioning [&#34;aa&#34;,&#34;b&#34;] could be produced using 1 cut. Solution (DP) class Solution: def minCut(self, s: str) -&gt; int: N = len(s) # valid[i][j] = True if s[i~j] IS palindrome, or False if IS NOT palindrome valid = [ [True for _ in range(N)] for _ in range(N) ] # min cuts of s[0~i] dp = [N for _ in range(N)] for l in range(2, N&#43;1): for i in range(N-l&#43;1): j = i&#43;l-1 valid[i][j] = s[i]==s[j] and valid[i&#43;1][j-1] for i in range(N): if valid[0][i]: # no cuts needed dp[i] = 0 continue for j in range(i): if valid[j&#43;1][i]: #.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/palindrome-permutation/">Palindrome Permutation</a></h2>
-
-      <p>Given a string, determine if a permutation of the string could form a palindrome.
-Example 1 Input: &#34;code&#34; Output: false Example 2 Input: &#34;aab&#34; Output: true Example 3 Input: &#34;carerac&#34; Output: true Solution class Solution: def canPermutePalindrome(self, s: str) -&gt; bool: lookup = set() for c in s: if c not in lookup: lookup.add(c) else: lookup.remove(c) return len(lookup) &lt;= 1 </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/first-unique-character-in-a-string/">First Unique Character in a String</a></h2>
-
-      <p>Given a string, find the first non-repeating character in it and return it’s index. If it doesn’t exist, return -1.
-Example 1 s = &#34;leetcode&#34; return 0. Example 2 s = &#34;loveleetcode&#34;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 </p>
 
       <p class="meta">
         

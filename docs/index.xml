@@ -7,10 +7,51 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 09 Apr 2020 06:07:32 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 00:13:53 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Contiguous Array</title>
+      <link>http://www.hashnopolis.com/post/contiguous-array/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/contiguous-array/</guid>
+      <description>Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
+Example 1 Input: [0,1] Output: 2 Explanation: [0, 1] is the longest contiguous subarray with equal number of 0 and 1. Example 2 Input: [0,1,0] Output: 2 Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1. Note The length of the given binary array will not exceed 50,000.</description>
+    </item>
+    
+    <item>
+      <title>Monthly Transactions Ii</title>
+      <link>http://www.hashnopolis.com/post/monthly-transactions-ii/</link>
+      <pubDate>Sun, 12 Apr 2020 01:47:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/monthly-transactions-ii/</guid>
+      <description>Table: Transactions
++----------------+---------+ | Column Name | Type | +----------------+---------+ | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | +----------------+---------+ id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&amp;quot;approved&amp;quot;, &amp;quot;declined&amp;quot;]. Table: Chargebacks +----------------+---------+ | Column Name | Type | +----------------+---------+ | trans_id | int | | charge_date | date | +----------------+---------+ Chargebacks contains basic information regarding incoming chargebacks from some transactions placed in Transactions table.</description>
+    </item>
+    
+    <item>
+      <title>Monthly Transactions I</title>
+      <link>http://www.hashnopolis.com/post/monthly-transactions-i/</link>
+      <pubDate>Sun, 12 Apr 2020 01:47:02 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/monthly-transactions-i/</guid>
+      <description>Table: Transactions
++---------------+---------+ | Column Name | Type | +---------------+---------+ | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | +---------------+---------+ id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&amp;quot;approved&amp;quot;, &amp;quot;declined&amp;quot;]. Write an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.</description>
+    </item>
+    
+    <item>
+      <title>Last Stone Weight</title>
+      <link>http://www.hashnopolis.com/post/last-stone-weight/</link>
+      <pubDate>Sun, 12 Apr 2020 00:02:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/last-stone-weight/</guid>
+      <description>We have a collection of stones, each stone has a positive integer weight.
+Each turn, we choose the two heaviest stones and smash them together. Suppose the stones have weights x and y with x &amp;lt;= y. The result of this smash is:
+ If x == y, both stones are totally destroyed; If x != y, the stone of weight x is totally destroyed, and the stone of weight y has new weight y-x.</description>
+    </item>
     
     <item>
       <title>Basic Calculator Ii</title>
@@ -1175,7 +1216,7 @@ Example 1 Input: str1 = &amp;quot;abac&amp;quot;, str2 = &amp;quot;cab&amp;quot;
       <description>Given an integer n, return 1 - n in lexicographical order.
 For example, given 13, return: [1,10,11,12,13,2,3,4,5,6,7,8,9].
 Please optimize your algorithm to use less time and space. The input size may be as large as 5,000,000.
-Solution class Solution: def lexicalOrder(self, n: int) -&amp;gt; List[int]: res = [0 for i in range(n)] curr = 1 for i in range(n): res[i] = curr # lower digits if curr * 10 &amp;lt;= n: curr *= 10 # higher digits else: # if curr is greater than n, we reverse it by /10 if curr &amp;gt;= n: curr //= 10 curr += 1 # if curr becomes X00000, we need to get rid of the trailing 0&amp;#39;s while curr % 10 == 0: curr //= 10 return res # Input: n = 50 # Output: [1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,6,7,8,9] Recursion</description>
+Solution (iterative) class Solution: def lexicalOrder(self, n: int) -&amp;gt; List[int]: res = [0 for i in range(n)] curr = 1 for i in range(n): res[i] = curr # lower digits if curr * 10 &amp;lt;= n: curr *= 10 # higher digits else: # if curr is greater than n, we reverse it by /10 if curr &amp;gt;= n: curr //= 10 curr += 1 # if curr becomes X00000, we need to get rid of the trailing 0&amp;#39;s while curr % 10 == 0: curr //= 10 return res # Input: n = 50 # Output: [1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,6,7,8,9] Solution (recursion) Recursion</description>
     </item>
     
     <item>

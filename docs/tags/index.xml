@@ -7,17 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 09 Apr 2020 06:07:32 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 00:13:53 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>dynamic-programming</title>
+      <link>http://www.hashnopolis.com/tags/dynamic-programming/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/dynamic-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hashmap</title>
+      <link>http://www.hashnopolis.com/tags/hashmap/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/hashmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hashmapclass Solution: def findMaxLength(self, nums: List[int]) -&gt; int: lookup = {} lookup[0] = -1 max_len = 0 count = 0
+for i, num in enumerate(nums): count &#43;= 1 if num else -1 if count in lookup: max_len = max(max_len, i-lookup[count]) else: lookup[count] = i
+return max_len</title>
+      <link>http://www.hashnopolis.com/tags/hashmapclass-solution-def-findmaxlengthself-nums-listint-int-lookup-lookup0-1-max_len-0-count-0-for-i-num-in-enumeratenums-count-&#43;-1-if-num-else-1-if-count-in-lookup-max_len-maxmax_len-i-lookupcount-else-lookupcount-i-return-max_len/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/hashmapclass-solution-def-findmaxlengthself-nums-listint-int-lookup-lookup0-1-max_len-0-count-0-for-i-num-in-enumeratenums-count-&#43;-1-if-num-else-1-if-count-in-lookup-max_len-maxmax_len-i-lookupcount-else-lookupcount-i-return-max_len/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>leetcode</title>
       <link>http://www.hashnopolis.com/tags/leetcode/</link>
-      <pubDate>Thu, 09 Apr 2020 06:07:32 -0700</pubDate>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prefix-sum</title>
+      <link>http://www.hashnopolis.com/tags/prefix-sum/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/prefix-sum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>http://www.hashnopolis.com/tags/sql/</link>
+      <pubDate>Sun, 12 Apr 2020 01:47:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/sql/</guid>
       <description></description>
     </item>
     
@@ -76,24 +123,6 @@
     </item>
     
     <item>
-      <title>sql</title>
-      <link>http://www.hashnopolis.com/tags/sql/</link>
-      <pubDate>Wed, 08 Apr 2020 01:25:27 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hashmap</title>
-      <link>http://www.hashnopolis.com/tags/hashmap/</link>
-      <pubDate>Tue, 07 Apr 2020 03:42:09 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/hashmap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>dfs</title>
       <link>http://www.hashnopolis.com/tags/dfs/</link>
       <pubDate>Mon, 06 Apr 2020 21:13:50 -0700</pubDate>
@@ -117,15 +146,6 @@
       <pubDate>Mon, 06 Apr 2020 19:15:52 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/multi-threading/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dynamic-programming</title>
-      <link>http://www.hashnopolis.com/tags/dynamic-programming/</link>
-      <pubDate>Thu, 02 Apr 2020 20:15:25 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/dynamic-programming/</guid>
       <description></description>
     </item>
     
@@ -477,15 +497,6 @@
       <pubDate>Fri, 08 Nov 2019 23:56:44 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/comparator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>prefix-sum</title>
-      <link>http://www.hashnopolis.com/tags/prefix-sum/</link>
-      <pubDate>Sat, 19 Oct 2019 22:11:13 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/prefix-sum/</guid>
       <description></description>
     </item>
     
