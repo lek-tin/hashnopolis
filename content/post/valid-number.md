@@ -91,7 +91,7 @@ class Solution:
         return hasSeenNum
 ```
 
-### Solution (using flags: with atural number e)
+### Solution (using flags: with natural number e)
 
 ```python
 class Solution:

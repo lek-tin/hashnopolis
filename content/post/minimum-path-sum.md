@@ -5,11 +5,12 @@ authors: ["lek-tin"]
 tags: ["leetcode", "matrix", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-09-02T23:04:31-07:00
-lastmod: 2020-03-01T23:04:31-07:00
+lastmod: 2020-04-18T02:04:31-07:00
 draft: false
 archive: false
 ---
-Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+
+Given a `m x n` grid filled with **non-negative** numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
 
 #### Note You can only move either down or right at any point in time.
 
@@ -27,6 +28,7 @@ Output: 7
 
 ### Solution 1 (DP with n extra space)
 
+Python
 ```python
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
@@ -50,6 +52,38 @@ class Solution:
                 sums[i][j] = min(sums[i-1][j], sums[i][j-1]) + grid[i][j]
 
         return sums[-1][-1]
+```
+  
+Java  
+```java
+class Solution {
+    public int minPathSum(int[][] grid) {
+        if (grid.length == 0 || grid[0].length == 0) {
+            return 0;
+        }
+
+        int N, M;
+        N = grid.length;
+        M = grid[0].length;
+        int[] dp = new int[M];
+
+        for (int i = N-1; i >= 0; i--) {
+            for (int j = M-1; j >= 0; j--) {
+                if (i != N-1 && j != M-1) {
+                    dp[j] = grid[i][j] + Math.min(dp[j], dp[j+1]);
+                } else if (i != N-1 && j == M-1) {
+                    dp[j] = grid[i][j] + dp[j];
+                } else if (i == N-1 && j != M-1) {
+                    dp[j] = grid[i][j] + dp[j+1];
+                } else {
+                    dp[j] = grid[i][j];
+                }
+            }
+        }
+
+        return dp[0];
+    }
+}
 ```
 
 ### Solution 2 (DP with no extra space)
