@@ -176,6 +176,64 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/restore-ip-addresses/">Restore Ip Addresses</a></h2>
+
+      <p>Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+Example Input: &#34;25525511135&#34; Output: [&#34;255.255.11.135&#34;, &#34;255.255.111.35&#34;] Solution class Solution: def restoreIpAddresses(self, s: str) -&gt; List[str]: results = [] self.backtrack(results, s, 0, &#34;&#34;, 0) return results def backtrack(self, results, s, start, partial, segment_count): # pruning for performance improvement if (4 - segment_count) * 3 &lt; len(s) - start or (4 - segment_count) &gt; len(s) - start: return # base case goal if start == len(s) and segment_count == 4: results.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+          <a class="meta--author" href="/authors/dfs" ><strong>dfs</strong></a>
+        
+          <a class="meta--author" href="/authors/backtracking" ><strong>backtracking</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/reverse-linked-list-ii/">Reverse Linked List II</a></h2>
+
+      <p>Reverse a linked list from position m to n. Do it in one-pass.
+Note: 1 ≤ m ≤ n ≤ length of list.
+Example:
+Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/gray-code/">Gray Code</a></h2>
 
       <p>The gray code is a binary numeral system where two successive values differ in only one bit.
@@ -377,60 +435,6 @@ Example 1:
 Input: 1 1 / \ / \ 2 3 2 3 [1,2,3], [1,2,3] Output: true Example 2:
 Input: 1 1 / \ 2 2 [1,2], [1,null,2] Output: false Example 3:
 Input: 1 1 / \ / \ 2 1 1 2 [1,2,1], [1,1,2] Output: false Solution # Definition for a binary tree node.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/remove-element/">Remove Element</a></h2>
-
-      <p>Given an array nums and a value val, remove all instances of that value in-place and return the new length.
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-The order of elements can be changed. It doesn’t matter what you leave beyond the new length.
-Example 1 Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with the first two elements of nums being 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/remove-duplicates-from-sorted-list/">Remove Duplicates From Sorted List</a></h2>
-
-      <p>Given a sorted linked list, delete all duplicates such that each element appear only once.
-Example 1 Input: 1-&gt;1-&gt;2 Output: 1-&gt;2 Example 2 Input: 1-&gt;1-&gt;2-&gt;3-&gt;3 Output: 1-&gt;2-&gt;3 Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr = head while curr != None and curr.next != None: if curr.</p>
 
       <p class="meta">
         

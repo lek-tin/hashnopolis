@@ -176,6 +176,61 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/scramble-string/">Scramble String</a></h2>
+
+      <p>Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
+Below is one possible representation of s1 = &#34;great&#34;:
+ great / \ gr eat / \ / \ g r e at / \ a t To scramble the string, we may choose any non-leaf node and swap its two children.
+For example, if we choose the node &#34;gr&#34; and swap its two children, it produces a scrambled string &#34;rgeat&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/palindrome-partitioning-ii/">Palindrome Partitioning Ii</a></h2>
+
+      <p>Given a string s, partition s such that every substring of the partition is a palindrome.
+Return the minimum cuts needed for a palindrome partitioning of s.
+Example Input: &#34;aab&#34; Output: 1 Explanation: The palindrome partitioning [&#34;aa&#34;,&#34;b&#34;] could be produced using 1 cut. Solution (DP) class Solution: def minCut(self, s: str) -&gt; int: N = len(s) # valid[i][j] = True if s[i~j] IS palindrome, or False if IS NOT palindrome valid = [ [True for _ in range(N)] for _ in range(N) ] # min cuts of s[0~i] dp = [N for _ in range(N)] for l in range(2, N&#43;1): for i in range(N-l&#43;1): j = i&#43;l-1 valid[i][j] = s[i]==s[j] and valid[i&#43;1][j-1] for i in range(N): if valid[0][i]: # no cuts needed dp[i] = 0 continue for j in range(i): if valid[j&#43;1][i]: #.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/palindrome-permutation/">Palindrome Permutation</a></h2>
 
       <p>Given a string, determine if a permutation of the string could form a palindrome.
@@ -383,60 +438,6 @@ Example 1 Input: [&#34;h&#34;,&#34;e&#34;,&#34;l&#34;,&#34;l&#34;,&#34;o&#34;] O
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/shortest-subarray-with-sum-at-least-k/">Shortest Subarray With Sum at Least K</a></h2>
-
-      <p>Return the length of the shortest, non-empty, contiguous subarray of A with sum at least K.
-If there is no non-empty subarray with sum at least K, return -1.
-Example 1 Input: A = [1], K = 1 Output: 1 Example 2 Input: A = [1,2], K = 4 Output: -1 Example 3 Input: A = [2,-1,2], K = 3 Output: 3 Note  1 &lt;= A.length &lt;= 50000 -10 ^ 5 &lt;= A[i] &lt;= 10 ^ 5 1 &lt;= K &lt;= 10 ^ 9  Solution (sliding window using pointers) This version exceeds time limit Time: O(N)</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/generalized-abbreviation/">Generalized Abbreviation</a></h2>
-
-      <p>Write a function to generate the generalized abbreviations of a word.
-Note The order of the output does not matter.
-Example Input: &#34;word&#34; Output: [&#34;word&#34;, &#34;1ord&#34;, &#34;w1rd&#34;, &#34;wo1d&#34;, &#34;wor1&#34;, &#34;2rd&#34;, &#34;w2d&#34;, &#34;wo2&#34;, &#34;1o1d&#34;, &#34;1or1&#34;, &#34;w1r1&#34;, &#34;1o2&#34;, &#34;2r1&#34;, &#34;3d&#34;, &#34;w3&#34;, &#34;4&#34;] Example class Solution: def generateAbbreviations(self, word: str) -&gt; List[str]: results = [] self.backtrack(results, word, &#34;&#34;, 0, 0) return results def backtrack(self, results, word, curr, start, count): print(curr, start, count) # &#34;&#34; 0 0 # &#34;&#34; 1 1 # &#34;&#34; 2 2 # &#34;&#34; 3 3 # &#34;&#34; 4 4 # ------------ # 3d 4 0 # ------------ # 2r 3 0 # 2r 4 1 # ------------ # 2rd 4 0 # ------------ # 1o 2 0 # 1o 3 1 # 1o 4 2 # ------------ # 1o1d 4 0 # ------------ # 1or 3 0 # 1or 4 1 # ------------ # 1ord 4 0 # ------------ # w 1 0 # w 2 1 # w 3 2 # w 4 3 # ------------ # w2d 4 0 # ------------ # w1r 3 0 # w1r 4 1 # ------------ # w1rd 4 0 # ------------ # wo 2 0 # wo 3 1 # wo 4 2 # ------------ # wo1d 4 0 # ------------ # wor 3 0 # wor 4 1 # ------------ # word 4 0 # ------------ if start == len(word): if count &gt; 0: curr &#43;= str(count) # curr could be &#34;4&#34; or &#34;abcd&#34; results.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

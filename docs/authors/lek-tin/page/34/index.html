@@ -176,6 +176,59 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/compare-version-numbers/">Compare Version Numbers</a></h2>
+
+      <p>Compare two version numbers version1 and version2. If version1 &gt; version2 return 1; if version1 &lt; version2 return -1;otherwise return 0.
+You may assume that the version strings are non-empty and contain only digits and the . character. The . character does not represent a decimal point and is used to separate number sequences. For instance, 2.5 is not “two and a half” or “half way to version three”, it is the fifth second-level revision of the second first-level revision.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/word-search/">Word Search</a></h2>
+
+      <p>Given a 2D board and a word, find if the word exists in the grid.
+The word can be constructed from letters of sequentially adjacent cell, where “adjacent” cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
+Example board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;], [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;] ] Given word = &#34;ABCCED&#34;, return true. Given word = &#34;SEE&#34;, return true. Given word = &#34;ABCB&#34;, return false.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/intersection-of-two-linked-lists/">Intersection of Two Linked Lists</a></h2>
 
       <p>Write a program to find the node at which the intersection of two singly linked lists begins.
@@ -260,7 +313,7 @@ Note  The same word in the dictionary may be reused multiple times in the segmen
 
       <p>Given a 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
 Example 1 Input: 11110 11010 11000 00000 Output: 1 Example 2 Input: 11000 11000 00100 00011 Output: 3 DFS
-Solution class Solution: def numIslands(self, grid): &#34;&#34;&#34; :type grid: List[List[str]] :rtype: int &#34;&#34;&#34; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &#34;1&#34;: count &#43;= 1 self.</p>
+Solution (DFS in Java) DFS</p>
 
       <p class="meta">
         
@@ -272,7 +325,7 @@ Solution class Solution: def numIslands(self, grid): &#34;&#34;&#34; :type grid:
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 
@@ -371,64 +424,6 @@ Output: `[1,2,2,3,5,6]` Solution # Time: o(m&#43;n) # Space: o(1) class Solution
       <p>A message containing letters from A-Z is being encoded to numbers using the following mapping:
 ‘A’ -&gt; 1 ‘B’ -&gt; 2 … ‘Z’ -&gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
 Example 1 Input: &#34;12&#34; Output: 2 Explanation: It could be decoded as &#34;AB&#34; (1 2) or &#34;L&#34; (12). Example 2 Input: &#34;226&#34; Output: 3 Explanation: It could be decoded as &#34;BZ&#34; (2 26), &#34;VF&#34; (22 6), or &#34;BBF&#34; (2 2 6).</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/restore-ip-addresses/">Restore Ip Addresses</a></h2>
-
-      <p>Given a string containing only digits, restore it by returning all possible valid IP address combinations.
-Example Input: &#34;25525511135&#34; Output: [&#34;255.255.11.135&#34;, &#34;255.255.111.35&#34;] Solution class Solution: def restoreIpAddresses(self, s: str) -&gt; List[str]: results = [] self.backtrack(results, s, 0, &#34;&#34;, 0) return results def backtrack(self, results, s, start, partial, segment_count): # pruning for performance improvement if (4 - segment_count) * 3 &lt; len(s) - start or (4 - segment_count) &gt; len(s) - start: return # base case goal if start == len(s) and segment_count == 4: results.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-          <a class="meta--author" href="/authors/dfs" ><strong>dfs</strong></a>
-        
-          <a class="meta--author" href="/authors/backtracking" ><strong>backtracking</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/reverse-linked-list-ii/">Reverse Linked List II</a></h2>
-
-      <p>Reverse a linked list from position m to n. Do it in one-pass.
-Note: 1 ≤ m ≤ n ≤ length of list.
-Example:
-Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4 Output: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL Solution: /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseBetween(ListNode head, int m, int n) { ListNode dummy = new ListNode(0); dummy.</p>
 
       <p class="meta">
         

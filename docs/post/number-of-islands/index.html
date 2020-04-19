@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
 Example 1 Input: 11110 11010 11000 00000 Output: 1 Example 2 Input: 11000 11000 00100 00011 Output: 3 DFS
-Solution class Solution: def numIslands(self, grid): &amp;#34;&amp;#34;&amp;#34; :type grid: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &amp;#34;1&amp;#34;: count &#43;= 1 self." />
+Solution (DFS in Java) DFS" />
   <meta name="keywords" content="leetcode dfs bfs " />
   
   
@@ -27,7 +27,7 @@ Solution class Solution: def numIslands(self, grid): &amp;#34;&amp;#34;&amp;#34;
     <meta name="twitter:title" content="Number of Islands" />
     <meta name="twitter:description" content="Given a 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
 Example 1 Input: 11110 11010 11000 00000 Output: 1 Example 2 Input: 11000 11000 00100 00011 Output: 3 DFS
-Solution class Solution: def numIslands(self, grid): &amp;#34;&amp;#34;&amp;#34; :type grid: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &amp;#34;1&amp;#34;: count &#43;= 1 self." />
+Solution (DFS in Java) DFS" />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -185,13 +185,13 @@ Solution class Solution: def numIslands(self, grid): &amp;#34;&amp;#34;&amp;#34;
         
           "<a href="/tags/bfs"><strong>bfs</strong></a>",
         
-        <i class="small material-icons">access_time</i> 2-min read
+        <i class="small material-icons">access_time</i> 3-min read
       </p>
       <a class="github-corner" href="https://github.com/lek-tin/hashnopolis/blob/dev/content/post/number-of-islands.md" title="Edit this post on Github"><svg width="50" height="50" viewbox="0 0 250 250"><title>Edit this post on Github</title><path d="M0 0h250v250"></path><path class="octo-arm" d="M127.4 110c-14.6-9.2-9.4-19.5-9.4-19.5 3-7 1.5-11 1.5-11-1-6.2 3-2 3-2 4 4.7 2 11 2 11-2.2 10.4 5 14.8 9 16.2" fill="currentColor" style="transform-origin:130px 110px;"></path><path class="octo-body" d="M113.2 114.3s3.6 1.6 4.7.6l15-13.7c3-2.4 6-3 8.2-2.7-8-11.2-14-25 3-41 4.7-4.4 10.6-6.4 16.2-6.4.6-1.6 3.6-7.3 11.8-10.7 0 0 4.5 2.7 6.8 16.5 4.3 2.7 8.3 6 12 9.8 3.3 3.5 6.7 8 8.6 12.3 14 3 16.8 8 16.8 8-3.4 8-9.4 11-11.4 11 0 5.8-2.3 11-7.5 15.5-16.4 16-30 9-40 .2 0 3-1 7-5.2 11l-13.3 11c-1 1 .5 5.3.8 5z" fill="currentColor"></path></svg><style> .github-corner svg{position:absolute;right:0;top:0;mix-blend-mode:darken;color:#ffffff;fill:#7479ec;} @media (max-width: 767px) { .github-corner svg { top: 48px; } } .github-corner:hover .octo-arm{animation:octocat-wave .56s;}@keyframes octocat-wave{0%, 100%{transform:rotate(0);}20%, 60%{transform:rotate(-20deg);}40%, 80%{transform:rotate(10deg);}}</style></a>
       <h1>Number of Islands</h1>
       <h4>Created: October 9, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: October 9, 2018</h5>
+        <h5>Last updated: April 17, 2020</h5>
       
       <hr />
       <p>Given a 2d grid map of <code>'1'</code>s (land) and <code>'0'</code>s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>
@@ -212,7 +212,51 @@ Output: 1
 
 Output: 3
 </code></pre><p>DFS</p>
-<h3 id="solution">Solution</h3>
+<h3 id="solution-dfs-in-java">Solution (DFS in Java)</h3>
+<p>DFS</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">numIslands</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span><span style="color:#f92672">[][]</span> grid<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>grid<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0 <span style="color:#f92672">||</span> grid<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> grid<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> grid<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>grid<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;1&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    dfs<span style="color:#f92672">(</span>grid<span style="color:#f92672">,</span> i<span style="color:#f92672">,</span> j<span style="color:#f92672">);</span>
+                    res<span style="color:#f92672">++;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">dfs</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span><span style="color:#f92672">[][]</span> grid<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> i<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> dirs <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+            <span style="color:#f92672">{</span>0<span style="color:#f92672">,</span>1<span style="color:#f92672">},</span>
+            <span style="color:#f92672">{</span>0<span style="color:#f92672">,-</span>1<span style="color:#f92672">},</span>
+            <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span>0<span style="color:#f92672">},</span>
+            <span style="color:#f92672">{-</span>1<span style="color:#f92672">,</span> 0<span style="color:#f92672">}}</span>
+        <span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">||</span> i <span style="color:#f92672">&gt;=</span> grid<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">||</span> j <span style="color:#f92672">&lt;</span> 0 <span style="color:#f92672">||</span> j <span style="color:#f92672">&gt;=</span> grid<span style="color:#f92672">[</span>0<span style="color:#f92672">].</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">||</span> grid<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;1&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        grid<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;x&#39;</span><span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> dir<span style="color:#f92672">:</span> dirs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> dx <span style="color:#f92672">=</span> dir<span style="color:#f92672">[</span>0<span style="color:#f92672">];</span>
+            <span style="color:#66d9ef">int</span> dy <span style="color:#f92672">=</span> dir<span style="color:#f92672">[</span>1<span style="color:#f92672">];</span>
+            dfs<span style="color:#f92672">(</span>grid<span style="color:#f92672">,</span> i<span style="color:#f92672">+</span>dx<span style="color:#f92672">,</span> j<span style="color:#f92672">+</span>dy<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="solution-dfs-in-python">Solution (DFS in Python)</h3>
+<p>DFS</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">numIslands</span>(self, grid):
         <span style="color:#e6db74">&#34;&#34;&#34;

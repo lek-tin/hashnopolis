@@ -401,7 +401,7 @@ Example board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39
       <guid>http://www.hashnopolis.com/post/number-of-islands/</guid>
       <description>Given a 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
 Example 1 Input: 11110 11010 11000 00000 Output: 1 Example 2 Input: 11000 11000 00100 00011 Output: 3 DFS
-Solution class Solution: def numIslands(self, grid): &amp;#34;&amp;#34;&amp;#34; :type grid: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &amp;#34;1&amp;#34;: count += 1 self.</description>
+Solution (DFS in Java) DFS</description>
     </item>
     
     <item>
