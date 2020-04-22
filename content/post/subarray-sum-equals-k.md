@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "hashmap", "prefix-sum"]
 categories: ["algorithm"]
 date: 2019-09-26T15:33:32-07:00
-lastmod: 2020-04-08T02:50:32-07:00
+lastmod: 2020-04-22T02:50:32-07:00
 draft: false
 archive: false
 ---
@@ -25,6 +25,40 @@ Output: 2
 
 ### Solution
 
+Java
+```java
+class Solution {
+    public int subarraySum(int[] nums, int k) {
+        int len = nums.length;
+        if (len == 0) {
+            return 0;
+        }
+
+        int[] sums = new int[len];
+        sums[0] = nums[0];
+
+        for (int i = 1; i < len; i++) {
+            sums[i] += sums[i-1] + nums[i];
+        }
+
+        HashMap<Integer, Integer> counter = new HashMap<Integer, Integer>();
+        counter.put(0, 1);
+        int res = 0;
+
+        for (int s: sums) {
+            System.out.println(s);
+            if (counter.containsKey(s-k)) {
+                res += counter.get(s-k);
+            }
+            counter.put(s, counter.getOrDefault(s, 0) + 1);
+        }
+
+        return res;
+    }
+}
+```
+
+Python
 ```python
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
