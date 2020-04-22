@@ -17,7 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: N = len(nums) if not N or N == 0: return 0 sums = [ nums[0] for i in range(N) ] for i in range(1, N): sums[i] = sums[i-1] &#43; nums[i] # initialization: prefix sum = 0 counter = { 0: 1 } res = 0 for s in sums: if s - k in counter: res &#43;= counter[s-k] counter[s] = counter." />
+Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution Java
+class Solution { public int subarraySum(int[] nums, int k) { int len = nums." />
   <meta name="keywords" content="leetcode hashmap prefix-sum " />
   
   
@@ -25,7 +26,8 @@ Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is
     
     <meta name="twitter:title" content="Subarray Sum Equals K" />
     <meta name="twitter:description" content="Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: N = len(nums) if not N or N == 0: return 0 sums = [ nums[0] for i in range(N) ] for i in range(1, N): sums[i] = sums[i-1] &#43; nums[i] # initialization: prefix sum = 0 counter = { 0: 1 } res = 0 for s in sums: if s - k in counter: res &#43;= counter[s-k] counter[s] = counter." />
+Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution Java
+class Solution { public int subarraySum(int[] nums, int k) { int len = nums." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
@@ -189,7 +191,7 @@ Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is
       <h1>Subarray Sum Equals K</h1>
       <h4>Created: September 26, 2019 by [lek-tin]</h4>
       
-        <h5>Last updated: April 8, 2020</h5>
+        <h5>Last updated: April 22, 2020</h5>
       
       <hr />
       <p>Given an array of integers and an integer <code>k</code>, you need to find the total number of continuous subarrays whose sum equals to <code>k</code>.</p>
@@ -202,6 +204,37 @@ Output: 2
 <li>The range of numbers in the array is <code>[-1000, 1000]</code> and the range of the integer <code>k</code> is <code>[-1e7, 1e7]</code>.</li>
 </ol>
 <h3 id="solution">Solution</h3>
+<p>Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">subarraySum</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> k<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>len <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> sums <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>len<span style="color:#f92672">];</span>
+        sums<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>0<span style="color:#f92672">];</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> len<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            sums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> sums<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+        <span style="color:#f92672">}</span>
+
+        HashMap<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> counter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;();</span>
+        counter<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 1<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> s<span style="color:#f92672">:</span> sums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>counter<span style="color:#f92672">.</span><span style="color:#a6e22e">containsKey</span><span style="color:#f92672">(</span>s<span style="color:#f92672">-</span>k<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                res <span style="color:#f92672">+=</span> counter<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>s<span style="color:#f92672">-</span>k<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+            counter<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> counter<span style="color:#f92672">.</span><span style="color:#a6e22e">getOrDefault</span><span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Python</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">subarraySum</span>(self, nums: List[int], k: int) <span style="color:#f92672">-&gt;</span> int:
         N <span style="color:#f92672">=</span> len(nums)

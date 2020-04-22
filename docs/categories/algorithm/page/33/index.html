@@ -176,6 +176,32 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/remove-duplicates-from-sorted-list/">Remove Duplicates From Sorted List</a></h2>
+
+      <p>Given a sorted linked list, delete all duplicates such that each element appear only once.
+Example 1 Input: 1-&gt;1-&gt;2 Output: 1-&gt;2 Example 2 Input: 1-&gt;1-&gt;2-&gt;3-&gt;3 Output: 1-&gt;2-&gt;3 Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.next = None class Solution(object): def deleteDuplicates(self, head): &#34;&#34;&#34; :type head: ListNode :rtype: ListNode &#34;&#34;&#34; curr = head while curr != None and curr.next != None: if curr.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/power-of-two/">Power of Two</a></h2>
 
       <p>Given an integer, write a function to determine if it is a power of two.
@@ -400,33 +426,6 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as
       <p>Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
 For example: Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].
 Note  The order of the result is not important. So in the above example, [5, 3] is also correct. Your algorithm should run in linear runtime complexity.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/single-number-ii/">Single Number II</a></h2>
-
-      <p>Given a non-empty array of integers, every element appears three times except for one, which appears exactly once. Find that single one.
-Note Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
-Example 1 Input: [2,2,3,2] Output: 3 Example 2 Input: [0,1,0,1,0,1,99] Output: 99 Solution class Solution: def singleNumber(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; # https://www.cnblogs.com/ganganloveu/p/4110996.html # https://blog.csdn.net/karen0310/article/details/78226261 ones, twos = 0, 0 for _, num in enumerate(nums): ones = (ones ^ num) &amp; ~twos twos = (twos ^ num) &amp; ~ones print(bin(num), &#34;ones: &#34;, bin(ones), &#34;twos: &#34;, bin(twos)) return ones </p>
 
       <p class="meta">
         
