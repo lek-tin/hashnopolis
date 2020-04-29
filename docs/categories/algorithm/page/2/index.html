@@ -176,6 +176,89 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/backspace-string-compare/">Backspace String Compare</a></h2>
+
+      <p>Solution (build string ❌) Time: O(N)
+Space: O(N)
+class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: res_1 = self.helper(S) res_2 = self.helper(T) return len(res_1) == len(res_2) and res_1 == res_2 def helper(self, s): stack = [] for c in s: if c != &#34;#&#34;: stack.append(c) else: if len(stack) &gt; 0: stack.pop() return &#34;&#34;.join(stack) s
+Solution (two pointers 👍🏼) Time: O(N)
+Space: O(1)
+from itertools import zip_longest class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: return all( a == b for a, b in zip_longest(self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/insertion-sort-list/">Insertion Sort List</a></h2>
+
+      <p>Algorithm of Insertion Sort Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+Example 1 Input: 4-&gt;2-&gt;1-&gt;3 Output: 1-&gt;2-&gt;3-&gt;4 Example 2 Input: -1-&gt;5-&gt;3-&gt;4-&gt;0 Output: -1-&gt;0-&gt;3-&gt;4-&gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/middle-of-the-linked-list/">Middle of the Linked List</a></h2>
+
+      <p>Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+If there are two middle nodes, return the second middle node.
+Example 1 Input: [1,2,3,4,5] Output: Node 3 from this list (Serialization: [3,4,5]) The returned node has value 3. (The judge&#39;s serialization of this node is [3,4,5]). Note that we returned a ListNode object ans, such that: ans.val = 3, ans.next.val = 4, ans.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/sort-list/">Sort List</a></h2>
 
       <p>Sort a linked list in O(n log n) time using constant space complexity.
@@ -354,87 +437,6 @@ Example 1 Input: num_people = 2 Output: 1 Example 2 Input: num_people = 4 Output
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/maximum-product-of-splitted-binary-tree/">Maximum Product of Splitted Binary Tree</a></h2>
-
-      <p>Given a binary tree root. Split the binary tree into two subtrees by removing 1 edge such that the product of the sums of the subtrees are maximized.
-Since the answer may be too large, return it modulo 10e9 &#43; 7.
-Example 1 Input: root = [1,2,3,4,5,6] Output: 110 Explanation: Remove the red edge and get 2 binary trees with sum 11 and 10. Their product is 110 (11*10) Example 2 Input: root = [1,null,2,3,4,null,null,5,6] Output: 90 Explanation: Remove the red edge and get 2 binary trees with sum 15 and 6.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/smallest-string-with-swaps/">Smallest String With Swaps</a></h2>
-
-      <p>You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.
-You can swap the characters at any pair of indices in the given pairs any number of times.
-Return the lexicographically smallest string that s can be changed to after using the swaps.
-Example 1 Input: s = &#34;dcab&#34;, pairs = [[0,3],[1,2]] Output: &#34;bacd&#34; Explaination: Swap s[0] and s[3], s = &#34;bcad&#34; Swap s[1] and s[2], s = &#34;bacd&#34; Example 2 Input: s = &#34;dcab&#34;, pairs = [[0,3],[1,2],[0,2]] Output: &#34;abcd&#34; Explaination: Swap s[0] and s[3], s = &#34;bcad&#34; Swap s[0] and s[2], s = &#34;acbd&#34; Swap s[1] and s[2], s = &#34;abcd&#34; Example 3 Input: s = &#34;cba&#34;, pairs = [[0,1],[1,2]] Output: &#34;abc&#34; Explaination: Swap s[0] and s[1], s = &#34;bca&#34; Swap s[1] and s[2], s = &#34;bac&#34; Swap s[0] and s[1], s = &#34;abc&#34; Constraints  1 &lt;= s.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/lfu-cache/">LFU Cache</a></h2>
-
-      <p>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
- get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 

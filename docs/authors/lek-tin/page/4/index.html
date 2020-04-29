@@ -176,6 +176,87 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/lfu-cache/">LFU Cache</a></h2>
+
+      <p>Design and implement a data structure for Least Frequently Used (LFU) cache. It should support the following operations: get and put.
+ get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1. put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity, it should invalidate the least frequently used item before inserting a new item.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/android-unlock-patterns/">Android Unlock Patterns</a></h2>
+
+      <p>Given an Android 3x3 key lock screen and two integers m and n, where 1 ≤ m ≤ n ≤ 9, count the total number of unlock patterns of the Android lock screen, which consist of minimum of m keys and maximum n keys.
+Rules for a valid pattern:
+ Each pattern must connect at least m keys and at most n keys. All the keys must be distinct. If the line connecting two consecutive keys in the pattern passes through any other keys, the other keys must have previously selected in the pattern.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/human-traffic-of-stadium/">Human Traffic of Stadium</a></h2>
+
+      <p>X city built a new stadium, each day many people visit it and the stats are saved as these columns: id, visit_date, people
+Please write a query to display the records which have 3 or more consecutive rows and the amount of people more than 100(inclusive).
+For example, the table stadium:
+&#43;------&#43;------------&#43;-----------&#43; | id | visit_date | people | &#43;------&#43;------------&#43;-----------&#43; | 1 | 2017-01-01 | 10 | | 2 | 2017-01-02 | 109 | | 3 | 2017-01-03 | 150 | | 4 | 2017-01-04 | 99 | | 5 | 2017-01-05 | 145 | | 6 | 2017-01-06 | 1455 | | 7 | 2017-01-07 | 199 | | 8 | 2017-01-08 | 188 | &#43;------&#43;------------&#43;-----------&#43; For the sample data above, the output is:</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/consecutive-available-seats/">Consecutive Available Seats</a></h2>
 
       <p>Several friends at a cinema ticket office would like to reserve consecutive available seats. Can you help to query all the consecutive available seats order by the seat_id using the following cinema table?
@@ -232,7 +313,8 @@ An active business is a business that has more than one event type with occurenc
       <h2><a href="http://www.hashnopolis.com/post/bitwise-and-of-numbers-range/">Bitwise and of Numbers Range</a></h2>
 
       <p>Given a range [m, n] where 0 &lt;= m &lt;= n &lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.
-Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution class Solution: def rangeBitwiseAnd(self, m: int, n: int) -&gt; int: shift = 0 while m &lt; n: m = m &gt;&gt; 1 n = n &gt;&gt; 1 shift &#43;= 1 m = m &lt;&lt; shift return m </p>
+Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution Java
+class Solution { public int rangeBitwiseAnd(int m, int n) { int shift = 0; while (m &lt; n) { m &gt;&gt;= 1; n &gt;&gt;= 1; shift&#43;&#43;; // System.out.println(&#34;m: &#34; &#43; String.format(&#34;%32s&#34;, Integer.toBinaryString(m)).replaceAll(&#34; &#34;, &#34;0&#34;));  // System.</p>
 
       <p class="meta">
         
@@ -356,87 +438,6 @@ For example:
           <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/last-person-to-fit-in-the-elevator/">Last Person to Fit in the Elevator</a></h2>
-
-      <p>Table: Queue
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | person_id | int | | person_name | varchar | | weight | int | | turn | int | &#43;-------------&#43;---------&#43; person_id is the primary key column for this table. This table has the information about all people waiting for an elevator. The person_id and turn columns will contain all numbers from 1 to n, where n is the number of rows in the table.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/movie-rating/">Movie Rating</a></h2>
-
-      <p>Table: Movies
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | title | varchar | &#43;---------------&#43;---------&#43; movie_id is the primary key for this table. title is the name of the movie. Table: Users
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | user_id | int | | name | varchar | &#43;---------------&#43;---------&#43; user_id is the primary key for this table. Table: Movie_Rating
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | user_id | int | | rating | int | | created_at | date | &#43;---------------&#43;---------&#43; (movie_id, user_id) is the primary key for this table.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/design-hashmap/">Design Hashmap</a></h2>
-
-      <p>Design a HashMap without using any built-in hash table libraries.
-To be specific, your design should include these functions:
- put(key, value): Insert a (key, value) pair into the HashMap. If the value already exists in the HashMap, update the value. get(key): Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key. remove(key): Remove the mapping for the value key if this map contains the mapping for the key.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

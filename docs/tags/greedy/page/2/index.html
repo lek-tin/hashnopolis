@@ -176,6 +176,57 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/minimum-cost-to-connect-sticks/">Minimum Cost to Connect Sticks</a></h2>
+
+      <p>Given n sticks of different lengths, we need to connect these sticks into one stick. We can connect only 2 sticks at a time. The cost required to connect 2 sticks is equal to sum of their lengths. The length of this connected stick is also equal to the sum of their lengths. This process is repeated until n sticks are connected into a single stick. Find the min possible cost required to connect all sticks.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/maximum-swap/">Maximum Swap</a></h2>
+
+      <p>Given a non-negative integer, you could swap two digits at most once to get the maximum valued number. Return the maximum valued number you could get.
+Example 1 Input: 2736 Output: 7236 Explanation: Swap the number 2 and the number 7. Example 2 Input: 9973 Output: 9973 Explanation: No swap. Note  The given number is in the range [0, 10^8]  Solution class Solution: def maximumSwap(self, num: int) -&gt; int: numChars = list(str(num)) n = len(numChars) last = [0 for i in range(10)] for i in range(n): last[ord(numChars[i])-ord(&#34;0&#34;)] = i for i in range(n): # test the biggest number first j = 9 # We wanna find out the largest digit on the right while j &gt; int(ord(numChars[i])-ord(&#34;0&#34;)): if last[j] &gt; i: temp = numChars[i] numChars[i] = numChars[last[j]] numChars[last[j]] = temp return int(&#34;&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/campus-bikes/">Campus Bikes</a></h2>
 
       <p>On a campus represented as a 2D grid, there are N workers and M bikes, with N &lt;= M. Each worker and bike is a 2D coordinate on this grid.

@@ -176,6 +176,90 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/jump-game-ii/">Jump Game II</a></h2>
+
+      <p>Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Your goal is to reach the last index in the minimum number of jumps.
+Example:
+Input: [2,3,1,1,4] Output: 2 Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/first-unique-number/">First Unique Number</a></h2>
+
+      <p>You have a queue of integers, you need to retrieve the first unique integer in the queue.
+Implement the FirstUnique class:
+ FirstUnique(int[] nums) Initializes the object with the numbers in the queue. int showFirstUnique() returns the value of the first unique integer of the queue, and returns -1 if there is no such integer. void add(int value) insert value to the queue.  Example 1 Input: [&#34;FirstUnique&#34;,&#34;showFirstUnique&#34;,&#34;add&#34;,&#34;showFirstUnique&#34;,&#34;add&#34;,&#34;showFirstUnique&#34;,&#34;add&#34;,&#34;showFirstUnique&#34;] [[[2,3,5]],[],[5],[],[2],[],[3],[]] Output: [null,2,null,2,null,3,null,-1] Explanation: FirstUnique firstUnique = new FirstUnique([2,3,5]); firstUnique.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/jump-game/">Jump Game</a></h2>
+
+      <p>Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Determine if you are able to reach the last index.
+Example 1 Input: [2,3,1,1,4] Output: true Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index. Example 2 Input: [3,2,1,0,4] Output: false Explanation: You will always arrive at index 3 no matter what.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/construct-binary-search-tree-from-preorder-traversal/">Construct Binary Search Tree From Preorder Traversal</a></h2>
 
       <p>Return the root node of a binary search tree that matches the given preorder traversal.
@@ -340,89 +424,6 @@ Example 1 Input: &#34;3&#43;2*2&#34; Output: 7 Example 2 Input: &#34; 3/2 &#34; 
       <p>Implement a basic calculator to evaluate a simple expression string.
 The expression string may contain open ( and closing parentheses ), the plus &#43; or minus sign -, non-negative integers and empty spaces  .
 Example 1 Input: &#34;1 &#43; 1&#34; Output: 2 Example 2 Input: &#34; 2-1 &#43; 2 &#34; Output: 3 Example 3 Input: &#34;(1&#43;(4&#43;5&#43;2)-3)&#43;(6&#43;8)&#34; Output: 23 Note  You may assume that the given expression is always valid.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/backspace-string-compare/">Backspace String Compare</a></h2>
-
-      <p>Solution (build string ❌) Time: O(N)
-Space: O(N)
-class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: res_1 = self.helper(S) res_2 = self.helper(T) return len(res_1) == len(res_2) and res_1 == res_2 def helper(self, s): stack = [] for c in s: if c != &#34;#&#34;: stack.append(c) else: if len(stack) &gt; 0: stack.pop() return &#34;&#34;.join(stack) s
-Solution (two pointers 👍🏼) Time: O(N)
-Space: O(1)
-from itertools import zip_longest class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: return all( a == b for a, b in zip_longest(self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/insertion-sort-list/">Insertion Sort List</a></h2>
-
-      <p>Algorithm of Insertion Sort Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
-Example 1 Input: 4-&gt;2-&gt;1-&gt;3 Output: 1-&gt;2-&gt;3-&gt;4 Example 2 Input: -1-&gt;5-&gt;3-&gt;4-&gt;0 Output: -1-&gt;0-&gt;3-&gt;4-&gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/middle-of-the-linked-list/">Middle of the Linked List</a></h2>
-
-      <p>Given a non-empty, singly linked list with head node head, return a middle node of linked list.
-If there are two middle nodes, return the second middle node.
-Example 1 Input: [1,2,3,4,5] Output: Node 3 from this list (Serialization: [3,4,5]) The returned node has value 3. (The judge&#39;s serialization of this node is [3,4,5]). Note that we returned a ListNode object ans, such that: ans.val = 3, ans.next.val = 4, ans.</p>
 
       <p class="meta">
         

@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Mon, 20 Apr 2020 04:25:35 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 23:14:20 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jump Game II</title>
+      <link>http://www.hashnopolis.com/post/jump-game-ii/</link>
+      <pubDate>Tue, 28 Apr 2020 23:14:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/jump-game-ii/</guid>
+      <description>Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Your goal is to reach the last index in the minimum number of jumps.
+Example:
+Input: [2,3,1,1,4] Output: 2 Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index.</description>
+    </item>
+    
+    <item>
+      <title>First Unique Number</title>
+      <link>http://www.hashnopolis.com/post/first-unique-number/</link>
+      <pubDate>Tue, 28 Apr 2020 03:53:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/first-unique-number/</guid>
+      <description>You have a queue of integers, you need to retrieve the first unique integer in the queue.
+Implement the FirstUnique class:
+ FirstUnique(int[] nums) Initializes the object with the numbers in the queue. int showFirstUnique() returns the value of the first unique integer of the queue, and returns -1 if there is no such integer. void add(int value) insert value to the queue.  Example 1 Input: [&amp;quot;FirstUnique&amp;quot;,&amp;quot;showFirstUnique&amp;quot;,&amp;quot;add&amp;quot;,&amp;quot;showFirstUnique&amp;quot;,&amp;quot;add&amp;quot;,&amp;quot;showFirstUnique&amp;quot;,&amp;quot;add&amp;quot;,&amp;quot;showFirstUnique&amp;quot;] [[[2,3,5]],[],[5],[],[2],[],[3],[]] Output: [null,2,null,2,null,3,null,-1] Explanation: FirstUnique firstUnique = new FirstUnique([2,3,5]); firstUnique.</description>
+    </item>
+    
+    <item>
+      <title>Jump Game</title>
+      <link>http://www.hashnopolis.com/post/jump-game/</link>
+      <pubDate>Sat, 25 Apr 2020 08:23:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/jump-game/</guid>
+      <description>Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Determine if you are able to reach the last index.
+Example 1 Input: [2,3,1,1,4] Output: true Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index. Example 2 Input: [3,2,1,0,4] Output: false Explanation: You will always arrive at index 3 no matter what.</description>
+    </item>
     
     <item>
       <title>Construct Binary Search Tree From Preorder Traversal</title>
@@ -248,7 +284,8 @@ Rules for a valid pattern:
       
       <guid>http://www.hashnopolis.com/post/bitwise-and-of-numbers-range/</guid>
       <description>Given a range [m, n] where 0 &amp;lt;= m &amp;lt;= n &amp;lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.
-Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution class Solution: def rangeBitwiseAnd(self, m: int, n: int) -&amp;gt; int: shift = 0 while m &amp;lt; n: m = m &amp;gt;&amp;gt; 1 n = n &amp;gt;&amp;gt; 1 shift += 1 m = m &amp;lt;&amp;lt; shift return m </description>
+Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution Java
+class Solution { public int rangeBitwiseAnd(int m, int n) { int shift = 0; while (m &amp;lt; n) { m &amp;gt;&amp;gt;= 1; n &amp;gt;&amp;gt;= 1; shift++; // System.out.println(&amp;#34;m: &amp;#34; + String.format(&amp;#34;%32s&amp;#34;, Integer.toBinaryString(m)).replaceAll(&amp;#34; &amp;#34;, &amp;#34;0&amp;#34;));  // System.</description>
     </item>
     
     <item>
@@ -1036,7 +1073,7 @@ Example 1 Input: str1 = &amp;quot;abac&amp;quot;, str2 = &amp;quot;cab&amp;quot;
       <pubDate>Sun, 16 Feb 2020 12:34:38 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/longest-common-substring/</guid>
-      <description>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m + 1, n + 1.  int L[][] = new int[m+1][n+1]; /* Following steps build L[m+1][n+1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&amp;lt;=m; i++) { for (int j=0; j&amp;lt;=n; j++) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] + 1 = 0 + 1 = 1  L[i][j] = L[i-1][j-1] + 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</description>
+      <description>Solution: public class LongestCommonString { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m + 1, n + 1.  int L[][] = new int[m+1][n+1]; Integer result = Integer.MIN_VALUE; /* Following steps build L[m+1][n+1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&amp;lt;=m; i++) { for (int j=0; j&amp;lt;=n; j++) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] + 1 = 0 + 1 = 1  L[i][j] = L[i-1][j-1] + 1; else L[i][j] = 0; if (dp[i][j] &amp;gt; result) { result = dp[i][j]; } } } return result; } </description>
     </item>
     
     <item>
@@ -2647,7 +2684,7 @@ We want to transform this BST into a circular doubly linked list. Each node in a
       
       <guid>http://www.hashnopolis.com/post/longest-increasing-subsequence/</guid>
       <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution Bottom-up solution:</description>
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution (Bottom-up) Python</description>
     </item>
     
     <item>
@@ -3021,7 +3058,7 @@ Example 1 Input: &amp;quot;()&amp;quot; Output: true Example 2 Input: &amp;quot;
       
       <guid>http://www.hashnopolis.com/post/maximal-square/</guid>
       <description>Given a 2D binary matrix filled with 0&#39;s and 1&#39;s, find the largest square containing only 1&#39;s and return its area.
-Example Input: 1 0 1 0 0 1 0 **1** **1** 1 1 1 **1** **1** 1 1 0 0 1 0 Output: 4 Solution class Solution: def maximalSquare(self, matrix): &amp;#34;&amp;#34;&amp;#34; :type matrix: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;#34;1&amp;#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;#34;1&amp;#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;#34;0&amp;#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2 class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</description>
+Example Input: 1 0 1 0 0 1 0 **1** **1** 1 1 1 **1** **1** 1 1 0 0 1 0 Output: 4 Solution class Solution: def maximalSquare(self, matrix): &amp;#34;&amp;#34;&amp;#34; :type matrix: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;#34;1&amp;#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;#34;1&amp;#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;#34;0&amp;#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2 Java</description>
     </item>
     
     <item>
