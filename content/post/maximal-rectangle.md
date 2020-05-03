@@ -5,10 +5,11 @@ authors: ["lek-tin"]
 tags: ["leetcode", "java", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-02-25T00:41:33-08:00
-lastmod: 2020-02-24T00:41:33-08:00
+lastmod: 2020-04-28T21:41:33-08:00
 draft: false
 archive: false
 ---
+
 Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
 
 ### Example:
@@ -86,6 +87,36 @@ class Solution {
                     curRight = j - 1;
                 }
             }
+
+            // input:
+            // [
+            //   ["1","0","1","0","0"],
+            //   ["1","0","1","1","1"],
+            //   ["1","1","1","1","1"],
+            //   ["1","0","0","1","0"]
+            // ]
+            //
+            // System.out.printf("%d, %d, %d, %d, %d\n", left[0], left[1], left[2], left[3], left[4]);
+            // System.out.printf("%d, %d, %d, %d, %d\n", right[0], right[1], right[2], right[3], right[4]);
+            // System.out.printf("%d, %d, %d, %d, %d\n", height[0], height[1], height[2], height[3], height[4]);
+            // System.out.println("-----");
+            //
+            // 0, 0, 2, 0, 0
+            // 0, 4, 2, 4, 4
+            // 1, 0, 1, 0, 0
+            // -----
+            // 0, 0, 2, 2, 2
+            // 0, 4, 2, 4, 4
+            // 2, 0, 2, 1, 1
+            // -----
+            // 0, 0, 2, 2, 2
+            // 0, 4, 2, 4, 4
+            // 3, 1, 3, 2, 2
+            // -----
+            // 0, 0, 0, 3, 0
+            // 0, 4, 4, 3, 4
+            // 4, 0, 0, 3, 0
+            // -----
 
             for (int j = 0; j < w; j++) {
                 res = Math.max(res, height[j] * (right[j] - left[j] + 1));

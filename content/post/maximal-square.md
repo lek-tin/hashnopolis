@@ -5,10 +5,11 @@ authors: ["lek-tin"]
 tags: ["leetcode", "matrix", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-11-01T23:18:11-07:00
-lastmod: 2020-02-24T00:41:33-08:00
+lastmod: 2020-04-28T00:41:33-08:00
 draft: false
 archive: false
 ---
+
 Given a 2D binary matrix filled with `0`'s and `1`'s, find the largest square containing only `1`'s and return its area.
 
 ### Example
@@ -59,6 +60,8 @@ class Solution:
                     area = matrix[i][j]
         return area**2
 ```
+
+Java
 ```java
 class Solution {
     public int maximalSquare(char[][] matrix) {

@@ -191,7 +191,7 @@ Example board = [ [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;], [&#39;S&#39
       <h1>Word Search</h1>
       <h4>Created: October 15, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: October 15, 2018</h5>
+        <h5>Last updated: April 7, 2020</h5>
       
       <hr />
       <p>Given a 2D board and a word, find if the word exists in the grid.</p>
@@ -208,6 +208,8 @@ Given word = &quot;ABCCED&quot;, return true.
 Given word = &quot;SEE&quot;, return true.
 Given word = &quot;ABCB&quot;, return false.
 </code></pre><h3 id="solution">Solution</h3>
+<p>Time:  <code>O(m * n * 4^l)</code><br>
+Space: <code>O(m*n + l)</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">exist</span>(self, board, word):
         <span style="color:#e6db74">&#34;&#34;&#34;

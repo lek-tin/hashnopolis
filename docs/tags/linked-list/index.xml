@@ -7,10 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sun, 29 Mar 2020 06:40:37 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2020 07:21:58 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Insertion Sort List</title>
+      <link>http://www.hashnopolis.com/post/insertion-sort-list/</link>
+      <pubDate>Wed, 08 Apr 2020 07:21:58 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/insertion-sort-list/</guid>
+      <description>Algorithm of Insertion Sort Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+Example 1 Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4 Example 2 Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;gt;3-&amp;gt;4-&amp;gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.</description>
+    </item>
+    
+    <item>
+      <title>Middle of the Linked List</title>
+      <link>http://www.hashnopolis.com/post/middle-of-the-linked-list/</link>
+      <pubDate>Wed, 08 Apr 2020 06:36:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/middle-of-the-linked-list/</guid>
+      <description>Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+If there are two middle nodes, return the second middle node.
+Example 1 Input: [1,2,3,4,5] Output: Node 3 from this list (Serialization: [3,4,5]) The returned node has value 3. (The judge&#39;s serialization of this node is [3,4,5]). Note that we returned a ListNode object ans, such that: ans.val = 3, ans.next.val = 4, ans.</description>
+    </item>
+    
+    <item>
+      <title>Sort List</title>
+      <link>http://www.hashnopolis.com/post/sort-list/</link>
+      <pubDate>Wed, 08 Apr 2020 04:17:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/sort-list/</guid>
+      <description>Sort a linked list in O(n log n) time using constant space complexity.
+Example 1 Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4 Example 2 Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;gt;3-&amp;gt;4-&amp;gt;5 Solution (merge sort - top down) Time: O(NlogN)
+Space: O(logN)
+Doesn&amp;rsquo;t satisfy the requirement
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def sortList(self, head: ListNode) -&amp;gt; ListNode: if not head or not head.</description>
+    </item>
     
     <item>
       <title>Design Circular Deque</title>

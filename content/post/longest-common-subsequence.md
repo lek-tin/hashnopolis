@@ -24,33 +24,27 @@ Consider the input strings “MASOQB” and “OQNXAYB”. Last characters match
 `L(“MASOQB”, “OQNXAYB”) = 1 + L(“MASOQ”, “OQNXAY”)`
 
 ### Solution:
-```java
-public class LongestCommonSubsequence
-{
-  /* Returns length of LCS for X[0..m-1], Y[0..n-1] */
-  int lcs( char[] X, char[] Y, int m, int n )
-  {
-    // Size = m + 1, n + 1.
-    int L[][] = new int[m+1][n+1];
 
-    /* Following steps build L[m+1][n+1] in bottom up fashion. Note
-    ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1]
-    */
-    for (int i=0; i<=m; i++)
-    {
-      for (int j=0; j<=n; j++)
-      {
-        if (i == 0 || j == 0)
-            // Initialise L[0][0] = 0
-            L[i][j] = 0;
-        else if (X[i-1] == Y[j-1])
-            // L[1][1] = L[0][0] + 1 = 0 + 1 = 1
-            L[i][j] = L[i-1][j-1] + 1;
-        else
-            L[i][j] = max(L[i-1][j], L[i][j-1]);
-      }
+```java
+class Solution {
+    public int longestCommonSubsequence(String text1, String text2) {
+        int N, M;
+        N = text1.length();
+        M = text2.length();
+        int[][] dp = new int[N+1][M+1];
+
+        for (int i = 0; i <= N; i++) {
+            for (int j = 0; j <= M; j++) {
+                if (i == 0 || j == 0)
+                    continue;
+                else if ( text1.charAt(i-1) == text2.charAt(j-1) )
+                    dp[i][j] = dp[i-1][j-1] + 1;
+                else
+                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+            }
+        }
+
+        return dp[N][M];
     }
-  return L[m][n];
-  }
 }
 ```

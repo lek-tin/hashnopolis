@@ -176,38 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/island-perimeter/">Island Perimeter</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/minesweeper/">Minesweeper</a></h2>
 
-      <p>You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
-Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
-The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island). One cell is a square with side length 1.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/verifying-an-alien-dictionary/">Verifying an Alien Dictionary</a></h2>
-
-      <p>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
-Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
-Example 1 Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlabcdefgijkmnopqrstuvwxyz&#34; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</p>
+      <p>Let’s play the minesweeper game (Wikipedia, online game)!
+You are given a 2D char matrix representing the game board. &#39;M&#39; represents an unrevealed mine, &#39;E&#39; represents an unrevealed empty square, &#39;B&#39; represents a revealed blank square that has no adjacent (above, below, left, right, and all 4 diagonals) mines, digit (&#39;1&#39; to &#39;8&#39;) represents how many mines are adjacent to this revealed square, and finally &#39;X&#39; represents a revealed mine.</p>
 
       <p class="meta">
         
@@ -219,7 +191,7 @@ Example 1 Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlab
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 
@@ -230,37 +202,12 @@ Example 1 Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlab
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/subarray-sum-equals-k/">Subarray Sum Equals K</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/minimum-remove-to-make-valid-parentheses/">Minimum Remove to Make Valid Parentheses</a></h2>
 
-      <p>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] &#43; nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count &#43;= mapping[s-k] temp = 0 try: temp = mapping[s] &#43; 1 except: temp = 1 mapping[s] = temp return count </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/find-in-mountain-array/">Find in Mountain Array</a></h2>
-
-      <p>(This problem is an interactive problem.)
-You may recall that an array A is a mountain array if and only if:
- A.length &gt;= 3 There exists some i with 0 &lt; i &lt; A.length - 1 such that:  A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target.</p>
+      <p>Given a string s of &#39;(&#39; , &#39;)&#39; and lowercase English characters.
+Your task is to remove the minimum number of parentheses ( &#39;(&#39; or &#39;)&#39;, in any positions ) so that the resulting parentheses string is valid and return any valid string.
+Formally, a parentheses string is valid if and only if:
+ It is the empty string, contains only lowercase characters, or It can be written as AB (A concatenated with B), where A and B are valid strings, or It can be written as (A), where A is a valid string.</p>
 
       <p class="meta">
         
@@ -283,36 +230,9 @@ You may recall that an array A is a mountain array if and only if:
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/peak-index-in-a-mountain-array/">Peak Index in a Mountain Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/package-dependencies/">Package Dependencies</a></h2>
 
-      <p>Let’s call an array A a mountain if the following properties hold:
- A.length &gt;= 3 There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1]  Given an array that is definitely a mountain, return any i such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/sum-of-square-numbers/">Sum of Square Numbers</a></h2>
-
-      <p>Given a non-negative integer c, your task is to decide whether there’re two integers a and b such that a2 &#43; b2 = c.
-Example 1 Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2 Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function</p>
+      <p>Solution def package_dependencies(dependencies): result = [] visiting = set([]) visited = set([]) def dfs(node): if node in visited: return visiting.add(node) for dependency in node.dependencies: if dependency in visiting: raise Exception(&#34;Have cycle in dependency graph.&#34;) if dependency not in visited: dfs(dependency) visiting.remove(node) visited.add(node) result.add(node) for node in dependencies: dfs(node) return result </p>
 
       <p class="meta">
         
@@ -335,12 +255,63 @@ Example 1 Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2 Inp
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/valid-perfect-square/">Valid Perfect Square</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/concatenated-words/">Concatenated Words</a></h2>
 
-      <p>Given a positive integer num, write a function which returns True if num is a perfect square else False.
-Note Do not use any built-in library function such as sqrt.
-Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: return True left, right = 0, num while left &lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2</p>
+      <p>Given a list of words (without duplicates), please write a program that returns all concatenated words in the given list of words. A concatenated word is defined as a string that is comprised entirely of at least two shorter words in the given array.
+Example: Input: [&#34;cat&#34;,&#34;cats&#34;,&#34;catsdogcats&#34;,&#34;dog&#34;,&#34;dogcatsdog&#34;,&#34;hippopotamuses&#34;,&#34;rat&#34;,&#34;ratcatdogcat&#34;] Output: [&#34;catsdogcats&#34;,&#34;dogcatsdog&#34;,&#34;ratcatdogcat&#34;] Explanation: &#34;catsdogcats&#34; can be concatenated by &#34;cats&#34;, &#34;dog&#34; and &#34;cats&#34;; &#34;dogcatsdog&#34; can be concatenated by &#34;dog&#34;, &#34;cats&#34; and &#34;dog&#34;; &#34;ratcatdogcat&#34; can be concatenated by &#34;rat&#34;, &#34;cat&#34;, &#34;dog&#34; and &#34;cat&#34;.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/concatenate-string-using-smaller-strings/">Concatenate String Using Smaller Strings</a></h2>
+
+      <p>Given a big string and a list of small strings, find whether the big string can be represented only by concatenation of smaller strings.
+Example: target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] Output: True Solution Dynamic programming
+target = &#34;abccbacbb&#34; smallerStrings = [&#34;abc&#34;, &#34;cc&#34;, &#34;ab&#34;, &#34;bac&#34;, &#34;b&#34;] N = len(target) dp = [False for _ in range(N)] def check(i, target): for s in smallerStrings: l = len(s) # print(s) if i &#43; l &lt;= N: tryStr = target[i:i&#43;l] # print(tryStr) if tryStr == s: dp[i&#43;l-1] = True check(i&#43;l, target) # print(&#34;-------&#34;) check(0, target) print(dp) print(dp[N-1]) </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/word-ladder-ii/">Word Ladder II</a></h2>
+
+      <p>Given two words (beginWord and endWord), and a dictionary’s word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
+ Only one letter can be changed at a time Each transformed word must exist in the word list. Note that beginWord is not a transformed word.  Example 1 Input: beginWord = &#34;hit&#34;, endWord = &#34;cog&#34;, wordList = [&#34;hot&#34;,&#34;dot&#34;,&#34;dog&#34;,&#34;lot&#34;,&#34;log&#34;,&#34;cog&#34;] Output: [ [&#34;hit&#34;,&#34;hot&#34;,&#34;dot&#34;,&#34;dog&#34;,&#34;cog&#34;], [&#34;hit&#34;,&#34;hot&#34;,&#34;lot&#34;,&#34;log&#34;,&#34;cog&#34;] ] Example 2 Input: beginWord = &#34;hit&#34; endWord = &#34;cog&#34; wordList = [&#34;hot&#34;,&#34;dot&#34;,&#34;dog&#34;,&#34;lot&#34;,&#34;log&#34;] Output: [] Explanation: The endWord “cog” is not in wordList, therefore no possible transformation.</p>
 
       <p class="meta">
         
@@ -363,12 +334,11 @@ class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: ret
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/guess-number-higher-or-lower-ii/">Guess Number Higher or Lower II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/longest-valid-parentheses/">Longest Valid Parentheses</a></h2>
 
-      <p>We are playing the Guess Game. The game is as follows:
-I pick a number from 1 to n. You have to guess which number I picked.
-Every time you guess wrong, I’ll tell you whether the number I picked is higher or lower.
-However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</p>
+      <p>Given a string containing just the characters &#39;(&#39; and &#39;)&#39;, find the length of the longest valid (well-formed) parentheses substring.
+Example 1 Input: &#34;(()&#34; Output: 2 Explanation: The longest valid parentheses substring is &#34;()&#34; Example 2 Input: &#34;)()())&#34; Output: 4 Explanation: The longest valid parentheses substring is &#34;()()&#34; Solution Dynamic programming
+// Time: `O(n)` // Space: `O(n)` public class Solution { public int longestValidParentheses(String s) { int maxans = 0; // dp array: ith element of dp represents the length of the longest valid substring ending at ith index.</p>
 
       <p class="meta">
         
@@ -391,13 +361,13 @@ However, when you guess a particular number x, and you guess wrong, you pay $x. 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/guess-number-higher-or-lower/">Guess Number Higher or Lower</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/path-sum-ii/">Path Sum II</a></h2>
 
-      <p>We are playing the Guess Game. The game is as follows:
-I pick a number from 1 to n. You have to guess which number I picked.
-Every time you guess wrong, I’ll tell you whether the number is higher or lower.
-You call a pre-defined API guess(int num) which returns 3 possible results (-1, 1, or 0):
--1 : My number is lower 1 : My number is higher 0 : Congrats!</p>
+      <p>Given a binary tree and a sum, find all root-to-leaf paths where each path’s sum equals the given sum.
+Note: A leaf is a node with no children.
+Example: Given the below binary tree and sum = 22,
+ 5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 Return:
+[ [5,4,11,2], [5,8,4,5] ] Solution # Definition for a binary tree node.</p>
 
       <p class="meta">
         
@@ -420,11 +390,41 @@ You call a pre-defined API guess(int num) which returns 3 possible results (-1, 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/find-anagram-mappings/">Find Anagram Mappings</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/best-time-to-buy-and-sell-stock-iii/">Best Time to Buy and Sell Stock III</a></h2>
 
-      <p>Given two lists A and B, and B is an anagram of A. B is an anagram of A means B is made by randomizing the order of the elements in A.
-We want to find an index mapping P, from A to B. A mapping P[i] = j means the ith element in A appears in B at index j.
-These lists A and B may contain duplicates. If there are multiple answers, output any of them.</p>
+      <p>Say you have an array for which the ithelement is the price of a given stock on day i.
+Design an algorithm to find the maximum profit. You may complete at most two transactions.
+Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
+Example 1 Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/longest-substring-without-repeating-characters/">Longest Substring Without Repeating Characters</a></h2>
+
+      <p>Given a string, find the length of the longest substring without repeating characters.
+*### Example 1
+Input: &#34;abcabcbb&#34; Output: 3 Explanation: The answer is &#34;abc&#34;, with the length of 3. *### Example 2
+Input: &#34;bbbbb&#34; Output: 1 Explanation: The answer is &#34;b&#34;, with the length of 1. *### Example 3
+Input: &#34;pwwkew&#34; Output: 3 Explanation: The answer is &#34;wke&#34;, with the length of 3. Note that the answer must be a substring, &#34;pwke&#34; is a subsequence and not a substring.</p>
 
       <p class="meta">
         

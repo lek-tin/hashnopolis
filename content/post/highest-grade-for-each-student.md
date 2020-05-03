@@ -6,9 +6,10 @@ tags: ["leetcode", "sql"]
 categories: ["database"]
 date: 2020-03-04T00:10:38-08:00
 lastmod: 2020-03-04T00:10:38-08:00
-draft: true
+draft: false
 archive: false
 ---
+
 Table: `Enrollments`
 ```
 +---------------+---------+
@@ -25,7 +26,8 @@ Write a SQL query to find the highest grade with its corresponding course for ea
 
 The query result format is in the following example:  
 
-Enrollments table:
+`Enrollments` table:
+
 ```
 +------------+-------------------+
 | student_id | course_id | grade |
@@ -40,7 +42,8 @@ Enrollments table:
 +------------+-----------+-------+
 ```
 
-Result table:
+`Result` table:
+
 ```
 +------------+-------------------+
 | student_id | course_id | grade |
@@ -54,5 +57,18 @@ Result table:
 ### Solution
 
 ```sql
-
+SELECT student_id,
+       Min(course_id) AS course_id,
+       grade
+FROM Enrollments
+WHERE
+    (student_id, grade) IN
+    (
+        SELECT student_id, MAX(grade)
+        FROM Enrollments
+        GROUP BY student_id
+        ORDER  BY NULL
+    )
+GROUP  BY student_id
+ORDER  BY student_id
 ```

@@ -176,10 +176,64 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/combination-sum-iv/">Combination Sum Iv</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/validate-stack-sequence/">Validate Stack Sequence</a></h2>
 
-      <p>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.
-Example nums = [1, 2, 3] target = 4 The possible combination ways are: (1, 1, 1, 1) (1, 1, 2) (1, 2, 1) (1, 3) (2, 1, 1) (2, 2) (3, 1) Note that different sequences are counted as different combinations. Therefore the output is 7.</p>
+      <p>Given two sequences pushed and popped with distinct values, return true if and only if this could have been the result of a sequence of push and pop operations on an initially empty stack.
+Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explanation: We might do the following sequence: push(1), push(2), push(3), push(4), pop() -&gt; 4, push(5), pop() -&gt; 5, pop() -&gt; 3, pop() -&gt; 2, pop() -&gt; 1 Example 2 Input: pushed = [1,2,3,4,5], popped = [4,3,5,1,2] Output: false Explanation: 1 cannot be popped before 2.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/delete-nodes-and-return-forest/">Delete Nodes and Return Forest</a></h2>
+
+      <p>Given the root of a binary tree, each node in the tree has a distinct value.
+After deleting all nodes with a value in to_delete, we are left with a forest (a disjoint union of trees).
+Return the roots of the trees in the remaining forest. You may return the result in any order.
+Example 1 Input: root = [1,2,3,4,5,6,7], to_delete = [3,5] Output: [[1,2,null,4],[6],[7]] Constraints 1 The number of nodes in the given tree is at most 1000.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1/">Insert Delete Getrandom O1</a></h2>
+
+      <p>Design a data structure that supports all following operations in average O(1) time.
+ insert(val): Inserts an item val to the set if not already present. remove(val): Removes an item val from the set if present. getRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.  Example // Init an empty set. RandomizedSet randomSet = new RandomizedSet(); // Inserts 1 to the set.</p>
 
       <p class="meta">
         
@@ -202,9 +256,67 @@ Example nums = [1, 2, 3] target = 4 The possible combination ways are: (1, 1, 1,
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/number-of-islands-ii/">Number of Islands Ii</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1-duplicates-allowed/">Insert Delete Getrandom O1 Duplicates Allowed</a></h2>
 
-      <p>A 2d grid map of m rows and n columns is initially filled with water. We may perform an addLand operation which turns the water at position (row, col) into a land. Given a list of positions to operate, count the number of islands after each addLand operation. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>
+      <p>Design a data structure that supports all following operations in average O(1) time.
+Note: Duplicate elements are allowed.
+ insert(val): Inserts an item val to the collection. remove(val): Removes an item val from the collection if present. getRandom: Returns a random element from current collection of elements. The probability of each element being returned is linearly related to the number of same value the collection contains.  Example // Init an empty collection.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+          <a  class="meta--cat" href="/categories/ood" ><strong>"ood"</strong></a>
+        
+          <a  class="meta--cat" href="/categories/hashmap" ><strong>"hashmap"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/moving-average-from-data-stream/">Moving Average From Data Stream</a></h2>
+
+      <p>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+Example MovingAverage m = new MovingAverage(3); m.next(1) = 1 m.next(10) = (1 &#43; 10) / 2 m.next(3) = (1 &#43; 10 &#43; 3) / 3 m.next(5) = (10 &#43; 3 &#43; 5) / 3 Solution from collections import deque class MovingAverage: def __init__(self, size: int): &#34;&#34;&#34; Initialize your data structure here.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/evaluate-division/">Evaluate Division</a></h2>
+
+      <p>Equations are given in the format A / B = k, where A and B are variables represented as strings, and k is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return -1.0.
+Example Given a / b = 2.0, b / c = 3.0. queries are: a / c = ?, b / a = ?, a / e = ?</p>
 
       <p class="meta">
         
@@ -227,38 +339,12 @@ Example nums = [1, 2, 3] target = 4 The possible combination ways are: (1, 1, 1,
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-genetic-mutation/">Minimum Genetic Mutation</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/logger-rate-limiter/">Logger Rate Limiter</a></h2>
 
-      <p>A gene string can be represented by an 8-character long string, with choices from &#34;A&#34;, &#34;C&#34;, &#34;G&#34;, &#34;T&#34;.
-Suppose we need to investigate about a mutation (mutation from “start” to “end”), where ONE mutation is defined as ONE single character changed in the gene string.
-For example, &#34;AACCGGTT&#34; -&gt; &#34;AACCGGTA&#34; is 1 mutation.
-Also, there is a given gene “bank”, which records all the valid gene mutations. A gene must be in the bank to make it a valid gene string.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/daily-temperatures/">Daily Temperatures</a></h2>
-
-      <p>Given a list of daily temperatures T, return a list such that, for each day in the input, tells you how many days you would have to wait until a warmer temperature. If there is no future day for which this is possible, put 0 instead.
-For example, given the list of temperatures T = [73, 74, 75, 71, 69, 72, 76, 73], your output should be [1, 1, 4, 2, 1, 1, 0, 0].</p>
+      <p>Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
+Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.
+It is possible that several messages arrive roughly at the same time.
+Example Logger logger = new Logger(); // logging string &#34;foo&#34; at timestamp 1 logger.</p>
 
       <p class="meta">
         
@@ -281,10 +367,38 @@ For example, given the list of temperatures T = [73, 74, 75, 71, 69, 72, 76, 73]
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/k-diff-pairs-in-an-array/">K Diff Pairs in an Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/design-hit-counter/">Design Hit Counter</a></h2>
 
-      <p>Given an array of integers and an integer k, you need to find the number of unique k-diff pairs in the array. Here a k-diff pair is defined as an integer pair (i, j), where i and j are both numbers in the array and their absolute difference is k.
-Example 1 Input: [3, 1, 4, 1, 5], k = 2 Output: 2 Explanation: There are two 2-diff pairs in the array, (1, 3) and (3, 5).</p>
+      <p>Design a hit counter which counts the number of hits received in the past 5 minutes.
+Each function accepts a timestamp parameter (in seconds granularity) and you may assume that calls are being made to the system in chronological order (ie, the timestamp is monotonically increasing). You may assume that the earliest timestamp starts at 1.
+It is possible that several hits arrive roughly at the same time.
+Example HitCounter counter = new HitCounter(); // hit at timestamp 1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/cut-wood/">Cut Wood</a></h2>
+
+      <p>Given an int array wood representing the length of n pieces of wood and an int k. It is required to cut these pieces of wood such that more or equal to k pieces of the same length len are cut. What is the longest len you can get?
+Example 1 Input: wood = [5, 9, 7], k = 3 Output: 5 Explanation: 5 -&gt; 5 9 -&gt; 5 &#43; 4 7 -&gt; 5 &#43; 2 Example 2 Input: wood = [5, 9, 7], k = 4 Output: 4 Explanation: 5 -&gt; 4 &#43; 1 9 -&gt; 4 * 2 &#43; 1 7 -&gt; 4 &#43; 3 Example 3 Input: wood = [1, 2, 3], k = 7 Output: 0 Explanation: We cannot make it.</p>
 
       <p class="meta">
         
@@ -307,36 +421,10 @@ Example 1 Input: [3, 1, 4, 1, 5], k = 2 Output: 2 Explanation: There are two 2-d
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/paint-house-ii/">Paint House II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
 
-      <p>There are a row of n houses, each house can be painted with one of the k colors. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.
-The cost of painting each house with a certain color is represented by a n x k cost matrix. For example, costs[0][0] is the cost of painting house 0 with color 0; costs[1][2] is the cost of painting house 1 with color 2, and so on… Find the minimum cost to paint all houses.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/paint-house/">Paint House</a></h2>
-
-      <p>There are a row of n houses, each house can be painted with one of the three colors: red, blue or green. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.
-The cost of painting each house with a certain color is represented by a n x 3 cost matrix. For example, costs[0][0] is the cost of painting house 0 with color red; costs[1][2] is the cost of painting house 1 with color green, and so on… Find the minimum cost to paint all houses.</p>
+      <p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cbacdcbc&#34; Output: &#34;acdb&#34; Example 3 Input: &#34;cba&#34; Output: &#34;cba&#34; Solution class Solution: def removeDuplicateLetters(self, s: str) -&gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &lt; stack[-1] and i &lt; last_indices[stack[-1]]: seen.</p>
 
       <p class="meta">
         
@@ -349,84 +437,6 @@ The cost of painting each house with a certain color is represented by a n x 3 c
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/department-highest-salary/">Department Highest Salary</a></h2>
-
-      <p>The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
-&#43;----&#43;-------&#43;--------&#43;--------------&#43; | Id | Name | Salary | DepartmentId | &#43;----&#43;-------&#43;--------&#43;--------------&#43; | 1 | Joe | 70000 | 1 | | 2 | Jim | 90000 | 1 | | 3 | Henry | 80000 | 2 | | 4 | Sam | 60000 | 2 | | 5 | Max | 90000 | 1 | &#43;----&#43;-------&#43;--------&#43;--------------&#43; The Department table holds all departments of the company.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/second-highest-salary/">Second Highest Salary</a></h2>
-
-      <p>Write a SQL query to get the second highest salary from the Employee table.
-&#43;----&#43;--------&#43; | Id | Salary | &#43;----&#43;--------&#43; | 1 | 100 | | 2 | 200 | | 3 | 300 | &#43;----&#43;--------&#43; For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
-&#43;---------------------&#43; | SecondHighestSalary | &#43;---------------------&#43; | 200 | &#43;---------------------&#43; Solution (naive) SELECT max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SELECT max(Salary) FROM Employee) Solution This solution considers when second highest salary doesn’t exist</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/longest-bitonic-subsequence/">Longest Bitonic Subsequence</a></h2>
-
-      <p>Given an array arr[0 … n-1] containing n positive integers, a subsequence of arr[] is called Bitonic if it is first increasing, then decreasing. Write a function that takes an array as argument and returns the length of the longest bitonic subsequence. A sequence, sorted in increasing order is considered Bitonic with the decreasing part as empty. Similarly, decreasing order sequence is considered Bitonic with the increasing part as empty.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

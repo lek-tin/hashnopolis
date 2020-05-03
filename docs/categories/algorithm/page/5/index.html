@@ -176,68 +176,12 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/string-compression/">String Compression</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/flatten-binary-tree-to-linked-list/">Flatten Binary Tree to Linked List</a></h2>
 
-      <p>Given an array of characters, compress it in-place.
-The length after compression must always be smaller than or equal to the original array.
-Every element of the array should be a character (not int) of length 1.
-After you are done modifying the input array in-place, return the new length of the array.
-Follow up Could you solve it using only O(1) extra space?
-Example 1 Input: [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;,&#34;b&#34;,&#34;c&#34;,&#34;c&#34;,&#34;c&#34;] Output: Return 6, and the first 6 characters of the input array should be: [&#34;a&#34;,&#34;2&#34;,&#34;b&#34;,&#34;2&#34;,&#34;c&#34;,&#34;3&#34;] Explanation: &#34;aa&#34; is replaced by &#34;a2&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/evaluate-reverse-polish-notation/">Evaluate Reverse Polish Notation</a></h2>
-
-      <p>Evaluate the value of an arithmetic expression in Reverse Polish Notation.
-Valid operators are &#43;, -, *, /. Each operand may be an integer or another expression.
-Note  Division between two integers should truncate toward zero. The given RPN expression is always valid. That means the expression would always evaluate to a result and there won’t be any divide by zero operation.  Example 1 Input: [&#34;2&#34;, &#34;1&#34;, &#34;&#43;&#34;, &#34;3&#34;, &#34;*&#34;] Output: 9 Explanation: ((2 &#43; 1) * 3) = 9 Example 2 Input: [&#34;4&#34;, &#34;13&#34;, &#34;5&#34;, &#34;/&#34;, &#34;&#43;&#34;] Output: 6 Explanation: (4 &#43; (13 / 5)) = 6 Example 3 Input: [&#34;10&#34;, &#34;6&#34;, &#34;9&#34;, &#34;3&#34;, &#34;&#43;&#34;, &#34;-11&#34;, &#34;*&#34;, &#34;/&#34;, &#34;*&#34;, &#34;17&#34;, &#34;&#43;&#34;, &#34;5&#34;, &#34;&#43;&#34;] Output: 22 Explanation: ((10 * (6 / ((9 &#43; 3) * -11))) &#43; 17) &#43; 5 = ((10 * (6 / (12 * -11))) &#43; 17) &#43; 5 = ((10 * (6 / -132)) &#43; 17) &#43; 5 = ((10 * 0) &#43; 17) &#43; 5 = (0 &#43; 17) &#43; 5 = 17 &#43; 5 = 22 Solution class Solution: def evalRPN(self, tokens: List[str]) -&gt; int: if not tokens: return None stack = [] operators = set([&#34;&#43;&#34;, &#34;-&#34;, &#34;*&#34;, &#34;/&#34;]) N = len(tokens) curr = 0 while curr &lt; N: while curr &lt; N and tokens[curr] not in operators: stack.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/reverse-words-in-a-string-iii/">Reverse Words in a String Iii</a></h2>
-
-      <p>Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
-Example 1 Input: &#34;Let&#39;s take LeetCode contest&#34; Output: &#34;s&#39;teL ekat edoCteeL tsetnoc&#34; Note In the string, each word is separated by single space and there will not be any extra space in the string.
-Solution class Solution: def reverseWords(self, s: str) -&gt; str: N = len(s) start = 0 s = list(s) res = &#34;&#34; while start &lt; N: while start &lt; N and s[start] == &#34; &#34;: start &#43;= 1 stop = start while stop &lt; N and s[stop] !</p>
+      <p>Given a binary tree, flatten it to a linked list in-place.
+For example, given the following tree:
+ 1 / \ 2 5 / \ \ 3 4 6 The flattened tree should look like:
+1 \ 2 \ 3 \ 4 \ 5 \ 6 Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
 
       <p class="meta">
         
@@ -260,38 +204,10 @@ Solution class Solution: def reverseWords(self, s: str) -&gt; str: N = len(s) st
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/reverse-string-ii/">Reverse String II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/flatten-a-multilevel-doubly-linked-list/">Flatten a Multilevel Doubly Linked List</a></h2>
 
-      <p>Given a string and an integer k, you need to reverse the first k characters for every 2k characters counting from the start of the string. If there are less than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and left the other as original.
-Example Input: s = &#34;abcdefg&#34;, k = 2 Output: &#34;bacdfeg&#34; Restrictions: The string consists of lower English letters only.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/reverse-string/">Reverse String</a></h2>
-
-      <p>Write a function that reverses a string. The input string is given as an array of characters char[].
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-You may assume all the characters consist of printable ascii characters.
-Example 1 Input: [&#34;h&#34;,&#34;e&#34;,&#34;l&#34;,&#34;l&#34;,&#34;o&#34;] Output: [&#34;o&#34;,&#34;l&#34;,&#34;l&#34;,&#34;e&#34;,&#34;h&#34;] Example 2 Input: [&#34;H&#34;,&#34;a&#34;,&#34;n&#34;,&#34;n&#34;,&#34;a&#34;,&#34;h&#34;] Output: [&#34;h&#34;,&#34;a&#34;,&#34;n&#34;,&#34;n&#34;,&#34;a&#34;,&#34;H&#34;] Solution class Solution: def reverseString(self, s: List[str]) -&gt; None: &#34;&#34;&#34; Do not return anything, modify s in-place instead.</p>
+      <p>You are given a doubly linked list which in addition to the next and previous pointers, it could have a child pointer, which may or may not point to a separate doubly linked list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in the example below.
+Flatten the list so that all the nodes appear in a single-level, doubly linked list.</p>
 
       <p class="meta">
         
@@ -303,7 +219,7 @@ Example 1 Input: [&#34;h&#34;,&#34;e&#34;,&#34;l&#34;,&#34;l&#34;,&#34;o&#34;] O
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 
@@ -314,11 +230,9 @@ Example 1 Input: [&#34;h&#34;,&#34;e&#34;,&#34;l&#34;,&#34;l&#34;,&#34;o&#34;] O
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/shortest-subarray-with-sum-at-least-k/">Shortest Subarray With Sum at Least K</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/optimal-account-balancing/">Optimal Account Balancing</a></h2>
 
-      <p>Return the length of the shortest, non-empty, contiguous subarray of A with sum at least K.
-If there is no non-empty subarray with sum at least K, return -1.
-Example 1 Input: A = [1], K = 1 Output: 1 Example 2 Input: A = [1,2], K = 4 Output: -1 Example 3 Input: A = [2,-1,2], K = 3 Output: 3 Note  1 &lt;= A.length &lt;= 50000 -10 ^ 5 &lt;= A[i] &lt;= 10 ^ 5 1 &lt;= K &lt;= 10 ^ 9  Solution (sliding window using pointers) This version exceeds time limit Time: O(N)</p>
+      <p>A group of friends went on holiday and sometimes lent each other money. For example, Alice paid for Bill’s lunch for $10. Then later Chris gave Alice $5 for a taxi ride. We can model each transaction as a tuple (x, y, z) which means person x gave person y $z. Assuming Alice, Bill, and Chris are person 0, 1, and 2 respectively (0, 1, 2 are the person’s ID), the transactions can be represented as [[0, 1, 10], [2, 0, 5]].</p>
 
       <p class="meta">
         
@@ -341,11 +255,36 @@ Example 1 Input: A = [1], K = 1 Output: 1 Example 2 Input: A = [1,2], K = 4 Outp
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/generalized-abbreviation/">Generalized Abbreviation</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/split-array-into-consecutive-subsequences/">Split Array Into Consecutive Subsequences</a></h2>
 
-      <p>Write a function to generate the generalized abbreviations of a word.
-Note The order of the output does not matter.
-Example Input: &#34;word&#34; Output: [&#34;word&#34;, &#34;1ord&#34;, &#34;w1rd&#34;, &#34;wo1d&#34;, &#34;wor1&#34;, &#34;2rd&#34;, &#34;w2d&#34;, &#34;wo2&#34;, &#34;1o1d&#34;, &#34;1or1&#34;, &#34;w1r1&#34;, &#34;1o2&#34;, &#34;2r1&#34;, &#34;3d&#34;, &#34;w3&#34;, &#34;4&#34;] Example class Solution: def generateAbbreviations(self, word: str) -&gt; List[str]: results = [] self.backtrack(results, word, &#34;&#34;, 0, 0) return results def backtrack(self, results, word, curr, start, count): print(curr, start, count) # &#34;&#34; 0 0 # &#34;&#34; 1 1 # &#34;&#34; 2 2 # &#34;&#34; 3 3 # &#34;&#34; 4 4 # ------------ # 3d 4 0 # ------------ # 2r 3 0 # 2r 4 1 # ------------ # 2rd 4 0 # ------------ # 1o 2 0 # 1o 3 1 # 1o 4 2 # ------------ # 1o1d 4 0 # ------------ # 1or 3 0 # 1or 4 1 # ------------ # 1ord 4 0 # ------------ # w 1 0 # w 2 1 # w 3 2 # w 4 3 # ------------ # w2d 4 0 # ------------ # w1r 3 0 # w1r 4 1 # ------------ # w1rd 4 0 # ------------ # wo 2 0 # wo 3 1 # wo 4 2 # ------------ # wo1d 4 0 # ------------ # wor 3 0 # wor 4 1 # ------------ # word 4 0 # ------------ if start == len(word): if count &gt; 0: curr &#43;= str(count) # curr could be &#34;4&#34; or &#34;abcd&#34; results.</p>
+      <p>Given an array nums sorted in ascending order, return true if and only if you can split it into 1 or more subsequences such that each subsequence consists of consecutive integers and has length at least 3.
+Example 1 Input: [1,2,3,3,4,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3 3, 4, 5 Example 2 Input: [1,2,3,3,4,4,5,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3, 4, 5 3, 4, 5 Example 3 Input: [1,2,3,4,4,5] Output: False Constraints  1 &lt;= nums.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/expressive-words/">Expressive Words</a></h2>
+
+      <p>Sometimes people repeat letters to represent extra feeling, such as “hello” -&gt; “heeellooo”, “hi” -&gt; “hiiii”. In these strings like “heeellooo”, we have groups of adjacent letters that are all the same: “h”, “eee”, “ll”, “ooo”.
+For some given string S, a query word is stretchy if it can be made to be equal to S by any number of applications of the following extension operation: choose a group consisting of characters c, and add some number of characters c to the group so that the size of the group is 3 or more.</p>
 
       <p class="meta">
         
@@ -368,39 +307,10 @@ Example Input: &#34;word&#34; Output: [&#34;word&#34;, &#34;1ord&#34;, &#34;w1rd
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/palindromic-substrings/">Palindromic Substrings</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/validate-stack-sequence/">Validate Stack Sequence</a></h2>
 
-      <p>Given a string, your task is to count how many palindromic substrings in this string.
-The substrings with different start indexes or end indexes are counted as different substrings even they consist of same characters.
-Example 1 Input: &#34;abc&#34; Output: 3 Explanation: Three palindromic strings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34;. Example 2 Input: &#34;aaa&#34; Output: 6 Explanation: Six palindromic strings: &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;aa&#34;, &#34;aa&#34;, &#34;aaa&#34;. Note  The input string length won’t exceed 1000.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/find-all-numbers-disappeared-in-an-array/">Find All Numbers Disappeared in an Array</a></h2>
-
-      <p>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
-Find all the elements of [1, n] inclusive that do not appear in this array.
-Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
-Example Input: [4,3,2,7,8,2,3,1] Output: [5,6] Solution class Solution: def findDisappearedNumbers(self, nums: List[int]) -&gt; List[int]: N = len(nums) result = [] for num in nums: pos = abs(num) % N if nums[pos] &gt; 0: nums[pos] = -nums[pos] for i in range(1, N&#43;1): if nums[i%N] &gt; 0: result.</p>
+      <p>Given two sequences pushed and popped with distinct values, return true if and only if this could have been the result of a sequence of push and pop operations on an initially empty stack.
+Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explanation: We might do the following sequence: push(1), push(2), push(3), push(4), pop() -&gt; 4, push(5), pop() -&gt; 5, pop() -&gt; 3, pop() -&gt; 2, pop() -&gt; 1 Example 2 Input: pushed = [1,2,3,4,5], popped = [4,3,5,1,2] Output: false Explanation: 1 cannot be popped before 2.</p>
 
       <p class="meta">
         
@@ -423,12 +333,38 @@ Example Input: [4,3,2,7,8,2,3,1] Output: [5,6] Solution class Solution: def find
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/first-missing-positive/">First Missing Positive</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/delete-nodes-and-return-forest/">Delete Nodes and Return Forest</a></h2>
 
-      <p>Given an unsorted integer array, find the smallest missing positive integer.
-Example 1 Input: [1,2,0] Output: 3 Example 2 Input: [3,4,-1,1] Output: 2 Example 3 Input: [7,8,9,11,12] Output: 1 Solution (hashmap) Time: O(N)
-Space: O(N)
-from collections import Counter class Solution: def firstMissingPositive(self, nums: List[int]) -&gt; int: counter = Counter(nums) curr = 1 while True: if curr not in counter: return curr curr &#43;= 1 Follow-up  Your algorithm should run in O(n) time and uses constant extra space.</p>
+      <p>Given the root of a binary tree, each node in the tree has a distinct value.
+After deleting all nodes with a value in to_delete, we are left with a forest (a disjoint union of trees).
+Return the roots of the trees in the remaining forest. You may return the result in any order.
+Example 1 Input: root = [1,2,3,4,5,6,7], to_delete = [3,5] Output: [[1,2,null,4],[6],[7]] Constraints 1 The number of nodes in the given tree is at most 1000.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1/">Insert Delete Getrandom O1</a></h2>
+
+      <p>Design a data structure that supports all following operations in average O(1) time.
+ insert(val): Inserts an item val to the set if not already present. remove(val): Removes an item val from the set if present. getRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.  Example // Init an empty set. RandomizedSet randomSet = new RandomizedSet(); // Inserts 1 to the set.</p>
 
       <p class="meta">
         
@@ -441,6 +377,63 @@ from collections import Counter class Solution: def firstMissingPositive(self, n
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1-duplicates-allowed/">Insert Delete Getrandom O1 Duplicates Allowed</a></h2>
+
+      <p>Design a data structure that supports all following operations in average O(1) time.
+Note: Duplicate elements are allowed.
+ insert(val): Inserts an item val to the collection. remove(val): Removes an item val from the collection if present. getRandom: Returns a random element from current collection of elements. The probability of each element being returned is linearly related to the number of same value the collection contains.  Example // Init an empty collection.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+          <a  class="meta--cat" href="/categories/ood" ><strong>"ood"</strong></a>
+        
+          <a  class="meta--cat" href="/categories/hashmap" ><strong>"hashmap"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/moving-average-from-data-stream/">Moving Average From Data Stream</a></h2>
+
+      <p>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+Example MovingAverage m = new MovingAverage(3); m.next(1) = 1 m.next(10) = (1 &#43; 10) / 2 m.next(3) = (1 &#43; 10 &#43; 3) / 3 m.next(5) = (10 &#43; 3 &#43; 5) / 3 Solution from collections import deque class MovingAverage: def __init__(self, size: int): &#34;&#34;&#34; Initialize your data structure here.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

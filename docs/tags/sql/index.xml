@@ -7,10 +7,81 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 02 Apr 2020 16:19:21 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 01:47:35 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Monthly Transactions Ii</title>
+      <link>http://www.hashnopolis.com/post/monthly-transactions-ii/</link>
+      <pubDate>Sun, 12 Apr 2020 01:47:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/monthly-transactions-ii/</guid>
+      <description>Table: Transactions
++----------------+---------+ | Column Name | Type | +----------------+---------+ | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | +----------------+---------+ id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&amp;quot;approved&amp;quot;, &amp;quot;declined&amp;quot;]. Table: Chargebacks +----------------+---------+ | Column Name | Type | +----------------+---------+ | trans_id | int | | charge_date | date | +----------------+---------+ Chargebacks contains basic information regarding incoming chargebacks from some transactions placed in Transactions table.</description>
+    </item>
+    
+    <item>
+      <title>Monthly Transactions I</title>
+      <link>http://www.hashnopolis.com/post/monthly-transactions-i/</link>
+      <pubDate>Sun, 12 Apr 2020 01:47:02 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/monthly-transactions-i/</guid>
+      <description>Table: Transactions
++---------------+---------+ | Column Name | Type | +---------------+---------+ | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | +---------------+---------+ id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&amp;quot;approved&amp;quot;, &amp;quot;declined&amp;quot;]. Write an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.</description>
+    </item>
+    
+    <item>
+      <title>Reported Posts II</title>
+      <link>http://www.hashnopolis.com/post/reported-posts-ii/</link>
+      <pubDate>Wed, 08 Apr 2020 01:25:27 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/reported-posts-ii/</guid>
+      <description>Table: Actions
++---------------+---------+ | Column Name | Type | +---------------+---------+ | user_id | int | | post_id | int | | action_date | date | | action | enum | | extra | varchar | +---------------+---------+ There is no primary key for this table, it may have duplicate rows. The action column is an ENUM type of (&#39;view&#39;, &#39;like&#39;, &#39;reaction&#39;, &#39;comment&#39;, &#39;report&#39;, &#39;share&#39;). The extra column has optional information about the action such as a reason for report or a type of reaction.</description>
+    </item>
+    
+    <item>
+      <title>Reported Posts</title>
+      <link>http://www.hashnopolis.com/post/reported-posts/</link>
+      <pubDate>Wed, 08 Apr 2020 01:24:17 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/reported-posts/</guid>
+      <description>Table: Actions
++---------------+---------+ | Column Name | Type | +---------------+---------+ | user_id | int | | post_id | int | | action_date | date | | action | enum | | extra | varchar | +---------------+---------+ There is no primary key for this table, it may have duplicate rows. The action column is an ENUM type of (&#39;view&#39;, &#39;like&#39;, &#39;reaction&#39;, &#39;comment&#39;, &#39;report&#39;, &#39;share&#39;). The extra column has optional information about the action such as a reason for report or a type of reaction.</description>
+    </item>
+    
+    <item>
+      <title>Nth Highest Salary</title>
+      <link>http://www.hashnopolis.com/post/nth-highest-salary/</link>
+      <pubDate>Tue, 07 Apr 2020 00:32:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/nth-highest-salary/</guid>
+      <description>Write a SQL query to get the nth highest salary from the Employee table.
++----+--------+ | Id | Salary | +----+--------+ | 1 | 100 | | 2 | 200 | | 3 | 300 | +----+--------+ For example, given the above Employee table, the nth highest salary where n = 2 is 200. If there is no nth highest salary, then the query should return null.
++------------------------+ | getNthHighestSalary(2) | +------------------------+ | 200 | +------------------------+ Solution CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN DECLARE M INT; SET M = N - 1; RETURN ( SELECT IFNULL( ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary Desc LIMIT 1 OFFSET M ), NULL ) ); END </description>
+    </item>
+    
+    <item>
+      <title>Reformat Department Table</title>
+      <link>http://www.hashnopolis.com/post/reformat-department-table/</link>
+      <pubDate>Mon, 06 Apr 2020 23:42:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/reformat-department-table/</guid>
+      <description>Table: Department
++---------------+---------+ | Column Name | Type | +---------------+---------+ | id | int | | revenue | int | | month | varchar | +---------------+---------+ (id, month) is the primary key of this table. The table has information about the revenue of each department per month. The month has values in [&amp;quot;Jan&amp;quot;,&amp;quot;Feb&amp;quot;,&amp;quot;Mar&amp;quot;,&amp;quot;Apr&amp;quot;,&amp;quot;May&amp;quot;,&amp;quot;Jun&amp;quot;,&amp;quot;Jul&amp;quot;,&amp;quot;Aug&amp;quot;,&amp;quot;Sep&amp;quot;,&amp;quot;Oct&amp;quot;,&amp;quot;Nov&amp;quot;,&amp;quot;Dec&amp;quot;]. Write an SQL query to reformat the table such that there is a department id column and a revenue column for each month.</description>
+    </item>
+    
+    <item>
+      <title>Big Countries</title>
+      <link>http://www.hashnopolis.com/post/big-countries/</link>
+      <pubDate>Mon, 06 Apr 2020 23:39:36 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/big-countries/</guid>
+      <description>There is a table World
++-----------------+------------+------------+--------------+---------------+ | name | continent | area | population | gdp | +-----------------+------------+------------+--------------+---------------+ | Afghanistan | Asia | 652230 | 25500100 | 20343000 | | Albania | Europe | 28748 | 2831741 | 12960000 | | Algeria | Africa | 2381741 | 37100000 | 188681000 | | Andorra | Europe | 468 | 78115 | 3712000 | | Angola | Africa | 1246700 | 20609294 | 100990000 | +-----------------+------------+------------+--------------+---------------+ A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.</description>
+    </item>
     
     <item>
       <title>Report Contiguous Dates</title>
@@ -100,6 +171,16 @@ For example:
     </item>
     
     <item>
+      <title>Highest Grade for Each Student</title>
+      <link>http://www.hashnopolis.com/post/highest-grade-for-each-student/</link>
+      <pubDate>Wed, 04 Mar 2020 00:10:38 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/highest-grade-for-each-student/</guid>
+      <description>Table: Enrollments
++---------------+---------+ | Column Name | Type | +---------------+---------+ | student_id | int | | course_id | int | | grade | int | +---------------+---------+ (student_id, course_id) is the primary key of this table. Write a SQL query to find the highest grade with its corresponding course for each student. In case of a tie, you should find the course with the smallest course_id. The output must be sorted by increasing student_id.</description>
+    </item>
+    
+    <item>
       <title>Department Highest Salary</title>
       <link>http://www.hashnopolis.com/post/department-highest-salary/</link>
       <pubDate>Tue, 03 Mar 2020 23:58:39 -0800</pubDate>
@@ -107,6 +188,16 @@ For example:
       <guid>http://www.hashnopolis.com/post/department-highest-salary/</guid>
       <description>The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
 +----+-------+--------+--------------+ | Id | Name | Salary | DepartmentId | +----+-------+--------+--------------+ | 1 | Joe | 70000 | 1 | | 2 | Jim | 90000 | 1 | | 3 | Henry | 80000 | 2 | | 4 | Sam | 60000 | 2 | | 5 | Max | 90000 | 1 | +----+-------+--------+--------------+ The Department table holds all departments of the company.</description>
+    </item>
+    
+    <item>
+      <title>Rank Scores</title>
+      <link>http://www.hashnopolis.com/post/rank-scores/</link>
+      <pubDate>Tue, 03 Mar 2020 16:56:09 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/rank-scores/</guid>
+      <description>Write a SQL query to rank scores. If there is a tie between two scores, both should have the same ranking. Note that after a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no &amp;ldquo;holes&amp;rdquo; between ranks.
++----+-------+ | Id | Score | +----+-------+ | 1 | 3.50 | | 2 | 3.65 | | 3 | 4.00 | | 4 | 3.</description>
     </item>
     
     <item>

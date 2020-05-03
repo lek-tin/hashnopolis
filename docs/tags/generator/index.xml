@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>generator on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/generator/</link>
+    <description>Recent content in generator on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Thu, 09 Apr 2020 01:53:50 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/generator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Backspace String Compare</title>
+      <link>http://www.hashnopolis.com/post/backspace-string-compare/</link>
+      <pubDate>Thu, 09 Apr 2020 01:53:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/backspace-string-compare/</guid>
+      <description>Solution (build string ❌) Time: O(N)
+Space: O(N)
+class Solution: def backspaceCompare(self, S: str, T: str) -&amp;gt; bool: res_1 = self.helper(S) res_2 = self.helper(T) return len(res_1) == len(res_2) and res_1 == res_2 def helper(self, s): stack = [] for c in s: if c != &amp;#34;#&amp;#34;: stack.append(c) else: if len(stack) &amp;gt; 0: stack.pop() return &amp;#34;&amp;#34;.join(stack) s
+Solution (two pointers 👍🏼) Time: O(N)
+Space: O(1)
+from itertools import zip_longest class Solution: def backspaceCompare(self, S: str, T: str) -&amp;gt; bool: return all( a == b for a, b in zip_longest(self.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -20,16 +20,67 @@ You may assume no duplicate exists in the array.
 Your algorithm's runtime complexity must be in the order of `O(log n)`.
 
 ### Example 1
+
 ```
 Input: nums = [4,5,6,7,0,1,2], target = 0
 Output: 4
 ```
+
 ### Example 2
+
 ```
 Input: nums = [4,5,6,7,0,1,2], target = 3
 Output: -1
 ```
-### Solution
+
+### Solution (binary search)
+
+Java
+```java
+class Solution {
+    public int search(int[] nums, int target) {
+        if (nums.length == 0) {
+            return -1;
+        }
+
+        int left, right;
+        left = 0;
+        right = nums.length - 1;
+
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            }
+
+            if (nums[left] < nums[mid]) {
+                if (nums[left] <= target && target <= nums[mid]) {
+                    right = mid;
+                } else {
+                    left = mid;
+                }
+            } else {
+                if (nums[mid] <= target && target <= nums[right]) {
+                    left = mid;
+                } else {
+                    right = mid;
+                }
+            }
+        }
+
+        if (nums[left] == target) {
+            return left;
+        }
+        if (nums[right] == target) {
+            return right;
+        }
+
+        return -1;
+    }
+}
+```
+
+Python
 ```python
 class Solution:
     def search(self, nums: List[int], target: int) -> int:

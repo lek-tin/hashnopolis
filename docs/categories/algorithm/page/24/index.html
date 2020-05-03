@@ -176,37 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/alien-dictionary/">Alien Dictionary</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/palindrome-number/">Palindrome Number</a></h2>
 
-      <p>There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language.
-Example 1 Input: [ &#34;wrt&#34;, &#34;wrf&#34;, &#34;er&#34;, &#34;ett&#34;, &#34;rftt&#34; ] Output: &#34;wertf&#34; Example 2 Input: [ &#34;z&#34;, &#34;x&#34; ] Output: &#34;zx&#34; Example 3 Input: [ &#34;z&#34;, &#34;x&#34;, &#34;z&#34; ] Output: &#34;&#34; Explanation The order is invalid, so return &#34;&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/random-pick-index/">Random Pick Index</a></h2>
-
-      <p>Given an array of integers with possible duplicates, randomly output the index of a given target number. You can assume that the given target number must exist in the array.
-Note The array size can be very large. Solution that uses too much extra space will not pass the judge.
-Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(nums); // pick(3) should return either index 2, 3, or 4 randomly.</p>
+      <p>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+Example 1 Input: 121 Output: true Example 2 Input: -121 Output: false Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome. Example 3 Input: 10 Output: false Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</p>
 
       <p class="meta">
         
@@ -229,37 +202,10 @@ Example int[] nums = new int[] {1,2,3,3,3}; Solution solution = new Solution(num
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/intersection-of-two-arrays/">Intersection of Two Arrays</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/longest-common-subsequence/">Longest Common Subsequence</a></h2>
 
-      <p>Given two arrays, write a function to compute their intersection.
-Example 1 Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2] Example 2 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] Output: [9,4] Note  Each element in the result must be unique. The result can be in any order.  Solution Use binary search when one of the lists is very long and the other is short
-class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]: if len(nums1) &lt; len(nums2): return self.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/word-break-ii/">Word Break II</a></h2>
-
-      <p>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
-Note  The same word in the dictionary may be reused multiple times in the segmentation. You may assume the dictionary does not contain duplicate words.  Example 1 Input: s = &#34;catsanddog&#34; wordDict = [&#34;cat&#34;, &#34;cats&#34;, &#34;and&#34;, &#34;sand&#34;, &#34;dog&#34;] Output: [ &#34;cats and dog&#34;, &#34;cat sand dog&#34; ] Example 2 Input: s = &#34;pineapplepenapple&#34; wordDict = [&#34;apple&#34;, &#34;pen&#34;, &#34;applepen&#34;, &#34;pine&#34;, &#34;pineapple&#34;] Output: [ &#34;pine apple pen apple&#34;, &#34;pineapple pen apple&#34;, &#34;pine applepen apple&#34; ] Explanation: Note that you are allowed to reuse a dictionary word.</p>
+      <p>The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences). It differs from the longest common substring problem: unlike substrings, subsequences are not required to occupy consecutive positions within the original sequences.
+Optimal Substructure: Let the input sequences be X[0..m-1] and Y[0..n-1] of lengths m and n respectively. And let L(X[0..m-1], Y[0..n-1]) be the length of LCS of the two sequences X and Y.</p>
 
       <p class="meta">
         
@@ -282,38 +228,14 @@ Note  The same word in the dictionary may be reused multiple times in the segmen
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/read-n-characters-given-read4/">Read N Characters Given Read4</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/minimum-depth-of-binary-tree/">Minimum Depth of Binary Tree</a></h2>
 
-      <p>The API: int read4(char *buf) reads 4 characters at a time from a file.
-The return value is the actual number of characters read. For example, it returns 3 if there is only 3 characters left in the file.
-By using the read4 API, implement the function int read(char *buf, int n) that reads n characters from the file.
-Example 1 Input: buf = &#34;abc&#34;, n = 4 Output: &#34;abc&#34; Explanation: The actual number of characters read is 3, which is &#34;abc&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/find-the-celebrity/">Find the Celebrity</a></h2>
-
-      <p>Suppose you are at a party with n people (labeled from 0 to n - 1) and among them, there may exist one celebrity. The definition of a celebrity is that all the other n - 1 people know him/her but he/she does not know any of them.
-Now you want to find out who the celebrity is or verify that there is not one. The only thing you are allowed to do is to ask questions like: “Hi, A.</p>
+      <p>Given a binary tree, find its minimum depth.
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+Note: A leaf is a node with no children.
+Example: Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 2. Solution: Recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int minDepth(TreeNode root) { if (root == null) return 0; int left = minDepth(root.</p>
 
       <p class="meta">
         
@@ -336,37 +258,14 @@ Now you want to find out who the celebrity is or verify that there is not one. T
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/flatten-nested-list-iterator/">Flatten Nested List Iterator</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-depth-of-binary-tree/">Maximum Depth of Binary Tree</a></h2>
 
-      <p>Given a nested list of integers, implement an iterator to flatten it.
-Each element is either an integer, or a list – whose elements may also be integers or other lists.
-Example 1 Input: [[1,1],2,[1,1]] Output: [1,1,2,1,1] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,1,2,1,1]`. Example 2 Input: [1,[4,[6]]] Output: [1,4,6] Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: `[1,4,6]`.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/serialize-and-deserialize-binary-tree/">Serialize and Deserialize Binary Tree</a></h2>
-
-      <p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
-Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</p>
+      <p>Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+Note: A leaf is a node with no children.
+Example: Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 return its minimum depth = 3. Solution: recursion
+/** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int maxDepth(TreeNode root) { if (root == null) return 0; int left = maxDepth(root.</p>
 
       <p class="meta">
         
@@ -378,7 +277,7 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -389,14 +288,39 @@ Design an algorithm to serialize and deserialize a binary tree. There is no rest
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/remove-invalid-parentheses/">Remove Invalid Parentheses</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/count-number-of-substrings-with-k-distinct-characters/">Count Number of Substrings With K Distinct Characters</a></h2>
 
-      <p>Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
-Note The input string may contain letters other than the parentheses ( and ). *### Example 1
-Input: &#34;()())()&#34; Output: [&#34;()()()&#34;, &#34;(())()&#34;] *### Example 2
-Input: &#34;(a)())()&#34; Output: [&#34;(a)()()&#34;, &#34;(a())()&#34;] *### Example 3
-Input: &#34;)(&#34; Output: [&#34;&#34;] *### Solution
-# Credit: # Credit: https://leetcode.com/problems/remove-invalid-parentheses/discuss/186597/Very-easy-to-understand-Python-DFS class Solution(object): def removeInvalidParentheses(self, s): &#34;&#34;&#34; :type s: str :rtype: List[str] &#34;&#34;&#34; res = [] self.</p>
+      <p>Given a string, find the length of the longest substring T that contains at most k distinct characters.
+Example 1 Input: s = &#34;eceba&#34;, k = 2 Output: 5 Explanation: &#34;ec&#34;, &#34;ce&#34;, &#34;eb&#34;, &#34;ba&#34; and &#34;ece&#34; k distinct characters. Example 2 Input: s = &#34;aa&#34;, k = 1 Output: 2 Explanation: &#34;a&#34; and &#34;aa&#34; have k distinct characters. import java.util.Arrays; public class CountKSubStr { // Function to count number of substrings  // with exactly k unique characters  int countkDist(String str, int k) { // Initialize result  int res = 0; int n = str.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/trapping-rain-water/">Trapping Rain Water</a></h2>
+
+      <p>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
+Example: Input: [0,1,0,2,1,0,1,3,2,1,2,1] Output: 6 Solution 1 Time: O(n)
+Space: O(1)
+class Solution { public int trap(int[] height) { int n = height.</p>
 
       <p class="meta">
         
@@ -419,10 +343,93 @@ Input: &#34;)(&#34; Output: [&#34;&#34;] *### Solution
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/task-scheduler/">Task Scheduler</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/container-with-most-water/">Container With Most Water</a></h2>
 
-      <p>Given a char array representing tasks CPU need to do. It contains capital letters A to Z where different letters represent different tasks.Tasks could be done without original order. Each task could be done in one interval. For each interval, CPU could finish one task or just be idle.
-However, there is a non-negative cooling interval n that means between two same tasks, there must be at least n intervals that CPU are doing different tasks or just be idle.</p>
+      <p>Given n non-negative integers a1, a2, …, an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+Note You may not slant the container and n is at least 2. The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7].</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-zigzag-level-order-traversal/">Binary Tree Zigzag Level Order Traversal</a></h2>
+
+      <p>Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).
+Example Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 return its zigzag level order traversal as:
+[ [3], [20,9], [15,7] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/string-to-integer-atoi/">String to Integer Atoi</a></h2>
+
+      <p>Implement atoi which converts a string to an integer.
+The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
+The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/longest-common-prefix/">Longest Common Prefix</a></h2>
+
+      <p>Write a function to find the longest common prefix string amongst an array of strings.
+If there is no common prefix, return an empty string “&#34;.
+Example 1 Input: [&#34;flower&#34;,&#34;flow&#34;,&#34;flight&#34;] Output: &#34;fl&#34; Example 2 Input: [&#34;dog&#34;,&#34;racecar&#34;,&#34;car&#34;] Output: &#34;&#34; Explanation: There is no common prefix among the input strings. Note All given inputs are in lowercase letters a-z.
+Note # Time: O(n*l), l: number of strings class Solution(object): def longestCommonPrefix(self, strs): &#34;&#34;&#34; :type strs: List[str] :rtype: str &#34;&#34;&#34; if not strs or len(strs) == 0: return &#34;&#34; res = strs[0] for s in strs: # string.</p>
 
       <p class="meta">
         

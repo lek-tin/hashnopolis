@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "recursion", "memoization", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2018-12-19T10:47:57-08:00
+lastmod: 2020-04-26T02:47:57-08:00
 draft: false
 archive: false
 ---
@@ -20,8 +21,10 @@ Explanation: The longest increasing subsequence is [2,3,7,101], therefore the le
 - There may be more than one LIS combination, it is only necessary for you to return the length.
 - Your algorithm should run in `O(n2)` complexity.
 Follow up: Could you improve it to `O(n log n)` time complexity?
-### Solution
-Bottom-up solution:
+
+### Solution (Bottom-up)
+
+Python
 ```python
 # Time: O(n^2)
 # Iterative
@@ -46,6 +49,8 @@ class Solution:
         maxCount = max(counts)
         return maxCount
 ```
+
+Java 1
 ```java
 class Solution {
     public int lengthOfLIS(int[] nums) {
@@ -53,22 +58,20 @@ class Solution {
             return 0;
         }
 
-        int[] counts = new int[nums.length];
-        int longest = 0;
+        int N = nums.length;
+        int[] counts = new int[N];
+        int longest = 1;
         Arrays.fill(counts, 1);
 
-        for (int i = 1; i < nums.length; i++) {
+        for (int i = 1; i < N; i++) {
             for (int j = 0; j < i; j++) {
                 // Sub problems for nums[0:i]
                 if (nums[j] < nums[i]) {
                     counts[i] = Math.max(counts[i], counts[j] + 1);
                 }
-            }
-        }
-
-        for (int count: counts) {
-            if (count > longest) {
-                longest = count;
+                if (count > longest) {
+                    longest = count;
+                }
             }
         }
 
@@ -76,6 +79,8 @@ class Solution {
     }
 }
 ```
+
+Java 2
 ```java
 class Solution {
     public int lengthOfLIS(int[] nums) {
@@ -83,27 +88,20 @@ class Solution {
             return 0;
         }
 
-        int[] counts = new int[nums.length];
-        int longest = 0;
-        Arrays.fill(counts, 0);
+        int N = nums.length;
+        int longest = 1;
+        int[] counts = new int[N];
         counts[0] = 1;
 
-        for (int i = 1; i < nums.length; i++) {
+        for (int i = 1; i < N; i++) {
             for (int j = 0; j < i; j++) {
-                // find longest increasing subsequence that ends with nums[j]
-			    // where nums[j] is less than the current element nums[i]
-                // After the ith iteration, counts[i] is the biggest
-                if (nums[j] < nums[i] && counts[j] > counts[i]) {
-				    counts[i] = counts[j];
+                if (nums[j] < nums[i] && counts[i] < counts[j]) {
+                    counts[i] = counts[j];
                 }
             }
-            // include nums[i] in counts
-		    counts[i]++;
-        }
-
-        for (int count: counts) {
-            if (count > longest) {
-                longest = count;
+            counts[i]++;
+            if (counts[i] > longest) {
+                longest = counts[i];
             }
         }
 

@@ -176,6 +176,189 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/monthly-transactions-ii/">Monthly Transactions Ii</a></h2>
+
+      <p>Table: Transactions
+&#43;----------------&#43;---------&#43; | Column Name | Type | &#43;----------------&#43;---------&#43; | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | &#43;----------------&#43;---------&#43; id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&#34;approved&#34;, &#34;declined&#34;]. Table: Chargebacks &#43;----------------&#43;---------&#43; | Column Name | Type | &#43;----------------&#43;---------&#43; | trans_id | int | | charge_date | date | &#43;----------------&#43;---------&#43; Chargebacks contains basic information regarding incoming chargebacks from some transactions placed in Transactions table.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/monthly-transactions-i/">Monthly Transactions I</a></h2>
+
+      <p>Table: Transactions
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | &#43;---------------&#43;---------&#43; id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&#34;approved&#34;, &#34;declined&#34;]. Write an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/reported-posts-ii/">Reported Posts II</a></h2>
+
+      <p>Table: Actions
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | user_id | int | | post_id | int | | action_date | date | | action | enum | | extra | varchar | &#43;---------------&#43;---------&#43; There is no primary key for this table, it may have duplicate rows. The action column is an ENUM type of (&#39;view&#39;, &#39;like&#39;, &#39;reaction&#39;, &#39;comment&#39;, &#39;report&#39;, &#39;share&#39;). The extra column has optional information about the action such as a reason for report or a type of reaction.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/reported-posts/">Reported Posts</a></h2>
+
+      <p>Table: Actions
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | user_id | int | | post_id | int | | action_date | date | | action | enum | | extra | varchar | &#43;---------------&#43;---------&#43; There is no primary key for this table, it may have duplicate rows. The action column is an ENUM type of (&#39;view&#39;, &#39;like&#39;, &#39;reaction&#39;, &#39;comment&#39;, &#39;report&#39;, &#39;share&#39;). The extra column has optional information about the action such as a reason for report or a type of reaction.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/nth-highest-salary/">Nth Highest Salary</a></h2>
+
+      <p>Write a SQL query to get the nth highest salary from the Employee table.
+&#43;----&#43;--------&#43; | Id | Salary | &#43;----&#43;--------&#43; | 1 | 100 | | 2 | 200 | | 3 | 300 | &#43;----&#43;--------&#43; For example, given the above Employee table, the nth highest salary where n = 2 is 200. If there is no nth highest salary, then the query should return null.
+&#43;------------------------&#43; | getNthHighestSalary(2) | &#43;------------------------&#43; | 200 | &#43;------------------------&#43; Solution CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN DECLARE M INT; SET M = N - 1; RETURN ( SELECT IFNULL( ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary Desc LIMIT 1 OFFSET M ), NULL ) ); END </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/reformat-department-table/">Reformat Department Table</a></h2>
+
+      <p>Table: Department
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | id | int | | revenue | int | | month | varchar | &#43;---------------&#43;---------&#43; (id, month) is the primary key of this table. The table has information about the revenue of each department per month. The month has values in [&#34;Jan&#34;,&#34;Feb&#34;,&#34;Mar&#34;,&#34;Apr&#34;,&#34;May&#34;,&#34;Jun&#34;,&#34;Jul&#34;,&#34;Aug&#34;,&#34;Sep&#34;,&#34;Oct&#34;,&#34;Nov&#34;,&#34;Dec&#34;]. Write an SQL query to reformat the table such that there is a department id column and a revenue column for each month.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/big-countries/">Big Countries</a></h2>
+
+      <p>There is a table World
+&#43;-----------------&#43;------------&#43;------------&#43;--------------&#43;---------------&#43; | name | continent | area | population | gdp | &#43;-----------------&#43;------------&#43;------------&#43;--------------&#43;---------------&#43; | Afghanistan | Asia | 652230 | 25500100 | 20343000 | | Albania | Europe | 28748 | 2831741 | 12960000 | | Algeria | Africa | 2381741 | 37100000 | 188681000 | | Andorra | Europe | 468 | 78115 | 3712000 | | Angola | Africa | 1246700 | 20609294 | 100990000 | &#43;-----------------&#43;------------&#43;------------&#43;--------------&#43;---------------&#43; A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/report-contiguous-dates/">Report Contiguous Dates</a></h2>
 
       <p>Table: Failed
@@ -235,193 +418,6 @@ For example, the table stadium:
 
       <p>Several friends at a cinema ticket office would like to reserve consecutive available seats. Can you help to query all the consecutive available seats order by the seat_id using the following cinema table?
 | seat_id | free | |---------|------| | 1 | 1 | | 2 | 0 | | 3 | 1 | | 4 | 1 | | 5 | 1 | Your query should return the following result for the sample case above.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/active-businesses/">Active Businesses</a></h2>
-
-      <p>Table: Events
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | business_id | int | | event_type | varchar | | occurences | int | &#43;---------------&#43;---------&#43; (business_id, event_type) is the primary key of this table. Each row in the table logs the info that an event of some type occured at some business for a number of times. Write an SQL query to find all active businesses.
-An active business is a business that has more than one event type with occurences greater than the average occurences of that event type among all businesses.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/second-degree-follower/">Second Degree Follower</a></h2>
-
-      <p>In facebook, there is a follow table with two columns: followee, follower.
-Please write a sql query to get the amount of each follower’s follower if he/she has one.
-For example:
-&#43;-------------&#43;------------&#43; | followee | follower | &#43;-------------&#43;------------&#43; | A | B | | B | C | | B | D | | D | E | &#43;-------------&#43;------------&#43; should output: &#43;-------------&#43;------------&#43; | follower | num | &#43;-------------&#43;------------&#43; | B | 2 | | D | 1 | &#43;-------------&#43;------------&#43; Explaination: Both B and D exist in the follower list, when as a followee, B&#39;s follower is C and D, and D&#39;s follower is E.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/last-person-to-fit-in-the-elevator/">Last Person to Fit in the Elevator</a></h2>
-
-      <p>Table: Queue
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | person_id | int | | person_name | varchar | | weight | int | | turn | int | &#43;-------------&#43;---------&#43; person_id is the primary key column for this table. This table has the information about all people waiting for an elevator. The person_id and turn columns will contain all numbers from 1 to n, where n is the number of rows in the table.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/movie-rating/">Movie Rating</a></h2>
-
-      <p>Table: Movies
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | title | varchar | &#43;---------------&#43;---------&#43; movie_id is the primary key for this table. title is the name of the movie. Table: Users
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | user_id | int | | name | varchar | &#43;---------------&#43;---------&#43; user_id is the primary key for this table. Table: Movie_Rating
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | user_id | int | | rating | int | | created_at | date | &#43;---------------&#43;---------&#43; (movie_id, user_id) is the primary key for this table.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/team-scores-in-football-tournament/">Team Scores in Football Tournament</a></h2>
-
-      <p>Solution (Union) SELECT t.team_id, t.team_name, IFNULL(SUM(p.points), 0) AS num_points FROM Teams t LEFT JOIN ( SELECT host_team as team_id, CASE WHEN host_goals &gt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches UNION ALL SELECT guest_team as team_id, CASE WHEN host_goals &lt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches ) AS p ON t.team_id = p.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/department-highest-salary/">Department Highest Salary</a></h2>
-
-      <p>The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
-&#43;----&#43;-------&#43;--------&#43;--------------&#43; | Id | Name | Salary | DepartmentId | &#43;----&#43;-------&#43;--------&#43;--------------&#43; | 1 | Joe | 70000 | 1 | | 2 | Jim | 90000 | 1 | | 3 | Henry | 80000 | 2 | | 4 | Sam | 60000 | 2 | | 5 | Max | 90000 | 1 | &#43;----&#43;-------&#43;--------&#43;--------------&#43; The Department table holds all departments of the company.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/second-highest-salary/">Second Highest Salary</a></h2>
-
-      <p>Write a SQL query to get the second highest salary from the Employee table.
-&#43;----&#43;--------&#43; | Id | Salary | &#43;----&#43;--------&#43; | 1 | 100 | | 2 | 200 | | 3 | 300 | &#43;----&#43;--------&#43; For example, given the above Employee table, the query should return 200 as the second highest salary. If there is no second highest salary, then the query should return null.
-&#43;---------------------&#43; | SecondHighestSalary | &#43;---------------------&#43; | 200 | &#43;---------------------&#43; Solution (naive) SELECT max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SELECT max(Salary) FROM Employee) Solution This solution considers when second highest salary doesn’t exist</p>
 
       <p class="meta">
         

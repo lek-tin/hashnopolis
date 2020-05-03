@@ -189,7 +189,7 @@
       <h1>Second Highest Salary</h1>
       <h4>Created: March 3, 2020 by [lek-tin]</h4>
       
-        <h5>Last updated: March 3, 2020</h5>
+        <h5>Last updated: April 7, 2020</h5>
       
       <hr />
       <p>Write a SQL query to get the second highest salary from the <code>Employee</code> table.</p>
@@ -213,11 +213,13 @@
 <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">max</span>(Salary) <span style="color:#66d9ef">FROM</span> Employee)
 </code></pre></div><h3 id="solution">Solution</h3>
 <p>This solution considers when second highest salary doesn&rsquo;t exist</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">#</span> <span style="color:#66d9ef">Write</span> your MySQL query <span style="color:#66d9ef">statement</span> below
-<span style="color:#66d9ef">SELECT</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
     IFNULL(
-        (   <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> Salary
-            <span style="color:#66d9ef">FROM</span> Employee
+        (
+            <span style="color:#66d9ef">SELECT</span>
+                <span style="color:#66d9ef">DISTINCT</span> Salary
+            <span style="color:#66d9ef">FROM</span>
+                Employee
             <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> Salary <span style="color:#66d9ef">Desc</span>
             <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span>
             <span style="color:#66d9ef">OFFSET</span> <span style="color:#ae81ff">1</span>

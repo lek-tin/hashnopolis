@@ -176,11 +176,92 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/triangle/">Triangle</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/strobogrammatic-number-ii/">Strobogrammatic Number II</a></h2>
 
-      <p>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
-For example, given the following triangle
-[ [2], [3,4], [6,5,7], [4,1,8,3] ] The minimum path sum from top to bottom is 11 (i.e., 2 &#43; 3 &#43; 5 &#43; 1 = 11). Note  Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</p>
+      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Find all strobogrammatic numbers that are of length = n.
+Example: Input: n = 2 Output: [&#34;11&#34;,&#34;69&#34;,&#34;88&#34;,&#34;96&#34;] Solution # Time: O(n^2 * 5^(n/2)) # Space: `O(n)` class Solution: def findStrobogrammatic(self, n: int) -&gt; List[str]: stroboPairs = { &#34;0&#34;: &#34;0&#34;, &#34;1&#34;: &#34;1&#34;, &#34;6&#34;: &#34;9&#34;, &#34;8&#34;: &#34;8&#34;, &#34;9&#34;: &#34;6&#34; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&#34;&#34;] if curr == 1: return list(&#34;018&#34;) prev = self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/strobogrammatic-number/">Strobogrammatic Number</a></h2>
+
+      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.
+Example 1 Input: &#34;69&#34; Output: true Example 2 Input: &#34;88&#34; Output: true Example 3 Input: &#34;962&#34; Output: false Solution class Solution: def isStrobogrammatic(self, num: str) -&gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2&#43;1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/island-perimeter/">Island Perimeter</a></h2>
+
+      <p>You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
+Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
+The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island). One cell is a square with side length 1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/verifying-an-alien-dictionary/">Verifying an Alien Dictionary</a></h2>
+
+      <p>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
+Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
+Example 1 Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlabcdefgijkmnopqrstuvwxyz&#34; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</p>
 
       <p class="meta">
         
@@ -203,148 +284,11 @@ For example, given the following triangle
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/dungeon-game/">Dungeon Game</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/subarray-sum-equals-k/">Subarray Sum Equals K</a></h2>
 
-      <p>The demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (K) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.
-The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-path-sum/">Minimum Path Sum</a></h2>
-
-      <p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution 1 (DP with n extra space) class Solution: def minPathSum(self, grid: List[List[int]]) -&gt; int: m = len(grid) n = len(grid[0]) if m == 0 or n == 0: return 0 sums = [[0 for _ in range(n)] for _ in range(m)] sums[0][0] = grid[0][0] for i in range(1, m): sums[i][0] = sums[i-1][0] &#43; grid[i][0] for i in range(1, n): sums[0][i] = sums[0][i-1] &#43; grid[0][i] for i in range(1, m): for j in range(1, n): sums[i][j] = min(sums[i-1][j], sums[i][j-1]) &#43; grid[i][j] return sums[-1][-1] Solution 2 (DP with no extra space) class Solution: def minPathSum(self, grid): &#34;&#34;&#34; :type grid: List[List[int]] :rtype: int &#34;&#34;&#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/largest-divisible-subset/">Largest Divisible Subset</a></h2>
-
-      <p>Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
-Si % Sj = 0 or Sj % Si = 0.
-If there are multiple solutions, return any subset is fine.
-Example 1 Input: [1,2,3] Output: [1,2] (of course, [1,3] will also be ok) Example 2 Input: [1,2,4,8] Output: [1,2,4,8] Solution class Solution: def largestDivisibleSubset(self, nums: List[int]) -&gt; List[int]: if not nums or len(nums) == 0: return [] nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/climbing-stairs/">Climbing Stairs</a></h2>
-
-      <p>You are climbing a stair case. It takes n steps to reach to the top.
-Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note Given n will be a positive integer. Example 1 Input: 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps Example 2 Input: 3 Output: 3 Explanation: There are three ways to climb to the top.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/valid-triangle-number/">Valid Triangle Number</a></h2>
-
-      <p>Given an array consists of non-negative integers, your task is to count the number of triplets chosen from the array that can make triangles if we take them as side lengths of a triangle.
-Example 1 Input: [2,2,3,4] Output: 3 Explanation: Valid combinations are:
-2,3,4 (using the first 2) 2,3,4 (using the second 2) 2,2,3
-Note  The length of the given array won’t exceed 1000. The integers in the given array are in the range of [0, 1000].</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/construct-binary-tree-from-inorder-and-postorder-traversal/">Construct Binary Tree From Inorder and Postorder Traversal</a></h2>
-
-      <p>Given inorder and postorder traversal of a tree, construct the binary tree.
-Note You may assume that duplicates do not exist in the tree.
-For example, given
-inorder = [9,3,15,20,7] postorder = [9,15,7,20,3] Return the following binary tree:
- 3 / \ 9 20 / \ 15 7 Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ // the idea is to start from the rightmst part of the postorder because that is always the root; then divide the inorder as per the value of the root call the right child first because after accesing the parent in postorder the right child is encountered first and then the left child class Solution { int postOrderIndex; public TreeNode buildTree(int[] inorder, int[] postorder) { postOrderIndex = postorder.</p>
+      <p>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+Example 1 «««&lt; HEAD        dev
+       Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].</p>
 
       <p class="meta">
         
@@ -367,13 +311,11 @@ inorder = [9,3,15,20,7] postorder = [9,15,7,20,3] Return the following binary tr
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/construct-binary-tree-from-preorder-and-inorder-traversal/">Construct Binary Tree From Preorder and Inorder Traversal</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/find-in-mountain-array/">Find in Mountain Array</a></h2>
 
-      <p>Given preorder and inorder traversal of a tree, construct the binary tree.
-Note You may assume that duplicates do not exist in the tree.
-For example, given:
-preorder = [3,9,20,15,7] inorder = [9,3,15,20,7] Return the following binary tree:
- 3 / \ 9 20 / \ 15 7 Hint Solution: /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public TreeNode buildTree(int[] preorder, int[] inorder) { return helper(0, 0, inorder.</p>
+      <p>(This problem is an interactive problem.)
+You may recall that an array A is a mountain array if and only if:
+ A.length &gt;= 3 There exists some i with 0 &lt; i &lt; A.length - 1 such that:  A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target.</p>
 
       <p class="meta">
         
@@ -396,11 +338,10 @@ preorder = [3,9,20,15,7] inorder = [9,3,15,20,7] Return the following binary tre
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/palindrome-linked-list/">Palindrome Linked List</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/peak-index-in-a-mountain-array/">Peak Index in a Mountain Array</a></h2>
 
-      <p>Given a singly linked list, determine if it is a palindrome.
-Example 1 Input: 1-&gt;2 Output: false Example 2 Input: 1-&gt;2-&gt;2-&gt;1 Output: true Follow up: Could you do it in O(n) time and O(1) space?
-Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def isPalindrome(self, head: ListNode) -&gt; bool: if not head: return True middle = self.</p>
+      <p>Let’s call an array A a mountain if the following properties hold:
+ A.length &gt;= 3 There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1]  Given an array that is definitely a mountain, return any i such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.</p>
 
       <p class="meta">
         
@@ -423,11 +364,66 @@ Solution # Definition for singly-linked list. # class ListNode: # def __init__(s
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/3sum-with-multiplicity/">3sum With Multiplicity</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/sum-of-square-numbers/">Sum of Square Numbers</a></h2>
 
-      <p>Given an integer array A, and an integer target, return the number of tuples i, j, k such that i &lt; j &lt; k and A[i] &#43; A[j] &#43; A[k] == target.
-As the answer can be very large, return it modulo 10^9 &#43; 7.
-Example 1 Input: A = [1,1,2,2,3,3,4,4,5,5], target = 8 Output: 20 Explanation: Enumerating by the values (A[i], A[j], A[k]): (1, 2, 5) occurs 8 times; (1, 3, 4) occurs 8 times; (2, 2, 4) occurs 2 times; (2, 3, 3) occurs 2 times.</p>
+      <p>Given a non-negative integer c, your task is to decide whether there’re two integers a and b such that a2 &#43; b2 = c.
+Example 1 Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2 Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/valid-perfect-square/">Valid Perfect Square</a></h2>
+
+      <p>Given a positive integer num, write a function which returns True if num is a perfect square else False.
+Note Do not use any built-in library function such as sqrt.
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
+class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: return True left, right = 0, num while left &lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/guess-number-higher-or-lower-ii/">Guess Number Higher or Lower II</a></h2>
+
+      <p>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I’ll tell you whether the number I picked is higher or lower.
+However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</p>
 
       <p class="meta">
         

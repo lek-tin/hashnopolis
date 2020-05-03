@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "sql"]
 categories: ["database"]
 date: 2020-03-03T03:37:24-08:00
-lastmod: 2020-03-03T03:37:24-08:00
+lastmod: 2020-04-07T03:37:24-08:00
 draft: false
 archive: false
 ---
@@ -42,11 +42,13 @@ NOT IN (SELECT max(Salary) FROM Employee)
 
 This solution considers when second highest salary doesn't exist
 ```sql
-# Write your MySQL query statement below
 SELECT
     IFNULL(
-        (   SELECT DISTINCT Salary
-            FROM Employee
+        (
+            SELECT
+                DISTINCT Salary
+            FROM
+                Employee
             ORDER BY Salary Desc
             LIMIT 1
             OFFSET 1

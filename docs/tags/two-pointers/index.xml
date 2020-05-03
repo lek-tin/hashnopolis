@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 26 Mar 2020 03:11:06 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 01:53:50 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Backspace String Compare</title>
+      <link>http://www.hashnopolis.com/post/backspace-string-compare/</link>
+      <pubDate>Thu, 09 Apr 2020 01:53:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/backspace-string-compare/</guid>
+      <description>Solution (build string ❌) Time: O(N)
+Space: O(N)
+class Solution: def backspaceCompare(self, S: str, T: str) -&amp;gt; bool: res_1 = self.helper(S) res_2 = self.helper(T) return len(res_1) == len(res_2) and res_1 == res_2 def helper(self, s): stack = [] for c in s: if c != &amp;#34;#&amp;#34;: stack.append(c) else: if len(stack) &amp;gt; 0: stack.pop() return &amp;#34;&amp;#34;.join(stack) s
+Solution (two pointers 👍🏼) Time: O(N)
+Space: O(1)
+from itertools import zip_longest class Solution: def backspaceCompare(self, S: str, T: str) -&amp;gt; bool: return all( a == b for a, b in zip_longest(self.</description>
+    </item>
     
     <item>
       <title>Flatten 2d Vector</title>

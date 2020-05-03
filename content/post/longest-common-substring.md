@@ -11,14 +11,16 @@ archive: false
 ---
 
 ### Solution:
+
 ```java
-public class LongestCommonSubsequence
+public class LongestCommonString
 {
   /* Returns length of LCS for X[0..m-1], Y[0..n-1] */
   int lcs( char[] X, char[] Y, int m, int n )
   {
     // Size = m + 1, n + 1.
     int L[][] = new int[m+1][n+1];
+    Integer result = Integer.MIN_VALUE;
 
     /* Following steps build L[m+1][n+1] in bottom up fashion. Note
     ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1]
@@ -34,15 +36,9 @@ public class LongestCommonSubsequence
             // L[1][1] = L[0][0] + 1 = 0 + 1 = 1
             L[i][j] = L[i-1][j-1] + 1;
         else
-            L[i][j] = max(L[i-1][j], L[i][j-1]);
-      }
-    }
-    Integer result = Integer.MIN_VALUE;
-    for (int i=0; i<=m; i++)
-    {
-      for (int j=0; j<=n; j++)
-      {
-        if (dp[i][j] >= result) {
+            L[i][j] = 0;
+
+        if (dp[i][j] > result) {
           result = dp[i][j];
         }
       }

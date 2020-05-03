@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="no-js" language="en-us">
+
+<head>
+
+  
+  <title>
+        Hashnopolis | Computer Science, Data Science and Awesome Technology
+      </title>
+
+    
+  
+
+
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="___SITE Description___" />
+  <meta name="keywords" content="___keyword, keyword, keyword___" />
+
+  
+  <meta name="twitter:card" content="summary" />
+  
+  <meta name="twitter:title" content="Hashnopolis" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
+
+
+
+
+<meta name="generator" content="Hugo 0.65.3" />
+
+
+<link rel="canonical" href="http://www.hashnopolis.com/tags/multi-threading/" />
+<link rel="alternative" href="/index.xml" title="Hashnopolis" type="application/atom+xml" />
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/manifest.json">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="msapplication-TileColor" content="#7679EC">
+<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#7679EC">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Hashnopolis" />
+<meta name="msapplication-tooltip" content="Hashnopolis" />
+<meta name='msapplication-navbutton-color' content="#7679EC" />
+<meta name="msapplication-TileColor" content="#7679EC" />
+<meta name="msapplication-TileImage" content="/img/favicon/favicon-32x32.png" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="/css/highlight.css" />
+<link rel="stylesheet" href="/css/highlight-atom-one-dark.min.css" />
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/overrides.css" />
+
+
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+</head>
+
+<body>
+  
+  <main class="container left-container">
+
+      <div class="row">
+
+        <section id="sideber" class="sidebar">
+          <span id="mobile-menu-open" style="position: absolute; top: 1.1rem; left: 1rem; color: #fff;"><i class="material-icons">menu</i></span>
+<a href="/" class="menu-logo">
+  <h1  class="menu-logo__text"># Hashnopolis #</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16" x="0px" y="0px">
+    <g>
+      <path d="M10.001 16l-.143-.01c-.547-.078-.926-.585-.849-1.132l2-14c.078-.546.588-.926 1.132-.848.547.078.927.584.849 1.131l-2 14c-.071.5-.499.859-.989.859zM4.001 16l-.143-.01c-.546-.078-.926-.585-.848-1.132l2-14c.078-.547.58-.927 1.132-.848.546.078.926.585.848 1.132l-2 14c-.072.499-.499.858-.989.858zM15 6h-13c-.552 0-1-.448-1-1s.448-1 1-1h13c.553 0 1 .448 1 1s-.447 1-1 1zM14 12h-13c-.552 0-1-.447-1-1s.448-1 1-1h13c.553 0 1 .447 1 1s-.447 1-1 1z"/>
+    </g>
+  </svg>
+</a>
+
+
+
+
+<ul id="mobile-menu" class="navigation">
+  <li id="mobile-menu-close" style="margin-top: 1.5rem; color: #7679EC"><i class="material-icons">close</i></li>
+  <li><a href="/">Home</a></li>
+  
+  
+  <li><a href="/categories/java">Java</a></li>
+  <li><a href="/categories/python">Python</a></li>
+  <li><a href="/categories/javascript">JavaScript</a></li>
+  <li><a href="/categories/algorithm">Algorithm</a></li>
+  <li><a href="/categories">Categories</a></li>
+  <li><a href="/tags">tags</a></li>
+  <li><a href="/about">About</a></li>
+  
+</ul>
+<div class="site-info">
+  <div class="primary-info">
+    <h1>Computer Science, Data Science and Awesome Technology</h1>
+    <footer class="site-footer">
+    <p>© 2016-2020 <a href="http://www.hashnopolis.com">Hashnopolis</a></p>
+    
+    </footer>
+  </div>
+
+  
+  <div class="social-info">
+      <a href="https://linkedin.com/in/lektin/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      <a href="https://github.com/lek-tin"><i class="fa fa-github" aria-hidden="true"></i></a>
+  </div>
+</div>
+
+
+        </section>
+    
+        <section class="main-content">
+          
+
+  
+  
+  <h2 class="taxonomy-single--title">multi-threading:</h2>
+  <div>
+    
+    
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/fizz-buzz-multithreaded/">Fizz Buzz Multithreaded</a></h2>
+
+      <p>Write a program that outputs the string representation of numbers from 1 to n, however:
+ If the number is divisible by 3, output &#34;fizz&#34;. If the number is divisible by 5, output &#34;buzz&#34;. If the number is divisible by both 3 and 5, output &#34;fizzbuzz&#34;.  For example, for n = 15, we output: 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/print-in-order/">Print in Order</a></h2>
+
+      <p>Suppose we have a class:
+public class Foo { public void first() { print(&#34;first&#34;); } public void second() { print(&#34;second&#34;); } public void third() { print(&#34;third&#34;); } } The same instance of Foo will be passed to three different threads. Thread A will call first(), thread B will call second(), and thread C will call third(). Design a mechanism and modify the program to ensure that second() is executed after first(), and third() is executed after second().</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/the-dining-philosophers/">The Dining Philosophers</a></h2>
+
+      <p>Five silent philosophers sit at a round table with bowls of spaghetti. Forks are placed between each pair of adjacent philosophers.
+Each philosopher must alternately think and eat. However, a philosopher can only eat spaghetti when they have both left and right forks. Each fork can be held by only one philosopher and so a philosopher can use the fork only if it is not being used by another philosopher. After an individual philosopher finishes eating, they need to put down both forks so that the forks become available to others.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+    
+    
+  </div>
+  
+
+        </section>
+        
+
+      </div>
+      
+
+  </main>
+
+  
+
+
+<script src="/js/bundle.js"></script>
+
+
+<script src="/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js"></script>
+<script src="/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="/js/vendor/jquery.jpanelmenu.min.js"></script>
+<script src="/js/vendor/highlight.min.js"></script>
+<script src="/js/vendor/fastclick.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script id="dsq-count-scr" src="//hashnopolis.disqus.com/count.js" async></script>
+
+</body>
+
+</html>

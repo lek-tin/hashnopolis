@@ -186,16 +186,6 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as
     </item>
     
     <item>
-      <title>First Bad Version</title>
-      <link>http://www.hashnopolis.com/post/first-bad-version/</link>
-      <pubDate>Fri, 26 Oct 2018 23:07:46 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/post/first-bad-version/</guid>
-      <description>You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
-Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.</description>
-    </item>
-    
-    <item>
       <title>Multiply Strings</title>
       <link>http://www.hashnopolis.com/post/multiply-strings/</link>
       <pubDate>Thu, 25 Oct 2018 23:40:08 -0700</pubDate>
@@ -225,6 +215,16 @@ You may assume that the version strings are non-empty and contain only digits an
 Note The solution set must not contain duplicate subsets. Example: Input: [1,2,2] Output: [ [2], [1], [1,2,2], [2,2], [1,2], [] ] Solution Time: O(n * 2^n)
 Space: O(n * 2^n) keep all the subsets of length N, since each of N elements could be present or absent.
 class Solution: def subsetsWithDup(self, nums: List[int]) -&amp;gt; List[List[int]]: results = [] subset = [] # Edge case 1 if nums == None: return results # Edge case 2 if len(nums) == 0: results.</description>
+    </item>
+    
+    <item>
+      <title>Restore Ip Addresses</title>
+      <link>http://www.hashnopolis.com/post/restore-ip-addresses/</link>
+      <pubDate>Mon, 01 Oct 2018 23:44:18 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/restore-ip-addresses/</guid>
+      <description>Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+Example Input: &amp;quot;25525511135&amp;quot; Output: [&amp;quot;255.255.11.135&amp;quot;, &amp;quot;255.255.111.35&amp;quot;] Solution class Solution: def restoreIpAddresses(self, s: str) -&amp;gt; List[str]: results = [] self.backtrack(results, s, 0, &amp;#34;&amp;#34;, 0) return results def backtrack(self, results, s, start, partial, segment_count): # pruning for performance improvement if (4 - segment_count) * 3 &amp;lt; len(s) - start or (4 - segment_count) &amp;gt; len(s) - start: return # base case goal if start == len(s) and segment_count == 4: results.</description>
     </item>
     
     <item>

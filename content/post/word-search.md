@@ -5,14 +5,17 @@ authors: ["lek-tin"]
 tags: ["leetcode", "search", "dfs"]
 categories: ["algorithm"]
 date: 2018-10-15T23:48:28-07:00
+lastmod: 2020-04-07T23:48:28-07:00
 draft: false
 archive: false
 ---
+
 Given a 2D board and a word, find if the word exists in the grid.
 
 The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
 
 ### Example
+
 ```
 board =
 [
@@ -25,7 +28,11 @@ Given word = "ABCCED", return true.
 Given word = "SEE", return true.
 Given word = "ABCB", return false.
 ```
+
 ### Solution
+
+Time:  `O(m * n * 4^l)`  
+Space: `O(m*n + l)`  
 ```python
 class Solution:
     def exist(self, board, word):

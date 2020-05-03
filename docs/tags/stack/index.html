@@ -176,6 +176,36 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/backspace-string-compare/">Backspace String Compare</a></h2>
+
+      <p>Solution (build string ❌) Time: O(N)
+Space: O(N)
+class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: res_1 = self.helper(S) res_2 = self.helper(T) return len(res_1) == len(res_2) and res_1 == res_2 def helper(self, s): stack = [] for c in s: if c != &#34;#&#34;: stack.append(c) else: if len(stack) &gt; 0: stack.pop() return &#34;&#34;.join(stack) s
+Solution (two pointers 👍🏼) Time: O(N)
+Space: O(1)
+from itertools import zip_longest class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: return all( a == b for a, b in zip_longest(self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/decode-string/">Decode String</a></h2>
 
       <p>Given an encoded string, return its decoded string.
@@ -408,32 +438,6 @@ Example 1 Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order s
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/max-stack/">Max Stack</a></h2>
-
-      <p>Design a max stack that supports push, pop, top, peekMax and popMax.
- push(x) – Push element x onto stack. pop() – Remove the element on top of the stack and return it. top() – Get the element on the top. peekMax() – Retrieve the maximum element in the stack. popMax() – Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 

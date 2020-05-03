@@ -7,10 +7,322 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 02 Apr 2020 20:15:25 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 04:38:56 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jewels and Stones</title>
+      <link>http://www.hashnopolis.com/post/jewels-and-stones/</link>
+      <pubDate>Sat, 02 May 2020 04:38:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/jewels-and-stones/</guid>
+      <description>You&amp;rsquo;re given strings J representing the types of stones that are jewels, and S representing the stones you have. Each character in S is a type of stone you have. You want to know how many of the stones you have are also jewels.
+The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so &amp;quot;a&amp;quot; is considered a different type of stone from &amp;quot;A&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Check if a String Is a Valid Sequence From Root to Leaves Path in a Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/check-if-a-string-is-a-valid-sequence-from-root-to-leaves-path-in-a-binary-tree/</link>
+      <pubDate>Thu, 30 Apr 2020 00:10:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/check-if-a-string-is-a-valid-sequence-from-root-to-leaves-path-in-a-binary-tree/</guid>
+      <description>Given a binary tree where each path going from the root to any leaf form a valid sequence, check if a given string is a valid sequence in such binary tree.
+We get the given string from the concatenation of an array of integers arr and the concatenation of all values of the nodes along a path results in a sequence in the given binary tree.
+Example 1: Input: root = [0,1,0,0,1,0,null,null,1,0,0], arr = [0,1,0,1] Output: true Explanation: The path 0 -&amp;gt; 1 -&amp;gt; 0 -&amp;gt; 1 is a valid sequence (green color in the figure).</description>
+    </item>
+    
+    <item>
+      <title>Longest Univalue Path</title>
+      <link>http://www.hashnopolis.com/post/longest-univalue-path/</link>
+      <pubDate>Wed, 29 Apr 2020 04:11:27 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-univalue-path/</guid>
+      <description>Given a binary tree, find the length of the longest path where each node in the path has the same value. This path may or may not pass through the root.
+The length of path between two nodes is represented by the number of edges between them.
+Example 1: Input: 5 / \ 4 5 / \ \ 1 1 5 Output: 2 Example 2: Input: 1 / \ 4 5 / \ \ 4 4 5 Output: 2 Note:  The given binary tree has not more than 10000 nodes.</description>
+    </item>
+    
+    <item>
+      <title>Jump Game II</title>
+      <link>http://www.hashnopolis.com/post/jump-game-ii/</link>
+      <pubDate>Tue, 28 Apr 2020 23:14:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/jump-game-ii/</guid>
+      <description>Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Your goal is to reach the last index in the minimum number of jumps.
+Example:
+Input: [2,3,1,1,4] Output: 2 Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index.</description>
+    </item>
+    
+    <item>
+      <title>First Unique Number</title>
+      <link>http://www.hashnopolis.com/post/first-unique-number/</link>
+      <pubDate>Tue, 28 Apr 2020 03:53:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/first-unique-number/</guid>
+      <description>You have a queue of integers, you need to retrieve the first unique integer in the queue.
+Implement the FirstUnique class:
+ FirstUnique(int[] nums) Initializes the object with the numbers in the queue. int showFirstUnique() returns the value of the first unique integer of the queue, and returns -1 if there is no such integer. void add(int value) insert value to the queue.  Example 1 Input: [&amp;quot;FirstUnique&amp;quot;,&amp;quot;showFirstUnique&amp;quot;,&amp;quot;add&amp;quot;,&amp;quot;showFirstUnique&amp;quot;,&amp;quot;add&amp;quot;,&amp;quot;showFirstUnique&amp;quot;,&amp;quot;add&amp;quot;,&amp;quot;showFirstUnique&amp;quot;] [[[2,3,5]],[],[5],[],[2],[],[3],[]] Output: [null,2,null,2,null,3,null,-1] Explanation: FirstUnique firstUnique = new FirstUnique([2,3,5]); firstUnique.</description>
+    </item>
+    
+    <item>
+      <title>Jump Game</title>
+      <link>http://www.hashnopolis.com/post/jump-game/</link>
+      <pubDate>Sat, 25 Apr 2020 08:23:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/jump-game/</guid>
+      <description>Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Determine if you are able to reach the last index.
+Example 1 Input: [2,3,1,1,4] Output: true Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index. Example 2 Input: [3,2,1,0,4] Output: false Explanation: You will always arrive at index 3 no matter what.</description>
+    </item>
+    
+    <item>
+      <title>Construct Binary Search Tree From Preorder Traversal</title>
+      <link>http://www.hashnopolis.com/post/construct-binary-search-tree-from-preorder-traversal/</link>
+      <pubDate>Mon, 20 Apr 2020 04:25:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/construct-binary-search-tree-from-preorder-traversal/</guid>
+      <description>Return the root node of a binary search tree that matches the given preorder traversal.
+(Recall that a binary search tree is a binary tree where for every node, any descendant of node.left has a value &amp;lt; node.val, and any descendant of node.right has a value &amp;gt; node.val. Also recall that a preorder traversal displays the value of the node first, then traverses node.left, then traverses node.right.)
+Example 1 Input: [8,5,1,7,10,12] Output: [8,5,10,1,7,null,12] Note:  1 &amp;lt;= preorder.</description>
+    </item>
+    
+    <item>
+      <title>Valid Parenthesis String</title>
+      <link>http://www.hashnopolis.com/post/valid-parenthesis-string/</link>
+      <pubDate>Thu, 16 Apr 2020 00:28:17 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/valid-parenthesis-string/</guid>
+      <description>Given a string containing only three types of characters: &#39;(&#39;, &#39;)&#39; and &#39;*&#39;, write a function to check whether this string is valid. We define the validity of a string by these rules:
+ Any left parenthesis &#39;(&#39; must have a corresponding right parenthesis &#39;)&#39;. Any right parenthesis &#39;)&#39; must have a corresponding left parenthesis &#39;(&#39;. Left parenthesis &#39;(&#39; must go before the corresponding right parenthesis &#39;)&#39;. &#39;*&#39; could be treated as a single right parenthesis &amp;lsquo;)&amp;rsquo; or a single left parenthesis &#39;(&#39; or an empty string.</description>
+    </item>
+    
+    <item>
+      <title>Perform String Shifts</title>
+      <link>http://www.hashnopolis.com/post/perform-string-shifts/</link>
+      <pubDate>Tue, 14 Apr 2020 00:02:18 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/perform-string-shifts/</guid>
+      <description>You are given a string s containing lowercase English letters, and a matrix shift, where shift[i] = [direction, amount]:
+ direction can be 0 (for left shift) or 1 (for right shift). amount is the amount by which string s is to be shifted. A left shift by 1 means remove the first character of s and append it to the end. Similarly, a right shift by 1 means remove the last character of s and add it to the beginning.</description>
+    </item>
+    
+    <item>
+      <title>Contiguous Array</title>
+      <link>http://www.hashnopolis.com/post/contiguous-array/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/contiguous-array/</guid>
+      <description>Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
+Example 1 Input: [0,1] Output: 2 Explanation: [0, 1] is the longest contiguous subarray with equal number of 0 and 1. Example 2 Input: [0,1,0] Output: 2 Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1. Note The length of the given binary array will not exceed 50,000.</description>
+    </item>
+    
+    <item>
+      <title>Monthly Transactions Ii</title>
+      <link>http://www.hashnopolis.com/post/monthly-transactions-ii/</link>
+      <pubDate>Sun, 12 Apr 2020 01:47:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/monthly-transactions-ii/</guid>
+      <description>Table: Transactions
++----------------+---------+ | Column Name | Type | +----------------+---------+ | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | +----------------+---------+ id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&amp;quot;approved&amp;quot;, &amp;quot;declined&amp;quot;]. Table: Chargebacks +----------------+---------+ | Column Name | Type | +----------------+---------+ | trans_id | int | | charge_date | date | +----------------+---------+ Chargebacks contains basic information regarding incoming chargebacks from some transactions placed in Transactions table.</description>
+    </item>
+    
+    <item>
+      <title>Monthly Transactions I</title>
+      <link>http://www.hashnopolis.com/post/monthly-transactions-i/</link>
+      <pubDate>Sun, 12 Apr 2020 01:47:02 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/monthly-transactions-i/</guid>
+      <description>Table: Transactions
++---------------+---------+ | Column Name | Type | +---------------+---------+ | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | +---------------+---------+ id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&amp;quot;approved&amp;quot;, &amp;quot;declined&amp;quot;]. Write an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.</description>
+    </item>
+    
+    <item>
+      <title>Last Stone Weight</title>
+      <link>http://www.hashnopolis.com/post/last-stone-weight/</link>
+      <pubDate>Sun, 12 Apr 2020 00:02:05 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/last-stone-weight/</guid>
+      <description>We have a collection of stones, each stone has a positive integer weight.
+Each turn, we choose the two heaviest stones and smash them together. Suppose the stones have weights x and y with x &amp;lt;= y. The result of this smash is:
+ If x == y, both stones are totally destroyed; If x != y, the stone of weight x is totally destroyed, and the stone of weight y has new weight y-x.</description>
+    </item>
+    
+    <item>
+      <title>Basic Calculator Ii</title>
+      <link>http://www.hashnopolis.com/post/basic-calculator-ii/</link>
+      <pubDate>Thu, 09 Apr 2020 06:07:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/basic-calculator-ii/</guid>
+      <description>Implement a basic calculator to evaluate a simple expression string.
+The expression string contains only non-negative integers, +, -, *, / operators and empty spaces  . The integer division should truncate toward zero.
+Example 1 Input: &amp;quot;3+2*2&amp;quot; Output: 7 Example 2 Input: &amp;quot; 3/2 &amp;quot; Output: 1 Example 3 Input: &amp;quot; 3+5 / 2 &amp;quot; Output: 5 Note  You may assume that the given expression is always valid. Do not use the eval built-in library function.</description>
+    </item>
+    
+    <item>
+      <title>Basic Calculator</title>
+      <link>http://www.hashnopolis.com/post/basic-calculator/</link>
+      <pubDate>Thu, 09 Apr 2020 03:50:38 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/basic-calculator/</guid>
+      <description>Implement a basic calculator to evaluate a simple expression string.
+The expression string may contain open ( and closing parentheses ), the plus + or minus sign -, non-negative integers and empty spaces  .
+Example 1 Input: &amp;quot;1 + 1&amp;quot; Output: 2 Example 2 Input: &amp;quot; 2-1 + 2 &amp;quot; Output: 3 Example 3 Input: &amp;quot;(1+(4+5+2)-3)+(6+8)&amp;quot; Output: 23 Note  You may assume that the given expression is always valid.</description>
+    </item>
+    
+    <item>
+      <title>Backspace String Compare</title>
+      <link>http://www.hashnopolis.com/post/backspace-string-compare/</link>
+      <pubDate>Thu, 09 Apr 2020 01:53:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/backspace-string-compare/</guid>
+      <description>Solution (build string ❌) Time: O(N)
+Space: O(N)
+class Solution: def backspaceCompare(self, S: str, T: str) -&amp;gt; bool: res_1 = self.helper(S) res_2 = self.helper(T) return len(res_1) == len(res_2) and res_1 == res_2 def helper(self, s): stack = [] for c in s: if c != &amp;#34;#&amp;#34;: stack.append(c) else: if len(stack) &amp;gt; 0: stack.pop() return &amp;#34;&amp;#34;.join(stack) s
+Solution (two pointers 👍🏼) Time: O(N)
+Space: O(1)
+from itertools import zip_longest class Solution: def backspaceCompare(self, S: str, T: str) -&amp;gt; bool: return all( a == b for a, b in zip_longest(self.</description>
+    </item>
+    
+    <item>
+      <title>Insertion Sort List</title>
+      <link>http://www.hashnopolis.com/post/insertion-sort-list/</link>
+      <pubDate>Wed, 08 Apr 2020 07:21:58 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/insertion-sort-list/</guid>
+      <description>Algorithm of Insertion Sort Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+Example 1 Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4 Example 2 Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;gt;3-&amp;gt;4-&amp;gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.</description>
+    </item>
+    
+    <item>
+      <title>Middle of the Linked List</title>
+      <link>http://www.hashnopolis.com/post/middle-of-the-linked-list/</link>
+      <pubDate>Wed, 08 Apr 2020 06:36:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/middle-of-the-linked-list/</guid>
+      <description>Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+If there are two middle nodes, return the second middle node.
+Example 1 Input: [1,2,3,4,5] Output: Node 3 from this list (Serialization: [3,4,5]) The returned node has value 3. (The judge&#39;s serialization of this node is [3,4,5]). Note that we returned a ListNode object ans, such that: ans.val = 3, ans.next.val = 4, ans.</description>
+    </item>
+    
+    <item>
+      <title>Sort List</title>
+      <link>http://www.hashnopolis.com/post/sort-list/</link>
+      <pubDate>Wed, 08 Apr 2020 04:17:30 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/sort-list/</guid>
+      <description>Sort a linked list in O(n log n) time using constant space complexity.
+Example 1 Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4 Example 2 Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;gt;3-&amp;gt;4-&amp;gt;5 Solution (merge sort - top down) Time: O(NlogN)
+Space: O(logN)
+Doesn&amp;rsquo;t satisfy the requirement
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def sortList(self, head: ListNode) -&amp;gt; ListNode: if not head or not head.</description>
+    </item>
+    
+    <item>
+      <title>Reported Posts II</title>
+      <link>http://www.hashnopolis.com/post/reported-posts-ii/</link>
+      <pubDate>Wed, 08 Apr 2020 01:25:27 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/reported-posts-ii/</guid>
+      <description>Table: Actions
++---------------+---------+ | Column Name | Type | +---------------+---------+ | user_id | int | | post_id | int | | action_date | date | | action | enum | | extra | varchar | +---------------+---------+ There is no primary key for this table, it may have duplicate rows. The action column is an ENUM type of (&#39;view&#39;, &#39;like&#39;, &#39;reaction&#39;, &#39;comment&#39;, &#39;report&#39;, &#39;share&#39;). The extra column has optional information about the action such as a reason for report or a type of reaction.</description>
+    </item>
+    
+    <item>
+      <title>Reported Posts</title>
+      <link>http://www.hashnopolis.com/post/reported-posts/</link>
+      <pubDate>Wed, 08 Apr 2020 01:24:17 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/reported-posts/</guid>
+      <description>Table: Actions
++---------------+---------+ | Column Name | Type | +---------------+---------+ | user_id | int | | post_id | int | | action_date | date | | action | enum | | extra | varchar | +---------------+---------+ There is no primary key for this table, it may have duplicate rows. The action column is an ENUM type of (&#39;view&#39;, &#39;like&#39;, &#39;reaction&#39;, &#39;comment&#39;, &#39;report&#39;, &#39;share&#39;). The extra column has optional information about the action such as a reason for report or a type of reaction.</description>
+    </item>
+    
+    <item>
+      <title>Max Points on a Line</title>
+      <link>http://www.hashnopolis.com/post/max-points-on-a-line/</link>
+      <pubDate>Tue, 07 Apr 2020 03:42:09 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/max-points-on-a-line/</guid>
+      <description>Given n points on a 2D plane, find the maximum number of points that lie on the same straight line.
+Example 1 Input: [[1,1],[2,2],[3,3]] Output: 3 Explanation: ^ | | o | o | o +-------------&amp;gt; 0 1 2 3 4 Example 2 Input: [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]] Output: 4 Explanation: ^ | | o | o o | o | o o +-------------------&amp;gt; 0 1 2 3 4 5 6 NOTE: input types have been changed on April 15, 2019.</description>
+    </item>
+    
+    <item>
+      <title>Nth Highest Salary</title>
+      <link>http://www.hashnopolis.com/post/nth-highest-salary/</link>
+      <pubDate>Tue, 07 Apr 2020 00:32:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/nth-highest-salary/</guid>
+      <description>Write a SQL query to get the nth highest salary from the Employee table.
++----+--------+ | Id | Salary | +----+--------+ | 1 | 100 | | 2 | 200 | | 3 | 300 | +----+--------+ For example, given the above Employee table, the nth highest salary where n = 2 is 200. If there is no nth highest salary, then the query should return null.
++------------------------+ | getNthHighestSalary(2) | +------------------------+ | 200 | +------------------------+ Solution CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN DECLARE M INT; SET M = N - 1; RETURN ( SELECT IFNULL( ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary Desc LIMIT 1 OFFSET M ), NULL ) ); END </description>
+    </item>
+    
+    <item>
+      <title>Reformat Department Table</title>
+      <link>http://www.hashnopolis.com/post/reformat-department-table/</link>
+      <pubDate>Mon, 06 Apr 2020 23:42:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/reformat-department-table/</guid>
+      <description>Table: Department
++---------------+---------+ | Column Name | Type | +---------------+---------+ | id | int | | revenue | int | | month | varchar | +---------------+---------+ (id, month) is the primary key of this table. The table has information about the revenue of each department per month. The month has values in [&amp;quot;Jan&amp;quot;,&amp;quot;Feb&amp;quot;,&amp;quot;Mar&amp;quot;,&amp;quot;Apr&amp;quot;,&amp;quot;May&amp;quot;,&amp;quot;Jun&amp;quot;,&amp;quot;Jul&amp;quot;,&amp;quot;Aug&amp;quot;,&amp;quot;Sep&amp;quot;,&amp;quot;Oct&amp;quot;,&amp;quot;Nov&amp;quot;,&amp;quot;Dec&amp;quot;]. Write an SQL query to reformat the table such that there is a department id column and a revenue column for each month.</description>
+    </item>
+    
+    <item>
+      <title>Big Countries</title>
+      <link>http://www.hashnopolis.com/post/big-countries/</link>
+      <pubDate>Mon, 06 Apr 2020 23:39:36 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/big-countries/</guid>
+      <description>There is a table World
++-----------------+------------+------------+--------------+---------------+ | name | continent | area | population | gdp | +-----------------+------------+------------+--------------+---------------+ | Afghanistan | Asia | 652230 | 25500100 | 20343000 | | Albania | Europe | 28748 | 2831741 | 12960000 | | Algeria | Africa | 2381741 | 37100000 | 188681000 | | Andorra | Europe | 468 | 78115 | 3712000 | | Angola | Africa | 1246700 | 20609294 | 100990000 | +-----------------+------------+------------+--------------+---------------+ A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.</description>
+    </item>
+    
+    <item>
+      <title>Longest Increasing Path in a Matrix</title>
+      <link>http://www.hashnopolis.com/post/longest-increasing-path-in-a-matrix/</link>
+      <pubDate>Mon, 06 Apr 2020 21:13:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-increasing-path-in-a-matrix/</guid>
+      <description>Given an integer matrix, find the length of the longest increasing path.
+From each cell, you can either move to four directions: left, right, up or down. You may NOT move diagonally or move outside of the boundary (i.e. wrap-around is not allowed).
+Example 1 Input: nums = [ [9,9,4], [6,6,8], [2,1,1] ] Output: 4 Explanation: The longest increasing path is [1, 2, 6, 9]. Example 2 Input: nums = [ [3,4,5], [3,2,6], [2,2,1] ] Output: 4 Explanation: The longest increasing path is [3, 4, 5, 6].</description>
+    </item>
+    
+    <item>
+      <title>Fizz Buzz Multithreaded</title>
+      <link>http://www.hashnopolis.com/post/fizz-buzz-multithreaded/</link>
+      <pubDate>Mon, 06 Apr 2020 19:15:52 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/fizz-buzz-multithreaded/</guid>
+      <description>Write a program that outputs the string representation of numbers from 1 to n, however:
+ If the number is divisible by 3, output &amp;quot;fizz&amp;quot;. If the number is divisible by 5, output &amp;quot;buzz&amp;quot;. If the number is divisible by both 3 and 5, output &amp;quot;fizzbuzz&amp;quot;.  For example, for n = 15, we output: 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz.</description>
+    </item>
+    
+    <item>
+      <title>Print in Order</title>
+      <link>http://www.hashnopolis.com/post/print-in-order/</link>
+      <pubDate>Mon, 06 Apr 2020 05:58:17 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/print-in-order/</guid>
+      <description>Suppose we have a class:
+public class Foo { public void first() { print(&amp;quot;first&amp;quot;); } public void second() { print(&amp;quot;second&amp;quot;); } public void third() { print(&amp;quot;third&amp;quot;); } } The same instance of Foo will be passed to three different threads. Thread A will call first(), thread B will call second(), and thread C will call third(). Design a mechanism and modify the program to ensure that second() is executed after first(), and third() is executed after second().</description>
+    </item>
+    
+    <item>
+      <title>The Dining Philosophers</title>
+      <link>http://www.hashnopolis.com/post/the-dining-philosophers/</link>
+      <pubDate>Mon, 06 Apr 2020 03:18:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/the-dining-philosophers/</guid>
+      <description>Five silent philosophers sit at a round table with bowls of spaghetti. Forks are placed between each pair of adjacent philosophers.
+Each philosopher must alternately think and eat. However, a philosopher can only eat spaghetti when they have both left and right forks. Each fork can be held by only one philosopher and so a philosopher can use the fork only if it is not being used by another philosopher. After an individual philosopher finishes eating, they need to put down both forks so that the forks become available to others.</description>
+    </item>
     
     <item>
       <title>Handshakes That Dont Cross</title>
@@ -119,7 +431,8 @@ An active business is a business that has more than one event type with occurenc
       
       <guid>http://www.hashnopolis.com/post/bitwise-and-of-numbers-range/</guid>
       <description>Given a range [m, n] where 0 &amp;lt;= m &amp;lt;= n &amp;lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive.
-Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution class Solution: def rangeBitwiseAnd(self, m: int, n: int) -&amp;gt; int: shift = 0 while m &amp;lt; n: m = m &amp;gt;&amp;gt; 1 n = n &amp;gt;&amp;gt; 1 shift += 1 m = m &amp;lt;&amp;lt; shift return m </description>
+Example 1 Input: [5,7] Output: 4 Example 2 Input: [0,1] Output: 0 Solution &amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD Java
+class Solution { public int rangeBitwiseAnd(int m, int n) { int shift = 0; while (m &amp;lt; n) { m &amp;gt;&amp;gt;= 1; n &amp;gt;&amp;gt;= 1; shift++; // System.out.println(&amp;#34;m: &amp;#34; + String.</description>
     </item>
     
     <item>
@@ -745,6 +1058,16 @@ The cost of painting each house with a certain color is represented by a n x 3 c
     </item>
     
     <item>
+      <title>Highest Grade for Each Student</title>
+      <link>http://www.hashnopolis.com/post/highest-grade-for-each-student/</link>
+      <pubDate>Wed, 04 Mar 2020 00:10:38 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/highest-grade-for-each-student/</guid>
+      <description>Table: Enrollments
++---------------+---------+ | Column Name | Type | +---------------+---------+ | student_id | int | | course_id | int | | grade | int | +---------------+---------+ (student_id, course_id) is the primary key of this table. Write a SQL query to find the highest grade with its corresponding course for each student. In case of a tie, you should find the course with the smallest course_id. The output must be sorted by increasing student_id.</description>
+    </item>
+    
+    <item>
       <title>Department Highest Salary</title>
       <link>http://www.hashnopolis.com/post/department-highest-salary/</link>
       <pubDate>Tue, 03 Mar 2020 23:58:39 -0800</pubDate>
@@ -752,6 +1075,16 @@ The cost of painting each house with a certain color is represented by a n x 3 c
       <guid>http://www.hashnopolis.com/post/department-highest-salary/</guid>
       <description>The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
 +----+-------+--------+--------------+ | Id | Name | Salary | DepartmentId | +----+-------+--------+--------------+ | 1 | Joe | 70000 | 1 | | 2 | Jim | 90000 | 1 | | 3 | Henry | 80000 | 2 | | 4 | Sam | 60000 | 2 | | 5 | Max | 90000 | 1 | +----+-------+--------+--------------+ The Department table holds all departments of the company.</description>
+    </item>
+    
+    <item>
+      <title>Rank Scores</title>
+      <link>http://www.hashnopolis.com/post/rank-scores/</link>
+      <pubDate>Tue, 03 Mar 2020 16:56:09 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/rank-scores/</guid>
+      <description>Write a SQL query to rank scores. If there is a tie between two scores, both should have the same ranking. Note that after a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no &amp;ldquo;holes&amp;rdquo; between ranks.
++----+-------+ | Id | Score | +----+-------+ | 1 | 3.50 | | 2 | 3.65 | | 3 | 4.00 | | 4 | 3.</description>
     </item>
     
     <item>
@@ -971,7 +1304,7 @@ Example 1 Input: str1 = &amp;quot;abac&amp;quot;, str2 = &amp;quot;cab&amp;quot;
       <pubDate>Sun, 16 Feb 2020 12:34:38 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/longest-common-substring/</guid>
-      <description>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m + 1, n + 1.  int L[][] = new int[m+1][n+1]; /* Following steps build L[m+1][n+1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&amp;lt;=m; i++) { for (int j=0; j&amp;lt;=n; j++) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] + 1 = 0 + 1 = 1  L[i][j] = L[i-1][j-1] + 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</description>
+      <description>Solution: public class LongestCommonString { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m + 1, n + 1.  int L[][] = new int[m+1][n+1]; Integer result = Integer.MIN_VALUE; /* Following steps build L[m+1][n+1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&amp;lt;=m; i++) { for (int j=0; j&amp;lt;=n; j++) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] + 1 = 0 + 1 = 1  L[i][j] = L[i-1][j-1] + 1; else L[i][j] = 0; if (dp[i][j] &amp;gt; result) { result = dp[i][j]; } } } return result; } </description>
     </item>
     
     <item>
@@ -983,7 +1316,7 @@ Example 1 Input: str1 = &amp;quot;abac&amp;quot;, str2 = &amp;quot;cab&amp;quot;
       <description>Given an integer n, return 1 - n in lexicographical order.
 For example, given 13, return: [1,10,11,12,13,2,3,4,5,6,7,8,9].
 Please optimize your algorithm to use less time and space. The input size may be as large as 5,000,000.
-Solution class Solution: def lexicalOrder(self, n: int) -&amp;gt; List[int]: res = [0 for i in range(n)] curr = 1 for i in range(n): res[i] = curr # lower digits if curr * 10 &amp;lt;= n: curr *= 10 # higher digits else: # if curr is greater than n, we reverse it by /10 if curr &amp;gt;= n: curr //= 10 curr += 1 # if curr becomes X00000, we need to get rid of the trailing 0&amp;#39;s while curr % 10 == 0: curr //= 10 return res # Input: n = 50 # Output: [1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,6,7,8,9] Recursion</description>
+Solution (iterative) class Solution: def lexicalOrder(self, n: int) -&amp;gt; List[int]: res = [0 for i in range(n)] curr = 1 for i in range(n): res[i] = curr # lower digits if curr * 10 &amp;lt;= n: curr *= 10 # higher digits else: # if curr is greater than n, we reverse it by /10 if curr &amp;gt;= n: curr //= 10 curr += 1 # if curr becomes X00000, we need to get rid of the trailing 0&amp;#39;s while curr % 10 == 0: curr //= 10 return res # Input: n = 50 # Output: [1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,50,6,7,8,9] Solution (recursion) Recursion</description>
     </item>
     
     <item>
@@ -1452,7 +1785,8 @@ Example 1 Input: words = [&amp;quot;hello&amp;quot;,&amp;quot;leetcode&amp;quot;
       
       <guid>http://www.hashnopolis.com/post/subarray-sum-equals-k/</guid>
       <description>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
-Example 1 Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].  Solution class Solution: def subarraySum(self, nums: List[int], k: int) -&amp;gt; int: n = len(nums) if not nums or n == 0: return 0 sums = [nums[0] for _ in range(n)] for i in range(1, n): sums[i] = sums[i-1] + nums[i] mapping = {0: 1} count = 0 for s in sums: if s-k in mapping: count += mapping[s-k] temp = 0 try: temp = mapping[s] + 1 except: temp = 1 mapping[s] = temp return count </description>
+Example 1 &amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD        dev
+       Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].</description>
     </item>
     
     <item>
@@ -1668,7 +2002,8 @@ The knight has an initial health point represented by a positive integer. If at 
       
       <guid>http://www.hashnopolis.com/post/minimum-path-sum/</guid>
       <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution 1 (DP with n extra space) class Solution: def minPathSum(self, grid: List[List[int]]) -&amp;gt; int: m = len(grid) n = len(grid[0]) if m == 0 or n == 0: return 0 sums = [[0 for _ in range(n)] for _ in range(m)] sums[0][0] = grid[0][0] for i in range(1, m): sums[i][0] = sums[i-1][0] + grid[i][0] for i in range(1, n): sums[0][i] = sums[0][i-1] + grid[0][i] for i in range(1, m): for j in range(1, n): sums[i][j] = min(sums[i-1][j], sums[i][j-1]) + grid[i][j] return sums[-1][-1] Solution 2 (DP with no extra space) class Solution: def minPathSum(self, grid): &amp;#34;&amp;#34;&amp;#34; :type grid: List[List[int]] :rtype: int &amp;#34;&amp;#34;&amp;#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
+Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution 1 (DP with n extra space) Python
+class Solution: def minPathSum(self, grid: List[List[int]]) -&amp;gt; int: m = len(grid) n = len(grid[0]) if m == 0 or n == 0: return 0 sums = [[0 for _ in range(n)] for _ in range(m)] sums[0][0] = grid[0][0] for i in range(1, m): sums[i][0] = sums[i-1][0] + grid[i][0] for i in range(1, n): sums[0][i] = sums[0][i-1] + grid[0][i] for i in range(1, m): for j in range(1, n): sums[i][j] = min(sums[i-1][j], sums[i][j-1]) + grid[i][j] return sums[-1][-1] Java</description>
     </item>
     
     <item>
@@ -2235,7 +2570,7 @@ Design an algorithm to serialize and deserialize a binary search tree. There is 
       
       <guid>http://www.hashnopolis.com/post/diameter-of-binary-tree/</guid>
       <description>Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
-Example: Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].</description>
+Example Given a binary tree 1 / \ 2 3 / \ 4 5 Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].</description>
     </item>
     
     <item>
@@ -2660,7 +2995,7 @@ We want to transform this BST into a circular doubly linked list. Each node in a
       
       <guid>http://www.hashnopolis.com/post/longest-increasing-subsequence/</guid>
       <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution Bottom-up solution:</description>
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution (Bottom-up) Python</description>
     </item>
     
     <item>
@@ -3087,7 +3422,7 @@ Example 1 Input: &amp;quot;()&amp;quot; Output: true Example 2 Input: &amp;quot;
       
       <guid>http://www.hashnopolis.com/post/maximal-square/</guid>
       <description>Given a 2D binary matrix filled with 0&#39;s and 1&#39;s, find the largest square containing only 1&#39;s and return its area.
-Example Input: 1 0 1 0 0 1 0 **1** **1** 1 1 1 **1** **1** 1 1 0 0 1 0 Output: 4 Solution class Solution: def maximalSquare(self, matrix): &amp;#34;&amp;#34;&amp;#34; :type matrix: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;#34;1&amp;#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;#34;1&amp;#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;#34;0&amp;#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2 class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</description>
+Example Input: 1 0 1 0 0 1 0 **1** **1** 1 1 1 **1** **1** 1 1 0 0 1 0 Output: 4 Solution class Solution: def maximalSquare(self, matrix): &amp;#34;&amp;#34;&amp;#34; :type matrix: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;#34;1&amp;#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;#34;1&amp;#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;#34;0&amp;#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2 Java</description>
     </item>
     
     <item>
@@ -3220,7 +3555,7 @@ Example 1 Input: nums = [5,7,7,8,8,10], target = 8 Output: [3,4] Example 2 Input
 You are given a target value to search. If found in the array return its index, otherwise return -1.
 You may assume no duplicate exists in the array.
 Your algorithm&amp;rsquo;s runtime complexity must be in the order of O(log n).
-Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4 Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1 Solution class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: if nums == None or len(nums) == 0: return -1 start, end = 0, len(nums) - 1 while (start + 1) &amp;lt; end: mid = start + (end - start) // 2 if nums[mid] == target: return mid # &amp;lt; because there are no duplicate numbers.</description>
+Example 1 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4 Example 2 Input: nums = [4,5,6,7,0,1,2], target = 3 Output: -1 Solution (binary search) Java</description>
     </item>
     
     <item>
@@ -3391,7 +3726,7 @@ Note  The same word in the dictionary may be reused multiple times in the segmen
       <guid>http://www.hashnopolis.com/post/number-of-islands/</guid>
       <description>Given a 2d grid map of &#39;1&#39;s (land) and &#39;0&#39;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
 Example 1 Input: 11110 11010 11000 00000 Output: 1 Example 2 Input: 11000 11000 00100 00011 Output: 3 DFS
-Solution class Solution: def numIslands(self, grid): &amp;#34;&amp;#34;&amp;#34; :type grid: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; # Edge cases if not grid or len(grid) == 0 or len(grid[0]) == 0: return 0 rows = len(grid) cols = len(grid[0]) count = 0 for i in range(rows): for j in range(cols): if grid[i][j] == &amp;#34;1&amp;#34;: count += 1 self.</description>
+Solution (DFS in Java) DFS</description>
     </item>
     
     <item>
@@ -3402,7 +3737,7 @@ Solution class Solution: def numIslands(self, grid): &amp;#34;&amp;#34;&amp;#34;
       <guid>http://www.hashnopolis.com/post/binary-tree-maximum-path-sum/</guid>
       <description>Given a non-empty binary tree, find the maximum path sum.
 For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
-Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6 Example 2 Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42 Solution # Definition for a binary tree node.</description>
+Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6 Example 2 Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42 Solution Python</description>
     </item>
     
     <item>
@@ -3438,6 +3773,16 @@ Output: `[1,2,2,3,5,6]` Solution # Time: o(m+n) # Space: o(1) class Solution: de
       <description>A message containing letters from A-Z is being encoded to numbers using the following mapping:
 &amp;lsquo;A&amp;rsquo; -&amp;gt; 1 &amp;lsquo;B&amp;rsquo; -&amp;gt; 2 &amp;hellip; &amp;lsquo;Z&amp;rsquo; -&amp;gt; 26 Given a non-empty string containing only digits, determine the total number of ways to decode it.
 Example 1 Input: &amp;quot;12&amp;quot; Output: 2 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12). Example 2 Input: &amp;quot;226&amp;quot; Output: 3 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).</description>
+    </item>
+    
+    <item>
+      <title>Restore Ip Addresses</title>
+      <link>http://www.hashnopolis.com/post/restore-ip-addresses/</link>
+      <pubDate>Mon, 01 Oct 2018 23:44:18 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/restore-ip-addresses/</guid>
+      <description>Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+Example Input: &amp;quot;25525511135&amp;quot; Output: [&amp;quot;255.255.11.135&amp;quot;, &amp;quot;255.255.111.35&amp;quot;] Solution class Solution: def restoreIpAddresses(self, s: str) -&amp;gt; List[str]: results = [] self.backtrack(results, s, 0, &amp;#34;&amp;#34;, 0) return results def backtrack(self, results, s, start, partial, segment_count): # pruning for performance improvement if (4 - segment_count) * 3 &amp;lt; len(s) - start or (4 - segment_count) &amp;gt; len(s) - start: return # base case goal if start == len(s) and segment_count == 4: results.</description>
     </item>
     
     <item>

@@ -7,10 +7,45 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 02 Apr 2020 20:15:25 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 23:14:20 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jump Game II</title>
+      <link>http://www.hashnopolis.com/post/jump-game-ii/</link>
+      <pubDate>Tue, 28 Apr 2020 23:14:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/jump-game-ii/</guid>
+      <description>Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Your goal is to reach the last index in the minimum number of jumps.
+Example:
+Input: [2,3,1,1,4] Output: 2 Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index.</description>
+    </item>
+    
+    <item>
+      <title>Jump Game</title>
+      <link>http://www.hashnopolis.com/post/jump-game/</link>
+      <pubDate>Sat, 25 Apr 2020 08:23:15 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/jump-game/</guid>
+      <description>Given an array of non-negative integers, you are initially positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Determine if you are able to reach the last index.
+Example 1 Input: [2,3,1,1,4] Output: true Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index. Example 2 Input: [3,2,1,0,4] Output: false Explanation: You will always arrive at index 3 no matter what.</description>
+    </item>
+    
+    <item>
+      <title>Contiguous Array</title>
+      <link>http://www.hashnopolis.com/post/contiguous-array/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/contiguous-array/</guid>
+      <description>Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
+Example 1 Input: [0,1] Output: 2 Explanation: [0, 1] is the longest contiguous subarray with equal number of 0 and 1. Example 2 Input: [0,1,0] Output: 2 Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1. Note The length of the given binary array will not exceed 50,000.</description>
+    </item>
     
     <item>
       <title>Handshakes That Dont Cross</title>
@@ -145,7 +180,7 @@ Example 1 Input: str1 = &amp;quot;abac&amp;quot;, str2 = &amp;quot;cab&amp;quot;
       <pubDate>Sun, 16 Feb 2020 12:34:38 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/post/longest-common-substring/</guid>
-      <description>Solution: public class LongestCommonSubsequence { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m + 1, n + 1.  int L[][] = new int[m+1][n+1]; /* Following steps build L[m+1][n+1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&amp;lt;=m; i++) { for (int j=0; j&amp;lt;=n; j++) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] + 1 = 0 + 1 = 1  L[i][j] = L[i-1][j-1] + 1; else L[i][j] = max(L[i-1][j], L[i][j-1]); } } Integer result = Integer.</description>
+      <description>Solution: public class LongestCommonString { /* Returns length of LCS for X[0..m-1], Y[0..n-1] */ int lcs( char[] X, char[] Y, int m, int n ) { // Size = m + 1, n + 1.  int L[][] = new int[m+1][n+1]; Integer result = Integer.MIN_VALUE; /* Following steps build L[m+1][n+1] in bottom up fashion. Note ** that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */ for (int i=0; i&amp;lt;=m; i++) { for (int j=0; j&amp;lt;=n; j++) { if (i == 0 || j == 0) // Initialise L[0][0] = 0  L[i][j] = 0; else if (X[i-1] == Y[j-1]) // L[1][1] = L[0][0] + 1 = 0 + 1 = 1  L[i][j] = L[i-1][j-1] + 1; else L[i][j] = 0; if (dp[i][j] &amp;gt; result) { result = dp[i][j]; } } } return result; } </description>
     </item>
     
     <item>
@@ -285,7 +320,8 @@ For example, given the following triangle
       
       <guid>http://www.hashnopolis.com/post/minimum-path-sum/</guid>
       <description>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
-Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution 1 (DP with n extra space) class Solution: def minPathSum(self, grid: List[List[int]]) -&amp;gt; int: m = len(grid) n = len(grid[0]) if m == 0 or n == 0: return 0 sums = [[0 for _ in range(n)] for _ in range(m)] sums[0][0] = grid[0][0] for i in range(1, m): sums[i][0] = sums[i-1][0] + grid[i][0] for i in range(1, n): sums[0][i] = sums[0][i-1] + grid[0][i] for i in range(1, m): for j in range(1, n): sums[i][j] = min(sums[i-1][j], sums[i][j-1]) + grid[i][j] return sums[-1][-1] Solution 2 (DP with no extra space) class Solution: def minPathSum(self, grid): &amp;#34;&amp;#34;&amp;#34; :type grid: List[List[int]] :rtype: int &amp;#34;&amp;#34;&amp;#34; for r in range(len(grid)): for c in range(len(grid[0])): if (r == 0 and c !</description>
+Note You can only move either down or right at any point in time. Example Input: [ [1,3,1], [1,5,1], [4,2,1] ] Output: 7 Explanation Because the path 1→3→1→1→1 minimizes the sum. Solution 1 (DP with n extra space) Python
+class Solution: def minPathSum(self, grid: List[List[int]]) -&amp;gt; int: m = len(grid) n = len(grid[0]) if m == 0 or n == 0: return 0 sums = [[0 for _ in range(n)] for _ in range(m)] sums[0][0] = grid[0][0] for i in range(1, m): sums[i][0] = sums[i-1][0] + grid[i][0] for i in range(1, n): sums[0][i] = sums[0][i-1] + grid[0][i] for i in range(1, m): for j in range(1, n): sums[i][j] = min(sums[i-1][j], sums[i][j-1]) + grid[i][j] return sums[-1][-1] Java</description>
     </item>
     
     <item>
@@ -418,7 +454,7 @@ You have the following 3 operations permitted on a word:
       
       <guid>http://www.hashnopolis.com/post/longest-increasing-subsequence/</guid>
       <description>Given an unsorted array of integers, find the length of longest increasing subsequence.
-Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution Bottom-up solution:</description>
+Example: Input: [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. Note  There may be more than one LIS combination, it is only necessary for you to return the length. Your algorithm should run in O(n2) complexity. Follow up: Could you improve it to O(n log n) time complexity?  Solution (Bottom-up) Python</description>
     </item>
     
     <item>
@@ -452,7 +488,7 @@ class Solution: def productExceptSelf(self, nums: List[int]) -&amp;gt; List[int]
       
       <guid>http://www.hashnopolis.com/post/maximal-square/</guid>
       <description>Given a 2D binary matrix filled with 0&#39;s and 1&#39;s, find the largest square containing only 1&#39;s and return its area.
-Example Input: 1 0 1 0 0 1 0 **1** **1** 1 1 1 **1** **1** 1 1 0 0 1 0 Output: 4 Solution class Solution: def maximalSquare(self, matrix): &amp;#34;&amp;#34;&amp;#34; :type matrix: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;#34;1&amp;#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;#34;1&amp;#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;#34;0&amp;#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2 class Solution { public int maximalSquare(char[][] matrix) { if (matrix.</description>
+Example Input: 1 0 1 0 0 1 0 **1** **1** 1 1 1 **1** **1** 1 1 0 0 1 0 Output: 4 Solution class Solution: def maximalSquare(self, matrix): &amp;#34;&amp;#34;&amp;#34; :type matrix: List[List[str]] :rtype: int &amp;#34;&amp;#34;&amp;#34; area = 0 if not matrix: return area # Edge case: single col matrix for i in range(len(matrix)): if matrix[i][0] == &amp;#34;1&amp;#34;: matrix[i][0] = 1 area = 1 # Edge case: single row matrix for i in range(len(matrix[0])): if matrix[0][i] == &amp;#34;1&amp;#34;: matrix[0][i] = 1 area = 1 for i in range(1, len(matrix)): for j in range(1, len(matrix[0])): if matrix[i][j] == &amp;#34;0&amp;#34;: matrix[i][j] = 0 continue localMin = min( int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1]) ) print(int(matrix[i-1][j]), int(matrix[i-1][j-1]), int(matrix[i][j-1])) matrix[i][j] = localMin + 1 if matrix[i][j] &amp;gt; area: area = matrix[i][j] return area**2 Java</description>
     </item>
     
     <item>

@@ -176,10 +176,63 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/shortest-distance-from-all-buildings/">Shortest Distance From All Buildings</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/monthly-transactions-ii/">Monthly Transactions Ii</a></h2>
 
-      <p>You want to build a house on an empty land which reaches all buildings in the shortest amount of distance. You can only move up, down, left and right. You are given a 2D grid of values 0, 1 or 2, where:
- Each 0 marks an empty land which you can pass by freely. Each 1 marks a building which you cannot pass through. Each 2 marks an obstacle which you cannot pass through.</p>
+      <p>Table: Transactions
+&#43;----------------&#43;---------&#43; | Column Name | Type | &#43;----------------&#43;---------&#43; | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | &#43;----------------&#43;---------&#43; id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&#34;approved&#34;, &#34;declined&#34;]. Table: Chargebacks &#43;----------------&#43;---------&#43; | Column Name | Type | &#43;----------------&#43;---------&#43; | trans_id | int | | charge_date | date | &#43;----------------&#43;---------&#43; Chargebacks contains basic information regarding incoming chargebacks from some transactions placed in Transactions table.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/monthly-transactions-i/">Monthly Transactions I</a></h2>
+
+      <p>Table: Transactions
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | &#43;---------------&#43;---------&#43; id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&#34;approved&#34;, &#34;declined&#34;]. Write an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/last-stone-weight/">Last Stone Weight</a></h2>
+
+      <p>We have a collection of stones, each stone has a positive integer weight.
+Each turn, we choose the two heaviest stones and smash them together. Suppose the stones have weights x and y with x &lt;= y. The result of this smash is:
+ If x == y, both stones are totally destroyed; If x != y, the stone of weight x is totally destroyed, and the stone of weight y has new weight y-x.</p>
 
       <p class="meta">
         
@@ -191,7 +244,7 @@
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
@@ -202,14 +255,68 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/maximum-xor-of-two-numbers-in-an-array/">Maximum Xor of Two Numbers in an Array</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/basic-calculator-ii/">Basic Calculator Ii</a></h2>
 
-      <p>Given a non-empty array of numbers, a0, a1, a2, … , an-1, where 0 ≤ ai&lt; 231.
-Find the maximum result of ai XOR aj, where 0 ≤ i, j &lt; n.
-Could you do this in O(n) runtime?
-Example Input: [3, 10, 5, 25, 2, 8] Output: 28 Explanation: The maximum result is 5 ^ 25 = 28. Solution (prefix hashset - less efficient) Time: O(N)
+      <p>Implement a basic calculator to evaluate a simple expression string.
+The expression string contains only non-negative integers, &#43;, -, *, / operators and empty spaces  . The integer division should truncate toward zero.
+Example 1 Input: &#34;3&#43;2*2&#34; Output: 7 Example 2 Input: &#34; 3/2 &#34; Output: 1 Example 3 Input: &#34; 3&#43;5 / 2 &#34; Output: 5 Note  You may assume that the given expression is always valid. Do not use the eval built-in library function.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/basic-calculator/">Basic Calculator</a></h2>
+
+      <p>Implement a basic calculator to evaluate a simple expression string.
+The expression string may contain open ( and closing parentheses ), the plus &#43; or minus sign -, non-negative integers and empty spaces  .
+Example 1 Input: &#34;1 &#43; 1&#34; Output: 2 Example 2 Input: &#34; 2-1 &#43; 2 &#34; Output: 3 Example 3 Input: &#34;(1&#43;(4&#43;5&#43;2)-3)&#43;(6&#43;8)&#34; Output: 23 Note  You may assume that the given expression is always valid.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/backspace-string-compare/">Backspace String Compare</a></h2>
+
+      <p>Solution (build string ❌) Time: O(N)
+Space: O(N)
+class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: res_1 = self.helper(S) res_2 = self.helper(T) return len(res_1) == len(res_2) and res_1 == res_2 def helper(self, s): stack = [] for c in s: if c != &#34;#&#34;: stack.append(c) else: if len(stack) &gt; 0: stack.pop() return &#34;&#34;.join(stack) s
+Solution (two pointers 👍🏼) Time: O(N)
 Space: O(1)
-class Solution: def findMaximumXOR(self, nums: List[int]) -&gt; int: # 0bxxxxxx - 0b L = len(bin(max(nums))) - 2 max_xor = 0 for i in range(L-1, -1, -1): max_xor &lt;&lt;= 1 print(&#34;max_xor:&#34;, bin(max_xor) ) # set the rightmost bit to 1 curr_xor = max_xor | 1 print(&#34;curr_xor:&#34;, bin(curr_xor) ) # highest (L-i) bits prefixes = {num &gt;&gt; i for num in nums} print(&#34;prefixes:&#34;, [bin(p) for p in prefixes] ) # as long as there exists a p that makes curr_xor^p &gt; 0 # Update max_xor, if two of these prefixes could result in curr_xor.</p>
+from itertools import zip_longest class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: return all( a == b for a, b in zip_longest(self.</p>
 
       <p class="meta">
         
@@ -220,61 +327,6 @@ class Solution: def findMaximumXOR(self, nums: List[int]) -&gt; int: # 0bxxxxxx 
         in
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/">Minimum Number of Refueling Stops</a></h2>
-
-      <p>A car travels from a starting position to a destination which is target miles east of the starting position.
-Along the way, there are gas stations. Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.
-The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses 1 liter of gas per 1 mile that it drives.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/second-degree-follower/">Second Degree Follower</a></h2>
-
-      <p>In facebook, there is a follow table with two columns: followee, follower.
-Please write a sql query to get the amount of each follower’s follower if he/she has one.
-For example:
-&#43;-------------&#43;------------&#43; | followee | follower | &#43;-------------&#43;------------&#43; | A | B | | B | C | | B | D | | D | E | &#43;-------------&#43;------------&#43; should output: &#43;-------------&#43;------------&#43; | follower | num | &#43;-------------&#43;------------&#43; | B | 2 | | D | 1 | &#43;-------------&#43;------------&#43; Explaination: Both B and D exist in the follower list, when as a followee, B&#39;s follower is C and D, and D&#39;s follower is E.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -287,65 +339,10 @@ For example:
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/last-person-to-fit-in-the-elevator/">Last Person to Fit in the Elevator</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/insertion-sort-list/">Insertion Sort List</a></h2>
 
-      <p>Table: Queue
-&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | person_id | int | | person_name | varchar | | weight | int | | turn | int | &#43;-------------&#43;---------&#43; person_id is the primary key column for this table. This table has the information about all people waiting for an elevator. The person_id and turn columns will contain all numbers from 1 to n, where n is the number of rows in the table.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/movie-rating/">Movie Rating</a></h2>
-
-      <p>Table: Movies
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | title | varchar | &#43;---------------&#43;---------&#43; movie_id is the primary key for this table. title is the name of the movie. Table: Users
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | user_id | int | | name | varchar | &#43;---------------&#43;---------&#43; user_id is the primary key for this table. Table: Movie_Rating
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | user_id | int | | rating | int | | created_at | date | &#43;---------------&#43;---------&#43; (movie_id, user_id) is the primary key for this table.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/design-hashmap/">Design Hashmap</a></h2>
-
-      <p>Design a HashMap without using any built-in hash table libraries.
-To be specific, your design should include these functions:
- put(key, value): Insert a (key, value) pair into the HashMap. If the value already exists in the HashMap, update the value. get(key): Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key. remove(key): Remove the mapping for the value key if this map contains the mapping for the key.</p>
+      <p>Algorithm of Insertion Sort Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+Example 1 Input: 4-&gt;2-&gt;1-&gt;3 Output: 1-&gt;2-&gt;3-&gt;4 Example 2 Input: -1-&gt;5-&gt;3-&gt;4-&gt;0 Output: -1-&gt;0-&gt;3-&gt;4-&gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.</p>
 
       <p class="meta">
         
@@ -356,59 +353,6 @@ To be specific, your design should include these functions:
         in
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/design-circular-deque/">Design Circular Deque</a></h2>
-
-      <p>Design your implementation of the circular double-ended queue (deque).
-Your implementation should support following operations:
-MyCircularDeque(k): Constructor, set the size of the deque to be k.
- insertFront(): Adds an item at the front of Deque. Return true if the operation is successful. insertLast(): Adds an item at the rear of Deque. Return true if the operation is successful. deleteFront(): Deletes an item from the front of Deque. Return true if the operation is successful.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/team-scores-in-football-tournament/">Team Scores in Football Tournament</a></h2>
-
-      <p>Solution (Union) SELECT t.team_id, t.team_name, IFNULL(SUM(p.points), 0) AS num_points FROM Teams t LEFT JOIN ( SELECT host_team as team_id, CASE WHEN host_goals &gt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches UNION ALL SELECT guest_team as team_id, CASE WHEN host_goals &lt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches ) AS p ON t.team_id = p.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -421,11 +365,40 @@ MyCircularDeque(k): Constructor, set the size of the deque to be k.
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/design-hashset/">Design Hashset</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/middle-of-the-linked-list/">Middle of the Linked List</a></h2>
 
-      <p>Design a HashSet without using any built-in hash table libraries.
-To be specific, your design should include these functions:
- add(value): Insert a value into the HashSet. contains(value): Return whether the value exists in the HashSet or not. remove(value): Remove a value in the HashSet. If the value does not exist in the HashSet, do nothing.  Example MyHashSet hashSet = new MyHashSet(); hashSet.add(1); hashSet.add(2); hashSet.contains(1); // returns true hashSet.contains(3); // returns false (not found) hashSet.</p>
+      <p>Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+If there are two middle nodes, return the second middle node.
+Example 1 Input: [1,2,3,4,5] Output: Node 3 from this list (Serialization: [3,4,5]) The returned node has value 3. (The judge&#39;s serialization of this node is [3,4,5]). Note that we returned a ListNode object ans, such that: ans.val = 3, ans.next.val = 4, ans.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/sort-list/">Sort List</a></h2>
+
+      <p>Sort a linked list in O(n log n) time using constant space complexity.
+Example 1 Input: 4-&gt;2-&gt;1-&gt;3 Output: 1-&gt;2-&gt;3-&gt;4 Example 2 Input: -1-&gt;5-&gt;3-&gt;4-&gt;0 Output: -1-&gt;0-&gt;3-&gt;4-&gt;5 Solution (merge sort - top down) Time: O(NlogN)
+Space: O(logN)
+Doesn’t satisfy the requirement
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def sortList(self, head: ListNode) -&gt; ListNode: if not head or not head.</p>
 
       <p class="meta">
         
@@ -438,6 +411,32 @@ To be specific, your design should include these functions:
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/reported-posts-ii/">Reported Posts II</a></h2>
+
+      <p>Table: Actions
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | user_id | int | | post_id | int | | action_date | date | | action | enum | | extra | varchar | &#43;---------------&#43;---------&#43; There is no primary key for this table, it may have duplicate rows. The action column is an ENUM type of (&#39;view&#39;, &#39;like&#39;, &#39;reaction&#39;, &#39;comment&#39;, &#39;report&#39;, &#39;share&#39;). The extra column has optional information about the action such as a reason for report or a type of reaction.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
       </p>
   </div>
 

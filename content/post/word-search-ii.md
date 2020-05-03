@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "bfs"]
 categories: ["algorithm"]
 date: 2019-04-08T23:50:33-07:00
+lastmod: 2020-04-07T23:50:33-07:00
 draft: false
 archive: false
 ---
@@ -25,15 +26,17 @@ words = ["oath","pea","eat","rain"]
 
 Output: ["eat","oath"]
 ```
+
 #### Note
+
 1. All inputs are consist of lowercase letters `a-z`.
 2. The values of `words` are distinct.
 
 ### Solution
-```python
-# Time:  O(m * n * l)
-# Space: O(l)
 
+Time:  `O(m * n * l)`  
+Space: `O(m*n + l)`  
+```python
 class TrieNode(object):
     # Initialize your data structure here.
     def __init__(self):

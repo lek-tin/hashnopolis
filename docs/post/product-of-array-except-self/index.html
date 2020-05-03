@@ -239,12 +239,14 @@ Space: <code>O(1)</code></p>
 </span><span style="color:#e6db74">        :type nums: List[int]
 </span><span style="color:#e6db74">        :rtype: List[int]
 </span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
-        products <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># product of all to left of nums[0] is set to 1</span>
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(nums)):
+        N <span style="color:#f92672">=</span> len(nums)
+        <span style="color:#75715e"># product of all to left of nums[0] is set to 1</span>
+        products <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, N):
             products<span style="color:#f92672">.</span>append(nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> products[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
-        <span style="color:#66d9ef">print</span>(products)
+
         right_product <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(N<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
             products[i] <span style="color:#f92672">*=</span> right_product
             right_product <span style="color:#f92672">*=</span> nums[i]
 

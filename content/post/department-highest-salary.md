@@ -9,6 +9,7 @@ lastmod: 2020-03-03T23:58:39-08:00
 draft: false
 archive: false
 ---
+
 The `Employee` table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
 
 ```
@@ -55,21 +56,20 @@ Max and Jim both have the highest salary in the IT department and Henry has the 
 
 ```sql
 SELECT
-    Department.name AS 'Department',
-    Employee.name AS 'Employee',
+    Department.name as Department,
+    Employee.Name as Employee,
     Salary
 FROM
     Employee
-    JOIN
-    DEPARTMENT on Employee.DepartmentId = Department.Id
+JOIN
+    Department
+ON
+    Employee.DepartmentId = Department.Id
 WHERE
     (Employee.DepartmentId, Salary) IN
     (
-        SELECT
-            Department.Id, MAX(Salary)
-        FROM
-            Employee
-        GROUP BY
-            DepartmentId
+        SELECT DepartmentId, MAX(Salary)
+        FROM Employee
+        GROUP BY DepartmentId
     )
 ```

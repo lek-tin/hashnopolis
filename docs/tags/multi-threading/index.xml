@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>multi-threading on Hashnopolis</title>
+    <link>http://www.hashnopolis.com/tags/multi-threading/</link>
+    <description>Recent content in multi-threading on Hashnopolis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Hashnopolis</copyright>
+    <lastBuildDate>Mon, 06 Apr 2020 19:15:52 -0700</lastBuildDate>
+    
+	<atom:link href="http://www.hashnopolis.com/tags/multi-threading/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fizz Buzz Multithreaded</title>
+      <link>http://www.hashnopolis.com/post/fizz-buzz-multithreaded/</link>
+      <pubDate>Mon, 06 Apr 2020 19:15:52 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/fizz-buzz-multithreaded/</guid>
+      <description>Write a program that outputs the string representation of numbers from 1 to n, however:
+ If the number is divisible by 3, output &amp;quot;fizz&amp;quot;. If the number is divisible by 5, output &amp;quot;buzz&amp;quot;. If the number is divisible by both 3 and 5, output &amp;quot;fizzbuzz&amp;quot;.  For example, for n = 15, we output: 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz.</description>
+    </item>
+    
+    <item>
+      <title>Print in Order</title>
+      <link>http://www.hashnopolis.com/post/print-in-order/</link>
+      <pubDate>Mon, 06 Apr 2020 05:58:17 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/print-in-order/</guid>
+      <description>Suppose we have a class:
+public class Foo { public void first() { print(&amp;quot;first&amp;quot;); } public void second() { print(&amp;quot;second&amp;quot;); } public void third() { print(&amp;quot;third&amp;quot;); } } The same instance of Foo will be passed to three different threads. Thread A will call first(), thread B will call second(), and thread C will call third(). Design a mechanism and modify the program to ensure that second() is executed after first(), and third() is executed after second().</description>
+    </item>
+    
+    <item>
+      <title>The Dining Philosophers</title>
+      <link>http://www.hashnopolis.com/post/the-dining-philosophers/</link>
+      <pubDate>Mon, 06 Apr 2020 03:18:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/the-dining-philosophers/</guid>
+      <description>Five silent philosophers sit at a round table with bowls of spaghetti. Forks are placed between each pair of adjacent philosophers.
+Each philosopher must alternately think and eat. However, a philosopher can only eat spaghetti when they have both left and right forks. Each fork can be held by only one philosopher and so a philosopher can use the fork only if it is not being used by another philosopher. After an individual philosopher finishes eating, they need to put down both forks so that the forks become available to others.</description>
+    </item>
+    
+  </channel>
+</rss>

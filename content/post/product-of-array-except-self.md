@@ -9,6 +9,7 @@ lastmod: 2020-02-26T16:41:47-07:00
 draft: false
 archive: false
 ---
+
 Given an array of n integers where `n > 1`, `nums`, return an array output such that `output[i]` is equal to the product of all the elements of nums except `nums[i]`.
 
 Solve it **without division** and in `O(n)`.
@@ -47,6 +48,7 @@ class Solution:
 Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)
 
 ### Solution 2
+
 Time: `O(n)`
 Space: `O(1)`
 ```python
@@ -56,12 +58,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        products = [1]  # product of all to left of nums[0] is set to 1
-        for i in range(1, len(nums)):
+        N = len(nums)
+        # product of all to left of nums[0] is set to 1
+        products = [1]
+        for i in range(1, N):
             products.append(nums[i-1] * products[-1])
-        print(products)
+
         right_product = 1
-        for i in range(len(nums)-1, -1, -1):
+        for i in range(N-1, -1, -1):
             products[i] *= right_product
             right_product *= nums[i]
 

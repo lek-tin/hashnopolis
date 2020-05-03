@@ -2,10 +2,10 @@
 title: "Bitwise and of Numbers Range"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "biw-manipulation"]
+tags: ["leetcode", "bit-manipulation"]
 categories: ["algorithm"]
 date: 2020-03-31T01:24:56-07:00
-lastmod: 2020-03-31T01:24:56-07:00
+lastmod: 2020-04-23T18:24:56-07:00
 draft: false
 archive: false
 ---
@@ -27,6 +27,30 @@ Output: 0
 
 ### Solution
 
+<<<<<<< HEAD
+=======
+Java
+```java
+class Solution {
+    public int rangeBitwiseAnd(int m, int n) {
+        int shift = 0;
+
+        while (m < n) {
+            m >>= 1;
+            n >>= 1;
+            shift++;
+            // System.out.println("m: " + String.format("%32s", Integer.toBinaryString(m)).replaceAll(" ", "0")); 
+            // System.out.println("n: " + String.format("%32s", Integer.toBinaryString(n)).replaceAll(" ", "0"));
+            // System.out.println(shift);
+        }
+
+        return m<<shift;
+    }
+}
+```
+
+Python
+>>>>>>> dev
 ```python
 class Solution:
     def rangeBitwiseAnd(self, m: int, n: int) -> int:

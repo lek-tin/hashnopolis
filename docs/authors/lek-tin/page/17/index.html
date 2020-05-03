@@ -176,36 +176,11 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/3sum-smaller/">3sum Smaller</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/strobogrammatic-number/">Strobogrammatic Number</a></h2>
 
-      <p>Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &lt;= i &lt; j &lt; k &lt; n that satisfy the condition nums[i] &#43; nums[j] &#43; nums[k] &lt; target.
-Example: Input: nums = [-2,0,1,3], and target = 2 Output: 2 Explanation: Because there are two triplets which sums are less than 2: [-2,0,1] [-2,0,3] Solution class Solution: def threeSumSmaller(self, nums: List[int], target: int) -&gt; int: res = 0 if not nums: return res nums.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/two-sum-less-than-k/">Two Sum Less Than K</a></h2>
-
-      <p>Given an array A of integers and integer K, return the maximum S such that there exists i &lt; j with A[i] &#43; A[j] = S and S &lt; K. If no i, j exist satisfying this equation, return -1.
-Example 1 Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We can use 34 and 24 to sum 58 which is less than 60. Example 2 Input: A = [10,20,30], K = 15 Output: -1 Explanation: In this case it&#39;s not possible to get a pair sum less that 15.</p>
+      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.
+Example 1 Input: &#34;69&#34; Output: true Example 2 Input: &#34;88&#34; Output: true Example 3 Input: &#34;962&#34; Output: false Solution class Solution: def isStrobogrammatic(self, num: str) -&gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2&#43;1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</p>
 
       <p class="meta">
         
@@ -228,11 +203,38 @@ Example 1 Input: A = [34,23,1,24,75,33,54,8], K = 60 Output: 58 Explanation: We 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/inorder-successor-in-bst/">Inorder Successor in BST</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/island-perimeter/">Island Perimeter</a></h2>
 
-      <p>Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
-The successor of a node p is the node with the smallest key greater than p.val.
-Example 1 Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order successor node is 2. Note that both p and the return value is of TreeNode type. Example 2 Input: root = [5,3,6,2,4,null,null,1], p = 6 Output: null Explanation: There is no in-order successor of the current node, so the answer is null.</p>
+      <p>You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
+Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
+The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island). One cell is a square with side length 1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/verifying-an-alien-dictionary/">Verifying an Alien Dictionary</a></h2>
+
+      <p>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
+Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
+Example 1 Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlabcdefgijkmnopqrstuvwxyz&#34; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</p>
 
       <p class="meta">
         
@@ -255,89 +257,11 @@ Example 1 Input: root = [2,1,3], p = 1 Output: 2 Explanation: 1&#39;s in-order s
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/subarray-sum-equals-k/">Subarray Sum Equals K</a></h2>
 
-      <p>Given a binary tree, return the inorder traversal of its nodes’ values.
-Example: Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2] Follow-up the Recursive solution is trivial, could you do it iteratively?
-Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def inorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; &#34;&#34;&#34;Check root == None to reduce time on checking&#34;&#34;&#34; if root == None: return [] stack = [] result = [] current = root while (current!</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/python-modules/">Python Modules</a></h2>
-
-      <p>https://www.tutorialsteacher.com/python/python-module-attributes</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/python" ><strong>"python"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/two-sum-iii-data-structure-design-design/">Two Sum Iii Data Structure Design Design</a></h2>
-
-      <p>Design and implement a TwoSum class. It should support the following operations: add and find.
-add - Add the number to an internal data structure. find - Find if there exists any pair of numbers which sum is equal to the value.
-Example 1 add(1); add(3); add(5); find(4) -&gt; true find(7) -&gt; false Example 2 add(3); add(1); add(2); find(3) -&gt; true find(6) -&gt; false Solution # Time: add is o(1), find is o(n) # Space: `O(n)` class TwoSum: def __init__(self): &#34;&#34;&#34; Initialize your data structure here.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/two-sum-iv-input-is-a-bst/">Two Sum Iv Input Is a Bst</a></h2>
-
-      <p>Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
-Example 1 Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2 Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 28 Output: False Solution # time: `O(n)` # space: `O(n)` # Definition for a binary tree node.</p>
+      <p>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+Example 1 «««&lt; HEAD        dev
+       Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].</p>
 
       <p class="meta">
         
@@ -360,11 +284,11 @@ Example 1 Input: 5 / \ 3 6 / \ \ 2 4 7 Target = 9 Output: True Example 2 Input: 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/two-sum/">Two Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/find-in-mountain-array/">Find in Mountain Array</a></h2>
 
-      <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1]. Solution # time: `O(n)` # space: `O(n)` class Solution: def twoSum(self, nums, target): &#34;&#34;&#34; :type nums: List[int] :type target: int :rtype: List[int] &#34;&#34;&#34; res = [-1, -1] if nums == None or len(nums) &lt; 2: return res solutionMap = {} for pos in range(len(nums) - 1): if (target - nums[pos]) in solutionMap: res[0] = solutionMap[target - nums[pos]] res[1] = pos break solutionMap[nums[pos]] = pos return res # time: o(nlogn) # space: o(1) class Pair: def __init__(self, index, val): self.</p>
+      <p>(This problem is an interactive problem.)
+You may recall that an array A is a mountain array if and only if:
+ A.length &gt;= 3 There exists some i with 0 &lt; i &lt; A.length - 1 such that:  A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target.</p>
 
       <p class="meta">
         
@@ -387,11 +311,10 @@ Example Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] =
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/two-sum-ii-input-array-is-sorted/">Two Sum II Input Array Is Sorted</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/peak-index-in-a-mountain-array/">Peak Index in a Mountain Array</a></h2>
 
-      <p>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
-The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
-Note  Your returned answers (both index1 and index2) are not zero-based. You may assume that each input would have exactly one solution and you may not use the same element twice.</p>
+      <p>Let’s call an array A a mountain if the following properties hold:
+ A.length &gt;= 3 There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1]  Given an array that is definitely a mountain, return any i such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.</p>
 
       <p class="meta">
         
@@ -414,9 +337,10 @@ Note  Your returned answers (both index1 and index2) are not zero-based. You may
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/super-useful-bash-commands/">Super Useful Bash Commands</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/sum-of-square-numbers/">Sum of Square Numbers</a></h2>
 
-      <p>List all services  sudo service --status-all Create a nested directory if it doesn’t exist already.  mkdir -p /nested/directory To list detailed information about all items (visible and invisible) in the current directory (the -a option is to show all files, the -l option is to show details)  ls -al To list the contents of your Documents folder and all sub folders (this may take a while if you have a large Documents folder)  ls -R ~/Documents Find process which is listening to port 3000, and kill that process or process group  sudo lsof -i :3000 kill -9 &lt;PID&gt; kill -9 -&lt;PID&gt; [Dangerous] Recursively delete EVERYTHING files  rm -rf /tmp/* // everything in &#39;/tmp/&#39; folder rm -rf .</p>
+      <p>Given a non-negative integer c, your task is to decide whether there’re two integers a and b such that a2 &#43; b2 = c.
+Example 1 Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2 Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function</p>
 
       <p class="meta">
         
@@ -426,9 +350,94 @@ Note  Your returned answers (both index1 and index2) are not zero-based. You may
         
         in
         
-          <a  class="meta--cat" href="/categories/linux" ><strong>"linux"</strong></a>
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 4-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/valid-perfect-square/">Valid Perfect Square</a></h2>
+
+      <p>Given a positive integer num, write a function which returns True if num is a perfect square else False.
+Note Do not use any built-in library function such as sqrt.
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
+class Solution: def isPerfectSquare(self, num: int) -&gt; bool: if num == 1: return True left, right = 0, num while left &lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/guess-number-higher-or-lower-ii/">Guess Number Higher or Lower II</a></h2>
+
+      <p>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I’ll tell you whether the number I picked is higher or lower.
+However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/guess-number-higher-or-lower/">Guess Number Higher or Lower</a></h2>
+
+      <p>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I’ll tell you whether the number is higher or lower.
+You call a pre-defined API guess(int num) which returns 3 possible results (-1, 1, or 0):
+-1 : My number is lower 1 : My number is higher 0 : Congrats!</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

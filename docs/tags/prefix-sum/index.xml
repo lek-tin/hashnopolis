@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 19 Oct 2019 22:11:13 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 00:13:53 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/prefix-sum/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Contiguous Array</title>
+      <link>http://www.hashnopolis.com/post/contiguous-array/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/contiguous-array/</guid>
+      <description>Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
+Example 1 Input: [0,1] Output: 2 Explanation: [0, 1] is the longest contiguous subarray with equal number of 0 and 1. Example 2 Input: [0,1,0] Output: 2 Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1. Note The length of the given binary array will not exceed 50,000.</description>
+    </item>
     
     <item>
       <title>Maximum Value Array M Range Increment Operations</title>
@@ -21,6 +31,17 @@
       <description>Consider an array of size n with all initial values as 0, we need to perform following m range increment operations.
 increment(a, b, k) : Increment values from a to b by k. After m operations, we need to calculate the maximum of the values in the array.
 Example 1 Input : n = 5 m = 3 a = 0, b = 1, k = 100 a = 1, b = 4, k = 100 a = 2, b = 3, k = 100 Output : 200 Explanation: Initially array = {0, 0, 0, 0, 0} After first operation: array = {100, 100, 0, 0, 0} After second operation: array = {100, 200, 100, 100, 100} After third operation: array = {100, 200, 200, 200, 100} Maximum element after m operations is 200.</description>
+    </item>
+    
+    <item>
+      <title>Subarray Sum Equals K</title>
+      <link>http://www.hashnopolis.com/post/subarray-sum-equals-k/</link>
+      <pubDate>Thu, 26 Sep 2019 15:33:32 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/subarray-sum-equals-k/</guid>
+      <description>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+Example 1 &amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD        dev
+       Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].</description>
     </item>
     
     <item>

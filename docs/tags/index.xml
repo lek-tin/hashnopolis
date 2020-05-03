@@ -7,35 +7,199 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 02 Apr 2020 20:15:25 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 04:38:56 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>dynamic-programming</title>
-      <link>http://www.hashnopolis.com/tags/dynamic-programming/</link>
-      <pubDate>Thu, 02 Apr 2020 20:15:25 -0700</pubDate>
+      <title>char-map</title>
+      <link>http://www.hashnopolis.com/tags/char-map/</link>
+      <pubDate>Sat, 02 May 2020 04:38:56 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/tags/dynamic-programming/</guid>
+      <guid>http://www.hashnopolis.com/tags/char-map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hashmap</title>
+      <link>http://www.hashnopolis.com/tags/hashmap/</link>
+      <pubDate>Sat, 02 May 2020 04:38:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/hashmap/</guid>
       <description></description>
     </item>
     
     <item>
       <title>leetcode</title>
       <link>http://www.hashnopolis.com/tags/leetcode/</link>
-      <pubDate>Thu, 02 Apr 2020 20:15:25 -0700</pubDate>
+      <pubDate>Sat, 02 May 2020 04:38:56 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/leetcode/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>binary</title>
+      <link>http://www.hashnopolis.com/tags/binary/</link>
+      <pubDate>Thu, 30 Apr 2020 00:10:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/binary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>binary-tree</title>
+      <link>http://www.hashnopolis.com/tags/binary-tree/</link>
+      <pubDate>Thu, 30 Apr 2020 00:10:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/binary-tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dfs</title>
+      <link>http://www.hashnopolis.com/tags/dfs/</link>
+      <pubDate>Thu, 30 Apr 2020 00:10:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/dfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dynamic-programming</title>
+      <link>http://www.hashnopolis.com/tags/dynamic-programming/</link>
+      <pubDate>Tue, 28 Apr 2020 23:14:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/dynamic-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>greedy</title>
+      <link>http://www.hashnopolis.com/tags/greedy/</link>
+      <pubDate>Tue, 28 Apr 2020 23:14:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/greedy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linked-hashmap</title>
+      <link>http://www.hashnopolis.com/tags/linked-hashmap/</link>
+      <pubDate>Tue, 28 Apr 2020 03:53:12 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/linked-hashmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bst</title>
+      <link>http://www.hashnopolis.com/tags/bst/</link>
+      <pubDate>Mon, 20 Apr 2020 04:25:35 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/bst/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hashmapclass Solution: def findMaxLength(self, nums: List[int]) -&gt; int: lookup = {} lookup[0] = -1 max_len = 0 count = 0
+for i, num in enumerate(nums): count &#43;= 1 if num else -1 if count in lookup: max_len = max(max_len, i-lookup[count]) else: lookup[count] = i
+return max_len</title>
+      <link>http://www.hashnopolis.com/tags/hashmapclass-solution-def-findmaxlengthself-nums-listint-int-lookup-lookup0-1-max_len-0-count-0-for-i-num-in-enumeratenums-count-&#43;-1-if-num-else-1-if-count-in-lookup-max_len-maxmax_len-i-lookupcount-else-lookupcount-i-return-max_len/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/hashmapclass-solution-def-findmaxlengthself-nums-listint-int-lookup-lookup0-1-max_len-0-count-0-for-i-num-in-enumeratenums-count-&#43;-1-if-num-else-1-if-count-in-lookup-max_len-maxmax_len-i-lookupcount-else-lookupcount-i-return-max_len/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prefix-sum</title>
+      <link>http://www.hashnopolis.com/tags/prefix-sum/</link>
+      <pubDate>Mon, 13 Apr 2020 00:13:53 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/prefix-sum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>sql</title>
       <link>http://www.hashnopolis.com/tags/sql/</link>
-      <pubDate>Thu, 02 Apr 2020 16:19:21 -0700</pubDate>
+      <pubDate>Sun, 12 Apr 2020 01:47:35 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://www.hashnopolis.com/tags/two-pointers/</link>
+      <pubDate>Thu, 09 Apr 2020 01:53:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/two-pointers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>generator</title>
+      <link>http://www.hashnopolis.com/tags/generator/</link>
+      <pubDate>Thu, 09 Apr 2020 01:53:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/generator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stack</title>
+      <link>http://www.hashnopolis.com/tags/stack/</link>
+      <pubDate>Thu, 09 Apr 2020 01:53:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linked-list</title>
+      <link>http://www.hashnopolis.com/tags/linked-list/</link>
+      <pubDate>Wed, 08 Apr 2020 07:21:58 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/linked-list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sort</title>
+      <link>http://www.hashnopolis.com/tags/sort/</link>
+      <pubDate>Wed, 08 Apr 2020 07:21:58 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/sort/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sorting</title>
+      <link>http://www.hashnopolis.com/tags/sorting/</link>
+      <pubDate>Wed, 08 Apr 2020 07:21:58 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/sorting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memoization</title>
+      <link>http://www.hashnopolis.com/tags/memoization/</link>
+      <pubDate>Mon, 06 Apr 2020 21:13:50 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/memoization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multi-threading</title>
+      <link>http://www.hashnopolis.com/tags/multi-threading/</link>
+      <pubDate>Mon, 06 Apr 2020 19:15:52 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/tags/multi-threading/</guid>
       <description></description>
     </item>
     
@@ -67,15 +231,6 @@
     </item>
     
     <item>
-      <title>hashmap</title>
-      <link>http://www.hashnopolis.com/tags/hashmap/</link>
-      <pubDate>Tue, 31 Mar 2020 22:20:28 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/hashmap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ood</title>
       <link>http://www.hashnopolis.com/tags/ood/</link>
       <pubDate>Tue, 31 Mar 2020 22:20:28 -0700</pubDate>
@@ -85,20 +240,11 @@
     </item>
     
     <item>
-      <title>dfs</title>
-      <link>http://www.hashnopolis.com/tags/dfs/</link>
-      <pubDate>Tue, 31 Mar 2020 20:08:24 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/dfs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>biw-manipulation</title>
-      <link>http://www.hashnopolis.com/tags/biw-manipulation/</link>
+      <title>bit-manipulation</title>
+      <link>http://www.hashnopolis.com/tags/bit-manipulation/</link>
       <pubDate>Tue, 31 Mar 2020 01:24:56 -0700</pubDate>
       
-      <guid>http://www.hashnopolis.com/tags/biw-manipulation/</guid>
+      <guid>http://www.hashnopolis.com/tags/bit-manipulation/</guid>
       <description></description>
     </item>
     
@@ -108,15 +254,6 @@
       <pubDate>Tue, 31 Mar 2020 01:20:13 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/bfs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bit-manipulation</title>
-      <link>http://www.hashnopolis.com/tags/bit-manipulation/</link>
-      <pubDate>Mon, 30 Mar 2020 22:59:16 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/bit-manipulation/</guid>
       <description></description>
     </item>
     
@@ -139,15 +276,6 @@
     </item>
     
     <item>
-      <title>greedy</title>
-      <link>http://www.hashnopolis.com/tags/greedy/</link>
-      <pubDate>Mon, 30 Mar 2020 02:39:52 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/greedy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>heap</title>
       <link>http://www.hashnopolis.com/tags/heap/</link>
       <pubDate>Mon, 30 Mar 2020 02:39:52 -0700</pubDate>
@@ -162,24 +290,6 @@
       <pubDate>Sun, 29 Mar 2020 06:40:37 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/deque/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linked-list</title>
-      <link>http://www.hashnopolis.com/tags/linked-list/</link>
-      <pubDate>Sun, 29 Mar 2020 06:40:37 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/linked-list/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.hashnopolis.com/tags/two-pointers/</link>
-      <pubDate>Thu, 26 Mar 2020 03:11:06 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/two-pointers/</guid>
       <description></description>
     </item>
     
@@ -211,15 +321,6 @@
     </item>
     
     <item>
-      <title>stack</title>
-      <link>http://www.hashnopolis.com/tags/stack/</link>
-      <pubDate>Wed, 25 Mar 2020 20:17:16 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/stack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>graph</title>
       <link>http://www.hashnopolis.com/tags/graph/</link>
       <pubDate>Tue, 24 Mar 2020 21:07:32 -0700</pubDate>
@@ -234,24 +335,6 @@
       <pubDate>Tue, 24 Mar 2020 21:07:32 -0700</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/topological-sort/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>binary</title>
-      <link>http://www.hashnopolis.com/tags/binary/</link>
-      <pubDate>Tue, 24 Mar 2020 03:28:41 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/binary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>binary-tree</title>
-      <link>http://www.hashnopolis.com/tags/binary-tree/</link>
-      <pubDate>Tue, 24 Mar 2020 03:28:41 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/binary-tree/</guid>
       <description></description>
     </item>
     
@@ -382,15 +465,6 @@
     </item>
     
     <item>
-      <title>memoization</title>
-      <link>http://www.hashnopolis.com/tags/memoization/</link>
-      <pubDate>Sun, 08 Mar 2020 20:19:24 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/memoization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>minimum-spanning-tree</title>
       <link>http://www.hashnopolis.com/tags/minimum-spanning-tree/</link>
       <pubDate>Sat, 29 Feb 2020 16:49:10 -0800</pubDate>
@@ -441,24 +515,6 @@
       <pubDate>Fri, 08 Nov 2019 23:56:44 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/comparator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sort</title>
-      <link>http://www.hashnopolis.com/tags/sort/</link>
-      <pubDate>Fri, 08 Nov 2019 23:56:44 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/sort/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>prefix-sum</title>
-      <link>http://www.hashnopolis.com/tags/prefix-sum/</link>
-      <pubDate>Sat, 19 Oct 2019 22:11:13 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/prefix-sum/</guid>
       <description></description>
     </item>
     
@@ -522,15 +578,6 @@
       <pubDate>Sat, 24 Aug 2019 23:50:51 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/bianry-tree/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bst</title>
-      <link>http://www.hashnopolis.com/tags/bst/</link>
-      <pubDate>Thu, 22 Aug 2019 00:23:43 -0700</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/bst/</guid>
       <description></description>
     </item>
     
@@ -900,15 +947,6 @@
       <pubDate>Sun, 11 Nov 2018 17:11:19 -0800</pubDate>
       
       <guid>http://www.hashnopolis.com/tags/two-posinter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linked-hashmap</title>
-      <link>http://www.hashnopolis.com/tags/linked-hashmap/</link>
-      <pubDate>Sun, 11 Nov 2018 15:33:09 -0800</pubDate>
-      
-      <guid>http://www.hashnopolis.com/tags/linked-hashmap/</guid>
       <description></description>
     </item>
     

@@ -176,40 +176,13 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/4.-median-of-two-sorted-arrays/">4. Median of Two Sorted Arrays</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/find-peak-element/">Find Peak Element</a></h2>
 
-      <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m&#43;n)).
-You may assume nums1 and nums2 cannot be both empty.
-Example 1 nums1 = [1, 3] nums2 = [2] The median is 2.0 Example 2 nums1 = [1, 2] nums2 = [3, 4] The median is (2 &#43; 3)/2 = 2.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></h2>
-
-      <p>Given a linked list, remove the n-th node from the end of list and return its head.
-Example Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5. Note Given n will always be valid.
-Follow-up Could you do this in one pass?
-Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.val = x # self.</p>
+      <p>A peak element is an element that is greater than its neighbors.
+Given an input array nums, where nums[i] ≠ nums[i&#43;1], find a peak element and return its index.
+The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
+You may imagine that nums[-1] = nums[n] = -∞.
+Example 1 Input: nums = [1,2,3,1] Output: 2 Explanation: 3 is a peak element and your function should return the index number 2.</p>
 
       <p class="meta">
         
@@ -232,14 +205,93 @@ Solution # Definition for singly-linked list. # class ListNode(object): # def __
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/search-in-rotated-sorted-array-ii/">Search in Rotated Sorted Array II</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/find-minimum-in-rotated-sorted-array/">Find Minimum in Rotated Sorted Array</a></h2>
 
       <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
-(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
-You are given a target value to search. If found in the array return true, otherwise return false.
-Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0 Output: true Example 2:
-Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false Follow-up  This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</p>
+(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+Find the minimum element.
+You may assume no duplicate exists in the array.
+Example 1 Input: [3,4,5,1,2] Output: 1 Example 2 Input: [4,5,6,7,0,1,2] Output: 0 Solution class Solution: def findMin(self, nums): &#34;&#34;&#34; :type nums: List[int] :rtype: int &#34;&#34;&#34; if len(nums) == 1: return nums[0] if len(nums) == 2: return min(nums[0], nums[1]) if nums[0] &lt; nums[len(nums)-1]: return nums[0] if nums[len(nums)-2] &gt; nums[len(nums)-1]: return nums[len(nums)-1] for i in range(1, len(nums)-1): if nums[i] &lt; nums[i-1] and nums[i] &lt; nums[i&#43;1]: return nums[i] def bsFindMin(self, nums): l, r = 0, len(nums) - 1 while l &lt; r: m = (l &#43; r) // 2 if nums[m] &gt; nums[m - 1] and nums[m] &gt; nums[m &#43; 1]: return nums[m &#43; 1] if nums[m] &lt; nums[m - 1] and nums[m] &lt; nums[m &#43; 1]: return nums[m] if nums[m] &gt;= nums[r]: l = m else: r = m return nums[0] </p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/delete-node-in-a-linked-list/">Delete Node in a Linked List</a></h2>
+
+      <p>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
+Supposed the linked list is 1 -&gt; 2 -&gt; 3 -&gt; 4 and you are given the third node with value 3, the linked list should become 1 -&gt; 2 -&gt; 4 after calling your function.
+Solution # Definition for singly-linked list. # class ListNode(object): # def __init__(self, x): # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/convert-sorted-array-to-binary-search-tree/">Convert Sorted Array to Binary Search Tree</a></h2>
+
+      <p>Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+Example Given the sorted array: [-10,-3,0,5,9], One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST: 0 / \ -3 9 / / -10 5 Solution # Definition for a binary tree node.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-right-side-view/">Binary Tree Right Side View</a></h2>
+
+      <p>Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+Example Input: [1,2,3,null,5,null,4] Output: [1, 3, 4] Explanation: 1 &lt;--- / \ 2 3 &lt;--- \ \ 5 4 &lt;--- Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
 
       <p class="meta">
         
@@ -262,11 +314,11 @@ Input: nums = [2,5,6,0,0,1,2], target = 3 Output: false Follow-up  This is a fol
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/when-you-new-a-class-in-javascript/">When You New a Class in JavaScript?</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-preorder-traversal/">Binary Tree Preorder Traversal</a></h2>
 
-      <p>Here is an example of instantiating a class using the new operator:
-class Person { constructor(name, age) { this.name = name; this.age = age; } } const asian = new Person(&#39;Alice&#39;, 25); console.log(asian); As you can see from below, asian is not a class, it is instead, an object:
-[object Object] { age: 25, name: &#34;Alice&#34; } The values of asian are set by the constructor of the Person class.</p>
+      <p>Given a binary tree, return the preorder traversal of its nodes’ values.
+Example:
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,2,3] Follow-up Recursive solution is trivial, could you do it iteratively? Solution # Definition for a binary tree node. # class TreeNode(object): # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution(object): def preorderTraversal_1(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; if root is None: return [] return [root.</p>
 
       <p class="meta">
         
@@ -276,7 +328,7 @@ class Person { constructor(name, age) { this.name = name; this.age = age; } } co
         
         in
         
-          <a  class="meta--cat" href="/categories/javascript" ><strong>"javascript"</strong></a>
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -289,10 +341,95 @@ class Person { constructor(name, age) { this.name = name; this.age = age; } } co
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/happy-number/">Happy Number</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-postorder-traversal/">Binary Tree Postorder Traversal</a></h2>
 
-      <p>Write an algorithm to determine if a number is “happy”.
-A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.</p>
+      <p>Given a binary tree, return the postorder traversal of its nodes’ values.
+Example Input: [1,null,2,3] 1 \ 2 / 3 Output: [3,2,1] Follow-up Recursive solution is trivial, could you do it iteratively?
+Solution Recursive👇
+# Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def postorderTraversal(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[int] &#34;&#34;&#34; def traverse(node): if node == None: return [] return traverse(node.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-paths/">Binary Tree Paths</a></h2>
+
+      <p>Given a binary tree, return all root-to-leaf paths.
+Note: A leaf is a node with no children.
+Example Input: 1 / \ 2 3 \ 5 Output: [&#34;1-&gt;2-&gt;5&#34;, &#34;1-&gt;3&#34;] Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3
+Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.right = None class Solution: def binaryTreePaths(self, root): &#34;&#34;&#34; :type root: TreeNode :rtype: List[str] &#34;&#34;&#34; res = [] def traverse(root, path): if root == None: return path &#43;= str(root.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></h2>
+
+      <p>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).
+Example Given binary tree `[3,9,20,null,null,15,7]`, 3 / \ 9 20 / \ 15 7 return its level order traversal as:
+[ [3], [9,20], [15,7] ] Solution (recursion) # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/binary-tree-level-order-traversal-ii/">Binary Tree Level Order Traversal II</a></h2>
+
+      <p>Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right, level by level from leaf to root).
+For example: Given binary tree [3,9,20,null,null,15,7],
+ 3 / \ 9 20 / \ 15 7 return its bottom-up level order traversal as:
+[ [15,7], [9,20], [3] ] Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.</p>
 
       <p class="meta">
         
@@ -320,6 +457,8 @@ A happy number is a number defined by the following process: Starting with any p
         
           <a class="pagination-previous" href="/authors/lek-tin/page/37/">← Newer Posts</a>
         
+        
+          <a class="pagination-next" href="/authors/lek-tin/page/39/">Older Posts →</a>
         
         </nav>
       </footer>

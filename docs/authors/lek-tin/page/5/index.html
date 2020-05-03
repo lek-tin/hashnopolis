@@ -176,38 +176,14 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/remove-duplicate-letters/">Remove Duplicate Letters</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-xor-of-two-numbers-in-an-array/">Maximum Xor of Two Numbers in an Array</a></h2>
 
-      <p>Given a string which contains only lowercase letters, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
-Example 1 Input: &#34;bcabc&#34; Output: &#34;abc&#34; Example 2 Input: &#34;cbacdcbc&#34; Output: &#34;acdb&#34; Example 3 Input: &#34;cba&#34; Output: &#34;cba&#34; Solution class Solution: def removeDuplicateLetters(self, s: str) -&gt; str: stack = [] seen = set() last_indices = {c: i for i, c in enumerate(s)} for i, c in enumerate(s): print(c, seen, stack) if c not in seen: while stack and c &lt; stack[-1] and i &lt; last_indices[stack[-1]]: seen.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/valid-sudoku/">Valid Sudoku</a></h2>
-
-      <p>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
-Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
-A partially filled sudoku which is valid.
-The Sudoku board could be partially filled, where empty cells are filled with the character &#39;.</p>
+      <p>Given a non-empty array of numbers, a0, a1, a2, … , an-1, where 0 ≤ ai&lt; 231.
+Find the maximum result of ai XOR aj, where 0 ≤ i, j &lt; n.
+Could you do this in O(n) runtime?
+Example Input: [3, 10, 5, 25, 2, 8] Output: 28 Explanation: The maximum result is 5 ^ 25 = 28. Solution (prefix hashset - less efficient) Time: O(N)
+Space: O(1)
+class Solution: def findMaximumXOR(self, nums: List[int]) -&gt; int: # 0bxxxxxx - 0b L = len(bin(max(nums))) - 2 max_xor = 0 for i in range(L-1, -1, -1): max_xor &lt;&lt;= 1 print(&#34;max_xor:&#34;, bin(max_xor) ) # set the rightmost bit to 1 curr_xor = max_xor | 1 print(&#34;curr_xor:&#34;, bin(curr_xor) ) # highest (L-i) bits prefixes = {num &gt;&gt; i for num in nums} print(&#34;prefixes:&#34;, [bin(p) for p in prefixes] ) # as long as there exists a p that makes curr_xor^p &gt; 0 # Update max_xor, if two of these prefixes could result in curr_xor.</p>
 
       <p class="meta">
         
@@ -230,145 +206,11 @@ The Sudoku board could be partially filled, where empty cells are filled with th
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/interval-list-intersections/">Interval List Intersections</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/">Minimum Number of Refueling Stops</a></h2>
 
-      <p>Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.
-Return the intersection of these two interval lists.
-(Formally, a closed interval [a, b] (with a &lt;= b) denotes the set of real numbers x with a &lt;= x &lt;= b. The intersection of two closed intervals is a set of real numbers that is either empty, or can be represented as a closed interval.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/scramble-string/">Scramble String</a></h2>
-
-      <p>Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
-Below is one possible representation of s1 = &#34;great&#34;:
- great / \ gr eat / \ / \ g r e at / \ a t To scramble the string, we may choose any non-leaf node and swap its two children.
-For example, if we choose the node &#34;gr&#34; and swap its two children, it produces a scrambled string &#34;rgeat&#34;.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/palindrome-partitioning-ii/">Palindrome Partitioning Ii</a></h2>
-
-      <p>Given a string s, partition s such that every substring of the partition is a palindrome.
-Return the minimum cuts needed for a palindrome partitioning of s.
-Example Input: &#34;aab&#34; Output: 1 Explanation: The palindrome partitioning [&#34;aa&#34;,&#34;b&#34;] could be produced using 1 cut. Solution (DP) class Solution: def minCut(self, s: str) -&gt; int: N = len(s) # valid[i][j] = True if s[i~j] IS palindrome, or False if IS NOT palindrome valid = [ [True for _ in range(N)] for _ in range(N) ] # min cuts of s[0~i] dp = [N for _ in range(N)] for l in range(2, N&#43;1): for i in range(N-l&#43;1): j = i&#43;l-1 valid[i][j] = s[i]==s[j] and valid[i&#43;1][j-1] for i in range(N): if valid[0][i]: # no cuts needed dp[i] = 0 continue for j in range(i): if valid[j&#43;1][i]: #.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/palindrome-permutation/">Palindrome Permutation</a></h2>
-
-      <p>Given a string, determine if a permutation of the string could form a palindrome.
-Example 1 Input: &#34;code&#34; Output: false Example 2 Input: &#34;aab&#34; Output: true Example 3 Input: &#34;carerac&#34; Output: true Solution class Solution: def canPermutePalindrome(self, s: str) -&gt; bool: lookup = set() for c in s: if c not in lookup: lookup.add(c) else: lookup.remove(c) return len(lookup) &lt;= 1 </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/first-unique-character-in-a-string/">First Unique Character in a String</a></h2>
-
-      <p>Given a string, find the first non-repeating character in it and return it’s index. If it doesn’t exist, return -1.
-Example 1 s = &#34;leetcode&#34; return 0. Example 2 s = &#34;loveleetcode&#34;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/max-queue/">Max Queue</a></h2>
-
-      <p>Implement a MaxQueue class that has the following methods:
-public interface MaxQueue { public void add(Long l); public Long poll(); public Long pollMax(); } All 3 operations should take on average O(logN) time.
-Solution // &#34;static void main&#34; must be defined in a public class. public class Main { public static void main(String[] args) throws Exception { System.out.println(&#34;Hello World!&#34;); DoubleLinkedList list = new DoubleLinkedList(); MaxQueue maxQ = new MaxQueue(); maxQ.add(5); maxQ.</p>
+      <p>A car travels from a starting position to a destination which is target miles east of the starting position.
+Along the way, there are gas stations. Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.
+The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses 1 liter of gas per 1 mile that it drives.</p>
 
       <p class="meta">
         
@@ -391,14 +233,93 @@ Solution // &#34;static void main&#34; must be defined in a public class. public
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/string-compression/">String Compression</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/second-degree-follower/">Second Degree Follower</a></h2>
 
-      <p>Given an array of characters, compress it in-place.
-The length after compression must always be smaller than or equal to the original array.
-Every element of the array should be a character (not int) of length 1.
-After you are done modifying the input array in-place, return the new length of the array.
-Follow up Could you solve it using only O(1) extra space?
-Example 1 Input: [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;,&#34;b&#34;,&#34;c&#34;,&#34;c&#34;,&#34;c&#34;] Output: Return 6, and the first 6 characters of the input array should be: [&#34;a&#34;,&#34;2&#34;,&#34;b&#34;,&#34;2&#34;,&#34;c&#34;,&#34;3&#34;] Explanation: &#34;aa&#34; is replaced by &#34;a2&#34;.</p>
+      <p>In facebook, there is a follow table with two columns: followee, follower.
+Please write a sql query to get the amount of each follower’s follower if he/she has one.
+For example:
+&#43;-------------&#43;------------&#43; | followee | follower | &#43;-------------&#43;------------&#43; | A | B | | B | C | | B | D | | D | E | &#43;-------------&#43;------------&#43; should output: &#43;-------------&#43;------------&#43; | follower | num | &#43;-------------&#43;------------&#43; | B | 2 | | D | 1 | &#43;-------------&#43;------------&#43; Explaination: Both B and D exist in the follower list, when as a followee, B&#39;s follower is C and D, and D&#39;s follower is E.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/last-person-to-fit-in-the-elevator/">Last Person to Fit in the Elevator</a></h2>
+
+      <p>Table: Queue
+&#43;-------------&#43;---------&#43; | Column Name | Type | &#43;-------------&#43;---------&#43; | person_id | int | | person_name | varchar | | weight | int | | turn | int | &#43;-------------&#43;---------&#43; person_id is the primary key column for this table. This table has the information about all people waiting for an elevator. The person_id and turn columns will contain all numbers from 1 to n, where n is the number of rows in the table.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/movie-rating/">Movie Rating</a></h2>
+
+      <p>Table: Movies
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | title | varchar | &#43;---------------&#43;---------&#43; movie_id is the primary key for this table. title is the name of the movie. Table: Users
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | user_id | int | | name | varchar | &#43;---------------&#43;---------&#43; user_id is the primary key for this table. Table: Movie_Rating
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | movie_id | int | | user_id | int | | rating | int | | created_at | date | &#43;---------------&#43;---------&#43; (movie_id, user_id) is the primary key for this table.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-hashmap/">Design Hashmap</a></h2>
+
+      <p>Design a HashMap without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ put(key, value): Insert a (key, value) pair into the HashMap. If the value already exists in the HashMap, update the value. get(key): Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key. remove(key): Remove the mapping for the value key if this map contains the mapping for the key.</p>
 
       <p class="meta">
         
@@ -421,11 +342,90 @@ Example 1 Input: [&#34;a&#34;,&#34;a&#34;,&#34;b&#34;,&#34;b&#34;,&#34;c&#34;,&#
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/evaluate-reverse-polish-notation/">Evaluate Reverse Polish Notation</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/design-circular-deque/">Design Circular Deque</a></h2>
 
-      <p>Evaluate the value of an arithmetic expression in Reverse Polish Notation.
-Valid operators are &#43;, -, *, /. Each operand may be an integer or another expression.
-Note  Division between two integers should truncate toward zero. The given RPN expression is always valid. That means the expression would always evaluate to a result and there won’t be any divide by zero operation.  Example 1 Input: [&#34;2&#34;, &#34;1&#34;, &#34;&#43;&#34;, &#34;3&#34;, &#34;*&#34;] Output: 9 Explanation: ((2 &#43; 1) * 3) = 9 Example 2 Input: [&#34;4&#34;, &#34;13&#34;, &#34;5&#34;, &#34;/&#34;, &#34;&#43;&#34;] Output: 6 Explanation: (4 &#43; (13 / 5)) = 6 Example 3 Input: [&#34;10&#34;, &#34;6&#34;, &#34;9&#34;, &#34;3&#34;, &#34;&#43;&#34;, &#34;-11&#34;, &#34;*&#34;, &#34;/&#34;, &#34;*&#34;, &#34;17&#34;, &#34;&#43;&#34;, &#34;5&#34;, &#34;&#43;&#34;] Output: 22 Explanation: ((10 * (6 / ((9 &#43; 3) * -11))) &#43; 17) &#43; 5 = ((10 * (6 / (12 * -11))) &#43; 17) &#43; 5 = ((10 * (6 / -132)) &#43; 17) &#43; 5 = ((10 * 0) &#43; 17) &#43; 5 = (0 &#43; 17) &#43; 5 = 17 &#43; 5 = 22 Solution class Solution: def evalRPN(self, tokens: List[str]) -&gt; int: if not tokens: return None stack = [] operators = set([&#34;&#43;&#34;, &#34;-&#34;, &#34;*&#34;, &#34;/&#34;]) N = len(tokens) curr = 0 while curr &lt; N: while curr &lt; N and tokens[curr] not in operators: stack.</p>
+      <p>Design your implementation of the circular double-ended queue (deque).
+Your implementation should support following operations:
+MyCircularDeque(k): Constructor, set the size of the deque to be k.
+ insertFront(): Adds an item at the front of Deque. Return true if the operation is successful. insertLast(): Adds an item at the rear of Deque. Return true if the operation is successful. deleteFront(): Deletes an item from the front of Deque. Return true if the operation is successful.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/team-scores-in-football-tournament/">Team Scores in Football Tournament</a></h2>
+
+      <p>Solution (Union) SELECT t.team_id, t.team_name, IFNULL(SUM(p.points), 0) AS num_points FROM Teams t LEFT JOIN ( SELECT host_team as team_id, CASE WHEN host_goals &gt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches UNION ALL SELECT guest_team as team_id, CASE WHEN host_goals &lt; guest_goals THEN 3 WHEN host_goals = guest_goals THEN 1 ELSE 0 END as points FROM Matches ) AS p ON t.team_id = p.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-hashset/">Design Hashset</a></h2>
+
+      <p>Design a HashSet without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ add(value): Insert a value into the HashSet. contains(value): Return whether the value exists in the HashSet or not. remove(value): Remove a value in the HashSet. If the value does not exist in the HashSet, do nothing.  Example MyHashSet hashSet = new MyHashSet(); hashSet.add(1); hashSet.add(2); hashSet.contains(1); // returns true hashSet.contains(3); // returns false (not found) hashSet.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/flatten-2d-vector/">Flatten 2d Vector</a></h2>
+
+      <p>Design and implement an iterator to flatten a 2d vector. It should support the following operations: next and hasNext.
+Example Vector2D iterator = new Vector2D([[1,2],[3],[4]]); iterator.next(); // return 1 iterator.next(); // return 2 iterator.next(); // return 3 iterator.hasNext(); // return true iterator.hasNext(); // return true iterator.next(); // return 4 iterator.hasNext(); // return false Notes  Please remember to RESET your class variables declared in Vector2D, as static/class variables are persisted across multiple test cases.</p>
 
       <p class="meta">
         
