@@ -18,7 +18,7 @@
   <meta name="author" content="" />
   <meta name="description" content="You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad." />
-  <meta name="keywords" content="leetcode python binary-search " />
+  <meta name="keywords" content="leetcode binary-search " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -179,8 +179,6 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/python"><strong>python</strong></a>",
-        
           "<a href="/tags/binary-search"><strong>binary-search</strong></a>",
         
         <i class="small material-icons">access_time</i> 2-min read
@@ -189,7 +187,7 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
       <h1>First Bad Version</h1>
       <h4>Created: October 26, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: September 22, 2019</h5>
+        <h5>Last updated: May 1, 2020</h5>
       
       <hr />
       <p>You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.</p>
@@ -204,6 +202,37 @@ call isBadVersion(4) -&gt; true
 
 Then 4 is the first bad version.
 </code></pre><h3 id="solution">Solution</h3>
+<p>Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/* The isBadVersion API is defined in the parent class VersionControl.
+</span><span style="color:#75715e">      boolean isBadVersion(int version); */</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#66d9ef">extends</span> VersionControl <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">firstBadVersion</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">int</span> start <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> end <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">+</span> 1 <span style="color:#f92672">&lt;</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> start <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>end <span style="color:#f92672">-</span> start<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isBadVersion<span style="color:#f92672">(</span>mid<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                end <span style="color:#f92672">=</span> mid<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                start <span style="color:#f92672">=</span> mid<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isBadVersion<span style="color:#f92672">(</span>start<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> start<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isBadVersion<span style="color:#f92672">(</span>end<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> end<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Python</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># The isBadVersion API is already defined for you.</span>
 <span style="color:#75715e"># @param version, an integer</span>
 <span style="color:#75715e"># @return a bool</span>

@@ -336,32 +336,6 @@ Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, two is written as
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/first-bad-version/">First Bad Version</a></h2>
-
-      <p>You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
-Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
       <h2><a href="http://www.hashnopolis.com/post/multiply-strings/">Multiply Strings</a></h2>
 
       <p>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
@@ -426,6 +400,36 @@ class Solution: def subsetsWithDup(self, nums: List[int]) -&gt; List[List[int]]:
         by
         
           <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/restore-ip-addresses/">Restore Ip Addresses</a></h2>
+
+      <p>Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+Example Input: &#34;25525511135&#34; Output: [&#34;255.255.11.135&#34;, &#34;255.255.111.35&#34;] Solution class Solution: def restoreIpAddresses(self, s: str) -&gt; List[str]: results = [] self.backtrack(results, s, 0, &#34;&#34;, 0) return results def backtrack(self, results, s, start, partial, segment_count): # pruning for performance improvement if (4 - segment_count) * 3 &lt; len(s) - start or (4 - segment_count) &gt; len(s) - start: return # base case goal if start == len(s) and segment_count == 4: results.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+          <a class="meta--author" href="/authors/dfs" ><strong>dfs</strong></a>
+        
+          <a class="meta--author" href="/authors/backtracking" ><strong>backtracking</strong></a>
         
         in
         

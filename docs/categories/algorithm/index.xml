@@ -7,10 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Tue, 28 Apr 2020 23:14:20 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 04:38:56 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jewels and Stones</title>
+      <link>http://www.hashnopolis.com/post/jewels-and-stones/</link>
+      <pubDate>Sat, 02 May 2020 04:38:56 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/jewels-and-stones/</guid>
+      <description>You&amp;rsquo;re given strings J representing the types of stones that are jewels, and S representing the stones you have. Each character in S is a type of stone you have. You want to know how many of the stones you have are also jewels.
+The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so &amp;quot;a&amp;quot; is considered a different type of stone from &amp;quot;A&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Check if a String Is a Valid Sequence From Root to Leaves Path in a Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/check-if-a-string-is-a-valid-sequence-from-root-to-leaves-path-in-a-binary-tree/</link>
+      <pubDate>Thu, 30 Apr 2020 00:10:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/check-if-a-string-is-a-valid-sequence-from-root-to-leaves-path-in-a-binary-tree/</guid>
+      <description>Given a binary tree where each path going from the root to any leaf form a valid sequence, check if a given string is a valid sequence in such binary tree.
+We get the given string from the concatenation of an array of integers arr and the concatenation of all values of the nodes along a path results in a sequence in the given binary tree.
+Example 1: Input: root = [0,1,0,0,1,0,null,null,1,0,0], arr = [0,1,0,1] Output: true Explanation: The path 0 -&amp;gt; 1 -&amp;gt; 0 -&amp;gt; 1 is a valid sequence (green color in the figure).</description>
+    </item>
+    
+    <item>
+      <title>Longest Univalue Path</title>
+      <link>http://www.hashnopolis.com/post/longest-univalue-path/</link>
+      <pubDate>Wed, 29 Apr 2020 04:11:27 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/longest-univalue-path/</guid>
+      <description>Given a binary tree, find the length of the longest path where each node in the path has the same value. This path may or may not pass through the root.
+The length of path between two nodes is represented by the number of edges between them.
+Example 1: Input: 5 / \ 4 5 / \ \ 1 1 5 Output: 2 Example 2: Input: 1 / \ 4 5 / \ \ 4 4 5 Output: 2 Note:  The given binary tree has not more than 10000 nodes.</description>
+    </item>
     
     <item>
       <title>Jump Game II</title>
@@ -3373,7 +3405,7 @@ Solution (DFS in Java) DFS</description>
       <guid>http://www.hashnopolis.com/post/binary-tree-maximum-path-sum/</guid>
       <description>Given a non-empty binary tree, find the maximum path sum.
 For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
-Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6 Example 2 Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42 Solution # Definition for a binary tree node.</description>
+Example 1 Input: [1,2,3] 1 / \ 2 3 Output: 6 Example 2 Input: [-10,9,20,null,null,15,7] -10 / \ 9 20 / \ 15 7 Output: 42 Solution Python</description>
     </item>
     
     <item>
