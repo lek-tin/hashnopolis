@@ -1,5 +1,5 @@
 ---
-title: "Fill Flood"
+title: "Flood Fill"
 description: "Some description ..."
 authors: ["lek-tin"]
 tags: ["leetcode", "recursion", "dfs"]
