@@ -5,10 +5,11 @@ authors: ["lek-tin"]
 tags: ["leetcode", "hashtable", "sliding-window"]
 categories: ["algorithm"]
 date: 2018-12-15T09:42:45-08:00
-lastmod: 2019-10-12T09:42:45-08:00
+lastmod: 2020-05-17T01:00:45-08:00
 draft: false
 archive: false
 ---
+
 Given a string `s` and a **non-empty** string `p`, find all the start indices of `p`'s anagrams in `s`.
 
 Strings consists of lowercase English letters only and the length of both strings `s` and `p` will not be larger than 20,100.
@@ -16,6 +17,7 @@ Strings consists of lowercase English letters only and the length of both string
 The order of output does not matter.
 
 ### Example 1
+
 ```
 Input:
 s: "cbaebabacd" p: "abc"
@@ -27,7 +29,9 @@ Explanation:
 The substring with start index = 0 is "cba", which is an anagram of "abc".
 The substring with start index = 6 is "bac", which is an anagram of "abc".
 ```
+
 ### Example 2
+
 ```
 Input:
 s: "abab" p: "ab"
@@ -40,7 +44,13 @@ The substring with start index = 0 is "ab", which is an anagram of "ab".
 The substring with start index = 1 is "ba", which is an anagram of "ab".
 The substring with start index = 2 is "ab", which is an anagram of "ab".
 ```
+
 ### Solution
+
+Java
+```java
+```
+
 Python
 ```python
 from collections import Counter
