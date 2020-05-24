@@ -12,7 +12,7 @@ Given a binary tree, find its maximum depth.
 
 The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 
-**Note:** A leaf is a node with no children.
+#### NOTE: A leaf is a node with no children.
 
 ### Example:
 

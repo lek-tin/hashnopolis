@@ -5,13 +5,15 @@ authors: ["lek-tin"]
 tags: ["leetcode", "trie"]
 categories: ["algorithm"]
 date: 2018-11-08T23:07:10-08:00
-lastmod: 2019-10-13T23:07:10-08:00
+lastmod: 2020-05-14T02:07:10-08:00
 draft: false
 archive: false
 ---
+
 Implement a trie with `insert`, `search`, and `startsWith` methods.
 
 ### Example
+
 ```
 Trie trie = new Trie();
 
@@ -22,15 +24,98 @@ trie.startsWith("app"); // returns true
 trie.insert("app");
 trie.search("app");     // returns true
 ```
+
 #### Note
-You may assume that all inputs are consist of lowercase letters a-z.
-All inputs are guaranteed to be non-empty strings.
+- You may assume that all inputs are consist of lowercase letters a-z.
+- All inputs are guaranteed to be non-empty strings.
+
 ### Solution
+
+Java
+```java
+class Trie {
+
+    class TrieNode {
+
+        private TrieNode[] children;
+
+        private final int R = 26;
+
+        private boolean isWord;
+
+        public TrieNode() {
+            children = new TrieNode[R];
+        }
+
+        public boolean containsKey(char ch) {
+            return children[ch -'a'] != null;
+        }
+
+        public TrieNode get(char ch) {
+            return children[ch -'a'];
+        }
+
+        public void put(char ch, TrieNode node) {
+            children[ch -'a'] = node;
+        }
+
+        public void setEnd() {
+            isWord = true;
+        }
+
+        public boolean isWord() {
+            return isWord;
+        }
+    }
+
+    private TrieNode root;
+
+    public Trie() {
+        root = new TrieNode();
+    }
+
+    public void insert(String word) {
+        TrieNode node = root;
+        for (int i = 0; i < word.length(); i++) {
+            char currChar = word.charAt(i);
+            if (!node.containsKey(currChar)) {
+                node.put(currChar, new TrieNode());
+            }
+            node = node.get(currChar);
+        }
+        node.setEnd();
+    }
+
+    private TrieNode searchPrefix(String word) {
+        TrieNode node = root;
+        for (int i = 0; i < word.length(); i++) {
+            char curLetter = word.charAt(i);
+            if (node.containsKey(curLetter)) {
+                node = node.get(curLetter);
+            } else {
+                return null;
+            }
+        }
+        return node;
+    }
+
+    public boolean search(String word) {
+        TrieNode node = searchPrefix(word);
+        return node != null && node.isWord();
+    }
+
+    public boolean startsWith(String prefix) {
+        TrieNode node = searchPrefix(prefix);
+        return node != null;
+    }
+}
+```
+
 Python
 ```python
 class TrieNode:
     def __init__(self):
-        self.isEnd = False
+        self.isWord = False
         self.chars = [False for _ in range(26)]
         self.children = [None for _ in range(26)]
 
@@ -52,7 +137,7 @@ class Trie:
                 curr.chars[index] = True
                 curr.children[index] = TrieNode()
             curr = curr.children[index]
-        curr.isEnd = True
+        curr.isWord = True
 
 
     def search(self, word: str) -> bool:
@@ -66,7 +151,7 @@ class Trie:
                 return False
             curr = curr.children[index]
 
-        return True if curr.isEnd else False
+        return True if curr.isWord else False
 
     def startsWith(self, prefix: str) -> bool:
         """

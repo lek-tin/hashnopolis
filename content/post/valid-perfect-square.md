@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "binary-search", "newton-method", "math"]
 categories: ["algorithm"]
 date: 2019-09-19T23:47:10-07:00
-lastmod: 2020-02-19T23:47:10-07:00
+lastmod: 2020-05-09T23:47:10-07:00
 draft: false
 archive: false
 ---
@@ -25,8 +25,33 @@ Input: 14
 Output: false
 ```
 
-### Solution
-Binary search version 1
+### Solution (naive)
+
+Java
+```java
+class Solution {
+    public boolean isPerfectSquare(int num) {
+        if (num == 1) return true;
+
+        for (int i = 2; i < num; i++) {
+            if (i * i == num) {
+                return true;
+            }
+
+            if (i * i > num) {
+                break;
+            }
+        }
+
+        return false;
+    }
+}
+```
+
+### Solution (Binary Search version 1)
+
+Let `x` be the square root, `1 < x < num/2` always holds `true`.  
+Python  
 ```python
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
@@ -37,17 +62,45 @@ class Solution:
 
         while left <= right:
             mid = left + (right-left)//2
-            t = mid*mid
-            if t == num:
+            guess = mid*mid
+            if guess == num:
                 return True
-            if t < num:
+            if guess < num:
                 left = mid + 1
             else:
                 right = mid - 1
 
         return False
 ```
-Binary search version 2  
+
+Java
+```java
+class Solution {
+    public boolean isPerfectSquare(int num) {
+        if (num == 1) return true;
+
+        long left = 1;
+        long right = num;
+
+        while (left+1 < right) {
+            long mid = left + (right - left) / 2;
+            long guess = mid * mid;
+            if (guess == num) {
+                return true;
+            } else if (guess > num) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return left*left == num || right*right==num;
+    }
+}
+```
+
+### Solution (Binary Search version 2)
+
 Time: `O(logN)`  
 Space: `O(1)`  
 ```python
@@ -66,7 +119,9 @@ class Solution:
 
         return False
 ```
-Newton's method
+
+### Solution (Newton's method)
+
 Time: `O(logN)`  
 Space: `O(1)`  
 ```python

@@ -27,6 +27,27 @@ return 2.
 
 ### Solution
 
+Java
+```java
+class Solution {
+    public int firstUniqChar(String s) {
+        int[] counter = new int[256];
+        for ( char c: s.toCharArray() ) {
+            counter[c] += 1;
+        }
+
+        for ( int i = 0; i < s.length(); i++) {
+            if (counter[s.charAt(i)] == 1) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+}
+```
+
+Python
 ```python
 from collections import Counter
 

@@ -60,7 +60,7 @@ Output:
  ["4", "",  "", "",  "", "", "", "",  "",  "",  "",  "",  "", "", ""]]
 ```
 
-**Note:** The height of binary tree is in the range of [1, 10].
+#### NOTE: The height of binary tree is in the range of [1, 10].
 
 ### Solution
 ```python
