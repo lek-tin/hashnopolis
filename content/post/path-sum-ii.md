@@ -11,7 +11,7 @@ archive: false
 ---
 Given a binary tree and a sum, find all **root-to-leaf** paths where each path's sum equals the given sum.
 
-**Note:** A leaf is a node with no children.
+#### NOTE: A leaf is a node with no children.
 
 ### Example:
 Given the below binary tree and `sum = 22`,

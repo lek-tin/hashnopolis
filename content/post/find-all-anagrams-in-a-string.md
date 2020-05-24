@@ -2,10 +2,10 @@
 title: "Find All Anagrams in a String"
 description: "Some description ..."
 authors: ["lek-tin"]
-tags: ["leetcode", "hashtable", "sliding-window"]
+tags: ["leetcode", "hashmap", "sliding-window"]
 categories: ["algorithm"]
 date: 2018-12-15T09:42:45-08:00
-lastmod: 2020-05-17T01:00:45-08:00
+lastmod: 2020-05-23T18:00:45-08:00
 draft: false
 archive: false
 ---
@@ -49,6 +49,51 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 
 Java
 ```java
+class Solution {
+    public List<Integer> findAnagrams(String s, String p) {
+        HashMap<Character, Integer> s_map = new HashMap<>();
+        HashMap<Character, Integer> p_map = new HashMap<>();
+        int s_len = s.length();
+        int p_len = p.length();
+        List<Integer> res = new ArrayList<>();
+
+        if (s_len < p_len) {
+            return res;
+        }
+
+        for (char ch: p.toCharArray()) {
+            p_map.put(ch, p_map.getOrDefault(ch, 0) + 1);
+        }
+
+        for (int i = 0; i < s_len; i++) {
+            char ch = s.charAt(i);
+            s_map.put(ch, s_map.getOrDefault(ch, 0) + 1);
+
+            if (i < p_len-1) {
+                continue;
+            }
+
+            if (i >= p_len) {
+                char headChar = s.charAt(i-p_len);
+                s_map.put(headChar, s_map.get(headChar)-1);
+                if ( s_map.get(headChar) == 0) {
+                    s_map.remove(headChar);
+                }
+            }
+
+            if (!p_map.containsKey(ch)) {
+                continue;
+            }
+
+            if (s_map.equals(p_map)) {
+                res.add(i - p_len + 1);
+            }
+
+        }
+
+        return res;
+    }
+}
 ```
 
 Python

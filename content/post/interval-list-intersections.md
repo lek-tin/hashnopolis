@@ -5,10 +5,11 @@ authors: ["lek-tin"]
 tags: ["leetcode", "two-pointers"]
 categories: ["algorithm"]
 date: 2020-03-16T01:53:48-07:00
-lastmod: 2020-03-16T01:53:48-07:00
+lastmod: 2020-04-23T04:00:48-07:00
 draft: false
 archive: false
 ---
+
 Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.  
 
 Return the intersection of these two interval lists.  
@@ -31,10 +32,37 @@ Reminder: The inputs and the desired output are lists of Interval objects, and n
 2. `0 <= B.length < 1000`
 3. `0 <= A[i].start, A[i].end, B[i].start, B[i].end < 10^9`
 
-**NOTE:** input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
+#### NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
 
 ### Solution
 
+Java
+```java
+class Solution {
+    public int[][] intervalIntersection(int[][] A, int[][] B) {
+        int i = 0, j = 0;
+        ArrayList<int[]> res = new ArrayList<>();
+
+        while (i < A.length && j < B.length) {
+            int low  = Math.max(A[i][0], B[j][0]);
+            int high = Math.min(A[i][1], B[j][1]);
+            if (low <= high) {
+                res.add(new int[]{low, high});
+            }
+
+            if (A[i][1] < B[j][1]) {
+                i++;
+            } else {
+                j++;
+            }
+        }
+
+        return res.toArray(new int[res.size()][2]);
+    }
+}
+```
+
+Python
 ```python
 class Solution:
     def intervalIntersection(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
@@ -57,4 +85,4 @@ class Solution:
                 j += 1
 
         return ans
-```'
+```
