@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.69.2" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/depth-first-search/" />
@@ -210,8 +210,7 @@ Example: Given binary tree [3,9,20,null,null,15,7],
 
       <p>Given a binary tree, find its maximum depth.
 The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Note: A leaf is a node with no children.
-Example: Given binary tree [3,9,20,null,null,15,7],
+NOTE: A leaf is a node with no children. Example: Given binary tree [3,9,20,null,null,15,7],
  3 / \ 9 20 / \ 15 7 return its minimum depth = 3. Solution: recursion
 /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int maxDepth(TreeNode root) { if (root == null) return 0; int left = maxDepth(root.</p>
 

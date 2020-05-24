@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.69.2" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
@@ -176,11 +176,11 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/find-anagram-mappings/">Find Anagram Mappings</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/strobogrammatic-number-ii/">Strobogrammatic Number II</a></h2>
 
-      <p>Given two lists A and B, and B is an anagram of A. B is an anagram of A means B is made by randomizing the order of the elements in A.
-We want to find an index mapping P, from A to B. A mapping P[i] = j means the ith element in A appears in B at index j.
-These lists A and B may contain duplicates. If there are multiple answers, output any of them.</p>
+      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Find all strobogrammatic numbers that are of length = n.
+Example: Input: n = 2 Output: [&#34;11&#34;,&#34;69&#34;,&#34;88&#34;,&#34;96&#34;] Solution # Time: O(n^2 * 5^(n/2)) # Space: `O(n)` class Solution: def findStrobogrammatic(self, n: int) -&gt; List[str]: stroboPairs = { &#34;0&#34;: &#34;0&#34;, &#34;1&#34;: &#34;1&#34;, &#34;6&#34;: &#34;9&#34;, &#34;8&#34;: &#34;8&#34;, &#34;9&#34;: &#34;6&#34; } return self.build(stroboPairs, n, n) def build(self, stroboPairs, curr, n): if curr == 0: return [&#34;&#34;] if curr == 1: return list(&#34;018&#34;) prev = self.</p>
 
       <p class="meta">
         
@@ -203,10 +203,65 @@ These lists A and B may contain duplicates. If there are multiple answers, outpu
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/pancake-sorting/">Pancake Sorting</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/strobogrammatic-number/">Strobogrammatic Number</a></h2>
 
-      <p>Given an array A, we can perform a pancake flip: We choose some positive integer k &lt;= A.length, then reverse the order of the first k elements of A. We want to perform zero or more pancake flips (doing them one after another in succession) to sort the array A.
-Return the k-values corresponding to a sequence of pancake flips that sort A. Any valid answer that sorts the array within 10 * A.</p>
+      <p>A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.
+Example 1 Input: &#34;69&#34; Output: true Example 2 Input: &#34;88&#34; Output: true Example 3 Input: &#34;962&#34; Output: false Solution class Solution: def isStrobogrammatic(self, num: str) -&gt; bool: pairs = { 1: 1, 6: 9, 8: 8, 9: 6, 0: 0 } mid = len(num)//2&#43;1 for i in range(mid): leftNum = int(num[i]) rightNum = int(num[-i-1]) if leftNum not in pairs or pairs[leftNum] !</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/island-perimeter/">Island Perimeter</a></h2>
+
+      <p>You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
+Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
+The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island). One cell is a square with side length 1.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/verifying-an-alien-dictionary/">Verifying an Alien Dictionary</a></h2>
+
+      <p>In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
+Given a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographicaly in this alien language.
+Example 1 Input: words = [&#34;hello&#34;,&#34;leetcode&#34;], order = &#34;hlabcdefgijkmnopqrstuvwxyz&#34; Output: true Explanation: As &#39;h&#39; comes before &#39;l&#39; in this language, then the sequence is sorted.</p>
 
       <p class="meta">
         
@@ -229,146 +284,11 @@ Return the k-values corresponding to a sequence of pancake flips that sort A. An
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/super-ugly-number/">Super Ugly Number</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/subarray-sum-equals-k/">Subarray Sum Equals K</a></h2>
 
-      <p>Write a program to find the nthsuper ugly number.
-Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k.
-Example: Input: n = 12, primes = [2,7,13,19] Output: 32 Explanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19] of size 4. Note  1 is a super ugly number for any given primes. The given numbers in primes are in ascending order.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/perfect-squares/">Perfect Squares</a></h2>
-
-      <p>Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
-Example 1 Input: n = 12 Output: 3 Explanation: 12 = 4 &#43; 4 &#43; 4. Example 2 Input: n = 13 Output: 2 Explanation: 13 = 4 &#43; 9. Solution import sys MAX_INT = sys.maxsize class Solution: def numSquares(self, n: int) -&gt; int: if n == 0: return 0 count = [MAX_INT for _ in range(n&#43;1)] for i in range(1, n&#43;1): for j in range(1, n&#43;1): if j*j &gt; n: break if i == j*j: count[i] = 1 else: # j = 0, i - j*j = i, therefore we skip j=0 count[i] = min(count[i], count[i-j*j]&#43;1) return count[n] </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/ugly-number-ii/">Ugly Number II</a></h2>
-
-      <p>Write a program to find the n-th ugly number.
-Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-Example: Input: n = 10 Output: 12 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers. Note  1 is typically treated as an ugly number. n does not exceed 1690.  Solution import heapq class Solution: def nthUglyNumber(self, n: int) -&gt; int: if n &lt;= 0: return 0 if n == 1: return 1 q = [1] visited = {1: True} removed = 0 ans = 0 while removed !</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/longest-consecutive-sequence/">Longest Consecutive Sequence</a></h2>
-
-      <p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
-Your algorithm should run in O(n) complexity.
-Example Input: [100, 4, 200, 1, 3, 2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4. Solution # Time: `O(n)` class Solution: def longestConsecutive(self, nums: List[int]) -&gt; int: # Count occurence of nums mapping = {} for num in nums: mapping[num] = True # init longest length longest = 0 # iterate over nums for num in nums: if num in mapping: # num exists in mapping =&gt; init l = 1 l = 1 # num was counted, so we delete num del mapping[num] left, right = num-1, num&#43;1 # Move left while left in mapping: # left was counted, so we delete left del mapping[left] left -= 1 l &#43;= 1 # Move right while right in mapping: # right was counted, so we delete right del mapping[right] right &#43;= 1 l &#43;= 1 # Update longest longest = max(longest, l) return longest </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/subarray-product-less-than-k/">Subarray Product Less Than K</a></h2>
-
-      <p>Your are given an array of positive integers nums.
-Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less than k.
-Example 1 Input: nums = [10, 5, 2, 6], k = 100 Output: 8 Explanation: The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]. Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/russian-doll-envelopes/">Russian Doll Envelopes</a></h2>
-
-      <p>You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
-What is the maximum number of envelopes can you Russian doll? (put one inside other)
-Note Rotation is not allowed.
-Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum number of envelopes you can Russian doll is 3 ([2,3] =&gt; [5,4] =&gt; [6,7]).</p>
+      <p>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+Example 1 «««&lt; HEAD        dev
+       Input:nums = [1,1,1], k = 2 Output: 2 Note  The length of the array is in range [1, 20,000]. The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].</p>
 
       <p class="meta">
         
@@ -391,10 +311,37 @@ Example: Input: [[5,4],[6,4],[6,7],[2,3]] Output: 3 Explanation: The maximum num
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-size-subarray-sum/">Minimum Size Subarray Sum</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/find-in-mountain-array/">Find in Mountain Array</a></h2>
 
-      <p>Given an array of n positive integers and a positive integer s, find the minimal length of a contiguous subarray of which the sum ≥ s. If there isn’t one, return 0 instead.
-Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray [4,3] has the minimal length under the problem constraint. Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).</p>
+      <p>(This problem is an interactive problem.)
+You may recall that an array A is a mountain array if and only if:
+ A.length &gt;= 3 There exists some i with 0 &lt; i &lt; A.length - 1 such that:  A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1] Given a mountain array mountainArr, return the minimum index such that mountainArr.get(index) == target.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/peak-index-in-a-mountain-array/">Peak Index in a Mountain Array</a></h2>
+
+      <p>Let’s call an array A a mountain if the following properties hold:
+ A.length &gt;= 3 There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.length - 1]  Given an array that is definitely a mountain, return any i such that A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i] &gt; A[i&#43;1] &gt; ... &gt; A[A.</p>
 
       <p class="meta">
         
@@ -417,10 +364,10 @@ Example: Input: s = 7, nums = [2,3,1,2,4,3] Output: 2 Explanation: the subarray 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/coin-change/">Coin Change</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/sum-of-square-numbers/">Sum of Square Numbers</a></h2>
 
-      <p>You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-Example 1 Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#43; 5 &#43; 1 Example 2 Input: coins = [2], amount = 3 Output: -1 Note You may assume that you have an infinite number of each kind of coin.</p>
+      <p>Given a non-negative integer c, your task is to decide whether there’re two integers a and b such that a2 &#43; b2 = c.
+Example 1 Input: 5 Output: True Explanation: 1 * 1 &#43; 2 * 2 = 5 Example 2 Input: 3 Output: False Solution import math class Solution: def judgeSquareSum(self, c: int) -&gt; bool: if c &lt;= 1: return True sqrt = math.ceil(math.sqrt(c)) left, right = 0, sqrt-1 while left*left &#43; right*right &lt; c: if (left&#43;1)*(left&#43;1) &#43; right*right &gt; c: right -= 1 else: left &#43;= 1 if left*left &#43; right*right == c: return True return False Without sqrt function</p>
 
       <p class="meta">
         
@@ -432,7 +379,63 @@ Example 1 Input: coins = [1, 2, 5], amount = 11 Output: 3 Explanation: 11 = 5 &#
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/valid-perfect-square/">Valid Perfect Square</a></h2>
+
+      <p>Given a positive integer num, write a function which returns True if num is a perfect square else False.
+Note Do not use any built-in library function such as sqrt.
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution (naive) Java
+class Solution { public boolean isPerfectSquare(int num) { if (num == 1) return true; for (int i = 2; i &lt; num; i&#43;&#43;) { if (i * i == num) { return true; } if (i * i &gt; num) { break; } } return false; } } Solution (Binary Search version 1) Let x be the square root, 1 &lt; x &lt; num/2 always holds true.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/guess-number-higher-or-lower-ii/">Guess Number Higher or Lower II</a></h2>
+
+      <p>We are playing the Guess Game. The game is as follows:
+I pick a number from 1 to n. You have to guess which number I picked.
+Every time you guess wrong, I’ll tell you whether the number I picked is higher or lower.
+However, when you guess a particular number x, and you guess wrong, you pay $x. You win the game when you guess the number I picked.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 

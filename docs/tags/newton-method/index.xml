@@ -20,8 +20,8 @@
       <guid>http://www.hashnopolis.com/post/valid-perfect-square/</guid>
       <description>Given a positive integer num, write a function which returns True if num is a perfect square else False.
 Note Do not use any built-in library function such as sqrt.
-Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left + (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid + 1 else: right = mid - 1 return False Binary search version 2</description>
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution (naive) Java
+class Solution { public boolean isPerfectSquare(int num) { if (num == 1) return true; for (int i = 2; i &amp;lt; num; i++) { if (i * i == num) { return true; } if (i * i &amp;gt; num) { break; } } return false; } } Solution (Binary Search version 1) Let x be the square root, 1 &amp;lt; x &amp;lt; num/2 always holds true.</description>
     </item>
     
   </channel>

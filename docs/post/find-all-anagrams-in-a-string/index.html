@@ -20,7 +20,7 @@
 Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
 The order of output does not matter.
 Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Output: [0, 6] Explanation: The substring with start index = 0 is &amp;quot;cba&amp;quot;, which is an anagram of &amp;quot;abc&amp;quot;." />
-  <meta name="keywords" content="leetcode hashtable sliding-window " />
+  <meta name="keywords" content="leetcode hashmap sliding-window " />
   
   
     <meta name="twitter:card" content="summary" />
@@ -36,7 +36,7 @@ Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Ou
 
 
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.69.2" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/find-all-anagrams-in-a-string/" />
@@ -183,7 +183,7 @@ Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Ou
         
           "<a href="/tags/leetcode"><strong>leetcode</strong></a>",
         
-          "<a href="/tags/hashtable"><strong>hashtable</strong></a>",
+          "<a href="/tags/hashmap"><strong>hashmap</strong></a>",
         
           "<a href="/tags/sliding-window"><strong>sliding-window</strong></a>",
         
@@ -193,7 +193,7 @@ Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Ou
       <h1>Find All Anagrams in a String</h1>
       <h4>Created: December 15, 2018 by [lek-tin]</h4>
       
-        <h5>Last updated: October 12, 2019</h5>
+        <h5>Last updated: May 23, 2020</h5>
       
       <hr />
       <p>Given a string <code>s</code> and a <strong>non-empty</strong> string <code>p</code>, find all the start indices of <code>p</code>'s anagrams in <code>s</code>.</p>
@@ -221,7 +221,53 @@ The substring with start index = 0 is &quot;ab&quot;, which is an anagram of &qu
 The substring with start index = 1 is &quot;ba&quot;, which is an anagram of &quot;ab&quot;.
 The substring with start index = 2 is &quot;ab&quot;, which is an anagram of &quot;ab&quot;.
 </code></pre><h3 id="solution">Solution</h3>
-<p>Python</p>
+<p>Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findAnagrams</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">,</span> String p<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        HashMap<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> s_map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+        HashMap<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">,</span> Integer<span style="color:#f92672">&gt;</span> p_map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">int</span> s_len <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">int</span> p_len <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>s_len <span style="color:#f92672">&lt;</span> p_len<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> ch<span style="color:#f92672">:</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            p_map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>ch<span style="color:#f92672">,</span> p_map<span style="color:#f92672">.</span><span style="color:#a6e22e">getOrDefault</span><span style="color:#f92672">(</span>ch<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> s_len<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">char</span> ch <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+            s_map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>ch<span style="color:#f92672">,</span> s_map<span style="color:#f92672">.</span><span style="color:#a6e22e">getOrDefault</span><span style="color:#f92672">(</span>ch<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> p_len<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;=</span> p_len<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">char</span> headChar <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">-</span>p_len<span style="color:#f92672">);</span>
+                s_map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>headChar<span style="color:#f92672">,</span> s_map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>headChar<span style="color:#f92672">)-</span>1<span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> s_map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>headChar<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    s_map<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>headChar<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>p_map<span style="color:#f92672">.</span><span style="color:#a6e22e">containsKey</span><span style="color:#f92672">(</span>ch<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>s_map<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>p_map<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+                res<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> p_len <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Python</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:

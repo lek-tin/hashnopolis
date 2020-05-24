@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.69.2" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/authors/lek-tin/" />
@@ -176,36 +176,10 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/reported-posts/">Reported Posts</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/contiguous-array/">Contiguous Array</a></h2>
 
-      <p>Table: Actions
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | user_id | int | | post_id | int | | action_date | date | | action | enum | | extra | varchar | &#43;---------------&#43;---------&#43; There is no primary key for this table, it may have duplicate rows. The action column is an ENUM type of (&#39;view&#39;, &#39;like&#39;, &#39;reaction&#39;, &#39;comment&#39;, &#39;report&#39;, &#39;share&#39;). The extra column has optional information about the action such as a reason for report or a type of reaction.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/max-points-on-a-line/">Max Points on a Line</a></h2>
-
-      <p>Given n points on a 2D plane, find the maximum number of points that lie on the same straight line.
-Example 1 Input: [[1,1],[2,2],[3,3]] Output: 3 Explanation: ^ | | o | o | o &#43;-------------&gt; 0 1 2 3 4 Example 2 Input: [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]] Output: 4 Explanation: ^ | | o | o o | o | o o &#43;-------------------&gt; 0 1 2 3 4 5 6 NOTE: input types have been changed on April 15, 2019.</p>
+      <p>Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
+Example 1 Input: [0,1] Output: 2 Explanation: [0, 1] is the longest contiguous subarray with equal number of 0 and 1. Example 2 Input: [0,1,0] Output: 2 Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1. Note The length of the given binary array will not exceed 50,000.</p>
 
       <p class="meta">
         
@@ -216,33 +190,6 @@ Example 1 Input: [[1,1],[2,2],[3,3]] Output: 3 Explanation: ^ | | o | o | o &#43
         in
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/nth-highest-salary/">Nth Highest Salary</a></h2>
-
-      <p>Write a SQL query to get the nth highest salary from the Employee table.
-&#43;----&#43;--------&#43; | Id | Salary | &#43;----&#43;--------&#43; | 1 | 100 | | 2 | 200 | | 3 | 300 | &#43;----&#43;--------&#43; For example, given the above Employee table, the nth highest salary where n = 2 is 200. If there is no nth highest salary, then the query should return null.
-&#43;------------------------&#43; | getNthHighestSalary(2) | &#43;------------------------&#43; | 200 | &#43;------------------------&#43; Solution CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT BEGIN DECLARE M INT; SET M = N - 1; RETURN ( SELECT IFNULL( ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary Desc LIMIT 1 OFFSET M ), NULL ) ); END </p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -255,10 +202,10 @@ Example 1 Input: [[1,1],[2,2],[3,3]] Output: 3 Explanation: ^ | | o | o | o &#43
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/reformat-department-table/">Reformat Department Table</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/monthly-transactions-ii/">Monthly Transactions Ii</a></h2>
 
-      <p>Table: Department
-&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | id | int | | revenue | int | | month | varchar | &#43;---------------&#43;---------&#43; (id, month) is the primary key of this table. The table has information about the revenue of each department per month. The month has values in [&#34;Jan&#34;,&#34;Feb&#34;,&#34;Mar&#34;,&#34;Apr&#34;,&#34;May&#34;,&#34;Jun&#34;,&#34;Jul&#34;,&#34;Aug&#34;,&#34;Sep&#34;,&#34;Oct&#34;,&#34;Nov&#34;,&#34;Dec&#34;]. Write an SQL query to reformat the table such that there is a department id column and a revenue column for each month.</p>
+      <p>Table: Transactions
+&#43;----------------&#43;---------&#43; | Column Name | Type | &#43;----------------&#43;---------&#43; | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | &#43;----------------&#43;---------&#43; id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&#34;approved&#34;, &#34;declined&#34;]. Table: Chargebacks &#43;----------------&#43;---------&#43; | Column Name | Type | &#43;----------------&#43;---------&#43; | trans_id | int | | charge_date | date | &#43;----------------&#43;---------&#43; Chargebacks contains basic information regarding incoming chargebacks from some transactions placed in Transactions table.</p>
 
       <p class="meta">
         
@@ -281,10 +228,10 @@ Example 1 Input: [[1,1],[2,2],[3,3]] Output: 3 Explanation: ^ | | o | o | o &#43
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/big-countries/">Big Countries</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/monthly-transactions-i/">Monthly Transactions I</a></h2>
 
-      <p>There is a table World
-&#43;-----------------&#43;------------&#43;------------&#43;--------------&#43;---------------&#43; | name | continent | area | population | gdp | &#43;-----------------&#43;------------&#43;------------&#43;--------------&#43;---------------&#43; | Afghanistan | Asia | 652230 | 25500100 | 20343000 | | Albania | Europe | 28748 | 2831741 | 12960000 | | Algeria | Africa | 2381741 | 37100000 | 188681000 | | Andorra | Europe | 468 | 78115 | 3712000 | | Angola | Africa | 1246700 | 20609294 | 100990000 | &#43;-----------------&#43;------------&#43;------------&#43;--------------&#43;---------------&#43; A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.</p>
+      <p>Table: Transactions
+&#43;---------------&#43;---------&#43; | Column Name | Type | &#43;---------------&#43;---------&#43; | id | int | | country | varchar | | state | enum | | amount | int | | trans_date | date | &#43;---------------&#43;---------&#43; id is the primary key of this table. The table has information about incoming transactions. The state column is an enum of type [&#34;approved&#34;, &#34;declined&#34;]. Write an SQL query to find for each month and country, the number of transactions and their total amount, the number of approved transactions and their total amount.</p>
 
       <p class="meta">
         
@@ -295,6 +242,87 @@ Example 1 Input: [[1,1],[2,2],[3,3]] Output: 3 Explanation: ^ | | o | o | o &#43
         in
         
           <a  class="meta--cat" href="/categories/database" ><strong>"database"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/last-stone-weight/">Last Stone Weight</a></h2>
+
+      <p>We have a collection of stones, each stone has a positive integer weight.
+Each turn, we choose the two heaviest stones and smash them together. Suppose the stones have weights x and y with x &lt;= y. The result of this smash is:
+ If x == y, both stones are totally destroyed; If x != y, the stone of weight x is totally destroyed, and the stone of weight y has new weight y-x.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/basic-calculator-ii/">Basic Calculator Ii</a></h2>
+
+      <p>Implement a basic calculator to evaluate a simple expression string.
+The expression string contains only non-negative integers, &#43;, -, *, / operators and empty spaces  . The integer division should truncate toward zero.
+Example 1 Input: &#34;3&#43;2*2&#34; Output: 7 Example 2 Input: &#34; 3/2 &#34; Output: 1 Example 3 Input: &#34; 3&#43;5 / 2 &#34; Output: 5 Note  You may assume that the given expression is always valid. Do not use the eval built-in library function.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/basic-calculator/">Basic Calculator</a></h2>
+
+      <p>Implement a basic calculator to evaluate a simple expression string.
+The expression string may contain open ( and closing parentheses ), the plus &#43; or minus sign -, non-negative integers and empty spaces  .
+Example 1 Input: &#34;1 &#43; 1&#34; Output: 2 Example 2 Input: &#34; 2-1 &#43; 2 &#34; Output: 3 Example 3 Input: &#34;(1&#43;(4&#43;5&#43;2)-3)&#43;(6&#43;8)&#34; Output: 23 Note  You may assume that the given expression is always valid.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
@@ -307,37 +335,14 @@ Example 1 Input: [[1,1],[2,2],[3,3]] Output: 3 Explanation: ^ | | o | o | o &#43
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/longest-increasing-path-in-a-matrix/">Longest Increasing Path in a Matrix</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/backspace-string-compare/">Backspace String Compare</a></h2>
 
-      <p>Given an integer matrix, find the length of the longest increasing path.
-From each cell, you can either move to four directions: left, right, up or down. You may NOT move diagonally or move outside of the boundary (i.e. wrap-around is not allowed).
-Example 1 Input: nums = [ [9,9,4], [6,6,8], [2,1,1] ] Output: 4 Explanation: The longest increasing path is [1, 2, 6, 9]. Example 2 Input: nums = [ [3,4,5], [3,2,6], [2,2,1] ] Output: 4 Explanation: The longest increasing path is [3, 4, 5, 6].</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/fizz-buzz-multithreaded/">Fizz Buzz Multithreaded</a></h2>
-
-      <p>Write a program that outputs the string representation of numbers from 1 to n, however:
- If the number is divisible by 3, output &#34;fizz&#34;. If the number is divisible by 5, output &#34;buzz&#34;. If the number is divisible by both 3 and 5, output &#34;fizzbuzz&#34;.  For example, for n = 15, we output: 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz.</p>
+      <p>Solution (build string ❌) Time: O(N)
+Space: O(N)
+class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: res_1 = self.helper(S) res_2 = self.helper(T) return len(res_1) == len(res_2) and res_1 == res_2 def helper(self, s): stack = [] for c in s: if c != &#34;#&#34;: stack.append(c) else: if len(stack) &gt; 0: stack.pop() return &#34;&#34;.join(stack) s
+Solution (two pointers 👍🏼) Time: O(N)
+Space: O(1)
+from itertools import zip_longest class Solution: def backspaceCompare(self, S: str, T: str) -&gt; bool: return all( a == b for a, b in zip_longest(self.</p>
 
       <p class="meta">
         
@@ -349,7 +354,7 @@ Example 1 Input: nums = [ [9,9,4], [6,6,8], [2,1,1] ] Output: 4 Explanation: The
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -360,10 +365,10 @@ Example 1 Input: nums = [ [9,9,4], [6,6,8], [2,1,1] ] Output: 4 Explanation: The
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/print-in-order/">Print in Order</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/insertion-sort-list/">Insertion Sort List</a></h2>
 
-      <p>Suppose we have a class:
-public class Foo { public void first() { print(&#34;first&#34;); } public void second() { print(&#34;second&#34;); } public void third() { print(&#34;third&#34;); } } The same instance of Foo will be passed to three different threads. Thread A will call first(), thread B will call second(), and thread C will call third(). Design a mechanism and modify the program to ensure that second() is executed after first(), and third() is executed after second().</p>
+      <p>Algorithm of Insertion Sort Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.
+Example 1 Input: 4-&gt;2-&gt;1-&gt;3 Output: 1-&gt;2-&gt;3-&gt;4 Example 2 Input: -1-&gt;5-&gt;3-&gt;4-&gt;0 Output: -1-&gt;0-&gt;3-&gt;4-&gt;5 Solution # Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.</p>
 
       <p class="meta">
         
@@ -375,7 +380,7 @@ public class Foo { public void first() { print(&#34;first&#34;); } public void s
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -386,10 +391,11 @@ public class Foo { public void first() { print(&#34;first&#34;); } public void s
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/the-dining-philosophers/">The Dining Philosophers</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/middle-of-the-linked-list/">Middle of the Linked List</a></h2>
 
-      <p>Five silent philosophers sit at a round table with bowls of spaghetti. Forks are placed between each pair of adjacent philosophers.
-Each philosopher must alternately think and eat. However, a philosopher can only eat spaghetti when they have both left and right forks. Each fork can be held by only one philosopher and so a philosopher can use the fork only if it is not being used by another philosopher. After an individual philosopher finishes eating, they need to put down both forks so that the forks become available to others.</p>
+      <p>Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+If there are two middle nodes, return the second middle node.
+Example 1 Input: [1,2,3,4,5] Output: Node 3 from this list (Serialization: [3,4,5]) The returned node has value 3. (The judge&#39;s serialization of this node is [3,4,5]). Note that we returned a ListNode object ans, such that: ans.val = 3, ans.next.val = 4, ans.</p>
 
       <p class="meta">
         
@@ -401,7 +407,7 @@ Each philosopher must alternately think and eat. However, a philosopher can only
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 
@@ -412,12 +418,13 @@ Each philosopher must alternately think and eat. However, a philosopher can only
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/handshakes-that-dont-cross/">Handshakes That Dont Cross</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/sort-list/">Sort List</a></h2>
 
-      <p>You are given an even number of people num_people that stand around a circle and each person shakes hands with someone else, so that there are num_people / 2 handshakes total.
-Return the number of ways these handshakes could occur such that none of the handshakes cross.
-Since this number could be very big, return the answer mod 10^9 &#43; 7
-Example 1 Input: num_people = 2 Output: 1 Example 2 Input: num_people = 4 Output: 2 Explanation: There are two ways to do it, the first way is [(1,2),(3,4)] and the second one is [(2,3),(4,1)].</p>
+      <p>Sort a linked list in O(n log n) time using constant space complexity.
+Example 1 Input: 4-&gt;2-&gt;1-&gt;3 Output: 1-&gt;2-&gt;3-&gt;4 Example 2 Input: -1-&gt;5-&gt;3-&gt;4-&gt;0 Output: -1-&gt;0-&gt;3-&gt;4-&gt;5 Solution (merge sort - top down) Time: O(NlogN)
+Space: O(logN)
+Doesn’t satisfy the requirement
+# Definition for singly-linked list. # class ListNode: # def __init__(self, x): # self.val = x # self.next = None class Solution: def sortList(self, head: ListNode) -&gt; ListNode: if not head or not head.</p>
 
       <p class="meta">
         

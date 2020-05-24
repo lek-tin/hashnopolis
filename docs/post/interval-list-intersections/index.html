@@ -34,7 +34,7 @@ Return the intersection of these two interval lists.
 
 
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.69.2" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/interval-list-intersections/" />
@@ -189,7 +189,7 @@ Return the intersection of these two interval lists.
       <h1>Interval List Intersections</h1>
       <h4>Created: March 16, 2020 by [lek-tin]</h4>
       
-        <h5>Last updated: March 16, 2020</h5>
+        <h5>Last updated: April 23, 2020</h5>
       
       <hr />
       <p>Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.</p>
@@ -206,8 +206,32 @@ Reminder: The inputs and the desired output are lists of Interval objects, and n
 <li><code>0 &lt;= B.length &lt; 1000</code></li>
 <li><code>0 &lt;= A[i].start, A[i].end, B[i].start, B[i].end &lt; 10^9</code></li>
 </ol>
-<p><strong>NOTE:</strong> input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.</p>
+<h4 id="note-input-types-have-been-changed-on-april-15-2019-please-reset-to-default-code-definition-to-get-new-method-signature">NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.</h4>
 <h3 id="solution">Solution</h3>
+<p>Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> <span style="color:#a6e22e">intervalIntersection</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> A<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> B<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        ArrayList<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]&gt;</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> B<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> low  <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>A<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">],</span> B<span style="color:#f92672">[</span>j<span style="color:#f92672">][</span>0<span style="color:#f92672">]);</span>
+            <span style="color:#66d9ef">int</span> high <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>A<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">],</span> B<span style="color:#f92672">[</span>j<span style="color:#f92672">][</span>1<span style="color:#f92672">]);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>low <span style="color:#f92672">&lt;=</span> high<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                res<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>low<span style="color:#f92672">,</span> high<span style="color:#f92672">});</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> B<span style="color:#f92672">[</span>j<span style="color:#f92672">][</span>1<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                i<span style="color:#f92672">++;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                j<span style="color:#f92672">++;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">.</span><span style="color:#a6e22e">toArray</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>res<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()][</span>2<span style="color:#f92672">]);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Python</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">intervalIntersection</span>(self, A: List[List[int]], B: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[List[int]]:
         ans <span style="color:#f92672">=</span> []
@@ -229,7 +253,7 @@ Reminder: The inputs and the desired output are lists of Interval objects, and n
                 j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
         <span style="color:#66d9ef">return</span> ans
-<span style="color:#e6db74">``</span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#e6db74">&#39;</span></code></pre></div>
+</code></pre></div>
   </div>
 
   <div id="disqus_thread"></div>

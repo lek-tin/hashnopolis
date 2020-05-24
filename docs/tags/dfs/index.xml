@@ -7,10 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 30 Apr 2020 00:10:20 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 23:23:16 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flood Fill</title>
+      <link>http://www.hashnopolis.com/post/flood-fill/</link>
+      <pubDate>Mon, 11 May 2020 23:23:16 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/flood-fill/</guid>
+      <description>An image is represented by a 2-D array of integers, each integer representing the pixel value of the image (from 0 to 65535).
+Given a coordinate (sr, sc) representing the starting pixel (row and column) of the flood fill, and a pixel value newColor, &amp;ldquo;flood fill&amp;rdquo; the image.
+To perform a &amp;ldquo;flood fill&amp;rdquo;, consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color as the starting pixel), and so on.</description>
+    </item>
+    
+    <item>
+      <title>Cousins in Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/cousins-in-binary-tree/</link>
+      <pubDate>Thu, 07 May 2020 00:15:39 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/cousins-in-binary-tree/</guid>
+      <description>In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k+1.
+Two nodes of a binary tree are cousins if they have the same depth, but have different parents.
+We are given the root of a binary tree with unique values, and the values x and y of two different nodes in the tree.
+Return true if and only if the nodes corresponding to the values x and y are cousins.</description>
+    </item>
     
     <item>
       <title>Check if a String Is a Valid Sequence From Root to Leaves Path in a Binary Tree</title>
@@ -209,8 +232,7 @@ The graph is given in the following form: graph[i] is a list of indexes j for wh
       
       <guid>http://www.hashnopolis.com/post/path-sum-ii/</guid>
       <description>Given a binary tree and a sum, find all root-to-leaf paths where each path&amp;rsquo;s sum equals the given sum.
-Note: A leaf is a node with no children.
-Example: Given the below binary tree and sum = 22,
+NOTE: A leaf is a node with no children. Example: Given the below binary tree and sum = 22,
  5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 Return:
 [ [5,4,11,2], [5,8,4,5] ] Solution # Definition for a binary tree node.</description>
     </item>

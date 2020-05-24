@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Thu, 30 Apr 2020 00:10:20 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2020 00:15:39 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/binary-tree/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cousins in Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/cousins-in-binary-tree/</link>
+      <pubDate>Thu, 07 May 2020 00:15:39 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/cousins-in-binary-tree/</guid>
+      <description>In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k+1.
+Two nodes of a binary tree are cousins if they have the same depth, but have different parents.
+We are given the root of a binary tree with unique values, and the values x and y of two different nodes in the tree.
+Return true if and only if the nodes corresponding to the values x and y are cousins.</description>
+    </item>
     
     <item>
       <title>Check if a String Is a Valid Sequence From Root to Leaves Path in a Binary Tree</title>
@@ -162,8 +174,7 @@ Determine the maximum amount of money the thief can rob tonight without alerting
       <guid>http://www.hashnopolis.com/post/maximum-depth-of-binary-tree/</guid>
       <description>Given a binary tree, find its maximum depth.
 The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Note: A leaf is a node with no children.
-Example: Given binary tree [3,9,20,null,null,15,7],
+NOTE: A leaf is a node with no children. Example: Given binary tree [3,9,20,null,null,15,7],
  3 / \ 9 20 / \ 15 7 return its minimum depth = 3. Solution: recursion
 /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int maxDepth(TreeNode root) { if (root == null) return 0; int left = maxDepth(root.</description>
     </item>

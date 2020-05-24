@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.69.2" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/categories/algorithm/" />
@@ -176,12 +176,14 @@
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/flatten-binary-tree-to-linked-list/">Flatten Binary Tree to Linked List</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/maximum-xor-of-two-numbers-in-an-array/">Maximum Xor of Two Numbers in an Array</a></h2>
 
-      <p>Given a binary tree, flatten it to a linked list in-place.
-For example, given the following tree:
- 1 / \ 2 5 / \ \ 3 4 6 The flattened tree should look like:
-1 \ 2 \ 3 \ 4 \ 5 \ 6 Solution # Definition for a binary tree node. # class TreeNode: # def __init__(self, x): # self.val = x # self.left = None # self.</p>
+      <p>Given a non-empty array of numbers, a0, a1, a2, … , an-1, where 0 ≤ ai&lt; 231.
+Find the maximum result of ai XOR aj, where 0 ≤ i, j &lt; n.
+Could you do this in O(n) runtime?
+Example Input: [3, 10, 5, 25, 2, 8] Output: 28 Explanation: The maximum result is 5 ^ 25 = 28. Solution (prefix hashset - less efficient) Time: O(N)
+Space: O(1)
+class Solution: def findMaximumXOR(self, nums: List[int]) -&gt; int: # 0bxxxxxx - 0b L = len(bin(max(nums))) - 2 max_xor = 0 for i in range(L-1, -1, -1): max_xor &lt;&lt;= 1 print(&#34;max_xor:&#34;, bin(max_xor) ) # set the rightmost bit to 1 curr_xor = max_xor | 1 print(&#34;curr_xor:&#34;, bin(curr_xor) ) # highest (L-i) bits prefixes = {num &gt;&gt; i for num in nums} print(&#34;prefixes:&#34;, [bin(p) for p in prefixes] ) # as long as there exists a p that makes curr_xor^p &gt; 0 # Update max_xor, if two of these prefixes could result in curr_xor.</p>
 
       <p class="meta">
         
@@ -193,7 +195,7 @@ For example, given the following tree:
         
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
       </p>
   </div>
 
@@ -204,10 +206,11 @@ For example, given the following tree:
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/flatten-a-multilevel-doubly-linked-list/">Flatten a Multilevel Doubly Linked List</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/minimum-number-of-refueling-stops/">Minimum Number of Refueling Stops</a></h2>
 
-      <p>You are given a doubly linked list which in addition to the next and previous pointers, it could have a child pointer, which may or may not point to a separate doubly linked list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in the example below.
-Flatten the list so that all the nodes appear in a single-level, doubly linked list.</p>
+      <p>A car travels from a starting position to a destination which is target miles east of the starting position.
+Along the way, there are gas stations. Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.
+The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses 1 liter of gas per 1 mile that it drives.</p>
 
       <p class="meta">
         
@@ -230,35 +233,11 @@ Flatten the list so that all the nodes appear in a single-level, doubly linked l
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/optimal-account-balancing/">Optimal Account Balancing</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/design-hashmap/">Design Hashmap</a></h2>
 
-      <p>A group of friends went on holiday and sometimes lent each other money. For example, Alice paid for Bill’s lunch for $10. Then later Chris gave Alice $5 for a taxi ride. We can model each transaction as a tuple (x, y, z) which means person x gave person y $z. Assuming Alice, Bill, and Chris are person 0, 1, and 2 respectively (0, 1, 2 are the person’s ID), the transactions can be represented as [[0, 1, 10], [2, 0, 5]].</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/split-array-into-consecutive-subsequences/">Split Array Into Consecutive Subsequences</a></h2>
-
-      <p>Given an array nums sorted in ascending order, return true if and only if you can split it into 1 or more subsequences such that each subsequence consists of consecutive integers and has length at least 3.
-Example 1 Input: [1,2,3,3,4,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3 3, 4, 5 Example 2 Input: [1,2,3,3,4,4,5,5] Output: True Explanation: You can split them into two consecutive subsequences : 1, 2, 3, 4, 5 3, 4, 5 Example 3 Input: [1,2,3,4,4,5] Output: False Constraints  1 &lt;= nums.</p>
+      <p>Design a HashMap without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ put(key, value): Insert a (key, value) pair into the HashMap. If the value already exists in the HashMap, update the value. get(key): Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key. remove(key): Remove the mapping for the value key if this map contains the mapping for the key.</p>
 
       <p class="meta">
         
@@ -281,10 +260,39 @@ Example 1 Input: [1,2,3,3,4,5] Output: True Explanation: You can split them into
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/expressive-words/">Expressive Words</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/design-circular-deque/">Design Circular Deque</a></h2>
 
-      <p>Sometimes people repeat letters to represent extra feeling, such as “hello” -&gt; “heeellooo”, “hi” -&gt; “hiiii”. In these strings like “heeellooo”, we have groups of adjacent letters that are all the same: “h”, “eee”, “ll”, “ooo”.
-For some given string S, a query word is stretchy if it can be made to be equal to S by any number of applications of the following extension operation: choose a group consisting of characters c, and add some number of characters c to the group so that the size of the group is 3 or more.</p>
+      <p>Design your implementation of the circular double-ended queue (deque).
+Your implementation should support following operations:
+MyCircularDeque(k): Constructor, set the size of the deque to be k.
+ insertFront(): Adds an item at the front of Deque. Return true if the operation is successful. insertLast(): Adds an item at the rear of Deque. Return true if the operation is successful. deleteFront(): Deletes an item from the front of Deque. Return true if the operation is successful.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-hashset/">Design Hashset</a></h2>
+
+      <p>Design a HashSet without using any built-in hash table libraries.
+To be specific, your design should include these functions:
+ add(value): Insert a value into the HashSet. contains(value): Return whether the value exists in the HashSet or not. remove(value): Remove a value in the HashSet. If the value does not exist in the HashSet, do nothing.  Example MyHashSet hashSet = new MyHashSet(); hashSet.add(1); hashSet.add(2); hashSet.contains(1); // returns true hashSet.contains(3); // returns false (not found) hashSet.</p>
 
       <p class="meta">
         
@@ -307,10 +315,91 @@ For some given string S, a query word is stretchy if it can be made to be equal 
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/validate-stack-sequence/">Validate Stack Sequence</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/flatten-2d-vector/">Flatten 2d Vector</a></h2>
 
-      <p>Given two sequences pushed and popped with distinct values, return true if and only if this could have been the result of a sequence of push and pop operations on an initially empty stack.
-Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explanation: We might do the following sequence: push(1), push(2), push(3), push(4), pop() -&gt; 4, push(5), pop() -&gt; 5, pop() -&gt; 3, pop() -&gt; 2, pop() -&gt; 1 Example 2 Input: pushed = [1,2,3,4,5], popped = [4,3,5,1,2] Output: false Explanation: 1 cannot be popped before 2.</p>
+      <p>Design and implement an iterator to flatten a 2d vector. It should support the following operations: next and hasNext.
+Example Vector2D iterator = new Vector2D([[1,2],[3],[4]]); iterator.next(); // return 1 iterator.next(); // return 2 iterator.next(); // return 3 iterator.hasNext(); // return true iterator.hasNext(); // return true iterator.next(); // return 4 iterator.hasNext(); // return false Notes  Please remember to RESET your class variables declared in Vector2D, as static/class variables are persisted across multiple test cases.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/utf-8-validation/">Utf 8 Validation</a></h2>
+
+      <p>A character in UTF8 can be from 1 to 4 bytes long, subjected to the following rules:
+ For 1-byte character, the first bit is a 0, followed by its unicode code. For n-bytes character, the first n-bits are all one’s, the n&#43;1 bit is 0, followed by n-1 bytes with most significant 2 bits being 10.  This is how the UTF-8 encoding would work:
+ Char. number range | UTF-8 octet sequence (hexadecimal) | (binary) --------------------&#43;--------------------------------------------- 0000 0000-0000 007F | 0xxxxxxx 0000 0080-0000 07FF | 110xxxxx 10xxxxxx 0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx 0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx Given an array of integers representing the data, return whether it is a valid utf-8 encoding.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/design-circular-queue/">Design Circular Queue</a></h2>
+
+      <p>Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle and the last position is connected back to the first position to make a circle. It is also called “Ring Buffer”.
+One of the benefits of the circular queue is that we can make use of the spaces in front of the queue.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 3-min read
+      </p>
+  </div>
+
+  
+
+</article>
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/decode-string/">Decode String</a></h2>
+
+      <p>Given an encoded string, return its decoded string.
+The encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.
+You may assume that the input string is always valid; No extra white spaces, square brackets are well-formed, etc.
+Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k.</p>
 
       <p class="meta">
         
@@ -333,38 +422,12 @@ Example 1 Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1] Output: true Explana
         
 <article class="post">
   <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/delete-nodes-and-return-forest/">Delete Nodes and Return Forest</a></h2>
+      <h2><a href="http://www.hashnopolis.com/post/surrounded-regions/">Surrounded Regions</a></h2>
 
-      <p>Given the root of a binary tree, each node in the tree has a distinct value.
-After deleting all nodes with a value in to_delete, we are left with a forest (a disjoint union of trees).
-Return the roots of the trees in the remaining forest. You may return the result in any order.
-Example 1 Input: root = [1,2,3,4,5,6,7], to_delete = [3,5] Output: [[1,2,null,4],[6],[7]] Constraints 1 The number of nodes in the given tree is at most 1000.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1/">Insert Delete Getrandom O1</a></h2>
-
-      <p>Design a data structure that supports all following operations in average O(1) time.
- insert(val): Inserts an item val to the set if not already present. remove(val): Removes an item val from the set if present. getRandom: Returns a random element from current set of elements. Each element must have the same probability of being returned.  Example // Init an empty set. RandomizedSet randomSet = new RandomizedSet(); // Inserts 1 to the set.</p>
+      <p>Given a 2D board containing &#39;X&#39; and &#39;O&#39; (the letter O), capture all regions surrounded by &#39;X&#39;.
+A region is captured by flipping all &#39;O&#39;s into &#39;X&#39;s in that surrounded region.
+Example X X X X X O O X X X O X X O X X After running your function, the board should be:
+X X X X X X X X X X X X X O X X Explanation Surrounded regions shouldn’t be on the border, which means that any &#39;O&#39; on the border of the board are not flipped to &#39;X&#39;.</p>
 
       <p class="meta">
         
@@ -377,63 +440,6 @@ Example 1 Input: root = [1,2,3,4,5,6,7], to_delete = [3,5] Output: [[1,2,null,4]
           <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
         
         <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/insert-delete-getrandom-o1-duplicates-allowed/">Insert Delete Getrandom O1 Duplicates Allowed</a></h2>
-
-      <p>Design a data structure that supports all following operations in average O(1) time.
-Note: Duplicate elements are allowed.
- insert(val): Inserts an item val to the collection. remove(val): Removes an item val from the collection if present. getRandom: Returns a random element from current collection of elements. The probability of each element being returned is linearly related to the number of same value the collection contains.  Example // Init an empty collection.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-          <a  class="meta--cat" href="/categories/ood" ><strong>"ood"</strong></a>
-        
-          <a  class="meta--cat" href="/categories/hashmap" ><strong>"hashmap"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/moving-average-from-data-stream/">Moving Average From Data Stream</a></h2>
-
-      <p>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
-Example MovingAverage m = new MovingAverage(3); m.next(1) = 1 m.next(10) = (1 &#43; 10) / 2 m.next(3) = (1 &#43; 10 &#43; 3) / 3 m.next(5) = (10 &#43; 3 &#43; 5) / 3 Solution from collections import deque class MovingAverage: def __init__(self, size: int): &#34;&#34;&#34; Initialize your data structure here.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
       </p>
   </div>
 

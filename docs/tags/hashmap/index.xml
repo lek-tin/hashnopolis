@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 02 May 2020 04:38:56 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2020 18:05:03 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/tags/hashmap/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Permutation in String</title>
+      <link>http://www.hashnopolis.com/post/permutation-in-string/</link>
+      <pubDate>Sat, 23 May 2020 18:05:03 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/permutation-in-string/</guid>
+      <description>Given two strings s1 and s2, write a function to return true if s2 contains the permutation of s1. In other words, one of the first string&amp;rsquo;s permutations is the substring of the second string.
+Example 1: Input: s1 = &amp;quot;ab&amp;quot; s2 = &amp;quot;eidbaooo&amp;quot; Output: True Explanation: s2 contains one permutation of s1 (&amp;quot;ba&amp;quot;). Example 2: Input:s1= &amp;quot;ab&amp;quot; s2 = &amp;quot;eidboaoo&amp;quot; Output: False Constraints:  The input strings only contain lower case letters.</description>
+    </item>
+    
+    <item>
+      <title>Sort Characters by Frequency</title>
+      <link>http://www.hashnopolis.com/post/sort-characters-by-frequency/</link>
+      <pubDate>Fri, 22 May 2020 20:46:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/sort-characters-by-frequency/</guid>
+      <description>Given a string, sort it in decreasing order based on the frequency of characters.
+Example 1: Input: &amp;quot;tree&amp;quot; Output: &amp;quot;eert&amp;quot; Explanation: &#39;e&#39; appears twice while &#39;r&#39; and &#39;t&#39; both appear once. So &#39;e&#39; must appear before both &#39;r&#39; and &#39;t&#39;. Therefore &amp;quot;eetr&amp;quot; is also a valid answer. Example 2: Input: &amp;quot;cccaaa&amp;quot; Output: &amp;quot;cccaaa&amp;quot; Explanation: Both &#39;c&#39; and &#39;a&#39; appear three times, so &amp;quot;aaaccc&amp;quot; is also a valid answer. Note that &amp;quot;cacaca&amp;quot; is incorrect, as the same characters must be together.</description>
+    </item>
     
     <item>
       <title>Jewels and Stones</title>
@@ -249,6 +269,18 @@ FreqStack has two functions:
       <description>Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words. It is guaranteed there is at least one word that isn&amp;rsquo;t banned, and that the answer is unique.
 Words in the list of banned words are given in lowercase, and free of punctuation. Words in the paragraph are not case sensitive. The answer is in lowercase.
 Example: Input: paragraph = &amp;quot;Bob hit a ball, the hit BALL flew far after it was hit.</description>
+    </item>
+    
+    <item>
+      <title>Find All Anagrams in a String</title>
+      <link>http://www.hashnopolis.com/post/find-all-anagrams-in-a-string/</link>
+      <pubDate>Sat, 15 Dec 2018 09:42:45 -0800</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/find-all-anagrams-in-a-string/</guid>
+      <description>Given a string s and a non-empty string p, find all the start indices of p&#39;s anagrams in s.
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+The order of output does not matter.
+Example 1 Input: s: &amp;quot;cbaebabacd&amp;quot; p: &amp;quot;abc&amp;quot; Output: [0, 6] Explanation: The substring with start index = 0 is &amp;quot;cba&amp;quot;, which is an anagram of &amp;quot;abc&amp;quot;.</description>
     </item>
     
     <item>

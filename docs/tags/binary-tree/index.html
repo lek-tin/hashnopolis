@@ -29,7 +29,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.69.2" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/tags/binary-tree/" />
@@ -172,6 +172,34 @@
   <div>
     
     
+      
+        
+<article class="post">
+  <div class="post-preview col-xs-12  no-gutter">
+      <h2><a href="http://www.hashnopolis.com/post/cousins-in-binary-tree/">Cousins in Binary Tree</a></h2>
+
+      <p>In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k&#43;1.
+Two nodes of a binary tree are cousins if they have the same depth, but have different parents.
+We are given the root of a binary tree with unique values, and the values x and y of two different nodes in the tree.
+Return true if and only if the nodes corresponding to the values x and y are cousins.</p>
+
+      <p class="meta">
+        
+        by
+        
+          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
+        
+        in
+        
+          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
+        
+        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 2-min read
+      </p>
+  </div>
+
+  
+
+</article>
       
         
 <article class="post">
@@ -400,32 +428,6 @@ Example Given a binary tree:
 
       <p>Given two trees, T1 and T2, write an function to test whether T2 is a subtree of T1.
 Solution public class Subtree { public boolean isSubTree(TreeNode T1, TreeNode T2) { if (T2 == null) return true; if (T1 == null) return false; return (isSameTree(T1,T2) || isSubTree(T1.left, T2) || isSubTree(T1.right, T2)); } public boolean isSameTree(TreeNode T1, TreeNode T2) { if (T1 == null &amp;&amp; T2 == null) return true; if (T1 == null || T2 == null) return false; if (T1.</p>
-
-      <p class="meta">
-        
-        by
-        
-          <a class="meta--author" href="/authors/lek-tin" ><strong>lek tin</strong></a>
-        
-        in
-        
-          <a  class="meta--cat" href="/categories/algorithm" ><strong>"algorithm"</strong></a>
-        
-        <i class="link-spacer"></i><i class="small material-icons">access_time</i> 1-min read
-      </p>
-  </div>
-
-  
-
-</article>
-      
-        
-<article class="post">
-  <div class="post-preview col-xs-12  no-gutter">
-      <h2><a href="http://www.hashnopolis.com/post/minimum-path-sum-in-binary-tree/">Minimum Path Sum in Binary Tree</a></h2>
-
-      <p>Given a Binary Tree, find the minimum sum path from a leaf to root. For example, in the following tree, there are three leaf to root paths 8-&gt;-2-&gt;10, -4-&gt;-2-&gt;10 and 7-&gt;10. The sums of these three paths are 16, 4 and 17 respectively. The minimum of them is 17 and the path for minimum is -4-&gt;-2-&gt;10.
- 10 / \ -2 7 / \ 8 -4 Solution public class PathSum { public int Solution(TreeNode root) { if (root == null) return 0; if (root.</p>
 
       <p class="meta">
         

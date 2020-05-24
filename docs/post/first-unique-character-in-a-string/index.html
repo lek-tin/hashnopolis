@@ -17,7 +17,8 @@
   
   <meta name="author" content="" />
   <meta name="description" content="Given a string, find the first non-repeating character in it and return it&amp;rsquo;s index. If it doesn&amp;rsquo;t exist, return -1.
-Example 1 s = &amp;quot;leetcode&amp;quot; return 0. Example 2 s = &amp;quot;loveleetcode&amp;quot;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&amp;gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 " />
+Example 1 s = &amp;quot;leetcode&amp;quot; return 0. Example 2 s = &amp;quot;loveleetcode&amp;quot;, return 2. Solution Java
+class Solution { public int firstUniqChar(String s) { int[] counter = new int[256]; for ( char c: s.toCharArray() ) { counter[c] &#43;= 1; } for ( int i = 0; i &amp;lt; s.length(); i&#43;&#43;) { if (counter[s." />
   <meta name="keywords" content="leetcode " />
   
   
@@ -25,14 +26,15 @@ Example 1 s = &amp;quot;leetcode&amp;quot; return 0. Example 2 s = &amp;quot;lov
     
     <meta name="twitter:title" content="First Unique Character in a String" />
     <meta name="twitter:description" content="Given a string, find the first non-repeating character in it and return it&amp;rsquo;s index. If it doesn&amp;rsquo;t exist, return -1.
-Example 1 s = &amp;quot;leetcode&amp;quot; return 0. Example 2 s = &amp;quot;loveleetcode&amp;quot;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&amp;gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 " />
+Example 1 s = &amp;quot;leetcode&amp;quot; return 0. Example 2 s = &amp;quot;loveleetcode&amp;quot;, return 2. Solution Java
+class Solution { public int firstUniqChar(String s) { int[] counter = new int[256]; for ( char c: s.toCharArray() ) { counter[c] &#43;= 1; } for ( int i = 0; i &amp;lt; s.length(); i&#43;&#43;) { if (counter[s." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.69.2" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/first-unique-character-in-a-string/" />
@@ -196,6 +198,24 @@ return 0.
 <pre><code>s = &quot;loveleetcode&quot;,
 return 2.
 </code></pre><h3 id="solution">Solution</h3>
+<p>Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">firstUniqChar</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> counter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>256<span style="color:#f92672">];</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span> <span style="color:#66d9ef">char</span> c<span style="color:#f92672">:</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">()</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            counter<span style="color:#f92672">[</span>c<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span> <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>counter<span style="color:#f92672">[</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)]</span> <span style="color:#f92672">==</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> i<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Python</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:

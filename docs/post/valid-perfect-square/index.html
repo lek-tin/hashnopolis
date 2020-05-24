@@ -18,8 +18,8 @@
   <meta name="author" content="" />
   <meta name="description" content="Given a positive integer num, write a function which returns True if num is a perfect square else False.
 Note Do not use any built-in library function such as sqrt.
-Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2" />
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution (naive) Java
+class Solution { public boolean isPerfectSquare(int num) { if (num == 1) return true; for (int i = 2; i &amp;lt; num; i&#43;&#43;) { if (i * i == num) { return true; } if (i * i &amp;gt; num) { break; } } return false; } } Solution (Binary Search version 1) Let x be the square root, 1 &amp;lt; x &amp;lt; num/2 always holds true." />
   <meta name="keywords" content="leetcode binary-search newton-method math " />
   
   
@@ -28,15 +28,15 @@ class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1:
     <meta name="twitter:title" content="Valid Perfect Square" />
     <meta name="twitter:description" content="Given a positive integer num, write a function which returns True if num is a perfect square else False.
 Note Do not use any built-in library function such as sqrt.
-Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left &#43; (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid &#43; 1 else: right = mid - 1 return False Binary search version 2" />
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution (naive) Java
+class Solution { public boolean isPerfectSquare(int num) { if (num == 1) return true; for (int i = 2; i &amp;lt; num; i&#43;&#43;) { if (i * i == num) { return true; } if (i * i &amp;gt; num) { break; } } return false; } } Solution (Binary Search version 1) Let x be the square root, 1 &amp;lt; x &amp;lt; num/2 always holds true." />
     <meta name="twitter:image" content="http://www.hashnopolis.com/img/avatar.jpg" />
   
 
 
 
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.69.2" />
 
 
 <link rel="canonical" href="http://www.hashnopolis.com/post/valid-perfect-square/" />
@@ -195,7 +195,7 @@ class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1:
       <h1>Valid Perfect Square</h1>
       <h4>Created: September 19, 2019 by [lek-tin]</h4>
       
-        <h5>Last updated: February 19, 2020</h5>
+        <h5>Last updated: May 9, 2020</h5>
       
       <hr />
       <p>Given a positive integer num, write a function which returns <code>True</code> if num is a perfect square else <code>False</code>.</p>
@@ -207,8 +207,28 @@ Output: true
 </code></pre><h3 id="example-2">Example 2</h3>
 <pre><code>Input: 14
 Output: false
-</code></pre><h3 id="solution">Solution</h3>
-<p>Binary search version 1</p>
+</code></pre><h3 id="solution-naive">Solution (naive)</h3>
+<p>Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPerfectSquare</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> num<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>num <span style="color:#f92672">==</span> 1<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> num<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">*</span> i <span style="color:#f92672">==</span> num<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">*</span> i <span style="color:#f92672">&gt;</span> num<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="solution-binary-search-version-1">Solution (Binary Search version 1)</h3>
+<p>Let <code>x</code> be the square root, <code>1 &lt; x &lt; num/2</code> always holds <code>true</code>.<br>
+Python</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPerfectSquare</span>(self, num: int) <span style="color:#f92672">-&gt;</span> bool:
         <span style="color:#66d9ef">if</span> num <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
@@ -218,17 +238,40 @@ Output: false
 
         <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
             mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right<span style="color:#f92672">-</span>left)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
-            t <span style="color:#f92672">=</span> mid<span style="color:#f92672">*</span>mid
-            <span style="color:#66d9ef">if</span> t <span style="color:#f92672">==</span> num:
+            guess <span style="color:#f92672">=</span> mid<span style="color:#f92672">*</span>mid
+            <span style="color:#66d9ef">if</span> guess <span style="color:#f92672">==</span> num:
                 <span style="color:#66d9ef">return</span> True
-            <span style="color:#66d9ef">if</span> t <span style="color:#f92672">&lt;</span> num:
+            <span style="color:#66d9ef">if</span> guess <span style="color:#f92672">&lt;</span> num:
                 left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
             <span style="color:#66d9ef">else</span>:
                 right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
 
         <span style="color:#66d9ef">return</span> False
-</code></pre></div><p>Binary search version 2<br>
-Time: <code>O(logN)</code><br>
+</code></pre></div><p>Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPerfectSquare</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> num<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>num <span style="color:#f92672">==</span> 1<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">long</span> left <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">long</span> right <span style="color:#f92672">=</span> num<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>left<span style="color:#f92672">+</span>1 <span style="color:#f92672">&lt;</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">long</span> mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>right <span style="color:#f92672">-</span> left<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">long</span> guess <span style="color:#f92672">=</span> mid <span style="color:#f92672">*</span> mid<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>guess <span style="color:#f92672">==</span> num<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>guess <span style="color:#f92672">&gt;</span> num<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> left<span style="color:#f92672">*</span>left <span style="color:#f92672">==</span> num <span style="color:#f92672">||</span> right<span style="color:#f92672">*</span>right<span style="color:#f92672">==</span>num<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="solution-binary-search-version-2">Solution (Binary Search version 2)</h3>
+<p>Time: <code>O(logN)</code><br>
 Space: <code>O(1)</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPerfectSquare</span>(self, num: int) <span style="color:#f92672">-&gt;</span> bool:
@@ -244,8 +287,8 @@ Space: <code>O(1)</code></p>
                 <span style="color:#66d9ef">return</span> True
 
         <span style="color:#66d9ef">return</span> False
-</code></pre></div><p>Newton&rsquo;s method
-Time: <code>O(logN)</code><br>
+</code></pre></div><h3 id="solution-newtons-method">Solution (Newton&rsquo;s method)</h3>
+<p>Time: <code>O(logN)</code><br>
 Space: <code>O(1)</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPerfectSquare</span>(self, num: int) <span style="color:#f92672">-&gt;</span> bool:

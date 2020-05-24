@@ -7,10 +7,128 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hashnopolis</copyright>
-    <lastBuildDate>Sat, 02 May 2020 04:38:56 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2020 18:05:03 -0700</lastBuildDate>
     
 	<atom:link href="http://www.hashnopolis.com/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Permutation in String</title>
+      <link>http://www.hashnopolis.com/post/permutation-in-string/</link>
+      <pubDate>Sat, 23 May 2020 18:05:03 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/permutation-in-string/</guid>
+      <description>Given two strings s1 and s2, write a function to return true if s2 contains the permutation of s1. In other words, one of the first string&amp;rsquo;s permutations is the substring of the second string.
+Example 1: Input: s1 = &amp;quot;ab&amp;quot; s2 = &amp;quot;eidbaooo&amp;quot; Output: True Explanation: s2 contains one permutation of s1 (&amp;quot;ba&amp;quot;). Example 2: Input:s1= &amp;quot;ab&amp;quot; s2 = &amp;quot;eidboaoo&amp;quot; Output: False Constraints:  The input strings only contain lower case letters.</description>
+    </item>
+    
+    <item>
+      <title>Sort Characters by Frequency</title>
+      <link>http://www.hashnopolis.com/post/sort-characters-by-frequency/</link>
+      <pubDate>Fri, 22 May 2020 20:46:31 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/sort-characters-by-frequency/</guid>
+      <description>Given a string, sort it in decreasing order based on the frequency of characters.
+Example 1: Input: &amp;quot;tree&amp;quot; Output: &amp;quot;eert&amp;quot; Explanation: &#39;e&#39; appears twice while &#39;r&#39; and &#39;t&#39; both appear once. So &#39;e&#39; must appear before both &#39;r&#39; and &#39;t&#39;. Therefore &amp;quot;eetr&amp;quot; is also a valid answer. Example 2: Input: &amp;quot;cccaaa&amp;quot; Output: &amp;quot;cccaaa&amp;quot; Explanation: Both &#39;c&#39; and &#39;a&#39; appear three times, so &amp;quot;aaaccc&amp;quot; is also a valid answer. Note that &amp;quot;cacaca&amp;quot; is incorrect, as the same characters must be together.</description>
+    </item>
+    
+    <item>
+      <title>Odd Even Linked List</title>
+      <link>http://www.hashnopolis.com/post/odd-even-linked-list/</link>
+      <pubDate>Sat, 16 May 2020 05:27:11 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/odd-even-linked-list/</guid>
+      <description>Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes.
+You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.
+Example 1: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: 1-&amp;gt;3-&amp;gt;5-&amp;gt;2-&amp;gt;4-&amp;gt;NULL Example 2: Input: 2-&amp;gt;1-&amp;gt;3-&amp;gt;5-&amp;gt;6-&amp;gt;4-&amp;gt;7-&amp;gt;NULL Output: 2-&amp;gt;3-&amp;gt;6-&amp;gt;7-&amp;gt;1-&amp;gt;5-&amp;gt;4-&amp;gt;NULL Note:  The relative order inside both the even and odd groups should remain as it was in the input.</description>
+    </item>
+    
+    <item>
+      <title>Remove K Digits</title>
+      <link>http://www.hashnopolis.com/post/remove-k-digits/</link>
+      <pubDate>Thu, 14 May 2020 01:50:33 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/remove-k-digits/</guid>
+      <description>Given a non-negative integer num represented as a string, remove k digits from the number so that the new number is the smallest possible.
+Note:  The length of num is less than 10002 and will be ≥ k. The given num does not contain any leading zero.  Example 1: Input: num = &amp;quot;1432219&amp;quot;, k = 3 Output: &amp;quot;1219&amp;quot; Explanation: Remove the three digits 4, 3, and 2 to form the new number 1219 which is the smallest.</description>
+    </item>
+    
+    <item>
+      <title>Single Element in a Sorted Array</title>
+      <link>http://www.hashnopolis.com/post/single-element-in-a-sorted-array/</link>
+      <pubDate>Tue, 12 May 2020 00:06:01 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/single-element-in-a-sorted-array/</guid>
+      <description>You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once. Find this single element that appears only once.
+Example 1: Input: [1,1,2,3,3,4,4,8,8] Output: 2 Example 2: Input: [3,3,7,7,10,11,11] Output: 10 Note:  Your solution should run in O(log n) time and O(1) space.  Solution Java
+class Solution { public int singleNonDuplicate(int[] nums) { int left = 0, right = nums.</description>
+    </item>
+    
+    <item>
+      <title>Flood Fill</title>
+      <link>http://www.hashnopolis.com/post/flood-fill/</link>
+      <pubDate>Mon, 11 May 2020 23:23:16 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/flood-fill/</guid>
+      <description>An image is represented by a 2-D array of integers, each integer representing the pixel value of the image (from 0 to 65535).
+Given a coordinate (sr, sc) representing the starting pixel (row and column) of the flood fill, and a pixel value newColor, &amp;ldquo;flood fill&amp;rdquo; the image.
+To perform a &amp;ldquo;flood fill&amp;rdquo;, consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color as the starting pixel), and so on.</description>
+    </item>
+    
+    <item>
+      <title>Find the Town Judge</title>
+      <link>http://www.hashnopolis.com/post/find-the-town-judge/</link>
+      <pubDate>Sun, 10 May 2020 00:11:26 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/find-the-town-judge/</guid>
+      <description>In a town, there are N people labelled from 1 to N. There is a rumor that one of these people is secretly the town judge.
+If the town judge exists, then:
+ The town judge trusts nobody. Everybody (except for the town judge) trusts the town judge. There is exactly one person that satisfies properties 1 and 2. You are given trust, an array of pairs trust[i] = [a, b] representing that the person labelled a trusts the person labelled b.</description>
+    </item>
+    
+    <item>
+      <title>Check if It Is a Straight Line</title>
+      <link>http://www.hashnopolis.com/post/check-if-it-is-a-straight-line/</link>
+      <pubDate>Fri, 08 May 2020 01:36:07 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/check-if-it-is-a-straight-line/</guid>
+      <description>You are given an array coordinates, coordinates[i] = [x, y], where [x, y] represents the coordinate of a point. Check if these points make a straight line in the XY plane.
+Example 1: Input: coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]] Output: true Example 2: Input: coordinates = [[1,1],[2,2],[3,4],[4,5],[5,6],[7,7]] Output: false Constraints:  2 &amp;lt;= coordinates.length &amp;lt;= 1000 coordinates[i].length == 2 -10^4 &amp;lt;= coordinates[i][0], coordinates[i][1] &amp;lt;= 10^4 coordinates contains no duplicate point.  Solution Java</description>
+    </item>
+    
+    <item>
+      <title>Cousins in Binary Tree</title>
+      <link>http://www.hashnopolis.com/post/cousins-in-binary-tree/</link>
+      <pubDate>Thu, 07 May 2020 00:15:39 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/cousins-in-binary-tree/</guid>
+      <description>In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k+1.
+Two nodes of a binary tree are cousins if they have the same depth, but have different parents.
+We are given the root of a binary tree with unique values, and the values x and y of two different nodes in the tree.
+Return true if and only if the nodes corresponding to the values x and y are cousins.</description>
+    </item>
+    
+    <item>
+      <title>Number Complement</title>
+      <link>http://www.hashnopolis.com/post/number-complement/</link>
+      <pubDate>Tue, 05 May 2020 04:39:20 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/number-complement/</guid>
+      <description>Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
+Example 1: Input: 5 Output: 2 Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2. Example 2: Input: 1 Output: 0 Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0.</description>
+    </item>
+    
+    <item>
+      <title>Ransom Note</title>
+      <link>http://www.hashnopolis.com/post/ransom-note/</link>
+      <pubDate>Sun, 03 May 2020 03:37:48 -0700</pubDate>
+      
+      <guid>http://www.hashnopolis.com/post/ransom-note/</guid>
+      <description>Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false.
+Each letter in the magazine string can only be used once in your ransom note.
+Note: You may assume that both strings contain only lowercase letters.
+Example canConstruct(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;) -&amp;gt; false canConstruct(&amp;quot;aa&amp;quot;, &amp;quot;ab&amp;quot;) -&amp;gt; false canConstruct(&amp;quot;aa&amp;quot;, &amp;quot;aab&amp;quot;) -&amp;gt; true Solution Java</description>
+    </item>
     
     <item>
       <title>Jewels and Stones</title>
@@ -677,7 +795,8 @@ Example 1 Input: &amp;quot;code&amp;quot; Output: false Example 2 Input: &amp;qu
       
       <guid>http://www.hashnopolis.com/post/first-unique-character-in-a-string/</guid>
       <description>Given a string, find the first non-repeating character in it and return it&amp;rsquo;s index. If it doesn&amp;rsquo;t exist, return -1.
-Example 1 s = &amp;quot;leetcode&amp;quot; return 0. Example 2 s = &amp;quot;loveleetcode&amp;quot;, return 2. Solution from collections import Counter class Solution: def firstUniqChar(self, s: str) -&amp;gt; int: counter = Counter(list(s)) for i in range(len(s)): if counter[s[i]] == 1: return i return -1 </description>
+Example 1 s = &amp;quot;leetcode&amp;quot; return 0. Example 2 s = &amp;quot;loveleetcode&amp;quot;, return 2. Solution Java
+class Solution { public int firstUniqChar(String s) { int[] counter = new int[256]; for ( char c: s.toCharArray() ) { counter[c] += 1; } for ( int i = 0; i &amp;lt; s.length(); i++) { if (counter[s.</description>
     </item>
     
     <item>
@@ -1298,8 +1417,7 @@ Example 1 Input: &amp;quot;(()&amp;quot; Output: 2 Explanation: The longest vali
       
       <guid>http://www.hashnopolis.com/post/path-sum-ii/</guid>
       <description>Given a binary tree and a sum, find all root-to-leaf paths where each path&amp;rsquo;s sum equals the given sum.
-Note: A leaf is a node with no children.
-Example: Given the below binary tree and sum = 22,
+NOTE: A leaf is a node with no children. Example: Given the below binary tree and sum = 22,
  5 / \ 4 8 / / \ 11 13 4 / \ / \ 7 2 5 1 Return:
 [ [5,4,11,2], [5,8,4,5] ] Solution # Definition for a binary tree node.</description>
     </item>
@@ -1312,8 +1430,7 @@ Example: Given the below binary tree and sum = 22,
       <guid>http://www.hashnopolis.com/post/best-time-to-buy-and-sell-stock-iii/</guid>
       <description>Say you have an array for which the ithelement is the price of a given stock on day i.
 Design an algorithm to find the maximum profit. You may complete at most two transactions.
-Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
-Example 1 Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</description>
+NOTE: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again). Example 1 Input: [3,3,5,0,0,3,1,4] Output: 6 Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.</description>
     </item>
     
     <item>
@@ -1629,8 +1746,8 @@ Example 1 Input: 5 Output: True Explanation: 1 * 1 + 2 * 2 = 5 Example 2 Input: 
       <guid>http://www.hashnopolis.com/post/valid-perfect-square/</guid>
       <description>Given a positive integer num, write a function which returns True if num is a perfect square else False.
 Note Do not use any built-in library function such as sqrt.
-Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution Binary search version 1
-class Solution: def isPerfectSquare(self, num: int) -&amp;gt; bool: if num == 1: return True left, right = 0, num while left &amp;lt;= right: mid = left + (right-left)//2 t = mid*mid if t == num: return True if t &amp;lt; num: left = mid + 1 else: right = mid - 1 return False Binary search version 2</description>
+Example 1 Input: 16 Output: true Example 2 Input: 14 Output: false Solution (naive) Java
+class Solution { public boolean isPerfectSquare(int num) { if (num == 1) return true; for (int i = 2; i &amp;lt; num; i++) { if (i * i == num) { return true; } if (i * i &amp;gt; num) { break; } } return false; } } Solution (Binary Search version 1) Let x be the square root, 1 &amp;lt; x &amp;lt; num/2 always holds true.</description>
     </item>
     
     <item>
@@ -2534,8 +2651,7 @@ Optimal Substructure: Let the input sequences be X[0..m-1] and Y[0..n-1] of leng
       <guid>http://www.hashnopolis.com/post/maximum-depth-of-binary-tree/</guid>
       <description>Given a binary tree, find its maximum depth.
 The maximum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Note: A leaf is a node with no children.
-Example: Given binary tree [3,9,20,null,null,15,7],
+NOTE: A leaf is a node with no children. Example: Given binary tree [3,9,20,null,null,15,7],
  3 / \ 9 20 / \ 15 7 return its minimum depth = 3. Solution: recursion
 /** * Definition for a binary tree node. * public class TreeNode { * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) { val = x; } * } */ class Solution { public int maxDepth(TreeNode root) { if (root == null) return 0; int left = maxDepth(root.</description>
     </item>
@@ -2939,9 +3055,8 @@ Example Input: 10 Output: 4 Explanation There are 4 prime numbers less than 10, 
       
       <guid>http://www.hashnopolis.com/post/implement-trie-prefix-tree/</guid>
       <description>Implement a trie with insert, search, and startsWith methods.
-Example Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true Note You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.
-Solution Python
-class TrieNode: def __init__(self): self.isEnd = False self.chars = [False for _ in range(26)] self.</description>
+Example Trie trie = new Trie(); trie.insert(&amp;quot;apple&amp;quot;); trie.search(&amp;quot;apple&amp;quot;); // returns true trie.search(&amp;quot;app&amp;quot;); // returns false trie.startsWith(&amp;quot;app&amp;quot;); // returns true trie.insert(&amp;quot;app&amp;quot;); trie.search(&amp;quot;app&amp;quot;); // returns true Note  You may assume that all inputs are consist of lowercase letters a-z. All inputs are guaranteed to be non-empty strings.  Solution Java
+class Trie { class TrieNode { private TrieNode[] children; private final int R = 26; private boolean isWord; public TrieNode() { children = new TrieNode[R]; } public boolean containsKey(char ch) { return children[ch -&amp;#39;a&amp;#39;] !</description>
     </item>
     
     <item>
