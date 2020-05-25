@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "bst"]
 categories: ["algorithm"]
 date: 2020-04-20T04:25:35-07:00
-lastmod: 2020-04-20T04:25:35-07:00
+lastmod: 2020-05-25T04:25:35-07:00
 draft: false
 archive: false
 ---
@@ -102,11 +102,15 @@ class Solution {
 
     private TreeNode dfs(int[] preorder, int rootVal, Integer min, Integer max, int size) {
         // base case
+        System.out.println(preIndex);
         if (preIndex >= size) {
             return null;
         }
 
         TreeNode root = null;
+
+        System.out.println(preorder[preIndex] + "   " + min + "    " + max);
+        System.out.println("-----------");
 
         if (preorder[preIndex] > min && preorder[preIndex] < max) {
             root = new TreeNode(rootVal);
