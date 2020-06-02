@@ -40,9 +40,10 @@ Output: [[3,3],[-2,4]]
 
 ### Solution
 The advantage: high efficiency
-The disadvantage: neither an online solution nor a stable one. And the K elements closest are not sorted in ascending order.
-Average time complexity: `O(n)` if we don’t need the sorted output, otherwise O(n+kLogk)
+The disadvantage: neither an online solution nor a stable one. And the `K` elements closest are not sorted in ascending order.  
+Average time complexity: `O(n)` if we don’t need the sorted output, otherwise `O(n+kLogk)`  
 
+Java
 ```java
 class Solution {
     public int[][] kClosest(int[][] points, int K) {

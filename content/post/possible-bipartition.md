@@ -1,0 +1,56 @@
+---
+title: "Possible Bipartition"
+description: "Some description ..."
+authors: ["lek-tin"]
+tags: ["leetcode"]
+categories: ["algorithm"]
+date: 2020-05-29T19:00:20-07:00
+lastmod: 2020-05-29T19:00:20-07:00
+draft: true
+archive: false
+---
+
+Given a set of `N` people (numbered `1, 2, ..., N`), we would like to split everyone into two groups of any size.  
+
+Each person may dislike some other people, and they should not go into the same group.  
+
+Formally, if `dislikes[i] = [a, b]`, it means it is not allowed to put the people numbered `a` and `b` into the same group.  
+
+Return `true` if and only if it is possible to split everyone into two groups in this way.  
+
+### Example 1:
+
+```
+Input: N = 4, dislikes = [[1,2],[1,3],[2,4]]
+Output: true
+Explanation: group1 [1,4], group2 [2,3]
+```
+
+### Example 2:
+
+```
+Input: N = 3, dislikes = [[1,2],[1,3],[2,3]]
+Output: false
+```
+
+### Example 3:
+
+```
+Input: N = 5, dislikes = [[1,2],[2,3],[3,4],[4,5],[1,5]]
+Output: false
+```
+
+#### Constraints:
+
+1. `1 <= N <= 2000`
+2. `0 <= dislikes.length <= 10000`
+3. `dislikes[i].length == 2`
+4. `1 <= dislikes[i][j] <= N`
+5. `dislikes[i][0] < dislikes[i][1]`
+6. `There does not exist i != j for which dislikes[i] == dislikes[j]`.
+
+### Solution
+
+Java
+```java
+```

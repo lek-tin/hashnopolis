@@ -5,6 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "dfs", "graph", "topological-sort"]
 categories: ["algorithm"]
 date: 2018-12-09T23:29:18+08:00
+lastmod: 2020-05-29T22:30:18+08:00
 draft: false
 archive: false
 ---
@@ -34,11 +35,60 @@ Explanation: There are a total of 2 courses to take. To take course 1 you should
 1. The input prerequisites is a graph represented by **a list of edges**, not adjacency matrices. Read more about how a graph is represented.
 2. You may assume that there are no duplicate edges in the input prerequisites.
 
-### Solution (topological sort using dfs)
+### Solution (cycle detection using dfs)
 
 possible if no cycle in a directed graph  
 Time: `O(V+E) ~ O(V^2)`  
 Space: `O(V)`  
+
+Java
+```java
+class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        boolean[] visiting = new boolean[numCourses];
+        boolean[] visited = new boolean[numCourses];
+
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>();
+
+        for (int i = 0; i < numCourses; i++) {
+            adj.add(new ArrayList<Integer>());
+        }
+
+        for (int[] prereq: prerequisites) {
+            int parent = prereq[0], child = prereq[1];
+            adj.get(parent).add(child);
+        }
+
+        for (int i = 0; i < numCourses; i++) {
+            if (hasCycle(adj, i, visited, visiting)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean hasCycle(ArrayList<ArrayList<Integer>> adj, int parent, boolean[] visited, boolean[] visiting) {
+        if (visiting[parent]) return true;
+        if (visited[parent]) return false;
+
+        visiting[parent] = true;
+
+        for (int child: adj.get(parent)) {
+            if (hasCycle(adj, child, visited, visiting)) {
+                return true;
+            }
+        }
+
+        visiting[parent] = false;
+        visited[parent] = true;
+
+        return false;
+    }
+}
+```
+
+Python
 ```python
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
@@ -59,7 +109,7 @@ class Solution:
         return True
 
     # cycle exists: True
-    # otherwies: False
+    # otherwise: False
     def detectCycle(self, parent, visiting, visited):
         # cycle detected
         if visiting[parent]:
@@ -76,14 +126,14 @@ class Solution:
         for child in self.adj[parent]:
             if self.detectCycle(child, visiting, visited):
                 return True
-        # unset parent as a prerequiste course
+        # unset parent as a prerequisite course
         visiting[parent] = False
         # mark node as visited
         visited[parent] = True
         return False
 ```
 
-### Solution
+### Solution (topological sort)
 
 time: `O(V + E)`  
 space: `O(n)`  
