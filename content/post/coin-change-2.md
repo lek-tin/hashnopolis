@@ -5,9 +5,11 @@ authors: ["lek-tin"]
 tags: ["leetcode", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-04-06T22:45:41-07:00
+lastmod: 2020-06-07T23:30:41-07:00
 draft: false
 archive: false
 ---
+
 You are given coins of different denominations and a total amount of money. Write a function to compute the number of combinations that make up that amount. You may assume that you have infinite number of each kind of coin.   
 
 ### Example 1
@@ -33,6 +35,7 @@ Output: 1
 ```
 
 #### Note
+
 You can assume that
 1. `0 <= amount <= 5000`
 2. `1 <= coin <= 5000`
@@ -40,12 +43,15 @@ You can assume that
 4. the answer is guaranteed to fit into signed `32-bit` integer
 
 ### Solution
+
+Java
 ```java
 class Solution {
     public int change(int amount, int[] coins) {
         int[] combos = new int[amount + 1];
         combos[0] = 1;
 
+        // coins in our loop because we don't want duplicate combos such as [1,2] and [2,1]
         for (int i = 0; i < coins.length; i++) {
             int coin = coins[i];
             for (int j = 1; j <= amount; j++) {
@@ -61,5 +67,7 @@ class Solution {
     }
 }
 ```
-### Hint
+
+#### Hint
+
 <https://youtu.be/jaNZ83Q3QGc>
