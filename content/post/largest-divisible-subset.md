@@ -5,26 +5,77 @@ authors: ["lek-tin"]
 tags: ["leetcode", "dynamic-programming"]
 categories: ["algorithm"]
 date: 2019-08-29T02:15:01-07:00
+lastmod: 2020-06-13T02:15:01-07:00
 draft: false
 archive: false
 ---
-Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
 
+Given a set of distinct positive integers, find the largest subset such that every pair `(Si, Sj)` of elements in this subset satisfies:  
+
+```
 Si % Sj = 0 or Sj % Si = 0.
+```
 
-If there are multiple solutions, return any subset is fine.
+If there are multiple solutions, return any subset is fine.  
 
 ### Example 1
+
 ```
 Input: [1,2,3]
 Output: [1,2] (of course, [1,3] will also be ok)
 ```
+
 ### Example 2
+
 ```
 Input: [1,2,4,8]
 Output: [1,2,4,8]
 ```
-### Solution
+
+### Solution (dynamic programming - linear space)
+
+Time: `O(n^2)`  
+Space: `O(n)`  
+
+Java
+```java
+class Solution {
+    public List<Integer> largestDivisibleSubset(int[] nums) {
+        int N = nums.length;
+        ArrayList<Integer> res = new ArrayList<Integer>();
+
+        if (N == 0) return res;
+
+        Arrays.sort(nums);
+        int lastIndex = 0;
+        int[] counts = new int[nums.length];
+        int[] prevs = new int[nums.length];
+        Arrays.fill(prevs, -1);
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < i; j++) {
+                if (nums[i] % nums[j] == 0 && counts[i] < counts[j] + 1) {
+                    counts[i] = counts[j] + 1;
+                    prevs[i] = j;
+                }
+            }
+
+            if (counts[i] > counts[lastIndex]) {
+                lastIndex = i;
+            }
+        }
+
+        while (lastIndex != -1) {
+            res.add(nums[lastIndex]);
+            lastIndex = prevs[lastIndex];
+        }
+
+        return res;
+    }
+}
+```
+
+Python
 ```python
 class Solution:
     def largestDivisibleSubset(self, nums: List[int]) -> List[int]:
@@ -54,7 +105,11 @@ class Solution:
 
         return res
 ```
+
 #### Initialization:
+
 ![largest-divisible-subset-initialization](/img/post/largest-divisible-subset-initialization.jpg)
+
 #### Final state
+
 ![largest-divisible-subset-final-states](/img/post/largest-divisible-subset-final-states.jpg)

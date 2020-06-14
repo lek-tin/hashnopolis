@@ -3,9 +3,8 @@ title: "Insert Delete Getrandom O1"
 description: "Some description ..."
 authors: ["lek-tin"]
 categories: ["algorithm", "ood", "hashmap"]
-categories: ["algorithm"]
 date: 2020-03-21T23:42:31-07:00
-lastmod: 2020-03-21T23:42:31-07:00
+lastmod: 2020-06-12T02:42:31-07:00
 draft: false
 archive: false
 ---
@@ -46,6 +45,61 @@ randomSet.getRandom();
 
 ### Solution
 
+Java
+```java
+class RandomizedSet {
+    ArrayList<Integer> nums;
+    HashMap<Integer, Integer> indexMap;
+
+    /** Initialize your data structure here. */
+    public RandomizedSet() {
+        nums = new ArrayList<Integer>();
+        indexMap = new HashMap<Integer, Integer>();
+    }
+
+    /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
+    public boolean insert(int val) {
+        if (indexMap.containsKey(val)) return false;
+
+        indexMap.put(val, nums.size());
+        nums.add(val);
+        return true;
+    }
+
+    /** Removes a value from the set. Returns true if the set contained the specified element. */
+    public boolean remove(int val) {
+        if (!indexMap.containsKey(val)) return false;
+
+        int pos = indexMap.get(val);
+
+        if (pos < nums.size() - 1) {
+            int last = nums.get(nums.size()-1);
+            indexMap.put(last, pos);
+            nums.set(pos, last);
+        }
+
+        nums.remove(nums.size()-1);
+        indexMap.remove(val);
+        return true;
+    }
+
+    /** Get a random element from the set. */
+    public int getRandom() {
+        Random rand = new Random(); //instance of random class
+        return nums.get(rand.nextInt(nums.size()));
+    }
+}
+
+/**
+ * Your RandomizedSet object will be instantiated and called as such:
+ * RandomizedSet obj = new RandomizedSet();
+ * boolean param_1 = obj.insert(val);
+ * boolean param_2 = obj.remove(val);
+ * int param_3 = obj.getRandom();
+ */
+```
+
+Python
 ```python
 from random import choice
 

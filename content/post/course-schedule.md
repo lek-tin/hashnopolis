@@ -5,10 +5,11 @@ authors: ["lek-tin"]
 tags: ["leetcode", "dfs", "graph", "topological-sort"]
 categories: ["algorithm"]
 date: 2018-12-09T23:29:18+08:00
-lastmod: 2020-05-29T22:30:18+08:00
+lastmod: 2020-06-13T22:30:18+08:00
 draft: false
 archive: false
 ---
+
 There are a total of n courses you have to take, labeled from `0` to `n-1`.
 
 Some courses may have prerequisites, for example to take course `0` you have to first take course `1`, which is expressed as a pair: `[0,1]`
@@ -137,6 +138,54 @@ class Solution:
 
 time: `O(V + E)`  
 space: `O(n)`  
+
+Java
+```java
+class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        if (numCourses <= 0 || prerequisites == null || prerequisites.length <=1) {
+            return true;
+        }
+
+        List<List<Integer>> graph = new ArrayList<>(numCourses);
+        int[] inDegrees = new int[numCourses];
+
+        for (int i = 0; i < numCourses; i++) {
+            graph.add(new LinkedList<Integer>());
+        }
+
+        for (int[] pair: prerequisites) {
+            graph.get(pair[1]).add(pair[0]);
+            inDegrees[pair[0]]++;
+        }
+
+        Queue<Integer> q = new LinkedList<Integer>();
+
+        for (int i = 0; i < inDegrees.length; i++) {
+            if (inDegrees[i] == 0) {
+                q.add(i);
+            }
+        }
+
+        int count = 0;
+
+        while (!q.isEmpty()) {
+            int course = q.poll();
+            count++;
+            for (int child: graph.get(course)) {
+                inDegrees[child]--;
+                if (inDegrees[child] == 0) {
+                    q.add(child);
+                }
+            }
+        }
+
+        return count == numCourses;
+    }
+}
+```
+
+Python
 ```python
 class Solution:
     # @param {integer} numCourses
