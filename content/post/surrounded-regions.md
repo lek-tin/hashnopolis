@@ -5,7 +5,7 @@ authors: ["lek-tin"]
 tags: ["leetcode", "dfs"]
 categories: ["algorithm"]
 date: 2020-03-25T00:30:49-07:00
-lastmod: 2020-06-18T00:30:49-07:00
+lastmod: 2020-06-19T00:30:49-07:00
 draft: false
 archive: false
 ---
@@ -37,6 +37,9 @@ Surrounded regions shouldn’t be on the border, which means that any `'O'` on t
 ### Solution
 
 Find all those `'O'`s on the border and `dfs` from them. Mark all the `'O'`s connected to these **border** `'O'`s as 'W'. Then mark the remaining `'O'`s as `'X'`s. Finally, reverse all the `'W'`s to `'O'`s  
+
+Time: `O(n)`  
+Space: `O(n)` - stack  
 Java
 ```java
 class Solution {

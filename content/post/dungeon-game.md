@@ -5,9 +5,11 @@ authors: ["lek-tin"]
 tags: ["leetcode"]
 categories: ["algorithm"]
 date: 2019-09-03T22:27:37-07:00
+lastmod: 2020-06-21T04:27:37-07:00
 draft: false
 archive: false
 ---
+
 The demons had captured the princess (`P`) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (`K`) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.   
 
 The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.   
@@ -23,10 +25,13 @@ For example, given the dungeon below, the initial health of the knight must be a
 ![dungeon-game-example](/img/post/dungeon-game-example.png)
 
 #### Note
+
 1. The knight's health has no upper bound.
 2. Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.
 
 ### Solution
+
+Python
 ```python
 # top-down solution
 import sys
@@ -53,5 +58,6 @@ class Solution:
 
         return maxes[0][0]
 ```
+
 Final state:
 ![dungeon-game-example-final](/img/post/dungeon-game-example-final.png)
