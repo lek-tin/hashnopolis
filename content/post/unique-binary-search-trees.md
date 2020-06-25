@@ -8,6 +8,7 @@ date: 2018-09-16T15:06:01-07:00
 draft: false
 archive: false
 ---
+
 Given n, how many structurally unique `BST`'s (binary search trees) that store values 1 ... n?
 
 ### Example
