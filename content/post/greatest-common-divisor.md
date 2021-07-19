@@ -13,6 +13,7 @@ archive: false
 class Test
 {
 	// Recursive function to return gcd of a and b
+	// The Euclidean Algorithm
 	static int gcd_1(int a, int b)
 	{
 		// Everything divides 0
